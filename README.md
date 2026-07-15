@@ -1,6 +1,10 @@
-# Character X
+# Blender Projects
 
-Blender character work-in-progress.
+A shared place to exchange `.blend` files and move Blender projects forward together.
+
+## Current Projects
+
+- `X.blend`: Character X work-in-progress.
 
 Open `X.blend` in Blender 5.1 or newer. The current file has the front and side reference images packed into the blend file so the scene opens with its modeling references intact.
 
