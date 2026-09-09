@@ -1,0 +1,265 @@
+{
+  "Strap2.001": {
+    "visible": false,
+    "hide_viewport": false,
+    "hide_render": false,
+    "parent": null,
+    "parent_type": "OBJECT",
+    "parent_bone": "",
+    "matrix_world": [
+      [
+        -1.3655941932810833e-09,
+        0.0,
+        0.031241154298186302,
+        0.0681149810552597
+      ],
+      [
+        0.0,
+        0.031241154298186302,
+        0.0,
+        0.031106773763895035
+      ],
+      [
+        -0.031241154298186302,
+        0.0,
+        -1.3655941932810833e-09,
+        0.2770470082759857
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "collections": [
+      {
+        "name": "ShoeDone_Backup",
+        "hide_viewport": false,
+        "hide_render": false
+      }
+    ],
+    "modifiers": [],
+    "constraints": []
+  },
+  "Wide Strap.001": {
+    "visible": false,
+    "hide_viewport": false,
+    "hide_render": false,
+    "parent": "Strap2.001",
+    "parent_type": "OBJECT",
+    "parent_bone": "",
+    "matrix_world": [
+      [
+        0.21821103990077972,
+        0.0,
+        -7.75241346320782e-16,
+        0.0681149810552597
+      ],
+      [
+        0.0,
+        0.04815230891108513,
+        0.0,
+        0.031106773763895035
+      ],
+      [
+        7.75241346320782e-16,
+        0.0,
+        0.21821103990077972,
+        0.27704697847366333
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "collections": [
+      {
+        "name": "ShoeDone_Backup",
+        "hide_viewport": false,
+        "hide_render": false
+      }
+    ],
+    "modifiers": [
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "target": "Strap2.001",
+        "subtarget": null
+      }
+    ],
+    "constraints": []
+  },
+  "Line.001": {
+    "visible": false,
+    "hide_viewport": false,
+    "hide_render": false,
+    "parent": null,
+    "parent_type": "OBJECT",
+    "parent_bone": "",
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.010985009372234344
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.031106773763895035
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.2770470082759857
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "collections": [
+      {
+        "name": "ShoeDone_Backup",
+        "hide_viewport": false,
+        "hide_render": false
+      }
+    ],
+    "modifiers": [],
+    "constraints": []
+  },
+  "Strap.001_SplineIK_Curve.001": {
+    "visible": false,
+    "hide_viewport": false,
+    "hide_render": false,
+    "parent": "Strap2.001",
+    "parent_type": "OBJECT",
+    "parent_bone": "",
+    "matrix_world": [
+      [
+        -1.3655941932810833e-09,
+        0.0,
+        0.031241154298186302,
+        0.0681149810552597
+      ],
+      [
+        0.0,
+        0.031241154298186302,
+        0.0,
+        0.031106773763895035
+      ],
+      [
+        -0.031241154298186302,
+        0.0,
+        -1.3655941932810833e-09,
+        0.2770470082759857
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "collections": [
+      {
+        "name": "ShoeDone_Backup",
+        "hide_viewport": false,
+        "hide_render": false
+      }
+    ],
+    "modifiers": [
+      {
+        "name": "CD Spline IK Hook 01",
+        "type": "HOOK",
+        "target": "Strap.001_SplineIK_CTRL_01.001",
+        "subtarget": ""
+      },
+      {
+        "name": "CD Spline IK Hook 02",
+        "type": "HOOK",
+        "target": "Strap.001_SplineIK_CTRL_02.001",
+        "subtarget": ""
+      },
+      {
+        "name": "CD Spline IK Hook 03",
+        "type": "HOOK",
+        "target": "Strap.001_SplineIK_CTRL_03.001",
+        "subtarget": ""
+      }
+    ],
+    "constraints": []
+  },
+  "Cosha": {
+    "visible": true,
+    "hide_viewport": false,
+    "hide_render": false,
+    "parent": "CoshaRig",
+    "parent_type": "OBJECT",
+    "parent_bone": "",
+    "matrix_world": [
+      [
+        0.9999999403953552,
+        0.0,
+        0.0,
+        3.552713678800501e-15
+      ],
+      [
+        0.0,
+        0.9999999403953552,
+        0.0,
+        1.862645149230957e-09
+      ],
+      [
+        0.0,
+        0.0,
+        0.9999999403953552,
+        1.5393869876861572
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "collections": [
+      {
+        "name": "Main",
+        "hide_viewport": false,
+        "hide_render": false
+      }
+    ],
+    "modifiers": [
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "target": "CoshaRig",
+        "subtarget": null
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "target": null,
+        "subtarget": null
+      }
+    ],
+    "constraints": []
+  },
+  "layer": {
+    "exclude": false,
+    "hide_viewport": false,
+    "effectively_hidden": true
+  },
+  "loose_vertices": {
+    "3574": 3,
+    "3575": 3
+  }
+}

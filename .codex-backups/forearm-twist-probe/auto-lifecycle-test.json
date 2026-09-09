@@ -1,0 +1,46 @@
+{
+  "migration_rebind": {
+    "L": {
+      "automatic_pair": true,
+      "automatic_rest_rebind": true,
+      "same_key_identity": true,
+      "read_only_preparation": true,
+      "repeated_updates_stable": true
+    },
+    "R": {
+      "automatic_pair": true,
+      "automatic_rest_rebind": true,
+      "same_key_identity": true,
+      "read_only_preparation": true,
+      "repeated_updates_stable": true
+    }
+  },
+  "preview": {
+    "new_preview_no_counterpart_before_confirm": true,
+    "cancel_restores_whole_upgraded_baseline": true,
+    "existing_preview_preserves_other_side": true,
+    "orphan_marker_blocks_migration": true,
+    "orphan_marker_recovered_before_migration": true
+  },
+  "failure_edit": {
+    "partial_migration_rolled_back": true,
+    "repeated_failures_no_extra_keys": true,
+    "retry_recovers_automatically": true,
+    "rest_rebind_failure_rolled_back": true,
+    "mesh_edit_pauses_and_recovers": true
+  },
+  "reload": {
+    "legacy_file": "D:\\Blender\\Projects\\Character\\X\\.codex-backups\\forearm-twist-probe\\X-legacy-forearm-auto-migration.blend",
+    "save_reopen_auto_pairs": true,
+    "disable_enable_recovers": true,
+    "full_module_reload_recovers": true,
+    "one_handler_per_event": true,
+    "disabled_choice_preserved": true
+  },
+  "undo": {
+    "real_undo_redo": true,
+    "legacy_undo_state_automatically_pairs": true,
+    "no_duplicate_keys": true
+  },
+  "source_sha256_unchanged": "8fe85fceea8ff16d17c76da3d133a50f29e8f41ba59e3eb3a4ebf2fb876c3fc1"
+}

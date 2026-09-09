@@ -1,0 +1,2562 @@
+{
+  "armatures": [
+    {
+      "name": "RIG-rain",
+      "total_bones": 2166,
+      "picked_bones": [
+        {
+          "name": "ROOT",
+          "parent": null,
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Main Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x000002586090EC90>"
+          },
+          "custom_shape": "WGT-Root",
+          "constraints": []
+        },
+        {
+          "name": "ROOT_Child",
+          "parent": "ROOT",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Main Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609169B0>"
+          },
+          "custom_shape": "WGT-Root",
+          "constraints": []
+        },
+        {
+          "name": "MSTR-Pelvis_Parent",
+          "parent": "ROOT_Child",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "IK Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x000002586092FAC0>"
+          },
+          "custom_shape": "WGT-Torso_Master",
+          "constraints": []
+        },
+        {
+          "name": "MSTR-Pelvis",
+          "parent": "MSTR-Pelvis_Parent",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Extras"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860932430>"
+          },
+          "custom_shape": "WGT-Torso_Master",
+          "constraints": []
+        },
+        {
+          "name": "MSTR-Chest_Parent",
+          "parent": "MSTR-Pelvis",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "IK Spine"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              true,
+              true,
+              true
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609392B0>"
+          },
+          "custom_shape": "WGT-Torso",
+          "constraints": []
+        },
+        {
+          "name": "MSTR-Chest",
+          "parent": "MSTR-Chest_Parent",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Extras"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              true,
+              true,
+              true
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x000002586093AFF0>"
+          },
+          "custom_shape": "WGT-Torso",
+          "constraints": []
+        },
+        {
+          "name": "IK-R-Spine3",
+          "parent": "MSTR-Chest",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Foot Reverse IK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x000002586093E180>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Damped Track",
+              "type": "DAMPED_TRACK",
+              "target": "RIG-rain",
+              "subtarget": "IK-CTR-Spine2",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD",
+              "track_axis": "TRACK_Y"
+            }
+          ]
+        },
+        {
+          "name": "IK-R-Spine2",
+          "parent": "IK-R-Spine3",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Foot Reverse IK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609459C0>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Damped Track",
+              "type": "DAMPED_TRACK",
+              "target": "RIG-rain",
+              "subtarget": "IK-CTR-Spine1",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD",
+              "track_axis": "TRACK_Y"
+            }
+          ]
+        },
+        {
+          "name": "IK-CTR-Spine2",
+          "parent": "MSTR-Chest",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "IK Spine Tweak"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860947490>"
+          },
+          "custom_shape": "WGT-Oval",
+          "constraints": []
+        },
+        {
+          "name": "IK-CTR-Spine3",
+          "parent": "MSTR-Chest",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "IK Spine Tweak"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x000002586094A480>"
+          },
+          "custom_shape": "WGT-Oval",
+          "constraints": []
+        },
+        {
+          "name": "IK-CTR-Spine1",
+          "parent": "MSTR-Pelvis",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "IK Spine Tweak"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860952EA0>"
+          },
+          "custom_shape": "WGT-Oval",
+          "constraints": [
+            {
+              "name": "Transf_MSTR-Chest",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "MSTR-Chest",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_MSTR-Chest_Parent",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "MSTR-Chest_Parent",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_MSTR-Hips",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "MSTR-Hips",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            }
+          ]
+        },
+        {
+          "name": "MSTR-Hips",
+          "parent": "MSTR-Pelvis",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Spine",
+            "IK Spine"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            -0.06596344709396362,
+            0.0211540088057518,
+            0.25182223320007324
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860956C60>"
+          },
+          "custom_shape": "WGT-Hips",
+          "constraints": []
+        },
+        {
+          "name": "IK-Spine1",
+          "parent": "MSTR-Hips",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Foot Reverse IK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860959360>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Damped Track",
+              "type": "DAMPED_TRACK",
+              "target": "RIG-rain",
+              "subtarget": "IK-R-Spine2",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD",
+              "track_axis": "TRACK_Y"
+            }
+          ]
+        },
+        {
+          "name": "IK-Spine2",
+          "parent": "IK-Spine1",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "IK Chains"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x000002586095F000>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "ik_stretch_spine * 0.5",
+              "type": "COPY_LOCATION",
+              "target": "RIG-rain",
+              "subtarget": "IK-R-Spine2",
+              "influence": 0.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            },
+            {
+              "name": "Copy Rotation",
+              "type": "COPY_ROTATION",
+              "target": "RIG-rain",
+              "subtarget": "IK-CTR-Spine1",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "REPLACE",
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            },
+            {
+              "name": "Damped Track",
+              "type": "DAMPED_TRACK",
+              "target": "RIG-rain",
+              "subtarget": "IK-R-Spine3",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD",
+              "track_axis": "TRACK_Y"
+            }
+          ]
+        },
+        {
+          "name": "IK-Spine3",
+          "parent": "IK-Spine2",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "IK Chains"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860960EE0>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "ik_stretch_spine",
+              "type": "COPY_LOCATION",
+              "target": "RIG-rain",
+              "subtarget": "IK-R-Spine3",
+              "influence": 0.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            },
+            {
+              "name": "Copy Rotation",
+              "type": "COPY_ROTATION",
+              "target": "RIG-rain",
+              "subtarget": "IK-CTR-Spine2",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "REPLACE",
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            },
+            {
+              "name": "Damped Track",
+              "type": "DAMPED_TRACK",
+              "target": "RIG-rain",
+              "subtarget": "IK-CTR-Spine3",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD",
+              "track_axis": "TRACK_Y"
+            }
+          ]
+        },
+        {
+          "name": "STR-Spine1",
+          "parent": "MSTR-Hips",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Tweak Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609853A0>"
+          },
+          "custom_shape": "WGT-Sphere",
+          "constraints": []
+        },
+        {
+          "name": "DEF-Spine1",
+          "parent": "STR-Spine1",
+          "deform": true,
+          "hide": false,
+          "collections": [
+            "Body Deform Main"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860987010>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Stretch To",
+              "type": "STRETCH_TO",
+              "target": "RIG-rain",
+              "subtarget": "STR-Spine2",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            }
+          ]
+        },
+        {
+          "name": "DEF-Spine2",
+          "parent": "DEF-Spine1",
+          "deform": true,
+          "hide": false,
+          "collections": [
+            "Body Deform Main"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x000002586098AA90>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Stretch To",
+              "type": "STRETCH_TO",
+              "target": "RIG-rain",
+              "subtarget": "STR-Spine3",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            }
+          ]
+        },
+        {
+          "name": "DEF-Spine3",
+          "parent": "DEF-Spine2",
+          "deform": true,
+          "hide": false,
+          "collections": [
+            "Body Deform Main"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860991B80>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Stretch To",
+              "type": "STRETCH_TO",
+              "target": "RIG-rain",
+              "subtarget": "STR-Spine5",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            }
+          ]
+        },
+        {
+          "name": "DEF-Pelvis",
+          "parent": "STR-Spine1",
+          "deform": true,
+          "hide": false,
+          "collections": [
+            "Body Deform Main"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609971A0>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Transformation",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Spine",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            }
+          ]
+        },
+        {
+          "name": "FK-Spine",
+          "parent": "MSTR-Pelvis",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Spine"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "ZYX",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609E3D30>"
+          },
+          "custom_shape": "WGT-FK_Limb",
+          "constraints": [
+            {
+              "name": "ik_spine",
+              "type": "COPY_TRANSFORMS",
+              "target": "RIG-rain",
+              "subtarget": "IK-Spine2",
+              "influence": 0.0,
+              "mute": false,
+              "mix_mode": "REPLACE",
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            }
+          ]
+        },
+        {
+          "name": "FK-Spine_Child",
+          "parent": "FK-Spine",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "ZYX",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609E50B0>"
+          },
+          "custom_shape": "WGT-FK_Limb",
+          "constraints": [
+            {
+              "name": "Transf_Trans_Fwd",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Spine",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_Trans_Back",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Spine",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_Trans_Side.L",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Spine",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_Trans_Side.R",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Spine",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            }
+          ]
+        },
+        {
+          "name": "STR-Spine2",
+          "parent": "FK-Spine_Child",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Tweak Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609ED2B0>"
+          },
+          "custom_shape": "WGT-Sphere",
+          "constraints": []
+        },
+        {
+          "name": "FK-RibCage",
+          "parent": "FK-Spine_Child",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Spine"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "ZYX",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609EEE50>"
+          },
+          "custom_shape": "WGT-FK_Limb",
+          "constraints": [
+            {
+              "name": "ik_spine",
+              "type": "COPY_TRANSFORMS",
+              "target": "RIG-rain",
+              "subtarget": "IK-Spine3",
+              "influence": 0.0,
+              "mute": false,
+              "mix_mode": "REPLACE",
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            }
+          ]
+        },
+        {
+          "name": "FK-Ribcage_Child",
+          "parent": "FK-RibCage",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "ZYX",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609F1620>"
+          },
+          "custom_shape": "WGT-FK_Limb",
+          "constraints": [
+            {
+              "name": "Transf_Trans_Fwd",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-RibCage",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_Trans_Back",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-RibCage",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_Trans_Side.L",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-RibCage",
+              "influence": 0.6600000262260437,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_Trans_Side.R",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-RibCage",
+              "influence": 1.0,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            }
+          ]
+        },
+        {
+          "name": "STR-Spine3",
+          "parent": "FK-Ribcage_Child",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Tweak Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609F8160>"
+          },
+          "custom_shape": "WGT-Sphere",
+          "constraints": [
+            {
+              "name": "Transformation",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Chest",
+              "influence": 0.5,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            }
+          ]
+        },
+        {
+          "name": "FK-Chest",
+          "parent": "FK-Ribcage_Child",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Spine"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "ZYX",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609FC0C0>"
+          },
+          "custom_shape": "WGT-FK_Limb",
+          "constraints": []
+        },
+        {
+          "name": "FK-Chest_Child",
+          "parent": "FK-Chest",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "ZYX",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258609FE620>"
+          },
+          "custom_shape": "WGT-FK_Limb",
+          "constraints": [
+            {
+              "name": "Transf_Trans_Side.L",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Chest",
+              "influence": 1.0,
+              "mute": true,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            },
+            {
+              "name": "Transf_Trans_Side.R",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Chest",
+              "influence": 1.0,
+              "mute": true,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            }
+          ]
+        },
+        {
+          "name": "STR-Spine5",
+          "parent": "FK-Chest_Child",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Tweak Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "QUATERNION",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860A07450>"
+          },
+          "custom_shape": "WGT-Sphere",
+          "constraints": [
+            {
+              "name": "Transformation",
+              "type": "TRANSFORM",
+              "target": "RIG-rain",
+              "subtarget": "FK-Neck",
+              "influence": 0.6565836668014526,
+              "mute": false,
+              "mix_mode": "ADD",
+              "target_space": "LOCAL",
+              "owner_space": "LOCAL"
+            }
+          ]
+        },
+        {
+          "name": "LOC-Pelvis",
+          "parent": "ROOT_Child",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x0000025860A4E620>"
+          },
+          "custom_shape": null,
+          "constraints": [
+            {
+              "name": "Copy Location",
+              "type": "COPY_LOCATION",
+              "target": "RIG-rain",
+              "subtarget": "MSTR-Pelvis",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            }
+          ]
+        },
+        {
+          "name": "P-FK-Neck",
+          "parent": null,
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "FK Mechanism"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              true,
+              true,
+              true
+            ],
+            "rotation": [
+              true,
+              true,
+              true
+            ],
+            "scale": [
+              true,
+              true,
+              true
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258625D9FB0>"
+          },
+          "custom_shape": "WGT-FK_Limb_Offset",
+          "constraints": [
+            {
+              "name": "Armature",
+              "type": "ARMATURE",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            },
+            {
+              "name": "Copy Location",
+              "type": "COPY_LOCATION",
+              "target": "RIG-rain",
+              "subtarget": "HNG-Neck",
+              "influence": 1.0,
+              "mute": false,
+              "target_space": "WORLD",
+              "owner_space": "WORLD"
+            }
+          ]
+        },
+        {
+          "name": "FK-Neck",
+          "parent": "P-FK-Neck",
+          "deform": false,
+          "hide": false,
+          "collections": [
+            "Main FK Controls"
+          ],
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_mode": "XYZ",
+          "rotation_euler": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "locks": {
+            "location": [
+              false,
+              false,
+              false
+            ],
+            "rotation": [
+              false,
+              false,
+              false
+            ],
+            "scale": [
+              false,
+              false,
+              false
+            ]
+          },
+          "props": {
+            "cloudrig_component": "<bpy id prop: owner=\"OBRIG-rain\", name=\"cloudrig_component\", address=0x00000258625E1650>"
+          },
+          "custom_shape": "WGT-FK_Limb_Offset",
+          "constraints": []
+        }
+      ],
+      "drivers": [
+        {
+          "path": "pose.bones[\"FK-RibCage\"].constraints[\"ik_spine\"].influence",
+          "index": 0,
+          "expression": "ik",
+          "variables": [
+            {
+              "name": "ik",
+              "type": "SINGLE_PROP",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "pose.bones[\"Properties_IKFK\"][\"ik_spine\"]",
+                  "transform_type": "LOC_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"FK-Spine\"].constraints[\"ik_spine\"].influence",
+          "index": 0,
+          "expression": "ik",
+          "variables": [
+            {
+              "name": "ik",
+              "type": "SINGLE_PROP",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "pose.bones[\"Properties_IKFK\"][\"ik_spine\"]",
+                  "transform_type": "LOC_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"IK-Spine2\"].constraints[\"ik_stretch_spine * 0.5\"].influence",
+          "index": 0,
+          "expression": "var*0.5",
+          "variables": [
+            {
+              "name": "var",
+              "type": "SINGLE_PROP",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "pose.bones[\"Properties_IKFK\"][\"ik_stretch_spine\"]",
+                  "transform_type": "LOC_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"IK-Spine3\"].constraints[\"ik_stretch_spine\"].influence",
+          "index": 0,
+          "expression": "var",
+          "variables": [
+            {
+              "name": "var",
+              "type": "SINGLE_PROP",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "pose.bones[\"Properties_IKFK\"][\"ik_stretch_spine\"]",
+                  "transform_type": "LOC_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine3\"].bbone_rollin",
+          "index": 0,
+          "expression": "rotation_euler/2",
+          "variables": [
+            {
+              "name": "rotation_euler",
+              "type": "SINGLE_PROP",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "pose.bones[\"FK-Chest\"].rotation_euler[1]",
+                  "transform_type": "LOC_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"P-FK-Neck\"].constraints[\"Armature\"].targets[0].weight",
+          "index": 0,
+          "expression": "neck_hinge",
+          "variables": [
+            {
+              "name": "neck_hinge",
+              "type": "SINGLE_PROP",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "pose.bones[\"Properties_Face\"][\"neck_hinge\"]",
+                  "transform_type": "LOC_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"P-FK-Neck\"].constraints[\"Armature\"].targets[1].weight",
+          "index": 0,
+          "expression": "1-neck_hinge",
+          "variables": [
+            {
+              "name": "neck_hinge",
+              "type": "SINGLE_PROP",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "pose.bones[\"Properties_Face\"][\"neck_hinge\"]",
+                  "transform_type": "LOC_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine2\"].bbone_scalein",
+          "index": 0,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine2",
+                  "data_path": "",
+                  "transform_type": "SCALE_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine2\"].bbone_scalein",
+          "index": 2,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine2",
+                  "data_path": "",
+                  "transform_type": "SCALE_Z",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine2\"].bbone_scaleout",
+          "index": 2,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine3",
+                  "data_path": "",
+                  "transform_type": "SCALE_Z",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine2\"].bbone_scaleout",
+          "index": 0,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine3",
+                  "data_path": "",
+                  "transform_type": "SCALE_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine2\"].bbone_easein",
+          "index": 0,
+          "expression": "scale-1",
+          "variables": [
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine2",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "LOCAL_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine2\"].bbone_easeout",
+          "index": 0,
+          "expression": "scale-1",
+          "variables": [
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine3",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "LOCAL_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine1\"].bbone_scalein",
+          "index": 0,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine1",
+                  "data_path": "",
+                  "transform_type": "SCALE_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine1\"].bbone_scalein",
+          "index": 2,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine1",
+                  "data_path": "",
+                  "transform_type": "SCALE_Z",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine1\"].bbone_scaleout",
+          "index": 2,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine2",
+                  "data_path": "",
+                  "transform_type": "SCALE_Z",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine1\"].bbone_scaleout",
+          "index": 0,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine2",
+                  "data_path": "",
+                  "transform_type": "SCALE_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine1\"].bbone_easein",
+          "index": 0,
+          "expression": "scale-1",
+          "variables": [
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine1",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "LOCAL_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine1\"].bbone_easeout",
+          "index": 0,
+          "expression": "scale-1",
+          "variables": [
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine2",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "LOCAL_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine3\"].bbone_scalein",
+          "index": 0,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine3",
+                  "data_path": "",
+                  "transform_type": "SCALE_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine3\"].bbone_scalein",
+          "index": 2,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine3",
+                  "data_path": "",
+                  "transform_type": "SCALE_Z",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine3\"].bbone_scaleout",
+          "index": 2,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine5",
+                  "data_path": "",
+                  "transform_type": "SCALE_Z",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine3\"].bbone_scaleout",
+          "index": 0,
+          "expression": "var/scale",
+          "variables": [
+            {
+              "name": "var",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine5",
+                  "data_path": "",
+                  "transform_type": "SCALE_X",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            },
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "WORLD_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine3\"].bbone_easein",
+          "index": 0,
+          "expression": "scale-1",
+          "variables": [
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine3",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "LOCAL_SPACE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "pose.bones[\"DEF-Spine3\"].bbone_easeout",
+          "index": 0,
+          "expression": "scale-1",
+          "variables": [
+            {
+              "name": "scale",
+              "type": "TRANSFORMS",
+              "targets": [
+                {
+                  "id": "RIG-rain",
+                  "bone_target": "STR-Spine4",
+                  "data_path": "",
+                  "transform_type": "SCALE_Y",
+                  "transform_space": "LOCAL_SPACE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "curve_objects": [],
+  "texts": [
+    {
+      "name": "cloudrig.py",
+      "spine_mentions": []
+    },
+    {
+      "name": "rain_shading.py",
+      "spine_mentions": []
+    },
+    {
+      "name": "ReadMe.txt",
+      "spine_mentions": []
+    }
+  ],
+  "saved": false,
+  "source_unchanged": true
+}

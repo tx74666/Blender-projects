@@ -1,0 +1,475 @@
+{
+  "source": "Shoes_Primitive",
+  "target": "Shoes",
+  "objects": {
+    "Shoes_Primitive": {
+      "matrix_world": [
+        [
+          -1.8545172508765972e-08,
+          -0.6000000238418579,
+          -1.8545172508765972e-08,
+          4.963252564493814e-08
+        ],
+        [
+          0.4242640733718872,
+          -2.622683403785686e-08,
+          0.4242640733718872,
+          0.02721264213323593
+        ],
+        [
+          -0.4242640733718872,
+          0.0,
+          0.4242640733718872,
+          0.1756228804588318
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "show_viewport": true
+        }
+      ],
+      "uv_layers": [
+        "UVMap",
+        "automap"
+      ],
+      "vertex_groups": [
+        "Tips",
+        "Valleys",
+        "DEF_Strap_01.L",
+        "DEF_Strap_02.L",
+        "DEF_Strap_05.R",
+        "DEF_Strap_04.R",
+        "DEF_Strap_03.L",
+        "DEF_Strap_C",
+        "DEF_Strap_06.R",
+        "DEF_Strap_04.L",
+        "DEF_Strap_05.L",
+        "DEF_Strap_06.L",
+        "DEF_Strap_01.R",
+        "DEF_Strap_03.R",
+        "DEF_Strap_02.R",
+        "UnPin",
+        "Face1",
+        "Stable",
+        "Wrap1",
+        "Sole"
+      ],
+      "attributes": [
+        [
+          "position",
+          "FLOAT_VECTOR",
+          "POINT"
+        ],
+        [
+          ".edge_verts",
+          "INT32_2D",
+          "EDGE"
+        ],
+        [
+          ".corner_vert",
+          "INT",
+          "CORNER"
+        ],
+        [
+          ".corner_edge",
+          "INT",
+          "CORNER"
+        ],
+        [
+          "material_index",
+          "INT",
+          "FACE"
+        ],
+        [
+          "Core Line",
+          "FLOAT",
+          "POINT"
+        ],
+        [
+          "Upper Base",
+          "FLOAT",
+          "POINT"
+        ],
+        [
+          "crease_edge",
+          "FLOAT",
+          "EDGE"
+        ],
+        [
+          "UVMap",
+          "FLOAT2",
+          "CORNER"
+        ],
+        [
+          "automap",
+          "FLOAT2",
+          "CORNER"
+        ],
+        [
+          ".select_vert",
+          "BOOLEAN",
+          "POINT"
+        ],
+        [
+          ".select_edge",
+          "BOOLEAN",
+          "EDGE"
+        ],
+        [
+          "uv_seam",
+          "BOOLEAN",
+          "EDGE"
+        ],
+        [
+          ".select_poly",
+          "BOOLEAN",
+          "FACE"
+        ],
+        [
+          "sharp_face",
+          "BOOLEAN",
+          "FACE"
+        ],
+        [
+          ".uv_select_vert",
+          "BOOLEAN",
+          "CORNER"
+        ],
+        [
+          ".uv_select_edge",
+          "BOOLEAN",
+          "CORNER"
+        ],
+        [
+          ".uv_select_face",
+          "BOOLEAN",
+          "FACE"
+        ]
+      ],
+      "shape_keys": null
+    },
+    "Shoes": {
+      "matrix_world": [
+        [
+          -1.8545172508765972e-08,
+          -0.6000000238418579,
+          -1.8545172508765972e-08,
+          4.963252564493814e-08
+        ],
+        [
+          0.4242640733718872,
+          -2.622683403785686e-08,
+          0.4242640733718872,
+          0.02721264213323593
+        ],
+        [
+          -0.4242640733718872,
+          0.0,
+          0.4242640733718872,
+          0.1756228804588318
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "show_viewport": true
+        }
+      ],
+      "uv_layers": [
+        "UVMap",
+        "automap"
+      ],
+      "vertex_groups": [
+        "Tips",
+        "Valleys",
+        "DEF_Strap_01.L",
+        "DEF_Strap_02.L",
+        "DEF_Strap_05.R",
+        "DEF_Strap_04.R",
+        "DEF_Strap_03.L",
+        "DEF_Strap_C",
+        "DEF_Strap_06.R",
+        "DEF_Strap_04.L",
+        "DEF_Strap_05.L",
+        "DEF_Strap_06.L",
+        "DEF_Strap_01.R",
+        "DEF_Strap_03.R",
+        "DEF_Strap_02.R",
+        "UnPin",
+        "Face1",
+        "Stable",
+        "Wrap1",
+        "Sole"
+      ],
+      "attributes": [
+        [
+          "Core Line",
+          "FLOAT",
+          "POINT"
+        ],
+        [
+          "Upper Base",
+          "FLOAT",
+          "POINT"
+        ],
+        [
+          "crease_edge",
+          "FLOAT",
+          "EDGE"
+        ],
+        [
+          "UVMap",
+          "FLOAT2",
+          "CORNER"
+        ],
+        [
+          "automap",
+          "FLOAT2",
+          "CORNER"
+        ],
+        [
+          ".hide_vert",
+          "BOOLEAN",
+          "POINT"
+        ],
+        [
+          "uv_seam",
+          "BOOLEAN",
+          "EDGE"
+        ],
+        [
+          ".hide_edge",
+          "BOOLEAN",
+          "EDGE"
+        ],
+        [
+          ".hide_poly",
+          "BOOLEAN",
+          "FACE"
+        ],
+        [
+          "sharp_face",
+          "BOOLEAN",
+          "FACE"
+        ],
+        [
+          ".uv_select_vert",
+          "BOOLEAN",
+          "CORNER"
+        ],
+        [
+          ".uv_select_edge",
+          "BOOLEAN",
+          "CORNER"
+        ],
+        [
+          ".uv_select_face",
+          "BOOLEAN",
+          "FACE"
+        ],
+        [
+          "material_index",
+          "INT",
+          "FACE"
+        ],
+        [
+          "position",
+          "FLOAT_VECTOR",
+          "POINT"
+        ],
+        [
+          ".edge_verts",
+          "INT32_2D",
+          "EDGE"
+        ],
+        [
+          ".corner_vert",
+          "INT",
+          "CORNER"
+        ],
+        [
+          ".corner_edge",
+          "INT",
+          "CORNER"
+        ]
+      ],
+      "shape_keys": null
+    }
+  },
+  "rings": [
+    {
+      "verts": 432,
+      "faces": 432,
+      "first_vertices": [
+        1912,
+        1913,
+        1914,
+        1915,
+        1916,
+        1917,
+        1918,
+        1919,
+        1920,
+        1921
+      ],
+      "material_counts": {
+        "ShoeGray": 432
+      },
+      "bbox_world": [
+        [
+          0.09712,
+          -0.00617,
+          0.17481
+        ],
+        [
+          0.10136,
+          0.01006,
+          0.1887
+        ]
+      ],
+      "coordinate_matches": [
+        [
+          2330,
+          1480,
+          0.0
+        ],
+        [
+          2331,
+          1481,
+          0.0
+        ],
+        [
+          2342,
+          1482,
+          0.0
+        ],
+        [
+          2343,
+          1483,
+          0.0
+        ]
+      ]
+    },
+    {
+      "verts": 432,
+      "faces": 432,
+      "first_vertices": [
+        4184,
+        4185,
+        4186,
+        4187,
+        4188,
+        4189,
+        4190,
+        4191,
+        4192,
+        4193
+      ],
+      "material_counts": {
+        "ShoeGray": 432
+      },
+      "bbox_world": [
+        [
+          0.09655,
+          0.01411,
+          0.19268
+        ],
+        [
+          0.10159,
+          0.02821,
+          0.20873
+        ]
+      ],
+      "coordinate_matches": [
+        [
+          4602,
+          3068,
+          0.0
+        ],
+        [
+          4603,
+          3069,
+          0.0
+        ],
+        [
+          4614,
+          3070,
+          0.0
+        ],
+        [
+          4615,
+          3071,
+          0.0
+        ]
+      ]
+    },
+    {
+      "verts": 432,
+      "faces": 432,
+      "first_vertices": [
+        5320,
+        5321,
+        5322,
+        5323,
+        5324,
+        5325,
+        5326,
+        5327,
+        5328,
+        5329
+      ],
+      "material_counts": {
+        "ShoeGray": 432
+      },
+      "bbox_world": [
+        [
+          0.09535,
+          0.02923,
+          0.21487
+        ],
+        [
+          0.09978,
+          0.04064,
+          0.23272
+        ]
+      ],
+      "coordinate_matches": [
+        [
+          5738,
+          3648,
+          0.0
+        ],
+        [
+          5739,
+          3649,
+          0.0
+        ],
+        [
+          5750,
+          3650,
+          0.0
+        ],
+        [
+          5751,
+          3651,
+          0.0
+        ]
+      ]
+    }
+  ]
+}

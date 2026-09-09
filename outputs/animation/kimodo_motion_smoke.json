@@ -1,0 +1,1966 @@
+{
+  "original_blend": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "original_sha256_before": "c5ef08458b89dbd6110a87f6f96eb5e24ad91e05c86a0a16f9f16b47a3bb7b51",
+  "original_sha256_after": "c5ef08458b89dbd6110a87f6f96eb5e24ad91e05c86a0a16f9f16b47a3bb7b51",
+  "output_blend": "D:\\Blender\\Projects\\Character\\X\\outputs\\animation\\kimodo_motion_smoke.blend",
+  "source_bvh": "D:\\Applications\\Kimodo\\verification\\Kimodo_22f3b18dbc1f47a88be6278a67ffd9c1.bvh",
+  "source_bvh_sha256": "9f20c32691f2417eed4e06063bb7d24839e497f4527ec15aef0bfec76cafb34d",
+  "test_scope": "Real locally generated unconditioned 2 second BVH; this does not validate text prompting or final animation quality.",
+  "blender_version": "5.2.0 LTS",
+  "target": "CoshaRig",
+  "source": "Kimodo Smoke Source",
+  "source_bones": 78,
+  "target_bones": 108,
+  "action": "Kimodo Body - Local Smoke",
+  "previous_action": null,
+  "mapping": {
+    "Hips": "Hips",
+    "Spine1": "spine",
+    "Spine2": "Chest",
+    "Chest": "UpperChest",
+    "Neck2": "Neck",
+    "Head": "Head",
+    "LeftShoulder": "shoulder.L",
+    "LeftArm": "upper_arm.L",
+    "LeftForeArm": "forearm.L",
+    "LeftHand": "hand.L",
+    "LeftLeg": "thigh.L",
+    "LeftShin": "shin.L",
+    "LeftFoot": "foot.L",
+    "LeftToeBase": "toe.L",
+    "RightShoulder": "shoulder.R",
+    "RightArm": "upper_arm.R",
+    "RightForeArm": "forearm.R",
+    "RightHand": "hand.R",
+    "RightLeg": "thigh.R",
+    "RightShin": "shin.R",
+    "RightFoot": "foot.R",
+    "RightToeBase": "toe.R"
+  },
+  "calibration_method": "anatomical_landmark_swing_v1",
+  "calibration_angles_degrees": {
+    "Hips": 4.736545370993905,
+    "spine": 1.6042133605500648,
+    "Chest": 4.98067255362944,
+    "UpperChest": 0.41684001506310486,
+    "Neck": 6.187028248799908,
+    "Head": 5.9407721815774455,
+    "shoulder.L": 20.879647528560735,
+    "upper_arm.L": 45.03107178277347,
+    "forearm.L": 46.101311199295694,
+    "hand.L": 47.212067297974436,
+    "thigh.L": 3.453835204535276,
+    "shin.L": 5.961167126439103,
+    "foot.L": 5.661921170975212,
+    "toe.L": 14.196698454033243,
+    "shoulder.R": 20.87968509460117,
+    "upper_arm.R": 45.03107178277347,
+    "forearm.R": 46.101311199295694,
+    "hand.R": 47.29850334192094,
+    "thigh.R": 3.453835204535276,
+    "shin.R": 5.961167126439103,
+    "foot.R": 5.661921170975212,
+    "toe.R": 14.196864939894262
+  },
+  "motion_scale": 1.1328597215548535,
+  "frame_start": 1.0,
+  "frame_end": 60.0,
+  "scene_fps": 30.0,
+  "body_fcurves": 218,
+  "body_keyframes": 13080,
+  "hair_bones": 52,
+  "hair_keyframes_written": 0,
+  "all_original_constraints_unchanged": true,
+  "skirt_attachment_valid": true,
+  "attachments": {
+    "Dress": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": [
+        {
+          "name": "SK_Dress_0ab057_Skin",
+          "object": "SK_Dress_0ab057_Rig"
+        }
+      ]
+    },
+    "Hair3": {
+      "parent": "CoshaRig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": [
+        {
+          "name": "Hair Armature",
+          "object": "CoshaRig"
+        }
+      ]
+    },
+    "SK_Dress_0ab057_Hem_01_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Hem_02_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Hem_03_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Hem_04_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Hem_05_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Hem_06_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Hem_07_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Hem_08_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_01_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_02_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_03_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_04_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_05_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_06_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_07_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Mid_08_Shape": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Rig": {
+      "parent": "CoshaRig",
+      "parent_type": "BONE",
+      "parent_bone": "Hips",
+      "constraints": [],
+      "pose_constraints": {
+        "SK_Dress_0ab057_MCH_01_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_01",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_01_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 00.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_01_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 00.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_01_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 00.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_01_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 00.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_01_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_01_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_01_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_01_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_01_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_01_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_01_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_01_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_01_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_01_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_01_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_01_04"
+          }
+        ],
+        "SK_Dress_0ab057_MCH_02_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_02",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_02_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 01.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_02_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 01.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_02_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 01.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_02_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 01.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_02_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_02_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_02_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_02_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_02_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_02_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_02_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_02_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_02_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_02_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_02_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_02_04"
+          }
+        ],
+        "SK_Dress_0ab057_MCH_03_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_03",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_03_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 02.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_03_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 02.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_03_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 02.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_03_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 02.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_03_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_03_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_03_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_03_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_03_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_03_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_03_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_03_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_03_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_03_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_03_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_03_04"
+          }
+        ],
+        "SK_Dress_0ab057_MCH_04_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_04",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_04_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 03.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_04_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 03.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_04_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 03.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_04_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 03.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_04_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_04_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_04_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_04_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_04_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_04_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_04_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_04_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_04_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_04_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_04_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_04_04"
+          }
+        ],
+        "SK_Dress_0ab057_MCH_05_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_05",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_05_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 04.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_05_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 04.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_05_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 04.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_05_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 04.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_05_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_05_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_05_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_05_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_05_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_05_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_05_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_05_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_05_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_05_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_05_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_05_04"
+          }
+        ],
+        "SK_Dress_0ab057_MCH_06_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_06",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_06_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 05.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_06_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 05.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_06_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 05.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_06_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 05.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_06_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_06_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_06_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_06_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_06_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_06_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_06_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_06_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_06_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_06_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_06_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_06_04"
+          }
+        ],
+        "SK_Dress_0ab057_MCH_07_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_07",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_07_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 06.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_07_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 06.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_07_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 06.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_07_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 06.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_07_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_07_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_07_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_07_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_07_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_07_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_07_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_07_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_07_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_07_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_07_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_07_04"
+          }
+        ],
+        "SK_Dress_0ab057_MCH_08_04": [
+          {
+            "name": "Skirt manual wire",
+            "type": "SPLINE_IK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Wire_08",
+            "subtarget": null
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_08_01": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 07.00"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_08_02": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 07.01"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_08_03": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 07.02"
+          }
+        ],
+        "SK_Dress_0ab057_PHYS_08_04": [
+          {
+            "name": "CD Physics Aim",
+            "type": "DAMPED_TRACK",
+            "influence": 1.0,
+            "mute": false,
+            "target": "CD Cloth Cage Â· Dress",
+            "subtarget": "CD Sample 07.03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_08_01": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_08_01"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_08_01"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_08_02": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_08_02"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_08_02"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_08_03": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_08_03"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_08_03"
+          }
+        ],
+        "SK_Dress_0ab057_DEF_08_04": [
+          {
+            "name": "Skirt manual pose",
+            "type": "COPY_TRANSFORMS",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_MCH_08_04"
+          },
+          {
+            "name": "Skirt physics delta",
+            "type": "COPY_ROTATION",
+            "influence": 1.0,
+            "mute": false,
+            "target": "SK_Dress_0ab057_Rig",
+            "subtarget": "SK_Dress_0ab057_PHYS_08_04"
+          }
+        ]
+      },
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Shape_hem": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Shape_mid": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Shape_waist": {
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_01": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_02": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_03": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_04": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_05": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_06": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_07": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_08": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_hem": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_mid": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    },
+    "SK_Dress_0ab057_Wire_waist": {
+      "parent": "SK_Dress_0ab057_Rig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "constraints": [],
+      "pose_constraints": null,
+      "armature_modifiers": []
+    }
+  },
+  "max_sampled_joint_displacement_m": 0.029473037424779986,
+  "sampled_joint_positions_finite": true,
+  "action_restore_and_reapply_passed": true,
+  "samples": [
+    {
+      "frame": 1,
+      "joints_world": {
+        "Hips": [
+          4.9632518539510784e-08,
+          0.07895055413246155,
+          1.1227188110351562
+        ],
+        "spine": [
+          -9.51691108639352e-05,
+          0.09059709310531616,
+          1.207716703414917
+        ],
+        "Chest": [
+          -0.0023814612068235874,
+          0.09725780785083771,
+          1.3135466575622559
+        ],
+        "UpperChest": [
+          -0.0037279182579368353,
+          0.11750537157058716,
+          1.4021186828613281
+        ],
+        "Neck": [
+          -0.003868047147989273,
+          0.11381112039089203,
+          1.5026166439056396
+        ],
+        "Head": [
+          -0.00029433684539981186,
+          0.09305617213249207,
+          1.5458652973175049
+        ],
+        "shoulder.L": [
+          0.018214788287878036,
+          0.12713131308555603,
+          1.4862794876098633
+        ],
+        "upper_arm.L": [
+          0.09458031505346298,
+          0.1459781974554062,
+          1.4706566333770752
+        ],
+        "forearm.L": [
+          0.16537298262119293,
+          0.2169375866651535,
+          1.258657455444336
+        ],
+        "hand.L": [
+          0.17120034992694855,
+          0.15418754518032074,
+          1.0675854682922363
+        ],
+        "thigh.L": [
+          0.07407154142856598,
+          0.1019507348537445,
+          1.1226427555084229
+        ],
+        "shin.L": [
+          0.12503424286842346,
+          0.12215469777584076,
+          0.6841615438461304
+        ],
+        "foot.L": [
+          0.1681901216506958,
+          0.23464514315128326,
+          0.17050699889659882
+        ],
+        "toe.L": [
+          0.1891062706708908,
+          0.13880707323551178,
+          0.1337539255619049
+        ],
+        "shoulder.R": [
+          -0.024085858836770058,
+          0.12986323237419128,
+          1.4863207340240479
+        ],
+        "upper_arm.R": [
+          -0.09996026009321213,
+          0.15220795571804047,
+          1.4731011390686035
+        ],
+        "forearm.R": [
+          -0.16067498922348022,
+          0.20672447979450226,
+          1.2532553672790527
+        ],
+        "hand.R": [
+          -0.16914047300815582,
+          0.1494656801223755,
+          1.060564398765564
+        ],
+        "thigh.R": [
+          -0.07426103949546814,
+          0.10133057832717896,
+          1.1225614547729492
+        ],
+        "shin.R": [
+          -0.1286119967699051,
+          0.10565109550952911,
+          0.6840429902076721
+        ],
+        "foot.R": [
+          -0.1784723848104477,
+          0.21459951996803284,
+          0.17023193836212158
+        ],
+        "toe.R": [
+          -0.19802957773208618,
+          0.11860702931880951,
+          0.13313531875610352
+        ]
+      },
+      "bounds_min": [
+        -0.19802957773208618,
+        0.07895055413246155,
+        0.13313531875610352
+      ],
+      "bounds_max": [
+        0.1891062706708908,
+        0.23464514315128326,
+        1.5458652973175049
+      ]
+    },
+    {
+      "frame": 15,
+      "joints_world": {
+        "Hips": [
+          0.0008850470185279846,
+          0.07136152684688568,
+          1.1216238737106323
+        ],
+        "spine": [
+          0.0009191635181196034,
+          0.08305953443050385,
+          1.2066149711608887
+        ],
+        "Chest": [
+          -0.0013157838257029653,
+          0.09032626450061798,
+          1.312406063079834
+        ],
+        "UpperChest": [
+          -0.0025167602580040693,
+          0.11129060387611389,
+          1.400813102722168
+        ],
+        "Neck": [
+          -0.002790316939353943,
+          0.10833995044231415,
+          1.501335620880127
+        ],
+        "Head": [
+          0.0005430721794255078,
+          0.08780041337013245,
+          1.544706106185913
+        ],
+        "shoulder.L": [
+          0.019378405064344406,
+          0.12142710387706757,
+          1.484926462173462
+        ],
+        "upper_arm.L": [
+          0.09587286412715912,
+          0.13970716297626495,
+          1.4692609310150146
+        ],
+        "forearm.L": [
+          0.16727256774902344,
+          0.20726554095745087,
+          1.2563562393188477
+        ],
+        "hand.L": [
+          0.17155306041240692,
+          0.14343808591365814,
+          1.0656003952026367
+        ],
+        "thigh.L": [
+          0.07512378692626953,
+          0.09381578862667084,
+          1.1214962005615234
+        ],
+        "shin.L": [
+          0.12524957954883575,
+          0.11760467290878296,
+          0.6830984354019165
+        ],
+        "foot.L": [
+          0.1689448356628418,
+          0.23501843214035034,
+          0.17059266567230225
+        ],
+        "toe.L": [
+          0.19023308157920837,
+          0.13926424086093903,
+          0.13383464515209198
+        ],
+        "shoulder.R": [
+          -0.02290787175297737,
+          0.12437333166599274,
+          1.4848978519439697
+        ],
+        "upper_arm.R": [
+          -0.09860876947641373,
+          0.1469273716211319,
+          1.4710536003112793
+        ],
+        "forearm.R": [
+          -0.15857210755348206,
+          0.19837452471256256,
+          1.2502641677856445
+        ],
+        "hand.R": [
+          -0.16793948411941528,
+          0.13832616806030273,
+          1.0584660768508911
+        ],
+        "thigh.R": [
+          -0.07320936769247055,
+          0.09428748488426208,
+          1.1214909553527832
+        ],
+        "shin.R": [
+          -0.12791995704174042,
+          0.10078975558280945,
+          0.6830440163612366
+        ],
+        "foot.R": [
+          -0.17778253555297852,
+          0.21468797326087952,
+          0.17030780017375946
+        ],
+        "toe.R": [
+          -0.19769984483718872,
+          0.1187804639339447,
+          0.13318298757076263
+        ]
+      },
+      "bounds_min": [
+        -0.19769984483718872,
+        0.07136152684688568,
+        0.13318298757076263
+      ],
+      "bounds_max": [
+        0.19023308157920837,
+        0.23501843214035034,
+        1.544706106185913
+      ]
+    },
+    {
+      "frame": 30,
+      "joints_world": {
+        "Hips": [
+          0.0046681915409862995,
+          0.07304903864860535,
+          1.1212034225463867
+        ],
+        "spine": [
+          0.004489630460739136,
+          0.08459565043449402,
+          1.2062149047851562
+        ],
+        "Chest": [
+          0.0020823178347200155,
+          0.09158012270927429,
+          1.312021255493164
+        ],
+        "UpperChest": [
+          0.0007663512951694429,
+          0.11229848861694336,
+          1.4004848003387451
+        ],
+        "Neck": [
+          -1.5387604435090907e-05,
+          0.10890480875968933,
+          1.500990629196167
+        ],
+        "Head": [
+          0.002972415881231427,
+          0.0886090025305748,
+          1.5445008277893066
+        ],
+        "shoulder.L": [
+          0.022293196991086006,
+          0.1219627857208252,
+          1.4847486019134521
+        ],
+        "upper_arm.L": [
+          0.09895866364240646,
+          0.13979686796665192,
+          1.4694082736968994
+        ],
+        "forearm.L": [
+          0.16959001123905182,
+          0.2082037329673767,
+          1.2565181255340576
+        ],
+        "hand.L": [
+          0.17343121767044067,
+          0.14308452606201172,
+          1.0661900043487549
+        ],
+        "thigh.L": [
+          0.07894422858953476,
+          0.09537965059280396,
+          1.1213184595108032
+        ],
+        "shin.L": [
+          0.12778650224208832,
+          0.11362779140472412,
+          0.6825103759765625
+        ],
+        "foot.L": [
+          0.16837279498577118,
+          0.23601192235946655,
+          0.17091259360313416
+        ],
+        "toe.L": [
+          0.18963971734046936,
+          0.1402994990348816,
+          0.13403363525867462
+        ],
+        "shoulder.R": [
+          -0.01997857540845871,
+          0.12510256469249725,
+          1.4845256805419922
+        ],
+        "upper_arm.R": [
+          -0.0954471156001091,
+          0.14806883037090302,
+          1.4701027870178223
+        ],
+        "forearm.R": [
+          -0.1529650241136551,
+          0.1996546983718872,
+          1.2486958503723145
+        ],
+        "hand.R": [
+          -0.16005221009254456,
+          0.13766907155513763,
+          1.0574169158935547
+        ],
+        "thigh.R": [
+          -0.06938736140727997,
+          0.09609873592853546,
+          1.1209092140197754
+        ],
+        "shin.R": [
+          -0.1260504126548767,
+          0.09841550886631012,
+          0.6826683282852173
+        ],
+        "foot.R": [
+          -0.17723041772842407,
+          0.21469825506210327,
+          0.17059755325317383
+        ],
+        "toe.R": [
+          -0.19694826006889343,
+          0.11875654757022858,
+          0.13345462083816528
+        ]
+      },
+      "bounds_min": [
+        -0.19694826006889343,
+        0.07304903864860535,
+        0.13345462083816528
+      ],
+      "bounds_max": [
+        0.18963971734046936,
+        0.23601192235946655,
+        1.5445008277893066
+      ]
+    },
+    {
+      "frame": 45,
+      "joints_world": {
+        "Hips": [
+          0.002829691395163536,
+          0.081073097884655,
+          1.1210989952087402
+        ],
+        "spine": [
+          0.002587571507319808,
+          0.09254707396030426,
+          1.206120252609253
+        ],
+        "Chest": [
+          0.00033945246832445264,
+          0.0994238555431366,
+          1.3119370937347412
+        ],
+        "UpperChest": [
+          -0.0006892957026138902,
+          0.11995801329612732,
+          1.4004473686218262
+        ],
+        "Neck": [
+          -0.0014774654991924763,
+          0.11652553081512451,
+          1.5009517669677734
+        ],
+        "Head": [
+          0.001136809354647994,
+          0.09672875702381134,
+          1.544715404510498
+        ],
+        "shoulder.L": [
+          0.020918039605021477,
+          0.12943623960018158,
+          1.4847118854522705
+        ],
+        "upper_arm.L": [
+          0.09782552719116211,
+          0.14605407416820526,
+          1.4692180156707764
+        ],
+        "forearm.L": [
+          0.17123690247535706,
+          0.2117130011320114,
+          1.2564032077789307
+        ],
+        "hand.L": [
+          0.17357537150382996,
+          0.1474396288394928,
+          1.0657633543014526
+        ],
+        "thigh.L": [
+          0.07719790190458298,
+          0.10309387743473053,
+          1.121330738067627
+        ],
+        "shin.L": [
+          0.12735141813755035,
+          0.11375454068183899,
+          0.6824204921722412
+        ],
+        "foot.L": [
+          0.16869516670703888,
+          0.23801560699939728,
+          0.17133602499961853
+        ],
+        "toe.L": [
+          0.18989093601703644,
+          0.14237865805625916,
+          0.13422101736068726
+        ],
+        "shoulder.R": [
+          -0.021331069990992546,
+          0.13286805152893066,
+          1.4844975471496582
+        ],
+        "upper_arm.R": [
+          -0.09648372232913971,
+          0.15650857985019684,
+          1.4695250988006592
+        ],
+        "forearm.R": [
+          -0.15314988791942596,
+          0.20693358778953552,
+          1.247631549835205
+        ],
+        "hand.R": [
+          -0.15959908068180084,
+          0.14475300908088684,
+          1.0563933849334717
+        ],
+        "thigh.R": [
+          -0.0711287334561348,
+          0.10443146526813507,
+          1.120727777481079
+        ],
+        "shin.R": [
+          -0.12819597125053406,
+          0.09692664444446564,
+          0.6825973987579346
+        ],
+        "foot.R": [
+          -0.17732782661914825,
+          0.21663860976696014,
+          0.17111645638942719
+        ],
+        "toe.R": [
+          -0.19770415127277374,
+          0.12092806398868561,
+          0.13373330235481262
+        ]
+      },
+      "bounds_min": [
+        -0.19770415127277374,
+        0.081073097884655,
+        0.13373330235481262
+      ],
+      "bounds_max": [
+        0.18989093601703644,
+        0.23801560699939728,
+        1.544715404510498
+      ]
+    },
+    {
+      "frame": 60,
+      "joints_world": {
+        "Hips": [
+          -0.023236310109496117,
+          0.09337452054023743,
+          1.1256701946258545
+        ],
+        "spine": [
+          -0.023903822526335716,
+          0.10232159495353699,
+          1.2109920978546143
+        ],
+        "Chest": [
+          -0.027238478884100914,
+          0.10424451529979706,
+          1.316986083984375
+        ],
+        "UpperChest": [
+          -0.02979448065161705,
+          0.12017400562763214,
+          1.4064092636108398
+        ],
+        "Neck": [
+          -0.031134270131587982,
+          0.11252214014530182,
+          1.5066747665405273
+        ],
+        "Head": [
+          -0.02777245081961155,
+          0.09405983984470367,
+          1.5509674549102783
+        ],
+        "shoulder.L": [
+          -0.009179581888020039,
+          0.1270061582326889,
+          1.4911768436431885
+        ],
+        "upper_arm.L": [
+          0.06723044067621231,
+          0.1464495211839676,
+          1.4765331745147705
+        ],
+        "forearm.L": [
+          0.14225932955741882,
+          0.215836763381958,
+          1.265472650527954
+        ],
+        "hand.L": [
+          0.15173719823360443,
+          0.15092113614082336,
+          1.0752724409103394
+        ],
+        "thigh.L": [
+          0.050091758370399475,
+          0.11862866580486298,
+          1.1265767812728882
+        ],
+        "shin.L": [
+          0.10831674188375473,
+          0.13847030699253082,
+          0.688984215259552
+        ],
+        "foot.L": [
+          0.16499125957489014,
+          0.22301797568798065,
+          0.17129960656166077
+        ],
+        "toe.L": [
+          0.18426989018917084,
+          0.12669742107391357,
+          0.13491426408290863
+        ],
+        "shoulder.R": [
+          -0.05153190717101097,
+          0.12870942056179047,
+          1.4907407760620117
+        ],
+        "upper_arm.R": [
+          -0.12817181646823883,
+          0.1476503610610962,
+          1.4766504764556885
+        ],
+        "forearm.R": [
+          -0.18716996908187866,
+          0.19564193487167358,
+          1.2548251152038574
+        ],
+        "hand.R": [
+          -0.18686386942863464,
+          0.13315176963806152,
+          1.0635793209075928
+        ],
+        "thigh.R": [
+          -0.09815071523189545,
+          0.11345808207988739,
+          1.1259591579437256
+        ],
+        "shin.R": [
+          -0.14357373118400574,
+          0.10103337466716766,
+          0.6865806579589844
+        ],
+        "foot.R": [
+          -0.18022383749485016,
+          0.21569405496120453,
+          0.1729004979133606
+        ],
+        "toe.R": [
+          -0.20091821253299713,
+          0.12005406618118286,
+          0.13551154732704163
+        ]
+      },
+      "bounds_min": [
+        -0.20091821253299713,
+        0.09337452054023743,
+        0.13491426408290863
+      ],
+      "bounds_max": [
+        0.18426989018917084,
+        0.22301797568798065,
+        1.5509674549102783
+      ]
+    }
+  ],
+  "quality_validation": {
+    "max_anatomical_direction_error_degrees": 0.00014970099555800925,
+    "elbows_and_wrists_outside_midline_all_samples": true,
+    "toe_height_from_rest_min_m": 0.00843113660812378,
+    "toe_height_from_rest_max_m": 0.01080736517906189
+  },
+  "quality_plot": "D:\\Blender\\Projects\\Character\\X\\outputs\\animation\\kimodo_pose_quality_frame1.png",
+  "quality_note": "Anatomical-axis calibration corrects the source T-pose / target A-pose mismatch. All 22 mapped anatomical directions agree within 0.001 degrees at the five sampled frames. Toe joints remain 8-11 mm above their target rest heights; foot contact and mesh deformation still need animation cleanup/review."
+}

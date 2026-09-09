@@ -1,0 +1,165 @@
+ℹ️  blendkit: Verbose is enabled [08:45:12.115, addon_updater.py:150]
+ℹ️  blendkit: Read in JSON settings from file [08:45:12.121, addon_updater.py:150]
+ℹ️  blendkit: Ports reordered so first port is now 62485 (previous index was 0) [08:45:12.128, client_lib.py:156]
+P42720:08:45:12:botaniq_starter:INFO: Logger for "botaniq_starter" initialized in "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py" -----
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 80, in emit
+    self.doRollover()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 456, in doRollover
+    self.rotate(self.baseFilename, dfn)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 121, in rotate
+    os.rename(source, dest)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\botaniq_starter.txt' -> 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\botaniq_starter.txt.2026-09-06_16'
+Call stack:
+  File "<string>", line 1, in <module>
+  File "D:\Blender5.2\5.2\scripts\modules\bpy\utils\__init__.py", line 397, in load_scripts_extensions
+    _initialize_once()
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 67, in _initialize_once
+    enable(
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 457, in enable
+    mod = importlib.import_module(module_name)
+  File "D:\Blender5.2\5.2\python\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py", line 58, in <module>
+    logger.info(f"Logger for \"{__name__}\" initialized in \"{__file__}\" -----")
+Message: 'Logger for "botaniq_starter" initialized in "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\botaniq_starter\\__init__.py" -----'
+Arguments: ()
+P42720:08:45:12:polib:INFO: Logger for "polib" initialized in "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\polib\__init__.py" -----
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 80, in emit
+    self.doRollover()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 456, in doRollover
+    self.rotate(self.baseFilename, dfn)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 121, in rotate
+    os.rename(source, dest)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\polib.txt' -> 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\polib.txt.2026-09-06_16'
+Call stack:
+  File "<string>", line 1, in <module>
+  File "D:\Blender5.2\5.2\scripts\modules\bpy\utils\__init__.py", line 397, in load_scripts_extensions
+    _initialize_once()
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 67, in _initialize_once
+    enable(
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 457, in enable
+    mod = importlib.import_module(module_name)
+  File "D:\Blender5.2\5.2\python\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py", line 72, in <module>
+    import polib
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\polib\__init__.py", line 34, in <module>
+    logger.info(f"Logger for \"{__name__}\" initialized in \"{__file__}\" -----")
+Message: 'Logger for "polib" initialized in "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\botaniq_starter\\python_deps\\polib\\__init__.py" -----'
+Arguments: ()
+P42720:08:45:12:mapr:INFO: Logger for "mapr" initialized in "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\mapr\__init__.py" -----
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 80, in emit
+    self.doRollover()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 456, in doRollover
+    self.rotate(self.baseFilename, dfn)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 121, in rotate
+    os.rename(source, dest)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\mapr.txt' -> 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\mapr.txt.2026-09-06_16'
+Call stack:
+  File "<string>", line 1, in <module>
+  File "D:\Blender5.2\5.2\scripts\modules\bpy\utils\__init__.py", line 397, in load_scripts_extensions
+    _initialize_once()
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 67, in _initialize_once
+    enable(
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 457, in enable
+    mod = importlib.import_module(module_name)
+  File "D:\Blender5.2\5.2\python\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py", line 74, in <module>
+    from . import scatter
+  File "<frozen importlib._bootstrap>", line 1423, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\scatter.py", line 34, in <module>
+    from . import preferences
+  File "<frozen importlib._bootstrap>", line 1423, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\preferences.py", line 33, in <module>
+    import mapr
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\mapr\__init__.py", line 33, in <module>
+    logger.info(f"Logger for \"{__name__}\" initialized in \"{__file__}\" -----")
+Message: 'Logger for "mapr" initialized in "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\botaniq_starter\\python_deps\\mapr\\__init__.py" -----'
+Arguments: ()
+botaniq install dir autodetected as C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter (big zip embedded)
+BlenderMCP addon registered
+Cannot read ARP prefs
+Update armature presets...
+Reloading external rigs...
+Reloading external metarigs...
+Created history step 03a55e05-9f83-4210-92bd-8948452efcf1
+ℹ️  blendkit: Created new search history step [08:45:13.592, search.py:2698]
+ℹ️  blendkit: No temporarily enabled addons to clean up [08:45:13.592, download.py:419]
+00:03.469  blend            | Read blend: "D:\Blender\Projects\Character\X\X.blend"
+AUTORELOAD --- Setting autoreload categories
+AUTORELOAD --- Reloading external files
+ℹ️  blendkit: No temporarily enabled addons to clean up [08:45:15.912, download.py:419]
+AUTORELOAD --- Setting autoreload categories
+AUTORELOAD --- Reloading external files
+INSTALLED_REOPEN_STARTUP={"errors": {}, "module": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py", "records": {"L": {"key": "CD Forearm Twist.L", "key_mute": false, "key_value": 1.0, "rings": 7, "support_vertices": 96, "target": "CTRL_hand_IK.L"}, "R": {"key": "CD Forearm Twist.R", "key_mute": false, "key_value": 1.0, "rings": 7, "support_vertices": 120, "target": "CTRL_hand_IK.R"}}, "version": [0, 37, 0]}
+LIFECYCLE_GEOMETRY={"angles": {"L": -6.200883819238594e-06, "R": -4.3437381831263686e-06}, "hand_only_count": 2, "hand_only_error": 1.8143349382111313e-07, "key_mutes": {"L": false, "R": false}, "label": "installed-reopen/current-saved-pose", "max_vertex_error": 3.589448174967141e-07, "outside_error": 3.589448174967141e-07, "runtime_error": null}
+LIFECYCLE_GEOMETRY={"angles": {"L": 89.99998068130898, "R": -90.00001071583722}, "hand_only_count": 2, "hand_only_error": 3.911377414586153e-07, "key_mutes": {"L": false, "R": false}, "label": "installed-reopen/RYY=90/bend=0", "max_vertex_error": 4.926405923013848e-07, "outside_error": 4.926405923013848e-07, "runtime_error": null}
+LIFECYCLE_GEOMETRY={"angles": {"L": -90.00000724450929, "R": 89.99999196312213}, "hand_only_count": 2, "hand_only_error": 2.1490760299348766e-07, "key_mutes": {"L": false, "R": false}, "label": "installed-reopen/RYY=-90/bend=0", "max_vertex_error": 5.00077730254824e-07, "outside_error": 5.00077730254824e-07, "runtime_error": null}
+LIFECYCLE_GEOMETRY={"angles": {"L": 45.00016251017408, "R": -44.99985871090336}, "hand_only_count": 2, "hand_only_error": 2.7516760397880357e-07, "key_mutes": {"L": false, "R": false}, "label": "installed-reopen/RYY=45/bend=25", "max_vertex_error": 4.308471767545033e-07, "outside_error": 4.308471767545033e-07, "runtime_error": null}
+LIFECYCLE_GEOMETRY={"angles": {"L": -44.99985421579439, "R": 45.000155945704115}, "hand_only_count": 2, "hand_only_error": 2.6499359672931936e-07, "key_mutes": {"L": false, "R": false}, "label": "installed-reopen/RYY=-45/bend=25", "max_vertex_error": 4.676686175607209e-07, "outside_error": 4.676686175607209e-07, "runtime_error": null}
+INSTALLED_REOPEN_PASS={"input": "D:\\Blender\\Projects\\Character\\X\\X.blend", "max_hand_error": 3.911377414586153e-07, "max_vertex_error": 5.00077730254824e-07, "poses": 5}
+INSTALLED_REOPEN_INPUT_UNCHANGED={"bytes": 30795705, "mtime_ns": 1788741875336180000, "path": "D:\\Blender\\Projects\\Character\\X\\X.blend", "sha256": "4905475b13b6205a3ed70a2dcb52da5aca4af823a3b97a08efa33d84bcac8191"}
+ℹ️  blendkit: Unregistering Blendkit add-on [08:45:20.287, __init__.py:2973]
+ℹ️  blendkit: No temporarily enabled addons to clean up [08:45:20.288, download.py:419]
+BlenderMCP addon unregistered
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+scripts disabled for "D:\Blender\Projects\Character\X\X.blend", skipping 'rig.001_ui.py'
+scripts disabled for "D:\Blender\Projects\Character\X\X.blend", skipping 'rig.001_ui.py.003'
+
+Blender quit

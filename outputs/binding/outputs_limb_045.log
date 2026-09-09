@@ -1,0 +1,247 @@
+PASS test_rotation_error_uses_shortest_quaternion_angle
+Info: Analyze Rig found 4/4 high-confidence limbs.
+PASS test_analysis_is_read_only_and_detects_both_sides
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Pre-Roll check: Rest plane is aligned (0.00 deg). Direct IK is a start-pose candidate; no bones changed.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: Pre-Roll check: Rest plane is aligned (0.00 deg). Direct IK is a start-pose candidate; no bones changed.
+PASS test_direct_preroll_check_is_read_only_and_keeps_existing_mch_rig
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Warning: Pre-Roll check: Rest plane is offset 180.00 deg; a 0.24 BU Rest-joint re-plane is required. No bones changed.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Warning: Pre-Roll check: the Rest limb is effectively straight; add a measurable pre-bend first. No bones changed.
+PASS test_direct_preroll_check_reports_replane_and_exact_straight_risk
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Warning: Pre-Roll check: Rest plane is offset 180.00 deg; a 0.24 BU Rest-joint re-plane is required. No bones changed.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+PASS test_direct_preroll_values_make_replaned_direct_start_pose_exact
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Info: Removed 3 controls, 4 constraints, and 3 widgets. Analyze again before rebuilding.
+PASS test_direct_preroll_minimal_build_and_remove_restores_exact_rest
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Warning: This Armature already uses another Limb IK Build Method. Use Remove Generated Rig before switching between Stable and Direct Pre-Roll.
+Info: Built 3 available Direct Pre-Roll IK sides; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Info: Removed 12 controls, 16 constraints, and 5 widgets. Analyze again before rebuilding.
+PASS test_direct_preroll_incremental_build_all_and_method_mixing
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Warning: Generated L Leg Foot Custom Shape ownership is invalid.
+Info: Removed 3 controls, 4 constraints, and 2 widgets. Analyze again before rebuilding.
+PASS test_incremental_build_refuses_damaged_existing_widget_resources
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Warning: injected Direct post-Rest failure
+PASS test_direct_preroll_build_failure_rolls_back_source_rest
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Info: Rebuilt 1 Limb IK sides from the current analyzed chains.
+Warning: Direct Pre-Roll source Rest bone 'forearm.L' was edited after the rig was built (head=0, tail=0, z=0.00125, parent='upper_arm.L'/'upper_arm.L', connect=True/True).
+Info: Removed 3 controls, 4 constraints, and 3 widgets. Analyze again before rebuilding.
+PASS test_direct_preroll_rebuild_stays_minimal_and_tamper_is_guarded
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Info: Rebuilt 1 Limb IK sides from the current analyzed chains.
+Info: Removed 3 controls, 4 constraints, and 3 widgets. Analyze again before rebuilding.
+PASS test_legacy_direct_schema4_without_display_helper_rebuilds_to_schema5
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Warning: L Arm is posed or constrained. Direct Pre-Roll changes Rest axes, so clear the selected limb to its unconstrained Rest pose before building.
+Warning: Direct Pre-Roll build was refused: Action 'HumanoidAction' animates a Direct Pre-Roll source chain.
+Warning: Direct Pre-Roll build was refused: foreign Object constraint 'External source dependency' on 'DirectSourceProbe' references a Direct Pre-Roll source bone.
+Warning: Direct Pre-Roll build was refused: modifier 'External source Hook' on 'DirectSourceHookProbe' references Direct Pre-Roll source bone 'upper_arm.L'.
+PASS test_direct_preroll_initial_build_refuses_pose_animation_and_external_source_dependencies
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Warning: Remove Generated Rig was refused: Action 'HumanoidAction.001' animates a Direct Pre-Roll source chain.
+Error: Rebuild Rig was refused: Action 'HumanoidAction.001' animates a Direct Pre-Roll source chain.
+Warning: Remove Generated Rig was refused: foreign constraint 'Artist source constraint' edits Direct Pre-Roll source bone 'upper_arm.L'.
+Error: Rebuild Rig was refused: foreign constraint 'Artist source constraint' edits Direct Pre-Roll source bone 'upper_arm.L'.
+Warning: Remove Generated Rig was refused: foreign constraint 'Artist end source constraint' edits Direct Pre-Roll source bone 'hand.L'.
+Error: Rebuild Rig was refused: foreign constraint 'Artist end source constraint' edits Direct Pre-Roll source bone 'hand.L'.
+Error: Return the L Arm Direct Target and Pole to their Rest transforms before changing its chain or Pole Direction.
+Warning: Limb IK rig '68ad276f083346889b3f6be7c0ed835c' Direct control hierarchy was edited.
+Info: Removed 3 controls, 4 constraints, and 3 widgets. Analyze again before rebuilding.
+PASS test_direct_preroll_lifecycle_refuses_new_source_dependencies_and_hydrates_mode
+PASS test_low_confidence_helper_chain_is_not_guessed
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Reset L Arm Pole Direction to its fixed anatomical axis.
+PASS test_pole_direction_defaults_analyze_preserves_and_reset_selected
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 4 available IK sides; targets, Poles, IK(2), and end rotation are ready.
+PASS test_x_negative_y_defaults_keep_elbows_back_and_knees_forward
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 4 available IK sides; targets, Poles, IK(2), and end rotation are ready.
+PASS test_x_like_lateral_knees_ignore_rest_residual_for_anatomical_default
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Reset L Leg Pole Direction to its fixed anatomical axis.
+PASS test_default_operator_restores_only_selected_fixed_anatomical_axis
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+PASS test_saved_pole_direction_hydrates_without_automatic_migration
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+PASS test_explicit_pole_direction_validation_and_runtime_plane
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: Built 3 available IK sides; targets, Poles, IK(2), and end rotation are ready.
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Warning: R Leg has an incomplete manual bone selection.
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Warning: R Leg Pole Direction cannot be zero; choose an Armature-local direction.
+PASS test_build_selected_right_leg_and_build_all_atomic_completion
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Info: Built 2 Leg IK sides; targets, Poles, IK(2), and end rotation are ready.
+PASS test_build_arm_then_leg_and_exact_contract
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+PASS test_explicit_direction_handles_arbitrary_roll_without_pose_pop
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+PASS test_build_from_non_rest_pose_preserves_full_limb_pose
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Warning: The requested Limb IK rig already exists; use Rebuild Rig to replace it.
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Warning: Bone 'CTRL_hand_IK.L' already exists and is not this exact generated control.
+PASS test_idempotent_build_and_foreign_name_fail_closed
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Warning: injected build failure
+PASS test_build_fault_rolls_back_without_residue
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Warning: Remove Generated Rig was refused: foreign constraint 'Artist uses hand control' on 'Humanoid:Chest' references/edits generated controls.
+Warning: Remove Generated Rig was refused: foreign constraint 'Artist constraint on generated control' on 'Humanoid:CTRL_hand_IK.L' references/edits generated controls.
+Info: Removed 17 controls, 23 constraints, and 5 widgets. Analyze again before rebuilding.
+PASS test_remove_refuses_foreign_dependency_then_removes_exact_data
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Warning: Remove Generated Rig was refused: bone 'ForeignRig:Foreign' uses an owned widget as a foreign Custom Shape.
+Warning: Remove Generated Rig was refused: bone 'Humanoid:Chest' uses a generated control as Custom Shape Transform.
+Warning: Remove Generated Rig was refused: Action 'HumanoidAction.002' animates a generated control.
+Info: Removed 17 controls, 23 constraints, and 5 widgets. Analyze again before rebuilding.
+PASS test_remove_scans_cross_armature_and_constraint_animation_dependencies
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Warning: Remove Generated Rig was refused: foreign Object constraint 'Object uses generated hand control' on 'ForeignEmpty' references a generated control.
+Warning: Remove Generated Rig was refused: Object 'ForeignEmpty' is bone-parented to generated control 'CTRL_hand_IK.L'.
+Warning: Remove Generated Rig was refused: driver on 'ForeignEmpty' reads a generated control.
+Warning: Limb IK rig 'd13aff3f8fb94d1eab430c49980100eb' has inconsistent registry records.
+Info: Removed 17 controls, 23 constraints, and 5 widgets. Analyze again before rebuilding.
+PASS test_remove_scans_object_constraints_and_driver_constraint_reads
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+PASS test_enhanced_widgets_and_dynamic_pole_contract
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 2 available Direct Pre-Roll IK sides; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Info: Removed 6 controls, 8 constraints, and 4 widgets. Analyze again before rebuilding.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 2 available IK sides; targets, Poles, IK(2), and end rotation are ready.
+PASS test_direct_pole_guide_segments_and_dynamic_arrow_display
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Info: All 1 generated limb target(s) are in Auto rotation mode.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected Direct Pre-Roll IK side; Target + Pole are the only visible controls; one hidden display aim keeps the Pole arrow aligned.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Info: All 1 generated limb target(s) are in Auto rotation mode.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Info: All 1 generated limb target(s) are in Auto rotation mode.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Info: All 1 generated limb target(s) are in Auto rotation mode.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Info: All 1 generated limb target(s) are in Auto rotation mode.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: All 1 generated limb target(s) are in Auto rotation mode. No change was needed.
+Warning: injected Auto Align failure
+Warning: Auto Align mode change could not preserve the IK target and current end pose (position 3.742, rotation 0).
+PASS test_auto_align_target_all_constraint_spaces_and_rollback
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Info: All 1 generated limb target(s) are in Auto rotation mode.
+Warning: Manual rotation setup will not overwrite a driver on CTRL_hand_IK.L.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Info: All 1 generated limb target(s) are in Auto rotation mode.
+Warning: Manual rotation setup will not overwrite keyed/NLA animation on CTRL_hand_IK.L; choose the mode before animation or remove those channels first.
+Info: All 1 generated limb target(s) are in Manual rotation mode.
+Warning: Auto Align will not override an animated/driven end rotation.
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 selected IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: All 1 generated limb target(s) are in Auto rotation mode. No change was needed.
+Warning: Unlock the CTRL_foot_IK.L location channels before Manual rotation; this Foot setup must rotate the visible Target around its internal solver pivot.
+PASS test_auto_align_target_refuses_locked_animated_or_driven_state
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Info: Built 2 Leg IK sides; targets, Poles, IK(2), and end rotation are ready.
+Info: Rebuilt 4 Limb IK sides from the current analyzed chains.
+PASS test_master_incremental_build_and_global_transport_no_double_transform
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Warning: Use uniform Master scale before adding or rebuilding Limb IK controls.
+Warning: Use a positive, non-zero Master scale before adding or rebuilding Limb IK controls.
+Warning: Use a positive, non-zero Master scale before adding or rebuilding Limb IK controls.
+Error: Use a positive, non-zero Master scale before adding or rebuilding Limb IK controls.
+Info: Removed 17 controls, 23 constraints, and 5 widgets. Analyze again before rebuilding.
+PASS test_master_scale_guards_and_nonuniform_remove
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Arm IK side; targets, Poles, IK(2), and end rotation are ready.
+Info: Built 1 Leg IK side; targets, Poles, IK(2), and end rotation are ready.
+PASS test_owned_constraint_contract_tampering_fails_closed
+Warning: Analyze Rig found 2/4 high-confidence limbs. Low-confidence sides were left blank.
+Info: Built 1 Leg IK side; targets, Poles, IK(2), and end rotation are ready.
+PASS test_foot_sole_heel_roll_and_internal_target
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Error: injected schema-2 tagless rebuild failure
+Info: Rebuilt 2 Limb IK sides from the current analyzed chains.
+Info: Removed 17 controls, 23 constraints, and 5 widgets. Analyze again before rebuilding.
+PASS test_enhanced_tagless_rebuild_failure_recovers_then_upgrades_and_removes
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Rebuilt 2 Limb IK sides from the current analyzed chains.
+Info: Removed 17 controls, 23 constraints, and 5 widgets. Analyze again before rebuilding.
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Error: injected legacy upgrade failure
+PASS test_legacy_v1_remove_rebuild_upgrade_and_failure_recovery
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Info: Flipped L Arm Pole solution by 180°.
+Info: Rebuilt 2 Limb IK sides from the current analyzed chains.
+Info: Rebuilt 2 Limb IK sides from the current analyzed chains.
+PASS test_rebuild_and_flip_pole
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Error: Context restoration failed, so the generated rig was rolled back: injected context restore failure.
+PASS test_context_restore_failure_rolls_back_new_build
+Info: Analyze Rig found 4/4 high-confidence limbs.
+Info: Built 2 Arm IK sides; targets, Poles, IK(2), and end rotation are ready.
+Warning: injected post-remove failure
+Error: injected rebuild failure
+PASS test_remove_and_rebuild_faults_restore_old_rig
+PASS Limb IK 42 tests
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

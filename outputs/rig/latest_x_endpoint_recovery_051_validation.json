@@ -1,0 +1,190 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source_size": 31106091,
+  "source_sha256_before": "a8eaad8f5ccdcd67c0eb82500d9fb7fe6836a9c542f4d6b72b8e361c4e92c1a9",
+  "status": "passed",
+  "cases": [
+    {
+      "module": "('ARM', 'L')",
+      "mode": "FK",
+      "result": {
+        "mode": "FK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          2.1073424255447017e-08,
+          0.0,
+          1.97686242482388e-07
+        ]
+      },
+      "all_native_matrix_error": 2.384185791015625e-07,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "('ARM', 'L')",
+      "mode": "IK",
+      "result": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          6.637710503799434e-07,
+          0.0,
+          4.805480091749757e-07
+        ]
+      },
+      "all_native_matrix_error": 3.0994415283203125e-06,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "('ARM', 'R')",
+      "mode": "FK",
+      "result": {
+        "mode": "FK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          1.2310379476739693e-07,
+          0.0,
+          2.457562461863554e-07
+        ]
+      },
+      "all_native_matrix_error": 2.384185791015625e-07,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "('ARM', 'R')",
+      "mode": "IK",
+      "result": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          6.488852611125411e-07,
+          0.0,
+          4.256623046721727e-07
+        ]
+      },
+      "all_native_matrix_error": 2.853572368621826e-06,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "('LEG', 'L')",
+      "mode": "FK",
+      "result": {
+        "mode": "FK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          1.1590383340495858e-07,
+          0.0,
+          1.884864366154897e-07
+        ]
+      },
+      "all_native_matrix_error": 1.5621772035956383e-06,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "('LEG', 'L')",
+      "mode": "IK",
+      "result": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          1.4796672989939461e-06,
+          0.0,
+          9.179308814944155e-06
+        ]
+      },
+      "all_native_matrix_error": 1.8715974874794483e-05,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "('LEG', 'R')",
+      "mode": "FK",
+      "result": {
+        "mode": "FK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          2.386512961692656e-07,
+          0.0,
+          3.03925246810483e-07
+        ]
+      },
+      "all_native_matrix_error": 3.427267074584961e-07,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "('LEG', 'R')",
+      "mode": "IK",
+      "result": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          9.107401504806157e-07,
+          0.0,
+          6.20947675380316e-06
+        ]
+      },
+      "all_native_matrix_error": 1.1526979506015778e-05,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "spine",
+      "mode": "FK",
+      "result": {
+        "mode": "FK",
+        "changed": true,
+        "keyed": false,
+        "error": 1.7434358596801758e-06
+      },
+      "all_native_matrix_error": 1.7434358596801758e-06,
+      "untouched_basis_error": 0.0
+    },
+    {
+      "module": "spine",
+      "mode": "IK",
+      "result": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "error": 3.039836883544922e-06
+      },
+      "all_native_matrix_error": 3.039836883544922e-06,
+      "untouched_basis_error": 0.0
+    }
+  ],
+  "preflight": {
+    "all_bones": 101,
+    "native_bones": 56,
+    "schema": 5,
+    "limbs": [
+      "('ARM', 'L')",
+      "('ARM', 'R')",
+      "('LEG', 'L')",
+      "('LEG', 'R')"
+    ]
+  },
+  "unsupported_scale": {
+    "refused": true,
+    "message": "IK/FK could not match this pose without a jump (position 0.1625, rotation 0.3371, scale 0.1333). The switch was cancelled; check limb stretch, twist or additional constraints.",
+    "all_native_matrix_error": 2.9802322387695312e-08,
+    "basis_error": 1.4901161193847656e-08,
+    "mode_value_preserved": true
+  },
+  "preservation": {
+    "rest": true,
+    "weights": true,
+    "ownership_records": true,
+    "other_armatures": {
+      "Anime Girl Base Mesh": 0.0,
+      "Anime Girl Base Mesh.001": 0.0,
+      "Strap2.001": 0.0
+    }
+  },
+  "source_sha256_after": "a8eaad8f5ccdcd67c0eb82500d9fb7fe6836a9c542f4d6b72b8e361c4e92c1a9",
+  "source_unchanged": true
+}

@@ -1,0 +1,64 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "input_preview": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\X_spine_ik_fk_050_preview.blend",
+  "module_path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py",
+  "source_sha256_before": "5e2b82784b0699bd30304903a6e7fd916fafae0b6f1863adb0a38f3e0a46e8a3",
+  "posed_preview_sha256_before": "a65b392cd2c1bfdb7103c8f376c6ff034936547034cb014f0cfd19aa7518da11",
+  "status": "passed",
+  "checks": {
+    "posed_IK_to_native_neutral": {
+      "result": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "error": 2.7127563953399658e-05,
+        "native_neutral": true
+      },
+      "independent_neutral_matrix_error": 2.7135014533996582e-05,
+      "affected_basis_identity_error": 0.0,
+      "unrelated_basis_error": 0.0
+    },
+    "posed_FK_under_moved_Hips_to_native_neutral": {
+      "result": {
+        "mode": "FK",
+        "changed": true,
+        "keyed": false,
+        "error": 5.960464477539062e-07,
+        "native_neutral": true
+      },
+      "independent_neutral_matrix_error": 5.960464477539062e-07,
+      "affected_basis_identity_error": 0.0,
+      "unrelated_basis_error": 0.0
+    },
+    "final_original_Hips_IK_native_neutral": {
+      "result": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "error": 2.7127563953399658e-05,
+        "native_neutral": true
+      },
+      "independent_neutral_matrix_error": 2.7135014533996582e-05,
+      "affected_basis_identity_error": 0.0,
+      "unrelated_basis_error": 0.0
+    }
+  },
+  "preservation": {
+    "rest_equal": true,
+    "weights_equal": true,
+    "existing_records_equal": true,
+    "other_armatures": {
+      "Anime Girl Base Mesh": 0.0,
+      "Anime Girl Base Mesh.001": 0.0,
+      "Strap2.001": 0.0
+    }
+  },
+  "preview": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\X_spine_ik_fk_050_reset_preview.blend",
+    "sha256": "df487a8844514fefa33439547ef994fa92c10070a3637aafc372c84cdc94259c",
+    "mode": "IK"
+  },
+  "source_sha256_after": "5e2b82784b0699bd30304903a6e7fd916fafae0b6f1863adb0a38f3e0a46e8a3",
+  "source_unchanged": true,
+  "posed_preview_unchanged": true
+}

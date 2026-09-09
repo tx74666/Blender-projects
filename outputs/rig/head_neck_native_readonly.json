@@ -1,0 +1,4261 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source_sha256": "7f0d4570749fec0ac27a13aa4a9c1f6a94b644ad7778e9295cf4abdcda3ac157",
+  "version": [
+    0,
+    51,
+    0
+  ],
+  "armature": "CoshaRig",
+  "bone_count": 102,
+  "matrix_world": [
+    [
+      0.782315731048584,
+      0.0,
+      0.0,
+      4.9632518539510784e-08
+    ],
+    [
+      0.0,
+      0.782315731048584,
+      0.0,
+      0.02721264585852623
+    ],
+    [
+      0.0,
+      0.0,
+      0.782315731048584,
+      0.1756228804588318
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "armature_properties": {
+    "_cd_control_colors_enabled": true
+  },
+  "data_property_keys": [
+    "character_designer_limb_ik_armature_id",
+    "character_designer_limb_ik_schema",
+    "character_designer_limb_ik_target_rotation_version",
+    "character_designer_limb_ik_direct_rest",
+    "character_designer_limb_ik_source_widgets",
+    "character_designer_simple_bone_collections",
+    "character_designer_auto_bone_collections",
+    "character_designer_bone_collections_backup_v1",
+    "character_designer_foot_controls_v1",
+    "character_designer_torso_controls_v1",
+    "_cd_control_color_display_before_v1",
+    "character_designer_eye_controls_v1",
+    "character_designer_spine_ik_fk_v1",
+    "character_designer_root_control_v1",
+    "character_designer_limb_fk_visuals_v1",
+    "character_designer_limb_ik_size_fit_v1"
+  ],
+  "shared_mapping_properties": {},
+  "character_setup": {
+    "rig": {
+      "name": "CoshaRig"
+    },
+    "body": {
+      "name": "Cosha"
+    },
+    "hips": "Hips",
+    "head": "Head",
+    "mapping_entries": [
+      {
+        "rig": {
+          "name": "CoshaRig"
+        },
+        "hips": "",
+        "head": "",
+        "footwear": {
+          "name": "Shoes"
+        }
+      }
+    ],
+    "head_status": {
+      "armature": {
+        "name": "CoshaRig"
+      },
+      "role": "HEAD",
+      "name": "Head",
+      "requested": "",
+      "status": "AUTO",
+      "candidates": [
+        "Head"
+      ],
+      "message": ""
+    },
+    "assets": [
+      {
+        "role": "CLOTHING",
+        "object": {
+          "name": "Clothes"
+        }
+      },
+      {
+        "role": "STOCKINGS",
+        "object": {
+          "name": "Stocking"
+        }
+      },
+      {
+        "role": "SHOES",
+        "object": {
+          "name": "Shoes"
+        }
+      },
+      {
+        "role": "HAIR",
+        "object": {
+          "name": "Hair1"
+        }
+      },
+      {
+        "role": "HAIR",
+        "object": {
+          "name": "Hair2"
+        }
+      },
+      {
+        "role": "HAIR",
+        "object": {
+          "name": "Hair3"
+        }
+      },
+      {
+        "role": "SKIRT",
+        "object": {
+          "name": "Dress"
+        }
+      }
+    ]
+  },
+  "head_neck_eyes": [
+    {
+      "name": "Neck",
+      "parent": "UpperChest",
+      "children": [
+        "Head"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        },
+        {
+          "name": "Animation",
+          "visible": true,
+          "effective": true
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "tail_rest": [
+        -1.809577314382249e-11,
+        0.04758994281291962,
+        1.7604598999023438
+      ],
+      "length": 0.06148916482925415,
+      "rest_matrix": [
+        [
+          0.999608039855957,
+          -5.385061285778647e-10,
+          0.027995506301522255,
+          1.9703350062627578e-11
+        ],
+        [
+          0.027434108778834343,
+          -0.19925859570503235,
+          -0.9795628190040588,
+          0.05984218791127205
+        ],
+        [
+          0.005578350741416216,
+          0.9799469709396362,
+          -0.1991807073354721,
+          1.700203776359558
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9996073246002197,
+          1.1086456197517691e-09,
+          0.027995480224490166,
+          -4.3007020167351584e-10
+        ],
+        [
+          0.02743409015238285,
+          -0.19925861060619354,
+          -0.9795622229576111,
+          0.05984210968017578
+        ],
+        [
+          0.005578346084803343,
+          0.9799467325210571,
+          -0.19918061792850494,
+          1.7002031803131104
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "children": [
+        "eye.L",
+        "eye.R",
+        "CTRL_eyes"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        },
+        {
+          "name": "Animation",
+          "visible": true,
+          "effective": true
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -1.809577314382249e-11,
+        0.04758994281291962,
+        1.7604598999023438
+      ],
+      "tail_rest": [
+        1.2875112531673949e-08,
+        0.04912104830145836,
+        1.912583827972412
+      ],
+      "length": 0.15213161706924438,
+      "rest_matrix": [
+        [
+          0.9988647103309631,
+          8.66129994392395e-08,
+          -0.04763832688331604,
+          -1.3408940624515253e-11
+        ],
+        [
+          -0.047635920345783234,
+          0.010064363479614258,
+          -0.9988141059875488,
+          0.04758994281291962
+        ],
+        [
+          0.00047935545444488525,
+          0.9999493956565857,
+          0.01005275547504425,
+          1.7604598999023438
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9988639950752258,
+          8.940696716308594e-08,
+          -0.04763830080628395,
+          -3.619005095600869e-10
+        ],
+        [
+          -0.04763589799404144,
+          0.010064229369163513,
+          -0.9988135099411011,
+          0.04758986458182335
+        ],
+        [
+          0.00047935545444488525,
+          0.9999491572380066,
+          0.010052785277366638,
+          1.760459303855896
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "eye.L",
+      "parent": "Head",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        0.021800357848405838,
+        0.02674010768532753,
+        1.8491942882537842
+      ],
+      "tail_rest": [
+        0.0489996001124382,
+        -0.021604293957352638,
+        1.8497207164764404
+      ],
+      "length": 0.05547302961349487,
+      "rest_matrix": [
+        [
+          -0.8576767444610596,
+          0.49031490087509155,
+          -0.15486200153827667,
+          0.02180035598576069
+        ],
+        [
+          -0.48441851139068604,
+          -0.871493935585022,
+          -0.07640186697244644,
+          0.02674010954797268
+        ],
+        [
+          -0.17242226004600525,
+          0.0094896936789155,
+          0.9849774837493896,
+          1.8491942882537842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.857676088809967,
+          0.4903144836425781,
+          -0.1548616886138916,
+          0.021800342947244644
+        ],
+        [
+          -0.4844181537628174,
+          -0.8714933395385742,
+          -0.07640229165554047,
+          0.026740029454231262
+        ],
+        [
+          -0.17242218554019928,
+          0.009489315561950207,
+          0.9849772453308105,
+          1.8491936922073364
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Eye Aim",
+          "type": "DAMPED_TRACK",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_eye.L"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "eye.R",
+      "parent": "Head",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -0.021800357848405838,
+        0.02674010768532753,
+        1.8491942882537842
+      ],
+      "tail_rest": [
+        -0.0489996001124382,
+        -0.021604293957352638,
+        1.8497207164764404
+      ],
+      "length": 0.05547302961349487,
+      "rest_matrix": [
+        [
+          -0.85767662525177,
+          -0.49031442403793335,
+          0.15486198663711548,
+          -0.021800357848405838
+        ],
+        [
+          0.48441848158836365,
+          -0.8714935183525085,
+          -0.07640203833580017,
+          0.02674011141061783
+        ],
+        [
+          0.1724223643541336,
+          0.00948968343436718,
+          0.9849772453308105,
+          1.8491942882537842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.8576759696006775,
+          -0.49031394720077515,
+          0.1548616737127304,
+          -0.021800341084599495
+        ],
+        [
+          0.48441794514656067,
+          -0.8714929819107056,
+          -0.0764024406671524,
+          0.026740029454231262
+        ],
+        [
+          0.17242230474948883,
+          0.009489309042692184,
+          0.9849770069122314,
+          1.8491936922073364
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Eye Aim",
+          "type": "DAMPED_TRACK",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_eye.R"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    }
+  ],
+  "native_without_shapes": [
+    {
+      "name": "Hips",
+      "parent": null,
+      "children": [
+        "spine",
+        "thigh.L",
+        "thigh.R",
+        "CTRL_torso_bend",
+        "MCH_torso_offset_1",
+        "CTRL_spine_IK",
+        "CTRL_spine_shape",
+        "MCH_spine_IK_1"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        },
+        {
+          "name": "Animation",
+          "visible": true,
+          "effective": true
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        0.0,
+        0.06613431125879288,
+        1.2106313705444336
+      ],
+      "tail_rest": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "length": 0.10966455191373825,
+      "rest_matrix": [
+        [
+          1.0,
+          1.1623568241247995e-07,
+          -1.2490691858602077e-07,
+          0.0
+        ],
+        [
+          -1.1623569662333466e-07,
+          -0.07182483375072479,
+          -0.9974173307418823,
+          0.06613431125879288
+        ],
+        [
+          -1.2490690437516605e-07,
+          0.9974173307418823,
+          -0.07182502746582031,
+          1.2106313705444336
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9999997615814209,
+          1.1623566109619787e-07,
+          -1.2490691858602077e-07,
+          0.0
+        ],
+        [
+          -1.1623567530705259e-07,
+          -0.0718248188495636,
+          -0.997417151927948,
+          0.06613428145647049
+        ],
+        [
+          -1.2490687595345662e-07,
+          0.997417151927948,
+          -0.07182501256465912,
+          1.2106308937072754
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Root Follow",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_master"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "spine",
+      "parent": "Hips",
+      "children": [
+        "Chest"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "tail_rest": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "length": 0.13557681441307068,
+      "rest_matrix": [
+        [
+          1.0,
+          -1.685907932369446e-06,
+          1.7265662108911783e-06,
+          1.2746934174856506e-08
+        ],
+        [
+          1.685908273429959e-06,
+          -0.02382568269968033,
+          -0.9997162222862244,
+          0.05825767293572426
+        ],
+        [
+          1.726566324578016e-06,
+          0.9997162818908691,
+          -0.02382586896419525,
+          1.3200126886367798
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9999994039535522,
+          -1.6892233816179214e-06,
+          1.726128175505437e-06,
+          1.2746931510321247e-08
+        ],
+        [
+          1.685358256509062e-06,
+          -0.02384534850716591,
+          -0.999715268611908,
+          0.05825764685869217
+        ],
+        [
+          1.729902010083606e-06,
+          0.9997153282165527,
+          -0.02384587563574314,
+          1.3200122117996216
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Torso FK",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_torso_1"
+        },
+        {
+          "name": "CD Spine IK",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "MCH_spine_IK_1"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "Chest",
+      "parent": "spine",
+      "children": [
+        "UpperChest"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "tail_rest": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "length": 0.11615099012851715,
+      "rest_matrix": [
+        [
+          0.9996485114097595,
+          9.291042601944355e-07,
+          0.02651195041835308,
+          -2.1582309273071587e-07
+        ],
+        [
+          0.02650623768568039,
+          0.020726164802908897,
+          -0.9994338750839233,
+          0.05502746254205704
+        ],
+        [
+          -0.000550414843019098,
+          0.999785304069519,
+          0.020718665793538094,
+          1.455551028251648
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9996480941772461,
+          9.259626949642552e-07,
+          0.026511922478675842,
+          -2.162725820653577e-07
+        ],
+        [
+          0.026506219059228897,
+          0.02074885182082653,
+          -0.9994329214096069,
+          0.05502476915717125
+        ],
+        [
+          -0.0005510334740392864,
+          0.9997848272323608,
+          0.020740965381264687,
+          1.4555504322052002
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Torso FK",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_torso_2"
+        },
+        {
+          "name": "CD Spine IK",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "MCH_spine_IK_2"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "UpperChest",
+      "parent": "Chest",
+      "children": [
+        "Neck",
+        "shoulder.L",
+        "shoulder.R",
+        "breast.L",
+        "breast.R"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "tail_rest": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "length": 0.1285492181777954,
+      "rest_matrix": [
+        [
+          1.0,
+          8.395727491006255e-07,
+          -8.195638656616211e-07,
+          -1.0790671467475477e-07
+        ],
+        [
+          -8.363276720046997e-07,
+          0.018727149814367294,
+          -0.9998246431350708,
+          0.05743482708930969
+        ],
+        [
+          -8.243368938565254e-07,
+          0.9998247623443604,
+          0.018726959824562073,
+          1.5716770887374878
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9999992847442627,
+          8.424090651715233e-07,
+          -8.247189953181078e-07,
+          -1.0872109612591885e-07
+        ],
+        [
+          -8.403500260101282e-07,
+          0.018726995214819908,
+          -0.999824047088623,
+          0.05743476748466492
+        ],
+        [
+          -8.26816346943815e-07,
+          0.9998244643211365,
+          0.01872698776423931,
+          1.57167649269104
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Torso FK",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_torso_3"
+        },
+        {
+          "name": "CD Spine IK",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "MCH_spine_IK_3"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "Neck",
+      "parent": "UpperChest",
+      "children": [
+        "Head"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        },
+        {
+          "name": "Animation",
+          "visible": true,
+          "effective": true
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "tail_rest": [
+        -1.809577314382249e-11,
+        0.04758994281291962,
+        1.7604598999023438
+      ],
+      "length": 0.06148916482925415,
+      "rest_matrix": [
+        [
+          0.999608039855957,
+          -5.385061285778647e-10,
+          0.027995506301522255,
+          1.9703350062627578e-11
+        ],
+        [
+          0.027434108778834343,
+          -0.19925859570503235,
+          -0.9795628190040588,
+          0.05984218791127205
+        ],
+        [
+          0.005578350741416216,
+          0.9799469709396362,
+          -0.1991807073354721,
+          1.700203776359558
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9996073246002197,
+          1.1086456197517691e-09,
+          0.027995480224490166,
+          -4.3007020167351584e-10
+        ],
+        [
+          0.02743409015238285,
+          -0.19925861060619354,
+          -0.9795622229576111,
+          0.05984210968017578
+        ],
+        [
+          0.005578346084803343,
+          0.9799467325210571,
+          -0.19918061792850494,
+          1.7002031803131104
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "children": [
+        "eye.L",
+        "eye.R",
+        "CTRL_eyes"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        },
+        {
+          "name": "Animation",
+          "visible": true,
+          "effective": true
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -1.809577314382249e-11,
+        0.04758994281291962,
+        1.7604598999023438
+      ],
+      "tail_rest": [
+        1.2875112531673949e-08,
+        0.04912104830145836,
+        1.912583827972412
+      ],
+      "length": 0.15213161706924438,
+      "rest_matrix": [
+        [
+          0.9988647103309631,
+          8.66129994392395e-08,
+          -0.04763832688331604,
+          -1.3408940624515253e-11
+        ],
+        [
+          -0.047635920345783234,
+          0.010064363479614258,
+          -0.9988141059875488,
+          0.04758994281291962
+        ],
+        [
+          0.00047935545444488525,
+          0.9999493956565857,
+          0.01005275547504425,
+          1.7604598999023438
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9988639950752258,
+          8.940696716308594e-08,
+          -0.04763830080628395,
+          -3.619005095600869e-10
+        ],
+        [
+          -0.04763589799404144,
+          0.010064229369163513,
+          -0.9988135099411011,
+          0.04758986458182335
+        ],
+        [
+          0.00047935545444488525,
+          0.9999491572380066,
+          0.010052785277366638,
+          1.760459303855896
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "eye.L",
+      "parent": "Head",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        0.021800357848405838,
+        0.02674010768532753,
+        1.8491942882537842
+      ],
+      "tail_rest": [
+        0.0489996001124382,
+        -0.021604293957352638,
+        1.8497207164764404
+      ],
+      "length": 0.05547302961349487,
+      "rest_matrix": [
+        [
+          -0.8576767444610596,
+          0.49031490087509155,
+          -0.15486200153827667,
+          0.02180035598576069
+        ],
+        [
+          -0.48441851139068604,
+          -0.871493935585022,
+          -0.07640186697244644,
+          0.02674010954797268
+        ],
+        [
+          -0.17242226004600525,
+          0.0094896936789155,
+          0.9849774837493896,
+          1.8491942882537842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.857676088809967,
+          0.4903144836425781,
+          -0.1548616886138916,
+          0.021800342947244644
+        ],
+        [
+          -0.4844181537628174,
+          -0.8714933395385742,
+          -0.07640229165554047,
+          0.026740029454231262
+        ],
+        [
+          -0.17242218554019928,
+          0.009489315561950207,
+          0.9849772453308105,
+          1.8491936922073364
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Eye Aim",
+          "type": "DAMPED_TRACK",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_eye.L"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "eye.R",
+      "parent": "Head",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -0.021800357848405838,
+        0.02674010768532753,
+        1.8491942882537842
+      ],
+      "tail_rest": [
+        -0.0489996001124382,
+        -0.021604293957352638,
+        1.8497207164764404
+      ],
+      "length": 0.05547302961349487,
+      "rest_matrix": [
+        [
+          -0.85767662525177,
+          -0.49031442403793335,
+          0.15486198663711548,
+          -0.021800357848405838
+        ],
+        [
+          0.48441848158836365,
+          -0.8714935183525085,
+          -0.07640203833580017,
+          0.02674011141061783
+        ],
+        [
+          0.1724223643541336,
+          0.00948968343436718,
+          0.9849772453308105,
+          1.8491942882537842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.8576759696006775,
+          -0.49031394720077515,
+          0.1548616737127304,
+          -0.021800341084599495
+        ],
+        [
+          0.48441794514656067,
+          -0.8714929819107056,
+          -0.0764024406671524,
+          0.026740029454231262
+        ],
+        [
+          0.17242230474948883,
+          0.009489309042692184,
+          0.9849770069122314,
+          1.8491936922073364
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Eye Aim",
+          "type": "DAMPED_TRACK",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_eye.R"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "hand.L",
+      "parent": "forearm.L",
+      "children": [
+        "f_index.01.L",
+        "thumb.01.L",
+        "f_middle.01.L",
+        "f_ring.01.L",
+        "f_pinky.01.L"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        -2.980232238769531e-07,
+        5.960464477539063e-08,
+        -3.5762786865234375e-07
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        -0.0,
+        -0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        -7.450609018633259e-09,
+        -7.4505797087454084e-09,
+        7.4505734914964705e-09
+      ],
+      "scale": [
+        0.9999997615814209,
+        0.9999999403953552,
+        1.0000001192092896
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "tail_rest": [
+        0.5486394166946411,
+        0.07173283398151398,
+        1.2075296640396118
+      ],
+      "length": 0.05516856163740158,
+      "rest_matrix": [
+        [
+          0.5704395771026611,
+          0.6604470610618591,
+          0.4882708489894867,
+          0.5122034549713135
+        ],
+        [
+          -0.6604469418525696,
+          0.015434055589139462,
+          0.7507141828536987,
+          0.07088135182857513
+        ],
+        [
+          0.48827093839645386,
+          -0.7507142424583435,
+          0.44499471783638,
+          1.2489454746246338
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.5704379677772522,
+          0.6604468822479248,
+          0.48827001452445984,
+          0.5122034549713135
+        ],
+        [
+          -0.6604458093643188,
+          0.015432467684149742,
+          0.7507142424583435,
+          0.07088123261928558
+        ],
+        [
+          0.4882729947566986,
+          -0.7507126927375793,
+          0.4449946880340576,
+          1.2489454746246338
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          0.9999997615814209,
+          -1.4901146094814521e-08,
+          -1.4901161193847656e-08,
+          0.0
+        ],
+        [
+          1.4901143430279262e-08,
+          0.9999999403953552,
+          1.4901219813623356e-08,
+          0.0
+        ],
+        [
+          1.4901155864777138e-08,
+          -1.4901216260909678e-08,
+          1.0000001192092896,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CDLimbIK_END_ROTATION_b47d68b7f0244d60b350ca2b10242a09",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": true,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_hand_IK.L"
+        },
+        {
+          "name": "CDLimbIK_AUTO_OFFSET_ROTATION_b47d68b7f0244d60b350ca2b10242a09",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_hand_IK.L"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {
+        "character_designer_limb_ik_constraints": "{\"CDLimbIK_AUTO_OFFSET_ROTATION_b47d68b7f0244d60b350ca2b10242a09\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"upper_arm.L\",\"forearm.L\",\"hand.L\"],\"display\":\"MCH_elbow_pole_aim.L\",\"kind\":\"ARM\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_elbow_pole.L\",\"rig_id\":\"b47d68b7f0244d60b350ca2b10242a09\",\"role\":\"AUTO_OFFSET_ROTATION\",\"side\":\"L\",\"target\":\"CTRL_hand_IK.L\",\"version\":1},\"CDLimbIK_END_ROTATION_b47d68b7f0244d60b350ca2b10242a09\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"upper_arm.L\",\"forearm.L\",\"hand.L\"],\"display\":\"MCH_elbow_pole_aim.L\",\"kind\":\"ARM\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_elbow_pole.L\",\"rig_id\":\"b47d68b7f0244d60b350ca2b10242a09\",\"role\":\"END_ROTATION\",\"side\":\"L\",\"target\":\"CTRL_hand_IK.L\",\"version\":1}}"
+      }
+    },
+    {
+      "name": "hand.R",
+      "parent": "forearm.R",
+      "children": [
+        "f_index.01.R",
+        "thumb.01.R",
+        "f_middle.01.R",
+        "f_ring.01.R",
+        "f_pinky.01.R"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "tail_rest": [
+        -0.5486394166946411,
+        0.07173283398151398,
+        1.2075296640396118
+      ],
+      "length": 0.05516856163740158,
+      "rest_matrix": [
+        [
+          0.5704395771026611,
+          -0.6604470014572144,
+          -0.48827075958251953,
+          -0.5122034549713135
+        ],
+        [
+          0.6604468822479248,
+          0.015434053726494312,
+          0.7507139444351196,
+          0.07088135927915573
+        ],
+        [
+          -0.4882707893848419,
+          -0.750714123249054,
+          0.4449945390224457,
+          1.2489454746246338
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.5704345703125,
+          -0.6604468822479248,
+          -0.48827341198921204,
+          -0.5122031569480896
+        ],
+        [
+          0.6604470610618591,
+          0.015427346341311932,
+          0.7507126331329346,
+          0.07088134437799454
+        ],
+        [
+          -0.48827439546585083,
+          -0.750713050365448,
+          0.4449917674064636,
+          1.2489454746246338
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CDLimbIK_END_ROTATION_f4fbf5e211184144bfa510d338e3c1da",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": true,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_hand_IK.R"
+        },
+        {
+          "name": "CDLimbIK_AUTO_OFFSET_ROTATION_f4fbf5e211184144bfa510d338e3c1da",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_hand_IK.R"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {
+        "character_designer_limb_ik_constraints": "{\"CDLimbIK_AUTO_OFFSET_ROTATION_f4fbf5e211184144bfa510d338e3c1da\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"upper_arm.R\",\"forearm.R\",\"hand.R\"],\"display\":\"MCH_elbow_pole_aim.R\",\"kind\":\"ARM\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_elbow_pole.R\",\"rig_id\":\"f4fbf5e211184144bfa510d338e3c1da\",\"role\":\"AUTO_OFFSET_ROTATION\",\"side\":\"R\",\"target\":\"CTRL_hand_IK.R\",\"version\":1},\"CDLimbIK_END_ROTATION_f4fbf5e211184144bfa510d338e3c1da\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"upper_arm.R\",\"forearm.R\",\"hand.R\"],\"display\":\"MCH_elbow_pole_aim.R\",\"kind\":\"ARM\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_elbow_pole.R\",\"rig_id\":\"f4fbf5e211184144bfa510d338e3c1da\",\"role\":\"END_ROTATION\",\"side\":\"R\",\"target\":\"CTRL_hand_IK.R\",\"version\":1}}"
+      }
+    },
+    {
+      "name": "breast.L",
+      "parent": "UpperChest",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        },
+        {
+          "name": "Animation",
+          "visible": true,
+          "effective": true
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "YXZ",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        0.08530081063508987,
+        -0.012929326854646206,
+        1.5610092878341675
+      ],
+      "tail_rest": [
+        0.08530081063508987,
+        -0.11690172553062439,
+        1.528212070465088
+      ],
+      "length": 0.10902253538370132,
+      "rest_matrix": [
+        [
+          -1.0,
+          4.907303718937328e-08,
+          -9.562184004607843e-07,
+          0.08530081063508987
+        ],
+        [
+          2.420436544525728e-07,
+          -0.9536781311035156,
+          -0.3008294403553009,
+          -0.012929330579936504
+        ],
+        [
+          -9.264274467568612e-07,
+          -0.30082985758781433,
+          0.9536781311035156,
+          1.5610092878341675
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.9999992847442627,
+          4.328200020609074e-08,
+          -9.55171458372206e-07,
+          0.0853007510304451
+        ],
+        [
+          2.460666337356088e-07,
+          -0.9536775350570679,
+          -0.3008294105529785,
+          -0.012929344549775124
+        ],
+        [
+          -9.23947425235383e-07,
+          -0.3008297383785248,
+          0.9536778926849365,
+          1.5610086917877197
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "breast.R",
+      "parent": "UpperChest",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        },
+        {
+          "name": "Animation",
+          "visible": true,
+          "effective": true
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "YXZ",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -0.08530081063508987,
+        -0.012929326854646206,
+        1.5610092878341675
+      ],
+      "tail_rest": [
+        -0.08530079573392868,
+        -0.11690174788236618,
+        1.5282121896743774
+      ],
+      "length": 0.10902254283428192,
+      "rest_matrix": [
+        [
+          -1.0,
+          1.8575286730992957e-07,
+          -5.0821569175241166e-08,
+          -0.08530081063508987
+        ],
+        [
+          -1.606752562111069e-07,
+          -0.9536781907081604,
+          -0.3008285462856293,
+          -0.012929324992001057
+        ],
+        [
+          -1.0408836459419035e-07,
+          -0.30082860589027405,
+          0.9536782503128052,
+          1.5610092878341675
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.9999992847442627,
+          1.7996183032664703e-07,
+          -4.9775309207689133e-08,
+          -0.0853007510304451
+        ],
+        [
+          -1.566521632412332e-07,
+          -0.9536775946617126,
+          -0.3008285164833069,
+          -0.012929338030517101
+        ],
+        [
+          -1.0160859886809703e-07,
+          -0.3008284866809845,
+          0.9536780118942261,
+          1.5610086917877197
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "foot.L",
+      "parent": "shin.L",
+      "children": [
+        "toe.L",
+        "MCH_toe_FK_ref.L"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        0.09949608147144318,
+        0.060485754162073135,
+        -0.021930769085884094
+      ],
+      "tail_rest": [
+        0.08716753870248795,
+        -0.06566915661096573,
+        -0.06508726626634598
+      ],
+      "length": 0.1339012235403061,
+      "rest_matrix": [
+        [
+          0.9941632151603699,
+          -0.09207189828157425,
+          -0.056072384119033813,
+          0.09949608147144318
+        ],
+        [
+          -0.06875073164701462,
+          -0.9421491026878357,
+          0.3280678689479828,
+          0.060485757887363434
+        ],
+        [
+          -0.08303641527891159,
+          -0.3223010003566742,
+          -0.9429883360862732,
+          -0.0219307541847229
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9941419959068298,
+          -0.09211517125368118,
+          -0.056064050644636154,
+          0.09949908405542374
+        ],
+        [
+          -0.06879220902919769,
+          -0.9421445727348328,
+          0.32807016372680664,
+          0.060485683381557465
+        ],
+        [
+          -0.08303855359554291,
+          -0.32230037450790405,
+          -0.9429872632026672,
+          -0.021930694580078125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CDLimbIK_END_ROTATION_67d40710359549028b8557c524b77bae",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": true,
+          "target": "CoshaRig",
+          "subtarget": "MCH_foot_ankle.L"
+        },
+        {
+          "name": "CDLimbIK_AUTO_OFFSET_ROTATION_67d40710359549028b8557c524b77bae",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "MCH_foot_ankle.L"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {
+        "character_designer_limb_ik_constraints": "{\"CDLimbIK_AUTO_OFFSET_ROTATION_67d40710359549028b8557c524b77bae\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"thigh.L\",\"shin.L\",\"foot.L\"],\"display\":\"MCH_knee_pole_aim.L\",\"kind\":\"LEG\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_knee_pole.L\",\"rig_id\":\"67d40710359549028b8557c524b77bae\",\"role\":\"AUTO_OFFSET_ROTATION\",\"side\":\"L\",\"target\":\"CTRL_foot_IK.L\",\"version\":1},\"CDLimbIK_END_ROTATION_67d40710359549028b8557c524b77bae\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"thigh.L\",\"shin.L\",\"foot.L\"],\"display\":\"MCH_knee_pole_aim.L\",\"kind\":\"LEG\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_knee_pole.L\",\"rig_id\":\"67d40710359549028b8557c524b77bae\",\"role\":\"END_ROTATION\",\"side\":\"L\",\"target\":\"CTRL_foot_IK.L\",\"version\":1}}"
+      }
+    },
+    {
+      "name": "toe.L",
+      "parent": "foot.L",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        1.691281795501709e-06,
+        5.21540641784668e-08,
+        -7.450580596923828e-08
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        5.21542986575696e-08,
+        -2.801243681460619e-09,
+        -4.6119907892716583e-10
+      ],
+      "scale": [
+        1.0000182390213013,
+        1.0000004768371582,
+        1.0000001192092896
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        0.08716753870248795,
+        -0.06566915661096573,
+        -0.06508726626634598
+      ],
+      "tail_rest": [
+        0.08716753870248795,
+        -0.1328691691160202,
+        -0.06508727371692657
+      ],
+      "length": 0.06720000505447388,
+      "rest_matrix": [
+        [
+          -0.9999908804893494,
+          3.725290298461914e-09,
+          7.82310962677002e-07,
+          0.08716753870248795
+        ],
+        [
+          -4.6938657760620117e-07,
+          -1.0000001192092896,
+          5.960464477539063e-08,
+          -0.06566915661096573
+        ],
+        [
+          2.0638108253479004e-06,
+          -1.1920928955078125e-07,
+          1.0,
+          -0.06508725136518478
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -0.9999905228614807,
+          -4.1164090362144634e-05,
+          5.173305908101611e-06,
+          0.0871647521853447
+        ],
+        [
+          4.123821418033913e-05,
+          -0.9999998211860657,
+          1.8665868140033126e-07,
+          -0.06566863507032394
+        ],
+        [
+          4.5106794459570665e-06,
+          -2.6935066443911637e-07,
+          0.9999980330467224,
+          -0.06508710980415344
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0000182390213013,
+          9.223983243877854e-10,
+          -5.602488251099658e-09,
+          0.0
+        ],
+        [
+          -9.224152552889109e-10,
+          1.0000004768371582,
+          -1.0430861152599391e-07,
+          0.0
+        ],
+        [
+          5.6025895034395035e-09,
+          1.043086470531307e-07,
+          1.0000001192092896,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Toe Bend",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_toe_bend.L"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    },
+    {
+      "name": "foot.R",
+      "parent": "shin.R",
+      "children": [
+        "toe.R",
+        "MCH_toe_FK_ref.R"
+      ],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -0.09949608147144318,
+        0.060485754162073135,
+        -0.021930769085884094
+      ],
+      "tail_rest": [
+        -0.08716753870248795,
+        -0.06566916406154633,
+        -0.06508713960647583
+      ],
+      "length": 0.1339011788368225,
+      "rest_matrix": [
+        [
+          0.9941774606704712,
+          0.09207192063331604,
+          0.056076064705848694,
+          -0.09949609637260437
+        ],
+        [
+          0.06874938309192657,
+          -0.94214928150177,
+          0.3280670642852783,
+          0.06048574671149254
+        ],
+        [
+          0.08303795009851456,
+          -0.3223000764846802,
+          -0.9429884552955627,
+          -0.02193087339401245
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          0.9941881895065308,
+          0.09207190573215485,
+          0.05607641115784645,
+          -0.09949777275323868
+        ],
+        [
+          0.06875039637088776,
+          -0.942148745059967,
+          0.3280678391456604,
+          0.06048567220568657
+        ],
+        [
+          0.08303957432508469,
+          -0.3223007023334503,
+          -0.9429877996444702,
+          -0.021931469440460205
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CDLimbIK_END_ROTATION_8ef6be63a87549728e878a71b29cefff",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": true,
+          "target": "CoshaRig",
+          "subtarget": "MCH_foot_ankle.R"
+        },
+        {
+          "name": "CDLimbIK_AUTO_OFFSET_ROTATION_8ef6be63a87549728e878a71b29cefff",
+          "type": "COPY_ROTATION",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "MCH_foot_ankle.R"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {
+        "character_designer_limb_ik_constraints": "{\"CDLimbIK_AUTO_OFFSET_ROTATION_8ef6be63a87549728e878a71b29cefff\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"thigh.R\",\"shin.R\",\"foot.R\"],\"display\":\"MCH_knee_pole_aim.R\",\"kind\":\"LEG\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_knee_pole.R\",\"rig_id\":\"8ef6be63a87549728e878a71b29cefff\",\"role\":\"AUTO_OFFSET_ROTATION\",\"side\":\"R\",\"target\":\"CTRL_foot_IK.R\",\"version\":1},\"CDLimbIK_END_ROTATION_8ef6be63a87549728e878a71b29cefff\":{\"armature_id\":\"0ea29e722af344daa757571c6c317fcd\",\"chain\":[\"thigh.R\",\"shin.R\",\"foot.R\"],\"display\":\"MCH_knee_pole_aim.R\",\"kind\":\"LEG\",\"owner\":\"limb_ik\",\"pole\":\"CTRL_knee_pole.R\",\"rig_id\":\"8ef6be63a87549728e878a71b29cefff\",\"role\":\"END_ROTATION\",\"side\":\"R\",\"target\":\"CTRL_foot_IK.R\",\"version\":1}}"
+      }
+    },
+    {
+      "name": "toe.R",
+      "parent": "foot.R",
+      "children": [],
+      "use_deform": true,
+      "hide": false,
+      "hide_select": false,
+      "collections": [
+        {
+          "name": "Original",
+          "visible": false,
+          "effective": false
+        }
+      ],
+      "custom_shape": null,
+      "custom_shape_transform": null,
+      "custom_shape_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "custom_shape_translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "custom_shape_bone_size": true,
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "QUATERNION",
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lock_location": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation": [
+        false,
+        false,
+        false
+      ],
+      "lock_rotation_w": false,
+      "lock_rotations_4d": true,
+      "lock_scale": [
+        false,
+        false,
+        false
+      ],
+      "head_rest": [
+        -0.08716753870248795,
+        -0.06566916406154633,
+        -0.06508713960647583
+      ],
+      "tail_rest": [
+        -0.08716753870248795,
+        -0.1328691840171814,
+        -0.06508713960647583
+      ],
+      "length": 0.06720003485679626,
+      "rest_matrix": [
+        [
+          -1.0000052452087402,
+          9.313225746154785e-09,
+          3.8370490074157715e-07,
+          -0.08716756105422974
+        ],
+        [
+          -3.129243850708008e-07,
+          -0.9999997019767761,
+          2.384185791015625e-07,
+          -0.06566914916038513
+        ],
+        [
+          -1.9744038581848145e-07,
+          5.960464477539063e-08,
+          0.9999999403953552,
+          -0.065087229013443
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pose_matrix": [
+        [
+          -1.0000160932540894,
+          1.4461921864494798e-06,
+          -2.343643245694693e-06,
+          -0.08716923743486404
+        ],
+        [
+          -1.50581581692677e-06,
+          -0.999998927116394,
+          -5.07885999923019e-07,
+          -0.06566914916038513
+        ],
+        [
+          -1.7930854028236354e-06,
+          -8.41806411244761e-07,
+          0.9999997615814209,
+          -0.06508791446685791
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matrix_basis": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "constraints": [
+        {
+          "name": "CD Toe Bend",
+          "type": "COPY_TRANSFORMS",
+          "influence": 1.0,
+          "mute": false,
+          "target": "CoshaRig",
+          "subtarget": "CTRL_toe_bend.R"
+        }
+      ],
+      "bone_properties": {},
+      "pose_properties": {}
+    }
+  ],
+  "native_with_shapes": [
+    {
+      "name": "shoulder.L",
+      "shape": "WGT_Randy_Shoulder"
+    },
+    {
+      "name": "upper_arm.L",
+      "shape": "WGT_CD_FK_upper_arm.L_c250fb4307"
+    },
+    {
+      "name": "forearm.L",
+      "shape": "WGT_CD_FK_forearm.L_c250fb4307"
+    },
+    {
+      "name": "f_index.01.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_index.02.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_index.03.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "thumb.01.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "thumb.02.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "thumb.03.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_middle.01.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_middle.02.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_middle.03.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_ring.01.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_ring.02.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_ring.03.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_pinky.01.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_pinky.02.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_pinky.03.L",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "shoulder.R",
+      "shape": "WGT_Randy_Shoulder"
+    },
+    {
+      "name": "upper_arm.R",
+      "shape": "WGT_CD_FK_upper_arm.R_c250fb4307"
+    },
+    {
+      "name": "forearm.R",
+      "shape": "WGT_CD_FK_forearm.R_c250fb4307"
+    },
+    {
+      "name": "f_index.01.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_index.02.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_index.03.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "thumb.01.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "thumb.02.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "thumb.03.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_middle.01.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_middle.02.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_middle.03.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_ring.01.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_ring.02.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_ring.03.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_pinky.01.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_pinky.02.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "f_pinky.03.R",
+      "shape": "WGT_Randy_Finger"
+    },
+    {
+      "name": "thigh.L",
+      "shape": "WGT_CD_FK_thigh.L_c250fb4307"
+    },
+    {
+      "name": "shin.L",
+      "shape": "WGT_CD_FK_shin.L_c250fb4307"
+    },
+    {
+      "name": "thigh.R",
+      "shape": "WGT_CD_FK_thigh.R_c250fb4307"
+    },
+    {
+      "name": "shin.R",
+      "shape": "WGT_CD_FK_shin.R_c250fb4307"
+    }
+  ],
+  "cosha_weighted_head_geometry": {
+    "mesh": "Cosha",
+    "groups": [
+      "CTRL_eye.L",
+      "CTRL_eye.R",
+      "CTRL_eyes",
+      "Head",
+      "eye.L",
+      "eye.R"
+    ],
+    "rest": {
+      "0.001": {
+        "head_only": {
+          "count": 904,
+          "min": [
+            -0.09741442650556564,
+            -0.04629429429769516,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.09383319690823555,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2802549824118614,
+            0.23110327869653702
+          ]
+        },
+        "head_descendants": {
+          "count": 1054,
+          "min": [
+            -0.09741442650556564,
+            -0.04629429429769516,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.09383319690823555,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2802549824118614,
+            0.23110327869653702
+          ]
+        }
+      },
+      "0.05": {
+        "head_only": {
+          "count": 892,
+          "min": [
+            -0.09741442650556564,
+            -0.02782321348786354,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.10306873731315136,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2617839016020298,
+            0.23110327869653702
+          ]
+        },
+        "head_descendants": {
+          "count": 1042,
+          "min": [
+            -0.09741442650556564,
+            -0.02782321348786354,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.10306873731315136,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2617839016020298,
+            0.23110327869653702
+          ]
+        }
+      },
+      "0.25": {
+        "head_only": {
+          "count": 878,
+          "min": [
+            -0.09741442650556564,
+            -0.016466010361909866,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.1087473388761282,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2504266984760761,
+            0.23110327869653702
+          ]
+        },
+        "head_descendants": {
+          "count": 1028,
+          "min": [
+            -0.09741442650556564,
+            -0.016466010361909866,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.1087473388761282,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2504266984760761,
+            0.23110327869653702
+          ]
+        }
+      },
+      "0.5": {
+        "head_only": {
+          "count": 849,
+          "min": [
+            -0.09741442650556564,
+            -0.016204340383410454,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.1088781738653779,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2501650284975767,
+            0.23110327869653702
+          ]
+        },
+        "head_descendants": {
+          "count": 1011,
+          "min": [
+            -0.09741442650556564,
+            -0.016204340383410454,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.1088781738653779,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2501650284975767,
+            0.23110327869653702
+          ]
+        }
+      },
+      "0.9": {
+        "head_only": {
+          "count": 826,
+          "min": [
+            -0.09741442650556564,
+            -0.016204340383410454,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.1088781738653779,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2501650284975767,
+            0.23110327869653702
+          ]
+        },
+        "head_descendants": {
+          "count": 988,
+          "min": [
+            -0.09741442650556564,
+            -0.016204340383410454,
+            -0.09833043068647385
+          ],
+          "max": [
+            0.09785846620798111,
+            0.23396068811416626,
+            0.13277284801006317
+          ],
+          "center": [
+            0.00022201985120773315,
+            0.1088781738653779,
+            0.017221208661794662
+          ],
+          "extent": [
+            0.19527289271354675,
+            0.2501650284975767,
+            0.23110327869653702
+          ]
+        }
+      }
+    },
+    "evaluated": {
+      "0.05": {
+        "head_only": {
+          "count": 3471,
+          "min": [
+            -0.09599722921848297,
+            -0.036773260682821274,
+            -0.09616286307573318
+          ],
+          "max": [
+            0.0957566350698471,
+            0.23129482567310333,
+            0.12725727260112762
+          ],
+          "center": [
+            -0.00012029707431793213,
+            0.09726078249514103,
+            0.01554720476269722
+          ],
+          "extent": [
+            0.19175386428833008,
+            0.2680680863559246,
+            0.2234201356768608
+          ]
+        },
+        "head_descendants": {
+          "count": 3997,
+          "min": [
+            -0.09599722921848297,
+            -0.036773260682821274,
+            -0.09616286307573318
+          ],
+          "max": [
+            0.0957566350698471,
+            0.23129482567310333,
+            0.12725727260112762
+          ],
+          "center": [
+            -0.00012029707431793213,
+            0.09726078249514103,
+            0.01554720476269722
+          ],
+          "extent": [
+            0.19175386428833008,
+            0.2680680863559246,
+            0.2234201356768608
+          ]
+        }
+      },
+      "0.5": {
+        "head_only": {
+          "count": 3296,
+          "min": [
+            -0.09599722921848297,
+            -0.01400676742196083,
+            -0.09616286307573318
+          ],
+          "max": [
+            0.0957566350698471,
+            0.23129482567310333,
+            0.12725727260112762
+          ],
+          "center": [
+            -0.00012029707431793213,
+            0.10864402912557125,
+            0.01554720476269722
+          ],
+          "extent": [
+            0.19175386428833008,
+            0.24530159309506416,
+            0.2234201356768608
+          ]
+        },
+        "head_descendants": {
+          "count": 3874,
+          "min": [
+            -0.09599722921848297,
+            -0.01400676742196083,
+            -0.09616286307573318
+          ],
+          "max": [
+            0.0957566350698471,
+            0.23129482567310333,
+            0.12725727260112762
+          ],
+          "center": [
+            -0.00012029707431793213,
+            0.10864402912557125,
+            0.01554720476269722
+          ],
+          "extent": [
+            0.19175386428833008,
+            0.24530159309506416,
+            0.2234201356768608
+          ]
+        }
+      }
+    },
+    "neck_weight_at_least_half_local": {
+      "count": 49,
+      "min": [
+        -0.03772501274943352,
+        0.0048338863998651505,
+        -0.03778866305947304
+      ],
+      "max": [
+        0.03749789670109749,
+        0.06739500164985657,
+        0.04309352487325668
+      ],
+      "center": [
+        -0.00011355802416801453,
+        0.03611444402486086,
+        0.002652430906891823
+      ],
+      "extent": [
+        0.075222909450531,
+        0.06256111524999142,
+        0.08088218793272972
+      ]
+    },
+    "eye_direction_armature": [
+      0.0,
+      -0.9999406933784485,
+      0.010888478718698025
+    ],
+    "eye_direction_head_local": [
+      0.04763830453157425,
+      0.0008243462070822716,
+      0.9988642334938049
+    ],
+    "head_half_weight_extent_per_head_length": [
+      1.2835786306318306,
+      1.6443986681855314,
+      1.519100915040874
+    ]
+  },
+  "native_eye_heads_in_head_rest_space": {
+    "eye.L": [
+      0.022811342030763626,
+      0.08851999789476395,
+      0.02067861706018448
+    ],
+    "eye.R": [
+      -0.02073986828327179,
+      0.08851999044418335,
+      0.022755682468414307
+    ]
+  },
+  "source_unchanged": true,
+  "saved": false
+}

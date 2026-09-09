@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "version": [
+    0,
+    51,
+    0
+  ],
+  "backup": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\backups\\X_before_root_fk_051_20260909_185733.blend",
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "main_file_saved": true,
+  "root": "CTRL_master",
+  "root_sources": [
+    "Hips"
+  ],
+  "root_inputs": [
+    "CTRL_elbow_pole.L",
+    "CTRL_elbow_pole.R",
+    "CTRL_foot_IK.L",
+    "CTRL_foot_IK.R",
+    "CTRL_hand_IK.L",
+    "CTRL_hand_IK.R",
+    "CTRL_knee_pole.L",
+    "CTRL_knee_pole.R"
+  ],
+  "fk_rings": [
+    "forearm.L",
+    "forearm.R",
+    "shin.L",
+    "shin.R",
+    "thigh.L",
+    "thigh.R",
+    "upper_arm.L",
+    "upper_arm.R"
+  ],
+  "ik_size_fit": {
+    "version": 1,
+    "armature_id": "0ea29e722af344daa757571c6c317fcd",
+    "bindings": {
+      "CTRL_hand_IK.L": {
+        "original": [
+          0.13366374373435974,
+          0.13366378843784332,
+          0.13366380333900452
+        ],
+        "fitted": [
+          0.1069309949874878,
+          0.10693103075027466,
+          0.10693104267120362
+        ],
+        "object": "WGT_Randy_HandIK",
+        "factor": 0.8,
+        "transform": "hand.L"
+      },
+      "CTRL_hand_IK.R": {
+        "original": [
+          0.1336638331413269,
+          0.13366377353668213,
+          0.13366380333900452
+        ],
+        "fitted": [
+          0.10693106651306153,
+          0.1069310188293457,
+          0.10693104267120362
+        ],
+        "object": "WGT_Randy_HandIK",
+        "factor": 0.8,
+        "transform": "hand.R"
+      },
+      "CTRL_knee_pole.L": {
+        "original": [
+          0.1363184154033661,
+          0.1363184154033661,
+          0.1363184154033661
+        ],
+        "fitted": [
+          0.07497512847185135,
+          0.07497512847185135,
+          0.07497512847185135
+        ],
+        "object": "WGT_Randy_PoleArrow",
+        "factor": 0.55,
+        "transform": "MCH_knee_pole_aim.L"
+      },
+      "CTRL_knee_pole.R": {
+        "original": [
+          0.13631843030452728,
+          0.13631843030452728,
+          0.13631843030452728
+        ],
+        "fitted": [
+          0.07497513666749,
+          0.07497513666749,
+          0.07497513666749
+        ],
+        "object": "WGT_Randy_PoleArrow",
+        "factor": 0.55,
+        "transform": "MCH_knee_pole_aim.R"
+      }
+    }
+  },
+  "geometry_weights_unchanged": true,
+  "native_rest_unchanged": true,
+  "unweighted_body_vertices": [
+    3574,
+    3575
+  ],
+  "pose_error": 1.0691583156585693E-05,
+  "saved_at_utc": "2026-09-09T11:08:22.7881816Z",
+  "live_ui_limb_roundtrip": "Left Arm: IK to FK to IK; matched successfully; original IK mode restored."
+}

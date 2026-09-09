@@ -1,0 +1,134 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source_size": 31100892,
+  "source_saved_mtime": "2026-09-09T16:34:04.610278",
+  "source_sha256_before": "5e2b82784b0699bd30304903a6e7fd916fafae0b6f1863adb0a38f3e0a46e8a3",
+  "checks": {
+    "combined_build_pose": 2.8079375624656677e-06,
+    "combined_build_mesh": {
+      "Clothes": 0.0,
+      "Cosha": 3.725290298461914e-07,
+      "Shoes": 0.0,
+      "Stocking": 0.0
+    },
+    "baseline_fk_to_ik_all_existing": 2.997368574142456e-05,
+    "baseline_ik_to_fk_native_and_other_controls": 1.4223158359527588e-05,
+    "axial_excursion_return": 0.0,
+    "combined_fk_to_ik_native_and_other_controls": 8.299946784973145e-06,
+    "combined_fk_to_ik_mesh": {
+      "Clothes": 7.078051567077637e-07,
+      "Cosha": 6.258487701416016e-07,
+      "Shoes": 0.0,
+      "Stocking": 0.0
+    },
+    "moved_ik_to_fk_native_and_other_controls": 3.4347176551818848e-06,
+    "moved_ik_to_fk_mesh": {
+      "Clothes": 2.7194619178771973e-07,
+      "Cosha": 7.748603820800781e-07,
+      "Shoes": 0.0,
+      "Stocking": 0.0
+    },
+    "moved_fk_to_ik_native_and_other_controls": 5.841255187988281e-06,
+    "moved_fk_to_ik_mesh": {
+      "Clothes": 5.587935447692871e-07,
+      "Cosha": 1.1771917343139648e-06,
+      "Shoes": 0.0,
+      "Stocking": 0.0
+    },
+    "spine_removal_native_and_other_controls": 1.0728836059570312e-06,
+    "spine_removal_mesh": {
+      "Clothes": 1.1175870895385742e-07,
+      "Cosha": 4.76837158203125e-07,
+      "Shoes": 0.0,
+      "Stocking": 0.0
+    },
+    "eye_removal_remaining_all_controls": 1.1920928955078125e-07,
+    "eye_removal_mesh": {
+      "Clothes": 1.1175870895385742e-07,
+      "Cosha": 4.76837158203125e-07,
+      "Shoes": 0.0,
+      "Stocking": 0.0
+    }
+  },
+  "status": "passed",
+  "module_path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py",
+  "baseline_geometry": {
+    "sources": [
+      "spine",
+      "Chest",
+      "UpperChest"
+    ],
+    "lengths": [
+      0.13557681441307068,
+      0.11615099012851715,
+      0.1285492181777954
+    ],
+    "source_segment_angles_degrees": [
+      2.5528231162102277,
+      0.11534990222982817
+    ],
+    "lower_chain_segment_angles_degrees": [
+      2.5528231162102277
+    ],
+    "lower_chain_radial_bend": 0.002787027777018192,
+    "root_to_chest_length": 0.251665748220626,
+    "posed_gaps": [
+      0.0,
+      0.0
+    ]
+  },
+  "initial_extensions": {
+    "eye": false,
+    "spine_ik": false
+  },
+  "build": {
+    "native_bones": 56,
+    "preexisting_bones": 93,
+    "added_eye_bones": 3,
+    "added_spine_bones": 5
+  },
+  "axial_shape_zero": {
+    "compression_fraction": 0.03,
+    "compression_distance": 0.00754996534395801,
+    "endpoint_error": 1.5504774709399512e-06,
+    "solves_within_2e_4": true,
+    "shape_rotation": [
+      0.0,
+      -0.0,
+      0.0
+    ]
+  },
+  "simultaneous_modules": {
+    "limb_targets": {
+      "('ARM', 'L')": "CTRL_hand_IK.L",
+      "('ARM', 'R')": "CTRL_hand_IK.R",
+      "('LEG', 'L')": "CTRL_foot_IK.L",
+      "('LEG', 'R')": "CTRL_foot_IK.R"
+    },
+    "feet": [
+      "L",
+      "R"
+    ],
+    "torso": true,
+    "eyes": true
+  },
+  "preview": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\X_spine_ik_fk_050_preview.blend",
+    "sha256": "a65b392cd2c1bfdb7103c8f376c6ff034936547034cb014f0cfd19aa7518da11",
+    "mode": "IK"
+  },
+  "preservation": {
+    "rest_bones": 93,
+    "weights_equal": true,
+    "armature_digest_equal": true,
+    "existing_records_equal": true,
+    "other_armatures": {
+      "Anime Girl Base Mesh": 0.0,
+      "Anime Girl Base Mesh.001": 0.0,
+      "Strap2.001": 0.0
+    },
+    "extension_removal_clean": true
+  },
+  "source_sha256_after": "5e2b82784b0699bd30304903a6e7fd916fafae0b6f1863adb0a38f3e0a46e8a3",
+  "source_unchanged": true
+}
