@@ -1,4 +1,4 @@
-# Character Designer 0.52.2
+# Character Designer 0.56.1
 
 Character Designer is Randy's personal Blender add-on. It stays separate from
 RR Helper and focuses on character-modeling tools.
@@ -7,13 +7,181 @@ Workflow principle: generated bindings and setups should remain editable and
 provide an explicit remove/restore path. Preserve the artist's original state
 and unrelated data; support saving/reopening where restoration depends on a backup.
 
+Version 0.56.1 also prevents unchanged UI field commits from consuming local
+Undo or clearing Redo, and checks both owned Shape Key names before paired
+removal so a collision cannot leave only one side removed.
+
+Version 0.56.0 adds editable forearm loop ranges. Capture existing closed mesh
+loops automatically, or use a selected seed loop and expand through adjacent
+quad strips. Capture / Repair can add a missed loop without changing topology.
+The saved vertex correspondence and rest-position order stay fixed across poses.
+Invalid topology requires an explicit recapture preview; Cancel keeps the previous
+calibration, including an invalid record that may still be useful for recovery.
+
+In Edit Calibration, set Start / End, select the current loop in the viewport,
+or move between loops. Boundaries are light blue and the current loop is yellow.
+These lines follow the actual deformed control cage, including the owned correction;
+Subdivision does not change their base-mesh correspondence. Additional correction
+is zero outside and on the boundaries, with a configurable fade entirely inside.
+Original skinning remains active. No weights or topology are changed.
+
+New captures start with a mild spatial ease-in/out profile, strength 0.4, using
+actual rest positions rather than loop numbers. Batch / Distribution exposes
+distinct-loop count and interval, explicit default-profile application, and a
+separate smoothing operation. Applying the default keeps both boundary shares;
+reopening or changing pose never overwrites hand-tuned shares. The panel reports
+the current share, signed target angle and boundary blend. This is a distribution
+of the actual wrist twist, not a reduction of the wrist's total rotation.
+
+Confirm preserves editable parameters through save/reopen. Cancel restores the
+pre-edit pose, records and owned key data; local Undo / Redo work during preview.
+Keyed or driven wrist targets can edit the current pose without moving animation.
+Mirrored edits preflight both sides and roll back their outputs together. Disable
+and Remove retain the existing ownership and dependency checks. The existing
+prototype limits still apply: linear Armature skinning, relative shape keys,
+and correction up to ±120 degrees; the add-on must remain enabled at runtime.
+
+The existing wrist local-axis mechanism is retained. New / rebuilt controls and
+160 actual-X rotation cases were checked for Local Y, Global and View rotation,
+both hands, Auto Align modes, arm poses and Root rotation, including skin vertices.
+An existing file with disabled custom-shape transform axes needs the existing
+Update Body Setup synchronization; updating display axes does not rebuild bones.
+
+Version 0.55.4 removes the separate Eye Controls panel. Body Setup continues
+to generate and remove the eye controls as part of the body. Select the mask
+and eye circles directly in the viewport. Eye display spacing and manual eye
+setup remain in Body Controls > Advanced. Existing rigs and gaze are unchanged.
+
+Version 0.55.3 aligns wrist viewport local axes with the displayed hand control.
+In Auto Align, Local Y / R Y Y follows the posed wrist rather than the IK target's
+old input frame. Global and View rotation directions remain unchanged. New body
+setups enable this automatically; **Update Body Setup** updates existing modern
+wrist controls without rebuilding bones or changing poses, weights or animation.
+Forearm correction now shows **Paused** when its calibration is invalid, and can
+be disabled despite a changed mesh or chain while retaining its captured profile.
+Enabling still validates the calibration. The redundant Both Arms label is removed.
+
+Version 0.55.2 fixes Foot Controls **Auto Align**: moving the IK target now lets
+the foot and toes follow the solved shin while retaining Foot Roll and Toe Bend.
+Manual mode keeps the target's orientation for planted-foot work. New setups use
+this behavior automatically. Existing feet expose **Fix Foot Auto Align** once;
+the upgrade preserves the current pose and checks affected animation before
+changing its evaluation. Auto/Manual and IK/FK handoffs match the current pose.
+The hidden references remain owned and removable, including Root reparenting
+and transaction rollback. Native bones, weights and controller shapes are kept.
+
+Version 0.55.1 removes the redundant Root, Head/Neck and breast/Hips selection
+buttons and Root Scale fields from Body Controls, including Advanced. Select
+these controls directly in the viewport. Automatic Root sizing and all existing
+control transforms, shapes and animation behavior remain unchanged.
+
+Version 0.55.0 combines supported body features in **Rig > Body > Generate Body
+Setup**. Existing limb, foot, spine, eye and display setups are reused; missing
+Root, eye targets, head/neck, breast/Hips and FK rings are added when their native
+bones can be identified. Fingers and shoulders receive displays where available.
+Missing anatomy is skipped, ambiguous mapping requires a choice, and existing
+artist shapes or animation are protected. New limb poles follow the current
+elbow/knee bend so generation does not turn the limbs toward a different plane.
+
+**Remove Generated Controls** removes the owned body graph together. It keeps
+the current native bind bones, weights, pose, unrelated hair/dress and forearm
+calibration. It does not reset later native modeling work to an earlier skeleton.
+Legacy Direct pre-roll recovery data is retained separately when its controls
+are removed. Authored control animation or external dependencies require explicit
+preservation before removal. Small solver rounding is checked against native
+skinning matrices and the evaluated bound surfaces; larger changes roll back.
+Generate and Remove have Blender Undo and an in-place rollback if an operation
+fails. Temporary Original display is restored automatically for these actions.
+
+Daily posing remains visible; individual builders and maintenance actions live
+under **Advanced**. Eye/Spine panels keep their posing controls without requiring
+separate Add steps. Hair and Dress retain their independent workflows.
+
+Version 0.54.5 makes both wrist controls follow viewport/global rotation in
+Auto Align and Manual modes, including rotated Root and armature transforms.
+**Rig > Body > Body Controls > Correct Wrist Rotation** explicitly upgrades
+legacy offsets while preserving the current pose, native rest bones, weights
+and existing control shapes. Two hidden, nondeforming reference bones keep
+input rotation in the right coordinate frame. Existing authored channels or
+external dependencies block unsafe reinterpretation. IK/FK matching, Root
+removal, rollback and save/reopen retain the new contract; a keyed IK/FK switch
+holds its immediately preceding bookend to avoid an early wrist rotation.
+
+Version 0.54.4 reserves red action buttons for removal/deletion. Bind, create,
+update, restore and refresh actions use ordinary button colors; genuine error
+messages remain visible. Button color does not indicate binding status. Existing
+weights, rig behavior and saved recovery records are unchanged.
+
+Version 0.54.3 keeps generated controller meshes under one `CDesigner Widgets`
+collection, grouped by character and named by purpose. New widgets use this
+hierarchy automatically. F3 → **Organize Controller Widgets** migrates validated
+existing resources without changing bone transforms, poses, weights, custom
+shapes, or view-layer visibility. It updates the exact collection references in
+removal records; each feature retains its own resources and reversible removal.
+
+Version 0.54.2 connects the native Bone Collections eye switches to the display
+views: enable **Original** to see ordinary native bones, disable it to restore
+the preceding view, or enable **Body** to return to control shapes. Selecting a
+collection row alone does not change display mode. Display snapshots now include
+Blender 5.2's separate pose-bone hide flag, fixing native bones that stayed hidden
+and foot mechanisms that remained visible. Older saved view records remain valid.
+
+Version 0.54.1 keeps registered Foot Controls mechanisms hidden whenever a
+control view is shown, even if a helper was accidentally exposed through another
+collection. Reverse-foot pivots and IK/FK references remain intact; Foot Roll,
+Toe Bend, native weighting bones and intentional direction guides are preserved.
+
+Version 0.54.0 organizes daily bone display as **Body, Hair, Dress, Original**.
+Body includes torso, limbs, fingers, head and face. Original is last and contains
+the native body skeleton. The complete generated-bone ownership group remains
+as a hidden internal child of Body, so validation, rebuild and removal still work.
+Body follows the current IK/FK mode, including keyed switches. Hair appears when
+present; an independent skirt keeps its own Dress group and armature.
+
+**Rig / Weight > Bone Display** provides **Show All Controls** and independent
+Body, Hair and Dress visibility buttons. **Original · Native Bones** temporarily
+isolates the real body skeleton as ordinary bones. Hair / Dress **Bones** isolates
+their actual weighting bones; Dress includes the deforming waist and DEF chains.
+**Restore Display** recovers the preceding visibility and display type, including
+after saving/reopening. Custom shape assignments, rest bones, hierarchy, weights,
+constraints, actions and pose channels are not changed. Weight/pose edits made
+while viewing the native bones survive restoration. Exit the temporary view before
+reorganizing collections or rebuilding controls. **Organize Bone Collections**
+explicitly migrates existing layouts and retains their original layout backup.
+
+Version 0.53.2 corrects reversed Foot Roll rotation on both feet and reversed
+Bank on the right foot. The output now follows the input rotation, with the
+heel, ball and toe-tip pivots retained. Existing setups expose **Fix Roll Direction**
+for an explicit, pose-preserving update. Weights and displayed outlines stay intact;
+authored rotation animation or external dependencies block an unsafe conversion.
+Legacy setups are not converted automatically when loading a file.
+
+Version 0.53.1 corrects the breast rings' cup direction: the middle projects
+forward while the upper and lower rim recede toward the torso. Ring sizes,
+placement, native pivots, and recovery data stay intact. Only the depth curve
+changes; existing artist-edited geometry is preserved during explicit updates.
+
+Version 0.53.0 adds **Add Breasts / Hips** in **Rig > Body > Body Controls**.
+Two softly curved breast rings and one pelvis oval replace the displays on the
+existing native bones. Fitting uses the shared body and nearby registered clothing
+in rest space. Hips uses Character Setup; breast bones are detected by name, with
+a bone picker when the names are ambiguous or missing. Select **Breast L / R / Hips**
+to move or rotate them. The restore button recovers the previous displays and colors,
+including artist custom shapes after saving/reopening. The rings remain editable;
+native pivots, constraints, weights, animation, and bone collections are preserved.
+
+Version 0.52.3 places newly generated whole-body Root outlines at the lowest
+foot-sole display height in rest space, including fitted offsets and Auto Align
+display anchors. Direct and Enhanced builds share the rule. Root rest pivots,
+poses, existing widgets, and recovery snapshots remain unchanged.
+
 Version 0.52.2 rounds the crown and chin corners in the head widget's side
 profile on new builds. The frontal proportions, open face, and forward marker
 remain intact. Native pivots, pose, and removal behavior are unchanged;
 existing artist-edited widgets are not automatically replaced.
 
 Version 0.52.1 moves the three eye control outlines farther in front of the face
-on new builds. **Rig > Body > Eye Controls > Display Spacing** adjusts their
+on new builds. **Rig > Body > Body Controls > Advanced > Eye Display Spacing** adjusts their
 extra forward offset; zero restores their original display positions. Spacing
 and restoration data persist in the blend file. Gaze, target bones, animation,
 and weights remain unchanged; the transform gizmo stays at the actual target.
@@ -138,7 +306,8 @@ The unique deform toe child is detected automatically; an explicit Toe Bone fiel
 handles ambiguous rigs. Existing toe animation or constraints must be resolved first.
 
 - **Foot Roll**: rotate local X to roll from heel through ball to toe-tip; rotate
-  local Y to bank. Positive roll initially lifts the heel while the toes stay planted.
+  local Y to bank. The foot turns in the input rotation's direction; heel, ball
+  and toe-tip pivots switch automatically as the foot rolls.
 - **Toe Bend**: rotate at the ball to bend the toes independently of the ankle.
   This control remains available in both IK and FK. Foot Roll is shown in IK.
 

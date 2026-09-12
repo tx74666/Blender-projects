@@ -1,0 +1,121 @@
+{
+  "ok": false,
+  "source": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_body_setup_20260911_053445_231.blend",
+  "source_sha256": "34d92512631b0ac167f17cf47dfd458d9d97115ecf9d7a3b9bafa123341a4173",
+  "preview": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\X_body_setup_0550_generated_preview.blend",
+  "production_file_written": false,
+  "removal_executed": false,
+  "initial_plan": {
+    "rig": "CoshaRig",
+    "schema": 5,
+    "components": [
+      {
+        "key": "LIMBS",
+        "status": "REUSE",
+        "reason": "Existing limb controls are kept.",
+        "kwargs": {
+          "method": "DIRECT_PREROLL",
+          "chains": []
+        }
+      },
+      {
+        "key": "ROOT",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_L",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_R",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "TORSO",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "SPINE",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "EYES",
+        "status": "ADD",
+        "reason": "Add shared gaze and two eye targets.",
+        "kwargs": {
+          "head_name": "Head",
+          "left_name": "eye.L",
+          "right_name": "eye.R"
+        }
+      },
+      {
+        "key": "FK_RINGS",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "HEAD_NECK",
+        "status": "ADD",
+        "reason": "Fit Head and Neck displays.",
+        "kwargs": {
+          "head_name": "Head",
+          "neck_name": "Neck",
+          "allow_partial": true
+        }
+      },
+      {
+        "key": "BODY_DETAIL",
+        "status": "ADD",
+        "reason": "Fit Hips and any available native breast controls.",
+        "kwargs": {
+          "hips_name": "Hips",
+          "left_name": "breast.L",
+          "right_name": "breast.R",
+          "allow_partial": true
+        }
+      }
+    ],
+    "blocked": false,
+    "source_digest": "4cd7e8a52e9d77aa8adfb4750ae40bea07b6f380fb7c4d5b53ae52228ba78752"
+  },
+  "initial_preflight": {
+    "False": {
+      "ok": false,
+      "error": "Removing this rig would move the calibrated forearm's Rest axis on 'Cosha'; preserve the calibration first."
+    },
+    "True": {
+      "ok": true,
+      "fields": [
+        "constraints",
+        "correctives",
+        "data_digest",
+        "direct_rest_raw",
+        "driver_paths",
+        "inventory",
+        "keep_native_rest",
+        "names",
+        "records",
+        "resources",
+        "rest",
+        "rig",
+        "skin"
+      ],
+      "bones": 45,
+      "rest_states": 8
+    }
+  },
+  "error": "'NoneType' object has no attribute 'as_pointer'",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\validate_body_setup_0550.py\", line 150, in main\n    report['generate'] = body_setup.generate(bpy.context,rig)\n                         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup.py\", line 149, in generate\n    return _atomic(context, rig, commit)\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup.py\", line 103, in _atomic\n    checkpoint = body_setup_transaction.capture(context, rig)\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_transaction.py\", line 272, in capture\n    'native_ids': [(obj, obj.as_pointer(), obj.data, _pointer(obj.data))\n                                                     ~~~~~~~~^^^^^^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_transaction.py\", line 23, in _pointer\n    return value.as_pointer()\n           ^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'as_pointer'\n",
+  "source_unchanged": true
+}

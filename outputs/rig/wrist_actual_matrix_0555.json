@@ -1,0 +1,5375 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source_sha256": "6ea60ef9a6456a1b1a92295e06d0b6dcea904b9c5b2baa100cf4a35286af8689",
+  "runtime_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+  "keyboard_events": false,
+  "operator_equivalent": "transform.rotate LOCAL/Y (second Y under Global)",
+  "mesh_evaluation": "Cosha actual skinned control cage, Subdivision disabled in disposable process",
+  "as_saved": [
+    {
+      "side": "L",
+      "at_shape": false,
+      "around_shape": false,
+      "custom_shape_transform": "hand.L",
+      "rotation_error_rad": 5.432387892774344e-06,
+      "position_error": 1.4901161193847656e-08
+    },
+    {
+      "side": "R",
+      "at_shape": false,
+      "around_shape": false,
+      "custom_shape_transform": "hand.R",
+      "rotation_error_rad": 2.9482454384771585e-06,
+      "position_error": 1.1920928955078125e-07
+    }
+  ],
+  "before_sync_posed": [
+    {
+      "side": "L",
+      "pose": "flat",
+      "rotation_error_rad": 0.1579657267416853
+    },
+    {
+      "side": "L",
+      "pose": "raised",
+      "rotation_error_rad": 0.2910909779171451
+    },
+    {
+      "side": "L",
+      "pose": "bent",
+      "rotation_error_rad": 0.2607294264360256
+    },
+    {
+      "side": "L",
+      "pose": "root_rotated",
+      "rotation_error_rad": 0.26072927297498116
+    },
+    {
+      "side": "R",
+      "pose": "flat",
+      "rotation_error_rad": 0.1579659041660771
+    },
+    {
+      "side": "R",
+      "pose": "raised",
+      "rotation_error_rad": 0.2910903353952222
+    },
+    {
+      "side": "R",
+      "pose": "bent",
+      "rotation_error_rad": 0.2607254762330572
+    },
+    {
+      "side": "R",
+      "pose": "root_rotated",
+      "rotation_error_rad": 0.2607253614071373
+    }
+  ],
+  "cases": [
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.2489448945403256e-07,
+      "display_rotation_error_rad": 1.2489448945403256e-07,
+      "input_rotation_error_rad": 2.1086591032273927e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.329678483536135e-07,
+      "skin_delta_error": 4.81067551891742e-07,
+      "hand_dominant_max_movement": 0.005149289207533706,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.249500351492198e-07,
+      "display_rotation_error_rad": 1.249500351492198e-07,
+      "input_rotation_error_rad": 1.7947240874835705e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.314265755356379e-07,
+      "skin_delta_error": 3.68709654559452e-07,
+      "hand_dominant_max_movement": 0.005149267570890172,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.5523378392722683e-07,
+      "display_rotation_error_rad": 1.5523378392722683e-07,
+      "input_rotation_error_rad": 1.4254808894815461e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.544854164123535e-07,
+      "skin_delta_error": 4.826228243321671e-07,
+      "hand_dominant_max_movement": 0.011429508454107807,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 2.331198102766831e-07,
+      "display_rotation_error_rad": 2.331198102766831e-07,
+      "input_rotation_error_rad": 2.0278333999404796e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.805480091749757e-07,
+      "skin_delta_error": 3.8426509375058493e-07,
+      "hand_dominant_max_movement": 0.01142953105317591,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 6.683955527645686e-08,
+      "display_rotation_error_rad": 6.683955527645686e-08,
+      "input_rotation_error_rad": 1.2831248436923535e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.703317315008232e-07,
+      "skin_delta_error": 3.7763493947607836e-07,
+      "hand_dominant_max_movement": 0.009619265196460286,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.4332715341494794e-07,
+      "display_rotation_error_rad": 1.4332715341494794e-07,
+      "input_rotation_error_rad": 1.0002695601876428e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.81067551891742e-07,
+      "skin_delta_error": 4.947207957814344e-07,
+      "hand_dominant_max_movement": 0.00961925341324771,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 3.306466302296263e-07,
+      "display_rotation_error_rad": 3.306466302296263e-07,
+      "input_rotation_error_rad": 1.6991710237578722e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.82817762454305e-07,
+      "skin_delta_error": 3.6684180292379e-07,
+      "hand_dominant_max_movement": 0.01010182683182121,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.0500240915279802e-07,
+      "display_rotation_error_rad": 2.0500240915279802e-07,
+      "input_rotation_error_rad": 1.4390867133584482e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.153656919230924e-07,
+      "skin_delta_error": 4.0011768287711e-07,
+      "hand_dominant_max_movement": 0.01010203543823691,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 4.2196621549741565e-07,
+      "display_rotation_error_rad": 4.2196621549741565e-07,
+      "input_rotation_error_rad": 1.4975481660844222e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3622497225715063e-07,
+      "skin_delta_error": 3.805635210610072e-07,
+      "hand_dominant_max_movement": 0.011214093798285741,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.5269146510898468e-07,
+      "display_rotation_error_rad": 1.5269146510898468e-07,
+      "input_rotation_error_rad": 1.5504772791010706e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.298797767386334e-07,
+      "skin_delta_error": 4.0094924113374084e-07,
+      "hand_dominant_max_movement": 0.011214197447218792,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.13697461783885956,
+          -0.6303147673606873,
+          -0.7641603946685791
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.199057470219663e-06,
+      "display_rotation_error_rad": 1.199057470219663e-06,
+      "input_rotation_error_rad": 2.104706599090328e-07,
+      "hand_origin_shift": 2.515605541487654e-07,
+      "skin_oracle_error": 4.814712530792806e-07,
+      "skin_delta_error": 5.997601687162551e-07,
+      "hand_dominant_max_movement": 0.005149161521044348,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 7.275387994999656e-07,
+      "display_rotation_error_rad": 7.275387994999656e-07,
+      "input_rotation_error_rad": 2.700771236478069e-07,
+      "hand_origin_shift": 8.429369702178807e-08,
+      "skin_oracle_error": 5.054465310535391e-07,
+      "skin_delta_error": 4.838290242866939e-07,
+      "hand_dominant_max_movement": 0.005149224098624396,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 3.7175019072547565e-07,
+      "display_rotation_error_rad": 3.7175019072547565e-07,
+      "input_rotation_error_rad": 1.4254808894815461e-07,
+      "hand_origin_shift": 4.2146848510894035e-08,
+      "skin_oracle_error": 5.553557024474211e-07,
+      "skin_delta_error": 6.036349862971632e-07,
+      "hand_dominant_max_movement": 0.010571564851977125,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 9.075123988258384e-07,
+      "display_rotation_error_rad": 9.075123988258384e-07,
+      "input_rotation_error_rad": 2.0278333999404796e-07,
+      "hand_origin_shift": 2.682209014892578e-07,
+      "skin_oracle_error": 4.792177298929096e-07,
+      "skin_delta_error": 5.979526110659035e-07,
+      "hand_dominant_max_movement": 0.010571719718837013,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 6.960210839758227e-07,
+      "display_rotation_error_rad": 6.960210839758227e-07,
+      "input_rotation_error_rad": 1.2831248436923535e-07,
+      "hand_origin_shift": 2.619385098106704e-07,
+      "skin_oracle_error": 4.962332786722992e-07,
+      "skin_delta_error": 4.851609619583392e-07,
+      "hand_dominant_max_movement": 0.008371964296246037,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.2372358992305824e-06,
+      "display_rotation_error_rad": 1.2372358992305824e-06,
+      "input_rotation_error_rad": 1.0002695601876428e-07,
+      "hand_origin_shift": 2.515605541487654e-07,
+      "skin_oracle_error": 4.887944301026084e-07,
+      "skin_delta_error": 5.040580712432518e-07,
+      "hand_dominant_max_movement": 0.008371956155349834,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 2.2755047929505965e-07,
+      "display_rotation_error_rad": 2.2755047929505965e-07,
+      "input_rotation_error_rad": 1.6991710237578722e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.324950333000909e-07,
+      "skin_delta_error": 4.833698744567809e-07,
+      "hand_dominant_max_movement": 0.011443687432441839,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.766706011726857e-07,
+      "display_rotation_error_rad": 2.766706011726857e-07,
+      "input_rotation_error_rad": 1.4390867133584482e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.763976406258774e-07,
+      "skin_delta_error": 4.887944301026084e-07,
+      "hand_dominant_max_movement": 0.011443630527101244,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.1530495639872522e-06,
+      "display_rotation_error_rad": 1.1530495639872522e-06,
+      "input_rotation_error_rad": 1.4975481660844222e-07,
+      "hand_origin_shift": 2.515605541487654e-07,
+      "skin_oracle_error": 5.280984981855556e-07,
+      "skin_delta_error": 6.01977404258375e-07,
+      "hand_dominant_max_movement": 0.0064077313802522705,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 5.411585236947235e-07,
+      "display_rotation_error_rad": 5.411585236947235e-07,
+      "input_rotation_error_rad": 1.5504772791010706e-07,
+      "hand_origin_shift": 8.429369702178807e-08,
+      "skin_oracle_error": 5.719018299101438e-07,
+      "skin_delta_error": 6.006850114687196e-07,
+      "hand_dominant_max_movement": 0.006407744518290062,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          -0.5723633170127869,
+          -0.7677258253097534,
+          -0.28809240460395813
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.633124149899526e-07,
+      "display_rotation_error_rad": 2.633124149899526e-07,
+      "input_rotation_error_rad": 2.9802322387695312e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.123188468221668e-07,
+      "skin_delta_error": 4.933724740488322e-07,
+      "hand_dominant_max_movement": 0.005149344954589233,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 3.4118453090951773e-07,
+      "display_rotation_error_rad": 3.4118453090951773e-07,
+      "input_rotation_error_rad": 1.9270952278938237e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.362925704374704e-07,
+      "skin_delta_error": 3.746834683620977e-07,
+      "hand_dominant_max_movement": 0.005149304397286279,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.3676725270894152e-07,
+      "display_rotation_error_rad": 1.3676725270894152e-07,
+      "input_rotation_error_rad": 1.4254808894815461e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.700513372901028e-07,
+      "skin_delta_error": 4.788420172900958e-07,
+      "hand_dominant_max_movement": 0.010138891066053628,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 4.474657286372296e-07,
+      "display_rotation_error_rad": 4.474657286372296e-07,
+      "input_rotation_error_rad": 2.0278333999404796e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3445574225009897e-07,
+      "skin_delta_error": 3.8310766614027146e-07,
+      "hand_dominant_max_movement": 0.01013891676609322,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.2333198976225e-07,
+      "display_rotation_error_rad": 2.2333198976225e-07,
+      "input_rotation_error_rad": 1.2831248436923535e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.2272197158459945e-07,
+      "skin_delta_error": 3.6955555714493333e-07,
+      "hand_dominant_max_movement": 0.01141319873534137,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.7970204835284763e-07,
+      "display_rotation_error_rad": 1.7970204835284763e-07,
+      "input_rotation_error_rad": 1.0002695601876428e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.399156180223346e-07,
+      "skin_delta_error": 4.817594039537671e-07,
+      "hand_dominant_max_movement": 0.011413237622861278,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.9795689844647197e-07,
+      "display_rotation_error_rad": 1.9795689844647197e-07,
+      "input_rotation_error_rad": 1.6991710237578722e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.19012430858228e-07,
+      "skin_delta_error": 3.7711204955863796e-07,
+      "hand_dominant_max_movement": 0.009241463715985965,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.6680075812935592e-07,
+      "display_rotation_error_rad": 1.6680075812935592e-07,
+      "input_rotation_error_rad": 1.4390867133584482e-07,
+      "hand_origin_shift": 8.940696716308594e-08,
+      "skin_oracle_error": 4.376383775854756e-07,
+      "skin_delta_error": 3.786728269706989e-07,
+      "hand_dominant_max_movement": 0.009241353211329753,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 3.2341441944894414e-07,
+      "display_rotation_error_rad": 3.2341441944894414e-07,
+      "input_rotation_error_rad": 1.4975481660844222e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.582296356404556e-07,
+      "skin_delta_error": 4.803747034017703e-07,
+      "hand_dominant_max_movement": 0.011348075207007383,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.468066908064338e-07,
+      "display_rotation_error_rad": 1.468066908064338e-07,
+      "input_rotation_error_rad": 1.5504772791010706e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.9158099735373004e-07,
+      "skin_delta_error": 3.665201031043781e-07,
+      "hand_dominant_max_movement": 0.011347955068591861,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          -0.6641499996185303,
+          0.3608861267566681,
+          -0.6547258496284485
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.5837523065127277e-06,
+      "display_rotation_error_rad": 1.5837523065127277e-06,
+      "input_rotation_error_rad": 2.2302015940987714e-07,
+      "hand_origin_shift": 2.699743350147223e-07,
+      "skin_oracle_error": 4.5099097342555393e-07,
+      "skin_delta_error": 5.033451734807961e-07,
+      "hand_dominant_max_movement": 0.005149478491170685,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 2.573418027038953e-07,
+      "display_rotation_error_rad": 2.573418027038953e-07,
+      "input_rotation_error_rad": 9.8843121241194e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3713071308911394e-07,
+      "skin_delta_error": 4.837859975017785e-07,
+      "hand_dominant_max_movement": 0.005149288611423317,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.4684227110787174e-06,
+      "display_rotation_error_rad": 1.4684227110787174e-06,
+      "input_rotation_error_rad": 2.0352909496894888e-07,
+      "hand_origin_shift": 1.0848209096909341e-07,
+      "skin_oracle_error": 4.6669118070857376e-07,
+      "skin_delta_error": 4.851502351514272e-07,
+      "hand_dominant_max_movement": 0.010471099406340204,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 6.58826541303692e-07,
+      "display_rotation_error_rad": 6.58826541303692e-07,
+      "input_rotation_error_rad": 2.7079115056769863e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.024830532155873e-07,
+      "skin_delta_error": 4.920204574197249e-07,
+      "hand_dominant_max_movement": 0.010471420600655462,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.471208282470592e-06,
+      "display_rotation_error_rad": 1.471208282470592e-06,
+      "input_rotation_error_rad": 1.825543655173861e-07,
+      "hand_origin_shift": 2.8548948806443697e-07,
+      "skin_oracle_error": 3.933005115085053e-07,
+      "skin_delta_error": 4.872018910727446e-07,
+      "hand_dominant_max_movement": 0.010909083300764679,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 3.3625319079038115e-07,
+      "display_rotation_error_rad": 3.3625319079038115e-07,
+      "input_rotation_error_rad": 2.0278333163997938e-07,
+      "hand_origin_shift": 3.514431838712321e-08,
+      "skin_oracle_error": 4.608985949367283e-07,
+      "skin_delta_error": 3.7699127966019037e-07,
+      "hand_dominant_max_movement": 0.010908710959770437,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.934250250051663e-07,
+      "display_rotation_error_rad": 1.934250250051663e-07,
+      "input_rotation_error_rad": 4.4740894286029086e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.876716617382195e-07,
+      "skin_delta_error": 2.923403611673786e-07,
+      "hand_dominant_max_movement": 0.00933674301964636,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.7716070446169507e-07,
+      "display_rotation_error_rad": 1.7716070446169507e-07,
+      "input_rotation_error_rad": 9.190426606746071e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.856829368052379e-07,
+      "skin_delta_error": 3.65306457046606e-07,
+      "hand_dominant_max_movement": 0.009336664530987667,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.5127614516203815e-07,
+      "display_rotation_error_rad": 1.5127614516203815e-07,
+      "input_rotation_error_rad": 2.016135920246662e-07,
+      "hand_origin_shift": 3.514431838712321e-08,
+      "skin_oracle_error": 5.14265497825316e-07,
+      "skin_delta_error": 4.86004954553696e-07,
+      "hand_dominant_max_movement": 0.010652227576383901,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.518677312928343e-06,
+      "display_rotation_error_rad": 1.518677312928343e-06,
+      "input_rotation_error_rad": 9.12696123123169e-08,
+      "hand_origin_shift": 2.8548948806443697e-07,
+      "skin_oracle_error": 4.6732723730976363e-07,
+      "skin_delta_error": 4.869534769769692e-07,
+      "hand_dominant_max_movement": 0.010651989236147259,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          -0.6790046095848083,
+          -0.3479490280151367,
+          -0.6464397311210632
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.7504900879369274e-07,
+      "display_rotation_error_rad": 2.117852926783546e-07,
+      "input_rotation_error_rad": 2.117852926783546e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.5613133505028387e-07,
+      "skin_delta_error": 4.924151790695877e-07,
+      "hand_dominant_max_movement": 0.005149290708848456,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 2.385714388959996e-07,
+      "display_rotation_error_rad": 2.057532710509665e-07,
+      "input_rotation_error_rad": 2.057532710509665e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.541799621024183e-07,
+      "skin_delta_error": 4.917383193969727e-07,
+      "hand_dominant_max_movement": 0.013592925855017313,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.515865011841188e-07,
+      "display_rotation_error_rad": 1.0387932284907045e-07,
+      "input_rotation_error_rad": 1.0387932284907045e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.273095452553182e-07,
+      "skin_delta_error": 5.28571304694949e-07,
+      "hand_dominant_max_movement": 0.009750272256397135,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 1.8458746717184195e-07,
+      "display_rotation_error_rad": 1.9514969300803622e-07,
+      "input_rotation_error_rad": 1.9514969300803622e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.7145164071191475e-07,
+      "skin_delta_error": 5.092623081992585e-07,
+      "hand_dominant_max_movement": 0.014798136142158767,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.7716335814557297e-07,
+      "display_rotation_error_rad": 1.869849829413168e-07,
+      "input_rotation_error_rad": 1.869849829413168e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.181234672878298e-07,
+      "skin_delta_error": 3.9340194411409155e-07,
+      "hand_dominant_max_movement": 0.011238579017890769,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.869849829413168e-07,
+      "display_rotation_error_rad": 2.1974091776621052e-07,
+      "input_rotation_error_rad": 2.1974091776621052e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.4759328055011003e-07,
+      "skin_delta_error": 4.969598694340078e-07,
+      "hand_dominant_max_movement": 0.011238573029345706,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 6.838362635447076e-08,
+      "display_rotation_error_rad": 1.2837505548973626e-07,
+      "input_rotation_error_rad": 1.2837505548973626e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.482748793509997e-07,
+      "skin_delta_error": 4.81989800621148e-07,
+      "hand_dominant_max_movement": 0.012854803702256144,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.4390867133584482e-07,
+      "display_rotation_error_rad": 1.8891058486590192e-07,
+      "input_rotation_error_rad": 1.8891058486590192e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.7127498986925094e-07,
+      "skin_delta_error": 3.769728732309794e-07,
+      "hand_dominant_max_movement": 0.009725773722812204,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.8793341898365973e-07,
+      "display_rotation_error_rad": 1.7298549060716025e-07,
+      "input_rotation_error_rad": 1.7298549060716025e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.4429455744849365e-07,
+      "skin_delta_error": 6.238943760233617e-07,
+      "hand_dominant_max_movement": 0.015325610386797982,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.6015499154192187e-07,
+      "display_rotation_error_rad": 1.5503653918716917e-07,
+      "input_rotation_error_rad": 1.5503653918716917e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.95169420490064e-07,
+      "skin_delta_error": 4.140941271659807e-07,
+      "hand_dominant_max_movement": 0.010950780353972527,
+      "pose_geometry": {
+        "upper_y": [
+          0.9871598482131958,
+          0.14731736481189728,
+          -0.06174910068511963
+        ],
+        "forearm_y": [
+          0.9825160503387451,
+          -0.17170432209968567,
+          0.07197049260139465
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.0154421953484416,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 19.921329299325635
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.1113706847577618e-07,
+      "display_rotation_error_rad": 2.048064155714557e-07,
+      "input_rotation_error_rad": 2.048064155714557e-07,
+      "hand_origin_shift": 4.2146848510894035e-08,
+      "skin_oracle_error": 6.194744453661389e-07,
+      "skin_delta_error": 4.826228243321671e-07,
+      "hand_dominant_max_movement": 0.005149261477288442,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.606971734485967e-07,
+      "display_rotation_error_rad": 2.1893126211716955e-07,
+      "input_rotation_error_rad": 2.1893126211716955e-07,
+      "hand_origin_shift": 2.682209014892578e-07,
+      "skin_oracle_error": 4.86061168619993e-07,
+      "skin_delta_error": 4.826228243321671e-07,
+      "hand_dominant_max_movement": 0.013411621225484793,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 2.390050325861841e-07,
+      "display_rotation_error_rad": 1.0387932284907045e-07,
+      "input_rotation_error_rad": 1.0387932284907045e-07,
+      "hand_origin_shift": 4.2146848510894035e-08,
+      "skin_oracle_error": 5.206884506242319e-07,
+      "skin_delta_error": 4.782901360304366e-07,
+      "hand_dominant_max_movement": 0.009750137584050612,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 1.4843158399660257e-07,
+      "display_rotation_error_rad": 1.9514969300803622e-07,
+      "input_rotation_error_rad": 1.9514969300803622e-07,
+      "hand_origin_shift": 2.682209014892578e-07,
+      "skin_oracle_error": 5.647225547324776e-07,
+      "skin_delta_error": 5.979526110659035e-07,
+      "hand_dominant_max_movement": 0.01467124751234331,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.605665274390608e-07,
+      "display_rotation_error_rad": 1.869849829413168e-07,
+      "input_rotation_error_rad": 1.869849829413168e-07,
+      "hand_origin_shift": 2.619385098106704e-07,
+      "skin_oracle_error": 5.755784486480941e-07,
+      "skin_delta_error": 4.917383193969727e-07,
+      "hand_dominant_max_movement": 0.014164096569156081,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.4997138741714876e-07,
+      "display_rotation_error_rad": 2.1974091776621052e-07,
+      "input_rotation_error_rad": 2.1974091776621052e-07,
+      "hand_origin_shift": 2.515605541487654e-07,
+      "skin_oracle_error": 4.773607396972581e-07,
+      "skin_delta_error": 4.314265755356379e-07,
+      "hand_dominant_max_movement": 0.011238312605993594,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.0002695072623487e-07,
+      "display_rotation_error_rad": 1.2837505548973626e-07,
+      "input_rotation_error_rad": 1.2837505548973626e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.543552409928523e-07,
+      "skin_delta_error": 5.015740597160708e-07,
+      "hand_dominant_max_movement": 0.009725770052392268,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.920172498837773e-07,
+      "display_rotation_error_rad": 1.8891058486590192e-07,
+      "input_rotation_error_rad": 1.8891058486590192e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 6.86100985599836e-07,
+      "skin_delta_error": 4.826228243321671e-07,
+      "hand_dominant_max_movement": 0.009725838575192712,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.8405347059720195e-07,
+      "display_rotation_error_rad": 1.7298549060716025e-07,
+      "input_rotation_error_rad": 1.7298549060716025e-07,
+      "hand_origin_shift": 2.515605541487654e-07,
+      "skin_oracle_error": 5.335885068712795e-07,
+      "skin_delta_error": 4.308471767545033e-07,
+      "hand_dominant_max_movement": 0.01510308828455204,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.3779797954992712e-07,
+      "display_rotation_error_rad": 1.5503653918716917e-07,
+      "input_rotation_error_rad": 1.5503653918716917e-07,
+      "hand_origin_shift": 8.429369702178807e-08,
+      "skin_oracle_error": 5.623584520254638e-07,
+      "skin_delta_error": 4.824502638745927e-07,
+      "hand_dominant_max_movement": 0.010950637418898828,
+      "pose_geometry": {
+        "upper_y": [
+          0.7639827132225037,
+          0.2540704011917114,
+          0.5931092500686646
+        ],
+        "forearm_y": [
+          0.5172078013420105,
+          -0.29613053798675537,
+          0.8029961585998535
+        ],
+        "hand_y": [
+          0.6604660153388977,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 37.23463624144652
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 3.090868668659261e-07,
+      "display_rotation_error_rad": 2.1173626926734407e-07,
+      "input_rotation_error_rad": 2.1173626926734407e-07,
+      "hand_origin_shift": 8.940696716308594e-08,
+      "skin_oracle_error": 5.241021408848389e-07,
+      "skin_delta_error": 4.838290242866939e-07,
+      "hand_dominant_max_movement": 0.0051493614467707696,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.8248279010713663e-07,
+      "display_rotation_error_rad": 2.0586350431558047e-07,
+      "input_rotation_error_rad": 2.0586350431558047e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.046771637758328e-07,
+      "skin_delta_error": 4.916395328375297e-07,
+      "hand_dominant_max_movement": 0.0051494387628265425,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.7096936269556828e-07,
+      "display_rotation_error_rad": 1.0387932284907045e-07,
+      "input_rotation_error_rad": 1.0387932284907045e-07,
+      "hand_origin_shift": 8.940696716308594e-08,
+      "skin_oracle_error": 4.1121873065099935e-07,
+      "skin_delta_error": 3.8310766614027146e-07,
+      "hand_dominant_max_movement": 0.009750180865963439,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 2.1974091776621052e-07,
+      "display_rotation_error_rad": 1.9514969300803622e-07,
+      "input_rotation_error_rad": 1.9514969300803622e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.117767963642766e-07,
+      "skin_delta_error": 4.982984843017449e-07,
+      "hand_dominant_max_movement": 0.00975032734895704,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.0295652315544584e-07,
+      "display_rotation_error_rad": 1.869849829413168e-07,
+      "input_rotation_error_rad": 1.869849829413168e-07,
+      "hand_origin_shift": 6.664001874625056e-08,
+      "skin_oracle_error": 4.736578798543105e-07,
+      "skin_delta_error": 4.792177298929096e-07,
+      "hand_dominant_max_movement": 0.011238558786629119,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 2.433951770714273e-07,
+      "display_rotation_error_rad": 2.1974091776621052e-07,
+      "input_rotation_error_rad": 2.1974091776621052e-07,
+      "hand_origin_shift": 2.9802322387695312e-08,
+      "skin_oracle_error": 4.498239830032262e-07,
+      "skin_delta_error": 3.846260755997988e-07,
+      "hand_dominant_max_movement": 0.011238548751467676,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.5286668162860692e-07,
+      "display_rotation_error_rad": 1.2837505548973626e-07,
+      "input_rotation_error_rad": 1.2837505548973626e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.114512903390651e-07,
+      "skin_delta_error": 4.81067551891742e-07,
+      "hand_dominant_max_movement": 0.009725817183284378,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 7.347198735598934e-08,
+      "display_rotation_error_rad": 1.8891058486590192e-07,
+      "input_rotation_error_rad": 1.8891058486590192e-07,
+      "hand_origin_shift": 8.940696716308594e-08,
+      "skin_oracle_error": 4.5366404159558465e-07,
+      "skin_delta_error": 3.86012704055843e-07,
+      "hand_dominant_max_movement": 0.009725831093399856,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 2.1798519549262216e-07,
+      "display_rotation_error_rad": 1.7298549060716025e-07,
+      "input_rotation_error_rad": 1.7298549060716025e-07,
+      "hand_origin_shift": 2.9802322387695312e-08,
+      "skin_oracle_error": 4.916395328375297e-07,
+      "skin_delta_error": 3.665201031043781e-07,
+      "hand_dominant_max_movement": 0.010950942139939777,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.1446318621630394e-07,
+      "display_rotation_error_rad": 1.5503653918716917e-07,
+      "input_rotation_error_rad": 1.5503653918716917e-07,
+      "hand_origin_shift": 6.664001874625056e-08,
+      "skin_oracle_error": 3.793216365980463e-07,
+      "skin_delta_error": 3.762543201446533e-07,
+      "hand_dominant_max_movement": 0.010950715074152897,
+      "pose_geometry": {
+        "upper_y": [
+          0.8012766242027283,
+          0.2195337563753128,
+          -0.5565614700317383
+        ],
+        "forearm_y": [
+          0.06233822554349899,
+          -0.9922754168510437,
+          0.10725433379411697
+        ],
+        "hand_y": [
+          0.6604660749435425,
+          0.015442196279764175,
+          -0.750697135925293
+        ],
+        "elbow_angle_deg": 103.15472144968011
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.4867533547101373e-07,
+      "display_rotation_error_rad": 2.7204823539048087e-07,
+      "input_rotation_error_rad": 2.7204823539048087e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.280984981855556e-07,
+      "skin_delta_error": 4.81989800621148e-07,
+      "hand_dominant_max_movement": 0.005149165480031295,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.8269121401368423e-07,
+      "display_rotation_error_rad": 2.3087785292187583e-07,
+      "input_rotation_error_rad": 2.3087785292187583e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.172656463894183e-07,
+      "skin_delta_error": 4.879419305930418e-07,
+      "hand_dominant_max_movement": 0.005149515901103963,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.4997138741714876e-07,
+      "display_rotation_error_rad": 1.1262318263137541e-07,
+      "input_rotation_error_rad": 1.1262318263137541e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.908343878984631e-07,
+      "skin_delta_error": 4.0932448278076884e-07,
+      "hand_dominant_max_movement": 0.011345519727351929,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 1.5291918008606894e-07,
+      "display_rotation_error_rad": 2.9877316198226446e-07,
+      "input_rotation_error_rad": 2.9877316198226446e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.770699320310986e-07,
+      "skin_delta_error": 3.726966302080217e-07,
+      "hand_dominant_max_movement": 0.011345502732712122,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.4376909921373448e-07,
+      "display_rotation_error_rad": 3.333004946882237e-07,
+      "input_rotation_error_rad": 3.333004946882237e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.5203600263945796e-07,
+      "skin_delta_error": 3.892170753064447e-07,
+      "hand_dominant_max_movement": 0.00947637141020123,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.9600100352299948e-07,
+      "display_rotation_error_rad": 2.7324077633958545e-07,
+      "input_rotation_error_rad": 2.7324077633958545e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.1676659199437487e-07,
+      "skin_delta_error": 3.7133502347401117e-07,
+      "hand_dominant_max_movement": 0.009476414982775292,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.6069876000829195e-07,
+      "display_rotation_error_rad": 2.1739432623126597e-07,
+      "input_rotation_error_rad": 2.1739432623126597e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.989108157987358e-07,
+      "skin_delta_error": 3.919883500923486e-07,
+      "hand_dominant_max_movement": 0.01000576022812213,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.564665640039255e-07,
+      "display_rotation_error_rad": 1.8935745768513966e-07,
+      "input_rotation_error_rad": 1.8935745768513966e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.7145164071191475e-07,
+      "skin_delta_error": 3.6378370570342845e-07,
+      "hand_dominant_max_movement": 0.010005667057439055,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 2.1021499905342907e-07,
+      "display_rotation_error_rad": 1.556172860727118e-07,
+      "input_rotation_error_rad": 1.556172860727118e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.272569064186255e-07,
+      "skin_delta_error": 4.835421067353473e-07,
+      "hand_dominant_max_movement": 0.008705580071868627,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "L",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.7567148208618164e-07,
+      "display_rotation_error_rad": 1.6730659881894007e-07,
+      "input_rotation_error_rad": 1.6730659881894007e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.702727150338739e-07,
+      "skin_delta_error": 4.85203866814522e-07,
+      "hand_dominant_max_movement": 0.008705691119018944,
+      "pose_geometry": {
+        "upper_y": [
+          0.030676860362291336,
+          0.9200956225395203,
+          -0.3904907703399658
+        ],
+        "forearm_y": [
+          0.9434252381324768,
+          -0.3182736933231354,
+          -0.09300902485847473
+        ],
+        "hand_y": [
+          0.13448411226272583,
+          0.7571914792060852,
+          -0.6391987204551697
+        ],
+        "elbow_angle_deg": 103.15474194024762
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.41005064050277e-07,
+      "display_rotation_error_rad": 1.41005064050277e-07,
+      "input_rotation_error_rad": 1.6362147598878964e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.101335873789695e-07,
+      "skin_delta_error": 4.805480091749757e-07,
+      "hand_dominant_max_movement": 0.005250550741348541,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.7869399238162068e-07,
+      "display_rotation_error_rad": 1.7869399238162068e-07,
+      "input_rotation_error_rad": 1.1103118566591198e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.2981520598697533e-07,
+      "skin_delta_error": 5.101335873789695e-07,
+      "hand_dominant_max_movement": 0.0052506290996554884,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 9.547007762590356e-08,
+      "display_rotation_error_rad": 9.547007762590356e-08,
+      "input_rotation_error_rad": 1.5691756567002406e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.004643753283229e-07,
+      "skin_delta_error": 4.807789863616728e-07,
+      "hand_dominant_max_movement": 0.005155406170824651,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 2.1932510014465097e-07,
+      "display_rotation_error_rad": 2.1932510014465097e-07,
+      "input_rotation_error_rad": 1.3533488329997255e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3039599400866564e-07,
+      "skin_delta_error": 4.917383193969727e-07,
+      "hand_dominant_max_movement": 0.005155270946055732,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 4.756747536332267e-07,
+      "display_rotation_error_rad": 4.756747536332267e-07,
+      "input_rotation_error_rad": 1.6875677721539586e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.1322185468262575e-07,
+      "skin_delta_error": 4.81067551891742e-07,
+      "hand_dominant_max_movement": 0.01287799880497824,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.528666677761281e-07,
+      "display_rotation_error_rad": 1.528666677761281e-07,
+      "input_rotation_error_rad": 9.553396406667334e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3705133724398804e-07,
+      "skin_delta_error": 3.7763493947607836e-07,
+      "hand_dominant_max_movement": 0.012877524150549558,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 5.65698199782308e-07,
+      "display_rotation_error_rad": 5.65698199782308e-07,
+      "input_rotation_error_rad": 1.6595605128530924e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.298797767386334e-07,
+      "skin_delta_error": 3.9990952313898927e-07,
+      "hand_dominant_max_movement": 0.01286611672901683,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 8.026188555484073e-08,
+      "display_rotation_error_rad": 8.026188555484073e-08,
+      "input_rotation_error_rad": 1.6405899186960322e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.8687458110772657e-07,
+      "skin_delta_error": 4.0011768287711e-07,
+      "hand_dominant_max_movement": 0.012866048301749224,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 3.1070462088309747e-07,
+      "display_rotation_error_rad": 3.1070462088309747e-07,
+      "input_rotation_error_rad": 6.728765319357977e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3392836387637365e-07,
+      "skin_delta_error": 4.917383193969727e-07,
+      "hand_dominant_max_movement": 0.011252689350610422,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.9624842631922727e-07,
+      "display_rotation_error_rad": 2.9624842631922727e-07,
+      "input_rotation_error_rad": 1.509662115421305e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.937545496739093e-07,
+      "skin_delta_error": 4.917383193969727e-07,
+      "hand_dominant_max_movement": 0.0112525575816612,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.9972200393676758,
+          -0.07440006732940674,
+          0.0040954723954200745
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 9.193243592421015e-08,
+      "display_rotation_error_rad": 9.193243592421015e-08,
+      "input_rotation_error_rad": 1.3017211265605798e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 6.384173792494239e-07,
+      "skin_delta_error": 5.230816995641024e-07,
+      "hand_dominant_max_movement": 0.005250615631730261,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.1667951765183974e-07,
+      "display_rotation_error_rad": 1.1667951765183974e-07,
+      "input_rotation_error_rad": 1.2134386207835622e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 7.558576377017736e-07,
+      "skin_delta_error": 6.208618478774923e-07,
+      "hand_dominant_max_movement": 0.005250561204843191,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.2288901528067025e-07,
+      "display_rotation_error_rad": 1.2288901528067025e-07,
+      "input_rotation_error_rad": 1.5691756567002406e-07,
+      "hand_origin_shift": 9.541398640621973e-08,
+      "skin_oracle_error": 7.104276085531841e-07,
+      "skin_delta_error": 6.034510353599962e-07,
+      "hand_dominant_max_movement": 0.012353470367201105,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 2.8650486550569407e-07,
+      "display_rotation_error_rad": 2.8650486550569407e-07,
+      "input_rotation_error_rad": 1.3533488329997255e-07,
+      "hand_origin_shift": 6.664001874625056e-08,
+      "skin_oracle_error": 5.690312338808186e-07,
+      "skin_delta_error": 5.962326831740902e-07,
+      "hand_dominant_max_movement": 0.012353369154106635,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 4.4694917594490854e-07,
+      "display_rotation_error_rad": 4.4694917594490854e-07,
+      "input_rotation_error_rad": 1.6875677721539586e-07,
+      "hand_origin_shift": 4.470348358154297e-08,
+      "skin_oracle_error": 5.705899595780907e-07,
+      "skin_delta_error": 6.027607193643116e-07,
+      "hand_dominant_max_movement": 0.012819523150488054,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 5.756347324306272e-07,
+      "display_rotation_error_rad": 5.756347324306272e-07,
+      "input_rotation_error_rad": 9.553396406667334e-08,
+      "hand_origin_shift": 6.143906154658885e-08,
+      "skin_oracle_error": 8.521392898206746e-07,
+      "skin_delta_error": 7.4598880091685e-07,
+      "hand_dominant_max_movement": 0.012819632477539622,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 4.015496695654197e-07,
+      "display_rotation_error_rad": 4.015496695654197e-07,
+      "input_rotation_error_rad": 1.6595605128530924e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 6.861414384748217e-07,
+      "skin_delta_error": 5.146836054077906e-07,
+      "hand_dominant_max_movement": 0.009284965124593043,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.9396367408565272e-07,
+      "display_rotation_error_rad": 1.9396367408565272e-07,
+      "input_rotation_error_rad": 1.6405899186960322e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.998064447217802e-07,
+      "skin_delta_error": 6.143906154658885e-07,
+      "hand_dominant_max_movement": 0.009284975158697849,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 3.29177409922697e-07,
+      "display_rotation_error_rad": 3.29177409922697e-07,
+      "input_rotation_error_rad": 6.728765319357977e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 6.884030055579711e-07,
+      "skin_delta_error": 6.078961537520067e-07,
+      "hand_dominant_max_movement": 0.0114571034847998,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 5.836235293020648e-07,
+      "display_rotation_error_rad": 5.836235293020648e-07,
+      "input_rotation_error_rad": 1.509662115421305e-07,
+      "hand_origin_shift": 5.960464477539063e-08,
+      "skin_oracle_error": 6.674406255472048e-07,
+      "skin_delta_error": 8.36591055847299e-07,
+      "hand_dominant_max_movement": 0.011457051568459567,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6071509122848511,
+          -0.22971093654632568,
+          0.7606580853462219
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.901727501289478e-07,
+      "display_rotation_error_rad": 2.901727501289478e-07,
+      "input_rotation_error_rad": 8.348212453731624e-08,
+      "hand_origin_shift": 2.4027400458748785e-07,
+      "skin_oracle_error": 4.5588787021572457e-07,
+      "skin_delta_error": 4.806057638785284e-07,
+      "hand_dominant_max_movement": 0.005250632447093826,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.306078354814508e-07,
+      "display_rotation_error_rad": 1.306078354814508e-07,
+      "input_rotation_error_rad": 1.8529458736167592e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.541799621024183e-07,
+      "skin_delta_error": 4.971273934129559e-07,
+      "hand_dominant_max_movement": 0.005250633952078673,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.9100322642459242e-07,
+      "display_rotation_error_rad": 1.9100322642459242e-07,
+      "input_rotation_error_rad": 1.5691756567002406e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.857789476513749e-07,
+      "skin_delta_error": 4.786961795153919e-07,
+      "hand_dominant_max_movement": 0.012985877002550291,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 2.052735014175131e-07,
+      "display_rotation_error_rad": 2.052735014175131e-07,
+      "input_rotation_error_rad": 1.3533488329997255e-07,
+      "hand_origin_shift": 2.2351741790771484e-08,
+      "skin_oracle_error": 4.6938657760620117e-07,
+      "skin_delta_error": 4.842304232499576e-07,
+      "hand_dominant_max_movement": 0.012985944658326877,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.4943137884339886e-07,
+      "display_rotation_error_rad": 1.4943137884339886e-07,
+      "input_rotation_error_rad": 1.6875677721539586e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.283273920954707e-07,
+      "skin_delta_error": 4.814712530792806e-07,
+      "hand_dominant_max_movement": 0.0063290904431056475,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 2.498256398576102e-07,
+      "display_rotation_error_rad": 2.498256398576102e-07,
+      "input_rotation_error_rad": 9.553396406667334e-08,
+      "hand_origin_shift": 2.4027400458748785e-07,
+      "skin_oracle_error": 4.626564591008432e-07,
+      "skin_delta_error": 3.9768237307913657e-07,
+      "hand_dominant_max_movement": 0.006328843991613647,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 7.309209374592413e-08,
+      "display_rotation_error_rad": 7.309209374592413e-08,
+      "input_rotation_error_rad": 1.6595605128530924e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.933724740488322e-07,
+      "skin_delta_error": 5.101335873789695e-07,
+      "hand_dominant_max_movement": 0.012889358085286616,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.8933099597558322e-07,
+      "display_rotation_error_rad": 1.8933099597558322e-07,
+      "input_rotation_error_rad": 1.6405899186960322e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.6938657760620117e-07,
+      "skin_delta_error": 4.3392836387637365e-07,
+      "hand_dominant_max_movement": 0.012889447749570012,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 2.541947679107186e-07,
+      "display_rotation_error_rad": 2.541947679107186e-07,
+      "input_rotation_error_rad": 6.728765319357977e-08,
+      "hand_origin_shift": 2.4027400458748785e-07,
+      "skin_oracle_error": 3.6983709472390583e-07,
+      "skin_delta_error": 3.7608830523860343e-07,
+      "hand_dominant_max_movement": 0.00920669949539353,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 5.0669426131007984e-08,
+      "display_rotation_error_rad": 5.0669426131007984e-08,
+      "input_rotation_error_rad": 1.509662115421305e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.826228243321671e-07,
+      "skin_delta_error": 3.6983709472390583e-07,
+      "hand_dominant_max_movement": 0.009206547283921371,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.10823899507522583,
+          -0.9941199421882629,
+          -0.003134760307148099
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 3.542749115219337e-07,
+      "display_rotation_error_rad": 3.542749115219337e-07,
+      "input_rotation_error_rad": 2.567208879294999e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.5099097342555393e-07,
+      "skin_delta_error": 4.951133646320149e-07,
+      "hand_dominant_max_movement": 0.0052506486139442705,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.536428230054772e-07,
+      "display_rotation_error_rad": 1.536428230054772e-07,
+      "input_rotation_error_rad": 1.543187735766767e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.626564591008432e-07,
+      "skin_delta_error": 3.7726726833498965e-07,
+      "hand_dominant_max_movement": 0.005250561689313855,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 4.897571005196605e-07,
+      "display_rotation_error_rad": 4.897571005196605e-07,
+      "input_rotation_error_rad": 6.331018789334738e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.2252084251516537e-07,
+      "skin_delta_error": 4.807789863616728e-07,
+      "hand_dominant_max_movement": 0.009992399157259716,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 1.8935744650215032e-07,
+      "display_rotation_error_rad": 1.8935744650215032e-07,
+      "input_rotation_error_rad": 1.202483499559948e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.430433734452279e-07,
+      "skin_delta_error": 4.862895271802163e-07,
+      "hand_dominant_max_movement": 0.009992274005829445,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.7638880643770096e-07,
+      "display_rotation_error_rad": 1.7638880643770096e-07,
+      "input_rotation_error_rad": 1.230522686291529e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.951133646320149e-07,
+      "skin_delta_error": 4.2981520598697533e-07,
+      "hand_dominant_max_movement": 0.012271378548582259,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 3.7067183077064025e-07,
+      "display_rotation_error_rad": 3.7067183077064025e-07,
+      "input_rotation_error_rad": 1.7508149982828624e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3800289799866286e-07,
+      "skin_delta_error": 5.545554776766418e-07,
+      "hand_dominant_max_movement": 0.012271182132676205,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.3344060878863518e-07,
+      "display_rotation_error_rad": 1.3344060878863518e-07,
+      "input_rotation_error_rad": 1.8874187467566559e-07,
+      "hand_origin_shift": 6.143906154658885e-08,
+      "skin_oracle_error": 4.951133646320149e-07,
+      "skin_delta_error": 3.68935418222545e-07,
+      "hand_dominant_max_movement": 0.013041007645277644,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.476647846569178e-07,
+      "display_rotation_error_rad": 2.476647846569178e-07,
+      "input_rotation_error_rad": 8.948178857205817e-08,
+      "hand_origin_shift": 6.705522537231445e-08,
+      "skin_oracle_error": 5.299871934586387e-07,
+      "skin_delta_error": 3.877166459339168e-07,
+      "hand_dominant_max_movement": 0.01304098867512971,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 2.3326981372316582e-07,
+      "display_rotation_error_rad": 2.3326981372316582e-07,
+      "input_rotation_error_rad": 6.50593981019146e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.3392836387637365e-07,
+      "skin_delta_error": 4.0011768287711e-07,
+      "hand_dominant_max_movement": 0.012891804467315967,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": true,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 8.170199468531202e-08,
+      "display_rotation_error_rad": 8.170199468531202e-08,
+      "input_rotation_error_rad": 1.4902325301594742e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.777675730550706e-07,
+      "skin_delta_error": 4.951133646320149e-07,
+      "hand_dominant_max_movement": 0.01289210584386416,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          0.8633888363838196,
+          -0.4528001546859741,
+          -0.22255733609199524
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.602442582442243e-07,
+      "display_rotation_error_rad": 9.32358095291411e-08,
+      "input_rotation_error_rad": 9.32358095291411e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.7763493947607836e-07,
+      "skin_delta_error": 4.81989800621148e-07,
+      "hand_dominant_max_movement": 0.005250610084730792,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.292929339764958e-07,
+      "display_rotation_error_rad": 5.716502040566359e-08,
+      "input_rotation_error_rad": 5.716502040566359e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.746834683620977e-07,
+      "skin_delta_error": 4.94271763879716e-07,
+      "hand_dominant_max_movement": 0.005250644803789842,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.9742880658176893e-07,
+      "display_rotation_error_rad": 1.1467937206056519e-07,
+      "input_rotation_error_rad": 1.1467937206056519e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.097141946812725e-07,
+      "skin_delta_error": 3.788090890314031e-07,
+      "hand_dominant_max_movement": 0.010427106613710406,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 3.968394742717824e-07,
+      "display_rotation_error_rad": 2.702244023984863e-07,
+      "input_rotation_error_rad": 2.702244023984863e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.842304232499576e-07,
+      "skin_delta_error": 4.814712530792806e-07,
+      "hand_dominant_max_movement": 0.01042714973996242,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.4795966640640444e-07,
+      "display_rotation_error_rad": 4.833030206306962e-08,
+      "input_rotation_error_rad": 4.833030206306962e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.0157177979385453e-07,
+      "skin_delta_error": 4.915689588548745e-07,
+      "hand_dominant_max_movement": 0.012938185339577008,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.3994422609139904e-07,
+      "display_rotation_error_rad": 1.4063676470279386e-07,
+      "input_rotation_error_rad": 1.4063676470279386e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.99065599671757e-07,
+      "skin_delta_error": 4.917383193969727e-07,
+      "hand_dominant_max_movement": 0.012938424763444754,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 2.634321582201005e-07,
+      "display_rotation_error_rad": 1.4924675106330932e-07,
+      "input_rotation_error_rad": 1.4924675106330932e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.8426509375058493e-07,
+      "skin_delta_error": 4.94271763879716e-07,
+      "hand_dominant_max_movement": 0.01094544317591459,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.230219274880199e-07,
+      "display_rotation_error_rad": 5.3912175058086826e-08,
+      "input_rotation_error_rad": 5.3912175058086826e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.7726726833498965e-07,
+      "skin_delta_error": 3.7763493947607836e-07,
+      "hand_dominant_max_movement": 0.010945416061447619,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.592752212765213e-07,
+      "display_rotation_error_rad": 1.531565566410997e-07,
+      "input_rotation_error_rad": 1.531565566410997e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.68709654559452e-07,
+      "skin_delta_error": 4.032271840493324e-07,
+      "hand_dominant_max_movement": 0.012327753745189638,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "flat",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.010276550536162e-07,
+      "display_rotation_error_rad": 1.6862854805225544e-07,
+      "input_rotation_error_rad": 1.6862854805225544e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.674277068954096e-07,
+      "skin_delta_error": 5.112205981733931e-07,
+      "hand_dominant_max_movement": 0.012327734563365332,
+      "pose_geometry": {
+        "upper_y": [
+          -0.9871566891670227,
+          0.1473359316587448,
+          -0.061755888164043427
+        ],
+        "forearm_y": [
+          -0.9825117588043213,
+          -0.171725332736969,
+          0.07197967171669006
+        ],
+        "hand_y": [
+          -0.6604470014572144,
+          0.01543334499001503,
+          -0.7507140040397644
+        ],
+        "elbow_angle_deg": 19.92381548818352
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.7481736574854636e-07,
+      "display_rotation_error_rad": 7.452072018961825e-08,
+      "input_rotation_error_rad": 7.452072018961825e-08,
+      "hand_origin_shift": 6.664001874625056e-08,
+      "skin_oracle_error": 5.4322857062692e-07,
+      "skin_delta_error": 6.01977404258375e-07,
+      "hand_dominant_max_movement": 0.005250615541062105,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 1.1077087630131656e-07,
+      "display_rotation_error_rad": 7.794368770660825e-08,
+      "input_rotation_error_rad": 7.794368770660825e-08,
+      "hand_origin_shift": 9.541398640621973e-08,
+      "skin_oracle_error": 6.116740629605589e-07,
+      "skin_delta_error": 4.902119681118721e-07,
+      "hand_dominant_max_movement": 0.0052507135700167904,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 1.3273010001979425e-07,
+      "display_rotation_error_rad": 1.1467937206056519e-07,
+      "input_rotation_error_rad": 1.1467937206056519e-07,
+      "hand_origin_shift": 9.541398640621973e-08,
+      "skin_oracle_error": 5.422569207229841e-07,
+      "skin_delta_error": 6.049669578313206e-07,
+      "hand_dominant_max_movement": 0.01042707198501474,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 2.3122404803241671e-07,
+      "display_rotation_error_rad": 2.702244023984863e-07,
+      "input_rotation_error_rad": 2.702244023984863e-07,
+      "hand_origin_shift": 6.664001874625056e-08,
+      "skin_oracle_error": 4.856612827698071e-07,
+      "skin_delta_error": 6.208618478774923e-07,
+      "hand_dominant_max_movement": 0.010427090427542068,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.340434746621498e-07,
+      "display_rotation_error_rad": 4.833030206306962e-08,
+      "input_rotation_error_rad": 4.833030206306962e-08,
+      "hand_origin_shift": 4.470348358154297e-08,
+      "skin_oracle_error": 5.308244565295242e-07,
+      "skin_delta_error": 7.227063179016113e-07,
+      "hand_dominant_max_movement": 0.01293818533959417,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 8.47339530643255e-08,
+      "display_rotation_error_rad": 1.4063676470279386e-07,
+      "input_rotation_error_rad": 1.4063676470279386e-07,
+      "hand_origin_shift": 6.143906154658885e-08,
+      "skin_oracle_error": 5.356651386028138e-07,
+      "skin_delta_error": 5.967910407334801e-07,
+      "hand_dominant_max_movement": 0.012938291625777636,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 8.468656258509618e-08,
+      "display_rotation_error_rad": 1.4924675106330932e-07,
+      "input_rotation_error_rad": 1.4924675106330932e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.170509687929592e-07,
+      "skin_delta_error": 4.81067551891742e-07,
+      "hand_dominant_max_movement": 0.010945435863688012,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 9.814123097334179e-08,
+      "display_rotation_error_rad": 5.3912175058086826e-08,
+      "input_rotation_error_rad": 5.3912175058086826e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 6.02714670185944e-07,
+      "skin_delta_error": 4.85203866814522e-07,
+      "hand_dominant_max_movement": 0.010945424703185047,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.2377834115800373e-07,
+      "display_rotation_error_rad": 1.531565566410997e-07,
+      "input_rotation_error_rad": 1.531565566410997e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 5.308244565295242e-07,
+      "skin_delta_error": 6.034510353599962e-07,
+      "hand_dominant_max_movement": 0.01232784360426148,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "raised",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.3135822348630783e-07,
+      "display_rotation_error_rad": 1.6862854805225544e-07,
+      "input_rotation_error_rad": 1.6862854805225544e-07,
+      "hand_origin_shift": 5.960464477539063e-08,
+      "skin_oracle_error": 5.456755585551427e-07,
+      "skin_delta_error": 4.85203866814522e-07,
+      "hand_dominant_max_movement": 0.01232767613239351,
+      "pose_geometry": {
+        "upper_y": [
+          -0.7639832496643066,
+          0.2540799081325531,
+          0.5931044220924377
+        ],
+        "forearm_y": [
+          -0.5172016620635986,
+          -0.296141117811203,
+          0.8029962182044983
+        ],
+        "hand_y": [
+          -0.6604471206665039,
+          0.015433263033628464,
+          -0.7507139444351196
+        ],
+        "elbow_angle_deg": 37.235940807578
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 2.1452599065389566e-07,
+      "display_rotation_error_rad": 9.829755724935801e-08,
+      "input_rotation_error_rad": 9.829755724935801e-08,
+      "hand_origin_shift": 2.384185791015625e-07,
+      "skin_oracle_error": 4.870345148530201e-07,
+      "skin_delta_error": 3.8289025895385735e-07,
+      "hand_dominant_max_movement": 0.0052506991607953945,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 2.68982280578629e-07,
+      "display_rotation_error_rad": 4.365372777288495e-08,
+      "input_rotation_error_rad": 4.365372777288495e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.841301047096517e-07,
+      "skin_delta_error": 3.8658750225835533e-07,
+      "hand_dominant_max_movement": 0.005250655023512788,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 2.3807114055536646e-07,
+      "display_rotation_error_rad": 1.1467937206056519e-07,
+      "input_rotation_error_rad": 1.1467937206056519e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.7763493947607836e-07,
+      "skin_delta_error": 3.7726726833498965e-07,
+      "hand_dominant_max_movement": 0.010427106613199327,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 3.551183274834295e-07,
+      "display_rotation_error_rad": 2.702244023984863e-07,
+      "input_rotation_error_rad": 2.702244023984863e-07,
+      "hand_origin_shift": 2.384185791015625e-07,
+      "skin_oracle_error": 3.9384265173790177e-07,
+      "skin_delta_error": 3.68709654559452e-07,
+      "hand_dominant_max_movement": 0.010427105081198674,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.2376181092232363e-07,
+      "display_rotation_error_rad": 4.833030206306962e-08,
+      "input_rotation_error_rad": 4.833030206306962e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.81024278097988e-07,
+      "skin_delta_error": 3.7763493947607836e-07,
+      "hand_dominant_max_movement": 0.01293807371012923,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 6.113873871425565e-08,
+      "display_rotation_error_rad": 1.4063676470279386e-07,
+      "input_rotation_error_rad": 1.4063676470279386e-07,
+      "hand_origin_shift": 2.4027400458748785e-07,
+      "skin_oracle_error": 4.809088622776959e-07,
+      "skin_delta_error": 3.68935418222545e-07,
+      "hand_dominant_max_movement": 0.012938319603080235,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.6338794252103967e-07,
+      "display_rotation_error_rad": 1.4924675106330932e-07,
+      "input_rotation_error_rad": 1.4924675106330932e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.726966302080217e-07,
+      "skin_delta_error": 3.7170856247146194e-07,
+      "hand_dominant_max_movement": 0.010945431620724755,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.230219274880199e-07,
+      "display_rotation_error_rad": 5.3912175058086826e-08,
+      "input_rotation_error_rad": 5.3912175058086826e-08,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.693113843021908e-07,
+      "skin_delta_error": 3.7814907850174666e-07,
+      "hand_dominant_max_movement": 0.010945409081577793,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.3514129182113002e-07,
+      "display_rotation_error_rad": 1.531565566410997e-07,
+      "input_rotation_error_rad": 1.531565566410997e-07,
+      "hand_origin_shift": 2.4027400458748785e-07,
+      "skin_oracle_error": 4.772771506414469e-07,
+      "skin_delta_error": 3.8310766614027146e-07,
+      "hand_dominant_max_movement": 0.012327728956364898,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "bent",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 6.322027276634104e-08,
+      "display_rotation_error_rad": 1.6862854805225544e-07,
+      "input_rotation_error_rad": 1.6862854805225544e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 3.8225544839606725e-07,
+      "skin_delta_error": 3.7170856247146194e-07,
+      "hand_dominant_max_movement": 0.012327857178974005,
+      "pose_geometry": {
+        "upper_y": [
+          -0.8012743592262268,
+          0.21953748166561127,
+          -0.5565632581710815
+        ],
+        "forearm_y": [
+          -0.06233644485473633,
+          -0.9922751188278198,
+          0.10725846141576767
+        ],
+        "hand_y": [
+          -0.6604470610618591,
+          0.01543334685266018,
+          -0.7507140636444092
+        ],
+        "elbow_angle_deg": 103.15517224216534
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 1.8326005155218905e-07,
+      "display_rotation_error_rad": 2.216469463801908e-07,
+      "input_rotation_error_rad": 2.216469463801908e-07,
+      "hand_origin_shift": 6.705522537231445e-08,
+      "skin_oracle_error": 3.793948011539583e-07,
+      "skin_delta_error": 4.85203866814522e-07,
+      "hand_dominant_max_movement": 0.005250620834997186,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "LOCAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 2.4268772415671244e-07,
+      "display_rotation_error_rad": 1.0873764395211953e-07,
+      "input_rotation_error_rad": 1.0873764395211953e-07,
+      "hand_origin_shift": 6.143906154658885e-08,
+      "skin_oracle_error": 3.857789476513749e-07,
+      "skin_delta_error": 4.76837158203125e-07,
+      "hand_dominant_max_movement": 0.005250672387151314,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": -1,
+      "rotation_error_rad": 2.5013165474095853e-07,
+      "display_rotation_error_rad": 1.719498010298835e-07,
+      "input_rotation_error_rad": 1.719498010298835e-07,
+      "hand_origin_shift": 8.971687092477304e-08,
+      "skin_oracle_error": 3.816559456248789e-07,
+      "skin_delta_error": 3.892170753064447e-07,
+      "hand_dominant_max_movement": 0.012689511471073124,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "X",
+      "sign": 1,
+      "rotation_error_rad": 2.482690687028436e-07,
+      "display_rotation_error_rad": 1.0334194003601313e-07,
+      "input_rotation_error_rad": 1.0334194003601313e-07,
+      "hand_origin_shift": 6.143906154658885e-08,
+      "skin_oracle_error": 5.331722099427833e-07,
+      "skin_delta_error": 5.101335873789695e-07,
+      "hand_dominant_max_movement": 0.012689563935247979,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": -1,
+      "rotation_error_rad": 8.026188555484073e-08,
+      "display_rotation_error_rad": 1.714278848095298e-07,
+      "input_rotation_error_rad": 1.714278848095298e-07,
+      "hand_origin_shift": 2.457562461863554e-07,
+      "skin_oracle_error": 4.1516517745718456e-07,
+      "skin_delta_error": 3.7527561961004223e-07,
+      "hand_dominant_max_movement": 0.011763206875001138,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Y",
+      "sign": 1,
+      "rotation_error_rad": 2.0766680870950497e-07,
+      "display_rotation_error_rad": 6.152613431457644e-08,
+      "input_rotation_error_rad": 6.152613431457644e-08,
+      "hand_origin_shift": 5.960464477539063e-08,
+      "skin_oracle_error": 3.892170753064447e-07,
+      "skin_delta_error": 4.933162140025749e-07,
+      "hand_dominant_max_movement": 0.011763218548488314,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.789635653116392e-07,
+      "display_rotation_error_rad": 1.8935750465368767e-07,
+      "input_rotation_error_rad": 1.8935750465368767e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.902119681118721e-07,
+      "skin_delta_error": 4.773607396972581e-07,
+      "hand_dominant_max_movement": 0.010321396879362706,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "GLOBAL",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 2.0496813103676002e-07,
+      "display_rotation_error_rad": 1.0334193183960244e-07,
+      "input_rotation_error_rad": 1.0334193183960244e-07,
+      "hand_origin_shift": 0.0,
+      "skin_oracle_error": 4.768953623117584e-07,
+      "skin_delta_error": 3.7814907850174666e-07,
+      "hand_dominant_max_movement": 0.010321362777870907,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": -1,
+      "rotation_error_rad": 1.196885394038062e-07,
+      "display_rotation_error_rad": 2.0241220085661888e-07,
+      "input_rotation_error_rad": 2.0241220085661888e-07,
+      "hand_origin_shift": 6.705522537231445e-08,
+      "skin_oracle_error": 4.329678483536135e-07,
+      "skin_delta_error": 4.982984843017449e-07,
+      "hand_dominant_max_movement": 0.012180050804433247,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    },
+    {
+      "side": "R",
+      "auto_align": false,
+      "pose": "root_rotated",
+      "orientation": "VIEW",
+      "axis": "Z",
+      "sign": 1,
+      "rotation_error_rad": 1.4102081381341592e-07,
+      "display_rotation_error_rad": 1.873046918209871e-07,
+      "input_rotation_error_rad": 1.873046918209871e-07,
+      "hand_origin_shift": 6.143906154658885e-08,
+      "skin_oracle_error": 3.998401124775034e-07,
+      "skin_delta_error": 3.857789476513749e-07,
+      "hand_dominant_max_movement": 0.012180107794489909,
+      "pose_geometry": {
+        "upper_y": [
+          -0.5892888903617859,
+          -0.5430021286010742,
+          -0.5982368588447571
+        ],
+        "forearm_y": [
+          0.8951940536499023,
+          -0.43209949135780334,
+          -0.10916857421398163
+        ],
+        "hand_y": [
+          -0.37651824951171875,
+          -0.44877713918685913,
+          -0.810452401638031
+        ],
+        "elbow_angle_deg": 103.15512443084114
+      }
+    }
+  ],
+  "failures": [],
+  "sync_changed": [
+    "CTRL_hand_IK.L",
+    "CTRL_hand_IK.R"
+  ],
+  "sync_pose_error": 2.384185791015625e-07,
+  "prior_calibration_runtime_error": null,
+  "prior_calibration_key_mutes": {
+    "CD Forearm Twist.L": false,
+    "CD Forearm Twist.R": false
+  },
+  "sample_counts": {
+    "L": {
+      "all": 249,
+      "hand_dominant": 74
+    },
+    "R": {
+      "all": 275,
+      "hand_dominant": 88
+    }
+  },
+  "weights_unchanged": true,
+  "rest_bones_unchanged": true,
+  "source_unchanged": true,
+  "ok": true
+}

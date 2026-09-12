@@ -1,0 +1,349 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_wrist_animation_20260910_152736_963.blend",
+  "sha256": "f1ad5c2752f264620bbfb8f621e4ecbd7a6fc5b94d9cadc156e810d5410f5390",
+  "rig": "CoshaRig",
+  "frame": 0,
+  "animation": {
+    "Object:CoshaRig": {
+      "active_action": null,
+      "nla_tracks": [],
+      "drivers_count": 28
+    },
+    "Armature:metarig": {
+      "active_action": null,
+      "nla_tracks": []
+    }
+  },
+  "relevant_actions": [],
+  "drivers_writing_rig": [
+    {
+      "path": "pose.bones[\"forearm.L\"].constraints[\"CDLimbIK_IK_b47d68b7f0244d60b350ca2b10242a09\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk"
+    },
+    {
+      "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_b47d68b7f0244d60b350ca2b10242a09\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk"
+    },
+    {
+      "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_END_ROTATION_b47d68b7f0244d60b350ca2b10242a09\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk"
+    },
+    {
+      "path": "pose.bones[\"forearm.R\"].constraints[\"CDLimbIK_IK_f4fbf5e211184144bfa510d338e3c1da\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk"
+    },
+    {
+      "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_f4fbf5e211184144bfa510d338e3c1da\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk"
+    },
+    {
+      "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_END_ROTATION_f4fbf5e211184144bfa510d338e3c1da\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk"
+    },
+    {
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "max(root_scale,0.001)"
+    },
+    {
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 1,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "max(root_scale,0.001)"
+    },
+    {
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 2,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "max(root_scale,0.001)"
+    }
+  ],
+  "drivers_reading_relevant_bones": [
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"forearm.L\"].constraints[\"CDLimbIK_IK_b47d68b7f0244d60b350ca2b10242a09\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk",
+      "reads": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_b47d68b7f0244d60b350ca2b10242a09\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk",
+      "reads": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_END_ROTATION_b47d68b7f0244d60b350ca2b10242a09\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk",
+      "reads": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"forearm.R\"].constraints[\"CDLimbIK_IK_f4fbf5e211184144bfa510d338e3c1da\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk",
+      "reads": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_f4fbf5e211184144bfa510d338e3c1da\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk",
+      "reads": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_END_ROTATION_f4fbf5e211184144bfa510d338e3c1da\"].influence",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "ik_fk",
+      "reads": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 0,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "max(root_scale,0.001)",
+      "reads": [
+        {
+          "name": "root_scale",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 1,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "max(root_scale,0.001)",
+      "reads": [
+        {
+          "name": "root_scale",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    },
+    {
+      "owner": "Object:CoshaRig",
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 2,
+      "keys": 2,
+      "samples": 0,
+      "mute": false,
+      "modifiers": [],
+      "expression": "max(root_scale,0.001)",
+      "reads": [
+        {
+          "name": "root_scale",
+          "type": "SINGLE_PROP",
+          "bone_target": "",
+          "data_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+          "transform_space": "WORLD_SPACE"
+        }
+      ]
+    }
+  ],
+  "other_constraint_readers": [
+    {
+      "owner": "CoshaRig/Hips",
+      "name": "CD Root Follow",
+      "type": "COPY_TRANSFORMS",
+      "subtarget": "CTRL_master",
+      "mute": false,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/forearm.L",
+      "name": "CDLimbIK_IK_b47d68b7f0244d60b350ca2b10242a09",
+      "type": "IK",
+      "subtarget": "CTRL_hand_IK.L",
+      "mute": false,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/hand.L",
+      "name": "CDLimbIK_END_ROTATION_b47d68b7f0244d60b350ca2b10242a09",
+      "type": "COPY_ROTATION",
+      "subtarget": "CTRL_hand_IK.L",
+      "mute": true,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/hand.L",
+      "name": "CDLimbIK_AUTO_OFFSET_ROTATION_b47d68b7f0244d60b350ca2b10242a09",
+      "type": "COPY_ROTATION",
+      "subtarget": "CTRL_hand_IK.L",
+      "mute": false,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/forearm.R",
+      "name": "CDLimbIK_IK_f4fbf5e211184144bfa510d338e3c1da",
+      "type": "IK",
+      "subtarget": "CTRL_hand_IK.R",
+      "mute": false,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/hand.R",
+      "name": "CDLimbIK_END_ROTATION_f4fbf5e211184144bfa510d338e3c1da",
+      "type": "COPY_ROTATION",
+      "subtarget": "CTRL_hand_IK.R",
+      "mute": true,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/hand.R",
+      "name": "CDLimbIK_AUTO_OFFSET_ROTATION_f4fbf5e211184144bfa510d338e3c1da",
+      "type": "COPY_ROTATION",
+      "subtarget": "CTRL_hand_IK.R",
+      "mute": false,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/MCH_elbow_pole_aim.L",
+      "name": "CDLimbIK_POLE_DISPLAY_TRACK_b47d68b7f0244d60b350ca2b10242a09",
+      "type": "DAMPED_TRACK",
+      "subtarget": "forearm.L",
+      "mute": false,
+      "influence": 1.0
+    },
+    {
+      "owner": "CoshaRig/MCH_elbow_pole_aim.R",
+      "name": "CDLimbIK_POLE_DISPLAY_TRACK_f4fbf5e211184144bfa510d338e3c1da",
+      "type": "DAMPED_TRACK",
+      "subtarget": "forearm.R",
+      "mute": false,
+      "influence": 1.0
+    }
+  ],
+  "source_unchanged": true
+}

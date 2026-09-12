@@ -1,0 +1,2562 @@
+{
+  "rig": "CoshaRig",
+  "body": "Cosha",
+  "bones": [
+    {
+      "name": "Hips",
+      "parent": null,
+      "owner": null,
+      "shape": null,
+      "head": [
+        0.0,
+        0.06613431125879288,
+        1.2106313705444336
+      ],
+      "tail": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "constraints": [
+        [
+          "CD Root Follow",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "spine",
+      "parent": "Hips",
+      "owner": null,
+      "shape": null,
+      "head": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "tail": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "constraints": [
+        [
+          "CD Torso FK",
+          "COPY_TRANSFORMS"
+        ],
+        [
+          "CD Spine IK",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "Chest",
+      "parent": "spine",
+      "owner": null,
+      "shape": null,
+      "head": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "tail": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "constraints": [
+        [
+          "CD Torso FK",
+          "COPY_TRANSFORMS"
+        ],
+        [
+          "CD Spine IK",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "UpperChest",
+      "parent": "Chest",
+      "owner": null,
+      "shape": null,
+      "head": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "tail": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "constraints": [
+        [
+          "CD Torso FK",
+          "COPY_TRANSFORMS"
+        ],
+        [
+          "CD Spine IK",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "UpperChest",
+      "owner": null,
+      "shape": "WGT_CD_NECK_2c9a8ad6cc",
+      "head": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "tail": [
+        -1.809577314382249e-11,
+        0.04758994281291962,
+        1.7604598999023438
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "owner": null,
+      "shape": "WGT_CD_HEAD_2c9a8ad6cc",
+      "head": [
+        -1.809577314382249e-11,
+        0.04758994281291962,
+        1.7604598999023438
+      ],
+      "tail": [
+        1.2875112531673949e-08,
+        0.04912104830145836,
+        1.912583827972412
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "eye.L",
+      "parent": "Head",
+      "owner": null,
+      "shape": null,
+      "head": [
+        0.021800357848405838,
+        0.02674010768532753,
+        1.8491942882537842
+      ],
+      "tail": [
+        0.0489996001124382,
+        -0.021604293957352638,
+        1.8497207164764404
+      ],
+      "constraints": [
+        [
+          "CD Eye Aim",
+          "DAMPED_TRACK"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "eye.R",
+      "parent": "Head",
+      "owner": null,
+      "shape": null,
+      "head": [
+        -0.021800357848405838,
+        0.02674010768532753,
+        1.8491942882537842
+      ],
+      "tail": [
+        -0.0489996001124382,
+        -0.021604293957352638,
+        1.8497207164764404
+      ],
+      "constraints": [
+        [
+          "CD Eye Aim",
+          "DAMPED_TRACK"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "CTRL_eyes",
+      "parent": "Head",
+      "owner": "eye_controls",
+      "shape": "WGT_CD_Eyes_MASTER_27d3f7dde3",
+      "head": [
+        0.0,
+        -0.05943803861737251,
+        1.850132703781128
+      ],
+      "tail": [
+        0.0,
+        -0.04635860025882721,
+        1.8499902486801147
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_eye.L",
+      "parent": "CTRL_eyes",
+      "owner": "eye_controls",
+      "shape": "WGT_CD_Eyes_LEFT_27d3f7dde3",
+      "head": [
+        0.07028539478778839,
+        -0.05943803861737251,
+        1.850132703781128
+      ],
+      "tail": [
+        0.07028539478778839,
+        -0.04635860025882721,
+        1.8499902486801147
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_eye.R",
+      "parent": "CTRL_eyes",
+      "owner": "eye_controls",
+      "shape": "WGT_CD_Eyes_RIGHT_27d3f7dde3",
+      "head": [
+        -0.07028539478778839,
+        -0.05943803861737251,
+        1.850132703781128
+      ],
+      "tail": [
+        -0.07028539478778839,
+        -0.04635860025882721,
+        1.8499902486801147
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "shoulder.L",
+      "parent": "UpperChest",
+      "owner": null,
+      "shape": "WGT_Randy_Shoulder",
+      "head": [
+        0.027091873809695244,
+        0.07746706902980804,
+        1.6783360242843628
+      ],
+      "tail": [
+        0.09869973361492157,
+        0.08542010188102722,
+        1.6649231910705566
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "upper_arm.L",
+      "parent": "shoulder.L",
+      "owner": null,
+      "shape": "WGT_CD_FK_upper_arm.L_c250fb4307",
+      "head": [
+        0.12203473597764969,
+        0.0968242660164833,
+        1.6448850631713867
+      ],
+      "tail": [
+        0.3324202597141266,
+        0.09400364756584167,
+        1.4313877820968628
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "forearm.L",
+      "parent": "upper_arm.L",
+      "owner": null,
+      "shape": "WGT_CD_FK_forearm.L_c250fb4307",
+      "head": [
+        0.3324202597141266,
+        0.09400364756584167,
+        1.4313877820968628
+      ],
+      "tail": [
+        0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_IK_b47d68b7f0244d60b350ca2b10242a09",
+          "IK"
+        ]
+      ],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "hand.L",
+      "parent": "forearm.L",
+      "owner": null,
+      "shape": null,
+      "head": [
+        0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "tail": [
+        0.5486394166946411,
+        0.07173283398151398,
+        1.2075296640396118
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_END_ROTATION_b47d68b7f0244d60b350ca2b10242a09",
+          "COPY_ROTATION"
+        ],
+        [
+          "CDLimbIK_AUTO_OFFSET_ROTATION_b47d68b7f0244d60b350ca2b10242a09",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "f_index.01.L",
+      "parent": "hand.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.5875955820083618,
+        0.04348514601588249,
+        1.1794519424438477
+      ],
+      "tail": [
+        0.6142732501029968,
+        0.03861311078071594,
+        1.1531723737716675
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_index.02.L",
+      "parent": "f_index.01.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.6142732501029968,
+        0.03861311078071594,
+        1.1531723737716675
+      ],
+      "tail": [
+        0.6368753910064697,
+        0.03313435986638069,
+        1.130735993385315
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_index.03.L",
+      "parent": "f_index.02.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.6368753910064697,
+        0.03313435986638069,
+        1.130735993385315
+      ],
+      "tail": [
+        0.6537976861000061,
+        0.030423888936638832,
+        1.1143124103546143
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "thumb.01.L",
+      "parent": "hand.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.5423166751861572,
+        0.03979024291038513,
+        1.2111706733703613
+      ],
+      "tail": [
+        0.5521906018257141,
+        0.024263683706521988,
+        1.1914851665496826
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "thumb.02.L",
+      "parent": "thumb.01.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.5521906018257141,
+        0.024263683706521988,
+        1.1914851665496826
+      ],
+      "tail": [
+        0.5605769157409668,
+        0.009786820039153099,
+        1.1642711162567139
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "thumb.03.L",
+      "parent": "thumb.02.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.5605769157409668,
+        0.009786820039153099,
+        1.1642711162567139
+      ],
+      "tail": [
+        0.5686238408088684,
+        -0.0014108681352809072,
+        1.1433013677597046
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_middle.01.L",
+      "parent": "hand.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.5874420404434204,
+        0.06235013157129288,
+        1.1808394193649292
+      ],
+      "tail": [
+        0.6161317229270935,
+        0.06395737081766129,
+        1.1508427858352661
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_middle.02.L",
+      "parent": "f_middle.01.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.6161317229270935,
+        0.06395737081766129,
+        1.1508427858352661
+      ],
+      "tail": [
+        0.6397244334220886,
+        0.06498195230960846,
+        1.1270955801010132
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_middle.03.L",
+      "parent": "f_middle.02.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.6397244334220886,
+        0.06498195230960846,
+        1.1270955801010132
+      ],
+      "tail": [
+        0.661307692527771,
+        0.0648706704378128,
+        1.1081846952438354
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_ring.01.L",
+      "parent": "hand.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.5852647423744202,
+        0.08177681267261505,
+        1.1829719543457031
+      ],
+      "tail": [
+        0.6129988431930542,
+        0.08926495909690857,
+        1.1541564464569092
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_ring.02.L",
+      "parent": "f_ring.01.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.6129988431930542,
+        0.08926495909690857,
+        1.1541564464569092
+      ],
+      "tail": [
+        0.6341883540153503,
+        0.09534652531147003,
+        1.1325874328613281
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_ring.03.L",
+      "parent": "f_ring.02.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.6341883540153503,
+        0.09534652531147003,
+        1.1325874328613281
+      ],
+      "tail": [
+        0.6532493233680725,
+        0.09957287460565567,
+        1.1175669431686401
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_pinky.01.L",
+      "parent": "hand.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.5830217003822327,
+        0.09901745617389679,
+        1.18702232837677
+      ],
+      "tail": [
+        0.602321207523346,
+        0.10995618253946304,
+        1.165259599685669
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_pinky.02.L",
+      "parent": "f_pinky.01.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.602321207523346,
+        0.10995618253946304,
+        1.165259599685669
+      ],
+      "tail": [
+        0.6171467304229736,
+        0.11823005974292755,
+        1.1500177383422852
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_pinky.03.L",
+      "parent": "f_pinky.02.L",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        0.6171467304229736,
+        0.11823005974292755,
+        1.1500177383422852
+      ],
+      "tail": [
+        0.6313877105712891,
+        0.12404347956180573,
+        1.1391416788101196
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "shoulder.R",
+      "parent": "UpperChest",
+      "owner": null,
+      "shape": "WGT_Randy_Shoulder",
+      "head": [
+        -0.027091873809695244,
+        0.07746706902980804,
+        1.6783360242843628
+      ],
+      "tail": [
+        -0.09869973361492157,
+        0.08542010188102722,
+        1.6649231910705566
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "upper_arm.R",
+      "parent": "shoulder.R",
+      "owner": null,
+      "shape": "WGT_CD_FK_upper_arm.R_c250fb4307",
+      "head": [
+        -0.12203473597764969,
+        0.0968242660164833,
+        1.6448850631713867
+      ],
+      "tail": [
+        -0.3324202597141266,
+        0.09400364756584167,
+        1.4313877820968628
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "forearm.R",
+      "parent": "upper_arm.R",
+      "owner": null,
+      "shape": "WGT_CD_FK_forearm.R_c250fb4307",
+      "head": [
+        -0.3324202597141266,
+        0.09400364756584167,
+        1.4313877820968628
+      ],
+      "tail": [
+        -0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_IK_f4fbf5e211184144bfa510d338e3c1da",
+          "IK"
+        ]
+      ],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "hand.R",
+      "parent": "forearm.R",
+      "owner": null,
+      "shape": null,
+      "head": [
+        -0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "tail": [
+        -0.5486394166946411,
+        0.07173283398151398,
+        1.2075296640396118
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_END_ROTATION_f4fbf5e211184144bfa510d338e3c1da",
+          "COPY_ROTATION"
+        ],
+        [
+          "CDLimbIK_AUTO_OFFSET_ROTATION_f4fbf5e211184144bfa510d338e3c1da",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "f_index.01.R",
+      "parent": "hand.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.5875955820083618,
+        0.04348514601588249,
+        1.1794519424438477
+      ],
+      "tail": [
+        -0.6142732501029968,
+        0.03861311078071594,
+        1.1531723737716675
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_index.02.R",
+      "parent": "f_index.01.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.6142732501029968,
+        0.03861311078071594,
+        1.1531723737716675
+      ],
+      "tail": [
+        -0.6368753910064697,
+        0.03313435986638069,
+        1.130735993385315
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_index.03.R",
+      "parent": "f_index.02.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.6368753910064697,
+        0.03313435986638069,
+        1.130735993385315
+      ],
+      "tail": [
+        -0.6537976861000061,
+        0.030423888936638832,
+        1.1143124103546143
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "thumb.01.R",
+      "parent": "hand.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.5423166751861572,
+        0.03979024291038513,
+        1.2111706733703613
+      ],
+      "tail": [
+        -0.5521906018257141,
+        0.024263683706521988,
+        1.1914851665496826
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "thumb.02.R",
+      "parent": "thumb.01.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.5521906018257141,
+        0.024263683706521988,
+        1.1914851665496826
+      ],
+      "tail": [
+        -0.5605769157409668,
+        0.009786820039153099,
+        1.1642711162567139
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "thumb.03.R",
+      "parent": "thumb.02.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.5605769157409668,
+        0.009786820039153099,
+        1.1642711162567139
+      ],
+      "tail": [
+        -0.5686238408088684,
+        -0.0014108681352809072,
+        1.1433013677597046
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_middle.01.R",
+      "parent": "hand.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.5874420404434204,
+        0.06235013157129288,
+        1.1808394193649292
+      ],
+      "tail": [
+        -0.6161317229270935,
+        0.06395737081766129,
+        1.1508427858352661
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_middle.02.R",
+      "parent": "f_middle.01.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.6161317229270935,
+        0.06395737081766129,
+        1.1508427858352661
+      ],
+      "tail": [
+        -0.6397244334220886,
+        0.06498195230960846,
+        1.1270955801010132
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_middle.03.R",
+      "parent": "f_middle.02.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.6397244334220886,
+        0.06498195230960846,
+        1.1270955801010132
+      ],
+      "tail": [
+        -0.661307692527771,
+        0.0648706704378128,
+        1.1081846952438354
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_ring.01.R",
+      "parent": "hand.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.5852647423744202,
+        0.08177681267261505,
+        1.1829719543457031
+      ],
+      "tail": [
+        -0.6129988431930542,
+        0.08926495909690857,
+        1.1541564464569092
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_ring.02.R",
+      "parent": "f_ring.01.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.6129988431930542,
+        0.08926495909690857,
+        1.1541564464569092
+      ],
+      "tail": [
+        -0.6341883540153503,
+        0.09534652531147003,
+        1.1325874328613281
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_ring.03.R",
+      "parent": "f_ring.02.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.6341883540153503,
+        0.09534652531147003,
+        1.1325874328613281
+      ],
+      "tail": [
+        -0.6532493233680725,
+        0.09957287460565567,
+        1.1175669431686401
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_pinky.01.R",
+      "parent": "hand.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.5830217003822327,
+        0.09901745617389679,
+        1.18702232837677
+      ],
+      "tail": [
+        -0.602321207523346,
+        0.10995618253946304,
+        1.165259599685669
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_pinky.02.R",
+      "parent": "f_pinky.01.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.602321207523346,
+        0.10995618253946304,
+        1.165259599685669
+      ],
+      "tail": [
+        -0.6171467304229736,
+        0.11823005974292755,
+        1.1500177383422852
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "f_pinky.03.R",
+      "parent": "f_pinky.02.R",
+      "owner": null,
+      "shape": "WGT_Randy_Finger",
+      "head": [
+        -0.6171467304229736,
+        0.11823005974292755,
+        1.1500177383422852
+      ],
+      "tail": [
+        -0.6313877105712891,
+        0.12404347956180573,
+        1.1391416788101196
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "breast.L",
+      "parent": "UpperChest",
+      "owner": null,
+      "shape": null,
+      "head": [
+        0.08530081063508987,
+        -0.012929326854646206,
+        1.5610092878341675
+      ],
+      "tail": [
+        0.08530081063508987,
+        -0.11690172553062439,
+        1.528212070465088
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "breast.R",
+      "parent": "UpperChest",
+      "owner": null,
+      "shape": null,
+      "head": [
+        -0.08530081063508987,
+        -0.012929326854646206,
+        1.5610092878341675
+      ],
+      "tail": [
+        -0.08530079573392868,
+        -0.11690174788236618,
+        1.5282121896743774
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original",
+        "Animation"
+      ]
+    },
+    {
+      "name": "thigh.L",
+      "parent": "Hips",
+      "owner": null,
+      "shape": "WGT_CD_FK_thigh.L_c250fb4307",
+      "head": [
+        0.09480436891317368,
+        0.09454359859228134,
+        1.2164766788482666
+      ],
+      "tail": [
+        0.09694115072488785,
+        0.06386806070804596,
+        0.6524592041969299
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "shin.L",
+      "parent": "thigh.L",
+      "owner": null,
+      "shape": "WGT_CD_FK_shin.L_c250fb4307",
+      "head": [
+        0.09694115072488785,
+        0.06386806070804596,
+        0.6524592041969299
+      ],
+      "tail": [
+        0.09949608147144318,
+        0.060485754162073135,
+        -0.021930769085884094
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_IK_67d40710359549028b8557c524b77bae",
+          "IK"
+        ]
+      ],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "foot.L",
+      "parent": "shin.L",
+      "owner": null,
+      "shape": null,
+      "head": [
+        0.09949608147144318,
+        0.060485754162073135,
+        -0.021930769085884094
+      ],
+      "tail": [
+        0.08716753870248795,
+        -0.06566915661096573,
+        -0.06508726626634598
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_END_ROTATION_67d40710359549028b8557c524b77bae",
+          "COPY_ROTATION"
+        ],
+        [
+          "CDLimbIK_AUTO_OFFSET_ROTATION_67d40710359549028b8557c524b77bae",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "toe.L",
+      "parent": "foot.L",
+      "owner": null,
+      "shape": null,
+      "head": [
+        0.08716753870248795,
+        -0.06566915661096573,
+        -0.06508726626634598
+      ],
+      "tail": [
+        0.08716753870248795,
+        -0.1328691691160202,
+        -0.06508727371692657
+      ],
+      "constraints": [
+        [
+          "CD Toe Bend",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "MCH_toe_FK_ref.L",
+      "parent": "foot.L",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        0.08716754615306854,
+        -0.06566915661096573,
+        -0.06508725136518478
+      ],
+      "tail": [
+        0.08716754615306854,
+        -0.09742848575115204,
+        -0.06508725136518478
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "thigh.R",
+      "parent": "Hips",
+      "owner": null,
+      "shape": "WGT_CD_FK_thigh.R_c250fb4307",
+      "head": [
+        -0.09480436891317368,
+        0.09454359859228134,
+        1.2164766788482666
+      ],
+      "tail": [
+        -0.09694115072488785,
+        0.06386806070804596,
+        0.6524592041969299
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "shin.R",
+      "parent": "thigh.R",
+      "owner": null,
+      "shape": "WGT_CD_FK_shin.R_c250fb4307",
+      "head": [
+        -0.09694115072488785,
+        0.06386806070804596,
+        0.6524592041969299
+      ],
+      "tail": [
+        -0.09949608147144318,
+        0.060485754162073135,
+        -0.021930769085884094
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_IK_8ef6be63a87549728e878a71b29cefff",
+          "IK"
+        ]
+      ],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "foot.R",
+      "parent": "shin.R",
+      "owner": null,
+      "shape": null,
+      "head": [
+        -0.09949608147144318,
+        0.060485754162073135,
+        -0.021930769085884094
+      ],
+      "tail": [
+        -0.08716753870248795,
+        -0.06566916406154633,
+        -0.06508713960647583
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_END_ROTATION_8ef6be63a87549728e878a71b29cefff",
+          "COPY_ROTATION"
+        ],
+        [
+          "CDLimbIK_AUTO_OFFSET_ROTATION_8ef6be63a87549728e878a71b29cefff",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "toe.R",
+      "parent": "foot.R",
+      "owner": null,
+      "shape": null,
+      "head": [
+        -0.08716753870248795,
+        -0.06566916406154633,
+        -0.06508713960647583
+      ],
+      "tail": [
+        -0.08716753870248795,
+        -0.1328691840171814,
+        -0.06508713960647583
+      ],
+      "constraints": [
+        [
+          "CD Toe Bend",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": false,
+      "collections": [
+        "Original"
+      ]
+    },
+    {
+      "name": "MCH_toe_FK_ref.R",
+      "parent": "foot.R",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        -0.08716755360364914,
+        -0.06566915661096573,
+        -0.065087229013443
+      ],
+      "tail": [
+        -0.08716755360364914,
+        -0.09742847084999084,
+        -0.065087229013443
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_torso_bend",
+      "parent": "Hips",
+      "owner": "torso_controls",
+      "shape": "WGT_CD_Torso_BEND_5b5bdbef4d",
+      "head": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "tail": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_torso_offset_1",
+      "parent": "Hips",
+      "owner": "torso_controls",
+      "shape": null,
+      "head": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "tail": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "constraints": [
+        [
+          "CD Torso Shared Bend",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_torso_1",
+      "parent": "MCH_torso_offset_1",
+      "owner": "torso_controls",
+      "shape": "WGT_CD_Torso_FK_0_5b5bdbef4d",
+      "head": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "tail": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_torso_offset_2",
+      "parent": "CTRL_torso_1",
+      "owner": "torso_controls",
+      "shape": null,
+      "head": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "tail": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "constraints": [
+        [
+          "CD Torso Shared Bend",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_torso_2",
+      "parent": "MCH_torso_offset_2",
+      "owner": "torso_controls",
+      "shape": "WGT_CD_Torso_FK_1_5b5bdbef4d",
+      "head": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "tail": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_torso_offset_3",
+      "parent": "CTRL_torso_2",
+      "owner": "torso_controls",
+      "shape": null,
+      "head": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "tail": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "constraints": [
+        [
+          "CD Torso Shared Bend",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_torso_3",
+      "parent": "MCH_torso_offset_3",
+      "owner": "torso_controls",
+      "shape": "WGT_CD_Torso_FK_2_5b5bdbef4d",
+      "head": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "tail": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_spine_IK",
+      "parent": "Hips",
+      "owner": "spine_ik_fk",
+      "shape": "WGT_CD_Spine_IK_CHEST_d499ccdace",
+      "head": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "tail": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_spine_shape",
+      "parent": "Hips",
+      "owner": "spine_ik_fk",
+      "shape": "WGT_CD_Spine_IK_SHAPE_d499ccdace",
+      "head": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "tail": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "MCH_spine_IK_1",
+      "parent": "Hips",
+      "owner": "spine_ik_fk",
+      "shape": null,
+      "head": [
+        1.2746933286678086e-08,
+        0.05825767293572426,
+        1.3200126886367798
+      ],
+      "tail": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "constraints": [
+        [
+          "CD Spine Shape",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_spine_IK_2",
+      "parent": "MCH_spine_IK_1",
+      "owner": "spine_ik_fk",
+      "shape": null,
+      "head": [
+        -2.1582307851986116e-07,
+        0.05502746254205704,
+        1.455551028251648
+      ],
+      "tail": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "constraints": [
+        [
+          "CD Spine Shape",
+          "COPY_ROTATION"
+        ],
+        [
+          "CD Spine Endpoint",
+          "IK"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_spine_IK_3",
+      "parent": "MCH_spine_IK_2",
+      "owner": "spine_ik_fk",
+      "shape": null,
+      "head": [
+        -1.0790699889184907e-07,
+        0.05743482708930969,
+        1.5716770887374878
+      ],
+      "tail": [
+        1.0537348771322286e-11,
+        0.05984218791127205,
+        1.700203776359558
+      ],
+      "constraints": [
+        [
+          "CD Spine Chest Rotation",
+          "COPY_ROTATION"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_master",
+      "parent": null,
+      "owner": "root_control",
+      "shape": "WGT_CD_Root_120aa273b6",
+      "head": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tail": [
+        0.0,
+        0.355980783700943,
+        0.0
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_hand_IK.L",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_HandIK",
+      "head": [
+        0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "tail": [
+        0.5667091608047485,
+        0.06387127935886383,
+        1.1936336755752563
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_elbow_pole.L",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_PoleArrow",
+      "head": [
+        0.34608742594718933,
+        0.5112485885620117,
+        1.4175175428390503
+      ],
+      "tail": [
+        0.347745805978775,
+        0.5618743300437927,
+        1.415834665298462
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "MCH_elbow_pole_aim.L",
+      "parent": "CTRL_elbow_pole.L",
+      "owner": "limb_ik",
+      "shape": null,
+      "head": [
+        0.34608742594718933,
+        0.5112485885620117,
+        1.4175175428390503
+      ],
+      "tail": [
+        0.34717997908592224,
+        0.5446012616157532,
+        1.4164087772369385
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_POLE_DISPLAY_TRACK_b47d68b7f0244d60b350ca2b10242a09",
+          "DAMPED_TRACK"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_hand_IK.R",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_HandIK",
+      "head": [
+        -0.5122035145759583,
+        0.07088135927915573,
+        1.2489454746246338
+      ],
+      "tail": [
+        -0.5667091608047485,
+        0.06387127935886383,
+        1.1936336755752563
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_elbow_pole.R",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_PoleArrow",
+      "head": [
+        -0.3460882306098938,
+        0.5112484693527222,
+        1.4175176620483398
+      ],
+      "tail": [
+        -0.3477466106414795,
+        0.5618742108345032,
+        1.4158347845077515
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "MCH_elbow_pole_aim.R",
+      "parent": "CTRL_elbow_pole.R",
+      "owner": "limb_ik",
+      "shape": null,
+      "head": [
+        -0.3460882306098938,
+        0.5112484693527222,
+        1.4175176620483398
+      ],
+      "tail": [
+        -0.3471807837486267,
+        0.5446011424064636,
+        1.416408896446228
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_POLE_DISPLAY_TRACK_f4fbf5e211184144bfa510d338e3c1da",
+          "DAMPED_TRACK"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_foot_IK.L",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_FootIK.L",
+      "head": [
+        0.09949608147144318,
+        0.060485757887363434,
+        -0.0219307541847229
+      ],
+      "tail": [
+        0.08352195471525192,
+        -0.10297349840402603,
+        -0.07784874737262726
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_foot_roll.L",
+      "parent": "CTRL_foot_IK.L",
+      "owner": "foot_controls",
+      "shape": "WGT_CD_FOOT_ROLL_3dbbda0d48",
+      "head": [
+        0.10533546656370163,
+        0.15198472142219543,
+        -0.0015685386024415493
+      ],
+      "tail": [
+        0.10331323742866516,
+        0.12028984725475311,
+        -0.0015685380203649402
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "MCH_foot_heel.L",
+      "parent": "CTRL_foot_IK.L",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        0.10154377669095993,
+        0.09255682677030563,
+        -0.06508719176054001
+      ],
+      "tail": [
+        0.09952154755592346,
+        0.06086194887757301,
+        -0.06508719176054001
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_foot_tip.L",
+      "parent": "MCH_foot_heel.L",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        0.08716093748807907,
+        -0.13286857306957245,
+        -0.06508718430995941
+      ],
+      "tail": [
+        0.0851387083530426,
+        -0.16456344723701477,
+        -0.06508718430995941
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_foot_ball.L",
+      "parent": "MCH_foot_tip.L",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        0.08716385811567307,
+        -0.06566856056451797,
+        -0.06508716940879822
+      ],
+      "tail": [
+        0.0851416289806366,
+        -0.0973634421825409,
+        -0.06508716940879822
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_foot_ankle.L",
+      "parent": "MCH_foot_ball.L",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        0.09949754923582077,
+        0.060485757887363434,
+        -0.021930698305368423
+      ],
+      "tail": [
+        0.09657218307256699,
+        0.03056386113166809,
+        -0.03216676041483879
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_toe_IK_ref.L",
+      "parent": "MCH_foot_tip.L",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        0.08716385811567307,
+        -0.06566856056451797,
+        -0.06508716940879822
+      ],
+      "tail": [
+        0.08716247975826263,
+        -0.09742788970470428,
+        -0.06508717685937881
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_toe_space.L",
+      "parent": "CTRL_foot_IK.L",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        0.08716385811567307,
+        -0.06566856056451797,
+        -0.06508716940879822
+      ],
+      "tail": [
+        0.08716247975826263,
+        -0.09742788970470428,
+        -0.06508717685937881
+      ],
+      "constraints": [
+        [
+          "CD Foot FK Toe Space",
+          "COPY_TRANSFORMS"
+        ],
+        [
+          "CD Foot IK Toe Space",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_toe_bend.L",
+      "parent": "MCH_toe_space.L",
+      "owner": "foot_controls",
+      "shape": "WGT_CD_TOE_BEND_3dbbda0d48",
+      "head": [
+        0.08716385811567307,
+        -0.06566856056451797,
+        -0.06508716940879822
+      ],
+      "tail": [
+        0.08716093748807907,
+        -0.13286858797073364,
+        -0.06508718430995941
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_knee_pole.L",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_PoleArrow",
+      "head": [
+        0.09684434533119202,
+        -0.865226149559021,
+        0.6780101656913757
+      ],
+      "tail": [
+        0.09683260321617126,
+        -0.9779560565948486,
+        0.6811103224754333
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "MCH_knee_pole_aim.L",
+      "parent": "CTRL_knee_pole.L",
+      "owner": "limb_ik",
+      "shape": null,
+      "head": [
+        0.09684434533119202,
+        -0.865226149559021,
+        0.6780101656913757
+      ],
+      "tail": [
+        0.09683660417795181,
+        -0.939531147480011,
+        0.6800535917282104
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_POLE_DISPLAY_TRACK_67d40710359549028b8557c524b77bae",
+          "DAMPED_TRACK"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_foot_IK.R",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_FootIK.R",
+      "head": [
+        -0.09949609637260437,
+        0.06048574671149254,
+        -0.02193087339401245
+      ],
+      "tail": [
+        -0.08352196961641312,
+        -0.1029735803604126,
+        -0.07784870266914368
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_foot_roll.R",
+      "parent": "CTRL_foot_IK.R",
+      "owner": "foot_controls",
+      "shape": "WGT_CD_FOOT_ROLL_5cababf1a6",
+      "head": [
+        -0.10533106327056885,
+        0.15198490023612976,
+        -0.001568716368637979
+      ],
+      "tail": [
+        -0.10331014543771744,
+        0.12028995156288147,
+        -0.0015687168342992663
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "MCH_foot_heel.R",
+      "parent": "CTRL_foot_IK.R",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        -0.10154184699058533,
+        0.09255686402320862,
+        -0.06508734822273254
+      ],
+      "tail": [
+        -0.09952092915773392,
+        0.06086191534996033,
+        -0.06508734822273254
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_foot_tip.R",
+      "parent": "MCH_foot_heel.R",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        -0.0871683657169342,
+        -0.13286903500556946,
+        -0.06508734822273254
+      ],
+      "tail": [
+        -0.0851474478840828,
+        -0.16456398367881775,
+        -0.06508734822273254
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_foot_ball.R",
+      "parent": "MCH_foot_tip.R",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        -0.08716834336519241,
+        -0.06566905230283737,
+        -0.06508729606866837
+      ],
+      "tail": [
+        -0.085147425532341,
+        -0.09736400097608566,
+        -0.06508729606866837
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_foot_ankle.R",
+      "parent": "MCH_foot_ball.R",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        -0.09949694573879242,
+        0.06048572435975075,
+        -0.021930865943431854
+      ],
+      "tail": [
+        -0.09657278656959534,
+        0.0305637177079916,
+        -0.032166916877031326
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_toe_IK_ref.R",
+      "parent": "MCH_foot_tip.R",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        -0.08716834336519241,
+        -0.06566905230283737,
+        -0.06508729606866837
+      ],
+      "tail": [
+        -0.08716835826635361,
+        -0.09742836654186249,
+        -0.06508731842041016
+      ],
+      "constraints": [],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "MCH_toe_space.R",
+      "parent": "CTRL_foot_IK.R",
+      "owner": "foot_controls",
+      "shape": null,
+      "head": [
+        -0.08716834336519241,
+        -0.06566905230283737,
+        -0.06508729606866837
+      ],
+      "tail": [
+        -0.08716835826635361,
+        -0.09742836654186249,
+        -0.06508731842041016
+      ],
+      "constraints": [
+        [
+          "CD Foot FK Toe Space",
+          "COPY_TRANSFORMS"
+        ],
+        [
+          "CD Foot IK Toe Space",
+          "COPY_TRANSFORMS"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    },
+    {
+      "name": "CTRL_toe_bend.R",
+      "parent": "MCH_toe_space.R",
+      "owner": "foot_controls",
+      "shape": "WGT_CD_TOE_BEND_5cababf1a6",
+      "head": [
+        -0.08716834336519241,
+        -0.06566905230283737,
+        -0.06508729606866837
+      ],
+      "tail": [
+        -0.0871683657169342,
+        -0.13286903500556946,
+        -0.06508734822273254
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "CTRL_knee_pole.R",
+      "parent": "CTRL_master",
+      "owner": "limb_ik",
+      "shape": "WGT_Randy_PoleArrow",
+      "head": [
+        -0.09684436768293381,
+        -0.8652241230010986,
+        0.6780099272727966
+      ],
+      "tail": [
+        -0.09683262556791306,
+        -0.9779540300369263,
+        0.6811100840568542
+      ],
+      "constraints": [],
+      "color": "CUSTOM",
+      "hide": false,
+      "collections": [
+        "Controls",
+        "Animation"
+      ]
+    },
+    {
+      "name": "MCH_knee_pole_aim.R",
+      "parent": "CTRL_knee_pole.R",
+      "owner": "limb_ik",
+      "shape": null,
+      "head": [
+        -0.09684436768293381,
+        -0.8652241230010986,
+        0.6780099272727966
+      ],
+      "tail": [
+        -0.0968366265296936,
+        -0.9395291209220886,
+        0.6800533533096313
+      ],
+      "constraints": [
+        [
+          "CDLimbIK_POLE_DISPLAY_TRACK_8ef6be63a87549728e878a71b29cefff",
+          "DAMPED_TRACK"
+        ]
+      ],
+      "color": "DEFAULT",
+      "hide": true,
+      "collections": [
+        "Controls"
+      ]
+    }
+  ],
+  "fitting": {
+    "Hips": {
+      "count": 141,
+      "bounds": [
+        [
+          -0.1900772899389267,
+          -0.016630766913294792,
+          1.029547929763794
+        ],
+        [
+          0.19007717072963715,
+          0.22432491183280945,
+          1.3034543991088867
+        ]
+      ]
+    },
+    "Chest": {
+      "count": 149,
+      "bounds": [
+        [
+          -0.14131473004817963,
+          -0.07005316019058228,
+          1.4417873620986938
+        ],
+        [
+          0.14131461083889008,
+          0.11450648307800293,
+          1.6453990936279297
+        ]
+      ]
+    },
+    "UpperChest": {
+      "count": 154,
+      "bounds": [
+        [
+          -0.12855355441570282,
+          -0.054911572486162186,
+          1.5330772399902344
+        ],
+        [
+          0.11727917194366455,
+          0.11996465921401978,
+          1.726823329925537
+        ]
+      ]
+    },
+    "breast.L": {
+      "count": 162,
+      "bounds": [
+        [
+          -6.344306768824026e-08,
+          -0.12213121354579926,
+          1.4417873620986938
+        ],
+        [
+          0.14131461083889008,
+          0.0917661041021347,
+          1.6682748794555664
+        ]
+      ]
+    },
+    "breast.R": {
+      "count": 162,
+      "bounds": [
+        [
+          -0.14131473004817963,
+          -0.12213121354579926,
+          1.4417873620986938
+        ],
+        [
+          -6.344306768824026e-08,
+          0.0917661041021347,
+          1.6682748794555664
+        ]
+      ]
+    }
+  }
+}

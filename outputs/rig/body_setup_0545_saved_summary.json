@@ -1,0 +1,143 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_body_setup_20260911_053445_231.blend",
+  "sha256": "34d92512631b0ac167f17cf47dfd458d9d97115ecf9d7a3b9bafa123341a4173",
+  "source_unchanged": true,
+  "saved_vs_live_limit": "Saved X at 2026-09-11 03:18:22 still contains Root; unsaved screenshot removals are not represented.",
+  "native_count": 56,
+  "generated_count": 45,
+  "present": [
+    "four Direct Pre-Roll limbs",
+    "two wrist references",
+    "both foot/toe extensions",
+    "torso",
+    "spine IK/FK",
+    "optional Root",
+    "eight native FK rings",
+    "32 shoulder/finger displays",
+    "IK size-fit backup",
+    "managed Body/Original/_Internal collections"
+  ],
+  "absent": [
+    "Head/Neck visuals",
+    "eyes",
+    "breast/Hips visuals",
+    "managed hair bones",
+    "managed dress bones"
+  ],
+  "native_mapping": {
+    "HIPS": "Hips",
+    "SPINE": [
+      "spine",
+      "Chest",
+      "UpperChest"
+    ],
+    "NECK": "Neck",
+    "HEAD": "Head",
+    "EYES": [
+      "eye.L",
+      "eye.R"
+    ],
+    "BREASTS": [
+      "breast.L",
+      "breast.R"
+    ],
+    "ARMS": [
+      [
+        "upper_arm.L",
+        "forearm.L",
+        "hand.L"
+      ],
+      [
+        "upper_arm.R",
+        "forearm.R",
+        "hand.R"
+      ]
+    ],
+    "LEGS": [
+      [
+        "thigh.L",
+        "shin.L",
+        "foot.L",
+        "toe.L"
+      ],
+      [
+        "thigh.R",
+        "shin.R",
+        "foot.R",
+        "toe.R"
+      ]
+    ]
+  },
+  "validation": {
+    "limb_inventory": {
+      "ok": true,
+      "present": true
+    },
+    "limb_fk_visuals": {
+      "ok": true,
+      "present": true
+    },
+    "body_detail_visuals": {
+      "ok": true,
+      "present": false
+    },
+    "head_neck_visuals": {
+      "ok": true,
+      "present": false
+    },
+    "root_control": {
+      "ok": true,
+      "present": true
+    },
+    "torso_controls": {
+      "ok": true,
+      "present": true
+    },
+    "spine_ik_fk": {
+      "ok": true,
+      "present": true
+    },
+    "eye_controls": {
+      "ok": true,
+      "present": false
+    },
+    "foot_controls": {
+      "ok": true,
+      "present": true
+    }
+  },
+  "fk_removal_dependencies_pass": true,
+  "size_fit_limitation": {
+    "hands": "Manual mode anchor=None, old size-fit backup anchor=hand.L/R; display rebasing causes restore guard, not edited FK rings.",
+    "knees": "Both size-fit bindings validate."
+  },
+  "animation": {
+    "CoshaRig": {
+      "active_action": null,
+      "nla": [],
+      "drivers": 28
+    },
+    "CoshaRig_drivers": 28,
+    "foreign_drivers_reading_CoshaRig": 0,
+    "ShoesAction": "3 single-key delta_rotation_euler channels; preserve",
+    "other_actions": "Attack action and rig.001Action.002 belong to other rigs; preserve"
+  },
+  "preserve_existing": [
+    "Manual hand mode and rebased hand widget display",
+    "Root sole-plane display translation Z=-0.1371203363",
+    "Cosha paired Forearm Twist calibration and corrective keys",
+    "Clothes/Shoes/Stocking weights and Quick Bind backups",
+    "Shoes disabled viewport Armature modifier",
+    "generated Hair/Hair1/Hair3 geometry and profiles",
+    "all other rigs/actions"
+  ],
+  "validation_proposal": [
+    "Use this immutable saved fixture for mixed-state adoption: Generate fills absent compatible components, reuses existing IDs and artist display state; second Generate is idempotent.",
+    "Compare every original native rest/pose, mesh Basis and weights, corrective keys, original modifiers, actions/drivers and other rigs before/after generation; allow only owned control/record additions and intentional managed visibility/color changes.",
+    "Save preview copy/reopen, remove all body modules in dependency order; verify no owned control/widgets/records remain and native motion/skin shape is preserved. Existing Direct removal Rest recovery is an explicit expected state, not an unqualified equality to the managed starting rest.",
+    "Capture the resulting native baseline, Generate then Remove again and compare the restored native baseline exactly (pose tolerance); ensure partial Head/Hips-only builds use actual record bindings.",
+    "Inject a late build/removal failure and assert rollback retains original Object/Armature/Mesh IDs and previous mixed setup, including owned visual data and grouped widget leaf names.",
+    "Exercise runtime Forearm Twist after removal/rebuild: its native rest signature can invalidate corrections if the source Direct Rest rolls change; a stale target name alone is not the calculation dependency.",
+    "Obtain a separate live snapshot for the reported blocked FK removal; saved FK validation and dependency checks both pass."
+  ]
+}

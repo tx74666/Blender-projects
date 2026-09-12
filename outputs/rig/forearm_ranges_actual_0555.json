@@ -1,0 +1,111 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_forearm_ranges_0555_source.blend",
+  "source_sha256": "6ea60ef9a6456a1b1a92295e06d0b6dcea904b9c5b2baa100cf4a35286af8689",
+  "production_saved": false,
+  "checks": [
+    {
+      "check": "Actual cage deformation",
+      "side": "L",
+      "degrees": 90,
+      "outside_vertex_count": 3720,
+      "outside_error": 0.0,
+      "boundary_error": 0.0,
+      "interior_effect": 0.02586067570855606,
+      "overlay_error": 4.806057638785284e-07
+    },
+    {
+      "check": "Actual cage deformation",
+      "side": "L",
+      "degrees": -90,
+      "outside_vertex_count": 3720,
+      "outside_error": 0.0,
+      "boundary_error": 0.0,
+      "interior_effect": 0.02586064898008468,
+      "overlay_error": 4.806057638785284e-07
+    },
+    {
+      "check": "Recapture Cancel exact",
+      "side": "L",
+      "records": true,
+      "keys": true,
+      "poses": true,
+      "original_sources": true,
+      "animation": true
+    },
+    {
+      "check": "Actual cage deformation",
+      "side": "R",
+      "degrees": 90,
+      "outside_vertex_count": 3720,
+      "outside_error": 0.0,
+      "boundary_error": 0.0,
+      "interior_effect": 0.025860758988668704,
+      "overlay_error": 3.626374460350858e-07
+    },
+    {
+      "check": "Actual cage deformation",
+      "side": "R",
+      "degrees": -90,
+      "outside_vertex_count": 3720,
+      "outside_error": 0.0,
+      "boundary_error": 0.0,
+      "interior_effect": 0.025860549381116482,
+      "overlay_error": 3.626374460350858e-07
+    },
+    {
+      "check": "Recapture Cancel exact",
+      "side": "R",
+      "records": true,
+      "keys": true,
+      "poses": true,
+      "original_sources": true,
+      "animation": true
+    },
+    {
+      "check": "Failed explicit recapture is atomic",
+      "records": true,
+      "keys": true,
+      "poses": true
+    },
+    {
+      "check": "Confirm and save/reopen",
+      "range": [
+        1,
+        5
+      ],
+      "current": 3,
+      "loop_counts": {
+        "L": 7,
+        "R": 7
+      },
+      "pair_count": 7,
+      "original_sources": true,
+      "animation": true,
+      "output": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_forearm_ranges_0555_preview.blend"
+    },
+    {
+      "check": "Matching-loop explicit recapture preserves edits",
+      "shares": true,
+      "range_anchors": true,
+      "current_identity": true,
+      "cancel_exact": true
+    },
+    {
+      "check": "Animated target profile editing",
+      "pose_locked": true,
+      "poses": true,
+      "animation": true,
+      "record_cancel": true
+    }
+  ],
+  "wrist_sync": [
+    "CTRL_hand_IK.L",
+    "CTRL_hand_IK.R"
+  ],
+  "original_stale_records": {
+    "L": false,
+    "R": false
+  },
+  "ok": true,
+  "source_unchanged": true
+}

@@ -1,0 +1,90 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_body_setup_20260911_053445_231.blend",
+  "sha256": "34d92512631b0ac167f17cf47dfd458d9d97115ecf9d7a3b9bafa123341a4173",
+  "plan": {
+    "rig": "CoshaRig",
+    "schema": 5,
+    "components": [
+      {
+        "key": "LIMBS",
+        "status": "REUSE",
+        "reason": "Existing limb controls are kept.",
+        "kwargs": {
+          "method": "DIRECT_PREROLL",
+          "chains": []
+        }
+      },
+      {
+        "key": "ROOT",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_L",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_R",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "TORSO",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "SPINE",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "EYES",
+        "status": "ADD",
+        "reason": "Add shared gaze and two eye targets.",
+        "kwargs": {
+          "head_name": "Head",
+          "left_name": "eye.L",
+          "right_name": "eye.R"
+        }
+      },
+      {
+        "key": "FK_RINGS",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "HEAD_NECK",
+        "status": "ADD",
+        "reason": "Fit Head and Neck displays.",
+        "kwargs": {
+          "head_name": "Head",
+          "neck_name": "Neck",
+          "allow_partial": true
+        }
+      },
+      {
+        "key": "BODY_DETAIL",
+        "status": "ADD",
+        "reason": "Fit Hips and any available native breast controls.",
+        "kwargs": {
+          "hips_name": "Hips",
+          "left_name": "breast.L",
+          "right_name": "breast.R",
+          "allow_partial": true
+        }
+      }
+    ],
+    "blocked": false,
+    "source_digest": "4cd7e8a52e9d77aa8adfb4750ae40bea07b6f380fb7c4d5b53ae52228ba78752"
+  },
+  "unchanged": true,
+  "source_unchanged": true
+}

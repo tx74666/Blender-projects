@@ -1,0 +1,408 @@
+{
+  "roots": [
+    "Body",
+    "Original"
+  ],
+  "collection_properties": [
+    "rna_type",
+    "name",
+    "is_expanded",
+    "is_visible",
+    "is_visible_ancestors",
+    "is_visible_effectively",
+    "is_solo",
+    "is_local_override",
+    "is_editable",
+    "bones",
+    "children",
+    "parent",
+    "index",
+    "child_number"
+  ],
+  "body_members": [
+    "Hips",
+    "Neck",
+    "Head",
+    "CTRL_eyes",
+    "CTRL_eye.L",
+    "CTRL_eye.R",
+    "shoulder.L",
+    "f_index.01.L",
+    "f_index.02.L",
+    "f_index.03.L",
+    "thumb.01.L",
+    "thumb.02.L",
+    "thumb.03.L",
+    "f_middle.01.L",
+    "f_middle.02.L",
+    "f_middle.03.L",
+    "f_ring.01.L",
+    "f_ring.02.L",
+    "f_ring.03.L",
+    "f_pinky.01.L",
+    "f_pinky.02.L",
+    "f_pinky.03.L",
+    "shoulder.R",
+    "f_index.01.R",
+    "f_index.02.R",
+    "f_index.03.R",
+    "thumb.01.R",
+    "thumb.02.R",
+    "thumb.03.R",
+    "f_middle.01.R",
+    "f_middle.02.R",
+    "f_middle.03.R",
+    "f_ring.01.R",
+    "f_ring.02.R",
+    "f_ring.03.R",
+    "f_pinky.01.R",
+    "f_pinky.02.R",
+    "f_pinky.03.R",
+    "breast.L",
+    "breast.R",
+    "CTRL_spine_IK",
+    "CTRL_spine_shape",
+    "CTRL_master",
+    "CTRL_hand_IK.L",
+    "CTRL_elbow_pole.L",
+    "CTRL_hand_IK.R",
+    "CTRL_elbow_pole.R",
+    "CTRL_foot_IK.L",
+    "CTRL_foot_roll.L",
+    "CTRL_toe_bend.L",
+    "CTRL_knee_pole.L",
+    "CTRL_foot_IK.R",
+    "CTRL_foot_roll.R",
+    "CTRL_toe_bend.R",
+    "CTRL_knee_pole.R"
+  ],
+  "internal_members": [
+    "CTRL_eyes",
+    "CTRL_eye.L",
+    "CTRL_eye.R",
+    "MCH_toe_FK_ref.L",
+    "MCH_toe_FK_ref.R",
+    "CTRL_torso_bend",
+    "MCH_torso_offset_1",
+    "CTRL_torso_1",
+    "MCH_torso_offset_2",
+    "CTRL_torso_2",
+    "MCH_torso_offset_3",
+    "CTRL_torso_3",
+    "CTRL_spine_IK",
+    "CTRL_spine_shape",
+    "MCH_spine_IK_1",
+    "MCH_spine_IK_2",
+    "MCH_spine_IK_3",
+    "CTRL_master",
+    "CTRL_hand_IK.L",
+    "CTRL_elbow_pole.L",
+    "MCH_elbow_pole_aim.L",
+    "CTRL_hand_IK.R",
+    "CTRL_elbow_pole.R",
+    "MCH_elbow_pole_aim.R",
+    "CTRL_foot_IK.L",
+    "CTRL_foot_roll.L",
+    "MCH_foot_heel.L",
+    "MCH_foot_tip.L",
+    "MCH_foot_ball.L",
+    "MCH_foot_ankle.L",
+    "MCH_toe_IK_ref.L",
+    "MCH_toe_space.L",
+    "CTRL_toe_bend.L",
+    "CTRL_knee_pole.L",
+    "MCH_knee_pole_aim.L",
+    "CTRL_foot_IK.R",
+    "CTRL_foot_roll.R",
+    "MCH_foot_heel.R",
+    "MCH_foot_tip.R",
+    "MCH_foot_ball.R",
+    "MCH_foot_ankle.R",
+    "MCH_toe_IK_ref.R",
+    "MCH_toe_space.R",
+    "CTRL_toe_bend.R",
+    "CTRL_knee_pole.R",
+    "MCH_knee_pole_aim.R"
+  ],
+  "toe_mechanisms": [
+    {
+      "name": "MCH_foot_ankle.L",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "3dbbda0d48214a538fe82178d5b94e47",
+        "character_designer_foot_role": "ANKLE_SOLVER",
+        "character_designer_foot_side": "L"
+      }
+    },
+    {
+      "name": "MCH_foot_ball.L",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "3dbbda0d48214a538fe82178d5b94e47",
+        "character_designer_foot_role": "BALL_PIVOT",
+        "character_designer_foot_side": "L"
+      }
+    },
+    {
+      "name": "MCH_toe_FK_ref.L",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "3dbbda0d48214a538fe82178d5b94e47",
+        "character_designer_foot_role": "FK_TOE_REF",
+        "character_designer_foot_side": "L"
+      }
+    },
+    {
+      "name": "MCH_foot_heel.L",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "3dbbda0d48214a538fe82178d5b94e47",
+        "character_designer_foot_role": "HEEL_PIVOT",
+        "character_designer_foot_side": "L"
+      }
+    },
+    {
+      "name": "MCH_toe_IK_ref.L",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "3dbbda0d48214a538fe82178d5b94e47",
+        "character_designer_foot_role": "IK_TOE_REF",
+        "character_designer_foot_side": "L"
+      }
+    },
+    {
+      "name": "MCH_toe_space.L",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "3dbbda0d48214a538fe82178d5b94e47",
+        "character_designer_foot_role": "TOE_SPACE",
+        "character_designer_foot_side": "L"
+      }
+    },
+    {
+      "name": "MCH_foot_tip.L",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "3dbbda0d48214a538fe82178d5b94e47",
+        "character_designer_foot_role": "TOE_TIP_PIVOT",
+        "character_designer_foot_side": "L"
+      }
+    },
+    {
+      "name": "MCH_foot_ankle.R",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "5cababf1a63b4919832202c06e70395d",
+        "character_designer_foot_role": "ANKLE_SOLVER",
+        "character_designer_foot_side": "R"
+      }
+    },
+    {
+      "name": "MCH_foot_ball.R",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "5cababf1a63b4919832202c06e70395d",
+        "character_designer_foot_role": "BALL_PIVOT",
+        "character_designer_foot_side": "R"
+      }
+    },
+    {
+      "name": "MCH_toe_FK_ref.R",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "5cababf1a63b4919832202c06e70395d",
+        "character_designer_foot_role": "FK_TOE_REF",
+        "character_designer_foot_side": "R"
+      }
+    },
+    {
+      "name": "MCH_foot_heel.R",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "5cababf1a63b4919832202c06e70395d",
+        "character_designer_foot_role": "HEEL_PIVOT",
+        "character_designer_foot_side": "R"
+      }
+    },
+    {
+      "name": "MCH_toe_IK_ref.R",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "5cababf1a63b4919832202c06e70395d",
+        "character_designer_foot_role": "IK_TOE_REF",
+        "character_designer_foot_side": "R"
+      }
+    },
+    {
+      "name": "MCH_toe_space.R",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "5cababf1a63b4919832202c06e70395d",
+        "character_designer_foot_role": "TOE_SPACE",
+        "character_designer_foot_side": "R"
+      }
+    },
+    {
+      "name": "MCH_foot_tip.R",
+      "hide": true,
+      "hide_select": true,
+      "visible": false,
+      "collections": [
+        "_Internal"
+      ],
+      "deform": false,
+      "shape": null,
+      "properties": {
+        "character_designer_owner": "foot_controls",
+        "character_designer_foot_id": "5cababf1a63b4919832202c06e70395d",
+        "character_designer_foot_role": "TOE_TIP_PIVOT",
+        "character_designer_foot_side": "R"
+      }
+    }
+  ],
+  "gray_visible": [],
+  "foot": {
+    "generated": [
+      "CTRL_foot_roll.L",
+      "CTRL_foot_roll.R",
+      "CTRL_toe_bend.L",
+      "CTRL_toe_bend.R",
+      "MCH_foot_ankle.L",
+      "MCH_foot_ankle.R",
+      "MCH_foot_ball.L",
+      "MCH_foot_ball.R",
+      "MCH_foot_heel.L",
+      "MCH_foot_heel.R",
+      "MCH_foot_tip.L",
+      "MCH_foot_tip.R",
+      "MCH_toe_FK_ref.L",
+      "MCH_toe_FK_ref.R",
+      "MCH_toe_IK_ref.L",
+      "MCH_toe_IK_ref.R",
+      "MCH_toe_space.L",
+      "MCH_toe_space.R"
+    ],
+    "replaced": [
+      "toe.L",
+      "toe.R"
+    ],
+    "always": [
+      "CTRL_toe_bend.L",
+      "CTRL_toe_bend.R"
+    ],
+    "ik": {
+      "CTRL_foot_IK.L": [
+        "CTRL_foot_roll.L"
+      ],
+      "CTRL_foot_IK.R": [
+        "CTRL_foot_roll.R"
+      ]
+    },
+    "hidden_base": []
+  },
+  "unexpected_body_mechanisms": []
+}

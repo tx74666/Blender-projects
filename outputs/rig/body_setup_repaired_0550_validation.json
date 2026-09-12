@@ -1,0 +1,432 @@
+{
+  "ok": true,
+  "source": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_repaired_roll_20260912.blend",
+  "source_sha256": "34ce10ca5683f48884fac2d0ba87216a1d9717b33dd24e92798146f1c8d9bb34",
+  "preview": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\X_body_setup_repaired_0550_generated_preview.blend",
+  "production_file_written": false,
+  "removal_executed": false,
+  "initial_plan": {
+    "rig": "CoshaRig",
+    "schema": 5,
+    "components": [
+      {
+        "key": "LIMBS",
+        "status": "REUSE",
+        "reason": "Existing limb controls are kept.",
+        "kwargs": {
+          "method": "DIRECT_PREROLL",
+          "chains": []
+        }
+      },
+      {
+        "key": "ROOT",
+        "status": "ADD",
+        "reason": "Add a whole-body Root; the Stable limb builder supplies its Master.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_L",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_R",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "TORSO",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "SPINE",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "EYES",
+        "status": "ADD",
+        "reason": "Add shared gaze and two eye targets.",
+        "kwargs": {
+          "head_name": "Head",
+          "left_name": "eye.L",
+          "right_name": "eye.R"
+        }
+      },
+      {
+        "key": "FK_RINGS",
+        "status": "ADD",
+        "reason": "Fit missing native FK rings; keep artist shapes.",
+        "kwargs": {}
+      },
+      {
+        "key": "HEAD_NECK",
+        "status": "ADD",
+        "reason": "Fit Head and Neck displays.",
+        "kwargs": {
+          "head_name": "Head",
+          "neck_name": "Neck",
+          "allow_partial": true
+        }
+      },
+      {
+        "key": "BODY_DETAIL",
+        "status": "ADD",
+        "reason": "Fit Hips and any available native breast controls.",
+        "kwargs": {
+          "hips_name": "Hips",
+          "left_name": "breast.L",
+          "right_name": "breast.R",
+          "allow_partial": true
+        }
+      }
+    ],
+    "blocked": false,
+    "source_digest": "29de250d2fdea35fb80eaf9354c441ecb8d7dfd4ff0f357ee71c2ec57c82fd50"
+  },
+  "initial_preflight": {
+    "False": {
+      "ok": false,
+      "error": "Forearm calibration on 'Cosha' already has a different Rest frame; restore that setup first."
+    },
+    "True": {
+      "ok": true,
+      "fields": [
+        "constraints",
+        "correctives",
+        "data_digest",
+        "direct_rest_raw",
+        "driver_paths",
+        "inventory",
+        "keep_native_rest",
+        "names",
+        "records",
+        "resources",
+        "rest",
+        "rig",
+        "skin",
+        "surfaces"
+      ],
+      "bones": 44,
+      "rest_states": 8
+    }
+  },
+  "generate": {
+    "created": [
+      "ROOT",
+      "EYES",
+      "FK_RINGS",
+      "HEAD_NECK",
+      "BODY_DETAIL"
+    ],
+    "reused": [
+      "LIMBS",
+      "FEET_L",
+      "FEET_R",
+      "TORSO",
+      "SPINE"
+    ],
+    "skipped": [],
+    "plan": {
+      "rig": "CoshaRig",
+      "schema": 5,
+      "components": [
+        {
+          "key": "LIMBS",
+          "status": "REUSE",
+          "reason": "Existing limb controls are kept.",
+          "kwargs": {
+            "method": "DIRECT_PREROLL",
+            "chains": []
+          }
+        },
+        {
+          "key": "ROOT",
+          "status": "ADD",
+          "reason": "Add a whole-body Root; the Stable limb builder supplies its Master.",
+          "kwargs": {}
+        },
+        {
+          "key": "FEET_L",
+          "status": "REUSE",
+          "reason": "Existing Foot Roll and Toe Bend are kept.",
+          "kwargs": {}
+        },
+        {
+          "key": "FEET_R",
+          "status": "REUSE",
+          "reason": "Existing Foot Roll and Toe Bend are kept.",
+          "kwargs": {}
+        },
+        {
+          "key": "TORSO",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "SPINE",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "EYES",
+          "status": "ADD",
+          "reason": "Add shared gaze and two eye targets.",
+          "kwargs": {
+            "head_name": "Head",
+            "left_name": "eye.L",
+            "right_name": "eye.R"
+          }
+        },
+        {
+          "key": "FK_RINGS",
+          "status": "ADD",
+          "reason": "Fit missing native FK rings; keep artist shapes.",
+          "kwargs": {}
+        },
+        {
+          "key": "HEAD_NECK",
+          "status": "ADD",
+          "reason": "Fit Head and Neck displays.",
+          "kwargs": {
+            "head_name": "Head",
+            "neck_name": "Neck",
+            "allow_partial": true
+          }
+        },
+        {
+          "key": "BODY_DETAIL",
+          "status": "ADD",
+          "reason": "Fit Hips and any available native breast controls.",
+          "kwargs": {
+            "hips_name": "Hips",
+            "left_name": "breast.L",
+            "right_name": "breast.R",
+            "allow_partial": true
+          }
+        }
+      ],
+      "blocked": false,
+      "source_digest": "29de250d2fdea35fb80eaf9354c441ecb8d7dfd4ff0f357ee71c2ec57c82fd50"
+    }
+  },
+  "preservation": {
+    "pose_error": 5.931779742240906e-05,
+    "skin_error": 9.317136573372409e-05,
+    "surface_error": 5.058944225311279e-06,
+    "added_bones": [
+      "CoshaRig/CTRL_eye.L",
+      "CoshaRig/CTRL_eye.R",
+      "CoshaRig/CTRL_eyes",
+      "CoshaRig/CTRL_master"
+    ],
+    "added_objects": 17,
+    "added_meshes": 17
+  },
+  "second_generate": {
+    "created": [],
+    "reused": [
+      "LIMBS",
+      "ROOT",
+      "FEET_L",
+      "FEET_R",
+      "TORSO",
+      "SPINE",
+      "EYES",
+      "FK_RINGS",
+      "HEAD_NECK",
+      "BODY_DETAIL"
+    ],
+    "skipped": [],
+    "plan": {
+      "rig": "CoshaRig",
+      "schema": 5,
+      "components": [
+        {
+          "key": "LIMBS",
+          "status": "REUSE",
+          "reason": "Existing limb controls are kept.",
+          "kwargs": {
+            "method": "DIRECT_PREROLL",
+            "chains": []
+          }
+        },
+        {
+          "key": "ROOT",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "FEET_L",
+          "status": "REUSE",
+          "reason": "Existing Foot Roll and Toe Bend are kept.",
+          "kwargs": {}
+        },
+        {
+          "key": "FEET_R",
+          "status": "REUSE",
+          "reason": "Existing Foot Roll and Toe Bend are kept.",
+          "kwargs": {}
+        },
+        {
+          "key": "TORSO",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "SPINE",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "EYES",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "FK_RINGS",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "HEAD_NECK",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "BODY_DETAIL",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        }
+      ],
+      "blocked": false,
+      "source_digest": "29de250d2fdea35fb80eaf9354c441ecb8d7dfd4ff0f357ee71c2ec57c82fd50"
+    }
+  },
+  "generated_preflight": {
+    "False": {
+      "ok": false,
+      "error": "Forearm calibration on 'Cosha' already has a different Rest frame; restore that setup first."
+    },
+    "True": {
+      "ok": true,
+      "fields": [
+        "constraints",
+        "correctives",
+        "data_digest",
+        "direct_rest_raw",
+        "driver_paths",
+        "inventory",
+        "keep_native_rest",
+        "names",
+        "records",
+        "resources",
+        "rest",
+        "rig",
+        "skin",
+        "surfaces"
+      ],
+      "bones": 48,
+      "rest_states": 8
+    }
+  },
+  "reopen_plan": {
+    "rig": "CoshaRig",
+    "schema": 5,
+    "components": [
+      {
+        "key": "LIMBS",
+        "status": "REUSE",
+        "reason": "Existing limb controls are kept.",
+        "kwargs": {
+          "method": "DIRECT_PREROLL",
+          "chains": []
+        }
+      },
+      {
+        "key": "ROOT",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_L",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_R",
+        "status": "REUSE",
+        "reason": "Existing Foot Roll and Toe Bend are kept.",
+        "kwargs": {}
+      },
+      {
+        "key": "TORSO",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "SPINE",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "EYES",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "FK_RINGS",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "HEAD_NECK",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      },
+      {
+        "key": "BODY_DETAIL",
+        "status": "REUSE",
+        "reason": "Existing controls are kept unchanged.",
+        "kwargs": {}
+      }
+    ],
+    "blocked": false,
+    "source_digest": "29de250d2fdea35fb80eaf9354c441ecb8d7dfd4ff0f357ee71c2ec57c82fd50"
+  },
+  "reopen_preservation": {
+    "pose_error": 5.931779742240906e-05,
+    "skin_error": 9.317136573372409e-05,
+    "surface_error": 5.058944225311279e-06,
+    "added_bones": [
+      "CoshaRig/CTRL_eye.L",
+      "CoshaRig/CTRL_eye.R",
+      "CoshaRig/CTRL_eyes",
+      "CoshaRig/CTRL_master"
+    ],
+    "added_objects": 17,
+    "added_meshes": 17
+  },
+  "source_unchanged": true
+}

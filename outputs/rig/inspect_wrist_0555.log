@@ -1,0 +1,157 @@
+ℹ️  blendkit: Verbose is enabled [04:32:29.728, addon_updater.py:150]
+ℹ️  blendkit: Read in JSON settings from file [04:32:29.742, addon_updater.py:150]
+ℹ️  blendkit: Ports reordered so first port is now 62485 (previous index was 0) [04:32:29.746, client_lib.py:156]
+P56772:04:32:31:botaniq_starter:INFO: Logger for "botaniq_starter" initialized in "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py" -----
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 80, in emit
+    self.doRollover()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 456, in doRollover
+    self.rotate(self.baseFilename, dfn)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 121, in rotate
+    os.rename(source, dest)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\botaniq_starter.txt' -> 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\botaniq_starter.txt.2026-09-11_22'
+Call stack:
+  File "<string>", line 1, in <module>
+  File "D:\Blender5.2\5.2\scripts\modules\bpy\utils\__init__.py", line 397, in load_scripts_extensions
+    _initialize_once()
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 67, in _initialize_once
+    enable(
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 457, in enable
+    mod = importlib.import_module(module_name)
+  File "D:\Blender5.2\5.2\python\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py", line 58, in <module>
+    logger.info(f"Logger for \"{__name__}\" initialized in \"{__file__}\" -----")
+Message: 'Logger for "botaniq_starter" initialized in "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\botaniq_starter\\__init__.py" -----'
+Arguments: ()
+P56772:04:32:32:polib:INFO: Logger for "polib" initialized in "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\polib\__init__.py" -----
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 80, in emit
+    self.doRollover()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 456, in doRollover
+    self.rotate(self.baseFilename, dfn)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 121, in rotate
+    os.rename(source, dest)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\polib.txt' -> 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\polib.txt.2026-09-11_22'
+Call stack:
+  File "<string>", line 1, in <module>
+  File "D:\Blender5.2\5.2\scripts\modules\bpy\utils\__init__.py", line 397, in load_scripts_extensions
+    _initialize_once()
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 67, in _initialize_once
+    enable(
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 457, in enable
+    mod = importlib.import_module(module_name)
+  File "D:\Blender5.2\5.2\python\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py", line 72, in <module>
+    import polib
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\polib\__init__.py", line 34, in <module>
+    logger.info(f"Logger for \"{__name__}\" initialized in \"{__file__}\" -----")
+Message: 'Logger for "polib" initialized in "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\botaniq_starter\\python_deps\\polib\\__init__.py" -----'
+Arguments: ()
+P56772:04:32:34:mapr:INFO: Logger for "mapr" initialized in "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\mapr\__init__.py" -----
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 80, in emit
+    self.doRollover()
+    ~~~~~~~~~~~~~~~^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 456, in doRollover
+    self.rotate(self.baseFilename, dfn)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\logging\handlers.py", line 121, in rotate
+    os.rename(source, dest)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\mapr.txt' -> 'C:\\Users\\Randy\\AppData\\Local\\Temp\\polygoniq_logs\\mapr.txt.2026-09-11_22'
+Call stack:
+  File "<string>", line 1, in <module>
+  File "D:\Blender5.2\5.2\scripts\modules\bpy\utils\__init__.py", line 397, in load_scripts_extensions
+    _initialize_once()
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 67, in _initialize_once
+    enable(
+  File "D:\Blender5.2\5.2\scripts\modules\addon_utils.py", line 457, in enable
+    mod = importlib.import_module(module_name)
+  File "D:\Blender5.2\5.2\python\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1395, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\__init__.py", line 74, in <module>
+    from . import scatter
+  File "<frozen importlib._bootstrap>", line 1423, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\scatter.py", line 34, in <module>
+    from . import preferences
+  File "<frozen importlib._bootstrap>", line 1423, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\preferences.py", line 33, in <module>
+    import mapr
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter\python_deps\mapr\__init__.py", line 33, in <module>
+    logger.info(f"Logger for \"{__name__}\" initialized in \"{__file__}\" -----")
+Message: 'Logger for "mapr" initialized in "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\botaniq_starter\\python_deps\\mapr\\__init__.py" -----'
+Arguments: ()
+botaniq install dir autodetected as C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\botaniq_starter (big zip embedded)
+BlenderMCP addon registered
+Cannot read ARP prefs
+Update armature presets...
+Reloading external rigs...
+Reloading external metarigs...
+module changed on disk: 'D:\\Blender5.2\\5.2\\scripts\\addons_core\\bl_pkg\\__init__.py' reloading...
+Created history step 57da720e-da46-4ec5-8650-917087c0f6ec
+ℹ️  blendkit: Created new search history step [04:32:44.766, search.py:2698]
+ℹ️  blendkit: No temporarily enabled addons to clean up [04:32:44.767, download.py:419]
+00:24.688  blend            | Read blend: "D:\Blender\Projects\Character\X\X.blend"
+AUTORELOAD --- Setting autoreload categories
+AUTORELOAD --- Reloading external files
+ℹ️  blendkit: No temporarily enabled addons to clean up [04:32:59.045, download.py:419]
+AUTORELOAD --- Setting autoreload categories
+AUTORELOAD --- Reloading external files
+REAL_INSPECT {"rows": {"('ARM', 'L')": {"chain": ["upper_arm.L", "forearm.L", "hand.L"], "auto_align": true, "auto_rotation_space": "PARENT_DELTA", "target": "CTRL_hand_IK.L", "at_shape": false, "around": false, "shape_transform": "hand.L", "bones": [{"name": "upper_arm.L", "head": [0.12203473597764969, 0.0968242660164833, 1.6448850631713867], "tail": [0.3324202597141266, 0.09400364756584167, 1.4313877820968628], "pose_head": [0.12203537672758102, 0.09682399034500122, 1.6448841094970703], "parent": "shoulder.L"}, {"name": "forearm.L", "head": [0.3324202597141266, 0.09400364756584167, 1.4313877820968628], "tail": [0.5122035145759583, 0.07088135927915573, 1.2489454746246338], "pose_head": [0.33241987228393555, 0.0939864069223404, 1.4313874244689941], "parent": "upper_arm.L"}, {"name": "hand.L", "head": [0.5122035145759583, 0.07088135927915573, 1.2489454746246338], "tail": [0.5486394166946411, 0.07173283398151398, 1.2075296640396118], "pose_head": [0.5122036337852478, 0.07088081538677216, 1.248944640159607], "parent": "forearm.L"}]}, "('ARM', 'R')": {"chain": ["upper_arm.R", "forearm.R", "hand.R"], "auto_align": true, "auto_rotation_space": "PARENT_DELTA", "target": "CTRL_hand_IK.R", "at_shape": false, "around": false, "shape_transform": "hand.R", "bones": [{"name": "upper_arm.R", "head": [-0.12203473597764969, 0.0968242660164833, 1.6448850631713867], "tail": [-0.3324202597141266, 0.09400364756584167, 1.4313877820968628], "pose_head": [-0.12203472852706909, 0.09682397544384003, 1.6448841094970703], "parent": "shoulder.R"}, {"name": "forearm.R", "head": [-0.3324202597141266, 0.09400364756584167, 1.4313877820968628], "tail": [-0.5122035145759583, 0.07088135927915573, 1.2489454746246338], "pose_head": [-0.33241981267929077, 0.09400662779808044, 1.4313868284225464], "parent": "upper_arm.R"}, {"name": "hand.R", "head": [-0.5122035145759583, 0.07088135927915573, 1.2489454746246338], "tail": [-0.5486394166946411, 0.07173283398151398, 1.2075296640396118], "pose_head": [-0.512202799320221, 0.07088135182857513, 1.2489451169967651], "parent": "forearm.R"}]}}, "rig_matrix": [[0.782315731048584, 0.0, 0.0, 4.9632518539510784e-08], [0.0, 0.782315731048584, 0.0, 0.02721264585852623], [0.0, 0.0, 0.782315731048584, 0.1756228804588318], [0.0, 0.0, 0.0, 1.0]], "modifiers": [{"name": "Armature", "type": "ARMATURE", "show": true, "obj": "CoshaRig", "preserve": false}, {"name": "Subdivision", "type": "SUBSURF", "show": true, "obj": null, "preserve": null}], "shape_keys": [{"name": "Basis", "value": 1.0, "mute": false}, {"name": "Eye_Close_L", "value": 0.0, "mute": false}, {"name": "Eye_Close_R", "value": 0.0, "mute": false}, {"name": "Mouth_Smile", "value": 0.0, "mute": false}, {"name": "Mouth_Happy", "value": 0.0, "mute": false}, {"name": "Mouth_Open_WIP", "value": 0.0, "mute": false}, {"name": "Mouth_O_WIP", "value": 0.0, "mute": false}, {"name": "Eye_Angry_WIP", "value": 0.0, "mute": false}, {"name": "CD Forearm Twist.L", "value": 1.0, "mute": false}, {"name": "CD Forearm Twist.R", "value": 1.0, "mute": false}], "records": {"L": {"armature": "CoshaRig", "chain": ["upper_arm.L", "forearm.L", "hand.L"], "created_basis": false, "enabled": true, "key": "CD Forearm Twist.L", "paired": true, "positions": [0.0014966921278724695, 0.10194271070104591, 0.10159529520314445, 0.08549398324039008, 0.12229114700113529, 0.0650010431047367, 0.0014966921278724695, 0.06287853393594932, 0.06761218631526253, 0.08424014340871117, 0.0014966921278724695, 0.0014966921278724695, 0.0014966921278724695, 0.0014966921278724695, 0.0014966921278724695, 0.0014966921278724695, 0.9739780465670178, 0.9739780465670178, 0.9739780465670178, 0.9739780465670178, 0.9739780465670178, 0.9739780465670178, 0.9739780465670178, 0.9739780465670178, 0.45870850461056034, 0.6425396794003004, 0.6425396794003004, 0.25647003999831997, 0.25647003999831997, 0.6425396794003004, 0.6425396794003004, 0.45870850461056034, 0.6425396794003004, 0.45870850461056034, 0.6425396794003004, 0.6425396794003004, 0.6425396794003004, 0.25647003999831997, 0.25647003999831997, 0.45870850461056034, 1.1319779152675011, 1.1143308011782032, 1.1261364060711632, 1.1275438445792836, 1.091872271149396, 1.0918358857881434, 1.0841316960770488, 1.0822706169595306, 1.1097729042676505, 1.1098847384000021, 1.0707926133998282, 1.0633562562593573, 1.0701304203078863, 1.096020850767375, 1.077588152709371, 1.1050647126446005, 1.1051597033054683, 1.0973178709498608, 1.1082115592744186, 0.0014966921278724695, 0.03724582895985497, 0.0014966921278724695, 0.0424245863122996, 0.03871033488418145, 1.0531882508793333, 1.0508192910776681, 1.0466447561725851, 1.0506245523013427, 1.0535262519585322, 1.051375836312535, 1.0474719170578903, 1.045924693692712, 0.8372024327269632, 0.8372024327269632, 0.8372024327269632, 0.8372024327269632, 0.8372024327269632, 0.8372024327269632, 0.8372024327269632, 0.8372024327269632, 1.0070279516664202, 1.0070279516664202, 1.0070279516664202, 1.0070279516664202, 1.0070279516664202, 1.0070279516664202, 1.0070279516664202, 1.0070279516664202, 0.45870850461056034, 0.25647003999831997, 0.45870850461056034, 0.25647003999831997, 0.25647003999831997, 0.45870850461056034, 0.45870850461056034, 0.25647003999831997], "profile_source": "L", "rest": [["upper_arm.L", [0.006604611873626709, 0.7018657326698303, -0.7122784852981567, 0.12203474342823029, 0.9999557733535767, -0.009409859776496887, -3.2782554626464844e-07, 0.0968242660164833, -0.006702512502670288, -0.7122470140457153, -0.701897144317627, 1.6448850631713867, 0.0, 0.0, 0.0, 1.0]], ["forearm.L", [0.06310512870550156, 0.699054479598999, -0.7122783064842224, 0.3324202299118042, 0.9959501624107361, -0.08990681171417236, -3.9046773281370406e-07, 0.09400364756584167, -0.06403878331184387, -0.7093937397003174, -0.7018973231315613, 1.4313877820968628, 0.0, 0.0, 0.0, 1.0]], ["hand.L", [0.5704396367073059, 0.6604470014572144, 0.4882708489894867, 0.5122034549713135, -0.6604469418525696, 0.015434063971042633, 0.750714123249054, 0.07088135927915573, 0.48827096819877625, -0.7507141828536987, 0.44499465823173523, 1.2489454746246338, 0.0, 0.0, 0.0, 1.0]]], "rings": [{"position": 0.0014966921278724695, "ratio": 6.7135565347742115e-06, "vertices": [273, 272, 271, 270, 1281, 266, 1284, 259, 253, 274]}, {"position": 0.25647003999831997, "ratio": 0.16359104543438752, "vertices": [3047, 3053, 790, 791, 3049, 800, 3050, 801]}, {"position": 0.45870850461056034, "ratio": 0.2692846655845642, "vertices": [3046, 3052, 787, 794, 3048, 796, 3051, 802]}, {"position": 0.6425396794003004, "ratio": 0.4411255121231079, "vertices": [795, 789, 798, 797, 788, 793, 799, 792]}, {"position": 0.8372024327269632, "ratio": 0.6318228244781494, "vertices": [1617, 1619, 1616, 1618, 1622, 1623, 1621, 1620]}, {"position": 0.9739780465670178, "ratio": 0.8223281502723694, "vertices": [277, 278, 279, 280, 281, 282, 283, 284]}, {"position": 1.0070279516664202, "ratio": 1.0, "vertices": [1628, 1627, 1630, 1629, 1631, 1624, 1626, 1625]}], "target": "CTRL_hand_IK.L", "topology": "237872ac1f36d2515f985ea40312fb8985b376fde481323bd12fa1bde1aa53dd", "version": 1, "vertices": [253, 254, 255, 256, 257, 258, 259, 263, 264, 265, 266, 270, 271, 272, 273, 274, 277, 278, 279, 280, 281, 282, 283, 284, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 1254, 1255, 1256, 1257, 1262, 1263, 1264, 1265, 1266, 1267, 1268, 1269, 1271, 1272, 1273, 1274, 1275, 1276, 1277, 1281, 1282, 1284, 1285, 1288, 1577, 1578, 1579, 1580, 1581, 1582, 1583, 1584, 1616, 1617, 1618, 1619, 1620, 1621, 1622, 1623, 1624, 1625, 1626, 1627, 1628, 1629, 1630, 1631, 3046, 3047, 3048, 3049, 3050, 3051, 3052, 3053]}, "R": {"armature": "CoshaRig", "chain": ["upper_arm.R", "forearm.R", "hand.R"], "created_basis": false, "enabled": true, "key": "CD Forearm Twist.R", "paired": true, "positions": [0.0014970151006589295, 0.10194304118680377, 0.10159563289120126, 0.08549431725197253, 0.12229148527680708, 0.06500137451524836, 0.0014970151006589295, 0.06287886713747204, 0.06761251282276748, 0.08424047908563694, 0.0014970151006589295, 0.0014970151006589295, 0.0014970151006589295, 0.0014970151006589295, 0.0014970151006589295, 0.0014970151006589295, 1.0070282703389382, 1.0070282703389382, 1.0070282703389382, 1.0070282703389382, 1.0070282703389382, 1.0070282703389382, 1.0070282703389382, 1.0070282703389382, 0.8372027550207599, 0.8372027550207599, 0.8372027550207599, 0.8372027550207599, 0.8372027550207599, 0.8372027550207599, 0.8372027550207599, 0.8372027550207599, 0.0014970151006589295, 0.03724615738039669, 0.0014970151006589295, 0.04242491352232107, 0.038710663474431466, 1.0459251045977438, 1.0474723281422156, 1.0513763057897123, 1.0535267216849016, 1.0506249637509983, 1.0466451671610582, 1.0508197604903524, 1.0531886915963038, 1.097749232220071, 1.108212035337772, 1.0973182878103813, 1.1051601790151697, 1.1050651304028323, 1.0775886252240559, 1.0960213254180577, 1.070130891958362, 1.085267826400786, 1.0633567271248365, 1.0707930851270397, 1.109885156716783, 1.1097733225714719, 1.0822710900168235, 1.084132111409543, 1.0918363599538687, 1.0918726873788756, 1.1247250625481775, 1.1410073726486023, 1.1337163521991533, 1.12754432288288, 1.1261368842116644, 1.11433127795066, 1.1319783361444598, 1.1462508613573967, 1.1435505805170791, 1.1493955871877646, 1.1278677957698364, 1.189423474421111, 1.173843365718032, 1.1831870512972913, 1.193238996220819, 1.1801125599163678, 1.1634767280377112, 1.1865489045964517, 1.1494047631123938, 1.1580446032336913, 1.153461444715333, 1.177481536402602, 1.1437634917987594, 1.1371827643811703, 1.1953129164470724, 1.2033196547173226, 0.4587088250937178, 0.25647036410275603, 0.25647036410275603, 0.6425400016940972, 0.6425400016940972, 0.6425400016940972, 0.4587088250937178, 0.6425400016940972, 0.4587088250937178, 0.6425400016940972, 0.6425400016940972, 0.25647036410275603, 0.25647036410275603, 0.6425400016940972, 0.6425400016940972, 0.4587088250937178, 0.9739783616182573, 0.9739783616182573, 0.9739783616182573, 0.9739783616182573, 0.9739783616182573, 0.9739783616182573, 0.9739783616182573, 0.9739783616182573, 0.4587088250937178, 0.25647036410275603, 0.4587088250937178, 0.25647036410275603, 0.25647036410275603, 0.4587088250937178, 0.4587088250937178, 0.25647036410275603], "profile_source": "L", "rest": [["upper_arm.R", [-0.006604714319109917, -0.7018658518791199, -0.712278425693512, -0.12203474342823029, 0.9999556541442871, -0.00940985232591629, 1.043081283569336e-07, 0.0968242660164833, -0.00670236349105835, -0.7122469544410706, 0.7018970251083374, 1.6448850631713867, 0.0, 0.0, 0.0, 1.0]], ["forearm.R", [-0.06310532242059708, -0.699054479598999, -0.7122783064842224, -0.3324202299118042, 0.9959500432014465, -0.08990681916475296, 8.327221934223417e-08, 0.09400364756584167, -0.06403860449790955, -0.7093937993049622, 0.701897144317627, 1.4313877820968628, 0.0, 0.0, 0.0, 1.0]], ["hand.R", [0.5704395174980164, -0.6604470014572144, -0.48827075958251953, -0.5122034549713135, 0.66044682264328, 0.015434066765010357, 0.7507140040397644, 0.07088135927915573, -0.48827072978019714, -0.750714123249054, 0.4449945092201233, 1.2489454746246338, 0.0, 0.0, 0.0, 1.0]]], "rings": [{"position": 0.0014970151006589295, "ratio": 6.7135565347742115e-06, "vertices": [2031, 2030, 2029, 2028, 2523, 2024, 2526, 2017, 2011, 2032]}, {"position": 0.25647036410275603, "ratio": 0.16359104543438752, "vertices": [3550, 3556, 3537, 3536, 3552, 3527, 3553, 3526]}, {"position": 0.4587088250937178, "ratio": 0.2692846655845642, "vertices": [3533, 3551, 3531, 3554, 3525, 3549, 3555, 3540]}, {"position": 0.6425400016940972, "ratio": 0.4411255121231079, "vertices": [3530, 3539, 3534, 3528, 3535, 3532, 3538, 3529]}, {"position": 0.8372027550207599, "ratio": 0.6318228244781494, "vertices": [2496, 2492, 2491, 2493, 2494, 2497, 2495, 2498]}, {"position": 0.9739783616182573, "ratio": 0.8223281502723694, "vertices": [3546, 3545, 3544, 3543, 3542, 3541, 3548, 3547]}, {"position": 1.0070282703389382, "ratio": 1.0, "vertices": [2485, 2483, 2490, 2488, 2489, 2486, 2487, 2484]}], "target": "CTRL_hand_IK.R", "topology": "237872ac1f36d2515f985ea40312fb8985b376fde481323bd12fa1bde1aa53dd", "version": 1, "vertices": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2021, 2022, 2023, 2024, 2028, 2029, 2030, 2031, 2032, 2483, 2484, 2485, 2486, 2487, 2488, 2489, 2490, 2491, 2492, 2493, 2494, 2495, 2496, 2497, 2498, 2523, 2524, 2526, 2527, 2530, 3063, 3064, 3065, 3066, 3067, 3068, 3069, 3070, 3073, 3074, 3075, 3076, 3077, 3078, 3079, 3080, 3081, 3082, 3083, 3084, 3085, 3086, 3087, 3088, 3089, 3091, 3092, 3093, 3094, 3095, 3096, 3097, 3098, 3099, 3100, 3101, 3105, 3106, 3107, 3108, 3113, 3114, 3115, 3117, 3118, 3120, 3122, 3131, 3133, 3140, 3144, 3525, 3526, 3527, 3528, 3529, 3530, 3531, 3532, 3533, 3534, 3535, 3536, 3537, 3538, 3539, 3540, 3541, 3542, 3543, 3544, 3545, 3546, 3547, 3548, 3549, 3550, 3551, 3552, 3553, 3554, 3555, 3556]}}, "action": null}
+ℹ️  blendkit: Unregistering Blendkit add-on [04:33:00.277, __init__.py:2973]
+ℹ️  blendkit: No temporarily enabled addons to clean up [04:33:00.279, download.py:419]
+BlenderMCP addon unregistered
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

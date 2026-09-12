@@ -1,0 +1,501 @@
+{
+  "ok": true,
+  "fixture": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\fixtures\\X_repaired_roll_20260912.blend",
+  "production_written": false,
+  "generate": {
+    "created": [
+      "ROOT",
+      "EYES",
+      "FK_RINGS",
+      "HEAD_NECK",
+      "BODY_DETAIL"
+    ],
+    "reused": [
+      "LIMBS",
+      "FEET_L",
+      "FEET_R",
+      "TORSO",
+      "SPINE"
+    ],
+    "skipped": [],
+    "plan": {
+      "rig": "CoshaRig",
+      "schema": 5,
+      "components": [
+        {
+          "key": "LIMBS",
+          "status": "REUSE",
+          "reason": "Existing limb controls are kept.",
+          "kwargs": {
+            "method": "DIRECT_PREROLL",
+            "chains": []
+          }
+        },
+        {
+          "key": "ROOT",
+          "status": "ADD",
+          "reason": "Add a whole-body Root; the Stable limb builder supplies its Master.",
+          "kwargs": {}
+        },
+        {
+          "key": "FEET_L",
+          "status": "REUSE",
+          "reason": "Existing Foot Roll and Toe Bend are kept.",
+          "kwargs": {}
+        },
+        {
+          "key": "FEET_R",
+          "status": "REUSE",
+          "reason": "Existing Foot Roll and Toe Bend are kept.",
+          "kwargs": {}
+        },
+        {
+          "key": "TORSO",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "SPINE",
+          "status": "REUSE",
+          "reason": "Existing controls are kept unchanged.",
+          "kwargs": {}
+        },
+        {
+          "key": "EYES",
+          "status": "ADD",
+          "reason": "Add shared gaze and two eye targets.",
+          "kwargs": {
+            "head_name": "Head",
+            "left_name": "eye.L",
+            "right_name": "eye.R"
+          }
+        },
+        {
+          "key": "FK_RINGS",
+          "status": "ADD",
+          "reason": "Fit missing native FK rings; keep artist shapes.",
+          "kwargs": {}
+        },
+        {
+          "key": "HEAD_NECK",
+          "status": "ADD",
+          "reason": "Fit Head and Neck displays.",
+          "kwargs": {
+            "head_name": "Head",
+            "neck_name": "Neck",
+            "allow_partial": true
+          }
+        },
+        {
+          "key": "BODY_DETAIL",
+          "status": "ADD",
+          "reason": "Fit Hips and any available native breast controls.",
+          "kwargs": {
+            "hips_name": "Hips",
+            "left_name": "breast.L",
+            "right_name": "breast.R",
+            "allow_partial": true
+          }
+        }
+      ],
+      "blocked": false,
+      "source_digest": "29de250d2fdea35fb80eaf9354c441ecb8d7dfd4ff0f357ee71c2ec57c82fd50"
+    }
+  },
+  "remove": {
+    "removed": [
+      "limbs",
+      "body_detail_visuals",
+      "head_neck_visuals",
+      "limb_fk_visuals",
+      "torso_controls",
+      "eye_controls",
+      "spine_ik_fk",
+      "root_control",
+      "foot_L",
+      "foot_R"
+    ],
+    "bones_removed": 48,
+    "skin_error": 2.905726432800293e-06,
+    "surface_error": 3.0249724244958897e-06,
+    "correctives_preserved": 1,
+    "retained_rest": true,
+    "retained_rest_reason": "Current native bind/rest and existing calibrations retained."
+  },
+  "rollback_pose_error": 9.462237358093262e-07,
+  "public_remove": {
+    "removed": [
+      "limbs",
+      "body_detail_visuals",
+      "head_neck_visuals",
+      "limb_fk_visuals",
+      "torso_controls",
+      "eye_controls",
+      "spine_ik_fk",
+      "root_control",
+      "foot_L",
+      "foot_R"
+    ],
+    "bones_removed": 48,
+    "skin_error": 2.9280781745910645e-06,
+    "surface_error": 3.035633895744631e-06,
+    "correctives_preserved": 1,
+    "retained_rest": true,
+    "retained_rest_reason": "Current native bind/rest and existing calibrations retained."
+  },
+  "regenerate_plan": {
+    "rig": "CoshaRig",
+    "schema": 3,
+    "components": [
+      {
+        "key": "LIMBS",
+        "status": "ADD",
+        "reason": "Add missing detected limbs.",
+        "kwargs": {
+          "method": "ROLL_DECOUPLED",
+          "chains": [
+            {
+              "kind": "ARM",
+              "side": "L",
+              "upper": "upper_arm.L",
+              "lower": "forearm.L",
+              "end": "hand.L",
+              "pole_distance": 0.75,
+              "pole_direction": [
+                0.03271549567580223,
+                0.9989126920700073,
+                -0.03321278467774391
+              ]
+            },
+            {
+              "kind": "ARM",
+              "side": "R",
+              "upper": "upper_arm.R",
+              "lower": "forearm.R",
+              "end": "hand.R",
+              "pole_distance": 0.75,
+              "pole_direction": [
+                -0.03272081911563873,
+                0.9989124536514282,
+                -0.03321507200598717
+              ]
+            },
+            {
+              "kind": "LEG",
+              "side": "L",
+              "upper": "thigh.L",
+              "lower": "shin.L",
+              "end": "foot.L",
+              "pole_distance": 0.75,
+              "pole_direction": [
+                -0.00010446889064041898,
+                -0.9996220469474792,
+                0.02749074622988701
+              ]
+            },
+            {
+              "kind": "LEG",
+              "side": "R",
+              "upper": "thigh.R",
+              "lower": "shin.R",
+              "end": "foot.R",
+              "pole_distance": 0.75,
+              "pole_direction": [
+                0.00010453540016897023,
+                -0.9996219873428345,
+                0.027492089197039604
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "ROOT",
+        "status": "ADD",
+        "reason": "Add a whole-body Root; the Stable limb builder supplies its Master.",
+        "kwargs": {}
+      },
+      {
+        "key": "FEET_L",
+        "status": "ADD",
+        "reason": "Add Foot Roll and Toe Bend.",
+        "kwargs": {
+          "key": [
+            "LEG",
+            "L"
+          ],
+          "toe_name": "toe.L"
+        }
+      },
+      {
+        "key": "FEET_R",
+        "status": "ADD",
+        "reason": "Add Foot Roll and Toe Bend.",
+        "kwargs": {
+          "key": [
+            "LEG",
+            "R"
+          ],
+          "toe_name": "toe.R"
+        }
+      },
+      {
+        "key": "TORSO",
+        "status": "ADD",
+        "reason": "Add shared Bend and section controls.",
+        "kwargs": {
+          "chain": [
+            "spine",
+            "Chest",
+            "UpperChest"
+          ],
+          "hips_name": "Hips"
+        }
+      },
+      {
+        "key": "SPINE",
+        "status": "ADD",
+        "reason": "Add an IK branch in the current FK pose.",
+        "kwargs": {}
+      },
+      {
+        "key": "EYES",
+        "status": "ADD",
+        "reason": "Add shared gaze and two eye targets.",
+        "kwargs": {
+          "head_name": "Head",
+          "left_name": "eye.L",
+          "right_name": "eye.R"
+        }
+      },
+      {
+        "key": "FK_RINGS",
+        "status": "ADD",
+        "reason": "Fit missing native FK rings; keep artist shapes.",
+        "kwargs": {}
+      },
+      {
+        "key": "HEAD_NECK",
+        "status": "ADD",
+        "reason": "Fit Head and Neck displays.",
+        "kwargs": {
+          "head_name": "Head",
+          "neck_name": "Neck",
+          "allow_partial": true
+        }
+      },
+      {
+        "key": "BODY_DETAIL",
+        "status": "ADD",
+        "reason": "Fit Hips and any available native breast controls.",
+        "kwargs": {
+          "hips_name": "Hips",
+          "left_name": "breast.L",
+          "right_name": "breast.R",
+          "allow_partial": true
+        }
+      }
+    ],
+    "blocked": false,
+    "source_digest": "29de250d2fdea35fb80eaf9354c441ecb8d7dfd4ff0f357ee71c2ec57c82fd50"
+  },
+  "regenerate": {
+    "created": [
+      "LIMBS",
+      "ROOT",
+      "FEET_L",
+      "FEET_R",
+      "TORSO",
+      "SPINE",
+      "EYES",
+      "FK_RINGS",
+      "HEAD_NECK",
+      "BODY_DETAIL"
+    ],
+    "reused": [],
+    "skipped": [],
+    "plan": {
+      "rig": "CoshaRig",
+      "schema": 3,
+      "components": [
+        {
+          "key": "LIMBS",
+          "status": "ADD",
+          "reason": "Add missing detected limbs.",
+          "kwargs": {
+            "method": "ROLL_DECOUPLED",
+            "chains": [
+              {
+                "kind": "ARM",
+                "side": "L",
+                "upper": "upper_arm.L",
+                "lower": "forearm.L",
+                "end": "hand.L",
+                "pole_distance": 0.75,
+                "pole_direction": [
+                  0.03271549567580223,
+                  0.9989126920700073,
+                  -0.03321278467774391
+                ]
+              },
+              {
+                "kind": "ARM",
+                "side": "R",
+                "upper": "upper_arm.R",
+                "lower": "forearm.R",
+                "end": "hand.R",
+                "pole_distance": 0.75,
+                "pole_direction": [
+                  -0.03272081911563873,
+                  0.9989124536514282,
+                  -0.03321507200598717
+                ]
+              },
+              {
+                "kind": "LEG",
+                "side": "L",
+                "upper": "thigh.L",
+                "lower": "shin.L",
+                "end": "foot.L",
+                "pole_distance": 0.75,
+                "pole_direction": [
+                  -0.00010446889064041898,
+                  -0.9996220469474792,
+                  0.02749074622988701
+                ]
+              },
+              {
+                "kind": "LEG",
+                "side": "R",
+                "upper": "thigh.R",
+                "lower": "shin.R",
+                "end": "foot.R",
+                "pole_distance": 0.75,
+                "pole_direction": [
+                  0.00010453540016897023,
+                  -0.9996219873428345,
+                  0.027492089197039604
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "key": "ROOT",
+          "status": "ADD",
+          "reason": "Add a whole-body Root; the Stable limb builder supplies its Master.",
+          "kwargs": {}
+        },
+        {
+          "key": "FEET_L",
+          "status": "ADD",
+          "reason": "Add Foot Roll and Toe Bend.",
+          "kwargs": {
+            "key": [
+              "LEG",
+              "L"
+            ],
+            "toe_name": "toe.L"
+          }
+        },
+        {
+          "key": "FEET_R",
+          "status": "ADD",
+          "reason": "Add Foot Roll and Toe Bend.",
+          "kwargs": {
+            "key": [
+              "LEG",
+              "R"
+            ],
+            "toe_name": "toe.R"
+          }
+        },
+        {
+          "key": "TORSO",
+          "status": "ADD",
+          "reason": "Add shared Bend and section controls.",
+          "kwargs": {
+            "chain": [
+              "spine",
+              "Chest",
+              "UpperChest"
+            ],
+            "hips_name": "Hips"
+          }
+        },
+        {
+          "key": "SPINE",
+          "status": "ADD",
+          "reason": "Add an IK branch in the current FK pose.",
+          "kwargs": {}
+        },
+        {
+          "key": "EYES",
+          "status": "ADD",
+          "reason": "Add shared gaze and two eye targets.",
+          "kwargs": {
+            "head_name": "Head",
+            "left_name": "eye.L",
+            "right_name": "eye.R"
+          }
+        },
+        {
+          "key": "FK_RINGS",
+          "status": "ADD",
+          "reason": "Fit missing native FK rings; keep artist shapes.",
+          "kwargs": {}
+        },
+        {
+          "key": "HEAD_NECK",
+          "status": "ADD",
+          "reason": "Fit Head and Neck displays.",
+          "kwargs": {
+            "head_name": "Head",
+            "neck_name": "Neck",
+            "allow_partial": true
+          }
+        },
+        {
+          "key": "BODY_DETAIL",
+          "status": "ADD",
+          "reason": "Fit Hips and any available native breast controls.",
+          "kwargs": {
+            "hips_name": "Hips",
+            "left_name": "breast.L",
+            "right_name": "breast.R",
+            "allow_partial": true
+          }
+        }
+      ],
+      "blocked": false,
+      "source_digest": "29de250d2fdea35fb80eaf9354c441ecb8d7dfd4ff0f357ee71c2ec57c82fd50"
+    }
+  },
+  "regenerate_skin_error": 4.200258990749717e-05,
+  "regenerate_surface_error": 1.9572705007729386e-05,
+  "stable_full_remove": {
+    "removed": [
+      "limbs",
+      "body_detail_visuals",
+      "head_neck_visuals",
+      "limb_fk_visuals",
+      "torso_controls",
+      "eye_controls",
+      "spine_ik_fk",
+      "foot_L",
+      "foot_R"
+    ],
+    "bones_removed": 72,
+    "skin_error": 2.942979335784912e-06,
+    "surface_error": 1.3613171095319089e-06,
+    "correctives_preserved": 1,
+    "retained_rest": true,
+    "retained_rest_reason": "Current native bind/rest and existing calibrations retained."
+  },
+  "runtime_preserved_stale_keys": true,
+  "existing_calibration_errors": {
+    "Cosha": "Mesh topology or rig chain changed; remove calibration and capture again."
+  },
+  "source_unchanged": true
+}

@@ -1,0 +1,174 @@
+{
+  "ok": true,
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "preview": "D:\\Blender\\Projects\\Character\\X\\outputs\\rig\\X_body_detail_0530_preview.blend",
+  "version": [
+    0,
+    53,
+    0
+  ],
+  "source_sha_before": "c1f20c2db165f516694fc837881935ec4e0a0c4b3c835f1501107d9e1d69c438",
+  "root_translation": {
+    "before": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "after": [
+      0.0,
+      0.0,
+      -0.1371203362941742
+    ]
+  },
+  "build_pose_error": 0.0,
+  "build_mesh_errors": {
+    "Clothes": 0.0,
+    "Cosha": 0.0,
+    "Shoes": 0.0,
+    "Stocking": 0.0
+  },
+  "geometry_mesh_counts": {
+    "Clothes": {
+      "rest": 101,
+      "pose": 2525
+    },
+    "Cosha": {
+      "rest": 1007,
+      "pose": 3814
+    },
+    "Dress": {
+      "rest": 670,
+      "pose": 2421
+    }
+  },
+  "fit": {
+    "frame": [
+      [
+        1.0,
+        -3.5430326761343167e-07,
+        8.395035706598719e-07,
+        0.0
+      ],
+      [
+        3.3851961234176997e-07,
+        0.9998246431350708,
+        0.018727151677012444,
+        0.06613431125879288
+      ],
+      [
+        -8.459914511149691e-07,
+        -0.018727177754044533,
+        0.9998246431350708,
+        1.2106313705444336
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "body": "Cosha",
+    "clothing": [
+      "Clothes"
+    ],
+    "skirts": [
+      "Dress"
+    ],
+    "roles": {
+      "BREAST_L": {
+        "center": [
+          0.08530048280954361,
+          -0.22891177237033844,
+          0.3210451304912567
+        ],
+        "radius": [
+          0.06323307052254676,
+          0.0665037465840578
+        ],
+        "cup": 0.010902253538370134,
+        "surface_front": -0.20710726082324982,
+        "margin": 0.010902253538370134,
+        "weight_count": 133,
+        "surface_count": 182,
+        "method": "WEIGHTS"
+      },
+      "BREAST_R": {
+        "center": [
+          -0.08530112355947495,
+          -0.21599282324314117,
+          0.3210451006889343
+        ],
+        "radius": [
+          0.0632330748438835,
+          0.06650375112891196
+        ],
+        "cup": 0.010902254283428192,
+        "surface_front": -0.19418831169605255,
+        "margin": 0.010902254283428192,
+        "weight_count": 133,
+        "surface_count": 144,
+        "method": "WEIGHTS"
+      },
+      "HIPS": {
+        "center": [
+          0.0005132555961608887,
+          0.030682705342769623,
+          0.027416137978434563
+        ],
+        "radius": [
+          0.2018186055123806,
+          0.1576397843658924
+        ],
+        "dip": 0.006579873114824295,
+        "surface_count": 267,
+        "method": "SLICE"
+      }
+    }
+  },
+  "reopen_pose_error": 0.0,
+  "motion": {
+    "Hips": {
+      "bone_delta": 0.013159742578864098,
+      "mesh_deltas": {
+        "Clothes": 0.010634787380695343,
+        "Cosha": 0.03149007260799408,
+        "Shoes": 0.0,
+        "Stocking": 0.006599191576242447
+      }
+    },
+    "breast.L": {
+      "bone_delta": 0.013082697987556458,
+      "mesh_deltas": {
+        "Clothes": 0.010102599859237671,
+        "Cosha": 0.01020890474319458,
+        "Shoes": 0.0,
+        "Stocking": 0.0
+      }
+    },
+    "breast.R": {
+      "bone_delta": 0.013082697987556458,
+      "mesh_deltas": {
+        "Clothes": 0.010102584958076477,
+        "Cosha": 0.010208912193775177,
+        "Shoes": 0.0,
+        "Stocking": 0.0
+      }
+    }
+  },
+  "remove_pose_error": 0.0,
+  "reopened_verified": true,
+  "original_displays_colors_restored": true,
+  "no_new_bones": true,
+  "only_three_native_shapes": true,
+  "existing_geometry_weights_constraints_animation_preserved": true,
+  "operators": [
+    "BUILD",
+    "SELECT_BREAST_L",
+    "SELECT_BREAST_R",
+    "SELECT_HIPS",
+    "REMOVE"
+  ],
+  "source_sha_after": "c1f20c2db165f516694fc837881935ec4e0a0c4b3c835f1501107d9e1d69c438",
+  "source_file_unchanged": true
+}
