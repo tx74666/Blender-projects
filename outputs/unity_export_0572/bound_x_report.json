@@ -1,0 +1,471 @@
+{
+  "ok": true,
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source_file_hash": "4171701c23d068cfd4b7f2bfa18152297a5ba424356f791dbab1e102065e4db7",
+  "expected_bound_meshes": [
+    "Clothes",
+    "Cosha",
+    "Stocking"
+  ],
+  "source_inventory": [
+    {
+      "name": "Cosha",
+      "included": true,
+      "parent": "CoshaRig",
+      "hidden": false,
+      "armatures": [
+        {
+          "name": "Armature",
+          "target": "CoshaRig",
+          "enabled": true,
+          "vertex_groups": true,
+          "envelopes": false
+        }
+      ]
+    },
+    {
+      "name": "Clothes",
+      "included": true,
+      "parent": null,
+      "hidden": false,
+      "armatures": [
+        {
+          "name": "Armature",
+          "target": "CoshaRig",
+          "enabled": true,
+          "vertex_groups": true,
+          "envelopes": false
+        }
+      ]
+    },
+    {
+      "name": "Stocking",
+      "included": true,
+      "parent": null,
+      "hidden": false,
+      "armatures": [
+        {
+          "name": "Armature",
+          "target": "CoshaRig",
+          "enabled": true,
+          "vertex_groups": true,
+          "envelopes": false
+        }
+      ]
+    },
+    {
+      "name": "Dress",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "Jacket",
+      "included": false,
+      "parent": null,
+      "hidden": true,
+      "armatures": []
+    },
+    {
+      "name": "Shoes",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": [
+        {
+          "name": "Armature",
+          "target": "CoshaRig",
+          "enabled": false,
+          "vertex_groups": true,
+          "envelopes": false
+        }
+      ]
+    },
+    {
+      "name": "Hair",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "Dress_Backup",
+      "included": false,
+      "parent": null,
+      "hidden": true,
+      "armatures": []
+    },
+    {
+      "name": "Shoes_Primitive",
+      "included": false,
+      "parent": null,
+      "hidden": true,
+      "armatures": []
+    },
+    {
+      "name": "ShoeBase",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "ShoeUpperBase",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "Strap.001",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "Diamond.001",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "Wide Strap.001",
+      "included": false,
+      "parent": "Strap2.001",
+      "hidden": false,
+      "armatures": [
+        {
+          "name": "Armature",
+          "target": "Strap2.001",
+          "enabled": true,
+          "vertex_groups": true,
+          "envelopes": false
+        }
+      ]
+    },
+    {
+      "name": "Embedded.001",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "Ear.001",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "ShoeUpper2.001",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "ShoeUpper3.001",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    },
+    {
+      "name": "Vamp.001",
+      "included": false,
+      "parent": null,
+      "hidden": false,
+      "armatures": []
+    }
+  ],
+  "source_artist_keys": [
+    "Eye_Close_L",
+    "Eye_Close_R",
+    "Mouth_Smile",
+    "Mouth_Happy",
+    "Mouth_Open_WIP",
+    "Mouth_O_WIP",
+    "Eye_Angry_WIP"
+  ],
+  "source_runtime_keys_omitted": [
+    "CD Forearm Twist.L",
+    "CD Forearm Twist.R"
+  ],
+  "source_unchanged": true,
+  "source_data_digest": "d9ac27857cff15a86249464c20ef9fcd5cab66c89c620edabfe81493696aabd3",
+  "warnings": [
+    "Hair: skipped; no enabled Armature binding to this character.",
+    "Dress: skipped; no enabled Armature binding to this character.",
+    "Jacket: skipped; no enabled Armature binding to this character.",
+    "Shoes: skipped; no enabled Armature binding to this character.",
+    "Blender-only forearm calibration corrections were omitted; Unity does not run their Blender handler.",
+    "Cosha: 2 exported vertices have no weight on a retained deform bone; their existing weights were left unchanged.",
+    "Material \"Stocking Main\" uses a custom shader; Unity needs a matching material/shader setup."
+  ],
+  "legacy_extra_names": [
+    "Hair",
+    "Dress",
+    "Jacket"
+  ],
+  "export_manifest": {
+    "ok": true,
+    "files": {
+      "CoshaBound.fbx": "707e0840b4cc77fbf07d948f6b53e5ac7fae1d06813b4704ec891b9583190189",
+      "Textures/1d63a26f-110a-4ff2-9145-a350633c3dd5_eb4ef512.png": "c839da71523b7ea3aea3ff4d7ad2af00a3f9f76d24de2ccf980dd8258df99085",
+      "Textures/Hair_d06dd5ee.png": "2f71d1ccd37a67f155c8ac5f1633c0ca2e37916af96e5f595f39990e955caf2c"
+    },
+    "warnings": [
+      "Hair: skipped; no enabled Armature binding to this character.",
+      "Dress: skipped; no enabled Armature binding to this character.",
+      "Jacket: skipped; no enabled Armature binding to this character.",
+      "Shoes: skipped; no enabled Armature binding to this character.",
+      "Blender-only forearm calibration corrections were omitted; Unity does not run their Blender handler.",
+      "Cosha: 2 exported vertices have no weight on a retained deform bone; their existing weights were left unchanged.",
+      "Material \"Stocking Main\" uses a custom shader; Unity needs a matching material/shader setup."
+    ],
+    "objects": [
+      "CoshaRig",
+      "Clothes",
+      "Cosha",
+      "Stocking"
+    ],
+    "rigs": {
+      "CoshaRig": [
+        "Chest",
+        "Head",
+        "Hips",
+        "Neck",
+        "UpperChest",
+        "breast.L",
+        "breast.R",
+        "eye.L",
+        "eye.R",
+        "f_index.01.L",
+        "f_index.01.R",
+        "f_index.02.L",
+        "f_index.02.R",
+        "f_index.03.L",
+        "f_index.03.R",
+        "f_middle.01.L",
+        "f_middle.01.R",
+        "f_middle.02.L",
+        "f_middle.02.R",
+        "f_middle.03.L",
+        "f_middle.03.R",
+        "f_pinky.01.L",
+        "f_pinky.01.R",
+        "f_pinky.02.L",
+        "f_pinky.02.R",
+        "f_pinky.03.L",
+        "f_pinky.03.R",
+        "f_ring.01.L",
+        "f_ring.01.R",
+        "f_ring.02.L",
+        "f_ring.02.R",
+        "f_ring.03.L",
+        "f_ring.03.R",
+        "foot.L",
+        "foot.R",
+        "forearm.L",
+        "forearm.R",
+        "hand.L",
+        "hand.R",
+        "shin.L",
+        "shin.R",
+        "shoulder.L",
+        "shoulder.R",
+        "spine",
+        "thigh.L",
+        "thigh.R",
+        "thumb.01.L",
+        "thumb.01.R",
+        "thumb.02.L",
+        "thumb.02.R",
+        "thumb.03.L",
+        "thumb.03.R",
+        "toe.L",
+        "toe.R",
+        "upper_arm.L",
+        "upper_arm.R"
+      ]
+    },
+    "source_rigs": {
+      "CoshaRig": [
+        "Chest",
+        "Head",
+        "Hips",
+        "Neck",
+        "UpperChest",
+        "breast.L",
+        "breast.R",
+        "eye.L",
+        "eye.R",
+        "f_index.01.L",
+        "f_index.01.R",
+        "f_index.02.L",
+        "f_index.02.R",
+        "f_index.03.L",
+        "f_index.03.R",
+        "f_middle.01.L",
+        "f_middle.01.R",
+        "f_middle.02.L",
+        "f_middle.02.R",
+        "f_middle.03.L",
+        "f_middle.03.R",
+        "f_pinky.01.L",
+        "f_pinky.01.R",
+        "f_pinky.02.L",
+        "f_pinky.02.R",
+        "f_pinky.03.L",
+        "f_pinky.03.R",
+        "f_ring.01.L",
+        "f_ring.01.R",
+        "f_ring.02.L",
+        "f_ring.02.R",
+        "f_ring.03.L",
+        "f_ring.03.R",
+        "foot.L",
+        "foot.R",
+        "forearm.L",
+        "forearm.R",
+        "hand.L",
+        "hand.R",
+        "shin.L",
+        "shin.R",
+        "shoulder.L",
+        "shoulder.R",
+        "spine",
+        "thigh.L",
+        "thigh.R",
+        "thumb.01.L",
+        "thumb.01.R",
+        "thumb.02.L",
+        "thumb.02.R",
+        "thumb.03.L",
+        "thumb.03.R",
+        "toe.L",
+        "toe.R",
+        "upper_arm.L",
+        "upper_arm.R"
+      ]
+    },
+    "accessory_bone_mapping": {},
+    "meshes": {
+      "Clothes": {
+        "vertices": 2525,
+        "polygons": 2400,
+        "shape_keys": [],
+        "modifiers_baked": [
+          "MIRROR",
+          "SUBSURF"
+        ],
+        "skinned": true,
+        "disabled_skinning": [],
+        "unweighted_vertices": 0
+      },
+      "Cosha": {
+        "vertices": 15016,
+        "polygons": 14858,
+        "shape_keys": [
+          "Eye_Close_L",
+          "Eye_Close_R",
+          "Mouth_Smile",
+          "Mouth_Happy",
+          "Mouth_Open_WIP",
+          "Mouth_O_WIP",
+          "Eye_Angry_WIP"
+        ],
+        "modifiers_baked": [
+          "SUBSURF"
+        ],
+        "skinned": true,
+        "disabled_skinning": [],
+        "unweighted_vertices": 2
+      },
+      "Stocking": {
+        "vertices": 2331,
+        "polygons": 2288,
+        "shape_keys": [],
+        "modifiers_baked": [
+          "SUBSURF"
+        ],
+        "skinned": true,
+        "disabled_skinning": [],
+        "unweighted_vertices": 0
+      }
+    },
+    "shape_keys": {
+      "Clothes": [],
+      "Cosha": [
+        "Eye_Close_L",
+        "Eye_Close_R",
+        "Mouth_Smile",
+        "Mouth_Happy",
+        "Mouth_Open_WIP",
+        "Mouth_O_WIP",
+        "Eye_Angry_WIP"
+      ],
+      "Stocking": []
+    },
+    "materials": [
+      "ClothBlack",
+      "Cosha_Eye",
+      "Nipple",
+      "Nipple-Outer",
+      "Purple",
+      "Red",
+      "ShoeWhite",
+      "Skin",
+      "Stocking Black",
+      "Stocking Main",
+      "White"
+    ],
+    "origin": [
+      4.9632518539510784e-08,
+      0.02721264585852623,
+      0.1756228804588318
+    ],
+    "unit_scale": 1.0,
+    "schema": "cdesigner.unity-character.v1",
+    "asset_id": "x-bound-0572-validation",
+    "source_rig": "CoshaRig",
+    "filename": "CoshaBound.fbx",
+    "unity_status": "Exported; Unity import has not been verified.",
+    "animation_status": "Rest model only; animation export is not included.",
+    "updated_utc": "2026-09-13T14:33:14Z"
+  },
+  "reimport": {
+    "meshes": [
+      "Clothes",
+      "Cosha",
+      "Stocking"
+    ],
+    "armatures": {
+      "CoshaRig": 56
+    },
+    "all_meshes_have_armature": true,
+    "body_vertices": 15016,
+    "body_artist_keys": [
+      "Eye_Close_L",
+      "Eye_Close_R",
+      "Mouth_Smile",
+      "Mouth_Happy",
+      "Mouth_Open_WIP",
+      "Mouth_O_WIP",
+      "Eye_Angry_WIP"
+    ],
+    "body_weight_max_raw_error": 0.0,
+    "body_weight_max_normalized_error": 0.5,
+    "body_raw_changed_vertices": 0,
+    "body_unweighted_vertices": 2
+  },
+  "source_file_unchanged": true,
+  "temporary_asset_removed": true,
+  "unverified": [
+    "Unity importer/avatar/rendering/physics"
+  ]
+}

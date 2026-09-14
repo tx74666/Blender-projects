@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <LangVersion>9.0</LangVersion>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+    <NoWarn>1701;1702</NoWarn>
+    <DefineConstants>UNITY_EDITOR;UNITY_INCLUDE_TESTS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_runtime/Runtime/*.cs" />
+    <Compile Include="D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_runtime/Editor/ForearmCorrectionRuntimeValidation.cs" />
+    <Compile Include="D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_runtime/Tests/PlayMode/ForearmCorrectionPlayModeTests.cs" />
+    <Reference Include="C:/Program Files/Unity/Hub/Editor/6000.5.9f1/Editor/Data/Managed/UnityEngine/*.dll" />
+    <Reference Include="D:/Unity Projects/RandomRealm2/Library/ScriptAssemblies/Unity.Collections.dll" />
+    <Reference Include="D:/Unity Projects/RandomRealm2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll" />
+    <Reference Include="D:/Unity Projects/RandomRealm2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll" />
+    <Reference Include="D:/Unity Projects/RandomRealm2/Library/PackageCache/com.unity.ext.nunit@44f7d31723bd/net472/unity-custom/nunit.framework.dll" />
+  </ItemGroup>
+</Project>

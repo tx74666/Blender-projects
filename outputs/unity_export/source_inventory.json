@@ -1,0 +1,776 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "mode": "OBJECT",
+  "rig": "CoshaRig",
+  "body": "Cosha",
+  "assets": [
+    [
+      "Clothes",
+      "CLOTHING"
+    ],
+    [
+      "Stocking",
+      "STOCKINGS"
+    ],
+    [
+      "Shoes",
+      "SHOES"
+    ],
+    [
+      "Hair1",
+      "HAIR"
+    ],
+    [
+      "Hair",
+      "HAIR"
+    ],
+    [
+      "Hair3",
+      "HAIR"
+    ],
+    [
+      "Dress",
+      "SKIRT"
+    ]
+  ],
+  "meshes": [
+    {
+      "name": "Cosha",
+      "parent": "CoshaRig",
+      "collections": [
+        "Main"
+      ],
+      "modifiers": [
+        [
+          "Armature",
+          "ARMATURE",
+          true,
+          "CoshaRig"
+        ],
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 3795,
+      "keys": [
+        "Basis",
+        "Eye_Close_L",
+        "Eye_Close_R",
+        "Mouth_Smile",
+        "Mouth_Happy",
+        "Mouth_Open_WIP",
+        "Mouth_O_WIP",
+        "Eye_Angry_WIP",
+        "CD Forearm Twist.L",
+        "CD Forearm Twist.R"
+      ]
+    },
+    {
+      "name": "Clothes",
+      "parent": null,
+      "collections": [
+        "Main"
+      ],
+      "modifiers": [
+        [
+          "Mirror",
+          "MIRROR",
+          true,
+          null
+        ],
+        [
+          "Armature",
+          "ARMATURE",
+          true,
+          "CoshaRig"
+        ],
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 101,
+      "keys": []
+    },
+    {
+      "name": "Stocking",
+      "parent": null,
+      "collections": [
+        "Main"
+      ],
+      "modifiers": [
+        [
+          "Armature",
+          "ARMATURE",
+          true,
+          "CoshaRig"
+        ],
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 594,
+      "keys": []
+    },
+    {
+      "name": "Dress",
+      "parent": null,
+      "collections": [
+        "Main"
+      ],
+      "modifiers": [
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 800,
+      "keys": []
+    },
+    {
+      "name": "Jacket",
+      "parent": null,
+      "collections": [
+        "Main"
+      ],
+      "modifiers": [
+        [
+          "Mirror",
+          "MIRROR",
+          true,
+          null
+        ],
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 139,
+      "keys": []
+    },
+    {
+      "name": "Shoes",
+      "parent": null,
+      "collections": [
+        "Main"
+      ],
+      "modifiers": [
+        [
+          "Mirror",
+          "MIRROR",
+          true,
+          null
+        ],
+        [
+          "Armature",
+          "ARMATURE",
+          false,
+          "CoshaRig"
+        ]
+      ],
+      "vertices": 28177,
+      "keys": []
+    },
+    {
+      "name": "Hair",
+      "parent": null,
+      "collections": [
+        "Main"
+      ],
+      "modifiers": [
+        [
+          "Smooth by Angle",
+          "NODES",
+          true,
+          null
+        ]
+      ],
+      "vertices": 6100,
+      "keys": []
+    },
+    {
+      "name": "Dress_Backup",
+      "parent": null,
+      "collections": [
+        "Backup 1"
+      ],
+      "modifiers": [
+        [
+          "Array",
+          "NODES",
+          true,
+          null
+        ],
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 60,
+      "keys": []
+    },
+    {
+      "name": "Shoes_Primitive",
+      "parent": null,
+      "collections": [
+        "Backup 1"
+      ],
+      "modifiers": [
+        [
+          "Mirror",
+          "MIRROR",
+          true,
+          null
+        ]
+      ],
+      "vertices": 36244,
+      "keys": []
+    },
+    {
+      "name": "ShoeBase",
+      "parent": null,
+      "collections": [
+        "ShoeDesign"
+      ],
+      "modifiers": [
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 576,
+      "keys": []
+    },
+    {
+      "name": "ShoeUpperBase",
+      "parent": null,
+      "collections": [
+        "ShoeDesign"
+      ],
+      "modifiers": [
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 86,
+      "keys": []
+    },
+    {
+      "name": "Strap.001",
+      "parent": null,
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [],
+      "vertices": 8454,
+      "keys": []
+    },
+    {
+      "name": "Diamond.001",
+      "parent": null,
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [],
+      "vertices": 948,
+      "keys": []
+    },
+    {
+      "name": "Wide Strap.001",
+      "parent": "Strap2.001",
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [
+        [
+          "Armature",
+          "ARMATURE",
+          true,
+          "Strap2.001"
+        ]
+      ],
+      "vertices": 5050,
+      "keys": []
+    },
+    {
+      "name": "Embedded.001",
+      "parent": null,
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 300,
+      "keys": []
+    },
+    {
+      "name": "Ear.001",
+      "parent": null,
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ],
+        [
+          "Solidify",
+          "SOLIDIFY",
+          true,
+          null
+        ]
+      ],
+      "vertices": 260,
+      "keys": []
+    },
+    {
+      "name": "ShoeUpper2.001",
+      "parent": null,
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [
+        [
+          "Mirror",
+          "MIRROR",
+          true,
+          null
+        ],
+        [
+          "Shrinkwrap.004",
+          "SHRINKWRAP",
+          true,
+          null
+        ],
+        [
+          "Solidify",
+          "SOLIDIFY",
+          true,
+          null
+        ],
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 387,
+      "keys": []
+    },
+    {
+      "name": "ShoeUpper3.001",
+      "parent": null,
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [
+        [
+          "Mirror",
+          "MIRROR",
+          true,
+          null
+        ],
+        [
+          "Shrinkwrap",
+          "SHRINKWRAP",
+          true,
+          null
+        ],
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 377,
+      "keys": []
+    },
+    {
+      "name": "Vamp.001",
+      "parent": null,
+      "collections": [
+        "ShoeDone_Backup"
+      ],
+      "modifiers": [
+        [
+          "Subdivision",
+          "SUBSURF",
+          true,
+          null
+        ]
+      ],
+      "vertices": 450,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_PoleArrow",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 5,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_PoleLine",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 2,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_Master",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 24,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_HandIK",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_FootIK",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 46,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_HeelRoll",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 58,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_Finger",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_Randy_Shoulder",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Body IK"
+      ],
+      "modifiers": [],
+      "vertices": 44,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FOOT_ROLL_63686d3a0a",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Foot.L"
+      ],
+      "modifiers": [],
+      "vertices": 58,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_TOE_BEND_63686d3a0a",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Foot.L"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FOOT_ROLL_9d249435e4",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Foot.R"
+      ],
+      "modifiers": [],
+      "vertices": 58,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_TOE_BEND_9d249435e4",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Foot.R"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Torso_BEND_19f6109a7e",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Torso"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Torso_FK_0_19f6109a7e",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Torso"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Torso_FK_1_19f6109a7e",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Torso"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Torso_FK_2_19f6109a7e",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Torso"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Spine_IK_CHEST_531055eaa9",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Spine IK"
+      ],
+      "modifiers": [],
+      "vertices": 48,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Spine_IK_SHAPE_531055eaa9",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Spine IK"
+      ],
+      "modifiers": [],
+      "vertices": 4,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Eyes_MASTER_6da392a9c2",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Eyes"
+      ],
+      "modifiers": [],
+      "vertices": 64,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Eyes_LEFT_6da392a9c2",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Eyes"
+      ],
+      "modifiers": [],
+      "vertices": 64,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_Eyes_RIGHT_6da392a9c2",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Eyes"
+      ],
+      "modifiers": [],
+      "vertices": 64,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_upper_arm.L_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_forearm.L_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_upper_arm.R_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_forearm.R_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_thigh.L_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_shin.L_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_thigh.R_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_FK_shin.R_7f538266c1",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 FK Rings"
+      ],
+      "modifiers": [],
+      "vertices": 32,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_HEAD_17e5e7a01f",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Head & Neck"
+      ],
+      "modifiers": [],
+      "vertices": 799,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_NECK_17e5e7a01f",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Head & Neck"
+      ],
+      "modifiers": [],
+      "vertices": 27,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_HIPS_8464e1c4d2",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Breast & Hips"
+      ],
+      "modifiers": [],
+      "vertices": 64,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_BREAST_L_8464e1c4d2",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Breast & Hips"
+      ],
+      "modifiers": [],
+      "vertices": 64,
+      "keys": []
+    },
+    {
+      "name": "WGT_CD_BREAST_R_8464e1c4d2",
+      "parent": null,
+      "collections": [
+        "CoshaRig \u00b7 Breast & Hips"
+      ],
+      "modifiers": [],
+      "vertices": 64,
+      "keys": []
+    }
+  ]
+}

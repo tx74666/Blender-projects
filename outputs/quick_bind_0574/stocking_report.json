@@ -1,0 +1,123 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "module": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\quick_bind.py",
+  "checks": {
+    "stocking_remove_restore_preserves_mesh_weights_keys_modifiers": true,
+    "export_scope_tracks_binding": true,
+    "evaluated_skin_disconnects_and_reconnects": true,
+    "source_file_unchanged": true
+  },
+  "source_sha256_before": "835b4ff666584cf064571121ec2efc41a7286ca422a45f849343b9a7806613ab",
+  "scene": {
+    "mesh_vertices": 600,
+    "evaluated_vertices": 2351,
+    "shape_keys": [],
+    "modifiers": [
+      [
+        2268251320640,
+        312629205,
+        "Armature",
+        "ARMATURE",
+        true,
+        true,
+        false,
+        "CoshaRig",
+        [
+          false,
+          true,
+          false,
+          "",
+          false
+        ]
+      ],
+      [
+        2268254949728,
+        1454833520,
+        "Subdivision",
+        "SUBSURF",
+        true,
+        true,
+        true,
+        null,
+        null
+      ]
+    ],
+    "parent": null,
+    "frame": 137,
+    "scope_before": [
+      "Clothes",
+      "Cosha",
+      "Stocking"
+    ],
+    "scope_removed": [
+      "Clothes",
+      "Cosha"
+    ],
+    "scope_restored": [
+      "Clothes",
+      "Cosha",
+      "Stocking"
+    ],
+    "eval_restore_max_delta": 0.0,
+    "weighted_bones": [
+      [
+        148.42756801715313,
+        "foot.L"
+      ],
+      [
+        134.01797626757616,
+        "shin.L"
+      ],
+      [
+        116.23986770499323,
+        "foot.R"
+      ],
+      [
+        80.47702906597988,
+        "shin.R"
+      ],
+      [
+        47.51930766881924,
+        "toe.L"
+      ],
+      [
+        36.86749100093135,
+        "thigh.R"
+      ],
+      [
+        36.41561215201577,
+        "toe.R"
+      ],
+      [
+        0.0351481281593351,
+        "thigh.L"
+      ],
+      [
+        0,
+        "upper_arm.R"
+      ],
+      [
+        0,
+        "upper_arm.L"
+      ],
+      [
+        0,
+        "thumb.03.R"
+      ],
+      [
+        0,
+        "thumb.03.L"
+      ]
+    ]
+  },
+  "pose_test": {
+    "bone": "foot.L",
+    "degrees_local_x": 18,
+    "bound_motion": 0.05036532481372963,
+    "constraints": [],
+    "unbound_motion": 0.0,
+    "restored_pose_max_delta": 0.0
+  },
+  "passed": true,
+  "source_sha256_after": "835b4ff666584cf064571121ec2efc41a7286ca422a45f849343b9a7806613ab"
+}

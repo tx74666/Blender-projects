@@ -1,0 +1,30 @@
+{
+    "passed": true,
+    "error": "",
+    "sceneBefore": "Assets/Scenes/Tools/Terrain Test One.unity",
+    "sceneAfter": "Assets/Scenes/Tools/Terrain Test One.unity",
+    "dirtyBefore": false,
+    "dirtyAfter": false,
+    "math": "{\"twistCases\":97,\"deltaCases\":540,\"inverseCases\":9,\"profileCases\":11,\"rangeCases\":30,\"maxAngleError\":4.76837158203125e-7,\"maxDeltaError\":3.4569933404782207e-7,\"maxInverseRelativeError\":5.960464477539063e-8,\"sourceMathSha256\":\"bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421\"}",
+    "runtime": "{\"passed\":true,\"caseCount\":11,\"checks\":[\"private mesh with original renderer skin quality preserved\",\"25 repeated evaluations do not accumulate\",\"actual BakeMesh delta, artist input and zero-influence boundary\",\"Bone1/Bone2/Bone4/Auto inverse skinning with four stored influences and unchanged outside baseline\",\"cache invalidation for artist shapes, source ratios, side enables, normals and edited mappings\",\"common Root rotation invariance\",\"bent and elevated arms with signed wrist swing/twist\",\"one-side failure restores both sides and recovers\",\"disable restores original mesh, bounds and quality; artist assets unchanged\",\"re-enable and explicit reinitialize\",\"stale data rejected before renderer mutation\"]}",
+    "import": "{\"passed\":7,\"repeatGuidStable\":true,\"invalidSecondSideRejected\":true,\"publishRollbackExact\":true,\"emptyMarkerRemovedControls\":true,\"repeatEmptyWorked\":true,\"originalsRestored\":true,\"sceneUnchanged\":true,\"prefab\":\"Assets/Art/Character/Cosha/Cosha.Runtime.prefab\"}",
+    "character": {
+        "passed": true,
+        "prefab": "Assets/Art/Character/Cosha/Cosha.Runtime.prefab",
+        "poseCases": 16,
+        "importedVertices": 16597,
+        "blendShapes": 7,
+        "correctedVertices": 1238,
+        "maximumDeltaError": 4.664457264880184e-7,
+        "outsideDelta": 3.578800260584103e-7,
+        "repeatDelta": 0.0,
+        "medianMilliseconds": 0.22290000000000002,
+        "worstMilliseconds": 0.38730000000000006,
+        "movingMedianMilliseconds": 5.7137,
+        "movingWorstMilliseconds": 8.6006,
+        "allocatedBytes": 0,
+        "movingAllocatedBytes": 0,
+        "sourceFingerprintBefore": "f5cc49d750927cebead181ea71662aa80b4a42752b5afc03463b412ad6dd4d96",
+        "sourceFingerprintAfter": "f5cc49d750927cebead181ea71662aa80b4a42752b5afc03463b412ad6dd4d96"
+    }
+}
