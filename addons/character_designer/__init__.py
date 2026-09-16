@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Character Designer",
     "author": "Randy & Codex",
-    "version": (0, 58, 1),
+    "version": (0, 60, 0),
     "blender": (4, 0, 0),
     "location": "View3D > Sidebar > Character Designer",
     "description": "Personal modeling, rig-setup, and generic reference-view tools.",
@@ -99,6 +99,7 @@ from .ui_constants import (
     active_ui_page,
 )
 from .weight_symmetry import WEIGHT_SYMMETRY_CLASSES
+from .weight_surface import WEIGHT_SURFACE_CLASSES
 from .forearm_twist import (
     FOREARM_TWIST_CLASSES,
     CharacterDesignerForearmTwistState,
@@ -8390,6 +8391,7 @@ CLASSES = (
     *BONE_DISPLAY_CLASSES,
     *WIDGET_COLLECTION_CLASSES,
     *WEIGHT_SYMMETRY_CLASSES,
+    *WEIGHT_SURFACE_CLASSES,
     *DELTA_SYMMETRY_CLASSES,
     *LIMB_IK_CLASSES,
     *TORSO_UI_CLASSES,

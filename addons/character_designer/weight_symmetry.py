@@ -33,6 +33,11 @@ REMOVE_CHUNK_SIZE = 32768
 class WeightSymmetryError(ValueError):
     """A safe, artist-facing preflight or directed-copy failure."""
 
+    def __init__(self, message, *, mesh_obj=None, vertex_indices=()):
+        super().__init__(message)
+        self.mesh_obj = mesh_obj
+        self.vertex_indices = tuple(sorted(set(vertex_indices)))
+
 
 class WeightSymmetryRollbackError(RuntimeError):
     """The operation failed and its exact Vertex Group state could not return."""
@@ -566,13 +571,58 @@ def _classify_mesh_halves(mesh_obj, source_side, tolerance):
     return tuple(source_indices), tuple(target_indices), tuple(center_indices)
 
 
+def _wrong_side_weight_islands(mesh_obj, weights, source_indices, center_indices):
+    """Return positive-weight components confined to the opposite Mesh half.
+
+    Connectivity follows Mesh edges whose two endpoints both have usable
+    weights in this group.  A zero-weight bridge therefore does not join two
+    weight islands, while a weighted edge crossing X=0 is sufficient even if
+    the Mesh has no vertex exactly on its center line.  Every component that
+    reaches the source half or the center is retained, including detached
+    same-side Mesh parts and center-only components.
+    """
+
+    support = {
+        index for index, weight in weights.items() if weight > WEIGHT_EPSILON
+    }
+    anchors = set(source_indices) | set(center_indices)
+    neighbors = {index: [] for index in support}
+    for edge in mesh_obj.data.edges:
+        first, second = edge.vertices
+        if first in support and second in support:
+            neighbors[first].append(second)
+            neighbors[second].append(first)
+
+    remaining = set(support)
+    islands = []
+    while remaining:
+        start = remaining.pop()
+        component = [start]
+        pending = [start]
+        anchored = start in anchors
+        while pending:
+            current = pending.pop()
+            for neighbor in neighbors[current]:
+                if neighbor not in remaining:
+                    continue
+                remaining.remove(neighbor)
+                component.append(neighbor)
+                pending.append(neighbor)
+                anchored = anchored or neighbor in anchors
+        if not anchored:
+            islands.extend(component)
+    return tuple(sorted(islands))
+
+
 def _spatial_pairs(mesh_obj, source_indices, target_indices, tolerance):
     """Pair only the source group's weighted support, not the entire character.
 
     A character Mesh may contain intentionally asymmetric face, hair, or outfit
     vertices in the same datablock.  Those unrelated vertices must not block a
-    directed forearm copy.  Every supplied source-support vertex still requires
-    exactly one reflected target, and targets remain one-to-one.
+    directed forearm copy.  Retained cross-center support is also reflected,
+    so the supplied target candidates may cover both non-center Mesh halves.
+    Every supplied source-support vertex still requires exactly one reflected
+    target, and targets remain one-to-one.
     """
 
     if not source_indices:
@@ -614,14 +664,29 @@ def _spatial_pairs(mesh_obj, source_indices, target_indices, tolerance):
     if ambiguous:
         raise WeightSymmetryError(
             "Spatial symmetry is ambiguous near source vertex "
-            f"{ambiguous[0]} ({len(ambiguous)} ambiguous). No weights were changed."
+            f"{ambiguous[0]} ({len(ambiguous)} ambiguous; tolerance {tolerance:.6g}). "
+            "Multiple reflected matches cannot be chosen safely. No weights were changed.",
+            mesh_obj=mesh_obj,
+            vertex_indices=ambiguous,
         )
     if unmatched:
+        reflected = vertices[unmatched[0]].co.copy()
+        reflected.x = -reflected.x
+        _nearest_co, nearest_index, nearest_distance = tree.find(reflected)
+        nearest_detail = (
+            f"nearest reflected candidate {nearest_index} is {nearest_distance:.6g} away"
+            if nearest_index is not None
+            else "no reflected candidates exist"
+        )
         raise WeightSymmetryError(
             f"Spatial symmetry could not pair source vertex {unmatched[0]}; "
             f"{len(unmatched)} weighted source vert"
             f"{'ices are' if len(unmatched) != 1 else 'ex is'} unmatched. "
-            "No weights were changed."
+            f"Tolerance {tolerance:.6g}; {nearest_detail}. "
+            "Edited geometry or topology may no longer have exact mirrored vertices. "
+            "No weights were changed.",
+            mesh_obj=mesh_obj,
+            vertex_indices=unmatched,
         )
     return tuple(sorted(pairs))
 
@@ -802,40 +867,54 @@ def _build_plan_for_names(
                 f"at vertex {vertex_index}."
             )
 
-    pairs = _spatial_pairs(
-        mesh_obj,
-        weighted_source_indices,
-        target_indices,
-        tolerance,
+    wrong_side_islands = set(
+        _wrong_side_weight_islands(
+            mesh_obj, source_before, source_indices, center_indices
+        )
     )
-
     source_after = {
         vertex_index: weight
         for vertex_index, weight in source_before.items()
-        if vertex_index not in target_set
+        if vertex_index not in wrong_side_islands
     }
+    retained_support = tuple(
+        sorted(
+            vertex_index
+            for vertex_index, weight in source_after.items()
+            if vertex_index not in center_set and weight > WEIGHT_EPSILON
+        )
+    )
+    try:
+        pairs = _spatial_pairs(
+            mesh_obj,
+            retained_support,
+            tuple(sorted(source_set | target_set)),
+            tolerance,
+        )
+    except WeightSymmetryError as exc:
+        raise WeightSymmetryError(
+            f'Group "{source_name}": {exc}',
+            mesh_obj=mesh_obj,
+            vertex_indices=exc.vertex_indices,
+        ) from exc
+
     target_after = {
         vertex_index: weight
         for vertex_index, weight in target_before.items()
         if vertex_index in center_set
     }
     for source_index, target_index in pairs:
-        if source_index in source_before:
-            target_after[target_index] = source_before[source_index]
+        target_after[target_index] = source_after[source_index]
 
     changed_count = sum(
         _maps_semantically_differ(target_before, target_after, vertex_index)
-        for vertex_index in target_set
+        for vertex_index in set(target_before) | set(target_after)
     )
-    cleared_count = sum(
-        weight > WEIGHT_EPSILON
-        for vertex_index, weight in source_before.items()
-        if vertex_index in target_set
-    )
+    cleared_count = len(wrong_side_islands)
     cleared_count += sum(
         weight > WEIGHT_EPSILON
         for vertex_index, weight in target_before.items()
-        if vertex_index in source_set
+        if vertex_index not in target_after
     )
     paired_count = len(pairs)
     return WeightSymmetryPlan(
@@ -1133,23 +1212,17 @@ def _commit_weight_symmetry_batch(batch, verify):
             target_group = mesh_obj.vertex_groups[plan.target_name]
             source_before = _weight_map(snapshot_map[plan.source_name])
             target_before = _weight_map(snapshot_map.get(plan.target_name))
-            target_set = set(plan.target_indices)
-            source_set = set(plan.source_indices)
-            _remove_indices(
-                source_group,
-                tuple(index for index in source_before if index in target_set),
-            )
-            _remove_indices(
-                target_group,
-                tuple(
-                    index
-                    for index in target_before
-                    if index in source_set or index in target_set
-                ),
-            )
-            for vertex_index, weight in plan.target_after:
-                if vertex_index in target_set:
-                    target_group.add((vertex_index,), weight, "REPLACE")
+            for group, before, after_items in (
+                (source_group, source_before, plan.source_after),
+                (target_group, target_before, plan.target_after),
+            ):
+                after = dict(after_items)
+                _remove_indices(
+                    group, tuple(index for index in before if index not in after)
+                )
+                for vertex_index, weight in after_items:
+                    if vertex_index not in before or before[vertex_index] != weight:
+                        group.add((vertex_index,), weight, "REPLACE")
 
         if mesh_obj.vertex_groups:
             mesh_obj.vertex_groups.active_index = min(
@@ -1367,6 +1440,16 @@ def draw_weight_symmetry(layout, context):
         "character_designer.copy_weight_to_opposite",
         text=text,
         icon="MOD_MIRROR",
+    )
+    layout.operator(
+        "character_designer.surface_weight_mirror",
+        text="Surface Mirror · Different Topology",
+        icon="MOD_DATA_TRANSFER",
+    )
+    layout.operator(
+        "character_designer.locate_weight_symmetry",
+        text="Locate Unmatched Vertices",
+        icon="RESTRICT_SELECT_OFF",
     )
 
 

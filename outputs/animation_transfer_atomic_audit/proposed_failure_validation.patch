@@ -1,0 +1,63 @@
+*** Begin Patch
+*** Update File: D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_runtime/Editor/CharacterAnimationTransfer.cs
+@@
+         public const string DefaultFolder = @"D:\Blender\Projects\Character\Animation\UnityExports";
++        internal static Func<int, bool> CancelSamplingForTests;
+@@
+-                    if(EditorUtility.DisplayCancelableProgressBar("Character Designer","Sampling "+Clip.name,(float)i/count))
++                    if((CancelSamplingForTests?.Invoke(i) ?? false) || EditorUtility.DisplayCancelableProgressBar("Character Designer","Sampling "+Clip.name,(float)i/count))
+*** Update File: D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_runtime/Editor/CharacterAnimationValidation.cs
+@@
+             public int bones, samples, repeats;
++            public int cancellationChecks, publishFailureChecks;
+@@
+-                result.output=CharacterAnimationTransfer.Export(target,clip,CharacterAnimationTransfer.DefaultFolder,true);
++                ValidateFailedExport(target, clip, result);
++                result.output=CharacterAnimationTransfer.Export(target,clip,CharacterAnimationTransfer.DefaultFolder,true);
+@@
+-        static string SceneState()
++        static void ValidateFailedExport(GameObject target, AnimationClip clip, Result result)
++        {
++            string root=Path.GetFullPath(Path.Combine("Temp","CDAnimation","FailureValidation",Guid.NewGuid().ToString("N")));
++            string preference=EditorPrefs.GetString(CharacterAnimationTransfer.FolderPreference,"");
++            string name=target.name.Replace(".Player","").Replace(".Runtime","")+"_"+clip.name+".cdanim.json";
++            Directory.CreateDirectory(root);
++            string package=Path.Combine(root,name), latest=Path.Combine(root,CharacterAnimationTransfer.LatestFile);
++            File.WriteAllText(package,"previous package");File.WriteAllText(latest,"previous manifest");
++            try
++            {
++                CharacterAnimationTransfer.CancelSamplingForTests=i=>i==3;
++                bool cancelled=false;
++                try{CharacterAnimationTransfer.Export(target,clip,root,false);}
++                catch(OperationCanceledException){cancelled=true;}
++                CharacterAnimationTransfer.Require(cancelled && File.ReadAllText(package)=="previous package" && File.ReadAllText(latest)=="previous manifest",
++                    "Cancelling sampling changed the previous handoff files.");
++                CharacterAnimationTransfer.Require(Directory.GetFiles(root,"*.tmp").Length==0,"Cancellation left a temporary publication file.");
++                result.cancellationChecks++;
++            }
++            finally{CharacterAnimationTransfer.CancelSamplingForTests=null;}
++            foreach(bool hadPackage in new[]{true,false})
++            {
++                string folder=Path.Combine(root,hadPackage?"replace-existing":"new-package");Directory.CreateDirectory(folder);
++                package=Path.Combine(folder,name);latest=Path.Combine(folder,CharacterAnimationTransfer.LatestFile);
++                if(hadPackage)File.WriteAllText(package,"previous package");
++                File.WriteAllText(latest,"previous manifest");
++                bool failed=false;
++                using(var locked=new FileStream(latest,FileMode.Open,FileAccess.Read,FileShare.Read))
++                {
++                    try{CharacterAnimationTransfer.Export(target,clip,folder,false);}
++                    catch(IOException){failed=true;}
++                }
++                CharacterAnimationTransfer.Require(failed,"Expected locked-manifest publication failure was not reported.");
++                CharacterAnimationTransfer.Require(hadPackage?File.ReadAllText(package)=="previous package":!File.Exists(package),
++                    "Failed publication did not restore the original package state.");
++                CharacterAnimationTransfer.Require(File.ReadAllText(latest)=="previous manifest" && Directory.GetFiles(folder,"*.tmp").Length==0,
++                    "Failed publication changed the manifest or left temporary output.");
++                result.publishFailureChecks++;
++            }
++            CharacterAnimationTransfer.Require(preference==EditorPrefs.GetString(CharacterAnimationTransfer.FolderPreference,""),
++                "Cancelled or failed export changed the configured handoff folder.");
++        }
++
++        static string SceneState()
+*** End Patch

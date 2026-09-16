@@ -1,4 +1,14 @@
-# Character Designer 0.58.1
+# Character Designer 0.59.0
+
+Version 0.59.0 adds **Animation > Import Latest from Unity** and an isolated Unity
+character preview at **Tools > Character Designer > Animation**. Existing evaluated
+clips become independent test Actions with play/pause, timeline scrubbing and full
+restoration, including Undo/Redo and save/reopen. Humanoid joint translations use a
+temporary Armature data copy when necessary; original rig data and weights stay
+intact. See [workflow and recovery](unity_runtime/ANIMATION.md).
+
+Unity import and local Kimodo generation use separate pose-adaptation paths.
+This phase does not add Blender Action export or realtime synchronization.
 
 Version 0.58.1 makes Unity export warnings actionable. **Locate Unweighted
 Vertices** rechecks the current original mesh, selects missing deform-bone weights
@@ -1081,16 +1091,41 @@ then open **Character Designer > Weight > Weight Symmetry**. The button reports
 the selected count and copies all pairs together. In Weight Paint, leaving no
 intentional multi-bone Pose selection preserves the original workflow: make a
 side-named group such as `forearm.L` active and use the exact one-way action
-**Copy forearm.L -> forearm.R**. Each pair uses only its source group's weighted
-source-side support, so unrelated asymmetric parts of the same character mesh
-do not block the operation.
+**Copy forearm.L -> forearm.R**. Each pair uses its source group's retained
+weighted support, so unrelated asymmetric parts of the same character mesh
+do not block the operation. Positive weights connected by actual mesh edges
+define a weight island. Only an island entirely on the wrong side, with no
+positive-weight path to the source side or center, is removed. Continuous
+shoulder influence across the midline is retained and mirrored, not deleted.
 
 This is an exact reassignment/copy tool, not a global Normalize command. It
-overwrites each opposite group's side, clears source/target wrong-side
-memberships, preserves center-line memberships and every other group, and
+overwrites the opposite group's non-center support from that retained source,
+preserves each group's original center-line memberships and every other group, and
 cancels the entire batch before writing if any pair is invalid or a per-vertex
 Deform total would change. A completed single- or multi-pair operation is one
 Blender Undo step.
+
+For edited meshes with unequal vertex counts/positions, use **Surface Mirror ·
+Different Topology** explicitly. It reflects each destination position into the
+source half and samples actual base-mesh triangles with barycentric interpolation.
+The selected bone's region receives the complete mirrored Deform weight vector,
+including shoulder/elbow/finger blends; every destination keeps its original
+Deform total. This can change several Deform groups in that region. Source half,
+center vertices, non-Deform groups, and vertices outside the sampled region stay
+unchanged. No geometry, topology, Shape Key, rest bone or pose is edited.
+
+The default surface-distance bound is 2% of the shortest selected bone's local
+length. The operator's **Max Surface Distance** option is in mesh-local units;
+zero uses that default. Excessive distance, inconsistent normals, ambiguous
+nearby surfaces, missing opposite bones, locked changed groups or zero skin
+budget cancel the complete operation. This mode does not bind unweighted points
+or silently increase distance to force a match. Both modes verify their complete
+result and roll back on failure; repeated successful copies are idempotent.
+
+**Locate Unmatched Vertices** selects the exact vertices that block strict
+mirroring and enters vertex Edit Mode without changing weights. Return to Weight
+Paint/Object/Pose Mode to copy. Different topology is not proof of a bad weight
+island; do not delete valid weighted vertices to silence a pairing warning.
 
 Version 0.27.0 refines **Randy Rig: Limb IK** around the compact single-limb
 selector and a first complete animator-facing control set. One identity-rest
