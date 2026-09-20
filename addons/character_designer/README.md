@@ -1,4 +1,374 @@
-# Character Designer 0.61.19
+# Character Designer 0.61.29
+
+## Surface-centered internal reference (0.61.29)
+
+A narrow selected longitudinal face strip or edge path now supplies the lateral
+center reference. Regular section/strip intersections fit a straight centerline;
+root fans and the final tip ring do not tilt the reference. After the existing
+coverage and whole-volume safety requirements, the search prefers lateral
+alignment to that line, then surface clearance and stability. Depth is still
+automatic: this is not a move back onto the surface or a screen-space offset.
+The guide remains straight; it cannot follow every local wiggle in the strip.
+If exact centering is unsafe, only certified alternatives are eligible.
+Broad/short/transverse inputs without a reliable longitudinal plane retain the
+volume-based reference, with no new required controls.
+
+The center reference is stored separately from the original selection and the
+uninset topology range, reflected with the paired record and retained through
+owned ring updates. Existing saved guides do not move until recaptured.
+No mesh, bone, Shape Key or scene Empty is changed by Capture.
+
+Validation: 69 focused headless cases, including an asymmetric cross-section
+where maximizing clearance alone moves sideways, physical mesh rotation,
+mirrored metadata and ring-update persistence. Real-X tests on all ten long
+strips verify lateral alignment and full-segment containment; a scripted GUI
+Ring capture is inspected in a surface-aligned orthographic view. These are
+automated checks, not a manual Shift-Numpad7 test of the user's live scene.
+
+## Knuckle-to-tip capture correction (0.61.28)
+
+Long surface strips can include the real knuckle transition before the first
+regular finger ring. The old virtual root cap wrongly excluded that valid part
+of the selection. These captures now validate against the actual closed,
+connected surface, while the straight-axis search remains bounded by the
+selected finger span. It does not search deeper into the palm or lower the
+whole-segment clearance requirement. Open or inconsistent proof surfaces still
+fail safely; explicit root extensions are limited to the local transition.
+
+A small terminal surface wrap around the fingertip is treated as the end of
+the selected range, not a reversed finger direction. The original surface path
+is preserved; interior folds/backtracking still fail. Ring Layout continues to
+use the uninset geometric range. Local records remain local, with live surface
+containment rechecked after topology changes.
+
+Basic Setup has no L/R switch or side suffix: **Index**, **Detected rings: 7**,
+and one Capture operation. Both sides remain automatically paired. Different
+counts display a compact mismatch; unsafe/missing opposites still warn.
+Successful capture/switch/clear also removes stale downstream status messages.
+
+Validation: 68 focused headless cases, plus disposable real-X captures on ten
+long, ten-face strips including the knuckle transition (the earlier tests used
+six regular sleeve faces). Consecutive Index/Middle layouts retain the other
+references, ten Shape Keys, custom normals and the unchanged saved-file hash.
+The automated GUI regression repeats keyboard capture, failure, visibility,
+switching, layout and Undo/Redo. A separate real-X GUI operator capture and
+inspected screenshot verify the long-strip preview. These are scripted GUI
+checks, not a manual mouse-click test. No live user scene or saved X.blend is modified.
+
+## One-capture internal straight axis (0.61.27)
+
+In **Finger > Basic Setup**, select a longitudinal surface strip/open edge path
+or a transverse loop, then **Capture Detection**. Identity, root-to-tip order,
+the internal Start/End segment and the verified opposite reference update in
+one operation. No Mark Start/End, Confirm, Swap, Basis switch or separate top
+capture is needed. The compact panel retains five pair indicators, identity,
+L/R viewing, detected ring counts, capture, one eye toggle, clear and recheck.
+Errors appear only when relevant; length is available in the eye tooltip.
+
+The result is **one straight segment**, not a surface path or ring-center
+polyline. Ordered sections estimate the main direction and stable thickness.
+A bounded search near that direction compares straight segments with small
+endpoint retreats (10–15% of stable local thickness). A temporary closed finger
+volume uses actual body/tip triangles and a virtual proximal cap, never the
+palm. Winding and conservative distance bounds validate the **entire** segment
+with surface clearance. Excessive bends, holes, collapsed sections or no safe
+full-range straight axis are refused; no curve or dramatically shorter success
+is substituted. This is a conservative bounded search, not a global optimizer
+for all possible anatomy, nor evaluated Subdivision/posed/modifier geometry.
+
+Raw selected input, its original coordinates/path and topology provenance are
+kept separately from the inset internal segment. **Ring Layout** explicitly
+consumes the uninset topology range; its boundaries and total length do not
+change because of endpoint clearance. Bone Roll uses the internal direction and
+an automatically captured reliable strip normal. A loop can define an axis
+without defining a bend side; only Bone Roll then asks for a top-strip capture.
+This does not move bones or force their joints onto a straight line.
+
+There is one rest reference per finger, not one setup per Shape Key. Capture
+reads the rest geometry without changing the active key, key values or key data.
+If an active deformation would leave the axis outside the visible finger, it
+is rejected explicitly. Actual topology writes retain their existing Basis-only
+and data-protection guards; this release does not rebuild that write pipeline.
+
+The old completed-guide + pending-Start cross could look like two Start markers.
+Basic Setup now replaces one definition atomically and does not draw a second
+pending cross. Capture/show creates no Empty. Repeated capture, switching,
+show/hide and load/Undo/Redo invalidate preview caches. Failed updates retain
+old records and label any visible old result **Previous result - update failed**.
+No user Empty or legacy joint-marker object is deleted.
+
+Validation: 67 focused headless tests, including eight new internal-axis cases;
+automated Blender GUI keyboard capture/repeated capture/failure, switching,
+visibility and real Undo/Redo, with inspected screenshots; disposable real-X
+ten-finger interior verification, non-Basis capture, five bilateral Roll actions
+and two consecutive finger layouts. No live user scene or saved X.blend changed.
+
+## Five paired records (0.61.26)
+
+**Finger > Basic Setup** now keeps five paired definitions per mesh. One shared
+**Capture Detection / Mark Start / Mark End** row serves all fingers. Select
+faces or an internal ring on either hand: capped quad sleeves and the geometric
+four-finger/offset-thumb arrangement establish identity independently of bones,
+weights, capture order or viewport orientation. A short selection/closed loop
+supplies the detected full finger span; a long selected path retains its span.
+Successful automatic capture is already confirmed, with the exact opposite
+reference populated when safe. Manual Start/End remains separately reviewable.
+
+The five indicators represent Thumb, Index, Middle, Ring and Pinky **pairs**.
+A check means captured/confirmed and symmetric, a question mark needs completion
+or confirmation, and a red warning means missing/asymmetric geometry, mismatched
+ordered rings/connections, or stale local references. L/R switches only the
+viewed member, not a second setup workflow. Detection counts real closed body
+rings; it does not claim to count complicated palm topology or desired rings.
+
+Mesh Local X (or the first existing X Mirror modifier's reference object)
+defines the comparison plane. Geometry is checked in Basis; current-key
+references are validated separately. Symmetry checks do not repair or delete
+geometry. Missing opposite tips can be fixed manually and recovered with the
+refresh/Recheck button. Failed captures preserve previous definitions, and
+pending Start cannot be completed on another finger. Reference settings are
+saved on their source mesh object, not in one global overwritten slot.
+
+Local coordinate/face evidence rebinds unaffected fingers after index changes.
+Verified tool-owned layout edits restamp the changed finger, recheck both sides
+and keep the other four definitions. One-sided ring changes deliberately raise
+that pair's warning. Manual edits request Recheck; unresolved local changes
+preserve settings but require recapture of the affected finger only. Changing
+the active finger hides stale ring previews and requires Prepare Rings for that
+finger. Bilateral Roll now also refuses a different named finger's bone chain.
+
+Initial recognition needs one identifiable group of five regular closed-tip
+finger bodies and a distinguishable thumb. Ambiguous order, open source tips,
+arbitrary branching topology and a wrongly positioned mirror plane are not
+silently guessed. Previous single-definition/F3 services remain available.
+No new remeshing, bilateral topology repair, bone creation or weighting was added.
+
+Validation: 59 focused headless cases, a five-indicator GUI with actual keyboard
+Undo/Redo, and unbound X geometry recognition on both hands plus per-finger
+layout persistence. See [finger tool notes](../../docs/finger_joint_tool.md).
+
+## Shared reference foundation (0.61.25)
+
+**Rig > Body > Fingers > Finger Definition** is now the shared starting point.
+Select a longitudinal surface or open edge path, two endpoint patches, or one
+existing bone chain, then **Capture Selection**. Alternatively mark **Start**
+and **End** separately using faces, edges or vertices; neither marker needs to
+be a closed loop. Amber Start, mint End and a blue path/arrow show the exact
+reference span. A reliable selected top surface adds the orange inward bend
+arrow; edges/bones alone leave bend undefined. **Set Top Surface** supplies it
+without changing the length. Review the arrow, **Swap Ends** if necessary, and
+**Confirm** before an action. No prescribed root fan, binding or quad sleeve is
+required just to define a finger.
+
+Capture is read-only, including with a non-Basis active Shape Key. Current-key
+and Basis samples are distinct; **Use Basis Reference** does not change the
+active key or its values. Before topology editing, explicitly return the mesh
+to Basis. **Prepare Rings** checks the safe quad body inside the defined span;
+**Calibrate Both Hands** uses the same bend reference and existing L/R pairing.
+The immutable topology recipe remains reusable after its own generated edits.
+Manual changes to reference geometry or generated results are detected before
+another action. An ambiguous direction is labelled for confirmation, not
+advertised as detected anatomy.
+
+References are persistent Scene settings, cleared with X. They intentionally
+do not consume Edit Mode Ctrl+Z steps (Blender does not restore these Scene
+settings in mesh undo). Actual ring generation and bilateral Roll changes keep
+their native Undo/Redo and rollback. The workflow currently holds **one active
+definition**. Guides sample base mesh/key coordinates or rest bone coordinates,
+not evaluated modifiers/pose deformation; a surface path is not a bone center.
+No automatic placement/reweighting or arbitrary root remeshing was added.
+
+Validation: 51 focused finger/layout/UI tests, isolated GUI checks, and all ten
+X fingers through non-Basis capture, Basis ring updates and paired Roll reuse.
+The X test retains ten Shape Keys/custom normals and verifies the saved file
+hash and bone heads/tails. See [finger tool notes](../../docs/finger_joint_tool.md).
+
+## Bilateral bone-axis correction (0.61.24)
+
+Version 0.61.24 makes finger **Bone Roll calibration bilateral** by default.
+Capture the top surface on one hand, select finger bones on either hand, then
+**Calibrate Both Hands**. Existing matching `.L/.R` bones are included without
+selecting the other side; selecting both sides is deduplicated. Previews show
+both sets of hinges, proposed rolls and positive bend arcs. The captured
+surface's proximity identifies its hand; its inward direction is reflected
+about Armature Local X and projected against each counterpart's own length axis.
+Roll numbers are never copied. Positive Local X bends both hands inward.
+
+The legacy Roll Reference tool also includes matching counterparts (including
+the counterpart of the reference/base bone). When both sides are selected, the
+active selected side is authoritative, otherwise the sole selected side or L.
+Rotation axes use axial reflection, including the sign reversal, for Local X/Z.
+The source reference stays fixed. No new toggle/shortcut is required.
+
+Missing counterparts, incompatible directions/positions about Armature Local X,
+different parent/connect settings or locked bones stop the operation. Existing
+neutral-pose/constraint/animation and editable-rig guards now cover both sides
+and are shared with the legacy tool. Apply is one undoable transaction; errors
+restore both sides. Blender's X Mirror setting is temporarily disabled during
+explicit pair writes and always restored. Heads, tails, parents, lengths, mesh,
+Shape Keys and weights remain unchanged. No opposite bones are created.
+
+Validation: 40 focused finger/layout/UI regressions; real X tests from either
+hand calibrate six bones per selected three-bone chain and verify both hands'
+positive rotations, neutral skin matrices, geometry and unchanged asset/file.
+See [finger tool notes](../../docs/finger_joint_tool.md).
+
+## Root-surface layout (0.61.23)
+
+Version 0.61.23 upgrades **Rig > Body > Fingers > Finger Ring Layout**:
+
+- Select a connected root surface (optionally extending along the finger), then
+  **Capture Finger Root**. No prescribed 3-to-1 junction or root loop is needed.
+  A unique small closed cap versus continuing palm topology supplies direction;
+  open tips, two capped ends and ambiguous neighboring fingers are not guessed.
+- The proximal extreme of the selected surface defines the virtual root plane;
+  detected tip and centerline length set the two joint fractions. The dashed
+  root ring is a reference, not newly created topology or an exact palm contour.
+  The regular editable sleeve is separate from this full length definition.
+- **Slide Nearby Rings**, enabled by default for new captures, pulls suitable
+  existing rings to the coral/cyan targets along the captured surface rails.
+  Matching is one-to-one and bounded to less than half the adjacent spacing;
+  centers have priority, remaining support/filler targets insert missing rings.
+  Root/cap boundaries, transverse seams/sharp edges, face-data transitions and
+  unused original rings stay fixed. No original rings are dissolved.
+- Moved as well as new points receive interpolated relative Shape Keys, weights,
+  UVs, custom normals and supported attributes. Integers/booleans take the nearer
+  source endpoint. Existing rigs, group definitions and outside geometry/data
+  stay unchanged. This is surface-following relayout, not a guarantee that
+  Subdivision shape/shading or bending quality remains mathematically identical.
+- Preview stays read-only. Apply stages and validates the result; rollback,
+  Undo/Redo, idempotent updates and saved recipes remain supported. Targets in
+  protected root/cap regions can be previewed but cannot be applied. There is no
+  permanent controller association and no new shortcut or extra settings foldout.
+
+Existing schema-1 layouts keep their 0.61.22 semantics and Reverse Root / Tip;
+recapture to opt into automatic direction and nearby-ring sliding. The current
+capture needs a nearby sleeve of at least three regular quad bands. Arbitrary
+palm remeshing, open fingertips, direct viewport dragging and auto reweighting
+remain outside this release. See [finger joint documentation](../../docs/finger_joint_tool.md).
+
+Validation: 7 new root/slide cases, 29 existing regressions, actual GUI Undo/Redo,
+and both top-strip and root-only captures on all 10 real X fingers, retaining
+their 10 Shape Keys/custom normals and leaving the saved asset and rig unchanged.
+
+## Previous layout release
+
+Version 0.61.22 adds **Rig > Body > Fingers > Finger Ring Layout** in Mesh Edit
+Mode. Select one continuous top row of quads along the finger body, excluding the
+palm/webbing and fingertip cap, and click **Capture Top Strip**. Coral 1 and cyan 2
+are complete surface-following joint preview rings. Drag the numeric sliders to
+place them; choose single or three-ring joints, independent half-widths, and 0–8
+additional rings between joints. Root/tip boundary labels and Reverse Root / Tip
+make the chosen ordering explicit. Preview changes no mesh, bones or weights.
+
+**Generate / Update Rings** inserts missing rings and reuses coincident original
+rings. Original shape rings/vertices and both boundaries stay fixed; this is not
+arbitrary remeshing or removal of artist support loops. Every update is rebuilt
+from an immutable mesh snapshot saved with the scene, so reducing the added-ring
+count removes only this layout's generated rings. Capture a new strip to work on
+another finger; X releases the stored layout without deleting its applied result.
+Outside mesh/data edits invalidate the recipe rather than being overwritten.
+
+UVs, materials, supported attributes, existing weights and all relative Shape
+Keys are retained; new data is interpolated. Custom normals outside the section
+keep their original packed data; affected normals are interpolated/re-encoded
+with Blender's angular quantization. Validation occurs on a staged mesh, with
+rollback and real Undo/Redo. No rig is required; existing rigs are untouched.
+Animated/absolute/locked Shape Keys, baked/index-dependent modifiers, shared
+meshes, open/branched/nonquad bands and unsafe attributes are rejected up front.
+The overlay follows the undeformed base cage, not evaluated modifiers/poses.
+
+The existing one-loop-to-three-ring operator remains available through F3
+**Finger Joint Rings**, now with a Side A/B spacing dialog. Its old invalid
+Blender 5.2 icon is fixed. Viewport ring dragging, asymmetric inside/outside
+spacing, bone repositioning, automatic reweighting and bend-quality pose tests
+are not part of this first layout release. Numeric placement is live-previewed.
+
+Validation: 7 dedicated headless cases, existing finger/roll/root/page regressions,
+GUI preview plus actual Undo/Redo and post-redo update, and all 10 real X fingers
+(6 selected top quads each, 48 inserted vertices, idempotent repeat, 10 Shape Keys
+and custom normals preserved). The user's X.blend and live scene are not saved
+or modified by tests. See `docs/finger_joint_tool.md` in the source repository.
+
+Version 0.61.21 makes **Mirror Selected Region** one geometry-and-weights action
+for both bound and unbound meshes; existing armatures/bones are retained unchanged.
+In Mesh Edit Mode the section now contains only **Mirror Selected Region** and
+**Preview Replacement**. Binding-status, coordinate and Shift-settings hint lines
+are removed, as is Shift-click interception. Optional reference/tolerance settings
+remain accessible through F3 **Mirror Settings**, without a permanent advanced box.
+
+A complete selected strand replaces ONE opposite vertex-connected island, not a
+union of nearby strands and not just vertices that individually match. Holes,
+different face counts and connected dangling edges do not force a repair workflow:
+the old target island is removed in full and rebuilt from the immutable source.
+Partial face selections instead define attachment boundary loops (or paths ending
+on an existing open mesh border). Replacement stops at those boundaries, including
+damaged/dangling geometry inside them, and preserves the outside/root region.
+
+Matching uses deterministic area-uniform samples, bidirectional surface coverage,
+width-aware proximity and longitudinal cross-section offset/continuity. A clipped
+tip or smooth positional drift can match without equal vertex/face counts. A strong
+match separated from other plausible candidates is automatic; mere bounding-box
+overlap with neighboring layers no longer blocks it. Equally plausible targets or
+insufficient surface evidence require an explicit choice. Scores are geometric
+heuristics, not confidence probabilities. Disconnected fragments are not combined
+into one replacement. Unknown loose remnants prevent automatic deletion.
+
+Validation: 12 data/transaction regressions, 6 whole-strand/boundary/UI regressions
+(including an actual armature), GUI Undo/Redo and UI screenshot checks. The latest
+saved X Hair was tested unchanged, with an in-memory damaged counterpart, and with
+that whole counterpart deleted. All three automatically reconstruct exactly one
+118-face strand, preserve neighboring hair/UV/materials and remain idempotent.
+No test saves the user's X.blend or edits the live scene.
+
+The following version notes describe the earlier interfaces; the current entry
+points and matching behavior are documented above.
+
+Version 0.61.20 introduces **Weight > Weight Symmetry > Mirror Selected Region**.
+Geometry mirroring no longer requires an active vertex group, .L/.R bones, or an
+Armature modifier. Select one connected source face region or an entire unbound
+hair island in Mesh Edit Mode. Closed islands without boundary loops are valid.
+The selected source is unchanged and stays selected after execution. A single
+action creates a missing opposite region or replaces/repairs an identified target.
+
+The default plane is explicitly **Mesh Local X=0** (not Global X). **Shift-click
+Mirror Selected Region** opens its plane/seam settings: choose any reference
+object, including an Empty, to use that object's X=0 plane. Object transforms are
+handled without Apply Transform or binding. **Preview Mirror Plane / Target**
+shows cyan source, green mirrored result, grey plane and numbered target outlines;
+click again to clear. Changed geometry/selection/transforms invalidate the overlay.
+No modifier-evaluated or posed geometry is used.
+
+A unique close surface match is automatic. Multiple spatially overlapping islands
+or a weak match require a numbered target choice; there is no "append anyway"
+fallback. Matching uses whole regions, not nearest-vertex deletion. Attachments
+must have a uniquely matched seam; only those seam vertices can weld. Single-side
+selections may include centerline boundary edges, but truly cross-plane faces are
+not automatically cut. Repeated execution cannot append another copy over an
+existing candidate. Legacy Copy/Repair/Boundary operators remain registered for
+script compatibility but are no longer the displayed geometry workflow.
+
+UV coordinates/pins, material assignments, smooth/sharp/seam/crease/bevel data,
+supported point/edge/face/corner attributes, custom split normals, relative Shape
+Keys and weights are remapped transactionally. Generic attribute values are copied
+verbatim; only geometric positions and custom normals are reflected. .L/.R group
+names swap and missing opposite groups are created without bones; unsuffixed names
+stay unchanged. Locked groups cannot be altered. Unrelated loose edges/vertices
+and neighboring hair are retained. UV coordinates are copied, not flipped in UV space.
+
+Preflight refuses shared/linked meshes, non-Basis editing, locked or animated/driven
+or absolute Shape Keys, side-named Shape Key masks, vertex-parenting and unsupported
+bound/simulation/index-based modifier data. An enabled Mirror modifier must be
+explicitly disabled for viewport AND render first to prevent duplicate geometry.
+The tool never applies modifiers or disables them itself. Unsupported attributes
+fail during staging, before the original data is swapped. Shape Keys that move a
+shared centerline off the plane are refused rather than changing the source.
+Failure rolls back; successful replacement is one Blender Undo/Redo step.
+
+Validated with 12 synthetic regressions, a real GUI single-step Undo/Redo test and
+the saved X Hair mesh (unbound, asymmetric 118-face / 163-face strands). Neighboring
+hair, source positions, UV/materials and repeated-run counts were checked. Neither
+the saved X.blend nor the user's live scene was changed by validation.
 
 Version 0.61.19 corrects the surface workflow to treat the artist's selection as
 the **top of the finger**. **Finger Top Surface / Bone Roll > Capture Top Strip

@@ -46,6 +46,7 @@ try:
     for side in ('L', 'R'):
         for finger in ('f_index', 'f_middle', 'f_ring', 'f_pinky', 'thumb'):
             names = [f'{finger}.0{i}.{side}' for i in (1, 2, 3)]
+            paired_names = names + [bpy.utils.flip_name(n) for n in names]
             bone = rig.data.bones[names[0]]
             start = rig.matrix_world @ bone.head_local
             forward = (rig.matrix_world.to_3x3() @ (bone.tail_local - bone.head_local)).normalized()
@@ -98,14 +99,15 @@ try:
             if flex.guide_frame(bpy.context)[1].dot(forward) < 0:
                 flex.state(bpy.context).flip_forward = True
             activate(rig, 'OBJECT')
-            skin_before = {n: rig.pose.bones[n].matrix @ rig.data.bones[n].matrix_local.inverted() for n in names}
+            skin_before = {n: rig.pose.bones[n].matrix @ rig.data.bones[n].matrix_local.inverted() for n in paired_names}
             activate(rig, 'EDIT')
             for b in rig.data.edit_bones: b.select = b.name in names
             rig.data.edit_bones.active = rig.data.edit_bones[names[0]]
             _, records = flex.plan(bpy.context)
-            geometry = [(tuple(rig.data.edit_bones[n].head), tuple(rig.data.edit_bones[n].tail)) for n in names]
-            assert flex.apply(bpy.context) == 3
-            assert geometry == [(tuple(rig.data.edit_bones[n].head), tuple(rig.data.edit_bones[n].tail)) for n in names]
+            geometry = [(tuple(rig.data.edit_bones[n].head), tuple(rig.data.edit_bones[n].tail)) for n in paired_names]
+            assert {r['name'] for r in records} == set(paired_names)
+            assert flex.apply(bpy.context) == 6
+            assert geometry == [(tuple(rig.data.edit_bones[n].head), tuple(rig.data.edit_bones[n].tail)) for n in paired_names]
             activate(rig, 'POSE')
             bpy.context.view_layer.update()
             minimum = 1.0
@@ -130,7 +132,7 @@ try:
                 pb.rotation_mode = original_mode
                 pb.matrix_basis = original_basis
                 bpy.context.view_layer.update()
-            metrics.append({'finger': f'{finger}.{side}', 'faces': len(strip), 'positive_bend_dot': minimum})
+            metrics.append({'finger': f'{finger}.{side}', 'faces': len(strip), 'paired_bones': len(records), 'positive_bend_dot': minimum})
     activate(mesh, 'OBJECT')
     assert asset_digest(mesh) == before, 'Mesh/weights/shape keys changed'
     assert hashlib.sha256(path.read_bytes()).hexdigest() == disk_before
