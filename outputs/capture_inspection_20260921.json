@@ -1,0 +1,58 @@
+{
+  "version": [
+    0,
+    61,
+    52
+  ],
+  "object": "Cosha",
+  "active": "MIDDLE.L",
+  "selected": "MIDDLE.L",
+  "counts": [
+    3436,
+    6784,
+    3362
+  ],
+  "selected_input": {
+    "kind": "FACES",
+    "ids": [
+      2580,
+      2606,
+      2611,
+      2612,
+      2620,
+      2623,
+      2778,
+      2805,
+      2822,
+      2963,
+      3358
+    ]
+  },
+  "status": "",
+  "saved_warnings": {
+    "MIDDLE": "This finger surface changed beyond complete loop subdivision/dissolve; rebind this finger only."
+  },
+  "fresh_warnings": {
+    "MIDDLE": "This finger surface changed beyond complete loop subdivision/dissolve; rebind this finger only."
+  },
+  "sides": {
+    "MIDDLE.L": {
+      "error": "",
+      "record": true,
+      "revision": "672c01d0798949839a62c96bb5f930eb",
+      "frame_valid": true,
+      "length": 0.1015411258768499
+    },
+    "MIDDLE.R": {
+      "error": "This finger surface changed beyond complete loop subdivision/dissolve; rebind this finger only.",
+      "record": false,
+      "revision": "",
+      "frame_error": "Capture a finger definition first."
+    }
+  },
+  "current_vertex_map": "Opposite finger has different topology / ring count.",
+  "current_ring_surface": "This finger surface changed beyond complete loop subdivision/dissolve; rebind this finger only.",
+  "fresh_source": "valid",
+  "fresh_mirror": "This finger surface changed beyond complete loop subdivision/dissolve; rebind this finger only.",
+  "fresh_mirror_trace": "Traceback (most recent call last):\n  File \"C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bank.py\", line 319, in remap_record\n    return _remap_record_exact(record, bm, reflection=reflection, target=target)\n  File \"C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bank.py\", line 128, in _remap_record_exact\n    if len(candidates) != 1: raise ValueError('Reference points changed or became ambiguous; recapture this finger only.')\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Reference points changed or became ambiguous; recapture this finger only.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"capture_inspection\", line 44, in <module>\n  File \"C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bank.py\", line 324, in remap_record\n    return _remap_ring_edits(_reflect_evidence(record, reflection), bm, target)\n  File \"C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bank.py\", line 230, in _remap_ring_edits\n    samples = [_row_sample(row, old_points) for row in new_points]\n               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bank.py\", line 189, in _row_sample\n    raise ValueError('This finger surface changed beyond complete loop subdivision/dissolve; rebind this finger only.')\nValueError: This finger surface changed beyond complete loop subdivision/dissolve; rebind this finger only.\n"
+}

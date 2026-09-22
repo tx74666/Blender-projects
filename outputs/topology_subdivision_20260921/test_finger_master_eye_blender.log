@@ -1,0 +1,16 @@
+PASS test_master_hides_every_overlay_and_restores_current_intent
+PASS test_closed_child_never_reopens_when_master_cycles
+PASS test_child_can_change_intent_while_master_off_without_scanning
+PASS test_master_off_cancels_all_queued_work_and_idle_notifications_are_scan_free
+PASS test_switching_fingers_and_prepare_do_not_reopen_master
+PASS test_undo_redo_callbacks_preserve_both_intents_and_revalidate_visible_references
+PASS test_capture_row_uses_master_eye_not_reference_toggle
+00:12.594  reports          | WARNING Path 'D:\Blender5.2\5.2\datafiles\assets\brushes\essentials_brushes-gp_draw.blend' cannot be made relative for Material 'Dots Stroke'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+00:12.594  reports          | WARNING Path 'D:\Blender5.2\5.2\datafiles\assets\brushes\essentials_brushes-gp_draw.blend' cannot be made relative for Material 'Material'
+00:12.735  blend            | Read blend: "C:\Users\Randy\AppData\Local\Temp\finger_master_eye_1xmew20v\closed-eye.blend"
+Info: Saved as "closed-eye.blend"
+PASS test_save_reopen_preserves_closed_master_and_enabled_child
+FINGER_MASTER_EYE_PASS
+
+Blender quit

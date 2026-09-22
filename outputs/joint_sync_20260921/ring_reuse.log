@@ -1,0 +1,21 @@
+PASS test_center_reuse_exceeds_old_travel_limit_without_crossing
+PASS test_global_center_matching_does_not_steal_next_center
+PASS test_protected_rows_stay_fixed_but_exact_center_can_reuse
+PASS test_between_counts_after_support_allocations_and_toggle_off
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_ring_reuse_blender.py", line 185, in <module>
+    test(); print('PASS', name, flush=True)
+    ~~~~^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_ring_reuse_blender.py", line 125, in test_one_or_many_existing_between_rows_are_kept_without_additions
+    staged = layout.stage(source, [plan])
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_layout.py", line 509, in stage
+    _verify(source, new, touched, provenance)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_layout.py", line 412, in _verify
+    raise ValueError(f'Attribute "{old.name}" cannot be preserved; update was discarded.')
+ValueError: Attribute "sharp_face" cannot be preserved; update was discarded.
+
+Error: script failed, file: 'tests/test_finger_ring_reuse_blender.py', exiting.
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

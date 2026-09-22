@@ -1,0 +1,141 @@
+{
+  "version": [
+    0,
+    61,
+    45
+  ],
+  "module": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+  "mode": "OBJECT",
+  "active": "CoshaRig",
+  "objects": [
+    {
+      "name": "Cosha",
+      "mesh": "Mesh.002",
+      "vertices": 3424,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "visible": true,
+          "edit": true,
+          "level": null,
+          "rig": "CoshaRig"
+        },
+        {
+          "name": "Subdivision",
+          "type": "SUBSURF",
+          "visible": true,
+          "edit": true,
+          "level": 1,
+          "rig": null
+        }
+      ],
+      "nonzero_keys": [
+        [
+          "CD Forearm Twist.L",
+          1.0
+        ],
+        [
+          "CD Forearm Twist.R",
+          1.0
+        ]
+      ],
+      "active": "INDEX.L",
+      "status": "",
+      "dirty": "Geometry changed: Recheck symmetry.",
+      "slots": [
+        {
+          "name": "THUMB.L",
+          "error": "",
+          "confirmed": true,
+          "revision": "6b4256f0718d4fbb9cf4e06beda63763"
+        },
+        {
+          "name": "THUMB.R",
+          "error": "",
+          "confirmed": true,
+          "revision": "6b4256f0718d4fbb9cf4e06beda63763-mate"
+        },
+        {
+          "name": "INDEX.L",
+          "error": "",
+          "confirmed": true,
+          "revision": "f5f86676566844bb97b7345fe51d6fa6"
+        },
+        {
+          "name": "INDEX.R",
+          "error": "",
+          "confirmed": true,
+          "revision": "f5f86676566844bb97b7345fe51d6fa6-mate"
+        },
+        {
+          "name": "MIDDLE.L",
+          "error": "",
+          "confirmed": true,
+          "revision": "fb53ef618a2f42b68474db6b734a1963"
+        },
+        {
+          "name": "MIDDLE.R",
+          "error": "",
+          "confirmed": true,
+          "revision": "fb53ef618a2f42b68474db6b734a1963-mate"
+        },
+        {
+          "name": "RING.L",
+          "error": "",
+          "confirmed": true,
+          "revision": "1944c8d54360430e9dd19c8a935e7ab1"
+        },
+        {
+          "name": "RING.R",
+          "error": "",
+          "confirmed": true,
+          "revision": "1944c8d54360430e9dd19c8a935e7ab1-mate"
+        },
+        {
+          "name": "PINKY.L",
+          "error": "",
+          "confirmed": true,
+          "revision": "e1a96bbc099441e2a54830d72595904c"
+        },
+        {
+          "name": "PINKY.R",
+          "error": "",
+          "confirmed": true,
+          "revision": "e1a96bbc099441e2a54830d72595904c-mate"
+        }
+      ],
+      "workflow": {
+        "source": ".CD Finger Workflow Source",
+        "status": "Monitoring: Mesh, Shape Keys, attributes or weights changed since preparation. Release prepared results and prepare again; new edits were not overwritten.",
+        "pairs": [
+          {
+            "name": "PINKY",
+            "applied": false,
+            "recipe": false
+          },
+          {
+            "name": "RING",
+            "applied": false,
+            "recipe": false
+          },
+          {
+            "name": "THUMB",
+            "applied": false,
+            "recipe": false
+          },
+          {
+            "name": "INDEX",
+            "applied": true,
+            "recipe": true
+          },
+          {
+            "name": "MIDDLE",
+            "applied": false,
+            "recipe": false
+          }
+        ]
+      }
+    }
+  ]
+}

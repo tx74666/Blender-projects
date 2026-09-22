@@ -1,0 +1,323 @@
+CLEAR_CACHE 0
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 13, in <module>
+    t.test_side_switch_preserves_selection_parameters_and_warm_frames()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 37, in test_side_switch_preserves_selection_parameters_and_warm_frames
+    obj, rig, pair = fixture()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 19, in fixture
+    ui._invalidate(); guides.hide(invalidate=True)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 174, in hide
+    redraw(invalidate=invalidate)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_confirm_sync_blender.py", line 22, in prepared
+    obj, rig, _ = bound_fixture()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 616, in capture
+    guide.bend_source, guide.bend_record, guide.flip_bend = None, '', False
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 621, in capture
+    _mirror(context, obj, key, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 86, in capture_all
+    bank.sync(C)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 724, in sync
+    _mirror(context, obj, bank.active, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_confirm_sync_blender.py", line 22, in prepared
+    obj, rig, _ = bound_fixture()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 616, in capture
+    guide.bend_source, guide.bend_record, guide.flip_bend = None, '', False
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 621, in capture
+    _mirror(context, obj, key, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 86, in capture_all
+    bank.sync(C)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 724, in sync
+    _mirror(context, obj, bank.active, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_confirm_sync_blender.py", line 22, in prepared
+    obj, rig, _ = bound_fixture()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 616, in capture
+    guide.bend_source, guide.bend_record, guide.flip_bend = None, '', False
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 621, in capture
+    _mirror(context, obj, key, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 86, in capture_all
+    bank.sync(C)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 724, in sync
+    _mirror(context, obj, bank.active, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_confirm_sync_blender.py", line 22, in prepared
+    obj, rig, _ = bound_fixture()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 616, in capture
+    guide.bend_source, guide.bend_record, guide.flip_bend = None, '', False
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 621, in capture
+    _mirror(context, obj, key, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 86, in capture_all
+    bank.sync(C)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 724, in sync
+    _mirror(context, obj, bank.active, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_confirm_sync_blender.py", line 22, in prepared
+    obj, rig, _ = bound_fixture()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 616, in capture
+    guide.bend_source, guide.bend_record, guide.flip_bend = None, '', False
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 84, in capture_all
+    assert bank.capture(C) == f'{digit}.L'
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 621, in capture
+    _mirror(context, obj, key, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_workflow_blender.py", line 20, in bound_fixture
+    capture_all(obj, chosen)
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_bank_blender.py", line 86, in capture_all
+    bank.sync(C)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 724, in sync
+    _mirror(context, obj, bank.active, base, report)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_bank.py", line 510, in _mirror
+    for name in FIELDS: setattr(mate.guide, name, getattr(slot.guide, name))
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 70, in _bend_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 13, in <module>
+    t.test_side_switch_preserves_selection_parameters_and_warm_frames()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 37, in test_side_switch_preserves_selection_parameters_and_warm_frames
+    obj, rig, pair = fixture()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 21, in fixture
+    C.scene.character_designer_finger_definition.overlays_enabled = True
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 29, in _overlays_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 13, in <module>
+    t.test_side_switch_preserves_selection_parameters_and_warm_frames()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 41, in test_side_switch_preserves_selection_parameters_and_warm_frames
+    assert frame_keys() == {d+'.L' for d in bank.detect.DIGITS}
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 33, in frame_keys
+    return {f['bank_key'] for f in guides.display_frames(C)}
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 202, in display_frames
+    serial = view_cache.token(context, obj)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_preview_cache.py", line 57, in token
+    clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 5
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 13, in <module>
+    t.test_side_switch_preserves_selection_parameters_and_warm_frames()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 42, in test_side_switch_preserves_selection_parameters_and_warm_frames
+    switch()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 28, in switch
+    assert bpy.ops.character_designer.finger_setup(action='SIDE') == {'FINISHED'}
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 494, in _geometry_changed
+    redraw()
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 55, in redraw
+    if invalidate: view_cache.clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+CLEAR_CACHE 0
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 13, in <module>
+    t.test_side_switch_preserves_selection_parameters_and_warm_frames()
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 45, in test_side_switch_preserves_selection_parameters_and_warm_frames
+    assert frame_keys() == {d+'.R' for d in bank.detect.DIGITS}
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 33, in frame_keys
+    return {f['bank_key'] for f in guides.display_frames(C)}
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 202, in display_frames
+    serial = view_cache.token(context, obj)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_preview_cache.py", line 57, in token
+    clear()
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 9, in clear
+    traceback.print_stack(limit=7)
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\outputs\single_side_debug.py", line 13, in <module>
+    t.test_side_switch_preserves_selection_parameters_and_warm_frames()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 49, in test_side_switch_preserves_selection_parameters_and_warm_frames
+    assert frame_keys() == {d+'.'+side for d in bank.detect.DIGITS}
+           ~~~~~~~~~~^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_finger_single_side_blender.py", line 33, in frame_keys
+    return {f['bank_key'] for f in guides.display_frames(C)}
+                                   ~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 222, in display_frames
+    if bpy.app.background: _refresh_display()
+                           ~~~~~~~~~~~~~~~~^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_definition_ui.py", line 245, in _refresh_display
+    view_cache.evaluate(context, obj, slot.guide, slot.error)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\finger_preview_cache.py", line 99, in evaluate
+    result = definition.frame(scoped), ''
+             ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\Blender5.2\5.2\python\Lib\unittest\mock.py", line 1234, in _execute_mock_call
+    raise effect
+AssertionError: Warm side switch recomputed frames
+
+Error: script failed, file: 'D:\Blender\Projects\Character\X\outputs\single_side_debug.py', exiting.
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

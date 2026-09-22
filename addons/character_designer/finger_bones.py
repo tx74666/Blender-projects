@@ -11,7 +11,10 @@ from bpy.types import Operator, Panel
 from mathutils import Vector
 
 from .finger_root import draw_finger_root_controls
-from . import finger_flex, finger_layout_ui, finger_definition_ui, finger_bank_ui, finger_symmetry as symmetry
+from . import finger_flex, finger_definition_ui, finger_bank_ui, finger_symmetry as symmetry
+from . import finger_bone_tools
+from . import finger_loop_marks_ui
+from . import finger_bone_mirror
 from .ui_constants import SIDEBAR_CATEGORY, rig_page_active
 
 
@@ -289,7 +292,7 @@ def _set_status(settings, level, message):
 
 
 def _tag_redraw():
-    for screen in bpy.data.screens:
+    for screen in getattr(bpy.data, 'screens', ()):
         for area in screen.areas:
             if area.type == "VIEW_3D":
                 area.tag_redraw()
@@ -524,9 +527,9 @@ class CHARACTERDESIGNER_PT_fingers(Panel):
         mesh_edit = context.mode == "EDIT_MESH" and context.edit_object is not None
 
         finger_definition_ui.draw_controls(layout, context)
-        if mesh_edit:
-            finger_layout_ui.draw_controls(layout, context)
-        finger_flex.draw_definition_controls(layout, context)
+        finger_bone_tools.draw_controls(layout, context)
+        if not finger_bank_ui.bank.active_object(context):
+            finger_flex.draw_definition_controls(layout, context)
 
         if armature is not None:
             layout.prop(finger_flex.state(context), "show_legacy")
@@ -569,7 +572,9 @@ FINGER_BONES_CLASSES = (
     *finger_definition_ui.CLASSES,
     *finger_bank_ui.CLASSES,
     *finger_flex.CLASSES,
-    *finger_layout_ui.CLASSES,
+    *finger_bone_tools.CLASSES,
+    *finger_loop_marks_ui.CLASSES,
+    *finger_bone_mirror.CLASSES,
     CHARACTERDESIGNER_OT_finger_roll,
     CHARACTERDESIGNER_PT_fingers,
 )
@@ -580,11 +585,13 @@ def register_finger_bones_runtime():
     finger_definition_ui.register_runtime()
     finger_bank_ui.register_runtime()
     finger_flex.register_runtime()
-    finger_layout_ui.register_runtime()
+    finger_bone_tools.register_runtime()
+    finger_loop_marks_ui.register_runtime()
 
 
 def unregister_finger_bones_runtime():
-    finger_layout_ui.unregister_runtime()
+    finger_loop_marks_ui.unregister_runtime()
+    finger_bone_tools.unregister_runtime()
     finger_flex.unregister_runtime()
     finger_definition_ui.unregister_runtime()
     finger_bank_ui.unregister_runtime()

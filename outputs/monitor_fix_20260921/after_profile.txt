@@ -1,0 +1,43 @@
+         717366 function calls (716914 primitive calls) in 1.070 seconds
+
+   Ordered by: cumulative time
+   List reduced from 770 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       36    0.002    0.000    0.250    0.007 timer.py:149(client_communication_timer)
+       36    0.001    0.000    0.247    0.007 __init__.py:3003(scene_selection_queue_sync_timer)
+       36    0.001    0.000    0.247    0.007 client_lib.py:180(get_reports)
+       36    0.000    0.000    0.237    0.007 client_lib.py:207(request_report)
+       36    0.000    0.000    0.231    0.006 sessions.py:593(get)
+       36    0.001    0.000    0.231    0.006 sessions.py:500(request)
+       36    0.050    0.001    0.229    0.006 __init__.py:898(sync_object_manager_names)
+       36    0.001    0.000    0.190    0.005 sessions.py:673(send)
+       36    0.001    0.000    0.183    0.005 adapters.py:613(send)
+        7    0.000    0.000    0.172    0.025 __init__.py:375(_source_watch_deferred)
+        7    0.000    0.000    0.172    0.025 __init__.py:263(_source_changed)
+        7    0.002    0.000    0.172    0.025 __init__.py:248(_source_signature)
+       36    0.001    0.000    0.169    0.005 connectionpool.py:592(urlopen)
+       36    0.001    0.000    0.163    0.005 connectionpool.py:377(_make_request)
+       36    0.001    0.000    0.141    0.004 connection.py:369(request)
+       72    0.000    0.000    0.134    0.002 client.py:1049(send)
+    20340    0.014    0.000    0.134    0.000 __init__.py:790(object_manager_has_name_sync_identity)
+       36    0.000    0.000    0.132    0.004 client.py:1342(endheaders)
+       36    0.000    0.000    0.132    0.004 client.py:1104(_send_output)
+       36    0.000    0.000    0.128    0.004 connection.py:275(connect)
+       36    0.000    0.000    0.127    0.004 connection.py:192(_new_conn)
+       36    0.000    0.000    0.127    0.004 connection.py:27(create_connection)
+      721    0.124    0.000    0.124    0.000 {built-in method nt.stat}
+       36    0.122    0.003    0.122    0.003 {method 'connect' of '_socket.socket' objects}
+    20633    0.028    0.000    0.121    0.000 {built-in method builtins.any}
+  477/241    0.013    0.000    0.105    0.000 _bpy_types.py:1180(draw_ls)
+      236    0.042    0.000    0.093    0.000 space_view3d.py:819(draw)
+   142380    0.062    0.000    0.092    0.000 __init__.py:791(<genexpr>)
+      236    0.003    0.000    0.049    0.000 ui_panels.py:4749(header_draw)
+      651    0.009    0.000    0.044    0.000 <frozen ntpath>:737(relpath)
+    66466    0.042    0.000    0.042    0.000 {built-in method builtins.getattr}
+   143194    0.036    0.000    0.036    0.000 {method 'get' of 'bpy_struct' objects}
+      119    0.001    0.000    0.035    0.000 space_toolsystem_common.py:751(draw)
+      119    0.020    0.000    0.033    0.000 space_toolsystem_common.py:674(draw_cls)
+        7    0.000    0.000    0.033    0.005 reload.py:282(timer_reload_files)
+
+

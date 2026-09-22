@@ -1,0 +1,19 @@
+PASS test_first_stage_moves_only_existing_centers_and_bones_without_local_weights
+PASS test_second_stage_requires_confirmation_adds_new_supports_and_never_moves_bones
+PASS test_center_edit_invalidates_finish_but_final_width_update_keeps_center_and_bone_positions
+PASS test_each_phase_failure_restores_mesh_rig_and_phase_metadata
+PASS test_inactive_centers_and_final_results_keep_their_committed_phase
+00:08.671  reports          | WARNING Path 'D:\Blender5.2\5.2\datafiles\assets\brushes\essentials_brushes-gp_draw.blend' cannot be made relative for Material 'Dots Stroke'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+00:08.671  reports          | WARNING Path 'D:\Blender5.2\5.2\datafiles\assets\brushes\essentials_brushes-gp_draw.blend' cannot be made relative for Material 'Material'
+00:08.781  blend            | Read blend: "C:\Users\Randy\AppData\Local\Temp\finger-two-stage-e5qsfzm8\synthetic-two-stage.blend"
+Info: Saved as "synthetic-two-stage.blend"
+PASS test_phase_persists_across_save_reopen_and_second_step_remains_available
+PASS test_inactive_asymmetric_supports_ignore_unconfirmed_bend_direction_drafts
+PASS test_inactive_reprepared_identity_cannot_replace_a_committed_support_layout
+PASS test_repeating_each_phase_does_not_accumulate_and_final_cannot_silently_drop_supports
+PASS test_between_loop_is_added_only_for_an_empty_gap_and_respects_toggle
+PASS test_main_panel_shows_two_phase_actions_without_old_active_joint_loop_row
+TWO_STAGE_NON_NATIVE_PASS
+
+Blender quit
