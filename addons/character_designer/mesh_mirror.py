@@ -459,7 +459,10 @@ def _rebuild(plan):
         # Do not overwrite source centerline edge attributes.
         if not all(i in seams and seams[i] == i for i in edge.vertices):
             edge_sources[pair] = (True, index)
-    new = bpy.data.meshes.new(old.name + ".Mirror")
+    # Keep the replacement temporary and hidden.  The committed mesh receives
+    # the original data-block name below, so repeated mirrors do not expose a
+    # growing ``.Mirror.Mirror`` suffix in Blender's UI.
+    new = bpy.data.meshes.new('.CharacterDesigner.MirrorResult')
     try:
         new.from_pydata(coords, [tuple(old_to_new[i] for i in e.vertices) for e in loose_edges], polys)
         new.update()
@@ -561,6 +564,93 @@ def _group_maps(plan, origins):
     return expected
 
 
+GROUP_WEIGHT_ZERO_EPSILON = 1.0e-7
+GROUP_WEIGHT_COMPARE_TOLERANCE = 1.0e-6
+
+
+def _group_verification_diff(expected, states):
+    """Return semantic vertex-group differences for a staged mesh.
+
+    Blender can retain an explicit zero-weight membership on one mesh and omit
+    it when rebuilding a topology on another.  Those entries have no effect on
+    deformation and should not turn an otherwise identical mirror into a hard
+    failure.  Weight storage is float32, so compare the remaining values with
+    a small tolerance while keeping group names and vertex indices strict.
+    """
+    actual = {state.name: dict(state.weights) for state in states}
+    missing_groups = sorted(set(expected) - set(actual))
+    extra_groups = sorted(set(actual) - set(expected))
+    if missing_groups or extra_groups:
+        return ({
+            'missing_groups': tuple(missing_groups),
+            'extra_groups': tuple(extra_groups),
+            'groups': (),
+        },)
+    differences = []
+    for name in expected:
+        source = {
+            index: value for index, value in expected[name].items()
+            if abs(value) > GROUP_WEIGHT_ZERO_EPSILON
+        }
+        rebuilt = {
+            index: value for index, value in actual[name].items()
+            if abs(value) > GROUP_WEIGHT_ZERO_EPSILON
+        }
+        missing = tuple(sorted(set(source) - set(rebuilt)))
+        extra = tuple(sorted(set(rebuilt) - set(source)))
+        changed = tuple(
+            (index, source[index], rebuilt[index])
+            for index in sorted(set(source) & set(rebuilt))
+            if abs(source[index] - rebuilt[index]) > GROUP_WEIGHT_COMPARE_TOLERANCE
+        )
+        if missing or extra or changed:
+            differences.append({
+                'name': name,
+                'missing': missing,
+                'extra': extra,
+                'changed': changed,
+            })
+    return tuple(differences)
+
+
+def _format_group_verification_diff(diff):
+    if not diff:
+        return ''
+    first = diff[0]
+    if 'missing_groups' in first:
+        parts = []
+        if first['missing_groups']:
+            parts.append('missing group(s): ' + ', '.join(first['missing_groups'][:3]))
+        if first['extra_groups']:
+            parts.append('unexpected group(s): ' + ', '.join(first['extra_groups'][:3]))
+        return '; '.join(parts)
+    parts = [first['name']]
+    if first['missing']:
+        parts.append(f'missing {len(first["missing"])} membership(s)')
+    if first['extra']:
+        parts.append(f'unexpected {len(first["extra"])} membership(s)')
+    if first['changed']:
+        parts.append(f'{len(first["changed"])} changed weight(s)')
+    return ': '.join(parts[:1]) + (' (' + ', '.join(parts[1:]) + ')' if len(parts) > 1 else '')
+
+
+def _unique_hidden_mesh_name():
+    base = '.CharacterDesigner.PreviousMesh'
+    name = base
+    index = 1
+    while bpy.data.meshes.get(name) is not None:
+        name = f'{base}.{index:03d}'
+        index += 1
+    return name
+
+
+def _mesh_display_name(name):
+    """Remove suffixes produced by older Mirror replacements."""
+    while name.endswith('.Mirror'):
+        name = name[:-len('.Mirror')]
+    return name or 'Mesh'
+
+
 def _verify_staged(staging, old, plan, origins, mapping, expected):
     new = staging.data
     if len(new.vertices) != len(origins):
@@ -599,8 +689,10 @@ def _verify_staged(staging, old, plan, origins, mapping, expected):
                 if (key.data[index].co - co).length > plan.epsilon:
                     raise MirrorError(f'Shape Key "{source.name}" failed verification.')
     states = weights._capture_vertex_groups(staging)
-    if {s.name: dict(s.weights) for s in states} != expected:
-        raise MirrorError("Vertex group verification failed.")
+    diff = _group_verification_diff(expected, states)
+    if diff:
+        detail = _format_group_verification_diff(diff)
+        raise MirrorError('Vertex group verification failed' + (f': {detail}' if detail else '.'))
 
 
 def apply_plan(plan, after_commit=None):
@@ -620,6 +712,9 @@ def apply_plan(plan, after_commit=None):
     if plan.reference and _matrix_tuple(plan.reference.matrix_world) != plan.reference_matrix:
         raise MirrorError("The mirror reference moved since preview; preview again.")
     old, staging, new = obj.data, None, None
+    old_name = old.name
+    display_name = _mesh_display_name(old_name)
+    new_name = None
     old_group_count = len(obj.vertex_groups)
     active_index, active_shape = obj.vertex_groups.active_index, obj.active_shape_key_index
     try:
@@ -638,6 +733,13 @@ def apply_plan(plan, after_commit=None):
         # the memberships indexed by the unchanged original group order.
         for name in list(expected)[old_group_count:]:
             obj.vertex_groups.new(name=name)
+        # Preserve the visible data-block name across the replacement.  Keep
+        # the old, now-unused ID under a hidden unique name so Blender's UNDO
+        # stack can still restore it without exposing another ``.Mirror``
+        # suffix in the active object's name.
+        new_name = new.name
+        old.name = _unique_hidden_mesh_name()
+        new.name = display_name
         obj.data = new
         if obj.vertex_groups:
             obj.vertex_groups.active_index = min(active_index, len(obj.vertex_groups) - 1)
@@ -651,6 +753,10 @@ def apply_plan(plan, after_commit=None):
             bpy.ops.object.mode_set(mode='OBJECT')
         if obj.data != old:
             obj.data = old
+        if new and new.name == display_name:
+            new.name = new_name or '.CharacterDesigner.MirrorResult'
+        if old.name != old_name:
+            old.name = old_name
         # Appended groups have no membership in the original mesh. Removing
         # them cannot alter the original group indices or weights.
         while len(obj.vertex_groups) > old_group_count:
