@@ -5,6 +5,21 @@ A shared place to exchange `.blend` files and move Blender projects forward toge
 ## Current Projects
 
 - `X.blend`: Character X work-in-progress.
+- `Build.blend`: the latest published, saved snapshot of the active `Builder6.blend` building project. It is a peer of `X.blend`; the older `Build/Build.blend` is not the source.
+
+### Saving and uploading Build
+
+The working source on this computer is `D:\Blender\Projects\Build\WIP\Builder6.blend`.
+After saving that file normally in Blender, run `Sync-Build.cmd` in this repository,
+then review and commit the changes in GitHub Desktop and push. The sync reads the
+saved file only; it does not save or change the open Blender session. GitHub
+Desktop watches this repository's snapshot, not the source in the separate WIP folder.
+
+Use Git LFS when cloning or updating the two main scene files. Generated test
+scenes, local recovery backups, validation outputs, and old add-on ZIPs are excluded
+from new commits. Their local copies remain available. See
+[`docs/BUILD_DEPENDENCIES.md`](docs/BUILD_DEPENDENCIES.md) for Build's external-file
+requirements and existing missing references.
 
 Open `X.blend` in Blender 5.1 or newer. The current file has the front and side reference images packed into the blend file so the scene opens with its modeling references intact.
 

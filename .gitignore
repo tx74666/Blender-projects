@@ -14,3 +14,23 @@ __pycache__/
 
 # Downloaded/reference assets are kept local until their license is reviewed.
 assets/
+
+# Local recovery, generated validation results, and old add-on packages.
+# These remain on disk; they are not project deliverables.
+/.codex-backups/
+/.character_designer_backups/
+/.codex-package/
+/outputs/
+/task_artifacts/
+/Previews/
+/dist/
+
+# Publish the two main scenes only. Backups/experiments must stay local.
+*.blend
+!/X.blend
+!/Build.blend
+*.blend[0-9]
+*.blend[0-9][0-9]
+*.zip
+*.log
+*~
