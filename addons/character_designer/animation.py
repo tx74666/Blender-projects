@@ -13,6 +13,7 @@ from .ui_constants import SIDEBAR_CATEGORY, UI_PAGE_ANIMATION, active_ui_page
 
 _job = None
 _job_window_manager = None
+_export_window_manager = None
 
 
 def _armature_poll(_self, obj):
@@ -23,7 +24,32 @@ def _settings(context):
     return context.window_manager.character_designer_animation
 
 
+def _main_rig(context):
+    # Character Setup owns this saved choice. Reading it must not resolve to a
+    # selection fallback or copy it into the transient animation settings.
+    setup = getattr(context.scene, "character_designer_setup", None)
+    return setup.rig if setup is not None else None
+
+
+def _main_rig_error(context, rig):
+    if rig.type != "ARMATURE" or rig.library is not None:
+        return "Main Rig must be a local armature."
+    if context.scene.objects.get(rig.name) != rig:
+        return "Main Rig is not in this scene."
+    return ""
+
+
 def _target(context):
+    worklist = getattr(context.scene, "character_designer_animation_worklist", None)
+    if worklist is not None and worklist.workspace_path:
+        rig = worklist.rig
+        if (rig is not None and rig.type == "ARMATURE" and rig.library is None
+                and context.scene.objects.get(rig.name) == rig):
+            return rig
+        return None
+    rig = _main_rig(context)
+    if rig is not None:
+        return None if _main_rig_error(context, rig) else rig
     settings = _settings(context)
     if settings.target:
         return settings.target
@@ -68,7 +94,12 @@ def _poll_job():
 
 
 def stop_animation_runtime():
-    global _job, _job_window_manager
+    global _job, _job_window_manager, _export_window_manager
+    from . import animation_export
+    if bpy.app.timers.is_registered(_poll_action_export):
+        bpy.app.timers.unregister(_poll_action_export)
+    animation_export.cancel_export()
+    _export_window_manager = None
     if bpy.app.timers.is_registered(_poll_job):
         bpy.app.timers.unregister(_poll_job)
     if _job:
@@ -117,6 +148,7 @@ class CharacterDesignerAnimationState(PropertyGroup):
     status: StringProperty(default="", options={"SKIP_SAVE"})
     has_error: BoolProperty(options={"SKIP_SAVE"})
     result_path: StringProperty(subtype="FILE_PATH", options={"SKIP_SAVE"})
+    export_result_path: StringProperty(subtype="FILE_PATH", options={"SKIP_SAVE"})
     log_path: StringProperty(subtype="FILE_PATH", options={"SKIP_SAVE"})
     source: PointerProperty(type=bpy.types.Object, poll=_armature_poll, options={"SKIP_SAVE"})
     unity_directory: StringProperty(name="Unity Exchange Folder", subtype="DIR_PATH")
@@ -142,6 +174,239 @@ def latest_unity_animation(folder):
     if not files:
         raise ValueError("Send an animation from Unity first, or select its .cdanim.json file.")
     return max(files, key=lambda path: (path.stat().st_mtime_ns, path.name))
+
+
+def _poll_action_export():
+    global _export_window_manager
+    from . import animation_export
+    job = animation_export.active_job()
+    if job is None:
+        return None
+    settings = None
+    try:
+        settings = _export_window_manager.character_designer_animation
+        result = animation_export.poll_export(job)
+        if result is None:
+            return 0.25
+        settings.export_result_path = result['filepath']
+        if result.get('link_manifest'):
+            settings.status = 'Synced ' + result['filepath'] + '. Preview and Apply the candidate in Unity.'
+        else:
+            settings.status = 'Exported skeletal Action: ' + result['filepath'] + '. Shape Keys and events are not included.'
+        if result.get('unsupported_channels'):
+            settings.status += ' Omitted: ' + '; '.join(result['unsupported_channels'])
+        settings.has_error = False
+    except Exception as exc:
+        if animation_export.active_job() is job:
+            animation_export.cancel_export(job)
+        if _export_window_manager:
+            settings = _export_window_manager.character_designer_animation
+            settings.status, settings.has_error = str(exc), True
+    scene = job.get('_worklist_scene') if isinstance(job, dict) else None
+    if scene is not None:
+        try:
+            worklist = scene.character_designer_animation_worklist
+            if settings is None:
+                worklist.status, worklist.has_error = 'Action export stopped; its owner is no longer available.', True
+            else:
+                worklist.status, worklist.has_error = settings.status, settings.has_error
+        except ReferenceError:
+            pass
+    _export_window_manager = None
+    _redraw()
+    return None
+
+
+def _link_import(context, manifest_path, model_file):
+    from .animation_link_source import import_source
+    settings = _settings(context)
+    settings.status, settings.has_error = 'Importing linked character and Walk…', False
+    _redraw()
+    try:
+        result = import_source(context, manifest_path, model_file, start_frame=settings.start_frame)
+    except Exception as exc:
+        settings.status, settings.has_error = str(exc), True
+        _redraw()
+        return None
+    settings.target = result.rig
+    settings.unity_directory = str(Path(manifest_path).resolve().parent)
+    settings.status = 'Linked ' + result.action.name + '. Edit this Action, then Sync to Unity.'
+    settings.has_error = False
+    _redraw()
+    return result
+
+
+def _link_idle():
+    from . import animation_export, unity_export
+    return _job is None and animation_export.active_job() is None and not unity_export.export_running()
+
+
+class CHARACTERDESIGNER_OT_animation_link_import(Operator):
+    bl_idname = 'character_designer.animation_link_import'
+    bl_label = 'Link / Import'
+    bl_description = 'Open a Unity animation Link as an independent character and editable Action'
+    filepath: StringProperty(subtype='FILE_PATH')
+    filter_glob: StringProperty(default='character_animation_link.json;*.json', options={'HIDDEN'})
+
+    @classmethod
+    def poll(cls, context):
+        return _link_idle() and not (context.object and context.object.mode == 'EDIT')
+
+    def invoke(self, context, _event):
+        self.filepath = str(unity_exchange_folder(context) / 'character_animation_link.json')
+        context.window_manager.fileselect_add(self)
+        return {'RUNNING_MODAL'}
+
+    def execute(self, context):
+        from .animation_link import load_link
+        try:
+            link = load_link(self.filepath)
+        except Exception as exc:
+            _settings(context).status, _settings(context).has_error = str(exc), True
+            self.report({'ERROR'}, str(exc))
+            return {'CANCELLED'}
+        model_file = link.get('modelFile') or ''
+        if not model_file:
+            bpy.ops.character_designer.animation_link_model('INVOKE_DEFAULT', manifest_path=self.filepath)
+            return {'FINISHED'}
+        return {'FINISHED'} if _link_import(context, self.filepath, model_file) else {'CANCELLED'}
+
+
+class CHARACTERDESIGNER_OT_animation_link_model(Operator):
+    bl_idname = 'character_designer.animation_link_model'
+    bl_label = 'Choose Linked Character FBX'
+    bl_description = 'Choose the exact character model used by the Unity animation Link'
+    filepath: StringProperty(subtype='FILE_PATH')
+    filter_glob: StringProperty(default='*.fbx', options={'HIDDEN'})
+    manifest_path: StringProperty(options={'HIDDEN'})
+
+    @classmethod
+    def poll(cls, _context):
+        return _link_idle()
+
+    def invoke(self, context, _event):
+        context.window_manager.fileselect_add(self)
+        return {'RUNNING_MODAL'}
+
+    def execute(self, context):
+        return {'FINISHED'} if _link_import(context, self.manifest_path, self.filepath) else {'CANCELLED'}
+
+
+class CHARACTERDESIGNER_OT_animation_link_sync(Operator):
+    bl_idname = 'character_designer.animation_link_sync'
+    bl_label = 'Sync to Unity'
+    bl_description = 'Export the linked current Action as a new candidate for Unity preview'
+
+    @classmethod
+    def poll(cls, context):
+        from .animation_link import get_link
+        target = _target(context)
+        if not _link_idle() or target is None:
+            return False
+        try:
+            return get_link(target) is not None
+        except Exception:
+            return False
+
+    def execute(self, context):
+        global _export_window_manager
+        from .animation_link import begin_linked_export
+        try:
+            begin_linked_export(context, _target(context))
+        except Exception as exc:
+            _settings(context).status, _settings(context).has_error = str(exc), True
+            self.report({'ERROR'}, str(exc))
+            return {'CANCELLED'}
+        _export_window_manager = context.window_manager
+        settings = _settings(context)
+        settings.status, settings.has_error = 'Syncing linked Action to a new Unity candidate…', False
+        bpy.app.timers.register(_poll_action_export, first_interval=0.25)
+        _redraw()
+        return {'FINISHED'}
+
+
+class CHARACTERDESIGNER_OT_animation_export(Operator):
+    bl_idname = 'character_designer.animation_export'
+    bl_label = 'Export Action to Unity'
+    bl_description = 'Export one selected skeletal Action to a new FBX; keep the current rig and existing files'
+    filepath: StringProperty(subtype='FILE_PATH')
+    filter_glob: StringProperty(default='*.fbx', options={'HIDDEN'})
+    rig_name: StringProperty(options={'HIDDEN'})
+    action_name: StringProperty(name='Action', options={'HIDDEN'})
+    frame_start: FloatProperty(name='Start Frame', default=1)
+    frame_end: FloatProperty(name='End Frame', default=25)
+    loop: BoolProperty(name='Loop', default=False)
+
+    @classmethod
+    def poll(cls, context):
+        from .animation_export import active_job
+        return _target(context) is not None and active_job() is None and _job is None
+
+    def invoke(self, context, _event):
+        rig = _target(context)
+        action = rig.animation_data.action if rig.animation_data else None
+        if action is None:
+            self.report({'ERROR'}, 'Select an Action in the Action Editor first.')
+            return {'CANCELLED'}
+        self.rig_name, self.action_name = rig.name, action.name
+        self.frame_start, self.frame_end = action.frame_range
+        self.loop = bool(action.get('unity_loop_time', False))
+        from .unity_export import _filename
+        name = ''.join('_' if c in '<>:"/\\|?*' else c for c in action.name)
+        self.filepath = str(unity_exchange_folder(context).parent / 'BlenderActions' / _filename(name, rig))
+        context.window_manager.fileselect_add(self)
+        return {'RUNNING_MODAL'}
+
+    def draw(self, _context):
+        self.layout.label(text='Action: ' + self.action_name)
+        self.layout.prop(self, 'frame_start')
+        self.layout.prop(self, 'frame_end')
+        self.layout.prop(self, 'loop')
+        self.layout.label(text='One Action; NLA is excluded.')
+        self.layout.label(text='Skeletal only: no Shape Keys or events.')
+
+    def execute(self, context):
+        global _export_window_manager
+        from . import animation_export
+        rig = bpy.data.objects.get(self.rig_name) if self.rig_name else _target(context)
+        action = bpy.data.actions.get(self.action_name)
+        try:
+            animation_export.begin_export(context, rig, action, self.filepath,
+                frame_start=self.frame_start, frame_end=self.frame_end, loop=self.loop)
+        except Exception as exc:
+            self.report({'ERROR'}, str(exc))
+            return {'CANCELLED'}
+        _export_window_manager = context.window_manager
+        settings = _settings(context)
+        settings.status, settings.has_error = 'Exporting selected Action in an isolated snapshot…', False
+        bpy.app.timers.register(_poll_action_export, first_interval=0.25)
+        _redraw()
+        return {'FINISHED'}
+
+
+class CHARACTERDESIGNER_OT_animation_export_cancel(Operator):
+    bl_idname = 'character_designer.animation_export_cancel'
+    bl_label = 'Cancel Action Export'
+
+    def execute(self, context):
+        global _export_window_manager
+        from . import animation_export
+        job = animation_export.active_job()
+        animation_export.cancel_export()
+        if bpy.app.timers.is_registered(_poll_action_export):
+            bpy.app.timers.unregister(_poll_action_export)
+        _export_window_manager = None
+        _settings(context).status = 'Action export cancelled. Existing files were preserved.'
+        _settings(context).has_error = False
+        scene = job.get('_worklist_scene') if isinstance(job, dict) else None
+        if scene is not None:
+            try:
+                scene.character_designer_animation_worklist.status = _settings(context).status
+                scene.character_designer_animation_worklist.has_error = False
+            except ReferenceError:
+                pass
+        _redraw()
+        return {'FINISHED'}
 
 
 class CHARACTERDESIGNER_OT_animation_unity_import(Operator):
@@ -235,7 +500,8 @@ class CHARACTERDESIGNER_OT_animation_generate(Operator):
 
     @classmethod
     def poll(cls, context):
-        return _job is None
+        from .animation_export import active_job
+        return _job is None and active_job() is None
 
     def execute(self, context):
         global _job, _job_window_manager
@@ -424,14 +690,52 @@ class CHARACTERDESIGNER_PT_animation(Panel):
     def draw(self, context):
         layout = self.layout
         settings = _settings(context)
-        layout.prop(settings, "target")
-        if not settings.target and _target(context):
-            layout.label(text=f"Using: {_target(context).name}")
+        from .animation_worklist_ui import draw_worklist
+        draw_worklist(layout, context)
+        worklist = context.scene.character_designer_animation_worklist
+        if worklist.workspace_path:
+            if worklist.rig:
+                row = layout.row(align=True)
+                playing = context.screen and context.screen.is_animation_playing
+                row.operator('character_designer.animation_play_pause', text='Pause' if playing else 'Play',
+                             icon='PAUSE' if playing else 'PLAY')
+                row.prop(context.scene, 'frame_current', text='Frame')
+            from .animation_export import active_job
+            if active_job():
+                layout.operator('character_designer.animation_export_cancel', icon='CANCEL')
+            return
+        main_rig = _main_rig(context)
+        if main_rig is None:
+            layout.prop(settings, "target")
+            if not settings.target and _target(context):
+                layout.label(text=f"Using: {_target(context).name}")
+        else:
+            error = _main_rig_error(context, main_rig)
+            if error:
+                layout.label(text=error, icon='ERROR')
+                layout.label(text='Choose Main Rig in Rig > Character Setup.')
         from .unity_animation import active_preview, preview_time_seconds
         target = _target(context)
         preview = active_preview(target) if target else None
         unity = layout.box()
         unity.label(text="Unity Animation", icon="ACTION")
+        from .animation_link import get_link
+        try:
+            linked = get_link(target) if target else None
+        except Exception as exc:
+            linked = None
+            unity.label(text='Link needs attention: ' + str(exc), icon='ERROR')
+        if linked:
+            unity.label(text='Linked Action: ' + linked.get('action_name', 'Walk'), icon='LINKED')
+            if active_preview(target) is None:
+                unity.label(text='Select the linked Action to continue editing.')
+            if _link_idle():
+                unity.operator('character_designer.animation_link_sync', icon='EXPORT')
+            else:
+                unity.label(text='Syncing…')
+            unity.label(text='Save the .blend to keep this Link.')
+        else:
+            unity.operator('character_designer.animation_link_import', icon='LINKED')
         row = unity.row(align=True)
         row.enabled = not preview and _job is None
         row.operator("character_designer.animation_unity_import", text="Import Latest from Unity", icon="IMPORT").use_latest = True
@@ -463,6 +767,16 @@ class CHARACTERDESIGNER_PT_animation(Panel):
             unity.prop(settings, "unity_directory", text="Folder")
             if not settings.unity_directory:
                 unity.label(text=str(unity_exchange_folder(context)))
+        from .animation_export import active_job
+        export = layout.box()
+        export.label(text='Return Action to Unity', icon='EXPORT')
+        action = target.animation_data.action if target and target.animation_data else None
+        export.label(text='Action: ' + (action.name if action else 'Select in Action Editor'))
+        if active_job():
+            export.label(text='Exporting…')
+            export.operator('character_designer.animation_export_cancel', icon='CANCEL')
+        else:
+            export.operator('character_designer.animation_export', icon='EXPORT')
         if settings.status:
             box = layout.box()
             box.alert = settings.has_error
@@ -509,6 +823,11 @@ class CHARACTERDESIGNER_PT_animation(Panel):
 
 
 ANIMATION_CLASSES = (
+    CHARACTERDESIGNER_OT_animation_link_import,
+    CHARACTERDESIGNER_OT_animation_link_model,
+    CHARACTERDESIGNER_OT_animation_link_sync,
+    CHARACTERDESIGNER_OT_animation_export,
+    CHARACTERDESIGNER_OT_animation_export_cancel,
     CharacterDesignerAnimationState,
     CHARACTERDESIGNER_OT_animation_unity_import,
     CHARACTERDESIGNER_OT_animation_play_pause,

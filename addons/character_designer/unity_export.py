@@ -74,11 +74,8 @@ def _helpers(scene):
     return shapes
 
 
-def bound_meshes(context, rig):
-    """Return meshes with a working Armature binding; saved hints cannot add any."""
-    scene = context.scene
-    rigs = _character_armatures(scene, rig)
-    helpers = _helpers(scene)
+def _bound_meshes(scene, rigs, helpers):
+    """Discover bindings using this operation's freshly inspected scene scope."""
     meshes = []
     for obj in scene.objects:
         if obj.type != 'MESH' or obj in helpers:
@@ -91,11 +88,27 @@ def bound_meshes(context, rig):
     return sorted(meshes, key=lambda obj: obj.name)
 
 
-def collect_character(context, rig, config):
+def _collection_scope(context, rig):
+    """One synchronous inspection; never retained between redraws or exports."""
     scene = context.scene
     rigs = _character_armatures(scene, rig)
     helpers = _helpers(scene)
-    eligible = set(bound_meshes(context, rig))
+    return {'rigs': rigs, 'helpers': helpers,
+            'eligible': _bound_meshes(scene, rigs, helpers)}
+
+
+def bound_meshes(context, rig):
+    """Return meshes with a working Armature binding; saved hints cannot add any."""
+    return _collection_scope(context, rig)['eligible']
+
+
+def collect_character(context, rig, config, *, _scope=None):
+    # The panel shares only its current draw's inspection. Operators/export
+    # callers always inspect afresh; no scene-change cache authorizes export.
+    scene = context.scene
+    scope = _collection_scope(context, rig) if _scope is None else _scope
+    rigs, helpers = scope['rigs'], scope['helpers']
+    eligible = set(scope['eligible'])
     objects = set(eligible)
     warnings = []
     setup = character_setup.settings(context)
@@ -343,6 +356,11 @@ def _publish(job, result):
               'unity_status': 'Exported; Unity import has not been verified.',
               'animation_status': 'Rest model only; animation export is not included.',
               'updated_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
+    if report.get('forearm_correction', {}).get('meshes'):
+        prefab = Path(filename).stem + '.Runtime.prefab'
+        report['unity_runtime_usage'] = (
+            f'Use {prefab} after the companion Unity importer completes; '
+            'the runtime prefab is generated in Unity, not by this export.')
     # Keep stale owned outputs rather than deleting assets whose GUIDs may be referenced.
     stale = set((prior or {}).get('files', {})) - set(files)
     if stale:
