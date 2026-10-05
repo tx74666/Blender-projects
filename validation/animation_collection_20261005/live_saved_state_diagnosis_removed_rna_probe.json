@@ -1,0 +1,10 @@
+{
+  "schema": "character-designer.live-save-diagnosis/1",
+  "saved_again": false,
+  "artist_mutation": false,
+  "baseline_source": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\live_loaded_r8_audit_post_save_guard_probe.json",
+  "status": "failed",
+  "error": "StructRNA of type BlenderKitDisclaimerOperator has been removed",
+  "traceback": "Traceback (most recent call last):\n  File \"D:/Blender/Projects/Character/X/Validation/animation_collection_20261005/diagnose_live_saved_state.py\", line 18, in <module>\n    if isinstance(obj, types.FunctionType) and obj.__name__ == 'same_code'\n       ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender5.1\\5.1\\scripts\\modules\\_bpy_types.py\", line 1024, in __getattribute__\n    properties = _StructRNA.path_resolve(self, \"properties\")\nReferenceError: StructRNA of type BlenderKitDisclaimerOperator has been removed\n",
+  "temporary_editor_restored": true
+}

@@ -1,0 +1,4015 @@
+{
+  "success": false,
+  "production_effect_accepted": false,
+  "purpose": "Real saved-Cosha native Dress diagnostic with synthetic representative inputs",
+  "artist_saved_by_verifier": false,
+  "artist_path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source_root": "D:\\MyRepository\\Blender-addons-by-Randy",
+  "version": [
+    0,
+    76,
+    2
+  ],
+  "blender_version": "5.1.0",
+  "artist_before": {
+    "bytes": 32266562,
+    "mtime_ns": 1791137543607181400,
+    "sha256": "9b6cd9b0fb16ffa7d66af9a21b10994488f923bb977886b3df6c904a335a7694"
+  },
+  "thresholds": {
+    "replay_and_restore_guard_m": 5e-05,
+    "additional_native_world_guard": 5e-05,
+    "diagnostic_penetration_m": 0.002,
+    "diagnostic_stop_jitter_m_per_frame": 0.001,
+    "diagnostic_neighbor_edge_ratio": 3.0,
+    "origin": "Replay guard retained from prior real-X checks; other limits are explicit QA diagnostics",
+    "actual_replay_and_restore_guard_m": 5e-05
+  },
+  "limits": [
+    "Saved file only; no live unsaved scene is inspected",
+    "Synthetic inputs are not production walks, turns, squats or foot planting",
+    "Vertex signed distance does not prove absence of triangle intersections",
+    "Closed generated collision proxies are not the actual body mesh",
+    "60-frame default is a short diagnostic, not long-run equilibrium",
+    "Blender Cloth and Unity Magica Cloth require separate effect validation",
+    "No render or production animation acceptance is performed"
+  ],
+  "cases": [
+    {
+      "name": "abrupt_stop",
+      "representative_input_only": true,
+      "frames": 60,
+      "collision_stride": 6,
+      "checks": [
+        {
+          "name": "reset_returns_start_unbaked",
+          "passed": true
+        },
+        {
+          "name": "finite_all_frames",
+          "passed": true
+        },
+        {
+          "name": "representative_native_leg_inputs_reach_evaluated_bones",
+          "passed": true,
+          "maximum_knee_motion_m": {
+            "L": 0.13820559769597762,
+            "R": 0.13820584228857385
+          },
+          "minimum_representative_response_m": 0.01573037574940555
+        },
+        {
+          "name": "fixed_waist_attachment",
+          "passed": true,
+          "maximum_error_m": 2.6749555872404934e-07,
+          "guard_m": 5e-05
+        },
+        {
+          "name": "diagnostic_neighbor_continuity",
+          "passed": true,
+          "maximum_ratio": 1.8756713613449216,
+          "diagnostic_limit": 3.0
+        },
+        {
+          "name": "both_native_leg_colliders_measured",
+          "passed": true,
+          "roles": [
+            "leg.L",
+            "leg.R"
+          ]
+        },
+        {
+          "name": "evaluated_final_weight_identity_available",
+          "passed": true
+        },
+        {
+          "name": "diagnostic_final_free_surface_penetration",
+          "passed": false,
+          "maximum_m": 0.013307525776326656,
+          "diagnostic_limit_m": 0.002
+        },
+        {
+          "name": "diagnostic_stop_tail_jitter",
+          "passed": true,
+          "maximum_m_per_frame": {
+            "proxy": 0.00035197518182260366,
+            "final": 0.00037922348730473875
+          },
+          "diagnostic_limit_m_per_frame": 0.001
+        },
+        {
+          "name": "reset_replay_surface",
+          "passed": true,
+          "maximum_error_m": {
+            "final_m": 0.0,
+            "proxy_m": 0.0
+          },
+          "guard_m": 5e-05
+        },
+        {
+          "name": "native_bake_sealed",
+          "passed": true,
+          "native_cache": {
+            "pointer": 1568241688336,
+            "start": 1,
+            "end": 60,
+            "step": 1,
+            "is_baked": true,
+            "disk": true,
+            "external": false,
+            "name": ""
+          },
+          "saved_range": [
+            1,
+            60
+          ]
+        },
+        {
+          "name": "bake_random_seek_surface",
+          "passed": true,
+          "maximum_error_m": {
+            "final_m": 0.0,
+            "proxy_m": 0.0
+          },
+          "guard_m": 5e-05
+        },
+        {
+          "name": "automatic_manual_automatic_keeps_sealed_cache",
+          "passed": true,
+          "before": {
+            "pointer": 1568241688336,
+            "start": 1,
+            "end": 60,
+            "step": 1,
+            "is_baked": true,
+            "disk": true,
+            "external": false,
+            "name": ""
+          },
+          "manual": {
+            "pointer": 1568241688336,
+            "start": 1,
+            "end": 60,
+            "step": 1,
+            "is_baked": true,
+            "disk": true,
+            "external": false,
+            "name": ""
+          },
+          "restored": {
+            "pointer": 1568241688336,
+            "start": 1,
+            "end": 60,
+            "step": 1,
+            "is_baked": true,
+            "disk": true,
+            "external": false,
+            "name": ""
+          }
+        },
+        {
+          "name": "automatic_mode_has_actual_surface_effect",
+          "passed": true,
+          "displacement_m": 0.10359632608057599
+        },
+        {
+          "name": "mode_roundtrip_surface",
+          "passed": true,
+          "error_m": 0.0,
+          "guard_m": 5e-05
+        },
+        {
+          "name": "manual_fine_tune_after_physics_bake_surface",
+          "passed": true,
+          "control": "SK_Dress_Hem",
+          "displacement_m": 0.004054891321950217,
+          "synthetic_control_delta": [
+            0.0047704074531793594,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "manual_fine_tune_keeps_cache_and_qa_action",
+          "passed": true,
+          "before_cache": {
+            "pointer": 1568241688336,
+            "start": 1,
+            "end": 60,
+            "step": 1,
+            "is_baked": true,
+            "disk": true,
+            "external": false,
+            "name": ""
+          },
+          "after_cache": {
+            "pointer": 1568241688336,
+            "start": 1,
+            "end": 60,
+            "step": 1,
+            "is_baked": true,
+            "disk": true,
+            "external": false,
+            "name": ""
+          }
+        },
+        {
+          "name": "manual_fine_tune_restore_surface",
+          "passed": true,
+          "error_m": 0.0,
+          "guard_m": 5e-05
+        },
+        {
+          "name": "original_models_rest_actions_nla_preserved",
+          "passed": true,
+          "details": {
+            "success": true,
+            "missing": [],
+            "changed": {
+              "meshes": [],
+              "rest": [],
+              "actions": [],
+              "nla_assets": []
+            }
+          }
+        }
+      ],
+      "success": false,
+      "scene_units_to_meters": 1.0,
+      "body_height_world_units": 1.573037574940555,
+      "candidate": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\Cosha_Dress_QA_abrupt_stop.blend",
+      "qa_action": "QA Representative · Abrupt Stop",
+      "qa_action_sha256": "ab83d5e367ec2ddd8ca4fd4e31107ae0ab9f3af523d2507ecd592423acf2079f",
+      "reset_initial": {
+        "start": 1,
+        "is_baked": false
+      },
+      "visual_keyframes": [
+        1,
+        12,
+        21,
+        30,
+        39,
+        48,
+        60
+      ],
+      "measurements": [
+        {
+          "frame": 1,
+          "finite": true,
+          "waist_pin_error_m": 2.9802322387695312e-08,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0,
+          "proxy_ring_neighbor_ratio": 1.0,
+          "native_knee_motion_without_root_m": {
+            "L": 0.0,
+            "R": 0.0
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.017553085461258888,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.021889707073569298,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027502410113811493,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027502410113811493,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.0194790530949831,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.028248529881238937,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.028248529881238937,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01918095164000988,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 0.0007648029713891447,
+            "unproven_minimum_nearest_normal_distance_m": 0.0007648030027667119,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 2,
+          "finite": true,
+          "waist_pin_error_m": 1.251165242772301e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0289994651214511,
+          "proxy_ring_neighbor_ratio": 1.0006401532053224,
+          "native_knee_motion_without_root_m": {
+            "L": 0.02933971400505704,
+            "R": 0.029339751464121717
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00843458584537522,
+          "proxy_hem_delta_rms_m": 0.006588692011060095,
+          "final_hem_delta_max_m": 0.008778938783756655,
+          "final_hem_delta_rms_m": 0.006154414828596377
+        },
+        {
+          "frame": 3,
+          "finite": true,
+          "waist_pin_error_m": 1.284009809763289e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0258814794763709,
+          "proxy_ring_neighbor_ratio": 1.0021166460714008,
+          "native_knee_motion_without_root_m": {
+            "L": 0.057323629851529334,
+            "R": 0.05732370033702215
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.009539518524688363,
+          "proxy_hem_delta_rms_m": 0.008633838187946299,
+          "final_hem_delta_max_m": 0.009315822441875926,
+          "final_hem_delta_rms_m": 0.007929950633181047
+        },
+        {
+          "frame": 4,
+          "finite": true,
+          "waist_pin_error_m": 1.257802770743827e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0160318052769297,
+          "proxy_ring_neighbor_ratio": 1.002586695134114,
+          "native_knee_motion_without_root_m": {
+            "L": 0.08266925909682621,
+            "R": 0.08266941930756919
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0031333747543370823,
+          "proxy_hem_delta_rms_m": 0.0024849376728939346,
+          "final_hem_delta_max_m": 0.0030565904969682384,
+          "final_hem_delta_rms_m": 0.002242093558125764
+        },
+        {
+          "frame": 5,
+          "finite": true,
+          "waist_pin_error_m": 2.4268772415671244e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0190599815311654,
+          "proxy_ring_neighbor_ratio": 1.002341697540403,
+          "native_knee_motion_without_root_m": {
+            "L": 0.10423200851954417,
+            "R": 0.10423215006735355
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0025810468611676823,
+          "proxy_hem_delta_rms_m": 0.0018062366490115894,
+          "final_hem_delta_max_m": 0.002155243861681471,
+          "final_hem_delta_rms_m": 0.0015959245302939221
+        },
+        {
+          "frame": 6,
+          "finite": true,
+          "waist_pin_error_m": 1.2489448945403256e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0153679306925425,
+          "proxy_ring_neighbor_ratio": 1.0025502950814529,
+          "native_knee_motion_without_root_m": {
+            "L": 0.12105660423999959,
+            "R": 0.12105673057804085
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0030105415465612986,
+          "proxy_hem_delta_rms_m": 0.0021780323388276915,
+          "final_hem_delta_max_m": 0.0029461517605418484,
+          "final_hem_delta_rms_m": 0.00195809144618842
+        },
+        {
+          "frame": 7,
+          "finite": true,
+          "waist_pin_error_m": 1.257802770743827e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0222197871982044,
+          "proxy_ring_neighbor_ratio": 1.0066237934670506,
+          "native_knee_motion_without_root_m": {
+            "L": 0.13241295763171165,
+            "R": 0.1324132344094545
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.004675086686218712,
+          "proxy_hem_delta_rms_m": 0.0012333201602026172,
+          "final_hem_delta_max_m": 0.002336488192745734,
+          "final_hem_delta_rms_m": 0.0009250312268705247,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.01755570061504841,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.021889694035053253,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.002478203037753701,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.002478203037753701,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.014111490920186043,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": -0.031085766851902008,
+                "maximum_penetration_m": 0.031085766851902008,
+                "inside_vertices": 6
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": -0.006723823957145214,
+                "maximum_penetration_m": 0.006723823957145214,
+                "inside_vertices": 5
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.004700390622019768,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.4554265036235975,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 2.6229552531731315e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.028682925505563617,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 8,
+          "finite": true,
+          "waist_pin_error_m": 1.2489448945403256e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0403825574361356,
+          "proxy_ring_neighbor_ratio": 1.0068338048686603,
+          "native_knee_motion_without_root_m": {
+            "L": 0.13781705406267322,
+            "R": 0.13781725610637977
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.002191251294537858,
+          "proxy_hem_delta_rms_m": 0.0008066672133118263,
+          "final_hem_delta_max_m": 0.0019898401274683476,
+          "final_hem_delta_rms_m": 0.0007817186198109437
+        },
+        {
+          "frame": 9,
+          "finite": true,
+          "waist_pin_error_m": 2.443972150513042e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0450638081671415,
+          "proxy_ring_neighbor_ratio": 1.002776573509064,
+          "native_knee_motion_without_root_m": {
+            "L": 0.13704099469189798,
+            "R": 0.13704118237655147
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0017654280890086345,
+          "proxy_hem_delta_rms_m": 0.0007503148945889815,
+          "final_hem_delta_max_m": 0.0012749303997214752,
+          "final_hem_delta_rms_m": 0.000513404927089593
+        },
+        {
+          "frame": 10,
+          "finite": true,
+          "waist_pin_error_m": 1.3333208984265686e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0374705709559098,
+          "proxy_ring_neighbor_ratio": 1.0029734832832469,
+          "native_knee_motion_without_root_m": {
+            "L": 0.13011738449437332,
+            "R": 0.13011752138257068
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0029086870696598205,
+          "proxy_hem_delta_rms_m": 0.0009312845448635546,
+          "final_hem_delta_max_m": 0.0020569892345481777,
+          "final_hem_delta_rms_m": 0.0007432662051945311
+        },
+        {
+          "frame": 11,
+          "finite": true,
+          "waist_pin_error_m": 2.4268772415671244e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0601991857625037,
+          "proxy_ring_neighbor_ratio": 1.0025127002789285,
+          "native_knee_motion_without_root_m": {
+            "L": 0.11733869631157583,
+            "R": 0.11733881809554927
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.003881962619826212,
+          "proxy_hem_delta_rms_m": 0.0011360494922701854,
+          "final_hem_delta_max_m": 0.0032509512803685693,
+          "final_hem_delta_rms_m": 0.0009148107091649572
+        },
+        {
+          "frame": 12,
+          "finite": true,
+          "waist_pin_error_m": 1.3328003749250113e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.0909087007589737,
+          "proxy_ring_neighbor_ratio": 1.0023207272112395,
+          "native_knee_motion_without_root_m": {
+            "L": 0.0992517875561866,
+            "R": 0.09925194087990408
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0036316075843235715,
+          "proxy_hem_delta_rms_m": 0.001103778435405968,
+          "final_hem_delta_max_m": 0.004285366298037333,
+          "final_hem_delta_rms_m": 0.0009925274027154673,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.017265383154153824,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.021889671683311462,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.014672341756522655,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.014672341756522655,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.016674406826496124,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": -0.030929671600461006,
+                "maximum_penetration_m": 0.030929671600461006,
+                "inside_vertices": 1
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.008813953027129173,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.015404055826365948,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46235238453256355,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 1.825133722377359e-06,
+            "unproven_minimum_nearest_normal_distance_m": -0.016199285222683102,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 13,
+          "finite": true,
+          "waist_pin_error_m": 1.3514129182113002e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.125593948890656,
+          "proxy_ring_neighbor_ratio": 1.0024403252981227,
+          "native_knee_motion_without_root_m": {
+            "L": 0.07664563821980908,
+            "R": 0.07664583622537902
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00399972754371355,
+          "proxy_hem_delta_rms_m": 0.0011269626368975568,
+          "final_hem_delta_max_m": 0.004655182611542229,
+          "final_hem_delta_rms_m": 0.001053417006533154,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.01725667156279087,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.021889716386795044,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.021954232826828957,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.021954232826828957,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01772576943039894,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": -0.031114501878619194,
+                "maximum_penetration_m": 0.031114501878619194,
+                "inside_vertices": 1
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.018729625269770622,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.017688201740384102,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46563564678537117,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 2.5069475668715313e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.008661093874252401,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 14,
+          "finite": true,
+          "waist_pin_error_m": 6.664001874625056e-08,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1529506935694989,
+          "proxy_ring_neighbor_ratio": 1.0023152625245302,
+          "native_knee_motion_without_root_m": {
+            "L": 0.050526834660116274,
+            "R": 0.0505268251956285
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0031294238181389573,
+          "proxy_hem_delta_rms_m": 0.0010658840921154017,
+          "final_hem_delta_max_m": 0.003620821089752713,
+          "final_hem_delta_rms_m": 0.0008110220421489262
+        },
+        {
+          "frame": 15,
+          "finite": true,
+          "waist_pin_error_m": 4.7706993203109864e-08,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.172492704234062,
+          "proxy_ring_neighbor_ratio": 1.0023111172989494,
+          "native_knee_motion_without_root_m": {
+            "L": 0.022079638644405108,
+            "R": 0.022079637225868497
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0024188030313076502,
+          "proxy_hem_delta_rms_m": 0.000917038740959047,
+          "final_hem_delta_max_m": 0.002306450026872287,
+          "final_hem_delta_rms_m": 0.0005862788928347142
+        },
+        {
+          "frame": 16,
+          "finite": true,
+          "waist_pin_error_m": 2.4314476359010817e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1782363386905643,
+          "proxy_ring_neighbor_ratio": 1.0021230949672157,
+          "native_knee_motion_without_root_m": {
+            "L": 0.007388483908861688,
+            "R": 0.00738847632689782
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.002007614509352043,
+          "proxy_hem_delta_rms_m": 0.0007821274571892017,
+          "final_hem_delta_max_m": 0.0009961437717058593,
+          "final_hem_delta_rms_m": 0.0003583385238432496
+        },
+        {
+          "frame": 17,
+          "finite": true,
+          "waist_pin_error_m": 2.573418027038953e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.177520369197836,
+          "proxy_ring_neighbor_ratio": 1.0023174472435616,
+          "native_knee_motion_without_root_m": {
+            "L": 0.03651462987716296,
+            "R": 0.0365147707782669
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.002336940646673125,
+          "proxy_hem_delta_rms_m": 0.0007452305298266811,
+          "final_hem_delta_max_m": 0.0012806899404902278,
+          "final_hem_delta_rms_m": 0.00039133197944608085
+        },
+        {
+          "frame": 18,
+          "finite": true,
+          "waist_pin_error_m": 5.972094663188382e-08,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1693179393871707,
+          "proxy_ring_neighbor_ratio": 1.0024850814978061,
+          "native_knee_motion_without_root_m": {
+            "L": 0.06395492824932672,
+            "R": 0.06395498057409783
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0022419020852356216,
+          "proxy_hem_delta_rms_m": 0.0007122593616237639,
+          "final_hem_delta_max_m": 0.001420628247625794,
+          "final_hem_delta_rms_m": 0.00040743235816889287
+        },
+        {
+          "frame": 19,
+          "finite": true,
+          "waist_pin_error_m": 1.284009809763289e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.166143759612302,
+          "proxy_ring_neighbor_ratio": 1.0021410102003152,
+          "native_knee_motion_without_root_m": {
+            "L": 0.08845552584563951,
+            "R": 0.08845552518758285
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0021202649293075,
+          "proxy_hem_delta_rms_m": 0.0007074301924138118,
+          "final_hem_delta_max_m": 0.0017644978238493527,
+          "final_hem_delta_rms_m": 0.0005092483716785698,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.01707930862903595,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.02150590717792511,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.01369304396212101,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.01369304396212101,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01666543446481228,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.017781730741262436,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.017781730741262436,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01594458520412445,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.4640673293720411,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 6.988279346842319e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.008478669929900207,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 20,
+          "finite": true,
+          "waist_pin_error_m": 1.284009809763289e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1814153327680728,
+          "proxy_ring_neighbor_ratio": 1.0022881939740735,
+          "native_knee_motion_without_root_m": {
+            "L": 0.10891484890966861,
+            "R": 0.10891516146885037
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0022126199656953755,
+          "proxy_hem_delta_rms_m": 0.000866247659418807,
+          "final_hem_delta_max_m": 0.002675180053122743,
+          "final_hem_delta_rms_m": 0.0007813571797406134
+        },
+        {
+          "frame": 21,
+          "finite": true,
+          "waist_pin_error_m": 1.3657139822709083e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.2272889556126647,
+          "proxy_ring_neighbor_ratio": 1.0073017449569261,
+          "native_knee_motion_without_root_m": {
+            "L": 0.12443158151388478,
+            "R": 0.12443179602393704
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.005756910510616994,
+          "proxy_hem_delta_rms_m": 0.0017135768612109134,
+          "final_hem_delta_max_m": 0.006057905964238865,
+          "final_hem_delta_rms_m": 0.001744925145052336,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566097848117352,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.016948340460658073,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.021065078675746918,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": -0.0014161010039970279,
+                "maximum_penetration_m": 0.0014161010039970279,
+                "inside_vertices": 2
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": -0.0014161010039970279,
+                "maximum_penetration_m": 0.0014161010039970279,
+                "inside_vertices": 2
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.0052821096032857895,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": -0.0002227536024292931,
+                "maximum_penetration_m": 0.0002227536024292931,
+                "inside_vertices": 1
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": -0.0002227536024292931,
+                "maximum_penetration_m": 0.0002227536024292931,
+                "inside_vertices": 1
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.009949029423296452,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.4573246135364698,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 1.3084924830764066e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.020546576648484915,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 22,
+          "finite": true,
+          "waist_pin_error_m": 1.333093194403317e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.284678072969041,
+          "proxy_ring_neighbor_ratio": 1.0071462125825168,
+          "native_knee_motion_without_root_m": {
+            "L": 0.13433520869253476,
+            "R": 0.1343356928520141
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.007225509359030145,
+          "proxy_hem_delta_rms_m": 0.002395191675290885,
+          "final_hem_delta_max_m": 0.007605123908718247,
+          "final_hem_delta_rms_m": 0.0022690723873191156
+        },
+        {
+          "frame": 23,
+          "finite": true,
+          "waist_pin_error_m": 1.341104507446289e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.3469355502329214,
+          "proxy_ring_neighbor_ratio": 1.0057200236083,
+          "native_knee_motion_without_root_m": {
+            "L": 0.13820559769597762,
+            "R": 0.13820584228857385
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.007770160429610561,
+          "proxy_hem_delta_rms_m": 0.0024930022607794976,
+          "final_hem_delta_max_m": 0.008088208910546886,
+          "final_hem_delta_rms_m": 0.002362816801929676
+        },
+        {
+          "frame": 24,
+          "finite": true,
+          "waist_pin_error_m": 1.50678667546486e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.4050091348973595,
+          "proxy_ring_neighbor_ratio": 1.0047137231799168,
+          "native_knee_motion_without_root_m": {
+            "L": 0.135879323617619,
+            "R": 0.13587970765758672
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.007889295166253684,
+          "proxy_hem_delta_rms_m": 0.002406839547816327,
+          "final_hem_delta_max_m": 0.008177604155577323,
+          "final_hem_delta_rms_m": 0.002452569287019038
+        },
+        {
+          "frame": 25,
+          "finite": true,
+          "waist_pin_error_m": 1.3514129182113002e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.4639385177682838,
+          "proxy_ring_neighbor_ratio": 1.0022791428985365,
+          "native_knee_motion_without_root_m": {
+            "L": 0.12670217410295007,
+            "R": 0.12670243561917138
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.008044441105854061,
+          "proxy_hem_delta_rms_m": 0.0028246627984019872,
+          "final_hem_delta_max_m": 0.008340480389199224,
+          "final_hem_delta_rms_m": 0.002628010960009747,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566068045794964,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.016013484448194504,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.018781807273626328,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": -0.002914931159466505,
+                "maximum_penetration_m": 0.002914931159466505,
+                "inside_vertices": 2
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": -0.002914931159466505,
+                "maximum_penetration_m": 0.002914931159466505,
+                "inside_vertices": 2
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.006813065614551306,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": -0.013307525776326656,
+                "maximum_penetration_m": 0.013307525776326656,
+                "inside_vertices": 14
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": -0.013307525776326656,
+                "maximum_penetration_m": 0.013307525776326656,
+                "inside_vertices": 14
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.0037619792856276035,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.45679991384851204,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 2.2803676529292716e-06,
+            "unproven_minimum_nearest_normal_distance_m": -0.024773271405138075,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 26,
+          "finite": true,
+          "waist_pin_error_m": 2.6749555872404934e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.528018386926524,
+          "proxy_ring_neighbor_ratio": 1.002332936831192,
+          "native_knee_motion_without_root_m": {
+            "L": 0.10571766233029246,
+            "R": 0.1057175985300118
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00852106266570396,
+          "proxy_hem_delta_rms_m": 0.0030985402344548556,
+          "final_hem_delta_max_m": 0.0088378032875429,
+          "final_hem_delta_rms_m": 0.00284583799053267
+        },
+        {
+          "frame": 27,
+          "finite": true,
+          "waist_pin_error_m": 1.6875194986024685e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.587851585608176,
+          "proxy_ring_neighbor_ratio": 1.0025982244607743,
+          "native_knee_motion_without_root_m": {
+            "L": 0.07704859759838104,
+            "R": 0.07704894103991333
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.008604597102640662,
+          "proxy_hem_delta_rms_m": 0.0031994372140696048,
+          "final_hem_delta_max_m": 0.008913563081924052,
+          "final_hem_delta_rms_m": 0.0028822732142907226
+        },
+        {
+          "frame": 28,
+          "finite": true,
+          "waist_pin_error_m": 1.197320124506071e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.63981635754502,
+          "proxy_ring_neighbor_ratio": 1.0027785360522838,
+          "native_knee_motion_without_root_m": {
+            "L": 0.047240328622659304,
+            "R": 0.047240622020874805
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00798433525536817,
+          "proxy_hem_delta_rms_m": 0.003157091188262376,
+          "final_hem_delta_max_m": 0.008274592593652753,
+          "final_hem_delta_rms_m": 0.002782071273162556
+        },
+        {
+          "frame": 29,
+          "finite": true,
+          "waist_pin_error_m": 1.3838839248572819e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.6935745933767652,
+          "proxy_ring_neighbor_ratio": 1.002164128327783,
+          "native_knee_motion_without_root_m": {
+            "L": 0.021983088120341825,
+            "R": 0.021983443139181717
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.007843125650151528,
+          "proxy_hem_delta_rms_m": 0.003083382555484218,
+          "final_hem_delta_max_m": 0.008117462697767518,
+          "final_hem_delta_rms_m": 0.002735535519632635
+        },
+        {
+          "frame": 30,
+          "finite": true,
+          "waist_pin_error_m": 2.4755668231600746e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.7456739089876192,
+          "proxy_ring_neighbor_ratio": 1.0026880698361333,
+          "native_knee_motion_without_root_m": {
+            "L": 0.004978848214569067,
+            "R": 0.00497906826132493
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00819762547750765,
+          "proxy_hem_delta_rms_m": 0.003228446603469617,
+          "final_hem_delta_max_m": 0.008523472245013368,
+          "final_hem_delta_rms_m": 0.0028260784775436757,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.01156618446111679,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.014629860408604145,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.009754340164363384,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011652004905045033,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.011652004905045033,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01756277121603489,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.014107629656791687,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.014107629656791687,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01700071431696415,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.4683703078876661,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 2.4560273232054897e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.016214736853726208,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 31,
+          "finite": true,
+          "waist_pin_error_m": 6.143906154658885e-08,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.7926366759583285,
+          "proxy_ring_neighbor_ratio": 1.0026019904802606,
+          "native_knee_motion_without_root_m": {
+            "L": 0.002766581871358938,
+            "R": 0.002766457237676119
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00789429070918867,
+          "proxy_hem_delta_rms_m": 0.0031625611222380343,
+          "final_hem_delta_max_m": 0.008251558616798757,
+          "final_hem_delta_rms_m": 0.0027990331459522328,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.014458360150456429,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.008577327243983746,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.005275865085422993,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.005275865085422993,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.017637798562645912,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.0120127247646451,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.0120127247646451,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01688949391245842,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46826766868936287,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 1.0904942428169306e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.017423913348466158,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 32,
+          "finite": true,
+          "waist_pin_error_m": 1.7265424469495516e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.8357847771187925,
+          "proxy_ring_neighbor_ratio": 1.0024758086537764,
+          "native_knee_motion_without_root_m": {
+            "L": 0.003127925204131266,
+            "R": 0.003127634210651779
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.007313517862862309,
+          "proxy_hem_delta_rms_m": 0.003017287016563449,
+          "final_hem_delta_max_m": 0.007657921455393022,
+          "final_hem_delta_rms_m": 0.0026351897785740386
+        },
+        {
+          "frame": 33,
+          "finite": true,
+          "waist_pin_error_m": 1.3838839248572819e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.8756713613449216,
+          "proxy_ring_neighbor_ratio": 1.0023933332918982,
+          "native_knee_motion_without_root_m": {
+            "L": 0.0005281653231722141,
+            "R": 0.0005281266302439461
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.006767931345779495,
+          "proxy_hem_delta_rms_m": 0.002758886384180981,
+          "final_hem_delta_max_m": 0.007134295202147724,
+          "final_hem_delta_rms_m": 0.002477515903576943
+        },
+        {
+          "frame": 34,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.8436664542245824,
+          "proxy_ring_neighbor_ratio": 1.0031361017307343,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.007700845590740614,
+          "proxy_hem_delta_rms_m": 0.005258244554612789,
+          "final_hem_delta_max_m": 0.0079903351731181,
+          "final_hem_delta_rms_m": 0.004454161631772375
+        },
+        {
+          "frame": 35,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.740516216936408,
+          "proxy_ring_neighbor_ratio": 1.0024626438623903,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.018175056268577926,
+          "proxy_hem_delta_rms_m": 0.008148983198168203,
+          "final_hem_delta_max_m": 0.018792499735245622,
+          "final_hem_delta_rms_m": 0.007248974190220094
+        },
+        {
+          "frame": 36,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.6422187502994616,
+          "proxy_ring_neighbor_ratio": 1.00230740044583,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.016729470740490856,
+          "proxy_hem_delta_rms_m": 0.0072644835300757545,
+          "final_hem_delta_max_m": 0.017355764408311145,
+          "final_hem_delta_rms_m": 0.006572533276830558
+        },
+        {
+          "frame": 37,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.5510077294961448,
+          "proxy_ring_neighbor_ratio": 1.0021911669825796,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.015787371359768407,
+          "proxy_hem_delta_rms_m": 0.006450009810854936,
+          "final_hem_delta_max_m": 0.016536858000915346,
+          "final_hem_delta_rms_m": 0.005722626194873976,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.015743399038910866,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.016517529264092445,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027650458738207817,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027650458738207817,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01740131340920925,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027485040947794914,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027485040947794914,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01675047166645527,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 5.257737575448118e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.0075687373864639085,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 38,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.4495480084337782,
+          "proxy_ring_neighbor_ratio": 1.001785902181205,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.013547556107314056,
+          "proxy_hem_delta_rms_m": 0.004873689382851509,
+          "final_hem_delta_max_m": 0.01410218375153923,
+          "final_hem_delta_rms_m": 0.004247399215913458
+        },
+        {
+          "frame": 39,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.363104277625366,
+          "proxy_ring_neighbor_ratio": 1.0022220359694358,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.010346031542868447,
+          "proxy_hem_delta_rms_m": 0.003561775556301443,
+          "final_hem_delta_max_m": 0.010666903312044446,
+          "final_hem_delta_rms_m": 0.003171489077162571,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.016519010066986084,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.019061684608459473,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027664830908179283,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027664830908179283,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.017406471073627472,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.02790721505880356,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.02790721505880356,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.017078571021556854,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 6.031909288140014e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.0030391727141250158,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 40,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.2967572409517214,
+          "proxy_ring_neighbor_ratio": 1.0020508899789717,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0076199231190354315,
+          "proxy_hem_delta_rms_m": 0.0027348146457712415,
+          "final_hem_delta_max_m": 0.007902303563554865,
+          "final_hem_delta_rms_m": 0.002279184441515917
+        },
+        {
+          "frame": 41,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.2458983804887067,
+          "proxy_ring_neighbor_ratio": 1.002118356344177,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00568975008247534,
+          "proxy_hem_delta_rms_m": 0.0020842047819998348,
+          "final_hem_delta_max_m": 0.005970510576836967,
+          "final_hem_delta_rms_m": 0.0016958238883493183
+        },
+        {
+          "frame": 42,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.2052873605218948,
+          "proxy_ring_neighbor_ratio": 1.0021479964752713,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00406207205786293,
+          "proxy_hem_delta_rms_m": 0.0014846593275288811,
+          "final_hem_delta_max_m": 0.0043096087552987215,
+          "final_hem_delta_rms_m": 0.0011916614847396402
+        },
+        {
+          "frame": 43,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1786692737827813,
+          "proxy_ring_neighbor_ratio": 1.0019981916458627,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.002423332749378459,
+          "proxy_hem_delta_rms_m": 0.0008909034691316432,
+          "final_hem_delta_max_m": 0.0025768082869452535,
+          "final_hem_delta_rms_m": 0.000746193061672159,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.016982898116111755,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.020731881260871887,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027644429355859756,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027644429355859756,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.017714403569698334,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027971433475613594,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027971433475613594,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.017443066462874413,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 3.3211250411113724e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.000541922437150788,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 44,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1664355237663824,
+          "proxy_ring_neighbor_ratio": 1.0020788572669164,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0010001082005489925,
+          "proxy_hem_delta_rms_m": 0.0004182257749461187,
+          "final_hem_delta_max_m": 0.0009899369557404302,
+          "final_hem_delta_rms_m": 0.0003553839684401217
+        },
+        {
+          "frame": 45,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.162853640273293,
+          "proxy_ring_neighbor_ratio": 1.0021128207639427,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0004931804685519686,
+          "proxy_hem_delta_rms_m": 0.00026576741934007377,
+          "final_hem_delta_max_m": 0.0003256397679043907,
+          "final_hem_delta_rms_m": 0.00016029992114680313
+        },
+        {
+          "frame": 46,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1644835397478588,
+          "proxy_ring_neighbor_ratio": 1.0021462914568233,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0006180365794934916,
+          "proxy_hem_delta_rms_m": 0.000308030511491889,
+          "final_hem_delta_max_m": 0.0003699391796883503,
+          "final_hem_delta_rms_m": 0.00016210213040299297
+        },
+        {
+          "frame": 47,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1671590914938759,
+          "proxy_ring_neighbor_ratio": 1.0024119818810382,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0006697315571428256,
+          "proxy_hem_delta_rms_m": 0.00030497241841609797,
+          "final_hem_delta_max_m": 0.0005393617078681777,
+          "final_hem_delta_rms_m": 0.00021242577242399857
+        },
+        {
+          "frame": 48,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1711616837038805,
+          "proxy_ring_neighbor_ratio": 1.0022313778152199,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0006085759050259508,
+          "proxy_hem_delta_rms_m": 0.00030182689702784544,
+          "final_hem_delta_max_m": 0.0006605844314997905,
+          "final_hem_delta_rms_m": 0.00022736726391253957,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.01706213504076004,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.021164847537875175,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027823902666568756,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027823902666568756,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01770845241844654,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.028033196926116943,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.028033196926116943,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.018142230808734894,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 2.365193358855322e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.00027100226475340605,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 49,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1755182193782456,
+          "proxy_ring_neighbor_ratio": 1.0022642068466228,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0006118975888072124,
+          "proxy_hem_delta_rms_m": 0.0002579642637254025,
+          "final_hem_delta_max_m": 0.0005396380356022722,
+          "final_hem_delta_rms_m": 0.00020738268190709276,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.017057739198207855,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.021148523315787315,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.02781297266483307,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.02781297266483307,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01773987151682377,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.028156377375125885,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.028156377375125885,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01820170320570469,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 1.1013964467565529e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.00027094487859358196,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 50,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.178364967469899,
+          "proxy_ring_neighbor_ratio": 1.002258965627082,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0005691363496925999,
+          "proxy_hem_delta_rms_m": 0.00017648799718901115,
+          "final_hem_delta_max_m": 0.0005857800205663951,
+          "final_hem_delta_rms_m": 0.00016020990838990003
+        },
+        {
+          "frame": 51,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.181045560767295,
+          "proxy_ring_neighbor_ratio": 1.0020311001994653,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0003252753238565718,
+          "proxy_hem_delta_rms_m": 0.0001480578471917364,
+          "final_hem_delta_max_m": 0.00021247878801734373,
+          "final_hem_delta_rms_m": 0.00010642230108053343
+        },
+        {
+          "frame": 52,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.18285634393001,
+          "proxy_ring_neighbor_ratio": 1.0023193265949832,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00034964904671370696,
+          "proxy_hem_delta_rms_m": 0.00017022867739586604,
+          "final_hem_delta_max_m": 0.00037922348730473875,
+          "final_hem_delta_rms_m": 0.00014702865218007175
+        },
+        {
+          "frame": 53,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1848264155055694,
+          "proxy_ring_neighbor_ratio": 1.0021048444761822,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0003149659840928468,
+          "proxy_hem_delta_rms_m": 0.00016302027528406312,
+          "final_hem_delta_max_m": 0.0002656553996977226,
+          "final_hem_delta_rms_m": 0.00011136822134124943
+        },
+        {
+          "frame": 54,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1851300813673564,
+          "proxy_ring_neighbor_ratio": 1.0020707677805831,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00035197518182260366,
+          "proxy_hem_delta_rms_m": 0.0001278683649948022,
+          "final_hem_delta_max_m": 0.00021728394340088988,
+          "final_hem_delta_rms_m": 9.717750626873534e-05
+        },
+        {
+          "frame": 55,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1854926617393209,
+          "proxy_ring_neighbor_ratio": 1.002062923697448,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00027774000652250883,
+          "proxy_hem_delta_rms_m": 0.0001432403151897676,
+          "final_hem_delta_max_m": 0.0002829168877762896,
+          "final_hem_delta_rms_m": 0.00011248241088811484,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.017003323882818222,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.02085956558585167,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027791641652584076,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027791641652584076,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01752569153904915,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.0282150711864233,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.0282150711864233,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01872137188911438,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 0.00010118871432496235,
+            "unproven_minimum_nearest_normal_distance_m": -0.0003376688243861281,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        },
+        {
+          "frame": 56,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.186297789592294,
+          "proxy_ring_neighbor_ratio": 1.002231990999913,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0002673448259838529,
+          "proxy_hem_delta_rms_m": 0.00013853196049903085,
+          "final_hem_delta_max_m": 0.00025711109309746975,
+          "final_hem_delta_rms_m": 0.00012242021739157643
+        },
+        {
+          "frame": 57,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1873064215746183,
+          "proxy_ring_neighbor_ratio": 1.0023099385282457,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.0003337991447930072,
+          "proxy_hem_delta_rms_m": 0.00015417092200736482,
+          "final_hem_delta_max_m": 0.00032510144637635694,
+          "final_hem_delta_rms_m": 0.00014601892142749969
+        },
+        {
+          "frame": 58,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1883420609761264,
+          "proxy_ring_neighbor_ratio": 1.0021937810030677,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00023487827729230812,
+          "proxy_hem_delta_rms_m": 0.00013119222289221526,
+          "final_hem_delta_max_m": 0.00020594001023359695,
+          "final_hem_delta_rms_m": 0.00010017045341632838
+        },
+        {
+          "frame": 59,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.189968945176273,
+          "proxy_ring_neighbor_ratio": 1.002177288615735,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00031006546752648264,
+          "proxy_hem_delta_rms_m": 0.00016388550938866567,
+          "final_hem_delta_max_m": 0.0002486385687052718,
+          "final_hem_delta_rms_m": 0.00012943232027130266
+        },
+        {
+          "frame": 60,
+          "finite": true,
+          "waist_pin_error_m": 1.2013700229374393e-07,
+          "pinned_vertices": 32,
+          "final_edge_ratio": 1.1914155672855882,
+          "proxy_ring_neighbor_ratio": 1.0021240426534765,
+          "native_knee_motion_without_root_m": {
+            "L": 5.828706385054656e-08,
+            "R": 5.828706385054656e-08
+          },
+          "final_vertices": 3040,
+          "proxy_vertices": 416,
+          "final_hem_vertices": 800,
+          "evaluated_weights_available": true,
+          "proxy_hem_delta_max_m": 0.00027121058946806103,
+          "proxy_hem_delta_rms_m": 0.00013050642153902554,
+          "final_hem_delta_max_m": 0.00030080429965183503,
+          "final_hem_delta_rms_m": 0.00013419433062101553,
+          "collision": {
+            "CD Collider Pelvis · Dress": {
+              "binding_bone": "Hips",
+              "role": "pelvis_or_other",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.011566126719117165,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.016976576298475266,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.020745372399687767,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.L · Dress": {
+              "binding_bone": "thigh.L",
+              "role": "leg.L",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027923518791794777,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027923518791794777,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.017463022843003273,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            },
+            "CD Collider Thigh.R · Dress": {
+              "binding_bone": "thigh.R",
+              "role": "leg.R",
+              "sign_method": "proved_convex_triangle_normal",
+              "final_all": {
+                "sampled_vertices": 3040,
+                "minimum_signed_distance_m": 0.027616769075393677,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "final_free": {
+                "sampled_vertices": 2880,
+                "minimum_signed_distance_m": 0.027616769075393677,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              },
+              "proxy": {
+                "sampled_vertices": 416,
+                "minimum_signed_distance_m": 0.01749606430530548,
+                "maximum_penetration_m": 0.0,
+                "inside_vertices": 0
+              }
+            }
+          },
+          "registered_body_surface": {
+            "measured": true,
+            "object": "Cosha",
+            "evaluated_vertices": 14470,
+            "sampled_dress_free_vertices": 2880,
+            "closed_triangle_edge_incidence": false,
+            "open_or_nonmanifold_edges": 288,
+            "region_projection_world_units": [
+              -0.46812795540200935,
+              0.1258430059952444
+            ],
+            "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+            "unsigned_minimum_surface_distance_m": 1.4784296581638046e-05,
+            "unproven_minimum_nearest_normal_distance_m": -0.0005097910589029198,
+            "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+            "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+          }
+        }
+      ],
+      "collider_summary": {
+        "CD Collider Pelvis · Dress": {
+          "role": "pelvis_or_other",
+          "binding_bone": "Hips",
+          "final_maximum_penetration_m": 0.0,
+          "proxy_maximum_penetration_m": 0.0,
+          "worst_final_frame": null,
+          "minimum_final_signed_distance_m": 0.014458360150456429
+        },
+        "CD Collider Thigh.L · Dress": {
+          "role": "leg.L",
+          "binding_bone": "thigh.L",
+          "final_maximum_penetration_m": 0.002914931159466505,
+          "proxy_maximum_penetration_m": 0.0,
+          "worst_final_frame": 25,
+          "minimum_final_signed_distance_m": -0.002914931159466505
+        },
+        "CD Collider Thigh.R · Dress": {
+          "role": "leg.R",
+          "binding_bone": "thigh.R",
+          "final_maximum_penetration_m": 0.013307525776326656,
+          "proxy_maximum_penetration_m": 0.0,
+          "worst_final_frame": 25,
+          "minimum_final_signed_distance_m": -0.013307525776326656
+        }
+      },
+      "collision_sampled_frames": [
+        1,
+        7,
+        12,
+        13,
+        19,
+        21,
+        25,
+        30,
+        31,
+        37,
+        39,
+        43,
+        48,
+        49,
+        55,
+        60
+      ],
+      "registered_body_diagnostic_summary": {
+        "sampled_frames": 16,
+        "signed_frames": 0,
+        "actual_body_penetration_proved_by_this_qa": false,
+        "maximum_sampled_signed_penetration_m": null,
+        "coverage": "Unsigned/normal distance only or skipped; actual body penetration is unproved"
+      },
+      "stop_settling": {
+        "frames": [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "waist_relative_max_delta_m_per_frame": {
+          "proxy": 0.00035197518182260366,
+          "final": 0.00037922348730473875
+        },
+        "observation": "Last ten frames only; this short interval is not long-run equilibrium"
+      },
+      "reset_replay": {
+        "start": 1,
+        "is_baked": false
+      },
+      "reset_replay_error": {
+        "final_m": 0.0,
+        "proxy_m": 0.0
+      },
+      "bake_seek_order": [
+        60,
+        1,
+        48,
+        21,
+        39
+      ],
+      "bake_seek_error": {
+        "final_m": 0.0,
+        "proxy_m": 0.0
+      },
+      "mode_capability": "BOTH",
+      "protection": {
+        "success": true,
+        "missing": [],
+        "changed": {
+          "meshes": [],
+          "rest": [],
+          "actions": [],
+          "nla_assets": []
+        }
+      },
+      "saved_visual_frame": 60,
+      "saved_frame_reference": {
+        "final": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\reference_abrupt_stop_final.float32",
+          "float32_values": 9120,
+          "byte_order": "little",
+          "sha256": "7ed12bfac5aeb8cf7203983c7b98acaf78e2322826f038bd6c8a2f438bdcf8d7"
+        },
+        "proxy": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\reference_abrupt_stop_proxy.float32",
+          "float32_values": 1248,
+          "byte_order": "little",
+          "sha256": "dd670e919ba722ed70eb49ec08122daa83b05c6e3829bc4ee74ccac34b4bfc63"
+        }
+      },
+      "candidate_file": {
+        "bytes": 32160225,
+        "mtime_ns": 1791145739397739500,
+        "sha256": "39e7b5e61af6277fa2a306eb0099d21eeeefe2da984a93e6169e6835102f3a34"
+      },
+      "cache_folder_hint": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\blendcache_Cosha_Dress_QA_abrupt_stop",
+      "elapsed_seconds": 27.26314170000842
+    }
+  ],
+  "checks": [
+    {
+      "name": "copy_original_exit_protected_data",
+      "passed": true,
+      "details": {
+        "success": true,
+        "missing": [],
+        "changed": {
+          "meshes": [],
+          "rest": [],
+          "actions": [],
+          "nla_assets": []
+        }
+      }
+    },
+    {
+      "name": "original_assets_preserved_after_all_cases",
+      "passed": true,
+      "details": {
+        "success": true,
+        "missing": [],
+        "changed": {
+          "meshes": [],
+          "rest": [],
+          "actions": [],
+          "nla_assets": []
+        }
+      }
+    },
+    {
+      "name": "candidate_native_bake_save_reopen_abrupt_stop",
+      "passed": true,
+      "maximum_error_m": {
+        "final": 0.0,
+        "proxy": 0.0
+      },
+      "guard_m": 5e-05
+    },
+    {
+      "name": "canonical_source_files_unchanged_during_qa",
+      "passed": true
+    },
+    {
+      "name": "artist_file_unchanged",
+      "passed": true
+    }
+  ],
+  "isolated_background_preflight": {
+    "background": true,
+    "factory_startup_argument": true,
+    "initial_filepath": ""
+  },
+  "source_files": {
+    "skirt_rig.py": {
+      "bytes": 49892,
+      "mtime_ns": 1791141118202233900,
+      "sha256": "4c4340ac4aca06f17068321c9e6d4c57ba792ef7ac7929e57b7a546aac84712e"
+    },
+    "skirt_physics.py": {
+      "bytes": 41475,
+      "mtime_ns": 1791141227648762200,
+      "sha256": "a2d775f9485a183b45c9822530a4c346dd29976ad5dbdd8814e6880f5161ce64"
+    },
+    "skirt_motion_profiles.py": {
+      "bytes": 6936,
+      "mtime_ns": 1791141203566878400,
+      "sha256": "f10ba41c7248623a051d32fe6df320056eb808b9290f97d536c88bc6d77a35ef"
+    },
+    "skirt_motion_tuning.py": {
+      "bytes": 14211,
+      "mtime_ns": 1791142072269025800,
+      "sha256": "4d5c7a9a4915ecda5c05d917ac26efabced996de2deb6f8d4a3dee829d9deb7c"
+    },
+    "body_original_mode.py": {
+      "bytes": 33689,
+      "mtime_ns": 1791078389442081300,
+      "sha256": "d2d8e122c77a56ef314893470a197107462235aff159a05254fa7146e1e8b661"
+    },
+    "limb_ik.py": {
+      "bytes": 448738,
+      "mtime_ns": 1791067800109605600,
+      "sha256": "4b98aed6d182bccb322c8166b81e406433d3648f7b5c6cfe79a7d1419aff2385"
+    },
+    "limb_ik_fk.py": {
+      "bytes": 47377,
+      "mtime_ns": 1791079212770841400,
+      "sha256": "d98c3cc57093b14156fc41eccd929d608aebca163945e88fbd61d7213c8578a2"
+    }
+  },
+  "planned_case_names": [
+    "abrupt_stop"
+  ],
+  "planned_frame_range": [
+    1,
+    60
+  ],
+  "planned_evaluated_frame_passes": 180,
+  "protected_original_content": {
+    "raw_mesh_sha256": {
+      "Clothes": "e48dc4a1cc2db10a88d8b21d17b07eb3f81c6769cedeb8f53be6ad0fc406185a",
+      "Cosha": "68bb336b530cb053501eefe603a08e3550e37cbf0e3e8bd870fe97e9db771cff",
+      "Diamond.001": "6d263b510052b1c10602a03023e0e742536f2ffc8bae157f1ab53a2161c787ee",
+      "Dress": "5e01fc47d559404db6af00050e816829faf88eaaef250e3a9458802a588085e7",
+      "Dress_Backup": "e7e2114e43ee01478b9b0b3f357d6f3871f9cfd30696b7031a8de07026cc28ae",
+      "Ear.001": "16c1fe4b020e98243ba66a4fd20f9540353443355afbb9e55690842c860607ef",
+      "Embedded.001": "de7cbe818a0735e43acf0399719b365bd60ba31965a354976d9faf820bdccbaa",
+      "Hair": "818d1210d736a386ffb35e392b573c71e34a79e023e9314b30e7a22a9f46df22",
+      "Hair1": "5987904466aad39f7eabd4aeab620849a78cfea3cb4442f466a3603e327b5acc",
+      "Hair3": "b04c978450dc51e27bc293b8b1728491e2bbeb9dc796e486f58804fbb4e199b3",
+      "Jacket": "ab125d69657f710f3a8ac3f12922ff2f975b54e72bb1650785adc65414d4f9f7",
+      "ShoeBase": "47087b84922038aab6744b9b52f3e74a5a408ac3e4cc332eb57f3c9c253d0a4f",
+      "Shoes": "f2d2819590eb0e0f41e461661082b2bc6229ae42d06308a4781e3a3d55573497",
+      "Shoes_Primitive": "6ac87d261453c26ea39bec43f8202b30d405466de847e2ba98514e07b78b0b8d",
+      "ShoeUpper2.001": "e6e2e67313fb33c74f31ebadbbcf31c4e5cce67c4ba95d3a1d07cfb992d32b5e",
+      "ShoeUpper3.001": "9b694ce04b2ac81910c8813ad8f39abdb0a40b0af533b1e6e962844bc69b81c0",
+      "ShoeUpperBase": "8eefb9270816622cca7551e3856c05a34e248b96f575a88d6dedfe87b9bd08bd",
+      "SK_Dress_Hem_01_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Hem_02_Shape": "a9e70fb39dec96d24b57f7c4d24b5260de6261e12e71615631fcc12aedf386c6",
+      "SK_Dress_Hem_03_Shape": "4e88109958ac665c3c1235e5770e5d259adcc0b92c0454602ef55cf528c03961",
+      "SK_Dress_Hem_04_Shape": "a9e70fb39dec96d24b57f7c4d24b5260de6261e12e71615631fcc12aedf386c6",
+      "SK_Dress_Hem_05_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Hem_06_Shape": "e45e44b63025a4b3d26f6049990d3e2c072ef83d18ea3ebd7d798c4be7ece2ea",
+      "SK_Dress_Hem_07_Shape": "4e88109958ac665c3c1235e5770e5d259adcc0b92c0454602ef55cf528c03961",
+      "SK_Dress_Hem_08_Shape": "e45e44b63025a4b3d26f6049990d3e2c072ef83d18ea3ebd7d798c4be7ece2ea",
+      "SK_Dress_Mid_01_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Mid_02_Shape": "8b9f0bb0d382fa4b4fcba364ab8a91161f2971a73c7f1662881ebc85d88e329e",
+      "SK_Dress_Mid_03_Shape": "872dfe5de7c153bac6f3050cb121d3143ffdb5992ac1bf0baacf5b6feb40a1fb",
+      "SK_Dress_Mid_04_Shape": "0c0398f866402d464ce4d4312e94d4edd4f4db7cba7d347775a3292350fcdccb",
+      "SK_Dress_Mid_05_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Mid_06_Shape": "0c0398f866402d464ce4d4312e94d4edd4f4db7cba7d347775a3292350fcdccb",
+      "SK_Dress_Mid_07_Shape": "b752ba011c2facf49ee7fe9f3df83a5ba44dc7255922daffdf50166ff18f26d2",
+      "SK_Dress_Mid_08_Shape": "8b9f0bb0d382fa4b4fcba364ab8a91161f2971a73c7f1662881ebc85d88e329e",
+      "SK_Dress_Shape_hem": "4dec72c2086b15a1278dadc510aa02a58867b0366edfe3589dd2ee3d5bdc7a9d",
+      "SK_Dress_Shape_mid": "80a03e4ec2a315f3fd3ea0b740fe384bf61765486f55ab6aedb8a402231a6aed",
+      "SK_Dress_Shape_waist": "e1be86ac0340635002355d5308cd28a951ef881f4fa91b4605abb8bae3fd258a",
+      "Stocking": "797a54d4d01b5d5c0036aea945e295efbf6bc121a56839fde4e998ad79619362",
+      "Strap.001": "0ec1a50605865d83cc791ff783dcf205044ab30caa56fd3aa8115e36d9ceae7c",
+      "Vamp.001": "e5b52164decdc744dbac272e61be84c423cacd3aba8d128c5b902d0e2d28c923",
+      "WGT-rig.001_breast.L": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_breast.L.001": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_breast.R": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_breast.R.001": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_brow.B.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.L.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.L.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.009": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.R.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.R.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.009": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.T.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.L.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.T.L.003": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.L.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.T.L.005": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.L.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.L.007": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.R.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.T.R.003": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.R.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.T.R.005": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.R.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.R.007": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow_end.T.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.B.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_cheek.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.B.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_cheek.T.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.T.L.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_cheek.T.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.T.R.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chest": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_chest.001": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_chin": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_chin.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_chin.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_chin.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chin.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_chin.L.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chin.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_chin.R.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chin_end.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_chin_end.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.L.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.L.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.L.009": "1be4b43ec5d94218dbd7975678d07bd43179f22cbce1c74960de947978d24647",
+      "WGT-rig.001_ear.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.R.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.R.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.R.009": "1be4b43ec5d94218dbd7975678d07bd43179f22cbce1c74960de947978d24647",
+      "WGT-rig.001_ear_end.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear_end.L.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear_end.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear_end.R.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_eye.L": "dac7ad83576e342256603e444404696ab9f8910f808ef15b89e489a217deea64",
+      "WGT-rig.001_eye.L.001": "aae04130de2d735ba0fb6f88d22db21b2e2d34dc411dfc431557cf17591d7497",
+      "WGT-rig.001_eye.R": "dac7ad83576e342256603e444404696ab9f8910f808ef15b89e489a217deea64",
+      "WGT-rig.001_eye.R.001": "aae04130de2d735ba0fb6f88d22db21b2e2d34dc411dfc431557cf17591d7497",
+      "WGT-rig.001_eye_common": "c6cbff53f4ab6dbff804cac99b2cf88f0b9ffdb55a0aa1c3cf8f6cb8850fc323",
+      "WGT-rig.001_eye_common.001": "0f5b1751f522bd20e8e5a63bad6a41bb181b378e15f13f5d08354c0afaaa62cc",
+      "WGT-rig.001_eye_master.L": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_eye_master.L.001": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_eye_master.R": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_eye_master.R.001": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_f_index.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01_ik.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_f_middle.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_foot_fk.L": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_fk.L.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_fk.R": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_fk.R.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_heel_ik.L": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_heel_ik.L.001": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_heel_ik.R": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_heel_ik.R.001": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_ik.L": "9dcf490b51c9492c395fd30206bc91986cb1c143cb61c6e39af13216ef6605d4",
+      "WGT-rig.001_foot_ik.L.001": "edbc23ccaeca2e90994a85a6b27f81efdb2dd272742f86b555cf52be482bdf48",
+      "WGT-rig.001_foot_ik.R": "9dcf490b51c9492c395fd30206bc91986cb1c143cb61c6e39af13216ef6605d4",
+      "WGT-rig.001_foot_ik.R.001": "edbc23ccaeca2e90994a85a6b27f81efdb2dd272742f86b555cf52be482bdf48",
+      "WGT-rig.001_foot_spin_ik.L": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_spin_ik.L.001": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_spin_ik.R": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_spin_ik.R.001": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_foot_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_foot_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_foot_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hair.L.028": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.029": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.030": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.031": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.032": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.033": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.034": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.035": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.036": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.037": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.038": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.039": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.040": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.041": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.042": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.043": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.044": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.045": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.046": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.047": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.048": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.049": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.050": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.051": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.052": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.053": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.054": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.055": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.028": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.029": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.030": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.031": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.032": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.033": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.034": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.035": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.036": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.037": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.038": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.039": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.040": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.041": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.042": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.043": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.044": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.045": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.046": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.047": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.048": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.049": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.050": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.051": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.052": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.053": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.054": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.055": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hand_fk.L": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_fk.L.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_fk.R": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_fk.R.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_ik.L": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_ik.L.001": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_ik.R": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_ik.R.001": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hand_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hand_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hand_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_head": "2fcab9fba216df486f4913d252a3b2faeb57520ee3944fe03ed421df64185519",
+      "WGT-rig.001_head.001": "2fcab9fba216df486f4913d252a3b2faeb57520ee3944fe03ed421df64185519",
+      "WGT-rig.001_hips": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_hips.001": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_jaw": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.L.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.L.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.R.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.R.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw_master": "61be658ff77d18bb100f2ef67ca488cc71c47afe2fe9e57a4f7c0d96f4efbbfd",
+      "WGT-rig.001_jaw_master.001": "61be658ff77d18bb100f2ef67ca488cc71c47afe2fe9e57a4f7c0d96f4efbbfd",
+      "WGT-rig.001_jaw_master_mouth": "13eb23f3636d16aac467985c384797cba34b060e6a81db07ad15a39e510807d4",
+      "WGT-rig.001_jaw_master_mouth.001": "9afdebabeacd539b41fbb0cd9d720eccea5eda96d647876ca67f641eaee6e372",
+      "WGT-rig.001_lid.B.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.L.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.L.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.L.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.B.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.R.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.R.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.R.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.B.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.L.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.L.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.L.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.T.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.R.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.R.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.R.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.T.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lip.B": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip.B.001": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.B.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.B.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.T": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip.T.001": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.T.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.T.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.T.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.T.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip_end.L.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip_end.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip_end.R.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip_end.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_neck": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_neck.001": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_nose": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.005": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_nose.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.009": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.L.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_nose.L.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.R.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_nose.R.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose_end.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose_end.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose_end.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose_master": "51ed0c6cbdb32e96d59b7c307101c3c06e070160a628e0c35bdf9b1cd9683c1c",
+      "WGT-rig.001_nose_master.001": "512339307fe9706439635ce70723dfff33bb8f3597fe2923f89a2797ee1a5d92",
+      "WGT-rig.001_palm.L": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_palm.L.001": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_palm.R": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_palm.R.001": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_root": "8359eba2ff3ddb01cd3b5e8db2a16d2627f07ce42b8822ed39dc01b15af27d34",
+      "WGT-rig.001_root.001": "8359eba2ff3ddb01cd3b5e8db2a16d2627f07ce42b8822ed39dc01b15af27d34",
+      "WGT-rig.001_shin_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shoulder.L": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_shoulder.L.001": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_shoulder.R": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_shoulder.R.001": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_spine_fk": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.001": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.002": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_spine_fk.003": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_spine_fk.004": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.005": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.006": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_spine_fk.007": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_teeth.B": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_teeth.B.001": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_teeth.T": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_teeth.T.001": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_temple.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_temple.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_temple.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_temple.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_ik.L": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik.L.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik.R": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik.R.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik_target.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_ik_target.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_ik_target.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_ik_target.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_parent.L": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_parent.L.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_parent.R": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_parent.R.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thumb.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_toe_fk.L": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_fk.L.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_fk.R": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_fk.R.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.L": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.L.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.R": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.R.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_tongue": "61be658ff77d18bb100f2ef67ca488cc71c47afe2fe9e57a4f7c0d96f4efbbfd",
+      "WGT-rig.001_tongue.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_torso": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_torso.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_tweak_spine": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.006": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.007": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.008": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.009": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.010": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.011": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.006": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.007": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_ik.L": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik.L.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik.R": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik.R.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik_target.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_ik_target.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_ik_target.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_ik_target.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_parent.L": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_parent.L.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_parent.R": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_parent.R.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_VIS_thigh_ik_pole.L": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_thigh_ik_pole.L.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_thigh_ik_pole.R": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_thigh_ik_pole.R.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.L": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.L.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.R": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.R.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT_CoshaRig_Breast_L": "0c20ab1a7e2381a8c82235e10fb2285384ad8b0606324a3d3394d6d4cf7bd5bd",
+      "WGT_CoshaRig_Breast_R": "e81974134f74672353d9e31a32e2fe76f0e7a733ed80e89b5bf0ea373dac8487",
+      "WGT_CoshaRig_Eyes_Left": "481541004a1b4300399c9f11d1844510fdd3a6a4ef4a823d3f119d2b678f7936",
+      "WGT_CoshaRig_Eyes_Master": "7d325b50b02f8ace1440a9c91810e51004c768d6b1d612d1045d94020648248c",
+      "WGT_CoshaRig_Eyes_Right": "481541004a1b4300399c9f11d1844510fdd3a6a4ef4a823d3f119d2b678f7936",
+      "WGT_CoshaRig_FK_forearm.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_forearm.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_shin.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_shin.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_thigh.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_thigh.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_upper_arm.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_upper_arm.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_Foot_Roll.L": "af249b2d2b385a104d296a65727b1b8c8cc7e72f95e92337da1637f12b5dfdc2",
+      "WGT_CoshaRig_Foot_Roll.R": "af249b2d2b385a104d296a65727b1b8c8cc7e72f95e92337da1637f12b5dfdc2",
+      "WGT_CoshaRig_Head": "15c2e013afece5d6b567e9b90d0d114e0f53d3380706ad5e1b40a8b1a894e5f5",
+      "WGT_CoshaRig_Hips": "2886b194aa683a32127a7eeabd37af5fcba292163b666c82f72a5bfe7fe713c2",
+      "WGT_CoshaRig_Neck": "592be1ebf590541abbb0e46b00c9729e2402bf8e17c9edc852d35be70d2b8a6f",
+      "WGT_CoshaRig_Root": "b5d2359c81f5410efb6eefa432501ace08ad35423cbdb5cdde2b12c9124cabfb",
+      "WGT_CoshaRig_Toe_Bend.L": "301ed5861c8ab591a04caded8bebf75bed62d17e14e6e722b47c03cf3f142bc7",
+      "WGT_CoshaRig_Toe_Bend.R": "301ed5861c8ab591a04caded8bebf75bed62d17e14e6e722b47c03cf3f142bc7",
+      "WGT_CoshaRig_Torso_Bend": "32ffa5a2a17e1d099df73605a3d9337b7ccf30bf92fd1da0062c816d93e9f699",
+      "WGT_CoshaRig_Torso_FK_01": "fbc13deabfdc3adfa76b2bb50b85d4fb999793e8a8c88d3d2eef2937753f8e21",
+      "WGT_CoshaRig_Torso_FK_02": "fbc13deabfdc3adfa76b2bb50b85d4fb999793e8a8c88d3d2eef2937753f8e21",
+      "WGT_CoshaRig_Torso_FK_03": "fbc13deabfdc3adfa76b2bb50b85d4fb999793e8a8c88d3d2eef2937753f8e21",
+      "WGT_Randy_Finger": "301ed5861c8ab591a04caded8bebf75bed62d17e14e6e722b47c03cf3f142bc7",
+      "WGT_Randy_FootIK.L": "3a294b9201a569cda8386053b55d6c253601a738bd3d5fd38497b946be8abeff",
+      "WGT_Randy_FootIK.R": "61093d7ec360974c9865fb20786ff864e07deca6f729dd55dbac8354e3419ad6",
+      "WGT_Randy_HandIK": "9ba9e7b1d82d02416c6de37b14fa574ae2d3379a3e0224e730f298f233078a58",
+      "WGT_Randy_PoleArrow": "daaf128686fc460ffebd2f5fec385381f8fec37fff0057f1b561151bc346880c",
+      "WGT_Randy_Shoulder": "c9dbc18533419522e3e8da5ac05f2b6aacf50fad850372913e92b4bdd9596216",
+      "Wide Strap.001": "96f62243b0b66ee328188b2c8b9f79d357c3df33fe226b1c339359f3bf299d88"
+    },
+    "rest_sha256": {
+      "Anime Girl Base Mesh": "a7913f0ff7ec3cf01a6f3d5df69d538a87a1e9013f4be162d3947f3fab4b2cc3",
+      "Anime Girl Base Mesh.001": "45f5cfbcd445e60f9605a18deedb4ec01426fd5c23a27ac79c3d43ac62fb2a0a",
+      "CoshaRig": "7511de8262a7db5389f36c056850870c1db11ecd85b191ad6c975ee7880f95f5",
+      "Strap2.001": "84e2bc5ca2d3118d0a5bda2bcdce7f8336303cfda0fe72a4f661ea322034403e"
+    },
+    "author_action_sha256": {
+      " Attack 1 (1_24)": "8f78cbd2cf22baac3ec0b1c35e55cffa57fd4ea145ef164eb068ad9d44f10321",
+      "rig.001Action.002": "2681c554a1d2b416e1605e4e978355cb483577ec3cb2599ea0900440ca24edf2",
+      "ShoesAction": "8c363befab31d6ab2d3227ec9f61501136d3f0332c945cad84233cceca66fdc5"
+    },
+    "nla_assets_sha256": "bf8893ab6b9486dbdf3a78b0390b8677806df7e7909654feda31adfe04b73acd"
+  },
+  "initial_saved_owned_cache": {
+    "physics_present": false,
+    "allowed": true,
+    "policy": "Refuse any pre-existing sealed, disk, external or baking cache; no artist cache files are enumerated or touched",
+    "reason": "No saved owned Dress physics cache"
+  },
+  "ownership": {
+    "source": "Dress",
+    "main_rig": "CoshaRig",
+    "owner": "857c5aaad1ac4160953847b083deba20",
+    "shared_registry_pointer_proved": true,
+    "chain_count": 8,
+    "segment_count": 4,
+    "shared_bone_names": [
+      "SK_Dress_DEF_01_01",
+      "SK_Dress_DEF_01_02",
+      "SK_Dress_DEF_01_03",
+      "SK_Dress_DEF_01_04",
+      "SK_Dress_DEF_02_01",
+      "SK_Dress_DEF_02_02",
+      "SK_Dress_DEF_02_03",
+      "SK_Dress_DEF_02_04",
+      "SK_Dress_DEF_03_01",
+      "SK_Dress_DEF_03_02",
+      "SK_Dress_DEF_03_03",
+      "SK_Dress_DEF_03_04",
+      "SK_Dress_DEF_04_01",
+      "SK_Dress_DEF_04_02",
+      "SK_Dress_DEF_04_03",
+      "SK_Dress_DEF_04_04",
+      "SK_Dress_DEF_05_01",
+      "SK_Dress_DEF_05_02",
+      "SK_Dress_DEF_05_03",
+      "SK_Dress_DEF_05_04",
+      "SK_Dress_DEF_06_01",
+      "SK_Dress_DEF_06_02",
+      "SK_Dress_DEF_06_03",
+      "SK_Dress_DEF_06_04",
+      "SK_Dress_DEF_07_01",
+      "SK_Dress_DEF_07_02",
+      "SK_Dress_DEF_07_03",
+      "SK_Dress_DEF_07_04",
+      "SK_Dress_DEF_08_01",
+      "SK_Dress_DEF_08_02",
+      "SK_Dress_DEF_08_03",
+      "SK_Dress_DEF_08_04",
+      "SK_Dress_Hem",
+      "SK_Dress_Hem_01",
+      "SK_Dress_Hem_02",
+      "SK_Dress_Hem_03",
+      "SK_Dress_Hem_04",
+      "SK_Dress_Hem_05",
+      "SK_Dress_Hem_06",
+      "SK_Dress_Hem_07",
+      "SK_Dress_Hem_08",
+      "SK_Dress_MCH_01_01",
+      "SK_Dress_MCH_01_02",
+      "SK_Dress_MCH_01_03",
+      "SK_Dress_MCH_01_04",
+      "SK_Dress_MCH_02_01",
+      "SK_Dress_MCH_02_02",
+      "SK_Dress_MCH_02_03",
+      "SK_Dress_MCH_02_04",
+      "SK_Dress_MCH_03_01",
+      "SK_Dress_MCH_03_02",
+      "SK_Dress_MCH_03_03",
+      "SK_Dress_MCH_03_04",
+      "SK_Dress_MCH_04_01",
+      "SK_Dress_MCH_04_02",
+      "SK_Dress_MCH_04_03",
+      "SK_Dress_MCH_04_04",
+      "SK_Dress_MCH_05_01",
+      "SK_Dress_MCH_05_02",
+      "SK_Dress_MCH_05_03",
+      "SK_Dress_MCH_05_04",
+      "SK_Dress_MCH_06_01",
+      "SK_Dress_MCH_06_02",
+      "SK_Dress_MCH_06_03",
+      "SK_Dress_MCH_06_04",
+      "SK_Dress_MCH_07_01",
+      "SK_Dress_MCH_07_02",
+      "SK_Dress_MCH_07_03",
+      "SK_Dress_MCH_07_04",
+      "SK_Dress_MCH_08_01",
+      "SK_Dress_MCH_08_02",
+      "SK_Dress_MCH_08_03",
+      "SK_Dress_MCH_08_04",
+      "SK_Dress_Mid",
+      "SK_Dress_Mid_01",
+      "SK_Dress_Mid_02",
+      "SK_Dress_Mid_03",
+      "SK_Dress_Mid_04",
+      "SK_Dress_Mid_05",
+      "SK_Dress_Mid_06",
+      "SK_Dress_Mid_07",
+      "SK_Dress_Mid_08",
+      "SK_Dress_PHYS_01_01",
+      "SK_Dress_PHYS_01_02",
+      "SK_Dress_PHYS_01_03",
+      "SK_Dress_PHYS_01_04",
+      "SK_Dress_PHYS_02_01",
+      "SK_Dress_PHYS_02_02",
+      "SK_Dress_PHYS_02_03",
+      "SK_Dress_PHYS_02_04",
+      "SK_Dress_PHYS_03_01",
+      "SK_Dress_PHYS_03_02",
+      "SK_Dress_PHYS_03_03",
+      "SK_Dress_PHYS_03_04",
+      "SK_Dress_PHYS_04_01",
+      "SK_Dress_PHYS_04_02",
+      "SK_Dress_PHYS_04_03",
+      "SK_Dress_PHYS_04_04",
+      "SK_Dress_PHYS_05_01",
+      "SK_Dress_PHYS_05_02",
+      "SK_Dress_PHYS_05_03",
+      "SK_Dress_PHYS_05_04",
+      "SK_Dress_PHYS_06_01",
+      "SK_Dress_PHYS_06_02",
+      "SK_Dress_PHYS_06_03",
+      "SK_Dress_PHYS_06_04",
+      "SK_Dress_PHYS_07_01",
+      "SK_Dress_PHYS_07_02",
+      "SK_Dress_PHYS_07_03",
+      "SK_Dress_PHYS_07_04",
+      "SK_Dress_PHYS_08_01",
+      "SK_Dress_PHYS_08_02",
+      "SK_Dress_PHYS_08_03",
+      "SK_Dress_PHYS_08_04",
+      "SK_Dress_Waist"
+    ]
+  },
+  "saved_frame": 39,
+  "initial_original_active": false,
+  "author_animation_backup": [
+    {
+      "owner": [
+        "Object",
+        "CoshaRig",
+        null
+      ],
+      "action": null,
+      "slot": null,
+      "nla_track_flags": []
+    }
+  ],
+  "input_definition": {
+    "native_leg_chains": {
+      "L": [
+        "thigh.L",
+        "shin.L",
+        "foot.L"
+      ],
+      "R": [
+        "thigh.R",
+        "shin.R",
+        "foot.R"
+      ]
+    },
+    "bone_local_rotation_axes": {
+      "thigh.L": [
+        -0.00020581901480909437,
+        0.003781681414693594,
+        0.999992847442627
+      ],
+      "shin.L": [
+        -1.9061393686570227e-05,
+        0.003787209279835224,
+        0.999992847442627
+      ],
+      "foot.L": [
+        0.994172215461731,
+        -0.09207271039485931,
+        -0.05607270821928978
+      ],
+      "thigh.R": [
+        0.00020583569130394608,
+        -0.0037822287995368242,
+        0.999992847442627
+      ],
+      "shin.R": [
+        1.9093535229330882e-05,
+        -0.0037877829745411873,
+        0.999992847442627
+      ],
+      "foot.R": [
+        0.9941720962524414,
+        0.09207209944725037,
+        0.05607636645436287
+      ]
+    },
+    "height_world_units": 1.573037574940555,
+    "height_definition": "Body deform Rest head/tail Z extent excluding owned Dress, multiplied by rig world Z scale",
+    "forward_axis": "MainRig local +Y",
+    "up_axis": "MainRig local +Z",
+    "leg_bend_axis": "MainRig Rest +X converted to each native bone local space",
+    "motion_formulas": {
+      "walk": "+Y .28*height, two sine cycles, +/-18 degree thighs and up to -20 degree shin swing",
+      "turn": "100 degree smooth local-Z yaw plus .08*height forward",
+      "leg_raise": "Left native thigh +55 degree and shin -20 degree smooth hold/release",
+      "squat": "Both thighs +50, shins -85, feet +15 degrees; root -0.085*height; not planted feet",
+      "abrupt_stop": "+Y .32*height travel stops by 55 percent; leg swing smoothly ends by that point"
+    }
+  },
+  "physics_present_in_saved_file": false,
+  "physics_added_to_candidate_only": true,
+  "native_profile": {
+    "version": 1,
+    "identity": {
+      "owner": "857c5aaad1ac4160953847b083deba20",
+      "chain_count": 8,
+      "segment_count": 4
+    },
+    "capability": "BOTH",
+    "mode": "AUTOMATIC",
+    "settings": {
+      "quality": 8,
+      "mass": 0.15000000596046448,
+      "stretch": 25.0,
+      "shear": 10.0,
+      "bend": 0.800000011920929,
+      "damping": 5.0,
+      "bend_damping": 1.0,
+      "air_damping": 3.0,
+      "gravity": 1.0,
+      "waist_depth": 0.0,
+      "transition": 0.35,
+      "recovery": 0.0,
+      "pin_stiffness": 1.0,
+      "collision_quality": 4,
+      "collision_margin": 0.008000000015618331,
+      "self_collision": false,
+      "self_margin": 0.06288770554348293,
+      "self_friction": 5.0
+    }
+  },
+  "scene_units_to_meters": 1.0,
+  "fps": 30.0,
+  "physics_graph_proved": {
+    "proxy": "CD Cloth Cage · Dress",
+    "colliders": [
+      "CD Collider Pelvis · Dress",
+      "CD Collider Thigh.L · Dress",
+      "CD Collider Thigh.R · Dress"
+    ],
+    "rows": 13,
+    "columns": 32
+  },
+  "registered_body_status": {
+    "registered_pointer_only": true,
+    "measured": true,
+    "vertex_budget": 100000,
+    "object": "Cosha",
+    "conservative_subdivision_vertex_estimate": 14632,
+    "definition": "Actual evaluated registered Body, with Dress samples in native pelvis-to-knee projection interval"
+  },
+  "prepared_copy": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\Cosha_Dress_QA_prepared.blend",
+  "final_protection": {
+    "success": true,
+    "missing": [],
+    "changed": {
+      "meshes": [],
+      "rest": [],
+      "actions": [],
+      "nla_assets": []
+    }
+  },
+  "candidate_save_reopen": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\Cosha_Dress_QA_abrupt_stop.blend",
+      "frame": 60,
+      "is_baked": true,
+      "error_m": {
+        "final": 0.0,
+        "proxy": 0.0
+      }
+    }
+  ],
+  "source_files_after": {
+    "skirt_rig.py": {
+      "bytes": 49892,
+      "mtime_ns": 1791141118202233900,
+      "sha256": "4c4340ac4aca06f17068321c9e6d4c57ba792ef7ac7929e57b7a546aac84712e"
+    },
+    "skirt_physics.py": {
+      "bytes": 41475,
+      "mtime_ns": 1791141227648762200,
+      "sha256": "a2d775f9485a183b45c9822530a4c346dd29976ad5dbdd8814e6880f5161ce64"
+    },
+    "skirt_motion_profiles.py": {
+      "bytes": 6936,
+      "mtime_ns": 1791141203566878400,
+      "sha256": "f10ba41c7248623a051d32fe6df320056eb808b9290f97d536c88bc6d77a35ef"
+    },
+    "skirt_motion_tuning.py": {
+      "bytes": 14211,
+      "mtime_ns": 1791142072269025800,
+      "sha256": "4d5c7a9a4915ecda5c05d917ac26efabced996de2deb6f8d4a3dee829d9deb7c"
+    },
+    "body_original_mode.py": {
+      "bytes": 33689,
+      "mtime_ns": 1791078389442081300,
+      "sha256": "d2d8e122c77a56ef314893470a197107462235aff159a05254fa7146e1e8b661"
+    },
+    "limb_ik.py": {
+      "bytes": 448738,
+      "mtime_ns": 1791067800109605600,
+      "sha256": "4b98aed6d182bccb322c8166b81e406433d3648f7b5c6cfe79a7d1419aff2385"
+    },
+    "limb_ik_fk.py": {
+      "bytes": 47377,
+      "mtime_ns": 1791079212770841400,
+      "sha256": "d98c3cc57093b14156fc41eccd929d608aebca163945e88fbd61d7213c8578a2"
+    }
+  },
+  "artist_after": {
+    "bytes": 32266562,
+    "mtime_ns": 1791137543607181400,
+    "sha256": "9b6cd9b0fb16ffa7d66af9a21b10994488f923bb977886b3df6c904a335a7694"
+  },
+  "elapsed_seconds": 65.5040632999735
+}

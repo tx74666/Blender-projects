@@ -1,0 +1,472 @@
+{
+  "started_utc": "2026-10-04T17:31:13.695674+00:00",
+  "phase": "complete",
+  "status": "passed",
+  "saved": true,
+  "simulation_baked": false,
+  "preview_started": false,
+  "artist_opened": false,
+  "installer_rollback": "not attempted",
+  "automatic_refresh_plan_before": {
+    "migration_candidates": [],
+    "rename_candidates": [],
+    "name_reader_skips": []
+  },
+  "runtime": "5.1.0",
+  "installed_source": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\__init__.py",
+  "installed_init_sha256": "32d6395c74d250cc69b31a499eb1d6039ceb9b2f43f7bd0d7f518fbb5ce8b349",
+  "addon_before": [
+    0,
+    76,
+    1
+  ],
+  "artist": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source": "Hair",
+  "source_uid": "331afdb7e5154ae1aaa39603a4f61768",
+  "artist_disk_before": "1f790460974d699587508bad2e2a509712f2df8e30dcd9844d7ee56f5da3f43f",
+  "archive": "D:\\Blender\\Projects\\Character\\X\\validation\\wiggle_research_20261004\\wiggle_bones-1.1.2.zip",
+  "archive_sha256": "9f58389c7702d8a4d768fb0d8b53aebc441032363b9269c97bf5736d0561f8a0",
+  "reader_source": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\validate_real_hair_preview.py",
+  "reader_sha256": "36495cde240e0cb49a8f49a8c1e0d3043391ae9a127c1d04214f22721dbbcc9c",
+  "extension_plan": {
+    "operation": "install_official",
+    "repo_module": "user_default",
+    "directory": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\extensions\\user_default",
+    "module": "bl_ext.user_default.wiggle_bones",
+    "selection_reason": "verified_standard_user_default",
+    "active_repo_index": 0,
+    "active_repo_module": "blender_org",
+    "local_repositories": [
+      {
+        "module": "user_default",
+        "source": "USER",
+        "enabled": true,
+        "use_remote_url": false,
+        "use_custom_directory": false,
+        "directory": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\extensions\\user_default"
+      },
+      {
+        "module": "vscode_development",
+        "source": "USER",
+        "enabled": true,
+        "use_remote_url": false,
+        "use_custom_directory": false,
+        "directory": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\extensions\\vscode_development"
+      }
+    ]
+  },
+  "observed_previous_editor": {
+    "type": "VIEW_3D",
+    "ui_type": "VIEW_3D"
+  },
+  "initial_asset": {
+    "sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+    "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+    "counts": {
+      "meshes": 377,
+      "vertices": 118221,
+      "coordinate_bytes": 3147852,
+      "uv_bytes": 5383024,
+      "uv_layers": 23,
+      "shape_keys": 40,
+      "rest_bones": 2415,
+      "armature_modifiers": 7,
+      "weight_assignments": 140535,
+      "actions": 3
+    },
+    "elapsed_seconds": 6.1019203000178095,
+    "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+    "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+  },
+  "selection_before": {
+    "mode": "OBJECT",
+    "scene": "Scene",
+    "view_layer": "ViewLayer",
+    "active_object": "Cosha",
+    "selected_objects": [
+      "Cosha"
+    ],
+    "rigs": {
+      "Anime Girl Base Mesh": {
+        "active": "jaw_master",
+        "selected": []
+      },
+      "Anime Girl Base Mesh.001": {
+        "active": "head",
+        "selected": []
+      },
+      "CoshaRig": {
+        "active": "shin.R",
+        "selected": [
+          "CTRL_eye.L",
+          "CTRL_eye.R",
+          "CTRL_eyes",
+          "CTRL_master",
+          "CTRL_toe_bend.L",
+          "CTRL_toe_bend.R",
+          "CTRL_torso_1",
+          "CTRL_torso_2",
+          "CTRL_torso_3",
+          "CTRL_torso_bend",
+          "Head",
+          "Hips",
+          "Neck",
+          "SK_Dress_Hem",
+          "SK_Dress_Hem_01",
+          "SK_Dress_Hem_02",
+          "SK_Dress_Hem_03",
+          "SK_Dress_Hem_04",
+          "SK_Dress_Hem_05",
+          "SK_Dress_Hem_06",
+          "SK_Dress_Hem_07",
+          "SK_Dress_Hem_08",
+          "SK_Dress_Mid",
+          "SK_Dress_Mid_01",
+          "SK_Dress_Mid_02",
+          "SK_Dress_Mid_03",
+          "SK_Dress_Mid_04",
+          "SK_Dress_Mid_05",
+          "SK_Dress_Mid_06",
+          "SK_Dress_Mid_07",
+          "SK_Dress_Mid_08",
+          "SK_Dress_Waist",
+          "breast.L",
+          "breast.R",
+          "f_index.01.L",
+          "f_index.01.R",
+          "f_index.02.L",
+          "f_index.02.R",
+          "f_index.03.L",
+          "f_index.03.R",
+          "f_middle.01.L",
+          "f_middle.01.R",
+          "f_middle.02.L",
+          "f_middle.02.R",
+          "f_middle.03.L",
+          "f_middle.03.R",
+          "f_pinky.01.L",
+          "f_pinky.01.R",
+          "f_pinky.02.L",
+          "f_pinky.02.R",
+          "f_pinky.03.L",
+          "f_pinky.03.R",
+          "f_ring.01.L",
+          "f_ring.01.R",
+          "f_ring.02.L",
+          "f_ring.02.R",
+          "f_ring.03.L",
+          "f_ring.03.R",
+          "foot.L",
+          "foot.R",
+          "forearm.L",
+          "forearm.R",
+          "hand.L",
+          "hand.R",
+          "shin.L",
+          "shin.R",
+          "shoulder.L",
+          "shoulder.R",
+          "thigh.L",
+          "thigh.R",
+          "thumb.01.L",
+          "thumb.01.R",
+          "thumb.02.L",
+          "thumb.02.R",
+          "thumb.03.L",
+          "thumb.03.R",
+          "upper_arm.L",
+          "upper_arm.R"
+        ]
+      },
+      "Strap2.001": {
+        "active": "DEF_Strap_C",
+        "selected": []
+      }
+    }
+  },
+  "frame_before": [
+    39,
+    0.0
+  ],
+  "checks": {
+    "after_recovery": {
+      "asset_sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+      "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+      "raw_exact": true,
+      "selection_exact": true,
+      "display_exact": true,
+      "new_owned_texts": 0,
+      "legacy_settings_exact": true,
+      "pose": {
+        "inputs_exact": true,
+        "maximum_evaluated_matrix_error": 0.0,
+        "tolerance": 1e-06
+      }
+    },
+    "after_refresh": {
+      "asset_sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+      "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+      "raw_exact": true,
+      "selection_exact": true,
+      "display_exact": true,
+      "new_owned_texts": 0,
+      "legacy_settings_exact": true,
+      "pose": {
+        "inputs_exact": true,
+        "maximum_evaluated_matrix_error": 0.0,
+        "tolerance": 1e-06
+      }
+    },
+    "after_official_install_enable": {
+      "asset_sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+      "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+      "raw_exact": true,
+      "selection_exact": true,
+      "display_exact": true,
+      "new_owned_texts": 0,
+      "legacy_settings_exact": true,
+      "pose": {
+        "inputs_exact": true,
+        "maximum_evaluated_matrix_error": 0.0,
+        "tolerance": 1e-06
+      }
+    },
+    "after_preferences_save": {
+      "asset_sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+      "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+      "raw_exact": true,
+      "selection_exact": true,
+      "display_exact": true,
+      "new_owned_texts": 0,
+      "legacy_settings_exact": true,
+      "pose": {
+        "inputs_exact": true,
+        "maximum_evaluated_matrix_error": 0.0,
+        "tolerance": 1e-06
+      }
+    },
+    "after_configuration": {
+      "asset_sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+      "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+      "raw_exact": true,
+      "selection_exact": true,
+      "display_exact": true,
+      "new_owned_texts": 1,
+      "legacy_settings_exact": true,
+      "pose": {
+        "inputs_exact": true,
+        "maximum_evaluated_matrix_error": 0.0,
+        "tolerance": 1e-06
+      }
+    },
+    "after_editor_restore": {
+      "asset_sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+      "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+      "raw_exact": true,
+      "selection_exact": true,
+      "display_exact": true,
+      "new_owned_texts": 1,
+      "legacy_settings_exact": true,
+      "pose": {
+        "inputs_exact": true,
+        "maximum_evaluated_matrix_error": 0.0,
+        "tolerance": 1e-06
+      }
+    },
+    "after_artist_save": {
+      "asset_sha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+      "portable_sha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+      "raw_exact": true,
+      "selection_exact": true,
+      "display_exact": true,
+      "new_owned_texts": 1,
+      "legacy_settings_exact": true,
+      "pose": {
+        "inputs_exact": true,
+        "maximum_evaluated_matrix_error": 0.0,
+        "tolerance": 1e-06
+      }
+    }
+  },
+  "recovery": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\X_before_hair_motion_20261005_013122_907227.blend",
+    "sha256": "e9c1b94bb5aa4303d640db87b79d818cb5d900bb5cc4131745e1813c10dc0bb3",
+    "native_result": [
+      "FINISHED"
+    ]
+  },
+  "automatic_refresh_plan_after": {
+    "migration_candidates": [],
+    "rename_candidates": [],
+    "name_reader_skips": []
+  },
+  "legacy_upgrade": {
+    "module": "wiggle_2",
+    "version": [
+      2,
+      2,
+      4
+    ],
+    "source_sha256": "7333687ae3b6fd20feae8afda649faed1d99bc7b98e92622a8993c09061deac1",
+    "settings_backup": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\Wiggle2_inactive_settings_20261005_013122_907227.json",
+    "settings_backup_sha256": "7ad81e44e05ede3450c072899b851f0ca05bc2553da55dbfb3ecab9e95d0cf16",
+    "automatic_conversion": false,
+    "old_file_retained": true,
+    "inactive": true,
+    "native_disable_verified": true,
+    "inactive_raw_backing_exact_after_register": true,
+    "top_level_values_and_presence_exact": true
+  },
+  "native_extension_install_result": [
+    "FINISHED"
+  ],
+  "native_extension_enable_result": "already_enabled_preserved",
+  "backend": {
+    "module": "bl_ext.user_default.wiggle_bones",
+    "version": "1.1.2",
+    "official_hashes_exact": true
+  },
+  "preferences_save_result": [
+    "FINISHED"
+  ],
+  "configuration": {
+    "strands": 32,
+    "paired_strands": 24,
+    "center_strands": 2,
+    "groups": {
+      "FRONT": 10,
+      "SIDE": 8,
+      "BACK": 14,
+      "UNASSIGNED": 0
+    },
+    "source_metadata_keys": [
+      "character_designer_hair_motion_identity_v1",
+      "character_designer_hair_motion_owner",
+      "character_designer_hair_motion_v1",
+      "character_designer_hair_strands_v1"
+    ],
+    "automatic_ui_highlight": false
+  },
+  "artist_save_result": [
+    "FINISHED"
+  ],
+  "artist_disk_after": "2690a4a97fa30e0e94f7df6a14d3f75e7ec8f5b4e71175d91ac966da6875445d",
+  "addon_after": [
+    0,
+    76,
+    1
+  ],
+  "selection_after": {
+    "mode": "OBJECT",
+    "scene": "Scene",
+    "view_layer": "ViewLayer",
+    "active_object": "Cosha",
+    "selected_objects": [
+      "Cosha"
+    ],
+    "rigs": {
+      "Anime Girl Base Mesh": {
+        "active": "jaw_master",
+        "selected": []
+      },
+      "Anime Girl Base Mesh.001": {
+        "active": "head",
+        "selected": []
+      },
+      "CoshaRig": {
+        "active": "shin.R",
+        "selected": [
+          "CTRL_eye.L",
+          "CTRL_eye.R",
+          "CTRL_eyes",
+          "CTRL_master",
+          "CTRL_toe_bend.L",
+          "CTRL_toe_bend.R",
+          "CTRL_torso_1",
+          "CTRL_torso_2",
+          "CTRL_torso_3",
+          "CTRL_torso_bend",
+          "Head",
+          "Hips",
+          "Neck",
+          "SK_Dress_Hem",
+          "SK_Dress_Hem_01",
+          "SK_Dress_Hem_02",
+          "SK_Dress_Hem_03",
+          "SK_Dress_Hem_04",
+          "SK_Dress_Hem_05",
+          "SK_Dress_Hem_06",
+          "SK_Dress_Hem_07",
+          "SK_Dress_Hem_08",
+          "SK_Dress_Mid",
+          "SK_Dress_Mid_01",
+          "SK_Dress_Mid_02",
+          "SK_Dress_Mid_03",
+          "SK_Dress_Mid_04",
+          "SK_Dress_Mid_05",
+          "SK_Dress_Mid_06",
+          "SK_Dress_Mid_07",
+          "SK_Dress_Mid_08",
+          "SK_Dress_Waist",
+          "breast.L",
+          "breast.R",
+          "f_index.01.L",
+          "f_index.01.R",
+          "f_index.02.L",
+          "f_index.02.R",
+          "f_index.03.L",
+          "f_index.03.R",
+          "f_middle.01.L",
+          "f_middle.01.R",
+          "f_middle.02.L",
+          "f_middle.02.R",
+          "f_middle.03.L",
+          "f_middle.03.R",
+          "f_pinky.01.L",
+          "f_pinky.01.R",
+          "f_pinky.02.L",
+          "f_pinky.02.R",
+          "f_pinky.03.L",
+          "f_pinky.03.R",
+          "f_ring.01.L",
+          "f_ring.01.R",
+          "f_ring.02.L",
+          "f_ring.02.R",
+          "f_ring.03.L",
+          "f_ring.03.R",
+          "foot.L",
+          "foot.R",
+          "forearm.L",
+          "forearm.R",
+          "hand.L",
+          "hand.R",
+          "shin.L",
+          "shin.R",
+          "shoulder.L",
+          "shoulder.R",
+          "thigh.L",
+          "thigh.R",
+          "thumb.01.L",
+          "thumb.01.R",
+          "thumb.02.L",
+          "thumb.02.R",
+          "thumb.03.L",
+          "thumb.03.R",
+          "upper_arm.L",
+          "upper_arm.R"
+        ]
+      },
+      "Strap2.001": {
+        "active": "DEF_Strap_C",
+        "selected": []
+      }
+    }
+  },
+  "frame_after": [
+    39,
+    0.0
+  ],
+  "finished_utc": "2026-10-04T17:32:29.600338+00:00",
+  "elapsed_seconds": 75.90418129999307,
+  "report_path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\live_install_refresh_config_save_20261004T173113.695674_0000.json"
+}

@@ -1,0 +1,1534 @@
+{
+  "ok": true,
+  "blender": "5.1.0",
+  "artist_path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "artist_saved": false,
+  "simulation_baked": false,
+  "stages": [
+    {
+      "name": "baseline_no_simulation",
+      "frames": 60,
+      "simulated_strands": 0,
+      "simulated_bones": 0,
+      "observed_strands": 32,
+      "strand_ids": [],
+      "input": {
+        "samples": 60,
+        "seconds_median": 4.879999323748052e-05,
+        "seconds_mean": 5.1881664451987795e-05,
+        "seconds_max": 0.00018489999638404697,
+        "seconds_total": 0.0031128998671192676
+      },
+      "native_frame_set": {
+        "samples": 60,
+        "seconds_median": 0.01639880000584526,
+        "seconds_mean": 0.01719515666651811,
+        "seconds_max": 0.028261100000236183,
+        "seconds_total": 1.0317093999910867
+      },
+      "endpoint_observation": {
+        "samples": 60,
+        "seconds_median": 0.00016599999798927456,
+        "seconds_mean": 0.00017108499887399375,
+        "seconds_max": 0.00023330000112764537,
+        "seconds_total": 0.010265099932439625
+      },
+      "adapter_changed_guard": {
+        "samples": 60,
+        "seconds_median": 0.0,
+        "seconds_mean": 0,
+        "seconds_max": 0,
+        "seconds_total": 0
+      },
+      "guard_calls_total": 0,
+      "guard_calls_per_frame": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_minus_changed_guard": {
+        "samples": 60,
+        "seconds_median": 0.01639880000584526,
+        "seconds_mean": 0.01719515666651811,
+        "seconds_max": 0.028261100000236183,
+        "seconds_total": 1.0317093999910867
+      },
+      "start_preview_seconds": 0.0,
+      "stop_preview_seconds": 0.0,
+      "stage_seconds_including_protection": 5.356245300004957,
+      "maximum_observed_anchor_rotation_degrees": 3.999955572784928,
+      "strict_pose_restored": {
+        "ok": true,
+        "maximum_channel_error": 0.0,
+        "channels_tolerance": 1e-06,
+        "native_pg_exact": true,
+        "shape_values_exact": true,
+        "custom_pose_exact": true,
+        "frame_exact": true
+      },
+      "strict_raw_baseline": true,
+      "raw_before": {
+        "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+        "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+        "counts": {
+          "meshes": 375,
+          "vertices": 110905,
+          "coordinate_bytes": 2182140,
+          "uv_bytes": 5154032,
+          "uv_layers": 21,
+          "shape_keys": 20,
+          "rest_bones": 2415,
+          "armature_modifiers": 7,
+          "weight_assignments": 140562,
+          "actions": 3
+        },
+        "elapsed_seconds": 4.338610999999219,
+        "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+        "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+      },
+      "raw_after": {
+        "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+        "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+        "counts": {
+          "meshes": 375,
+          "vertices": 110905,
+          "coordinate_bytes": 2182140,
+          "uv_bytes": 5154032,
+          "uv_layers": 21,
+          "shape_keys": 20,
+          "rest_bones": 2415,
+          "armature_modifiers": 7,
+          "weight_assignments": 140562,
+          "actions": 3
+        },
+        "elapsed_seconds": 4.252691200003028,
+        "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+        "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+      },
+      "memory_before": {
+        "available": true,
+        "total_bytes": 16943685632,
+        "available_bytes": 1557872640,
+        "load_percent": 90
+      },
+      "memory_after": {
+        "available": true,
+        "total_bytes": 16943685632,
+        "available_bytes": 1498128384,
+        "load_percent": 91
+      }
+    },
+    {
+      "name": "preview_four_strands",
+      "frames": 60,
+      "simulated_strands": 4,
+      "simulated_bones": 16,
+      "observed_strands": 4,
+      "strand_ids": [
+        "9333e016c13a5b3a8604ba72db574938",
+        "21b5f9ba9afd52d98498cf3bc52dd068",
+        "ddef6bde2587569d90b4ccf2837ed239",
+        "201e0051e6fa5a87b67945dd842abd07"
+      ],
+      "input": {
+        "samples": 60,
+        "seconds_median": 5.5500000598840415e-05,
+        "seconds_mean": 5.9211667636797456e-05,
+        "seconds_max": 0.00012490000517573208,
+        "seconds_total": 0.003552700058207847
+      },
+      "native_frame_set": {
+        "samples": 60,
+        "seconds_median": 0.04972694999742089,
+        "seconds_mean": 0.049358696666846905,
+        "seconds_max": 0.05876719999650959,
+        "seconds_total": 2.9615218000108143
+      },
+      "endpoint_observation": {
+        "samples": 60,
+        "seconds_median": 5.315001180861145e-05,
+        "seconds_mean": 5.8961668643557155e-05,
+        "seconds_max": 0.00011310000263620168,
+        "seconds_total": 0.0035377001186134294
+      },
+      "adapter_changed_guard": {
+        "samples": 60,
+        "seconds_median": 0.004011349999927916,
+        "seconds_mean": 0.0041059199997107495,
+        "seconds_max": 0.005698499997379258,
+        "seconds_total": 0.246355199982645
+      },
+      "guard_calls_total": 60,
+      "guard_calls_per_frame": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "native_minus_changed_guard": {
+        "samples": 60,
+        "seconds_median": 0.04575404999923194,
+        "seconds_mean": 0.04525277666713615,
+        "seconds_max": 0.05412979998800438,
+        "seconds_total": 2.7151666000281693
+      },
+      "start_preview_seconds": 0.8951617999991868,
+      "stop_preview_seconds": 0.7993224999954691,
+      "stage_seconds_including_protection": 8.963225599989528,
+      "maximum_observed_anchor_rotation_degrees": 3.999955572784928,
+      "strict_pose_restored": {
+        "ok": true,
+        "maximum_channel_error": 0.0,
+        "channels_tolerance": 1e-06,
+        "native_pg_exact": true,
+        "shape_values_exact": true,
+        "custom_pose_exact": true,
+        "frame_exact": true
+      },
+      "strict_raw_baseline": true,
+      "raw_before": {
+        "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+        "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+        "counts": {
+          "meshes": 375,
+          "vertices": 110905,
+          "coordinate_bytes": 2182140,
+          "uv_bytes": 5154032,
+          "uv_layers": 21,
+          "shape_keys": 20,
+          "rest_bones": 2415,
+          "armature_modifiers": 7,
+          "weight_assignments": 140562,
+          "actions": 3
+        },
+        "elapsed_seconds": 4.47807610000018,
+        "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+        "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+      },
+      "raw_after": {
+        "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+        "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+        "counts": {
+          "meshes": 375,
+          "vertices": 110905,
+          "coordinate_bytes": 2182140,
+          "uv_bytes": 5154032,
+          "uv_layers": 21,
+          "shape_keys": 20,
+          "rest_bones": 2415,
+          "armature_modifiers": 7,
+          "weight_assignments": 140562,
+          "actions": 3
+        },
+        "elapsed_seconds": 4.229658500000369,
+        "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+        "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+      },
+      "memory_before": {
+        "available": true,
+        "total_bytes": 16943685632,
+        "available_bytes": 1498955776,
+        "load_percent": 91
+      },
+      "memory_after": {
+        "available": true,
+        "total_bytes": 16943685632,
+        "available_bytes": 1494691840,
+        "load_percent": 91
+      }
+    },
+    {
+      "name": "preview_all_32",
+      "frames": 60,
+      "simulated_strands": 32,
+      "simulated_bones": 128,
+      "observed_strands": 32,
+      "strand_ids": [
+        "8ec31b67d85e569dab61c3f169564b83",
+        "fc81d5a280f35d3b82a1a89cc9bbbe80",
+        "ddef6bde2587569d90b4ccf2837ed239",
+        "b58e3199800c51bbba520345063965d6",
+        "50e2d142b8465fbe9852716b388b8834",
+        "201e0051e6fa5a87b67945dd842abd07",
+        "6b81dbf0d6615f0bb816fc04a7a12bfc",
+        "37a47491897b55c1ba30b1728bc237fa",
+        "65c3506992875ada9129b2868f29d938",
+        "c4f0be185d6855b9bd04faaa995eb313",
+        "2a86d4a7e07858f0837a0669e8aeb87b",
+        "a55a609c96885d1981f4309c25adf365",
+        "718dbc51e73b5811a459fdf17276d689",
+        "0dbe599b59575a0996d3db6fdaa2af2a",
+        "9333e016c13a5b3a8604ba72db574938",
+        "abcf18bb4b6b5288add56285c9de1a0a",
+        "21b5f9ba9afd52d98498cf3bc52dd068",
+        "4ee42557677e57cb8bb3307f56faabb8",
+        "b4f79fb6d3bd5dfcb210e4bb87b59c29",
+        "c1245b25efcf5e1dad7f2d02a049e37d",
+        "d1189290e2de5f01924db15a149b6d17",
+        "6b4aaa3f396c5eeeb0b0c035b81e1cf7",
+        "14f60452b3085964a626d4451ee7b384",
+        "76d156116f9d5bb9b63eb1b3991c1c53",
+        "5d9c73462b7c53819e861b8474cebd10",
+        "07df6f7182a15403a2b8f5b281cede9c",
+        "e61b74892c065002b3c9f3640b7f639c",
+        "13cb5dbf8bb25e9daea86008b4d52de8",
+        "2d3229dd1ee75f4a83b33917ed30d1f2",
+        "a553dc1fdc255a17b5162e11129c976d",
+        "98b3ffce54d457bea74cdd9d05fc41c6",
+        "cda07d27fd8653e59889fce46bf26c72"
+      ],
+      "input": {
+        "samples": 60,
+        "seconds_median": 5.129999772179872e-05,
+        "seconds_mean": 5.62999994144775e-05,
+        "seconds_max": 0.00014170000213198364,
+        "seconds_total": 0.00337799996486865
+      },
+      "native_frame_set": {
+        "samples": 60,
+        "seconds_median": 0.09165775000292342,
+        "seconds_mean": 0.09243662166700232,
+        "seconds_max": 0.1055519999936223,
+        "seconds_total": 5.54619730002014
+      },
+      "endpoint_observation": {
+        "samples": 60,
+        "seconds_median": 0.0001665499949012883,
+        "seconds_mean": 0.00018404166621621698,
+        "seconds_max": 0.0004126999992877245,
+        "seconds_total": 0.011042499972973019
+      },
+      "adapter_changed_guard": {
+        "samples": 60,
+        "seconds_median": 0.003812399991147686,
+        "seconds_mean": 0.003953683332413979,
+        "seconds_max": 0.006003000002237968,
+        "seconds_total": 0.2372209999448387
+      },
+      "guard_calls_total": 60,
+      "guard_calls_per_frame": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "native_minus_changed_guard": {
+        "samples": 60,
+        "seconds_median": 0.08784065000509145,
+        "seconds_mean": 0.08848293833458835,
+        "seconds_max": 0.10185490000003483,
+        "seconds_total": 5.308976300075301
+      },
+      "start_preview_seconds": 0.8629069000016898,
+      "stop_preview_seconds": 0.7722971999901347,
+      "stage_seconds_including_protection": 11.465938800000004,
+      "maximum_observed_anchor_rotation_degrees": 3.999955572784928,
+      "strict_pose_restored": {
+        "ok": true,
+        "maximum_channel_error": 0.0,
+        "channels_tolerance": 1e-06,
+        "native_pg_exact": true,
+        "shape_values_exact": true,
+        "custom_pose_exact": true,
+        "frame_exact": true
+      },
+      "strict_raw_baseline": true,
+      "raw_before": {
+        "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+        "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+        "counts": {
+          "meshes": 375,
+          "vertices": 110905,
+          "coordinate_bytes": 2182140,
+          "uv_bytes": 5154032,
+          "uv_layers": 21,
+          "shape_keys": 20,
+          "rest_bones": 2415,
+          "armature_modifiers": 7,
+          "weight_assignments": 140562,
+          "actions": 3
+        },
+        "elapsed_seconds": 4.204924999998184,
+        "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+        "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+      },
+      "raw_after": {
+        "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+        "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+        "counts": {
+          "meshes": 375,
+          "vertices": 110905,
+          "coordinate_bytes": 2182140,
+          "uv_bytes": 5154032,
+          "uv_layers": 21,
+          "shape_keys": 20,
+          "rest_bones": 2415,
+          "armature_modifiers": 7,
+          "weight_assignments": 140562,
+          "actions": 3
+        },
+        "elapsed_seconds": 4.209712699986994,
+        "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+        "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+      },
+      "memory_before": {
+        "available": true,
+        "total_bytes": 16943685632,
+        "available_bytes": 1496793088,
+        "load_percent": 91
+      },
+      "memory_after": {
+        "available": true,
+        "total_bytes": 16943685632,
+        "available_bytes": 1507250176,
+        "load_percent": 91
+      }
+    }
+  ],
+  "adapter_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_wiggle_adapter.py",
+  "adapter_source_sha256": "318f160c97495fa8d295d4f5c8dd1374da44de6571f1289234acc6570bab36fa",
+  "input_helper_sha256": "36495cde240e0cb49a8f49a8c1e0d3043391ae9a127c1d04214f22721dbbcc9c",
+  "limitations": [
+    "Serial fixed order: baseline, four strands, all 32; no paired or reversed-order comparison.",
+    "Background frame_set includes native depsgraph and unmodified upstream callbacks; no GUI or FPS claim.",
+    "Guard timing is inside frame_set; subtracting it does not isolate the official solver from depsgraph.",
+    "Windows available-memory observations are stage boundaries, not peak RAM or process private bytes.",
+    "No timer event-loop performance measurement; background manual frame stepping differs from GUI playback.",
+    "One saved input, 60 samples per stage; variable system load can affect these descriptive medians."
+  ],
+  "source": "Hair",
+  "source_uid": "331afdb7e5154ae1aaa39603a4f61768",
+  "topology": "7d502a198f63f0d03d6eb477ae54a30539eb276106aa177d772863f16bb5fc34",
+  "groups": {
+    "BACK": 14,
+    "FRONT": 10,
+    "SIDE": 8
+  },
+  "input_proof": {
+    "kind": "unconstrained_anchor",
+    "anchor": "Head",
+    "owner": "Head",
+    "axis": "X",
+    "constraint_trace": [],
+    "proof_diagnostics": {
+      "terminal_bone": "Head",
+      "rotation_driver_or_animation_paths": [],
+      "parent_or_driver_feedback_rejection": [],
+      "dependency_closure": {
+        "proved": true,
+        "entry_anchor": "Head",
+        "nodes": [
+          {
+            "bone": "Head",
+            "parent": "Neck",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "Neck",
+            "parent": "UpperChest",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "UpperChest",
+            "parent": "Chest",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "Chest",
+            "parent": "spine",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "spine",
+            "parent": "Hips",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "Hips",
+            "parent": null,
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_master",
+            "parent": null,
+            "owner": null,
+            "transform_or_constraint_driver_paths": [
+              "pose.bones[\"CTRL_master\"].scale",
+              "pose.bones[\"CTRL_master\"].scale",
+              "pose.bones[\"CTRL_master\"].scale"
+            ],
+            "proved_scalar_drivers": [
+              {
+                "data_path": "pose.bones[\"CTRL_master\"].scale",
+                "array_index": 0,
+                "type": "SCRIPTED",
+                "expression": "max(root_scale,0.001)",
+                "native_simple_expression": true,
+                "native_valid": true,
+                "variables": [
+                  {
+                    "variable": "root_scale",
+                    "type": "SINGLE_PROP",
+                    "target_id": {
+                      "id_type": "Object",
+                      "name": "CoshaRig",
+                      "library": null,
+                      "pointer": 1951407835984
+                    },
+                    "target_data_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+                    "property_owner": "CTRL_master",
+                    "property_owner_pointer": 1951416797680,
+                    "property_key": "uniform_scale",
+                    "value": 1.0
+                  }
+                ],
+                "expected_output": 1.0,
+                "actual_output": 1.0,
+                "native_FCurve_mapping": {
+                  "extrapolation": "LINEAR",
+                  "keyframe_points": [
+                    [
+                      [
+                        "select_left_handle",
+                        true
+                      ],
+                      [
+                        "select_right_handle",
+                        true
+                      ],
+                      [
+                        "select_control_point",
+                        true
+                      ],
+                      [
+                        "handle_left_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "handle_right_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "interpolation",
+                        "BEZIER"
+                      ],
+                      [
+                        "type",
+                        "KEYFRAME"
+                      ],
+                      [
+                        "easing",
+                        "AUTO"
+                      ],
+                      [
+                        "back",
+                        1.7015800476074219
+                      ],
+                      [
+                        "amplitude",
+                        0.800000011920929
+                      ],
+                      [
+                        "period",
+                        4.099999904632568
+                      ],
+                      [
+                        "handle_left",
+                        [
+                          -0.3333333432674408,
+                          -0.3333333432674408
+                        ]
+                      ],
+                      [
+                        "co",
+                        [
+                          0.0,
+                          0.0
+                        ]
+                      ],
+                      [
+                        "co_ui",
+                        [
+                          0.0,
+                          0.0
+                        ]
+                      ],
+                      [
+                        "handle_right",
+                        [
+                          0.3333333432674408,
+                          0.3333333432674408
+                        ]
+                      ]
+                    ],
+                    [
+                      [
+                        "select_left_handle",
+                        true
+                      ],
+                      [
+                        "select_right_handle",
+                        true
+                      ],
+                      [
+                        "select_control_point",
+                        true
+                      ],
+                      [
+                        "handle_left_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "handle_right_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "interpolation",
+                        "BEZIER"
+                      ],
+                      [
+                        "type",
+                        "KEYFRAME"
+                      ],
+                      [
+                        "easing",
+                        "AUTO"
+                      ],
+                      [
+                        "back",
+                        1.7015800476074219
+                      ],
+                      [
+                        "amplitude",
+                        0.800000011920929
+                      ],
+                      [
+                        "period",
+                        4.099999904632568
+                      ],
+                      [
+                        "handle_left",
+                        [
+                          0.6666666269302368,
+                          0.6666666269302368
+                        ]
+                      ],
+                      [
+                        "co",
+                        [
+                          1.0,
+                          1.0
+                        ]
+                      ],
+                      [
+                        "co_ui",
+                        [
+                          1.0,
+                          1.0
+                        ]
+                      ],
+                      [
+                        "handle_right",
+                        [
+                          1.3333333730697632,
+                          1.3333333730697632
+                        ]
+                      ]
+                    ]
+                  ],
+                  "sampled_points": [],
+                  "modifiers": [],
+                  "proved": true,
+                  "scope": "finite native FCurve knots/handles/samples and recognized built-in target-free modifiers",
+                  "identity_mapping_required": false,
+                  "reason": "Ancestry independence needs a target-free native mapping, not an identity response."
+                },
+                "proved": true,
+                "scope": "finite simple arithmetic of exact non-Hair native custom scalar sources followed by target-free native FCurve mapping; no Python eval"
+              },
+              {
+                "data_path": "pose.bones[\"CTRL_master\"].scale",
+                "array_index": 1,
+                "type": "SCRIPTED",
+                "expression": "max(root_scale,0.001)",
+                "native_simple_expression": true,
+                "native_valid": true,
+                "variables": [
+                  {
+                    "variable": "root_scale",
+                    "type": "SINGLE_PROP",
+                    "target_id": {
+                      "id_type": "Object",
+                      "name": "CoshaRig",
+                      "library": null,
+                      "pointer": 1951407835984
+                    },
+                    "target_data_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+                    "property_owner": "CTRL_master",
+                    "property_owner_pointer": 1951416797680,
+                    "property_key": "uniform_scale",
+                    "value": 1.0
+                  }
+                ],
+                "expected_output": 1.0,
+                "actual_output": 1.0,
+                "native_FCurve_mapping": {
+                  "extrapolation": "LINEAR",
+                  "keyframe_points": [
+                    [
+                      [
+                        "select_left_handle",
+                        true
+                      ],
+                      [
+                        "select_right_handle",
+                        true
+                      ],
+                      [
+                        "select_control_point",
+                        true
+                      ],
+                      [
+                        "handle_left_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "handle_right_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "interpolation",
+                        "BEZIER"
+                      ],
+                      [
+                        "type",
+                        "KEYFRAME"
+                      ],
+                      [
+                        "easing",
+                        "AUTO"
+                      ],
+                      [
+                        "back",
+                        1.7015800476074219
+                      ],
+                      [
+                        "amplitude",
+                        0.800000011920929
+                      ],
+                      [
+                        "period",
+                        4.099999904632568
+                      ],
+                      [
+                        "handle_left",
+                        [
+                          -0.3333333432674408,
+                          -0.3333333432674408
+                        ]
+                      ],
+                      [
+                        "co",
+                        [
+                          0.0,
+                          0.0
+                        ]
+                      ],
+                      [
+                        "co_ui",
+                        [
+                          0.0,
+                          0.0
+                        ]
+                      ],
+                      [
+                        "handle_right",
+                        [
+                          0.3333333432674408,
+                          0.3333333432674408
+                        ]
+                      ]
+                    ],
+                    [
+                      [
+                        "select_left_handle",
+                        true
+                      ],
+                      [
+                        "select_right_handle",
+                        true
+                      ],
+                      [
+                        "select_control_point",
+                        true
+                      ],
+                      [
+                        "handle_left_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "handle_right_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "interpolation",
+                        "BEZIER"
+                      ],
+                      [
+                        "type",
+                        "KEYFRAME"
+                      ],
+                      [
+                        "easing",
+                        "AUTO"
+                      ],
+                      [
+                        "back",
+                        1.7015800476074219
+                      ],
+                      [
+                        "amplitude",
+                        0.800000011920929
+                      ],
+                      [
+                        "period",
+                        4.099999904632568
+                      ],
+                      [
+                        "handle_left",
+                        [
+                          0.6666666269302368,
+                          0.6666666269302368
+                        ]
+                      ],
+                      [
+                        "co",
+                        [
+                          1.0,
+                          1.0
+                        ]
+                      ],
+                      [
+                        "co_ui",
+                        [
+                          1.0,
+                          1.0
+                        ]
+                      ],
+                      [
+                        "handle_right",
+                        [
+                          1.3333333730697632,
+                          1.3333333730697632
+                        ]
+                      ]
+                    ]
+                  ],
+                  "sampled_points": [],
+                  "modifiers": [],
+                  "proved": true,
+                  "scope": "finite native FCurve knots/handles/samples and recognized built-in target-free modifiers",
+                  "identity_mapping_required": false,
+                  "reason": "Ancestry independence needs a target-free native mapping, not an identity response."
+                },
+                "proved": true,
+                "scope": "finite simple arithmetic of exact non-Hair native custom scalar sources followed by target-free native FCurve mapping; no Python eval"
+              },
+              {
+                "data_path": "pose.bones[\"CTRL_master\"].scale",
+                "array_index": 2,
+                "type": "SCRIPTED",
+                "expression": "max(root_scale,0.001)",
+                "native_simple_expression": true,
+                "native_valid": true,
+                "variables": [
+                  {
+                    "variable": "root_scale",
+                    "type": "SINGLE_PROP",
+                    "target_id": {
+                      "id_type": "Object",
+                      "name": "CoshaRig",
+                      "library": null,
+                      "pointer": 1951407835984
+                    },
+                    "target_data_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+                    "property_owner": "CTRL_master",
+                    "property_owner_pointer": 1951416797680,
+                    "property_key": "uniform_scale",
+                    "value": 1.0
+                  }
+                ],
+                "expected_output": 1.0,
+                "actual_output": 1.0,
+                "native_FCurve_mapping": {
+                  "extrapolation": "LINEAR",
+                  "keyframe_points": [
+                    [
+                      [
+                        "select_left_handle",
+                        true
+                      ],
+                      [
+                        "select_right_handle",
+                        true
+                      ],
+                      [
+                        "select_control_point",
+                        true
+                      ],
+                      [
+                        "handle_left_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "handle_right_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "interpolation",
+                        "BEZIER"
+                      ],
+                      [
+                        "type",
+                        "KEYFRAME"
+                      ],
+                      [
+                        "easing",
+                        "AUTO"
+                      ],
+                      [
+                        "back",
+                        1.7015800476074219
+                      ],
+                      [
+                        "amplitude",
+                        0.800000011920929
+                      ],
+                      [
+                        "period",
+                        4.099999904632568
+                      ],
+                      [
+                        "handle_left",
+                        [
+                          -0.3333333432674408,
+                          -0.3333333432674408
+                        ]
+                      ],
+                      [
+                        "co",
+                        [
+                          0.0,
+                          0.0
+                        ]
+                      ],
+                      [
+                        "co_ui",
+                        [
+                          0.0,
+                          0.0
+                        ]
+                      ],
+                      [
+                        "handle_right",
+                        [
+                          0.3333333432674408,
+                          0.3333333432674408
+                        ]
+                      ]
+                    ],
+                    [
+                      [
+                        "select_left_handle",
+                        true
+                      ],
+                      [
+                        "select_right_handle",
+                        true
+                      ],
+                      [
+                        "select_control_point",
+                        true
+                      ],
+                      [
+                        "handle_left_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "handle_right_type",
+                        "AUTO_CLAMPED"
+                      ],
+                      [
+                        "interpolation",
+                        "BEZIER"
+                      ],
+                      [
+                        "type",
+                        "KEYFRAME"
+                      ],
+                      [
+                        "easing",
+                        "AUTO"
+                      ],
+                      [
+                        "back",
+                        1.7015800476074219
+                      ],
+                      [
+                        "amplitude",
+                        0.800000011920929
+                      ],
+                      [
+                        "period",
+                        4.099999904632568
+                      ],
+                      [
+                        "handle_left",
+                        [
+                          0.6666666269302368,
+                          0.6666666269302368
+                        ]
+                      ],
+                      [
+                        "co",
+                        [
+                          1.0,
+                          1.0
+                        ]
+                      ],
+                      [
+                        "co_ui",
+                        [
+                          1.0,
+                          1.0
+                        ]
+                      ],
+                      [
+                        "handle_right",
+                        [
+                          1.3333333730697632,
+                          1.3333333730697632
+                        ]
+                      ]
+                    ]
+                  ],
+                  "sampled_points": [],
+                  "modifiers": [],
+                  "proved": true,
+                  "scope": "finite native FCurve knots/handles/samples and recognized built-in target-free modifiers",
+                  "identity_mapping_required": false,
+                  "reason": "Ancestry independence needs a target-free native mapping, not an identity response."
+                },
+                "proved": true,
+                "scope": "finite simple arithmetic of exact non-Hair native custom scalar sources followed by target-free native FCurve mapping; no Python eval"
+              }
+            ],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_1",
+            "parent": "MCH_torso_offset_1",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "MCH_torso_offset_1",
+            "parent": "Hips",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_bend",
+            "parent": "Hips",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_2",
+            "parent": "MCH_torso_offset_2",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "MCH_torso_offset_2",
+            "parent": "CTRL_torso_1",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_3",
+            "parent": "MCH_torso_offset_3",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "MCH_torso_offset_3",
+            "parent": "CTRL_torso_2",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "proved_scalar_drivers": [],
+            "unproved_drivers": [],
+            "rest_driver_or_animation_paths": []
+          }
+        ],
+        "edges": [
+          {
+            "from": "Head",
+            "to": "Neck",
+            "kind": "parent"
+          },
+          {
+            "from": "Neck",
+            "to": "UpperChest",
+            "kind": "parent"
+          },
+          {
+            "from": "UpperChest",
+            "to": "Chest",
+            "kind": "parent"
+          },
+          {
+            "from": "Chest",
+            "to": "spine",
+            "kind": "parent"
+          },
+          {
+            "from": "spine",
+            "to": "Hips",
+            "kind": "parent"
+          },
+          {
+            "from": "Hips",
+            "to": "CTRL_master",
+            "kind": "constraint",
+            "name": "CD Root Follow",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "POSE",
+            "target_space": "POSE",
+            "animated_or_driven_fields": [],
+            "mix_mode": "BEFORE"
+          },
+          {
+            "from": "spine",
+            "to": "CTRL_torso_1",
+            "kind": "constraint",
+            "name": "CD Torso FK",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "WORLD",
+            "target_space": "WORLD",
+            "animated_or_driven_fields": [],
+            "mix_mode": "REPLACE"
+          },
+          {
+            "from": "CTRL_torso_1",
+            "to": "MCH_torso_offset_1",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_1",
+            "to": "Hips",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_1",
+            "to": "CTRL_torso_bend",
+            "kind": "constraint",
+            "name": "CD Torso Shared Bend",
+            "type": "COPY_ROTATION",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 0.3333333432674408,
+            "owner_space": "LOCAL",
+            "target_space": "LOCAL",
+            "animated_or_driven_fields": [],
+            "mix_mode": "AFTER",
+            "use_offset": true,
+            "use_x": true,
+            "use_y": true,
+            "use_z": true,
+            "invert_x": false,
+            "invert_y": false,
+            "invert_z": false
+          },
+          {
+            "from": "CTRL_torso_bend",
+            "to": "Hips",
+            "kind": "parent"
+          },
+          {
+            "from": "Chest",
+            "to": "CTRL_torso_2",
+            "kind": "constraint",
+            "name": "CD Torso FK",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "WORLD",
+            "target_space": "WORLD",
+            "animated_or_driven_fields": [],
+            "mix_mode": "REPLACE"
+          },
+          {
+            "from": "CTRL_torso_2",
+            "to": "MCH_torso_offset_2",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_2",
+            "to": "CTRL_torso_1",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_2",
+            "to": "CTRL_torso_bend",
+            "kind": "constraint",
+            "name": "CD Torso Shared Bend",
+            "type": "COPY_ROTATION",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 0.3333333432674408,
+            "owner_space": "LOCAL",
+            "target_space": "LOCAL",
+            "animated_or_driven_fields": [],
+            "mix_mode": "AFTER",
+            "use_offset": true,
+            "use_x": true,
+            "use_y": true,
+            "use_z": true,
+            "invert_x": false,
+            "invert_y": false,
+            "invert_z": false
+          },
+          {
+            "from": "UpperChest",
+            "to": "CTRL_torso_3",
+            "kind": "constraint",
+            "name": "CD Torso FK",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "WORLD",
+            "target_space": "WORLD",
+            "animated_or_driven_fields": [],
+            "mix_mode": "REPLACE"
+          },
+          {
+            "from": "CTRL_torso_3",
+            "to": "MCH_torso_offset_3",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_3",
+            "to": "CTRL_torso_2",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_3",
+            "to": "CTRL_torso_bend",
+            "kind": "constraint",
+            "name": "CD Torso Shared Bend",
+            "type": "COPY_ROTATION",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 0.3333333432674408,
+            "owner_space": "LOCAL",
+            "target_space": "LOCAL",
+            "animated_or_driven_fields": [],
+            "mix_mode": "AFTER",
+            "use_offset": true,
+            "use_x": true,
+            "use_y": true,
+            "use_z": true,
+            "invert_x": false,
+            "invert_y": false,
+            "invert_z": false
+          }
+        ],
+        "Object_dependencies": [
+          {
+            "object": "CoshaRig",
+            "parent": null,
+            "transform_driver_paths": [],
+            "constraint_count": 0
+          }
+        ],
+        "rejections": [],
+        "accepted_constraint_types": [
+          "COPY_TRANSFORMS",
+          "COPY_ROTATION",
+          "COPY_LOCATION"
+        ],
+        "proof_scope": "native same-Armature parent/copy-constraint DAG, Hair-disjoint, transform drivers only with native custom-scalar arithmetic proof; no constraint drivers"
+      },
+      "terminal_Hair_owned": false
+    }
+  },
+  "registry_counts": {
+    "C": 2,
+    "L": 11,
+    "R": 11,
+    "U": 8
+  },
+  "strict_baseline": true,
+  "initial_fingerprint": {
+    "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+    "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+    "counts": {
+      "meshes": 375,
+      "vertices": 110905,
+      "coordinate_bytes": 2182140,
+      "uv_bytes": 5154032,
+      "uv_layers": 21,
+      "shape_keys": 20,
+      "rest_bones": 2415,
+      "armature_modifiers": 7,
+      "weight_assignments": 140562,
+      "actions": 3
+    },
+    "elapsed_seconds": 4.448403300004429,
+    "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+    "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+  },
+  "final_fingerprint": {
+    "sha256": "47bd5c6f9ee7763a85589c281e55f7a0ea12da322a941226ca96530846677668",
+    "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+    "counts": {
+      "meshes": 375,
+      "vertices": 110905,
+      "coordinate_bytes": 2182140,
+      "uv_bytes": 5154032,
+      "uv_layers": 21,
+      "shape_keys": 20,
+      "rest_bones": 2415,
+      "armature_modifiers": 7,
+      "weight_assignments": 140562,
+      "actions": 3
+    },
+    "elapsed_seconds": 4.271100300000398,
+    "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+    "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+  },
+  "artist_disk_sha256_unchanged": "87d9e22bfcc1cb37449f3a76f0a8674959751ffc8c3e25ceb6d0c50ad17b26ca",
+  "guard_outside_frame_calls": 0,
+  "guard_outside_frame_seconds": 0.0
+}

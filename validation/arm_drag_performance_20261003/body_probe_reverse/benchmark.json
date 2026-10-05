@@ -1,0 +1,3612 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "args": {
+    "input": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "output": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\body_probe_reverse\\benchmark.json",
+    "addon_root": "C:/Users/Randy/AppData/Roaming/Blender Foundation/Blender/5.1/scripts/addons",
+    "rig": "CoshaRig",
+    "body": "Cosha",
+    "bone": "",
+    "side": "L",
+    "mode": "current",
+    "movement": "auto",
+    "repeats": 8,
+    "warmups": 2,
+    "cases": "no_subsurf_no_forearm,no_forearm,no_subsurf,baseline",
+    "sample_vertices": 8192
+  },
+  "limits": [
+    "Background CPU/depsgraph test, not end-to-end interactive latency.",
+    "Only installed Character Designer is explicitly registered; other GUI add-ons may differ.",
+    "No render, frame stepping, scene save, installation change or artist-window connection.",
+    "No-subdivision and no-correction cases are isolated diagnostic counterfactuals.",
+    "Warm p95 uses a small sample and must not be presented as a long-term guarantee.",
+    "Process page faults include soft faults; system paging requires external counters."
+  ],
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "sha256_before": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+    "bytes": 32311941
+  },
+  "memory_start": {
+    "available": true,
+    "system_load_percent": 94,
+    "system_available_mib": 945.53515625,
+    "system_total_mib": 16158.7578125,
+    "process_working_set_mib": 158.94140625,
+    "process_private_mib": 218.03515625,
+    "process_page_fault_count": 50736,
+    "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+  },
+  "runtime": {
+    "blender_version": "5.1.0",
+    "background": true,
+    "binary": "D:\\Blender5.1\\blender.exe",
+    "addon_version": [
+      0,
+      73,
+      3
+    ],
+    "addon_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\__init__.py",
+    "addon_sources": {
+      "init": "4897c5796d24ba46db1d5abd14dcd994c3847e0f182a53dd152ad110daf7f4dd",
+      "forearm_twist": "12b298520389598cbf5bc8cd0dc51fce21e346b6928106e6bb48ca65ed1eb8aa",
+      "limb_ik": "fc747da16c60df1f607eec5651231809b60ac1858307037b3a806a9fbfd52a9e",
+      "original": "424b44189e0a10451534cd323b3040ba1eea453eb47cafd97cd28ee3794827b6"
+    },
+    "before_load_handlers": {
+      "depsgraph_update_pre": [],
+      "depsgraph_update_post": [
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_graph_post"
+        }
+      ],
+      "frame_change_pre": [],
+      "frame_change_post": [
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_frame_visibility"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_frame_post"
+        }
+      ],
+      "load_post": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "pose_library.gui",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "character_designer.finger_definition_ui",
+          "name": "_resume"
+        },
+        {
+          "module": "character_designer.finger_loop_marks_ui",
+          "name": "_restore"
+        },
+        {
+          "module": "character_designer.reference_views",
+          "name": "_reference_images_load_post"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.body_calibration_overlay",
+          "name": "_load"
+        },
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_load_native_migration"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_load_post"
+        },
+        {
+          "module": "character_designer.generated_names",
+          "name": "_after_load"
+        }
+      ]
+    }
+  },
+  "memory_after_load": {
+    "available": true,
+    "system_load_percent": 96,
+    "system_available_mib": 635.41796875,
+    "system_total_mib": 16158.7578125,
+    "process_working_set_mib": 545.7265625,
+    "process_private_mib": 607.23828125,
+    "process_page_fault_count": 314653,
+    "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+  },
+  "scene": {
+    "filepath": "D:\\Blender\\Projects\\Character\\X\\validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "frame": 39,
+    "view_layer": "ViewLayer",
+    "mode_on_load": "OBJECT",
+    "active_object": "CoshaRig",
+    "selected_pose_bones": [],
+    "active_pose_bone": null,
+    "active_data_bone": "upper_arm.L",
+    "bone_selection_inventory": {
+      "data_selection_property_available": false,
+      "pose_selection_property_available": true,
+      "selected_data_bones": [],
+      "selected_pose_bones_from_rig": [
+        "upper_arm.L"
+      ],
+      "note": "Blender versions may store selection on PoseBone; missing properties are unavailable, not unselected."
+    },
+    "original_session": true,
+    "bones": 351,
+    "constraints": 116,
+    "visible_meshes": 6,
+    "total_meshes": 71,
+    "threads_mode": "FIXED",
+    "threads_setting": 2,
+    "post_load_handlers": {
+      "depsgraph_update_pre": [],
+      "depsgraph_update_post": [
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_graph_post"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        }
+      ],
+      "frame_change_pre": [],
+      "frame_change_post": [
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_frame_visibility"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_frame_post"
+        }
+      ],
+      "load_post": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "pose_library.gui",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "character_designer.finger_definition_ui",
+          "name": "_resume"
+        },
+        {
+          "module": "character_designer.finger_loop_marks_ui",
+          "name": "_restore"
+        },
+        {
+          "module": "character_designer.reference_views",
+          "name": "_reference_images_load_post"
+        },
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_load_native_migration"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_load_post"
+        },
+        {
+          "module": "character_designer.generated_names",
+          "name": "_after_load"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.body_calibration_overlay",
+          "name": "_load"
+        }
+      ]
+    }
+  },
+  "original_structure": {
+    "active": true,
+    "saved_bones": 351,
+    "current_bones": 351,
+    "added_bones": [],
+    "missing_bones": [],
+    "native_added": [],
+    "native_missing": [],
+    "exact_rest_equal": false,
+    "changed_rest_bones": [
+      {
+        "bone": "f_index.01.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.980232238769531e-07,
+        "length_delta": 1.862645149230957e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_index.01.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 1.7881393432617188e-07,
+        "length_delta": 2.2351741790771484e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_index.02.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.980232238769531e-07,
+        "length_delta": 1.1175870895385742e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_index.02.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 1.1920928955078125e-07,
+        "length_delta": 7.450580596923828e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_index.03.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.980232238769531e-07,
+        "length_delta": 5.587935447692871e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_index.03.R",
+        "different_fields": [
+          "matrix"
+        ],
+        "matrix_max_error": 1.2665987014770508e-07,
+        "length_delta": 0.0,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_middle.01.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 1.862645149230957e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_middle.01.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 4.172325134277344e-07,
+        "length_delta": 3.725290298461914e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_middle.02.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 1.4901161193847656e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_middle.02.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 4.172325134277344e-07,
+        "length_delta": 2.2351741790771484e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_middle.03.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 1.1175870895385742e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_middle.03.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 1.30385160446167e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_pinky.01.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.384185791015625e-07,
+        "length_delta": 7.450580596923828e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_pinky.01.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.2782554626464844e-07,
+        "length_delta": 2.2351741790771484e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_pinky.02.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.384185791015625e-07,
+        "length_delta": 7.450580596923828e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_pinky.02.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 9.313225746154785e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_pinky.03.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.5704503059387207e-07,
+        "length_delta": 1.1175870895385742e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_pinky.03.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.980232238769531e-07,
+        "length_delta": 9.313225746154785e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_ring.01.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.384185791015625e-07,
+        "length_delta": 3.725290298461914e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_ring.01.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.384185791015625e-07,
+        "length_delta": 2.60770320892334e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_ring.02.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.980232238769531e-07,
+        "length_delta": 9.313225746154785e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_ring.02.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.384185791015625e-07,
+        "length_delta": -1.4901161193847656e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_ring.03.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.980232238769531e-07,
+        "length_delta": 7.450580596923828e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "f_ring.03.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.384185791015625e-07,
+        "length_delta": -7.450580596923828e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "forearm.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 2.980232238769531e-07,
+        "length_delta": 1.1920928955078125e-07,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "forearm.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 4.172325134277344e-07,
+        "length_delta": 8.940696716308594e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "hand.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 2.60770320892334e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "hand.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 4.172325134277344e-07,
+        "length_delta": 2.2351741790771484e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "thumb.01.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.8743019104003906e-07,
+        "length_delta": 7.450580596923828e-09,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "thumb.01.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 1.1175870895385742e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "thumb.02.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 4.76837158203125e-07,
+        "length_delta": 1.1175870895385742e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "thumb.02.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 4.172325134277344e-07,
+        "length_delta": 1.1175870895385742e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "thumb.03.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 3.5762786865234375e-07,
+        "length_delta": 1.862645149230957e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "thumb.03.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 4.470348358154297e-07,
+        "length_delta": 1.4901161193847656e-08,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "upper_arm.L",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 0.007047533988952637,
+        "length_delta": -0.009419023990631104,
+        "non_numeric_fields": {}
+      },
+      {
+        "bone": "upper_arm.R",
+        "different_fields": [
+          "matrix",
+          "length"
+        ],
+        "matrix_max_error": 1.992390215396881,
+        "length_delta": -0.009419023990631104,
+        "non_numeric_fields": {}
+      }
+    ],
+    "read_only": true,
+    "note": "Records the guard inputs; not automatically a drag-latency explanation."
+  },
+  "drivers": {
+    "total": 75,
+    "invalid_count": 0,
+    "invalid": [],
+    "diagnostic_errors": [],
+    "note": "Read-only validity flags after graph update; does not prove a performance cause."
+  },
+  "arm_inventory": {
+    "error": "Owned constraint 'CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77' on 'forearm.L' was disabled or had its influence edited."
+  },
+  "bound_mesh_inventory": [
+    {
+      "name": "Cosha",
+      "visible": true,
+      "raw_vertices": 3658,
+      "arm_chain_weighted_vertices": 298,
+      "matching_arm_vertex_groups": [
+        "upper_arm.L",
+        "forearm.L",
+        "hand.L"
+      ],
+      "forearm_calibration": {
+        "record_key_present": false,
+        "side_count": 0,
+        "enabled_sides": [],
+        "managed_keys": []
+      },
+      "related_custom_property_names": []
+    },
+    {
+      "name": "Clothes",
+      "visible": true,
+      "raw_vertices": 101,
+      "arm_chain_weighted_vertices": 14,
+      "matching_arm_vertex_groups": [
+        "upper_arm.L",
+        "forearm.L",
+        "hand.L"
+      ],
+      "forearm_calibration": {
+        "record_key_present": false,
+        "side_count": 0,
+        "enabled_sides": [],
+        "managed_keys": []
+      },
+      "related_custom_property_names": []
+    },
+    {
+      "name": "Stocking",
+      "visible": true,
+      "raw_vertices": 528,
+      "arm_chain_weighted_vertices": 0,
+      "matching_arm_vertex_groups": [
+        "upper_arm.L",
+        "forearm.L",
+        "hand.L"
+      ],
+      "forearm_calibration": {
+        "record_key_present": false,
+        "side_count": 0,
+        "enabled_sides": [],
+        "managed_keys": []
+      },
+      "related_custom_property_names": []
+    },
+    {
+      "name": "Dress",
+      "visible": true,
+      "raw_vertices": 800,
+      "arm_chain_weighted_vertices": 0,
+      "matching_arm_vertex_groups": [],
+      "forearm_calibration": {
+        "record_key_present": false,
+        "side_count": 0,
+        "enabled_sides": [],
+        "managed_keys": []
+      },
+      "related_custom_property_names": []
+    },
+    {
+      "name": "Hair",
+      "visible": true,
+      "raw_vertices": 5463,
+      "arm_chain_weighted_vertices": 0,
+      "matching_arm_vertex_groups": [],
+      "forearm_calibration": {
+        "record_key_present": false,
+        "side_count": 0,
+        "enabled_sides": [],
+        "managed_keys": []
+      },
+      "related_custom_property_names": []
+    }
+  ],
+  "body_mesh": {
+    "name": "Cosha",
+    "raw_vertices": 3658,
+    "raw_polygons": 3584,
+    "visible": true,
+    "requested_body": "Cosha",
+    "selection_reason": "Requested bound body has arm-chain skin weights",
+    "arm_chain_weighted_vertices": 298,
+    "shape_keys": 10,
+    "calibrated_meshes": []
+  },
+  "subsurf": [
+    {
+      "object": "Cosha",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 3658
+    },
+    {
+      "object": "Clothes",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 101
+    },
+    {
+      "object": "Stocking",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 528
+    },
+    {
+      "object": "Dress",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 800
+    },
+    {
+      "object": "Jacket",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 139
+    },
+    {
+      "object": "Dress_Backup",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 60
+    },
+    {
+      "object": "ShoeBase",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 576
+    },
+    {
+      "object": "ShoeUpperBase",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 86
+    },
+    {
+      "object": "Embedded.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 300
+    },
+    {
+      "object": "Ear.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 260
+    },
+    {
+      "object": "ShoeUpper2.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 387
+    },
+    {
+      "object": "ShoeUpper3.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 377
+    },
+    {
+      "object": "Vamp.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 450
+    }
+  ],
+  "forearm": {
+    "runtime_registered": true,
+    "record_property_name": "character_designer_forearm_twist_v1",
+    "recorded_scene_meshes": [],
+    "registered_handlers": [
+      {
+        "list": "depsgraph_update_post",
+        "name": "_graph_post",
+        "registered": true
+      },
+      {
+        "list": "frame_change_post",
+        "name": "_frame_post",
+        "registered": true
+      },
+      {
+        "list": "load_pre",
+        "name": "_restore_preview",
+        "registered": true
+      },
+      {
+        "list": "save_pre",
+        "name": "_restore_preview",
+        "registered": true
+      },
+      {
+        "list": "undo_pre",
+        "name": "_restore_preview",
+        "registered": true
+      },
+      {
+        "list": "load_post",
+        "name": "_load_post",
+        "registered": true
+      },
+      {
+        "list": "undo_post",
+        "name": "_undo_post",
+        "registered": true
+      },
+      {
+        "list": "redo_post",
+        "name": "_undo_post",
+        "registered": true
+      }
+    ],
+    "errors_before": {}
+  },
+  "candidate_reason": "Original session active: native arm bone candidates; controls may be suppressed.",
+  "candidate_attempts": [
+    {
+      "bone": "upper_arm.L",
+      "movement": "rotation",
+      "axis": 0,
+      "amount": 0.04,
+      "deformation_witness": {
+        "valid": true,
+        "maximum_world_distance": 0.02419138191095608,
+        "changed_sample_vertices": 1330,
+        "sample_vertices": 7235,
+        "evaluated_vertices": 14470,
+        "sampling_note": "Evenly spaced evaluated vertices; maximum is a sampled lower bound.",
+        "chain_matrix_max_error": 0.03065049648284912,
+        "initial_update_seconds": 0.018385900002613198
+      }
+    }
+  ],
+  "selection": {
+    "bone": "upper_arm.L",
+    "movement": "rotation",
+    "axis": 0,
+    "amount": 0.04,
+    "current_original_session": true,
+    "fallback_from_explicit_bone": false,
+    "generated_target_fallback": false,
+    "matches_initial_selected_pose_bone": false,
+    "is_generated_target": false,
+    "note": "Actual deformed skin and arm-chain movement verified before timing."
+  },
+  "timing": {
+    "interval": "pose assignment + view_layer.update + evaluated_depsgraph_get",
+    "includes_wrappers": true,
+    "profiled_sample_excluded_from_percentiles": true,
+    "cold_definition": "first pose update after per-case runtime cache clear, not cold Blender launch",
+    "warmup_updates": 2,
+    "warm_samples_per_case": 8,
+    "cases": [
+      {
+        "name": "no_subsurf_no_forearm",
+        "subsurf_disabled": true,
+        "forearm_enabled": false,
+        "forearm_handlers_present": [
+          {
+            "list": "depsgraph_update_post",
+            "name": "_graph_post",
+            "present": false
+          },
+          {
+            "list": "frame_change_post",
+            "name": "_frame_post",
+            "present": false
+          }
+        ],
+        "cold": {
+          "wall_seconds": 0.021099999998114072,
+          "process_cpu_seconds": 0.03125,
+          "depsgraph_callbacks": 1,
+          "memory_before": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 573.81640625,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 617.55078125,
+            "process_private_mib": 680.53125,
+            "process_page_fault_count": 360298,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          },
+          "memory_after": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 573.81640625,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 617.54296875,
+            "process_private_mib": 680.53515625,
+            "process_page_fault_count": 361173,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          }
+        },
+        "samples": [
+          {
+            "wall_seconds": 0.024315199996635783,
+            "process_cpu_seconds": 0.015625,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 575.90234375,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5078125,
+              "process_private_mib": 680.53515625,
+              "process_page_fault_count": 362925,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 577.40234375,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.51953125,
+              "process_private_mib": 680.53515625,
+              "process_page_fault_count": 363802,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.022800399994594045,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 577.90234375,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.51953125,
+              "process_private_mib": 680.53515625,
+              "process_page_fault_count": 363802,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 580.8828125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.51953125,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 364677,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02353660000517266,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 580.8828125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5234375,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 364678,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 580.00390625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5234375,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 365551,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02163709999877028,
+            "process_cpu_seconds": 0.015625,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 580.00390625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5234375,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 365551,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 573.47265625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5234375,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 366426,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.023426100000506267,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 573.47265625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5234375,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 366426,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 577.37890625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5234375,
+              "process_private_mib": 680.53515625,
+              "process_page_fault_count": 367302,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02158929999859538,
+            "process_cpu_seconds": 0.015625,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 577.37890625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.5234375,
+              "process_private_mib": 680.53515625,
+              "process_page_fault_count": 367302,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 579.98828125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.52734375,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 368176,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.019689100001414772,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 579.37890625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.52734375,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 368176,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 575.0,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.6796875,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 369088,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02004020000458695,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 575.0,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.6796875,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 369088,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 577.94140625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 617.69140625,
+              "process_private_mib": 680.5390625,
+              "process_page_fault_count": 369963,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          }
+        ],
+        "p50_wall_seconds": 0.022218749996682163,
+        "p95_wall_seconds": 0.02404268999962369,
+        "min_wall_seconds": 0.019689100001414772,
+        "max_wall_seconds": 0.024315199996635783,
+        "components_warm_samples": {
+          "calls": {},
+          "nested_seconds": {},
+          "graph_events": 8,
+          "note": "Components are nested; do not add their durations."
+        },
+        "depsgraph_update_events_warm": [
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          }
+        ],
+        "depsgraph_debug_stats": "Approx 6078 Operations, 10915 Relations, 2557 Outer Nodes",
+        "deformation_witness": {
+          "valid": true,
+          "maximum_world_distance": 0.024227022401746793,
+          "changed_sample_vertices": 625,
+          "sample_vertices": 3658,
+          "evaluated_vertices": 3658,
+          "sampling_note": "Evenly spaced evaluated vertices; maximum is a sampled lower bound."
+        },
+        "evaluated_body": {
+          "vertices": 3658,
+          "edges": 7228,
+          "polygons": 3584,
+          "stride": 1
+        },
+        "profile_seconds": 0.022831800000858493,
+        "profile_path": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\body_probe_reverse\\benchmark_no_subsurf_no_forearm.prof",
+        "profile_top_cumulative": [
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 531,
+            "function": "move",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 0.0226786,
+            "cumulative_seconds": 0.0228235
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 278,
+            "function": "observe",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 6.66e-05,
+            "cumulative_seconds": 0.0001239
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.sum>",
+            "calls": 3,
+            "primitive_calls": 3,
+            "own_seconds": 1.55e-05,
+            "cumulative_seconds": 5.5900000000000004e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 5e-05,
+            "cumulative_seconds": 5e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 195,
+            "function": "_invalidate",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 3.9e-06,
+            "cumulative_seconds": 1.66e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 281,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 1e-05,
+            "cumulative_seconds": 1.62e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.getattr>",
+            "calls": 57,
+            "primitive_calls": 57,
+            "own_seconds": 1.56e-05,
+            "cumulative_seconds": 1.56e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 16,
+            "function": "clear",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.16e-05,
+            "cumulative_seconds": 1.27e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 282,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 7.5e-06,
+            "cumulative_seconds": 1.2400000000000002e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 283,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 7.3e-06,
+            "cumulative_seconds": 1.18e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method Rotation>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 4.4e-06,
+            "cumulative_seconds": 4.4e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method time.perf_counter>",
+            "calls": 2,
+            "primitive_calls": 2,
+            "own_seconds": 2.2e-06,
+            "cumulative_seconds": 2.2e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'clear' of 'dict' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.1e-06,
+            "cumulative_seconds": 1.1e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.len>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 8.000000000000001e-07,
+            "cumulative_seconds": 8.000000000000001e-07
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'append' of 'list' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 6.000000000000001e-07,
+            "cumulative_seconds": 6.000000000000001e-07
+          }
+        ],
+        "forearm_errors": {},
+        "memory_after_case": {
+          "available": true,
+          "system_load_percent": 96,
+          "system_available_mib": 583.72265625,
+          "system_total_mib": 16158.7578125,
+          "process_working_set_mib": 618.8828125,
+          "process_private_mib": 681.546875,
+          "process_page_fault_count": 372894,
+          "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+        }
+      },
+      {
+        "name": "no_forearm",
+        "subsurf_disabled": false,
+        "forearm_enabled": false,
+        "forearm_handlers_present": [
+          {
+            "list": "depsgraph_update_post",
+            "name": "_graph_post",
+            "present": false
+          },
+          {
+            "list": "frame_change_post",
+            "name": "_frame_post",
+            "present": false
+          }
+        ],
+        "cold": {
+          "wall_seconds": 0.021551799996814225,
+          "process_cpu_seconds": 0.03125,
+          "depsgraph_callbacks": 1,
+          "memory_before": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 578.421875,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 618.90625,
+            "process_private_mib": 681.546875,
+            "process_page_fault_count": 373778,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          },
+          "memory_after": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 582.40625,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 618.89453125,
+            "process_private_mib": 681.54296875,
+            "process_page_fault_count": 374652,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          }
+        },
+        "samples": [
+          {
+            "wall_seconds": 0.02252520000183722,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 578.57421875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.18359375,
+              "process_private_mib": 681.875,
+              "process_page_fault_count": 376474,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 584.46875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.37109375,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 377397,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.018895200002589263,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 584.46875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.37109375,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 377397,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 588.46875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.37890625,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 378274,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.01839990000007674,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 588.46875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.37890625,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 378274,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 591.46875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.3828125,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 379149,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.01970739999524085,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 591.46875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.3828125,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 379149,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 596.453125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.375,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 380023,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.019209699996281415,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 596.94921875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.375,
+              "process_private_mib": 682.0390625,
+              "process_page_fault_count": 380023,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 600.453125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.51171875,
+              "process_private_mib": 682.203125,
+              "process_page_fault_count": 380935,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.021705400002247188,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 600.453125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.51171875,
+              "process_private_mib": 682.203125,
+              "process_page_fault_count": 380935,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 600.4140625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.5546875,
+              "process_private_mib": 682.53125,
+              "process_page_fault_count": 381820,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.020791599999938626,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 600.4140625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.6171875,
+              "process_private_mib": 682.53125,
+              "process_page_fault_count": 381836,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 603.0390625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.62109375,
+              "process_private_mib": 682.53515625,
+              "process_page_fault_count": 382711,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02057270000659628,
+            "process_cpu_seconds": 0.015625,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 601.81640625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.62109375,
+              "process_private_mib": 682.53515625,
+              "process_page_fault_count": 382711,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 595.44921875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 619.62109375,
+              "process_private_mib": 682.53125,
+              "process_page_fault_count": 383584,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          }
+        ],
+        "p50_wall_seconds": 0.020140050000918563,
+        "p95_wall_seconds": 0.022238270001980708,
+        "min_wall_seconds": 0.01839990000007674,
+        "max_wall_seconds": 0.02252520000183722,
+        "components_warm_samples": {
+          "calls": {},
+          "nested_seconds": {},
+          "graph_events": 8,
+          "note": "Components are nested; do not add their durations."
+        },
+        "depsgraph_update_events_warm": [
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          }
+        ],
+        "depsgraph_debug_stats": "Approx 6078 Operations, 10915 Relations, 2557 Outer Nodes",
+        "deformation_witness": {
+          "valid": true,
+          "maximum_world_distance": 0.02419138191095608,
+          "changed_sample_vertices": 1330,
+          "sample_vertices": 7235,
+          "evaluated_vertices": 14470,
+          "sampling_note": "Evenly spaced evaluated vertices; maximum is a sampled lower bound."
+        },
+        "evaluated_body": {
+          "vertices": 14470,
+          "edges": 28768,
+          "polygons": 14312,
+          "stride": 2
+        },
+        "profile_seconds": 0.022253099996305536,
+        "profile_path": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\body_probe_reverse\\benchmark_no_forearm.prof",
+        "profile_top_cumulative": [
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 531,
+            "function": "move",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 0.022006400000000002,
+            "cumulative_seconds": 0.0222438
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 278,
+            "function": "observe",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 0.00011650000000000001,
+            "cumulative_seconds": 0.00021150000000000002
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.sum>",
+            "calls": 3,
+            "primitive_calls": 3,
+            "own_seconds": 2.6300000000000002e-05,
+            "cumulative_seconds": 9.28e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 5.25e-05,
+            "cumulative_seconds": 5.25e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.getattr>",
+            "calls": 57,
+            "primitive_calls": 57,
+            "own_seconds": 2.72e-05,
+            "cumulative_seconds": 2.72e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 281,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 1.4700000000000002e-05,
+            "cumulative_seconds": 2.5600000000000002e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 195,
+            "function": "_invalidate",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 5.2e-06,
+            "cumulative_seconds": 2.2000000000000003e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 282,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 1.2600000000000001e-05,
+            "cumulative_seconds": 2.09e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 283,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 1.2e-05,
+            "cumulative_seconds": 2e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 16,
+            "function": "clear",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.5100000000000001e-05,
+            "cumulative_seconds": 1.6800000000000002e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method Rotation>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 3.9e-06,
+            "cumulative_seconds": 3.9e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method time.perf_counter>",
+            "calls": 2,
+            "primitive_calls": 2,
+            "own_seconds": 2.7e-06,
+            "cumulative_seconds": 2.7e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'clear' of 'dict' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.7e-06,
+            "cumulative_seconds": 1.7e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.len>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.2000000000000002e-06,
+            "cumulative_seconds": 1.2000000000000002e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'append' of 'list' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.0000000000000002e-06,
+            "cumulative_seconds": 1.0000000000000002e-06
+          }
+        ],
+        "forearm_errors": {},
+        "memory_after_case": {
+          "available": true,
+          "system_load_percent": 96,
+          "system_available_mib": 588.55078125,
+          "system_total_mib": 16158.7578125,
+          "process_working_set_mib": 623.51953125,
+          "process_private_mib": 685.53515625,
+          "process_page_fault_count": 387210,
+          "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+        }
+      },
+      {
+        "name": "no_subsurf",
+        "subsurf_disabled": true,
+        "forearm_enabled": true,
+        "forearm_handlers_present": [
+          {
+            "list": "depsgraph_update_post",
+            "name": "_graph_post",
+            "present": true
+          },
+          {
+            "list": "frame_change_post",
+            "name": "_frame_post",
+            "present": true
+          }
+        ],
+        "cold": {
+          "wall_seconds": 0.02255670000158716,
+          "process_cpu_seconds": 0.046875,
+          "depsgraph_callbacks": 1,
+          "memory_before": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 591.14453125,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 623.63671875,
+            "process_private_mib": 685.53515625,
+            "process_page_fault_count": 388116,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          },
+          "memory_after": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 583.0546875,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 623.6328125,
+            "process_private_mib": 685.53515625,
+            "process_page_fault_count": 388991,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          }
+        },
+        "samples": [
+          {
+            "wall_seconds": 0.01941149999765912,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 589.71875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.62890625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 390738,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 580.82421875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 391611,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.020244800005457364,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 580.82421875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 391611,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 584.296875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 392485,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.0252905000015744,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 584.29296875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 392485,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 590.20703125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.62109375,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 393358,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02364549999765586,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 590.20703125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.62109375,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 393358,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 594.1875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 394231,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02421640000102343,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 594.2109375,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 394231,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 597.4140625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 395105,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02247209999768529,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 597.26171875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 395105,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 589.05078125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 395978,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.021945200001937337,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 589.05078125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 395978,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 593.00390625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 396853,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.022284300001047086,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 593.0,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.61328125,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 396853,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 597.91015625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.62109375,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 397729,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          }
+        ],
+        "p50_wall_seconds": 0.02237819999936619,
+        "p95_wall_seconds": 0.02491456500138156,
+        "min_wall_seconds": 0.01941149999765912,
+        "max_wall_seconds": 0.0252905000015744,
+        "components_warm_samples": {
+          "calls": {
+            "character_designer.forearm_twist.update_runtime": 8,
+            "depsgraph_update_post:_graph_post": 8
+          },
+          "nested_seconds": {
+            "character_designer.forearm_twist.update_runtime": 0.001044499993440695,
+            "depsgraph_update_post:_graph_post": 0.0011464999915915541
+          },
+          "graph_events": 8,
+          "note": "Components are nested; do not add their durations."
+        },
+        "depsgraph_update_events_warm": [
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          }
+        ],
+        "depsgraph_debug_stats": "Approx 6078 Operations, 10915 Relations, 2557 Outer Nodes",
+        "deformation_witness": {
+          "valid": true,
+          "maximum_world_distance": 0.024227022401746793,
+          "changed_sample_vertices": 625,
+          "sample_vertices": 3658,
+          "evaluated_vertices": 3658,
+          "sampling_note": "Evenly spaced evaluated vertices; maximum is a sampled lower bound."
+        },
+        "evaluated_body": {
+          "vertices": 3658,
+          "edges": 7228,
+          "polygons": 3584,
+          "stride": 1
+        },
+        "profile_seconds": 0.020113799997488968,
+        "profile_path": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\body_probe_reverse\\benchmark_no_subsurf.prof",
+        "profile_top_cumulative": [
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 531,
+            "function": "move",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 0.019839600000000002,
+            "cumulative_seconds": 0.020108400000000002
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 268,
+            "function": "measured",
+            "calls": 2,
+            "primitive_calls": 1,
+            "own_seconds": 1.8500000000000002e-05,
+            "cumulative_seconds": 0.00013110000000000002
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 278,
+            "function": "observe",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 6.54e-05,
+            "cumulative_seconds": 0.000124
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\forearm_twist.py",
+            "line": 543,
+            "function": "_graph_post",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 3.1000000000000004e-06,
+            "cumulative_seconds": 0.0001231
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\forearm_twist.py",
+            "line": 513,
+            "function": "update_runtime",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 0.00010680000000000001,
+            "cumulative_seconds": 0.00010680000000000001
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.sum>",
+            "calls": 3,
+            "primitive_calls": 3,
+            "own_seconds": 1.63e-05,
+            "cumulative_seconds": 5.6800000000000005e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 4.8400000000000004e-05,
+            "cumulative_seconds": 4.8400000000000004e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 281,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 1e-05,
+            "cumulative_seconds": 1.6800000000000002e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.getattr>",
+            "calls": 57,
+            "primitive_calls": 57,
+            "own_seconds": 1.59e-05,
+            "cumulative_seconds": 1.59e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 282,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 7.6e-06,
+            "cumulative_seconds": 1.25e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 283,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 7.000000000000001e-06,
+            "cumulative_seconds": 1.1200000000000001e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 195,
+            "function": "_invalidate",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 2.1000000000000002e-06,
+            "cumulative_seconds": 1.04e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 16,
+            "function": "clear",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 7.5e-06,
+            "cumulative_seconds": 8.3e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method time.perf_counter>",
+            "calls": 6,
+            "primitive_calls": 6,
+            "own_seconds": 4.000000000000001e-06,
+            "cumulative_seconds": 4.000000000000001e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method Rotation>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 3.3e-06,
+            "cumulative_seconds": 3.3e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.len>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.1e-06,
+            "cumulative_seconds": 1.1e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'clear' of 'dict' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 8.000000000000001e-07,
+            "cumulative_seconds": 8.000000000000001e-07
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'append' of 'list' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 7.000000000000001e-07,
+            "cumulative_seconds": 7.000000000000001e-07
+          }
+        ],
+        "forearm_errors": {},
+        "memory_after_case": {
+          "available": true,
+          "system_load_percent": 96,
+          "system_available_mib": 593.83984375,
+          "system_total_mib": 16158.7578125,
+          "process_working_set_mib": 623.73046875,
+          "process_private_mib": 685.53515625,
+          "process_page_fault_count": 400379,
+          "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+        }
+      },
+      {
+        "name": "baseline",
+        "subsurf_disabled": false,
+        "forearm_enabled": true,
+        "forearm_handlers_present": [
+          {
+            "list": "depsgraph_update_post",
+            "name": "_graph_post",
+            "present": true
+          },
+          {
+            "list": "frame_change_post",
+            "name": "_frame_post",
+            "present": true
+          }
+        ],
+        "cold": {
+          "wall_seconds": 0.022597199997107964,
+          "process_cpu_seconds": 0.03125,
+          "depsgraph_callbacks": 1,
+          "memory_before": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 590.97265625,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 623.78125,
+            "process_private_mib": 685.53515625,
+            "process_page_fault_count": 401270,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          },
+          "memory_after": {
+            "available": true,
+            "system_load_percent": 96,
+            "system_available_mib": 594.84765625,
+            "system_total_mib": 16158.7578125,
+            "process_working_set_mib": 623.78515625,
+            "process_private_mib": 685.53515625,
+            "process_page_fault_count": 402144,
+            "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+          }
+        },
+        "samples": [
+          {
+            "wall_seconds": 0.020697600004496053,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 594.36328125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.76171875,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 403892,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 588.99609375,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.75390625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 404766,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.022903299999597948,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 588.99609375,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.75390625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 404766,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 597.48828125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.74609375,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 405640,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02400399999896763,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 598.08984375,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.74609375,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 405640,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 591.40625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.7421875,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 406513,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02115639999829,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 591.40625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.7421875,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 406513,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 595.4453125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.75,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 407389,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.025509099999908358,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 595.4453125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.75,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 407389,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 597.765625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.74609375,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 408264,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.026870100002270192,
+            "process_cpu_seconds": 0.046875,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 597.765625,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.74609375,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 408264,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 587.578125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.765625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 409145,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02220349999697646,
+            "process_cpu_seconds": 0.03125,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 587.578125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.765625,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 409145,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 590.23828125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.76171875,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 410019,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          },
+          {
+            "wall_seconds": 0.02347810000355821,
+            "process_cpu_seconds": 0.015625,
+            "depsgraph_callbacks": 1,
+            "memory_before": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 590.23828125,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.76171875,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 410019,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            },
+            "memory_after": {
+              "available": true,
+              "system_load_percent": 96,
+              "system_available_mib": 584.46875,
+              "system_total_mib": 16158.7578125,
+              "process_working_set_mib": 623.76171875,
+              "process_private_mib": 685.53515625,
+              "process_page_fault_count": 410893,
+              "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+            }
+          }
+        ],
+        "p50_wall_seconds": 0.02319070000157808,
+        "p95_wall_seconds": 0.02639375000144355,
+        "min_wall_seconds": 0.020697600004496053,
+        "max_wall_seconds": 0.026870100002270192,
+        "components_warm_samples": {
+          "calls": {
+            "character_designer.forearm_twist.update_runtime": 8,
+            "depsgraph_update_post:_graph_post": 8
+          },
+          "nested_seconds": {
+            "character_designer.forearm_twist.update_runtime": 0.0010088999842992052,
+            "depsgraph_update_post:_graph_post": 0.0011042000041925348
+          },
+          "graph_events": 8,
+          "note": "Components are nested; do not add their durations."
+        },
+        "depsgraph_update_events_warm": [
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          },
+          {
+            "updates": 19,
+            "geometry": 19,
+            "transform": 18,
+            "shading": 1,
+            "ids": [
+              "SK_Dress_Wire_01",
+              "CoshaRig",
+              "metarig",
+              "Hair",
+              "Dress",
+              "SK_Dress_Wire_02",
+              "SK_Dress_Wire_03",
+              "SK_Dress_Wire_04",
+              "SK_Dress_Wire_05",
+              "SK_Dress_Wire_06",
+              "SK_Dress_Wire_07",
+              "SK_Dress_Wire_08",
+              "SK_Dress_Wire_waist",
+              "SK_Dress_Wire_mid",
+              "SK_Dress_Wire_hem",
+              "Cosha",
+              "Clothes",
+              "Stocking",
+              "Shoes"
+            ]
+          }
+        ],
+        "depsgraph_debug_stats": "Approx 6078 Operations, 10915 Relations, 2557 Outer Nodes",
+        "deformation_witness": {
+          "valid": true,
+          "maximum_world_distance": 0.02419138191095608,
+          "changed_sample_vertices": 1330,
+          "sample_vertices": 7235,
+          "evaluated_vertices": 14470,
+          "sampling_note": "Evenly spaced evaluated vertices; maximum is a sampled lower bound."
+        },
+        "evaluated_body": {
+          "vertices": 14470,
+          "edges": 28768,
+          "polygons": 14312,
+          "stride": 2
+        },
+        "profile_seconds": 0.02295589999994263,
+        "profile_path": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\body_probe_reverse\\benchmark_baseline.prof",
+        "profile_top_cumulative": [
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 531,
+            "function": "move",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 0.0226918,
+            "cumulative_seconds": 0.0229502
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 278,
+            "function": "observe",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 6.36e-05,
+            "cumulative_seconds": 0.0001229
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 268,
+            "function": "measured",
+            "calls": 2,
+            "primitive_calls": 1,
+            "own_seconds": 1.8500000000000002e-05,
+            "cumulative_seconds": 0.00012080000000000001
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\forearm_twist.py",
+            "line": 543,
+            "function": "_graph_post",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 3.7e-06,
+            "cumulative_seconds": 0.0001116
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\forearm_twist.py",
+            "line": 513,
+            "function": "update_runtime",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 9.61e-05,
+            "cumulative_seconds": 9.61e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.sum>",
+            "calls": 3,
+            "primitive_calls": 3,
+            "own_seconds": 1.59e-05,
+            "cumulative_seconds": 5.7600000000000004e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 5.0100000000000005e-05,
+            "cumulative_seconds": 5.0100000000000005e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 281,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 1e-05,
+            "cumulative_seconds": 1.6400000000000002e-05
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.getattr>",
+            "calls": 57,
+            "primitive_calls": 57,
+            "own_seconds": 1.58e-05,
+            "cumulative_seconds": 1.58e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 282,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 8.400000000000001e-06,
+            "cumulative_seconds": 1.3300000000000001e-05
+          },
+          {
+            "file": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+            "line": 283,
+            "function": "<genexpr>",
+            "calls": 20,
+            "primitive_calls": 20,
+            "own_seconds": 7.5e-06,
+            "cumulative_seconds": 1.2e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 195,
+            "function": "_invalidate",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 1.8000000000000001e-06,
+            "cumulative_seconds": 1.0300000000000001e-05
+          },
+          {
+            "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\body_calibration_display.py",
+            "line": 16,
+            "function": "clear",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 7.8e-06,
+            "cumulative_seconds": 8.5e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method Rotation>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 4.4e-06,
+            "cumulative_seconds": 4.4e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method time.perf_counter>",
+            "calls": 6,
+            "primitive_calls": 6,
+            "own_seconds": 4.000000000000001e-06,
+            "cumulative_seconds": 4.000000000000001e-06
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<built-in method builtins.len>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 9.000000000000001e-07,
+            "cumulative_seconds": 9.000000000000001e-07
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'append' of 'list' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 8.000000000000001e-07,
+            "cumulative_seconds": 8.000000000000001e-07
+          },
+          {
+            "file": "~",
+            "line": 0,
+            "function": "<method 'clear' of 'dict' objects>",
+            "calls": 1,
+            "primitive_calls": 1,
+            "own_seconds": 7.000000000000001e-07,
+            "cumulative_seconds": 7.000000000000001e-07
+          }
+        ],
+        "forearm_errors": {},
+        "memory_after_case": {
+          "available": true,
+          "system_load_percent": 96,
+          "system_available_mib": 587.9140625,
+          "system_total_mib": 16158.7578125,
+          "process_working_set_mib": 623.92578125,
+          "process_private_mib": 685.69921875,
+          "process_page_fault_count": 413559,
+          "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+        }
+      }
+    ]
+  },
+  "restoration": {
+    "input_sha256_after": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+    "input_file_unchanged": true,
+    "pose_channels_restored": true,
+    "pose_basis_max_error": 0.0,
+    "pose_reference": "benchmark start, after any isolated Original-to-Controls switch",
+    "subsurf_flags_restored": true,
+    "save_called": false,
+    "handlers_after": {
+      "depsgraph_update_pre": [],
+      "depsgraph_update_post": [
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_graph_post"
+        }
+      ],
+      "frame_change_pre": [],
+      "frame_change_post": [
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_frame_visibility"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_frame_post"
+        }
+      ],
+      "load_post": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "pose_library.gui",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "character_designer.finger_definition_ui",
+          "name": "_resume"
+        },
+        {
+          "module": "character_designer.finger_loop_marks_ui",
+          "name": "_restore"
+        },
+        {
+          "module": "character_designer.reference_views",
+          "name": "_reference_images_load_post"
+        },
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_load_native_migration"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_load_post"
+        },
+        {
+          "module": "character_designer.generated_names",
+          "name": "_after_load"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.body_calibration_overlay",
+          "name": "_load"
+        }
+      ]
+    }
+  },
+  "memory_end": {
+    "available": true,
+    "system_load_percent": 96,
+    "system_available_mib": 541.88671875,
+    "system_total_mib": 16158.7578125,
+    "process_working_set_mib": 623.96484375,
+    "process_private_mib": 685.703125,
+    "process_page_fault_count": 430922,
+    "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "character-designer.minimal-live-activation/1",
+  "script_sha256": "25dccc9746334aced31001fb56260df34f6202b4cbf18e06672abca6af70d549",
+  "inventory_sha256": "89a55c7005131d2175a2b18568d3f57938b9ac34deed51f0a4175873556d19d5",
+  "utc": "2026-10-05T14:45:39.016273+00:00",
+  "background": true,
+  "runtime": "5.1.0",
+  "status": "blocked",
+  "injected_failure": null,
+  "preserved": false,
+  "rollback_complete": false,
+  "old_registered_classes_preserved": false,
+  "saved": false,
+  "error": "'Bone' object has no attribute 'select'",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 394, in run\n    before = snapshot(main)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 224, in snapshot\n    bone.bone.select, bone.bone.hide) for bone in obj.pose.bones]\n    ^^^^^^^^^^^^^^^^\nAttributeError: 'Bone' object has no attribute 'select'\n"
+}

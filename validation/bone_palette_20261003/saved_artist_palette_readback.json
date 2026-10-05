@@ -1,0 +1,484 @@
+{
+  "started_utc": "2026-10-03T13:00:41.361189+00:00",
+  "mode": "verify",
+  "blender_version": "5.1.0",
+  "blender_binary": "D:\\Blender5.1\\blender.exe",
+  "artist_input": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "autoexec_disabled": true,
+  "script_sha256": "dd70687d4f48920d5c2ef62db7c797c262b66bc7d93b4b00b7c0bb73886c7fee",
+  "source": "D:\\MyRepository\\Blender-addons-by-Randy",
+  "errors": [
+    "AssertionError: Protected / saved palette state changed: scene.armatures.CoshaRig.active_bone: 'SK_Dress_857c5a_DEF_08_01' -> 'thigh.L'\nscene.armatures.CoshaRig.pose.Chest.channels.matrix_basis[1][2]: -2.281740023590828e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Chest.channels.matrix_basis[2][1]: 2.2817404499164695e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Chest.channels.rotation_quaternion[1]: 1.1408694433612254e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 15.04.channels.matrix_basis[0][1]: -1.1548401346317405e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 15.04.channels.matrix_basis[1][0]: 1.1548399925231934e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 17.04.channels.matrix_basis[0][1]: 1.3224783401710738e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 17.04.channels.matrix_basis[1][0]: -1.3224780559539795e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 21.03.channels.matrix_basis[0][2]: -1.1175870895385742e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 21.03.channels.matrix_basis[2][0]: 1.1175871605928478e-07 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[0][0]: 0.6165196895599365 -> 0.9999997615814209\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[0][1]: 0.7313789129257202 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[0][2]: 0.2915273606777191 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[1][0]: -0.7733580470085144 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[1][1]: 0.6319988965988159 -> 1.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[1][2]: 0.04994387552142143 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[2][0]: -0.14771704375743866 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[2][1]: -0.25624650716781616 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[2][2]: 0.9552576541900635 -> 0.9999998807907104\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.rotation_quaternion[0]: 0.8949548006057739 -> 1.0"
+  ],
+  "limits": {
+    "bone_world_matrix": 5e-05,
+    "evaluated_world_vertex_position": 5e-05,
+    "requested_color_float": 0.0019617843137254903,
+    "stored_colors": "exact stored RGB bytes after save/reopen; RGBA alpha 255"
+  },
+  "source_hashes": {
+    "files": {
+      "addons/character_designer/__init__.py": "4897c5796d24ba46db1d5abd14dcd994c3847e0f182a53dd152ad110daf7f4dd",
+      "addons/character_designer/animation.py": "96915819ef73fb747fb06825735116cd0aaf429292936077e9206b1da1cd2347",
+      "addons/character_designer/animation_export.py": "caaa9086a9e5dd44e9a9b58c9ce630a840b3534b914c33334670ac31bd6673c6",
+      "addons/character_designer/animation_export_worker.py": "69cbfd18bfa18dc7d85ffae56cdedd2a1fac608e287a621e6857562ce2ae852a",
+      "addons/character_designer/animation_link.py": "e1249f17e14596fce6c977fdc460dc77d837418ff1a339c27f7710952145dc23",
+      "addons/character_designer/animation_link_source.py": "dcdfef8df05129dbc83529372663ee2f64605febe4c764c1bc03b2edaf4706ed",
+      "addons/character_designer/animation_retarget.py": "f98f84c2bcec2402586c5704fd531de23069465f7adf26524eb201c6811bd28c",
+      "addons/character_designer/animation_runtime.py": "1a42593c14bb61e33de16c25b3dc107dcf9ef65ef1034b5ea248f4e35a28a59d",
+      "addons/character_designer/animation_worklist.py": "b96c97dbc075923f4c1f888640ca163b15a79b41e43526946fd77ac0f1ccaec6",
+      "addons/character_designer/animation_worklist_ui.py": "2a48addd4d6141a248f39c6786d42cfede2996243de877ab963aef4c2386c68a",
+      "addons/character_designer/animation_workspace.py": "7a8209ff276142668d3d94053a91c0ff4a45af36517e787c31d35c02f5a31b60",
+      "addons/character_designer/body_calibration.py": "8310159a27ccd0d501161fbf4aa24dd0cf57f1fec3e761be6e13094f713552e0",
+      "addons/character_designer/body_calibration_display.py": "bc96daee9eac162de5aa2912f94aa8b9393e80f8ffce10c24001d705c6c6be7c",
+      "addons/character_designer/body_calibration_hands.py": "cd2dd840a5b9944763efb84ed9e806909bd0b13abc93b2e1b02990368e121f2a",
+      "addons/character_designer/body_calibration_math.py": "6db2702e866ce955b3501a505e4525df3e74f8c00885c733b0d562bae627308e",
+      "addons/character_designer/body_calibration_overlay.py": "05b700219ad7f5ce17e4fdee386a9da78ef590f8439b038b4736b108a2957dac",
+      "addons/character_designer/body_calibration_ui.py": "821cc624c90ae1a2db85835ec2c25473fda42abcbd777c7e92f50c61e7928613",
+      "addons/character_designer/body_controls_ui.py": "4f7a8c3b5ff181be6b3828d5ad603de353b2313aff00245cce13ef7eb7bb0458",
+      "addons/character_designer/body_detail_visuals.py": "ce2466388ca1d49c6fda435a600bc5513e296485b097b4c0675405110d35b87d",
+      "addons/character_designer/body_original_mode.py": "424b44189e0a10451534cd323b3040ba1eea453eb47cafd97cd28ee3794827b6",
+      "addons/character_designer/body_setup.py": "ed7f1b4ece2aadb6a07b0d99aa50dc03e44232ed38fe7ed1b072918283dcbfbb",
+      "addons/character_designer/body_setup_plan.py": "67430578f46dca6255ec96059674e0ecc182e8bf5c0329563ccecf3025bddc5a",
+      "addons/character_designer/body_setup_removal.py": "53d4c1485c8b70918cd887689c5762b7cd0e6563565dcd65e88c65b2a902da0d",
+      "addons/character_designer/body_setup_transaction.py": "13d5b4c489d6ead3d9b40d8468d9019f8422ba37f35328917decc755a231f4a3",
+      "addons/character_designer/body_setup_ui.py": "bc3bcd8ed76449063c2649801777bf5908228cf46e78b21540f008254582051f",
+      "addons/character_designer/bone_collections.py": "fc7d7a9c9d5e25c907617b6f10b518f500c9da4557b3f7aba969856373736cdf",
+      "addons/character_designer/bone_color_palette.py": "c0fb02f35bd9f1eaaf75307bad71d537180c82ad7f1b52e43ca1d75359e0629d",
+      "addons/character_designer/bone_display.py": "e27f5f87d0fe74dc5f57bc6dfa1e5c389d055c9761a2b3a7c6baa0b83ff5fcd1",
+      "addons/character_designer/bone_display_sync.py": "79c2f3c09978944a3f1cd2d4b4303ff9f9abda75848248222f44cffa4487a3a9",
+      "addons/character_designer/character_setup.py": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9",
+      "addons/character_designer/control_colors.py": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf",
+      "addons/character_designer/control_pose_assets.py": "0f93a61cb697a4011f290a47559a340a3123f99bcc33e258b5b9790ac96080a7",
+      "addons/character_designer/control_pose_mirror.py": "f2cff99f0066872efe8c47018d3706c3ac62b76ebf06709258feb086a9e7bf41",
+      "addons/character_designer/control_weight_paint.py": "339a5ade54c73892e7a5aa02da1a38e562b107610cfc1a8620edd1b00fcc1eda",
+      "addons/character_designer/curve_tools.py": "ed25cb3c8b230c6a6cf1a0799f5875ee73dc711b5f32f818eae858f5e0c0335a",
+      "addons/character_designer/delta_symmetry.py": "73ec541ad3d727965d7585d9ba77b56b0e91be80f3197892b0b0740a8b5bb282",
+      "addons/character_designer/eye_controls.py": "17a2a1340085c6dc2557af5263b61487d75ea98e0e278586defb5fc050e41ea1",
+      "addons/character_designer/eye_ui.py": "346f3c4a6f7067844124ab5d5891bfe84493f6c5e91523648c8f5a904da13001",
+      "addons/character_designer/finger_bank.py": "3f8e5e452c50bd87b61500ec337913c0d909d4168d2830d5defbdd2206774c92",
+      "addons/character_designer/finger_bank_ui.py": "9f6033db46f68e8e214d9f9836c63773b36bdb56efeacb16088ea10a6f3fece2",
+      "addons/character_designer/finger_bone_mirror.py": "3956599bac6762f5088d6a92dd7465ec65b63d938f414272c9e8a1458b314fc3",
+      "addons/character_designer/finger_bone_tools.py": "8f9a8d95511a4b8714b6e20645e07da49fba161be56ac574c35fc81dcb193b8a",
+      "addons/character_designer/finger_bones.py": "fd8f4e7e78364c789f2f8fbaf7fb72c2035e79f3f04ba9a7e152402f151a4613",
+      "addons/character_designer/finger_chain.py": "ffc27af7094d5c91f6be86ae365e52ec541587cd2e15dd81fc79367dc3228d6f",
+      "addons/character_designer/finger_definition.py": "a0ab9878dbfda35bf4db22d2af422b07b6b4830c809c53b392f51e71974365f6",
+      "addons/character_designer/finger_definition_ui.py": "627435ee5bbe804b7cae3261533c9c5b64647c2a1b2e78800c78291b27c0c4d7",
+      "addons/character_designer/finger_detect.py": "a984c6524b4478ef1ac53247a58df81b452d338263c1d0d9b3a3208e1071171a",
+      "addons/character_designer/finger_flex.py": "ec4fdc0016b98bcc2ccd909124ddfe1de68259df77f51191faa6896741d88371",
+      "addons/character_designer/finger_internal.py": "41d6ca40522608da8931153e65f511a0b25014901529e252126bdbca69e67b40",
+      "addons/character_designer/finger_loop_marks.py": "5b7938a05dd988da93f084284634716e41dc6cac486fc8f914c4cd763a8c851d",
+      "addons/character_designer/finger_loop_marks_ui.py": "1c6af2c6c2eb60e953a5035fc7e2e5dfad2b8d3fc6f2194dfa86eb15c7f61f45",
+      "addons/character_designer/finger_mirror_sync.py": "296caca0ef8eb790a7929e6264ee35f54fbed0c7e15404521008f866450a71d3",
+      "addons/character_designer/finger_preview_cache.py": "5a8646babddf10a7af64e8beb9ef07fe6af079dafd11b358ae3f6edfd3379d4f",
+      "addons/character_designer/finger_range.py": "d00ab689a67c02d9bc2e186583f92f298ce0b7a3ce200a444d44a7910e7e0a5d",
+      "addons/character_designer/finger_root.py": "1414ca6cb5424e1721220a62007bb3516af43fdeb77b1c27577ee589d786f83e",
+      "addons/character_designer/finger_symmetry.py": "afdac9c0d905adf6d7d0e682dadbed8d1f4f75b4dabca87aa0a079c64cea834a",
+      "addons/character_designer/finger_targets.py": "49d235e618bde9cac87231cd92e5b033391087d39e7938976bef503063582785",
+      "addons/character_designer/foot_controls.py": "4eb2bf51c01e0656dc2facaa0241ea8d1ee8185b6726cd959a808bc8fc88b269",
+      "addons/character_designer/forearm_twist.py": "12b298520389598cbf5bc8cd0dc51fce21e346b6928106e6bb48ca65ed1eb8aa",
+      "addons/character_designer/forearm_twist_cache.py": "963ba3c447ed691a2a76f9ca6249cedb3cb57b7276033109f286acefdc3288ce",
+      "addons/character_designer/forearm_twist_edit.py": "23b794256a6760c20747cc86cabb83a4db6abb20cba6842c6a09a383fde716e5",
+      "addons/character_designer/forearm_twist_math.py": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421",
+      "addons/character_designer/forearm_twist_profile.py": "71f9c61af778bb26bddbb23ef334a8dd1a39928a84c5e8fea3145ffc5d1ff947",
+      "addons/character_designer/forearm_twist_symmetry.py": "620c7b85ca2352caa5d0391162657ff1f5564d1d57ed0cd6ff34f8105703b6f3",
+      "addons/character_designer/forearm_twist_topology.py": "01a7fb1a13451971b58ae49ffe1295a25c8344d9726fd3606825a063a2274f18",
+      "addons/character_designer/generated_names.py": "19795ef28050f844589334698b949e387ede337f84f7c131a73ab9502dca3a9a",
+      "addons/character_designer/hair_bones.py": "bb0c1e43ac592ac0e7b59df42411cf19ed4ed5f650851fdd7b6eef4f3fd60852",
+      "addons/character_designer/hair_bones_binding.py": "99f6c424b8ecd34158118fde846c849ddf6d006a6c1217c5a1df4a07be8b9aa0",
+      "addons/character_designer/hair_bones_groups.py": "da35e22bece374fa20a27247ba820685e79517c3cce2ea99ec25a8280a559e55",
+      "addons/character_designer/hair_bones_mirror.py": "6bc3dd91faeefb73f5d30608dab28a54f057596bf4b62607d4ae449c5cb473cc",
+      "addons/character_designer/hair_bones_rig.py": "d787bc93c0d2152028b0c506494d570adaa0e4c88b0f4455c5d8bfc3630ecd00",
+      "addons/character_designer/hair_bones_topology.py": "8973b7fbdd709641bc1272c49b750dbdce571141ba640ebf137a4f189520228a",
+      "addons/character_designer/hair_bones_variants.py": "aa985d12e5a5235a1f964b3ed1b74c55074acb4729443a339f15e62fb5b2921c",
+      "addons/character_designer/head_neck_visuals.py": "443535a0d1e052b44cfbd53ffae49b628958b00c418ca8ead8ca2390a1c77caf",
+      "addons/character_designer/limb_fk_visuals.py": "c53ea103ce040fb061649630d18cebe67310d8204e8125f5111bf4f71b412945",
+      "addons/character_designer/limb_ik.py": "fc747da16c60df1f607eec5651231809b60ac1858307037b3a806a9fbfd52a9e",
+      "addons/character_designer/limb_ik_fk.py": "fd2c04eea95a0fd52e4fe7a15249ce5355724b1bc9d7d9874fec1effef2252e7",
+      "addons/character_designer/mesh_mirror.py": "8af288a9a72612a13a3e335397fd1e733173f5632dcc0788eaf384fdd3ef0977",
+      "addons/character_designer/mesh_mirror_match.py": "36cdab15d711cb050a2f595b41419856fab6ac97fb3ba2e48b5de651481bcee5",
+      "addons/character_designer/mesh_mirror_ui.py": "76c61eacc8823e2f5f0d26a7833dc17afc27cf0e13bb9fcfaabb11c89e1f1d49",
+      "addons/character_designer/native_symmetry_pairs.py": "afcd0c270be48d24f9aef910720dce761d910f76ce2651176d633fd6614f98ec",
+      "addons/character_designer/quick_bind.py": "6579f51d5f49612ecf28eef89b034f4f8bae22d4c61987edb2db4920d3ea976c",
+      "addons/character_designer/quick_bind_parenting.py": "8ee81ec458893cb7637d1179ee0f09855daf69f7f365c76e625a1a22b2f50708",
+      "addons/character_designer/reference_views.py": "abe79849f92e0a5ed86812bedc323aa2d71b830af4807a075c683322a86e94e8",
+      "addons/character_designer/refine_symmetry.py": "46c6f90fd7d0e3c97924f9b4dc111dcf18d4c82799443d4873609fc3df397a7f",
+      "addons/character_designer/refine_symmetry_ui.py": "2cea4f60360e07c2f4c313e6234cd28075e224851df57cccf590e71d6f1cfd42",
+      "addons/character_designer/root_control.py": "ce5b9583526a28d27964007ad28abdca915fcdb07696ab99ac49b9b3c9e73c81",
+      "addons/character_designer/selected_bone_weights.py": "0f9e3d1498a4414d00c49e9903a9d6b31707260ff1eaf23850dea915c028248a",
+      "addons/character_designer/shape_key_tools.py": "366a6de1fe55ea5f1d46c57e1227c4f6f250705214869dd64ac7a05639ba8811",
+      "addons/character_designer/skirt.py": "cfcd36e0220d81db8196e26d3c0556faedd7061220bd92f6a74fac2af1e237fa",
+      "addons/character_designer/skirt_original_mode.py": "ef504859ca357d14bc424f1315bde15ee031816da9b248cb334b62b66b673f04",
+      "addons/character_designer/skirt_physics.py": "01f52e9b3ff73b3a8839ed67b171f4a797477511f515e8e31cf97a902ed35750",
+      "addons/character_designer/skirt_rig.py": "1732bc870d6795e301b0bf8ff16873e0986b316a354675840a73e1f3eb0252b8",
+      "addons/character_designer/skirt_shared_rig.py": "cfc4f07ee0d9404ef3a0a4ce46fbc9ffbab7665c93153d94a66197cd05da2df6",
+      "addons/character_designer/skirt_topology.py": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e",
+      "addons/character_designer/spine_ik_fk.py": "4216f3035f2f0e0c4ae84c2b3852b0588c7f9f9421128a0a754532413465783d",
+      "addons/character_designer/spline_ik_setup.py": "92f463ef5fe0eccc768fc71b57f9ba3cbfde86c3a444866bb9e68361a0ad9695",
+      "addons/character_designer/symmetry_pairs.py": "d3cdc6c6b333a3581ff8faafa41abcbd3778e1ff3c030d2e7b6e853a2d64967d",
+      "addons/character_designer/topology_symmetry.py": "b982af6d6f2bf840a6f25fb7b7f574ae0697abbde750e7c7806734b0b2988539",
+      "addons/character_designer/torso_controls.py": "3c4a85a0183f8ed3381c47702f52264af703503b0275b573a82c44bcf8d2128a",
+      "addons/character_designer/torso_ui.py": "ddcd04dcb6457e88076c5eab913e8d6b24849c65677cddae450614b09e30c806",
+      "addons/character_designer/ui_constants.py": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e",
+      "addons/character_designer/unity_animation.py": "7296db378c8c892b179dbf67d5bb308f04a367e2ef41369fb5f224f07da42a36",
+      "addons/character_designer/unity_animation_controls.py": "51547f25cec9061c338e6c731f0a6bd63b92f77157245922899371a44a0d034a",
+      "addons/character_designer/unity_diagnostics.py": "ac74dbc156989067e0f6b6789fc76ab7894ce290678ef2ae3158d798625c689c",
+      "addons/character_designer/unity_export.py": "2f0ff0902db9939ab9c55a441b3bf6903ecc7a6d1e0d41e7834bee10429c9603",
+      "addons/character_designer/unity_export_ui.py": "2578e093ee20f31d698cf7c76cfb49deef0ce1b6a4c0207f83cb1898d493eb01",
+      "addons/character_designer/unity_export_worker.py": "e24b8f4ec9e65e3f997291d44a732cc729ebb45f0fd654d906489b2b294bbb2d",
+      "addons/character_designer/unity_forearm.py": "3979192a00a93417ee077d6290c71a229b57d2de04ebf04c41efa65bc321c1bb",
+      "addons/character_designer/unity_materials.py": "5f06562b3af5c5c34e41a6d9d4a4d49f203d9678396a1f28713e0811778c805b",
+      "addons/character_designer/weight_symmetry.py": "06409a3fff8d7db9e0ad778299da5196f48a68ae107d92537c60c34db79e0e8c",
+      "addons/character_designer/widget_collections.py": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18"
+    },
+    "aggregate": "9e372485c2e46711fae34f9fe92e6d0348d41f67a093bf03c64b13c62de087a4"
+  },
+  "main_rig": "CoshaRig",
+  "after_reopen_or_verify": {
+    "group_counts": {
+      "BODY": 20,
+      "ARMS": 42,
+      "LEGS": 16,
+      "HAIR": 128,
+      "DRESS": 51
+    },
+    "native_dress_count": 33,
+    "native_arms_count": 38,
+    "native_hand_wrist_count": 2,
+    "native_hand_wrist_names": [
+      "hand.L",
+      "hand.R"
+    ],
+    "foreign_or_helper_bones_unchanged": 2163,
+    "dress_native": [
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_01_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_01_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_01_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_01_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_02_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_02_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_02_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_02_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_03_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_03_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_03_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_03_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_04_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_04_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_04_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_04_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_05_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_05_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_05_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_05_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_06_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_06_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_06_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_06_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_07_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_07_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_07_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_07_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_08_01"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_08_02"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_08_03"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_DEF_08_04"
+      ],
+      [
+        "CoshaRig",
+        "SK_Dress_857c5a_Waist"
+      ]
+    ],
+    "requested_rgb_float": {
+      "BODY": {
+        "normal": [
+          0.66,
+          0.56,
+          0.34
+        ],
+        "select": [
+          0.85,
+          0.73,
+          0.47
+        ],
+        "active": [
+          1.0,
+          0.9,
+          0.68
+        ]
+      },
+      "ARMS": {
+        "normal": [
+          0.35,
+          0.51,
+          0.65
+        ],
+        "select": [
+          0.52,
+          0.73,
+          0.88
+        ],
+        "active": [
+          0.76,
+          0.89,
+          1.0
+        ]
+      },
+      "LEGS": {
+        "normal": [
+          0.3,
+          0.57,
+          0.53
+        ],
+        "select": [
+          0.46,
+          0.78,
+          0.69
+        ],
+        "active": [
+          0.72,
+          0.94,
+          0.83
+        ]
+      },
+      "HAIR": {
+        "normal": [
+          0.53,
+          0.44,
+          0.68
+        ],
+        "select": [
+          0.72,
+          0.62,
+          0.88
+        ],
+        "active": [
+          0.89,
+          0.81,
+          1.0
+        ]
+      },
+      "DRESS": {
+        "normal": [
+          0.68,
+          0.43,
+          0.55
+        ],
+        "select": [
+          0.88,
+          0.61,
+          0.74
+        ],
+        "active": [
+          1.0,
+          0.81,
+          0.9
+        ]
+      }
+    },
+    "displayed_rgba_bytes": {
+      "BODY": {
+        "normal": [
+          168,
+          143,
+          87,
+          255
+        ],
+        "select": [
+          217,
+          186,
+          120,
+          255
+        ],
+        "active": [
+          255,
+          230,
+          173,
+          255
+        ]
+      },
+      "ARMS": {
+        "normal": [
+          89,
+          130,
+          166,
+          255
+        ],
+        "select": [
+          133,
+          186,
+          224,
+          255
+        ],
+        "active": [
+          194,
+          227,
+          255,
+          255
+        ]
+      },
+      "LEGS": {
+        "normal": [
+          77,
+          145,
+          135,
+          255
+        ],
+        "select": [
+          117,
+          199,
+          176,
+          255
+        ],
+        "active": [
+          184,
+          240,
+          212,
+          255
+        ]
+      },
+      "HAIR": {
+        "normal": [
+          135,
+          112,
+          173,
+          255
+        ],
+        "select": [
+          184,
+          158,
+          224,
+          255
+        ],
+        "active": [
+          227,
+          207,
+          255,
+          255
+        ]
+      },
+      "DRESS": {
+        "normal": [
+          173,
+          110,
+          140,
+          255
+        ],
+        "select": [
+          224,
+          156,
+          189,
+          255
+        ],
+        "active": [
+          255,
+          207,
+          230,
+          255
+        ]
+      }
+    }
+  },
+  "passed": false,
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\bone_palette_20261003\\verify_saved_x.py\", line 621, in main\n    raise AssertionError('Protected / saved palette state changed: ' + '\\n'.join(differences[:20]))\nAssertionError: Protected / saved palette state changed: scene.armatures.CoshaRig.active_bone: 'SK_Dress_857c5a_DEF_08_01' -> 'thigh.L'\nscene.armatures.CoshaRig.pose.Chest.channels.matrix_basis[1][2]: -2.281740023590828e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Chest.channels.matrix_basis[2][1]: 2.2817404499164695e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Chest.channels.rotation_quaternion[1]: 1.1408694433612254e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 15.04.channels.matrix_basis[0][1]: -1.1548401346317405e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 15.04.channels.matrix_basis[1][0]: 1.1548399925231934e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 17.04.channels.matrix_basis[0][1]: 1.3224783401710738e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 17.04.channels.matrix_basis[1][0]: -1.3224780559539795e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 21.03.channels.matrix_basis[0][2]: -1.1175870895385742e-07 -> 0.0\nscene.armatures.CoshaRig.pose.Hair Hair 21.03.channels.matrix_basis[2][0]: 1.1175871605928478e-07 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[0][0]: 0.6165196895599365 -> 0.9999997615814209\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[0][1]: 0.7313789129257202 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[0][2]: 0.2915273606777191 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[1][0]: -0.7733580470085144 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[1][1]: 0.6319988965988159 -> 1.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[1][2]: 0.04994387552142143 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[2][0]: -0.14771704375743866 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[2][1]: -0.25624650716781616 -> 0.0\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.matrix_basis[2][2]: 0.9552576541900635 -> 0.9999998807907104\nscene.armatures.CoshaRig.pose.SK_Dress_857c5a_DEF_01_01.channels.rotation_quaternion[0]: 0.8949548006057739 -> 1.0\n",
+  "source_hash_unchanged": true,
+  "input_sha256_before": "ebfc503a013832608970252acb1b2a1af569386881df9aca783abde00ff6ed3f",
+  "input_sha256_after": "ebfc503a013832608970252acb1b2a1af569386881df9aca783abde00ff6ed3f",
+  "artist_input_unchanged": true,
+  "finished_utc": "2026-10-03T13:01:27.790126+00:00"
+}

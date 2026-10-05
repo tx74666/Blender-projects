@@ -1,0 +1,2004 @@
+{
+  "started_utc": "2026-10-03T15:47:54.579789+00:00",
+  "blender_version": "5.1.0",
+  "blender_binary": "D:\\Blender5.1\\blender.exe",
+  "artist_input": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "input_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+    "bytes": 32311941,
+    "mtime_ns": 1791039433019634900,
+    "stable_during_hash": true
+  },
+  "candidate": "D:\\Blender\\Projects\\Character\\X\\validation\\skirt_names_20261003\\real_saved_names_run5_validation_copy.blend",
+  "report": "D:\\Blender\\Projects\\Character\\X\\validation\\skirt_names_20261003\\real_saved_names_run5.json",
+  "script_sha256": "f30d8bd5203751288e4215ca6c71e8e5eefa1ac456ac467778a8a1483182d0df",
+  "snapshot_helper": "D:\\Blender\\Projects\\Character\\X\\validation\\bone_palette_20261003\\verify_saved_x.py",
+  "snapshot_helper_sha256": "dd70687d4f48920d5c2ef62db7c797c262b66bc7d93b4b00b7c0bb73886c7fee",
+  "limits": {
+    "raw_state": "exact after only allowed bone selectors/Hook labels",
+    "world_bone_matrix": 5e-05,
+    "world_mesh_position": 5e-05
+  },
+  "errors": [
+    "AssertionError: after_reopen changed protected raw data: protected.extra_ids.images:1d63a26f-110a-4ff2-9145-a350633c3dd5.png.fields.use_extra_user: True -> False\nprotected.extra_ids.images:AnimeFront.png.fields.use_extra_user: True -> False\nprotected.extra_ids.images:Hair.fields.use_extra_user: True -> False\nprotected.extra_ids.other_object_data:Front.fields.use_extra_user: True -> False"
+  ],
+  "passed": false,
+  "autoexec_disabled": true,
+  "open_result": [
+    "FINISHED"
+  ],
+  "canonical_source_hashes": {
+    "files": {
+      "addons/character_designer/__init__.py": "f4ce6b54a39f26c9e31182482a82008625e3e3e27036c89e1369605a21c73dd5",
+      "addons/character_designer/animation.py": "96915819ef73fb747fb06825735116cd0aaf429292936077e9206b1da1cd2347",
+      "addons/character_designer/animation_export.py": "caaa9086a9e5dd44e9a9b58c9ce630a840b3534b914c33334670ac31bd6673c6",
+      "addons/character_designer/animation_export_worker.py": "69cbfd18bfa18dc7d85ffae56cdedd2a1fac608e287a621e6857562ce2ae852a",
+      "addons/character_designer/animation_link.py": "e1249f17e14596fce6c977fdc460dc77d837418ff1a339c27f7710952145dc23",
+      "addons/character_designer/animation_link_source.py": "dcdfef8df05129dbc83529372663ee2f64605febe4c764c1bc03b2edaf4706ed",
+      "addons/character_designer/animation_retarget.py": "f98f84c2bcec2402586c5704fd531de23069465f7adf26524eb201c6811bd28c",
+      "addons/character_designer/animation_runtime.py": "1a42593c14bb61e33de16c25b3dc107dcf9ef65ef1034b5ea248f4e35a28a59d",
+      "addons/character_designer/animation_worklist.py": "b96c97dbc075923f4c1f888640ca163b15a79b41e43526946fd77ac0f1ccaec6",
+      "addons/character_designer/animation_worklist_ui.py": "2a48addd4d6141a248f39c6786d42cfede2996243de877ab963aef4c2386c68a",
+      "addons/character_designer/animation_workspace.py": "7a8209ff276142668d3d94053a91c0ff4a45af36517e787c31d35c02f5a31b60",
+      "addons/character_designer/body_calibration.py": "8310159a27ccd0d501161fbf4aa24dd0cf57f1fec3e761be6e13094f713552e0",
+      "addons/character_designer/body_calibration_display.py": "bc96daee9eac162de5aa2912f94aa8b9393e80f8ffce10c24001d705c6c6be7c",
+      "addons/character_designer/body_calibration_hands.py": "cd2dd840a5b9944763efb84ed9e806909bd0b13abc93b2e1b02990368e121f2a",
+      "addons/character_designer/body_calibration_math.py": "6db2702e866ce955b3501a505e4525df3e74f8c00885c733b0d562bae627308e",
+      "addons/character_designer/body_calibration_overlay.py": "05b700219ad7f5ce17e4fdee386a9da78ef590f8439b038b4736b108a2957dac",
+      "addons/character_designer/body_calibration_ui.py": "821cc624c90ae1a2db85835ec2c25473fda42abcbd777c7e92f50c61e7928613",
+      "addons/character_designer/body_controls_ui.py": "4f7a8c3b5ff181be6b3828d5ad603de353b2313aff00245cce13ef7eb7bb0458",
+      "addons/character_designer/body_detail_visuals.py": "ce2466388ca1d49c6fda435a600bc5513e296485b097b4c0675405110d35b87d",
+      "addons/character_designer/body_original_mode.py": "424b44189e0a10451534cd323b3040ba1eea453eb47cafd97cd28ee3794827b6",
+      "addons/character_designer/body_setup.py": "ed7f1b4ece2aadb6a07b0d99aa50dc03e44232ed38fe7ed1b072918283dcbfbb",
+      "addons/character_designer/body_setup_plan.py": "67430578f46dca6255ec96059674e0ecc182e8bf5c0329563ccecf3025bddc5a",
+      "addons/character_designer/body_setup_removal.py": "53d4c1485c8b70918cd887689c5762b7cd0e6563565dcd65e88c65b2a902da0d",
+      "addons/character_designer/body_setup_transaction.py": "13d5b4c489d6ead3d9b40d8468d9019f8422ba37f35328917decc755a231f4a3",
+      "addons/character_designer/body_setup_ui.py": "bc3bcd8ed76449063c2649801777bf5908228cf46e78b21540f008254582051f",
+      "addons/character_designer/bone_collections.py": "fc7d7a9c9d5e25c907617b6f10b518f500c9da4557b3f7aba969856373736cdf",
+      "addons/character_designer/bone_color_palette.py": "c0fb02f35bd9f1eaaf75307bad71d537180c82ad7f1b52e43ca1d75359e0629d",
+      "addons/character_designer/bone_display.py": "e27f5f87d0fe74dc5f57bc6dfa1e5c389d055c9761a2b3a7c6baa0b83ff5fcd1",
+      "addons/character_designer/bone_display_sync.py": "79c2f3c09978944a3f1cd2d4b4303ff9f9abda75848248222f44cffa4487a3a9",
+      "addons/character_designer/character_setup.py": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9",
+      "addons/character_designer/control_colors.py": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf",
+      "addons/character_designer/control_pose_assets.py": "0f93a61cb697a4011f290a47559a340a3123f99bcc33e258b5b9790ac96080a7",
+      "addons/character_designer/control_pose_mirror.py": "f2cff99f0066872efe8c47018d3706c3ac62b76ebf06709258feb086a9e7bf41",
+      "addons/character_designer/control_weight_paint.py": "339a5ade54c73892e7a5aa02da1a38e562b107610cfc1a8620edd1b00fcc1eda",
+      "addons/character_designer/curve_tools.py": "ed25cb3c8b230c6a6cf1a0799f5875ee73dc711b5f32f818eae858f5e0c0335a",
+      "addons/character_designer/delta_symmetry.py": "73ec541ad3d727965d7585d9ba77b56b0e91be80f3197892b0b0740a8b5bb282",
+      "addons/character_designer/eye_controls.py": "17a2a1340085c6dc2557af5263b61487d75ea98e0e278586defb5fc050e41ea1",
+      "addons/character_designer/eye_ui.py": "346f3c4a6f7067844124ab5d5891bfe84493f6c5e91523648c8f5a904da13001",
+      "addons/character_designer/finger_bank.py": "3f8e5e452c50bd87b61500ec337913c0d909d4168d2830d5defbdd2206774c92",
+      "addons/character_designer/finger_bank_ui.py": "9f6033db46f68e8e214d9f9836c63773b36bdb56efeacb16088ea10a6f3fece2",
+      "addons/character_designer/finger_bone_mirror.py": "3956599bac6762f5088d6a92dd7465ec65b63d938f414272c9e8a1458b314fc3",
+      "addons/character_designer/finger_bone_tools.py": "8f9a8d95511a4b8714b6e20645e07da49fba161be56ac574c35fc81dcb193b8a",
+      "addons/character_designer/finger_bones.py": "fd8f4e7e78364c789f2f8fbaf7fb72c2035e79f3f04ba9a7e152402f151a4613",
+      "addons/character_designer/finger_chain.py": "ffc27af7094d5c91f6be86ae365e52ec541587cd2e15dd81fc79367dc3228d6f",
+      "addons/character_designer/finger_definition.py": "a0ab9878dbfda35bf4db22d2af422b07b6b4830c809c53b392f51e71974365f6",
+      "addons/character_designer/finger_definition_ui.py": "627435ee5bbe804b7cae3261533c9c5b64647c2a1b2e78800c78291b27c0c4d7",
+      "addons/character_designer/finger_detect.py": "a984c6524b4478ef1ac53247a58df81b452d338263c1d0d9b3a3208e1071171a",
+      "addons/character_designer/finger_flex.py": "ec4fdc0016b98bcc2ccd909124ddfe1de68259df77f51191faa6896741d88371",
+      "addons/character_designer/finger_internal.py": "41d6ca40522608da8931153e65f511a0b25014901529e252126bdbca69e67b40",
+      "addons/character_designer/finger_loop_marks.py": "5b7938a05dd988da93f084284634716e41dc6cac486fc8f914c4cd763a8c851d",
+      "addons/character_designer/finger_loop_marks_ui.py": "1c6af2c6c2eb60e953a5035fc7e2e5dfad2b8d3fc6f2194dfa86eb15c7f61f45",
+      "addons/character_designer/finger_mirror_sync.py": "296caca0ef8eb790a7929e6264ee35f54fbed0c7e15404521008f866450a71d3",
+      "addons/character_designer/finger_preview_cache.py": "5a8646babddf10a7af64e8beb9ef07fe6af079dafd11b358ae3f6edfd3379d4f",
+      "addons/character_designer/finger_range.py": "d00ab689a67c02d9bc2e186583f92f298ce0b7a3ce200a444d44a7910e7e0a5d",
+      "addons/character_designer/finger_root.py": "1414ca6cb5424e1721220a62007bb3516af43fdeb77b1c27577ee589d786f83e",
+      "addons/character_designer/finger_symmetry.py": "afdac9c0d905adf6d7d0e682dadbed8d1f4f75b4dabca87aa0a079c64cea834a",
+      "addons/character_designer/finger_targets.py": "49d235e618bde9cac87231cd92e5b033391087d39e7938976bef503063582785",
+      "addons/character_designer/foot_controls.py": "4eb2bf51c01e0656dc2facaa0241ea8d1ee8185b6726cd959a808bc8fc88b269",
+      "addons/character_designer/forearm_twist.py": "12b298520389598cbf5bc8cd0dc51fce21e346b6928106e6bb48ca65ed1eb8aa",
+      "addons/character_designer/forearm_twist_cache.py": "963ba3c447ed691a2a76f9ca6249cedb3cb57b7276033109f286acefdc3288ce",
+      "addons/character_designer/forearm_twist_edit.py": "23b794256a6760c20747cc86cabb83a4db6abb20cba6842c6a09a383fde716e5",
+      "addons/character_designer/forearm_twist_math.py": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421",
+      "addons/character_designer/forearm_twist_profile.py": "71f9c61af778bb26bddbb23ef334a8dd1a39928a84c5e8fea3145ffc5d1ff947",
+      "addons/character_designer/forearm_twist_symmetry.py": "620c7b85ca2352caa5d0391162657ff1f5564d1d57ed0cd6ff34f8105703b6f3",
+      "addons/character_designer/forearm_twist_topology.py": "01a7fb1a13451971b58ae49ffe1295a25c8344d9726fd3606825a063a2274f18",
+      "addons/character_designer/generated_names.py": "a1c49790c61c31e915de15b1a4baa76c75be2b490a6d771eca179921fda4d931",
+      "addons/character_designer/hair_bones.py": "bb0c1e43ac592ac0e7b59df42411cf19ed4ed5f650851fdd7b6eef4f3fd60852",
+      "addons/character_designer/hair_bones_binding.py": "99f6c424b8ecd34158118fde846c849ddf6d006a6c1217c5a1df4a07be8b9aa0",
+      "addons/character_designer/hair_bones_groups.py": "da35e22bece374fa20a27247ba820685e79517c3cce2ea99ec25a8280a559e55",
+      "addons/character_designer/hair_bones_mirror.py": "6bc3dd91faeefb73f5d30608dab28a54f057596bf4b62607d4ae449c5cb473cc",
+      "addons/character_designer/hair_bones_rig.py": "d787bc93c0d2152028b0c506494d570adaa0e4c88b0f4455c5d8bfc3630ecd00",
+      "addons/character_designer/hair_bones_topology.py": "8973b7fbdd709641bc1272c49b750dbdce571141ba640ebf137a4f189520228a",
+      "addons/character_designer/hair_bones_variants.py": "aa985d12e5a5235a1f964b3ed1b74c55074acb4729443a339f15e62fb5b2921c",
+      "addons/character_designer/head_neck_visuals.py": "443535a0d1e052b44cfbd53ffae49b628958b00c418ca8ead8ca2390a1c77caf",
+      "addons/character_designer/limb_fk_visuals.py": "c53ea103ce040fb061649630d18cebe67310d8204e8125f5111bf4f71b412945",
+      "addons/character_designer/limb_ik.py": "fc747da16c60df1f607eec5651231809b60ac1858307037b3a806a9fbfd52a9e",
+      "addons/character_designer/limb_ik_fk.py": "fd2c04eea95a0fd52e4fe7a15249ce5355724b1bc9d7d9874fec1effef2252e7",
+      "addons/character_designer/mesh_mirror.py": "8af288a9a72612a13a3e335397fd1e733173f5632dcc0788eaf384fdd3ef0977",
+      "addons/character_designer/mesh_mirror_match.py": "36cdab15d711cb050a2f595b41419856fab6ac97fb3ba2e48b5de651481bcee5",
+      "addons/character_designer/mesh_mirror_ui.py": "76c61eacc8823e2f5f0d26a7833dc17afc27cf0e13bb9fcfaabb11c89e1f1d49",
+      "addons/character_designer/native_symmetry_pairs.py": "afcd0c270be48d24f9aef910720dce761d910f76ce2651176d633fd6614f98ec",
+      "addons/character_designer/quick_bind.py": "6579f51d5f49612ecf28eef89b034f4f8bae22d4c61987edb2db4920d3ea976c",
+      "addons/character_designer/quick_bind_parenting.py": "8ee81ec458893cb7637d1179ee0f09855daf69f7f365c76e625a1a22b2f50708",
+      "addons/character_designer/reference_views.py": "abe79849f92e0a5ed86812bedc323aa2d71b830af4807a075c683322a86e94e8",
+      "addons/character_designer/refine_symmetry.py": "46c6f90fd7d0e3c97924f9b4dc111dcf18d4c82799443d4873609fc3df397a7f",
+      "addons/character_designer/refine_symmetry_ui.py": "2cea4f60360e07c2f4c313e6234cd28075e224851df57cccf590e71d6f1cfd42",
+      "addons/character_designer/root_control.py": "ce5b9583526a28d27964007ad28abdca915fcdb07696ab99ac49b9b3c9e73c81",
+      "addons/character_designer/selected_bone_weights.py": "0f9e3d1498a4414d00c49e9903a9d6b31707260ff1eaf23850dea915c028248a",
+      "addons/character_designer/shape_key_tools.py": "366a6de1fe55ea5f1d46c57e1227c4f6f250705214869dd64ac7a05639ba8811",
+      "addons/character_designer/skirt.py": "cfcd36e0220d81db8196e26d3c0556faedd7061220bd92f6a74fac2af1e237fa",
+      "addons/character_designer/skirt_name_records.py": "5e88e396e8d6e3172d48fc344b92538ce4a6c69141a53034d37eff7546dbff9f",
+      "addons/character_designer/skirt_names.py": "c174c42b7a68f9e116e6c4c15d51ef310d3d9fb1f1cc5b0a9aea3b009bc3b3c7",
+      "addons/character_designer/skirt_original_mode.py": "ef504859ca357d14bc424f1315bde15ee031816da9b248cb334b62b66b673f04",
+      "addons/character_designer/skirt_physics.py": "01f52e9b3ff73b3a8839ed67b171f4a797477511f515e8e31cf97a902ed35750",
+      "addons/character_designer/skirt_rig.py": "bdf07cf8e5eb5384ed9d3056f0fd87b6d9e79397278783758c9a87ac47a0e19e",
+      "addons/character_designer/skirt_shared_rig.py": "cfc4f07ee0d9404ef3a0a4ce46fbc9ffbab7665c93153d94a66197cd05da2df6",
+      "addons/character_designer/skirt_topology.py": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e",
+      "addons/character_designer/spine_ik_fk.py": "4216f3035f2f0e0c4ae84c2b3852b0588c7f9f9421128a0a754532413465783d",
+      "addons/character_designer/spline_ik_setup.py": "92f463ef5fe0eccc768fc71b57f9ba3cbfde86c3a444866bb9e68361a0ad9695",
+      "addons/character_designer/symmetry_pairs.py": "d3cdc6c6b333a3581ff8faafa41abcbd3778e1ff3c030d2e7b6e853a2d64967d",
+      "addons/character_designer/topology_symmetry.py": "b982af6d6f2bf840a6f25fb7b7f574ae0697abbde750e7c7806734b0b2988539",
+      "addons/character_designer/torso_controls.py": "3c4a85a0183f8ed3381c47702f52264af703503b0275b573a82c44bcf8d2128a",
+      "addons/character_designer/torso_ui.py": "ddcd04dcb6457e88076c5eab913e8d6b24849c65677cddae450614b09e30c806",
+      "addons/character_designer/ui_constants.py": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e",
+      "addons/character_designer/unity_animation.py": "7296db378c8c892b179dbf67d5bb308f04a367e2ef41369fb5f224f07da42a36",
+      "addons/character_designer/unity_animation_controls.py": "51547f25cec9061c338e6c731f0a6bd63b92f77157245922899371a44a0d034a",
+      "addons/character_designer/unity_diagnostics.py": "ac74dbc156989067e0f6b6789fc76ab7894ce290678ef2ae3158d798625c689c",
+      "addons/character_designer/unity_export.py": "2f0ff0902db9939ab9c55a441b3bf6903ecc7a6d1e0d41e7834bee10429c9603",
+      "addons/character_designer/unity_export_ui.py": "2578e093ee20f31d698cf7c76cfb49deef0ce1b6a4c0207f83cb1898d493eb01",
+      "addons/character_designer/unity_export_worker.py": "e24b8f4ec9e65e3f997291d44a732cc729ebb45f0fd654d906489b2b294bbb2d",
+      "addons/character_designer/unity_forearm.py": "3979192a00a93417ee077d6290c71a229b57d2de04ebf04c41efa65bc321c1bb",
+      "addons/character_designer/unity_materials.py": "5f06562b3af5c5c34e41a6d9d4a4d49f203d9678396a1f28713e0811778c805b",
+      "addons/character_designer/weight_symmetry.py": "06409a3fff8d7db9e0ad778299da5196f48a68ae107d92537c60c34db79e0e8c",
+      "addons/character_designer/widget_collections.py": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18"
+    },
+    "aggregate": "34794f6a1494046dc2b85bf4214d1dcfb2add43cdb57b899d9f4da235b0e5d89"
+  },
+  "original_before": [
+    {
+      "rig": "CoshaRig",
+      "active": true,
+      "version": 1,
+      "body_constraint_entries": 23,
+      "dress_edit_owners": [
+        "857c5aaad1ac4160953847b083deba20"
+      ],
+      "raw_sha256": "99586a987ec71d79bfe796cfd4c259f2392cf6fc8f4ab60a59ef7ee2fc862a99"
+    }
+  ],
+  "runtime_dirty_before": false,
+  "plans": [
+    {
+      "source": "Dress",
+      "rig": "CoshaRig",
+      "owner": "857c5aaad1ac4160953847b083deba20",
+      "shared": true,
+      "owned_bones": [
+        "SK_Dress_857c5a_DEF_01_01",
+        "SK_Dress_857c5a_DEF_01_02",
+        "SK_Dress_857c5a_DEF_01_03",
+        "SK_Dress_857c5a_DEF_01_04",
+        "SK_Dress_857c5a_DEF_02_01",
+        "SK_Dress_857c5a_DEF_02_02",
+        "SK_Dress_857c5a_DEF_02_03",
+        "SK_Dress_857c5a_DEF_02_04",
+        "SK_Dress_857c5a_DEF_03_01",
+        "SK_Dress_857c5a_DEF_03_02",
+        "SK_Dress_857c5a_DEF_03_03",
+        "SK_Dress_857c5a_DEF_03_04",
+        "SK_Dress_857c5a_DEF_04_01",
+        "SK_Dress_857c5a_DEF_04_02",
+        "SK_Dress_857c5a_DEF_04_03",
+        "SK_Dress_857c5a_DEF_04_04",
+        "SK_Dress_857c5a_DEF_05_01",
+        "SK_Dress_857c5a_DEF_05_02",
+        "SK_Dress_857c5a_DEF_05_03",
+        "SK_Dress_857c5a_DEF_05_04",
+        "SK_Dress_857c5a_DEF_06_01",
+        "SK_Dress_857c5a_DEF_06_02",
+        "SK_Dress_857c5a_DEF_06_03",
+        "SK_Dress_857c5a_DEF_06_04",
+        "SK_Dress_857c5a_DEF_07_01",
+        "SK_Dress_857c5a_DEF_07_02",
+        "SK_Dress_857c5a_DEF_07_03",
+        "SK_Dress_857c5a_DEF_07_04",
+        "SK_Dress_857c5a_DEF_08_01",
+        "SK_Dress_857c5a_DEF_08_02",
+        "SK_Dress_857c5a_DEF_08_03",
+        "SK_Dress_857c5a_DEF_08_04",
+        "SK_Dress_857c5a_Hem",
+        "SK_Dress_857c5a_Hem_01",
+        "SK_Dress_857c5a_Hem_02",
+        "SK_Dress_857c5a_Hem_03",
+        "SK_Dress_857c5a_Hem_04",
+        "SK_Dress_857c5a_Hem_05",
+        "SK_Dress_857c5a_Hem_06",
+        "SK_Dress_857c5a_Hem_07",
+        "SK_Dress_857c5a_Hem_08",
+        "SK_Dress_857c5a_MCH_01_01",
+        "SK_Dress_857c5a_MCH_01_02",
+        "SK_Dress_857c5a_MCH_01_03",
+        "SK_Dress_857c5a_MCH_01_04",
+        "SK_Dress_857c5a_MCH_02_01",
+        "SK_Dress_857c5a_MCH_02_02",
+        "SK_Dress_857c5a_MCH_02_03",
+        "SK_Dress_857c5a_MCH_02_04",
+        "SK_Dress_857c5a_MCH_03_01",
+        "SK_Dress_857c5a_MCH_03_02",
+        "SK_Dress_857c5a_MCH_03_03",
+        "SK_Dress_857c5a_MCH_03_04",
+        "SK_Dress_857c5a_MCH_04_01",
+        "SK_Dress_857c5a_MCH_04_02",
+        "SK_Dress_857c5a_MCH_04_03",
+        "SK_Dress_857c5a_MCH_04_04",
+        "SK_Dress_857c5a_MCH_05_01",
+        "SK_Dress_857c5a_MCH_05_02",
+        "SK_Dress_857c5a_MCH_05_03",
+        "SK_Dress_857c5a_MCH_05_04",
+        "SK_Dress_857c5a_MCH_06_01",
+        "SK_Dress_857c5a_MCH_06_02",
+        "SK_Dress_857c5a_MCH_06_03",
+        "SK_Dress_857c5a_MCH_06_04",
+        "SK_Dress_857c5a_MCH_07_01",
+        "SK_Dress_857c5a_MCH_07_02",
+        "SK_Dress_857c5a_MCH_07_03",
+        "SK_Dress_857c5a_MCH_07_04",
+        "SK_Dress_857c5a_MCH_08_01",
+        "SK_Dress_857c5a_MCH_08_02",
+        "SK_Dress_857c5a_MCH_08_03",
+        "SK_Dress_857c5a_MCH_08_04",
+        "SK_Dress_857c5a_Mid",
+        "SK_Dress_857c5a_Mid_01",
+        "SK_Dress_857c5a_Mid_02",
+        "SK_Dress_857c5a_Mid_03",
+        "SK_Dress_857c5a_Mid_04",
+        "SK_Dress_857c5a_Mid_05",
+        "SK_Dress_857c5a_Mid_06",
+        "SK_Dress_857c5a_Mid_07",
+        "SK_Dress_857c5a_Mid_08",
+        "SK_Dress_857c5a_PHYS_01_01",
+        "SK_Dress_857c5a_PHYS_01_02",
+        "SK_Dress_857c5a_PHYS_01_03",
+        "SK_Dress_857c5a_PHYS_01_04",
+        "SK_Dress_857c5a_PHYS_02_01",
+        "SK_Dress_857c5a_PHYS_02_02",
+        "SK_Dress_857c5a_PHYS_02_03",
+        "SK_Dress_857c5a_PHYS_02_04",
+        "SK_Dress_857c5a_PHYS_03_01",
+        "SK_Dress_857c5a_PHYS_03_02",
+        "SK_Dress_857c5a_PHYS_03_03",
+        "SK_Dress_857c5a_PHYS_03_04",
+        "SK_Dress_857c5a_PHYS_04_01",
+        "SK_Dress_857c5a_PHYS_04_02",
+        "SK_Dress_857c5a_PHYS_04_03",
+        "SK_Dress_857c5a_PHYS_04_04",
+        "SK_Dress_857c5a_PHYS_05_01",
+        "SK_Dress_857c5a_PHYS_05_02",
+        "SK_Dress_857c5a_PHYS_05_03",
+        "SK_Dress_857c5a_PHYS_05_04",
+        "SK_Dress_857c5a_PHYS_06_01",
+        "SK_Dress_857c5a_PHYS_06_02",
+        "SK_Dress_857c5a_PHYS_06_03",
+        "SK_Dress_857c5a_PHYS_06_04",
+        "SK_Dress_857c5a_PHYS_07_01",
+        "SK_Dress_857c5a_PHYS_07_02",
+        "SK_Dress_857c5a_PHYS_07_03",
+        "SK_Dress_857c5a_PHYS_07_04",
+        "SK_Dress_857c5a_PHYS_08_01",
+        "SK_Dress_857c5a_PHYS_08_02",
+        "SK_Dress_857c5a_PHYS_08_03",
+        "SK_Dress_857c5a_PHYS_08_04",
+        "SK_Dress_857c5a_Waist"
+      ],
+      "mapping": {
+        "SK_Dress_857c5a_DEF_01_01": "SK_Dress_DEF_01_01",
+        "SK_Dress_857c5a_DEF_01_02": "SK_Dress_DEF_01_02",
+        "SK_Dress_857c5a_DEF_01_03": "SK_Dress_DEF_01_03",
+        "SK_Dress_857c5a_DEF_01_04": "SK_Dress_DEF_01_04",
+        "SK_Dress_857c5a_DEF_02_01": "SK_Dress_DEF_02_01",
+        "SK_Dress_857c5a_DEF_02_02": "SK_Dress_DEF_02_02",
+        "SK_Dress_857c5a_DEF_02_03": "SK_Dress_DEF_02_03",
+        "SK_Dress_857c5a_DEF_02_04": "SK_Dress_DEF_02_04",
+        "SK_Dress_857c5a_DEF_03_01": "SK_Dress_DEF_03_01",
+        "SK_Dress_857c5a_DEF_03_02": "SK_Dress_DEF_03_02",
+        "SK_Dress_857c5a_DEF_03_03": "SK_Dress_DEF_03_03",
+        "SK_Dress_857c5a_DEF_03_04": "SK_Dress_DEF_03_04",
+        "SK_Dress_857c5a_DEF_04_01": "SK_Dress_DEF_04_01",
+        "SK_Dress_857c5a_DEF_04_02": "SK_Dress_DEF_04_02",
+        "SK_Dress_857c5a_DEF_04_03": "SK_Dress_DEF_04_03",
+        "SK_Dress_857c5a_DEF_04_04": "SK_Dress_DEF_04_04",
+        "SK_Dress_857c5a_DEF_05_01": "SK_Dress_DEF_05_01",
+        "SK_Dress_857c5a_DEF_05_02": "SK_Dress_DEF_05_02",
+        "SK_Dress_857c5a_DEF_05_03": "SK_Dress_DEF_05_03",
+        "SK_Dress_857c5a_DEF_05_04": "SK_Dress_DEF_05_04",
+        "SK_Dress_857c5a_DEF_06_01": "SK_Dress_DEF_06_01",
+        "SK_Dress_857c5a_DEF_06_02": "SK_Dress_DEF_06_02",
+        "SK_Dress_857c5a_DEF_06_03": "SK_Dress_DEF_06_03",
+        "SK_Dress_857c5a_DEF_06_04": "SK_Dress_DEF_06_04",
+        "SK_Dress_857c5a_DEF_07_01": "SK_Dress_DEF_07_01",
+        "SK_Dress_857c5a_DEF_07_02": "SK_Dress_DEF_07_02",
+        "SK_Dress_857c5a_DEF_07_03": "SK_Dress_DEF_07_03",
+        "SK_Dress_857c5a_DEF_07_04": "SK_Dress_DEF_07_04",
+        "SK_Dress_857c5a_DEF_08_01": "SK_Dress_DEF_08_01",
+        "SK_Dress_857c5a_DEF_08_02": "SK_Dress_DEF_08_02",
+        "SK_Dress_857c5a_DEF_08_03": "SK_Dress_DEF_08_03",
+        "SK_Dress_857c5a_DEF_08_04": "SK_Dress_DEF_08_04",
+        "SK_Dress_857c5a_Hem": "SK_Dress_Hem",
+        "SK_Dress_857c5a_Hem_01": "SK_Dress_Hem_01",
+        "SK_Dress_857c5a_Hem_02": "SK_Dress_Hem_02",
+        "SK_Dress_857c5a_Hem_03": "SK_Dress_Hem_03",
+        "SK_Dress_857c5a_Hem_04": "SK_Dress_Hem_04",
+        "SK_Dress_857c5a_Hem_05": "SK_Dress_Hem_05",
+        "SK_Dress_857c5a_Hem_06": "SK_Dress_Hem_06",
+        "SK_Dress_857c5a_Hem_07": "SK_Dress_Hem_07",
+        "SK_Dress_857c5a_Hem_08": "SK_Dress_Hem_08",
+        "SK_Dress_857c5a_MCH_01_01": "SK_Dress_MCH_01_01",
+        "SK_Dress_857c5a_MCH_01_02": "SK_Dress_MCH_01_02",
+        "SK_Dress_857c5a_MCH_01_03": "SK_Dress_MCH_01_03",
+        "SK_Dress_857c5a_MCH_01_04": "SK_Dress_MCH_01_04",
+        "SK_Dress_857c5a_MCH_02_01": "SK_Dress_MCH_02_01",
+        "SK_Dress_857c5a_MCH_02_02": "SK_Dress_MCH_02_02",
+        "SK_Dress_857c5a_MCH_02_03": "SK_Dress_MCH_02_03",
+        "SK_Dress_857c5a_MCH_02_04": "SK_Dress_MCH_02_04",
+        "SK_Dress_857c5a_MCH_03_01": "SK_Dress_MCH_03_01",
+        "SK_Dress_857c5a_MCH_03_02": "SK_Dress_MCH_03_02",
+        "SK_Dress_857c5a_MCH_03_03": "SK_Dress_MCH_03_03",
+        "SK_Dress_857c5a_MCH_03_04": "SK_Dress_MCH_03_04",
+        "SK_Dress_857c5a_MCH_04_01": "SK_Dress_MCH_04_01",
+        "SK_Dress_857c5a_MCH_04_02": "SK_Dress_MCH_04_02",
+        "SK_Dress_857c5a_MCH_04_03": "SK_Dress_MCH_04_03",
+        "SK_Dress_857c5a_MCH_04_04": "SK_Dress_MCH_04_04",
+        "SK_Dress_857c5a_MCH_05_01": "SK_Dress_MCH_05_01",
+        "SK_Dress_857c5a_MCH_05_02": "SK_Dress_MCH_05_02",
+        "SK_Dress_857c5a_MCH_05_03": "SK_Dress_MCH_05_03",
+        "SK_Dress_857c5a_MCH_05_04": "SK_Dress_MCH_05_04",
+        "SK_Dress_857c5a_MCH_06_01": "SK_Dress_MCH_06_01",
+        "SK_Dress_857c5a_MCH_06_02": "SK_Dress_MCH_06_02",
+        "SK_Dress_857c5a_MCH_06_03": "SK_Dress_MCH_06_03",
+        "SK_Dress_857c5a_MCH_06_04": "SK_Dress_MCH_06_04",
+        "SK_Dress_857c5a_MCH_07_01": "SK_Dress_MCH_07_01",
+        "SK_Dress_857c5a_MCH_07_02": "SK_Dress_MCH_07_02",
+        "SK_Dress_857c5a_MCH_07_03": "SK_Dress_MCH_07_03",
+        "SK_Dress_857c5a_MCH_07_04": "SK_Dress_MCH_07_04",
+        "SK_Dress_857c5a_MCH_08_01": "SK_Dress_MCH_08_01",
+        "SK_Dress_857c5a_MCH_08_02": "SK_Dress_MCH_08_02",
+        "SK_Dress_857c5a_MCH_08_03": "SK_Dress_MCH_08_03",
+        "SK_Dress_857c5a_MCH_08_04": "SK_Dress_MCH_08_04",
+        "SK_Dress_857c5a_Mid": "SK_Dress_Mid",
+        "SK_Dress_857c5a_Mid_01": "SK_Dress_Mid_01",
+        "SK_Dress_857c5a_Mid_02": "SK_Dress_Mid_02",
+        "SK_Dress_857c5a_Mid_03": "SK_Dress_Mid_03",
+        "SK_Dress_857c5a_Mid_04": "SK_Dress_Mid_04",
+        "SK_Dress_857c5a_Mid_05": "SK_Dress_Mid_05",
+        "SK_Dress_857c5a_Mid_06": "SK_Dress_Mid_06",
+        "SK_Dress_857c5a_Mid_07": "SK_Dress_Mid_07",
+        "SK_Dress_857c5a_Mid_08": "SK_Dress_Mid_08",
+        "SK_Dress_857c5a_PHYS_01_01": "SK_Dress_PHYS_01_01",
+        "SK_Dress_857c5a_PHYS_01_02": "SK_Dress_PHYS_01_02",
+        "SK_Dress_857c5a_PHYS_01_03": "SK_Dress_PHYS_01_03",
+        "SK_Dress_857c5a_PHYS_01_04": "SK_Dress_PHYS_01_04",
+        "SK_Dress_857c5a_PHYS_02_01": "SK_Dress_PHYS_02_01",
+        "SK_Dress_857c5a_PHYS_02_02": "SK_Dress_PHYS_02_02",
+        "SK_Dress_857c5a_PHYS_02_03": "SK_Dress_PHYS_02_03",
+        "SK_Dress_857c5a_PHYS_02_04": "SK_Dress_PHYS_02_04",
+        "SK_Dress_857c5a_PHYS_03_01": "SK_Dress_PHYS_03_01",
+        "SK_Dress_857c5a_PHYS_03_02": "SK_Dress_PHYS_03_02",
+        "SK_Dress_857c5a_PHYS_03_03": "SK_Dress_PHYS_03_03",
+        "SK_Dress_857c5a_PHYS_03_04": "SK_Dress_PHYS_03_04",
+        "SK_Dress_857c5a_PHYS_04_01": "SK_Dress_PHYS_04_01",
+        "SK_Dress_857c5a_PHYS_04_02": "SK_Dress_PHYS_04_02",
+        "SK_Dress_857c5a_PHYS_04_03": "SK_Dress_PHYS_04_03",
+        "SK_Dress_857c5a_PHYS_04_04": "SK_Dress_PHYS_04_04",
+        "SK_Dress_857c5a_PHYS_05_01": "SK_Dress_PHYS_05_01",
+        "SK_Dress_857c5a_PHYS_05_02": "SK_Dress_PHYS_05_02",
+        "SK_Dress_857c5a_PHYS_05_03": "SK_Dress_PHYS_05_03",
+        "SK_Dress_857c5a_PHYS_05_04": "SK_Dress_PHYS_05_04",
+        "SK_Dress_857c5a_PHYS_06_01": "SK_Dress_PHYS_06_01",
+        "SK_Dress_857c5a_PHYS_06_02": "SK_Dress_PHYS_06_02",
+        "SK_Dress_857c5a_PHYS_06_03": "SK_Dress_PHYS_06_03",
+        "SK_Dress_857c5a_PHYS_06_04": "SK_Dress_PHYS_06_04",
+        "SK_Dress_857c5a_PHYS_07_01": "SK_Dress_PHYS_07_01",
+        "SK_Dress_857c5a_PHYS_07_02": "SK_Dress_PHYS_07_02",
+        "SK_Dress_857c5a_PHYS_07_03": "SK_Dress_PHYS_07_03",
+        "SK_Dress_857c5a_PHYS_07_04": "SK_Dress_PHYS_07_04",
+        "SK_Dress_857c5a_PHYS_08_01": "SK_Dress_PHYS_08_01",
+        "SK_Dress_857c5a_PHYS_08_02": "SK_Dress_PHYS_08_02",
+        "SK_Dress_857c5a_PHYS_08_03": "SK_Dress_PHYS_08_03",
+        "SK_Dress_857c5a_PHYS_08_04": "SK_Dress_PHYS_08_04",
+        "SK_Dress_857c5a_Waist": "SK_Dress_Waist"
+      },
+      "hooks": [
+        {
+          "object": "SK_Dress_Wire_01",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_01",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_01",
+          "to": "Control SK_Dress_Mid_01",
+          "old_subtarget": "SK_Dress_857c5a_Mid_01",
+          "new_subtarget": "SK_Dress_Mid_01"
+        },
+        {
+          "object": "SK_Dress_Wire_01",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_01",
+          "to": "Control SK_Dress_Hem_01",
+          "old_subtarget": "SK_Dress_857c5a_Hem_01",
+          "new_subtarget": "SK_Dress_Hem_01"
+        },
+        {
+          "object": "SK_Dress_Wire_02",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_02",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_02",
+          "to": "Control SK_Dress_Mid_02",
+          "old_subtarget": "SK_Dress_857c5a_Mid_02",
+          "new_subtarget": "SK_Dress_Mid_02"
+        },
+        {
+          "object": "SK_Dress_Wire_02",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_02",
+          "to": "Control SK_Dress_Hem_02",
+          "old_subtarget": "SK_Dress_857c5a_Hem_02",
+          "new_subtarget": "SK_Dress_Hem_02"
+        },
+        {
+          "object": "SK_Dress_Wire_03",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_03",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_03",
+          "to": "Control SK_Dress_Mid_03",
+          "old_subtarget": "SK_Dress_857c5a_Mid_03",
+          "new_subtarget": "SK_Dress_Mid_03"
+        },
+        {
+          "object": "SK_Dress_Wire_03",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_03",
+          "to": "Control SK_Dress_Hem_03",
+          "old_subtarget": "SK_Dress_857c5a_Hem_03",
+          "new_subtarget": "SK_Dress_Hem_03"
+        },
+        {
+          "object": "SK_Dress_Wire_04",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_04",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_04",
+          "to": "Control SK_Dress_Mid_04",
+          "old_subtarget": "SK_Dress_857c5a_Mid_04",
+          "new_subtarget": "SK_Dress_Mid_04"
+        },
+        {
+          "object": "SK_Dress_Wire_04",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_04",
+          "to": "Control SK_Dress_Hem_04",
+          "old_subtarget": "SK_Dress_857c5a_Hem_04",
+          "new_subtarget": "SK_Dress_Hem_04"
+        },
+        {
+          "object": "SK_Dress_Wire_05",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_05",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_05",
+          "to": "Control SK_Dress_Mid_05",
+          "old_subtarget": "SK_Dress_857c5a_Mid_05",
+          "new_subtarget": "SK_Dress_Mid_05"
+        },
+        {
+          "object": "SK_Dress_Wire_05",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_05",
+          "to": "Control SK_Dress_Hem_05",
+          "old_subtarget": "SK_Dress_857c5a_Hem_05",
+          "new_subtarget": "SK_Dress_Hem_05"
+        },
+        {
+          "object": "SK_Dress_Wire_06",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_06",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_06",
+          "to": "Control SK_Dress_Mid_06",
+          "old_subtarget": "SK_Dress_857c5a_Mid_06",
+          "new_subtarget": "SK_Dress_Mid_06"
+        },
+        {
+          "object": "SK_Dress_Wire_06",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_06",
+          "to": "Control SK_Dress_Hem_06",
+          "old_subtarget": "SK_Dress_857c5a_Hem_06",
+          "new_subtarget": "SK_Dress_Hem_06"
+        },
+        {
+          "object": "SK_Dress_Wire_07",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_07",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_07",
+          "to": "Control SK_Dress_Mid_07",
+          "old_subtarget": "SK_Dress_857c5a_Mid_07",
+          "new_subtarget": "SK_Dress_Mid_07"
+        },
+        {
+          "object": "SK_Dress_Wire_07",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_07",
+          "to": "Control SK_Dress_Hem_07",
+          "old_subtarget": "SK_Dress_857c5a_Hem_07",
+          "new_subtarget": "SK_Dress_Hem_07"
+        },
+        {
+          "object": "SK_Dress_Wire_08",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_08",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_08",
+          "to": "Control SK_Dress_Mid_08",
+          "old_subtarget": "SK_Dress_857c5a_Mid_08",
+          "new_subtarget": "SK_Dress_Mid_08"
+        },
+        {
+          "object": "SK_Dress_Wire_08",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_08",
+          "to": "Control SK_Dress_Hem_08",
+          "old_subtarget": "SK_Dress_857c5a_Hem_08",
+          "new_subtarget": "SK_Dress_Hem_08"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Hem_01",
+          "to": "Control SK_Dress_Hem_01",
+          "old_subtarget": "SK_Dress_857c5a_Hem_01",
+          "new_subtarget": "SK_Dress_Hem_01"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Hem_02",
+          "to": "Control SK_Dress_Hem_02",
+          "old_subtarget": "SK_Dress_857c5a_Hem_02",
+          "new_subtarget": "SK_Dress_Hem_02"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Hem_03",
+          "to": "Control SK_Dress_Hem_03",
+          "old_subtarget": "SK_Dress_857c5a_Hem_03",
+          "new_subtarget": "SK_Dress_Hem_03"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 3,
+          "from": "Control SK_Dress_857c5a_Hem_04",
+          "to": "Control SK_Dress_Hem_04",
+          "old_subtarget": "SK_Dress_857c5a_Hem_04",
+          "new_subtarget": "SK_Dress_Hem_04"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 4,
+          "from": "Control SK_Dress_857c5a_Hem_05",
+          "to": "Control SK_Dress_Hem_05",
+          "old_subtarget": "SK_Dress_857c5a_Hem_05",
+          "new_subtarget": "SK_Dress_Hem_05"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 5,
+          "from": "Control SK_Dress_857c5a_Hem_06",
+          "to": "Control SK_Dress_Hem_06",
+          "old_subtarget": "SK_Dress_857c5a_Hem_06",
+          "new_subtarget": "SK_Dress_Hem_06"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 6,
+          "from": "Control SK_Dress_857c5a_Hem_07",
+          "to": "Control SK_Dress_Hem_07",
+          "old_subtarget": "SK_Dress_857c5a_Hem_07",
+          "new_subtarget": "SK_Dress_Hem_07"
+        },
+        {
+          "object": "SK_Dress_Wire_hem",
+          "index": 7,
+          "from": "Control SK_Dress_857c5a_Hem_08",
+          "to": "Control SK_Dress_Hem_08",
+          "old_subtarget": "SK_Dress_857c5a_Hem_08",
+          "new_subtarget": "SK_Dress_Hem_08"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Mid_01",
+          "to": "Control SK_Dress_Mid_01",
+          "old_subtarget": "SK_Dress_857c5a_Mid_01",
+          "new_subtarget": "SK_Dress_Mid_01"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Mid_02",
+          "to": "Control SK_Dress_Mid_02",
+          "old_subtarget": "SK_Dress_857c5a_Mid_02",
+          "new_subtarget": "SK_Dress_Mid_02"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Mid_03",
+          "to": "Control SK_Dress_Mid_03",
+          "old_subtarget": "SK_Dress_857c5a_Mid_03",
+          "new_subtarget": "SK_Dress_Mid_03"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 3,
+          "from": "Control SK_Dress_857c5a_Mid_04",
+          "to": "Control SK_Dress_Mid_04",
+          "old_subtarget": "SK_Dress_857c5a_Mid_04",
+          "new_subtarget": "SK_Dress_Mid_04"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 4,
+          "from": "Control SK_Dress_857c5a_Mid_05",
+          "to": "Control SK_Dress_Mid_05",
+          "old_subtarget": "SK_Dress_857c5a_Mid_05",
+          "new_subtarget": "SK_Dress_Mid_05"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 5,
+          "from": "Control SK_Dress_857c5a_Mid_06",
+          "to": "Control SK_Dress_Mid_06",
+          "old_subtarget": "SK_Dress_857c5a_Mid_06",
+          "new_subtarget": "SK_Dress_Mid_06"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 6,
+          "from": "Control SK_Dress_857c5a_Mid_07",
+          "to": "Control SK_Dress_Mid_07",
+          "old_subtarget": "SK_Dress_857c5a_Mid_07",
+          "new_subtarget": "SK_Dress_Mid_07"
+        },
+        {
+          "object": "SK_Dress_Wire_mid",
+          "index": 7,
+          "from": "Control SK_Dress_857c5a_Mid_08",
+          "to": "Control SK_Dress_Mid_08",
+          "old_subtarget": "SK_Dress_857c5a_Mid_08",
+          "new_subtarget": "SK_Dress_Mid_08"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 0,
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 1,
+          "from": "Control SK_Dress_857c5a_Waist.001",
+          "to": "Control SK_Dress_Waist.001",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 2,
+          "from": "Control SK_Dress_857c5a_Waist.002",
+          "to": "Control SK_Dress_Waist.002",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 3,
+          "from": "Control SK_Dress_857c5a_Waist.003",
+          "to": "Control SK_Dress_Waist.003",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 4,
+          "from": "Control SK_Dress_857c5a_Waist.004",
+          "to": "Control SK_Dress_Waist.004",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 5,
+          "from": "Control SK_Dress_857c5a_Waist.005",
+          "to": "Control SK_Dress_Waist.005",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 6,
+          "from": "Control SK_Dress_857c5a_Waist.006",
+          "to": "Control SK_Dress_Waist.006",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        },
+        {
+          "object": "SK_Dress_Wire_waist",
+          "index": 7,
+          "from": "Control SK_Dress_857c5a_Waist.007",
+          "to": "Control SK_Dress_Waist.007",
+          "old_subtarget": "SK_Dress_857c5a_Waist",
+          "new_subtarget": "SK_Dress_Waist"
+        }
+      ],
+      "record_updates": [
+        {
+          "holder": "Object:Dress",
+          "key": "character_designer_skirt_v1",
+          "before_sha256": "d0af66977102f27dd9bc5812c89e3fc41339882fb14389615f954107422c00f0",
+          "after_sha256": "f6d3b5110031cefb9277ffb8b320bad9a0e646b11a1e5293d58e55f25ee42981"
+        },
+        {
+          "holder": "Object:CoshaRig",
+          "key": "character_designer_body_original_mode_v1",
+          "before_sha256": "99586a987ec71d79bfe796cfd4c259f2392cf6fc8f4ab60a59ef7ee2fc862a99",
+          "after_sha256": "6ed81a56620c1274d071a38b7d355918978442e972c0a0313baea80fa18bd304"
+        },
+        {
+          "holder": "Object:Dress",
+          "key": "character_designer_skirt_pose_corrections_v1",
+          "before_sha256": "0a712cb4fed78c9fc14f3f4b65e055c66b77e6dab932bd28a994c731607191f7",
+          "after_sha256": "1c76b46ce0fd9e30c4152093a750cd9dd992c12ace5f6641427b15b4d25338b3"
+        }
+      ]
+    }
+  ],
+  "dress_sources": 1,
+  "owned_dress_bones": 115,
+  "planned_bone_renames": 115,
+  "planned_hook_renames": 48,
+  "protected_counts": {
+    "objects": 628,
+    "meshes": 598,
+    "rigs": 4
+  },
+  "baseline": "D:\\Blender\\Projects\\Character\\X\\validation\\skirt_names_20261003\\real_saved_names_run5_evidence\\normalized_baseline.json.gz",
+  "baseline_sha256": "9588dae924f7f39ffc9e74aef496d7cbb8370933932c7c8aa712002b14393a42",
+  "first_clean": [
+    {
+      "source": "Dress",
+      "owner": "857c5aaad1ac4160953847b083deba20",
+      "events": [
+        {
+          "from": "SK_Dress_857c5a_DEF_01_01",
+          "to": "SK_Dress_DEF_01_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_01_02",
+          "to": "SK_Dress_DEF_01_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_01_03",
+          "to": "SK_Dress_DEF_01_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_01_04",
+          "to": "SK_Dress_DEF_01_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_02_01",
+          "to": "SK_Dress_DEF_02_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_02_02",
+          "to": "SK_Dress_DEF_02_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_02_03",
+          "to": "SK_Dress_DEF_02_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_02_04",
+          "to": "SK_Dress_DEF_02_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_03_01",
+          "to": "SK_Dress_DEF_03_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_03_02",
+          "to": "SK_Dress_DEF_03_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_03_03",
+          "to": "SK_Dress_DEF_03_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_03_04",
+          "to": "SK_Dress_DEF_03_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_04_01",
+          "to": "SK_Dress_DEF_04_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_04_02",
+          "to": "SK_Dress_DEF_04_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_04_03",
+          "to": "SK_Dress_DEF_04_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_04_04",
+          "to": "SK_Dress_DEF_04_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_05_01",
+          "to": "SK_Dress_DEF_05_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_05_02",
+          "to": "SK_Dress_DEF_05_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_05_03",
+          "to": "SK_Dress_DEF_05_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_05_04",
+          "to": "SK_Dress_DEF_05_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_06_01",
+          "to": "SK_Dress_DEF_06_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_06_02",
+          "to": "SK_Dress_DEF_06_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_06_03",
+          "to": "SK_Dress_DEF_06_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_06_04",
+          "to": "SK_Dress_DEF_06_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_07_01",
+          "to": "SK_Dress_DEF_07_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_07_02",
+          "to": "SK_Dress_DEF_07_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_07_03",
+          "to": "SK_Dress_DEF_07_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_07_04",
+          "to": "SK_Dress_DEF_07_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_08_01",
+          "to": "SK_Dress_DEF_08_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_08_02",
+          "to": "SK_Dress_DEF_08_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_08_03",
+          "to": "SK_Dress_DEF_08_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_DEF_08_04",
+          "to": "SK_Dress_DEF_08_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem",
+          "to": "SK_Dress_Hem",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_01",
+          "to": "SK_Dress_Hem_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_02",
+          "to": "SK_Dress_Hem_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_03",
+          "to": "SK_Dress_Hem_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_04",
+          "to": "SK_Dress_Hem_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_05",
+          "to": "SK_Dress_Hem_05",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_06",
+          "to": "SK_Dress_Hem_06",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_07",
+          "to": "SK_Dress_Hem_07",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Hem_08",
+          "to": "SK_Dress_Hem_08",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_01_01",
+          "to": "SK_Dress_MCH_01_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_01_02",
+          "to": "SK_Dress_MCH_01_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_01_03",
+          "to": "SK_Dress_MCH_01_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_01_04",
+          "to": "SK_Dress_MCH_01_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_02_01",
+          "to": "SK_Dress_MCH_02_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_02_02",
+          "to": "SK_Dress_MCH_02_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_02_03",
+          "to": "SK_Dress_MCH_02_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_02_04",
+          "to": "SK_Dress_MCH_02_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_03_01",
+          "to": "SK_Dress_MCH_03_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_03_02",
+          "to": "SK_Dress_MCH_03_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_03_03",
+          "to": "SK_Dress_MCH_03_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_03_04",
+          "to": "SK_Dress_MCH_03_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_04_01",
+          "to": "SK_Dress_MCH_04_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_04_02",
+          "to": "SK_Dress_MCH_04_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_04_03",
+          "to": "SK_Dress_MCH_04_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_04_04",
+          "to": "SK_Dress_MCH_04_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_05_01",
+          "to": "SK_Dress_MCH_05_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_05_02",
+          "to": "SK_Dress_MCH_05_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_05_03",
+          "to": "SK_Dress_MCH_05_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_05_04",
+          "to": "SK_Dress_MCH_05_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_06_01",
+          "to": "SK_Dress_MCH_06_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_06_02",
+          "to": "SK_Dress_MCH_06_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_06_03",
+          "to": "SK_Dress_MCH_06_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_06_04",
+          "to": "SK_Dress_MCH_06_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_07_01",
+          "to": "SK_Dress_MCH_07_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_07_02",
+          "to": "SK_Dress_MCH_07_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_07_03",
+          "to": "SK_Dress_MCH_07_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_07_04",
+          "to": "SK_Dress_MCH_07_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_08_01",
+          "to": "SK_Dress_MCH_08_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_08_02",
+          "to": "SK_Dress_MCH_08_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_08_03",
+          "to": "SK_Dress_MCH_08_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_MCH_08_04",
+          "to": "SK_Dress_MCH_08_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid",
+          "to": "SK_Dress_Mid",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_01",
+          "to": "SK_Dress_Mid_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_02",
+          "to": "SK_Dress_Mid_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_03",
+          "to": "SK_Dress_Mid_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_04",
+          "to": "SK_Dress_Mid_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_05",
+          "to": "SK_Dress_Mid_05",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_06",
+          "to": "SK_Dress_Mid_06",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_07",
+          "to": "SK_Dress_Mid_07",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Mid_08",
+          "to": "SK_Dress_Mid_08",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_01_01",
+          "to": "SK_Dress_PHYS_01_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_01_02",
+          "to": "SK_Dress_PHYS_01_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_01_03",
+          "to": "SK_Dress_PHYS_01_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_01_04",
+          "to": "SK_Dress_PHYS_01_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_02_01",
+          "to": "SK_Dress_PHYS_02_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_02_02",
+          "to": "SK_Dress_PHYS_02_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_02_03",
+          "to": "SK_Dress_PHYS_02_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_02_04",
+          "to": "SK_Dress_PHYS_02_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_03_01",
+          "to": "SK_Dress_PHYS_03_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_03_02",
+          "to": "SK_Dress_PHYS_03_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_03_03",
+          "to": "SK_Dress_PHYS_03_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_03_04",
+          "to": "SK_Dress_PHYS_03_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_04_01",
+          "to": "SK_Dress_PHYS_04_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_04_02",
+          "to": "SK_Dress_PHYS_04_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_04_03",
+          "to": "SK_Dress_PHYS_04_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_04_04",
+          "to": "SK_Dress_PHYS_04_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_05_01",
+          "to": "SK_Dress_PHYS_05_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_05_02",
+          "to": "SK_Dress_PHYS_05_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_05_03",
+          "to": "SK_Dress_PHYS_05_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_05_04",
+          "to": "SK_Dress_PHYS_05_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_06_01",
+          "to": "SK_Dress_PHYS_06_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_06_02",
+          "to": "SK_Dress_PHYS_06_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_06_03",
+          "to": "SK_Dress_PHYS_06_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_06_04",
+          "to": "SK_Dress_PHYS_06_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_07_01",
+          "to": "SK_Dress_PHYS_07_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_07_02",
+          "to": "SK_Dress_PHYS_07_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_07_03",
+          "to": "SK_Dress_PHYS_07_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_07_04",
+          "to": "SK_Dress_PHYS_07_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_08_01",
+          "to": "SK_Dress_PHYS_08_01",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_08_02",
+          "to": "SK_Dress_PHYS_08_02",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_08_03",
+          "to": "SK_Dress_PHYS_08_03",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_PHYS_08_04",
+          "to": "SK_Dress_PHYS_08_04",
+          "kind": "bone"
+        },
+        {
+          "from": "SK_Dress_857c5a_Waist",
+          "to": "SK_Dress_Waist",
+          "kind": "bone"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_01",
+          "to": "Control SK_Dress_Mid_01",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_01",
+          "to": "Control SK_Dress_Hem_01",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_02",
+          "to": "Control SK_Dress_Mid_02",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_02",
+          "to": "Control SK_Dress_Hem_02",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_03",
+          "to": "Control SK_Dress_Mid_03",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_03",
+          "to": "Control SK_Dress_Hem_03",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_04",
+          "to": "Control SK_Dress_Mid_04",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_04",
+          "to": "Control SK_Dress_Hem_04",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_05",
+          "to": "Control SK_Dress_Mid_05",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_05",
+          "to": "Control SK_Dress_Hem_05",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_06",
+          "to": "Control SK_Dress_Mid_06",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_06",
+          "to": "Control SK_Dress_Hem_06",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_07",
+          "to": "Control SK_Dress_Mid_07",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_07",
+          "to": "Control SK_Dress_Hem_07",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_08",
+          "to": "Control SK_Dress_Mid_08",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_08",
+          "to": "Control SK_Dress_Hem_08",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_01",
+          "to": "Control SK_Dress_Hem_01",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_02",
+          "to": "Control SK_Dress_Hem_02",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_03",
+          "to": "Control SK_Dress_Hem_03",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_04",
+          "to": "Control SK_Dress_Hem_04",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_05",
+          "to": "Control SK_Dress_Hem_05",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_06",
+          "to": "Control SK_Dress_Hem_06",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_07",
+          "to": "Control SK_Dress_Hem_07",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Hem_08",
+          "to": "Control SK_Dress_Hem_08",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_01",
+          "to": "Control SK_Dress_Mid_01",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_02",
+          "to": "Control SK_Dress_Mid_02",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_03",
+          "to": "Control SK_Dress_Mid_03",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_04",
+          "to": "Control SK_Dress_Mid_04",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_05",
+          "to": "Control SK_Dress_Mid_05",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_06",
+          "to": "Control SK_Dress_Mid_06",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_07",
+          "to": "Control SK_Dress_Mid_07",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Mid_08",
+          "to": "Control SK_Dress_Mid_08",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist",
+          "to": "Control SK_Dress_Waist",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist.001",
+          "to": "Control SK_Dress_Waist.001",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist.002",
+          "to": "Control SK_Dress_Waist.002",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist.003",
+          "to": "Control SK_Dress_Waist.003",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist.004",
+          "to": "Control SK_Dress_Waist.004",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist.005",
+          "to": "Control SK_Dress_Waist.005",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist.006",
+          "to": "Control SK_Dress_Waist.006",
+          "kind": "hook"
+        },
+        {
+          "from": "Control SK_Dress_857c5a_Waist.007",
+          "to": "Control SK_Dress_Waist.007",
+          "kind": "hook"
+        }
+      ]
+    }
+  ],
+  "after_clean": {
+    "passed": true,
+    "expected_sha256": "d7ec654381a687cdb7e4229776543ec1b1b478b01c8bc6a6861ecfbd18e77da1",
+    "actual_sha256": "d7ec654381a687cdb7e4229776543ec1b1b478b01c8bc6a6861ecfbd18e77da1",
+    "differences": []
+  },
+  "world_bones_after_clean": {
+    "rigs": 4,
+    "bones": 2420,
+    "maximum_matrix_error": 0.0
+  },
+  "world_meshes_after_clean": {
+    "Clothes": {
+      "count": 2525,
+      "maximum_position_error": 0.0
+    },
+    "Cosha": {
+      "count": 14470,
+      "maximum_position_error": 0.0
+    },
+    "Diamond.001": {
+      "count": 948,
+      "maximum_position_error": 0.0
+    },
+    "Dress": {
+      "count": 3040,
+      "maximum_position_error": 0.0
+    },
+    "Dress_Backup": {
+      "count": 3040,
+      "maximum_position_error": 0.0
+    },
+    "Ear.001": {
+      "count": 1950,
+      "maximum_position_error": 0.0
+    },
+    "Embedded.001": {
+      "count": 1062,
+      "maximum_position_error": 0.0
+    },
+    "Hair": {
+      "count": 5463,
+      "maximum_position_error": 0.0
+    },
+    "Jacket": {
+      "count": 988,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_01_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_02_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_03_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_04_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_05_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_06_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_07_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Hem_08_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_01_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_02_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_03_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_04_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_05_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_06_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_07_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Mid_08_Shape": {
+      "count": 6,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Shape_hem": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Shape_mid": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "SK_Dress_Shape_waist": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "ShoeBase": {
+      "count": 8352,
+      "maximum_position_error": 0.0
+    },
+    "ShoeUpper2.001": {
+      "count": 6052,
+      "maximum_position_error": 0.0
+    },
+    "ShoeUpper3.001": {
+      "count": 11029,
+      "maximum_position_error": 0.0
+    },
+    "ShoeUpperBase": {
+      "count": 1220,
+      "maximum_position_error": 0.0
+    },
+    "Shoes": {
+      "count": 56354,
+      "maximum_position_error": 0.0
+    },
+    "Shoes_Primitive": {
+      "count": 72488,
+      "maximum_position_error": 0.0
+    },
+    "Stocking": {
+      "count": 2063,
+      "maximum_position_error": 0.0
+    },
+    "Strap.001": {
+      "count": 8454,
+      "maximum_position_error": 0.0
+    },
+    "Vamp.001": {
+      "count": 1727,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Breast_L": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Breast_R": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Eyes_Left": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Eyes_Master": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Eyes_Right": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_forearm.L": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_forearm.R": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_shin.L": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_shin.R": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_thigh.L": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_thigh.R": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_upper_arm.L": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_FK_upper_arm.R": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Foot_Roll.L": {
+      "count": 58,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Foot_Roll.R": {
+      "count": 58,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Head": {
+      "count": 799,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Hips": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Neck": {
+      "count": 27,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Root": {
+      "count": 24,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Spine_IK_Chest": {
+      "count": 48,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Spine_IK_Shape": {
+      "count": 4,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Toe_Bend.L": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Toe_Bend.R": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Torso_Bend": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Torso_FK_01": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Torso_FK_02": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_CoshaRig_Torso_FK_03": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_Randy_Finger": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_Randy_FootIK.L": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_Randy_FootIK.R": {
+      "count": 64,
+      "maximum_position_error": 0.0
+    },
+    "WGT_Randy_HandIK": {
+      "count": 32,
+      "maximum_position_error": 0.0
+    },
+    "WGT_Randy_PoleArrow": {
+      "count": 5,
+      "maximum_position_error": 0.0
+    },
+    "WGT_Randy_Shoulder": {
+      "count": 44,
+      "maximum_position_error": 0.0
+    },
+    "Wide Strap.001": {
+      "count": 5050,
+      "maximum_position_error": 0.0
+    }
+  },
+  "second_clean": [
+    {
+      "source": "Dress",
+      "owner": "857c5aaad1ac4160953847b083deba20",
+      "events": []
+    }
+  ],
+  "recovery_records_after_clean": {
+    "Object:CoshaRig/character_designer_body_original_mode_v1": "6ed81a56620c1274d071a38b7d355918978442e972c0a0313baea80fa18bd304",
+    "Object:Dress/character_designer_skirt_pose_corrections_v1": "1c76b46ce0fd9e30c4152093a750cd9dd992c12ace5f6641427b15b4d25338b3",
+    "Object:Dress/character_designer_skirt_v1": "f6d3b5110031cefb9277ffb8b320bad9a0e646b11a1e5293d58e55f25ee42981"
+  },
+  "original_after_clean": [
+    {
+      "rig": "CoshaRig",
+      "active": true,
+      "version": 1,
+      "body_constraint_entries": 23,
+      "dress_edit_owners": [
+        "857c5aaad1ac4160953847b083deba20"
+      ],
+      "raw_sha256": "6ed81a56620c1274d071a38b7d355918978442e972c0a0313baea80fa18bd304"
+    }
+  ],
+  "save_result": [
+    "FINISHED"
+  ],
+  "candidate_fingerprint": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\skirt_names_20261003\\real_saved_names_run5_validation_copy.blend",
+    "sha256": "92e167a5e4b3066ef216833606ef8bc13dffcee9c31ac16b9d810ce007763b9e",
+    "bytes": 32151105,
+    "mtime_ns": 1791042674450527300,
+    "stable_during_hash": true
+  },
+  "reopen_result": [
+    "FINISHED"
+  ],
+  "after_reopen": {
+    "passed": false,
+    "expected_sha256": "d7ec654381a687cdb7e4229776543ec1b1b478b01c8bc6a6861ecfbd18e77da1",
+    "actual_sha256": "28b4ed7f5a0faffec4be6354e742f43aff6e9d7779a9bb59ac0e99fa62381486",
+    "differences": [
+      "protected.extra_ids.images:1d63a26f-110a-4ff2-9145-a350633c3dd5.png.fields.use_extra_user: True -> False",
+      "protected.extra_ids.images:AnimeFront.png.fields.use_extra_user: True -> False",
+      "protected.extra_ids.images:Hair.fields.use_extra_user: True -> False",
+      "protected.extra_ids.other_object_data:Front.fields.use_extra_user: True -> False"
+    ]
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\skirt_names_20261003\\verify_real_names.py\", line 478, in main\n    check_raw(helper, scene_state(helper, {}), baseline, 'after_reopen', report)\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\skirt_names_20261003\\verify_real_names.py\", line 353, in check_raw\n    raise AssertionError(stage + ' changed protected raw data: ' + '\\n'.join(differences[:20]))\nAssertionError: after_reopen changed protected raw data: protected.extra_ids.images:1d63a26f-110a-4ff2-9145-a350633c3dd5.png.fields.use_extra_user: True -> False\nprotected.extra_ids.images:AnimeFront.png.fields.use_extra_user: True -> False\nprotected.extra_ids.images:Hair.fields.use_extra_user: True -> False\nprotected.extra_ids.other_object_data:Front.fields.use_extra_user: True -> False\n",
+  "canonical_source_unchanged": true,
+  "input_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+    "bytes": 32311941,
+    "mtime_ns": 1791039433019634900,
+    "stable_during_hash": true
+  },
+  "artist_input_unchanged": true,
+  "input_sha256_before": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+  "input_sha256_after": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+  "elapsed_seconds": 290.4534694999966,
+  "finished_utc": "2026-10-03T15:52:45.035971+00:00"
+}

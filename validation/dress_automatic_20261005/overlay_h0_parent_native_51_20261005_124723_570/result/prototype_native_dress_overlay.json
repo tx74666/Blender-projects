@@ -1,0 +1,1929 @@
+{
+  "status": "failed",
+  "artist_operation": false,
+  "scene_saved": false,
+  "cloth_replayed": false,
+  "production_effect_accepted": false,
+  "manual_Keys_Original_modes_export_workflow_accepted": false,
+  "existing_correction_production_workflow_accepted": false,
+  "test_scope": "Existing local correction and additional manual/Key deltas relative to independent neutral Controls H0",
+  "formula": "O = S + (C - H0), native relative exact-index vector fields before original Subsurf",
+  "frames": [],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\prototype_native_dress_overlay.py\", line 575, in main\n    snapshots,graph=read_outputs()\n                    ~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\prototype_native_dress_overlay.py\", line 554, in read_outputs\n    require(max(abs(a-b) for ar,br in zip(source_matrix,obj.evaluated_get(graph).matrix_world)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        for a,b in zip(ar,br))<1.e-6,'Native relative overlay object chart drifted: '+obj.name)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\experimental_actual_surface.py\", line 43, in require\n    raise RuntimeError(message)\nRuntimeError: Native relative overlay object chart drifted: QA Fixed Basis Physical H\n"
+  ],
+  "dependency_sha256": {
+    "experimental_direct_cloth_render.py": "835d7f8caba4220f7aef2d74857d25a4c0c08a31a56dc9c5a7daf8b87fb28a2f",
+    "experimental_waist_body_attachment.py": "f4bb7711327d1ac7d6295073476c97a6ef9a2e2a85fc016ca0c6253c663c0278",
+    "capture_native_fit_inputs.py": "38601f52dafc1b922cd894889bacc1af27dbaa6deeaaaa65d27495ea8ce418a2"
+  },
+  "frozen_evidence_sha256": "a6618bea6487ccada08a6c52c852a788a6c277f1e8b62d9fc0a6cce42ad1e861",
+  "required_file_load_flag": "--disable-depsgraph-on-file-load",
+  "file_load_depsgraph_disable_requested": true,
+  "script_sha256": "525b337748bdf037ae63b81e4b680ebe48f432a5c23420b659947f7e67447710",
+  "limitations": [
+    "Four recorded Cloth snapshots; no new solver, 60-frame replay, bake, mode lifecycle or export.",
+    "Manual and asymmetric Key tests are isolated QA inputs, not existing production animation preservation.",
+    "C is frozen waist-only Armature/body-attachment Cloth, without current32 DEF corrections. H0 uses independent Controls REPLACE so S-H0 carries the old correction.",
+    "Old corrections and new manual/Key deltas can cause new contacts: collisions are measured, not accepted as a released workflow.",
+    "Neutral Wire stored shape is the validated saved fixture; long-term edited Wire baseline migration is not proved.",
+    "Native field/layer/constraint evidence must pass; no nearest fallback or current DEF neutral guess."
+  ],
+  "existing_DEF_correction": {
+    "present": true,
+    "raw_sha256": "1c76b46ce0fd9e30c4152093a750cd9dd992c12ace5f6641427b15b4d25338b3",
+    "parsed_sha256": "6404a64538b931d3136f376f31d739a59611a60b78f4b475596660ee242e8a05",
+    "owner": "857c5aaad1ac4160953847b083deba20",
+    "corrected_bone_names": [
+      "SK_Dress_DEF_01_01",
+      "SK_Dress_DEF_01_02",
+      "SK_Dress_DEF_01_03",
+      "SK_Dress_DEF_01_04",
+      "SK_Dress_DEF_02_01",
+      "SK_Dress_DEF_02_02",
+      "SK_Dress_DEF_02_03",
+      "SK_Dress_DEF_02_04",
+      "SK_Dress_DEF_03_01",
+      "SK_Dress_DEF_03_02",
+      "SK_Dress_DEF_03_03",
+      "SK_Dress_DEF_03_04",
+      "SK_Dress_DEF_04_01",
+      "SK_Dress_DEF_04_02",
+      "SK_Dress_DEF_04_03",
+      "SK_Dress_DEF_04_04",
+      "SK_Dress_DEF_05_01",
+      "SK_Dress_DEF_05_02",
+      "SK_Dress_DEF_05_03",
+      "SK_Dress_DEF_05_04",
+      "SK_Dress_DEF_06_01",
+      "SK_Dress_DEF_06_02",
+      "SK_Dress_DEF_06_03",
+      "SK_Dress_DEF_06_04",
+      "SK_Dress_DEF_07_01",
+      "SK_Dress_DEF_07_02",
+      "SK_Dress_DEF_07_03",
+      "SK_Dress_DEF_07_04",
+      "SK_Dress_DEF_08_01",
+      "SK_Dress_DEF_08_02",
+      "SK_Dress_DEF_08_03",
+      "SK_Dress_DEF_08_04"
+    ],
+    "current_native_DEF_basis_sha256": "e5dff5840f75b021e5dccb7a7439db82a34fa655ba437433bb602643429a861b",
+    "saved_channels_are_clear_baseline_not_current_delta": true,
+    "source_current_basis_and_correction_record_preserved": true,
+    "H0_keeps_copied_raw_DEF_channels_dormant_under_REPLACE": true,
+    "H0_metadata_does_not_claim_an_active_correction": true,
+    "baseline_scope": "S-H0 contains existing correction plus additional manual/Key deltas",
+    "reason": "Frozen Cloth C does not contain32 DEF correction; H0 must exclude its effect rather than cancelling it from S"
+  },
+  "neutral_preflight": {
+    "manual_names": [
+      "SK_Dress_Waist",
+      "SK_Dress_Mid",
+      "SK_Dress_Hem",
+      "SK_Dress_Mid_01",
+      "SK_Dress_Hem_01",
+      "SK_Dress_Mid_02",
+      "SK_Dress_Hem_02",
+      "SK_Dress_Mid_03",
+      "SK_Dress_Hem_03",
+      "SK_Dress_Mid_04",
+      "SK_Dress_Hem_04",
+      "SK_Dress_Mid_05",
+      "SK_Dress_Hem_05",
+      "SK_Dress_Mid_06",
+      "SK_Dress_Hem_06",
+      "SK_Dress_Mid_07",
+      "SK_Dress_Hem_07",
+      "SK_Dress_Mid_08",
+      "SK_Dress_Hem_08",
+      "SK_Dress_MCH_01_01",
+      "SK_Dress_MCH_01_02",
+      "SK_Dress_MCH_01_03",
+      "SK_Dress_MCH_01_04",
+      "SK_Dress_MCH_02_01",
+      "SK_Dress_MCH_02_02",
+      "SK_Dress_MCH_02_03",
+      "SK_Dress_MCH_02_04",
+      "SK_Dress_MCH_03_01",
+      "SK_Dress_MCH_03_02",
+      "SK_Dress_MCH_03_03",
+      "SK_Dress_MCH_03_04",
+      "SK_Dress_MCH_04_01",
+      "SK_Dress_MCH_04_02",
+      "SK_Dress_MCH_04_03",
+      "SK_Dress_MCH_04_04",
+      "SK_Dress_MCH_05_01",
+      "SK_Dress_MCH_05_02",
+      "SK_Dress_MCH_05_03",
+      "SK_Dress_MCH_05_04",
+      "SK_Dress_MCH_06_01",
+      "SK_Dress_MCH_06_02",
+      "SK_Dress_MCH_06_03",
+      "SK_Dress_MCH_06_04",
+      "SK_Dress_MCH_07_01",
+      "SK_Dress_MCH_07_02",
+      "SK_Dress_MCH_07_03",
+      "SK_Dress_MCH_07_04",
+      "SK_Dress_MCH_08_01",
+      "SK_Dress_MCH_08_02",
+      "SK_Dress_MCH_08_03",
+      "SK_Dress_MCH_08_04"
+    ],
+    "blocked_paths": [],
+    "definition": "Generated manual identity basis and saved fitted curves; same Body/PHYS inputs with independent DEF Controls REPLACE; never evaluated final DEF as H0"
+  },
+  "reference_action_copy": {
+    "original": "QA Representative · Abrupt Stop",
+    "owned_copy": "QA Representative · Abrupt Stop.001",
+    "original_use_fake_user": true,
+    "owned_use_fake_user": false,
+    "allowed_copy_metadata_differences": [
+      "name",
+      "name_full",
+      "use_fake_user"
+    ],
+    "reason": "Native Action.copy omits fake-user; the independent QA Action must have no fake/external user at cleanup"
+  },
+  "reference_definition": {
+    "rig": "QA Neutral Physical Reference Rig",
+    "armature": "QA Neutral Physical Reference Armature Data",
+    "wire_count": 8,
+    "constraint_redirects": [
+      [
+        "Hips",
+        "CD Root Follow",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "spine",
+        "CD Torso FK",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "Chest",
+        "CD Torso FK",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "UpperChest",
+        "CD Torso FK",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "eye.L",
+        "CD Eye Aim",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "eye.R",
+        "CD Eye Aim",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "forearm.L",
+        "CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "forearm.L",
+        "CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77",
+        "pole_target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "hand.L",
+        "CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "hand.L",
+        "CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77",
+        "space_object",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "hand.L",
+        "CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "forearm.R",
+        "CDLimbIK_IK_9c08616fb2024757952dbd433048e839",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "forearm.R",
+        "CDLimbIK_IK_9c08616fb2024757952dbd433048e839",
+        "pole_target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "hand.R",
+        "CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "hand.R",
+        "CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839",
+        "space_object",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "hand.R",
+        "CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "shin.L",
+        "CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "shin.L",
+        "CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4",
+        "pole_target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "foot.L",
+        "CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "foot.L",
+        "CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "toe.L",
+        "CD Toe Bend",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_auto_ref.L",
+        "CD Foot Auto Toe Reference",
+        "space_object",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_auto_ref.L",
+        "CD Foot Auto Toe Reference",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "shin.R",
+        "CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "shin.R",
+        "CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79",
+        "pole_target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "foot.R",
+        "CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "foot.R",
+        "CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "toe.R",
+        "CD Toe Bend",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_auto_ref.R",
+        "CD Foot Auto Toe Reference",
+        "space_object",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_auto_ref.R",
+        "CD Foot Auto Toe Reference",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_torso_offset_1",
+        "CD Torso Shared Bend",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_torso_offset_2",
+        "CD Torso Shared Bend",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_torso_offset_3",
+        "CD Torso Shared Bend",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_01_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_01",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_02_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_02",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_03_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_03",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_04_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_04",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_05_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_05",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_06_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_06",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_07_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_07",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_MCH_08_04",
+        "Skirt manual wire",
+        "target",
+        [
+          "Object",
+          "QA Neutral SK_Dress_Wire_08",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_01",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_01",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_02",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_02",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_03",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_03",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_04",
+        "Skirt manual pose",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_04",
+        "Skirt physics delta",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_elbow_pole_aim.L",
+        "CDLimbIK_POLE_DISPLAY_TRACK_29ed206dfc2042768e1c07044b58cc77",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_elbow_pole_aim.R",
+        "CDLimbIK_POLE_DISPLAY_TRACK_9c08616fb2024757952dbd433048e839",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_space.L",
+        "CD Foot FK Toe Space",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_space.L",
+        "CD Foot IK Toe Space",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_space.L",
+        "CD Foot Auto Toe Space",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_knee_pole_aim.L",
+        "CDLimbIK_POLE_DISPLAY_TRACK_91d603ba5a454da3b17753974e882bf4",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_space.R",
+        "CD Foot FK Toe Space",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_space.R",
+        "CD Foot IK Toe Space",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_toe_space.R",
+        "CD Foot Auto Toe Space",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_knee_pole_aim.R",
+        "CDLimbIK_POLE_DISPLAY_TRACK_cbf6ac471cc84a4786f9a665e3b87b79",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_foot_auto_rotation.L",
+        "CD Foot Auto Rotation",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ],
+      [
+        "MCH_foot_auto_rotation.R",
+        "CD Foot Auto Rotation",
+        "target",
+        [
+          "Object",
+          "QA Neutral Physical Reference Rig",
+          null
+        ]
+      ]
+    ],
+    "driver_self_ID_redirects": [
+      {
+        "path": "pose.bones[\"shin.R\"].constraints[\"CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"foot.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"foot.R\"].constraints[\"CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"forearm.R\"].constraints[\"CDLimbIK_IK_9c08616fb2024757952dbd433048e839\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"shin.L\"].constraints[\"CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"foot.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"foot.L\"].constraints[\"CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"forearm.L\"].constraints[\"CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"CTRL_master\"].scale",
+        "variable": "root_scale",
+        "target_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]"
+      },
+      {
+        "path": "pose.bones[\"CTRL_master\"].scale",
+        "variable": "root_scale",
+        "target_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]"
+      },
+      {
+        "path": "pose.bones[\"CTRL_master\"].scale",
+        "variable": "root_scale",
+        "target_path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_heel.L\"].rotation_euler",
+        "variable": "roll",
+        "target_path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_heel.L\"].rotation_euler",
+        "variable": "bank",
+        "target_path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[1]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_ball.L\"].rotation_euler",
+        "variable": "roll",
+        "target_path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_tip.L\"].rotation_euler",
+        "variable": "roll",
+        "target_path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]"
+      },
+      {
+        "path": "pose.bones[\"MCH_toe_space.L\"].constraints[\"CD Foot IK Toe Space\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"MCH_toe_space.L\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"MCH_toe_space.L\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+        "variable": "auto",
+        "target_path": "data.bones[\"CTRL_foot_IK.L\"][\"character_designer_limb_ik_auto_align\"]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_heel.R\"].rotation_euler",
+        "variable": "roll",
+        "target_path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_heel.R\"].rotation_euler",
+        "variable": "bank",
+        "target_path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[1]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_ball.R\"].rotation_euler",
+        "variable": "roll",
+        "target_path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]"
+      },
+      {
+        "path": "pose.bones[\"MCH_foot_tip.R\"].rotation_euler",
+        "variable": "roll",
+        "target_path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]"
+      },
+      {
+        "path": "pose.bones[\"MCH_toe_space.R\"].constraints[\"CD Foot IK Toe Space\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"MCH_toe_space.R\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+        "variable": "ik_fk",
+        "target_path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+      },
+      {
+        "path": "pose.bones[\"MCH_toe_space.R\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+        "variable": "auto",
+        "target_path": "data.bones[\"CTRL_foot_IK.R\"][\"character_designer_limb_ik_auto_align\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_01_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_01_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_01_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_01_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_02_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_02_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_02_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_02_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_03_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_03_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_03_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_03_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_04_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_04_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_04_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_04_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_05_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_05_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_05_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_05_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_06_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_06_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_06_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_06_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_07_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_07_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_07_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_07_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_08_01\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_08_02\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_08_03\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      },
+      {
+        "path": "pose.bones[\"SK_Dress_DEF_08_04\"].constraints[\"Skirt physics delta\"].influence",
+        "variable": "physics",
+        "target_path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+      }
+    ],
+    "manual_neutral_names": [
+      "SK_Dress_Waist",
+      "SK_Dress_Mid",
+      "SK_Dress_Hem",
+      "SK_Dress_Mid_01",
+      "SK_Dress_Hem_01",
+      "SK_Dress_Mid_02",
+      "SK_Dress_Hem_02",
+      "SK_Dress_Mid_03",
+      "SK_Dress_Hem_03",
+      "SK_Dress_Mid_04",
+      "SK_Dress_Hem_04",
+      "SK_Dress_Mid_05",
+      "SK_Dress_Hem_05",
+      "SK_Dress_Mid_06",
+      "SK_Dress_Hem_06",
+      "SK_Dress_Mid_07",
+      "SK_Dress_Hem_07",
+      "SK_Dress_Mid_08",
+      "SK_Dress_Hem_08",
+      "SK_Dress_MCH_01_01",
+      "SK_Dress_MCH_01_02",
+      "SK_Dress_MCH_01_03",
+      "SK_Dress_MCH_01_04",
+      "SK_Dress_MCH_02_01",
+      "SK_Dress_MCH_02_02",
+      "SK_Dress_MCH_02_03",
+      "SK_Dress_MCH_02_04",
+      "SK_Dress_MCH_03_01",
+      "SK_Dress_MCH_03_02",
+      "SK_Dress_MCH_03_03",
+      "SK_Dress_MCH_03_04",
+      "SK_Dress_MCH_04_01",
+      "SK_Dress_MCH_04_02",
+      "SK_Dress_MCH_04_03",
+      "SK_Dress_MCH_04_04",
+      "SK_Dress_MCH_05_01",
+      "SK_Dress_MCH_05_02",
+      "SK_Dress_MCH_05_03",
+      "SK_Dress_MCH_05_04",
+      "SK_Dress_MCH_06_01",
+      "SK_Dress_MCH_06_02",
+      "SK_Dress_MCH_06_03",
+      "SK_Dress_MCH_06_04",
+      "SK_Dress_MCH_07_01",
+      "SK_Dress_MCH_07_02",
+      "SK_Dress_MCH_07_03",
+      "SK_Dress_MCH_07_04",
+      "SK_Dress_MCH_08_01",
+      "SK_Dress_MCH_08_02",
+      "SK_Dress_MCH_08_03",
+      "SK_Dress_MCH_08_04"
+    ],
+    "fixedBasis_only": true,
+    "uses_current_final_DEF_as_reference": false,
+    "preserved_dormant_native_DEF_basis_sha256": "e5dff5840f75b021e5dccb7a7439db82a34fa655ba437433bb602643429a861b",
+    "declared_neutral_Controls_graph_differences": [
+      {
+        "bone": "SK_Dress_DEF_01_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_01_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_01_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_01_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_02_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_02_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_02_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_02_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_03_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_03_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_03_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_03_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_04_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_04_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_04_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_04_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_05_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_05_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_05_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_05_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_06_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_06_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_06_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_06_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_07_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_07_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_07_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_07_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_08_01",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_08_02",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_08_03",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      },
+      {
+        "bone": "SK_Dress_DEF_08_04",
+        "constraint": "Skirt manual pose",
+        "field": "mix_mode",
+        "before": "BEFORE_FULL",
+        "after": "REPLACE"
+      }
+    ],
+    "historical_clear_channels_restored": false,
+    "neutral_definition": "H0 excludes existing local correction through exact Controls REPLACE, keeps same physical/Body inputs"
+  },
+  "protected_after": {
+    "success": true,
+    "missing": [],
+    "changed": {
+      "meshes": [],
+      "rest": [],
+      "actions": [],
+      "nla_assets": []
+    }
+  },
+  "artist_disk_exact": true,
+  "code_exact": true,
+  "sealed_input_exact": true
+}

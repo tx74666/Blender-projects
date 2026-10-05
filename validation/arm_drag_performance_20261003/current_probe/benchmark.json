@@ -1,0 +1,430 @@
+{
+  "schema": 1,
+  "status": "error",
+  "args": {
+    "input": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "output": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\current_probe\\benchmark.json",
+    "addon_root": "C:/Users/Randy/AppData/Roaming/Blender Foundation/Blender/5.1/scripts/addons",
+    "rig": "CoshaRig",
+    "bone": "",
+    "side": "L",
+    "mode": "current",
+    "movement": "auto",
+    "repeats": 6,
+    "warmups": 2,
+    "cases": "baseline,no_subsurf,no_forearm,no_subsurf_no_forearm",
+    "sample_vertices": 8192
+  },
+  "limits": [
+    "Background CPU/depsgraph test, not end-to-end interactive latency.",
+    "Only installed Character Designer is explicitly registered; other GUI add-ons may differ.",
+    "No render, frame stepping, scene save, installation change or artist-window connection.",
+    "No-subdivision and no-correction cases are isolated diagnostic counterfactuals.",
+    "Warm p95 uses a small sample and must not be presented as a long-term guarantee.",
+    "Process page faults include soft faults; system paging requires external counters."
+  ],
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "sha256_before": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+    "bytes": 32311941
+  },
+  "memory_start": {
+    "available": true,
+    "system_load_percent": 84,
+    "system_available_mib": 2442.9609375,
+    "system_total_mib": 16158.7578125,
+    "process_working_set_mib": 155.74609375,
+    "process_private_mib": 216.66015625,
+    "process_page_fault_count": 50169,
+    "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+  },
+  "runtime": {
+    "blender_version": "5.1.0",
+    "background": true,
+    "binary": "D:\\Blender5.1\\blender.exe",
+    "addon_version": [
+      0,
+      73,
+      3
+    ],
+    "addon_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\__init__.py",
+    "addon_sources": {
+      "init": "4897c5796d24ba46db1d5abd14dcd994c3847e0f182a53dd152ad110daf7f4dd",
+      "forearm_twist": "12b298520389598cbf5bc8cd0dc51fce21e346b6928106e6bb48ca65ed1eb8aa",
+      "limb_ik": "fc747da16c60df1f607eec5651231809b60ac1858307037b3a806a9fbfd52a9e",
+      "original": "424b44189e0a10451534cd323b3040ba1eea453eb47cafd97cd28ee3794827b6"
+    },
+    "before_load_handlers": {
+      "depsgraph_update_pre": [],
+      "depsgraph_update_post": [
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_graph_post"
+        }
+      ],
+      "frame_change_pre": [],
+      "frame_change_post": [
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_frame_visibility"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_frame_post"
+        }
+      ],
+      "load_post": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "pose_library.gui",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "character_designer.finger_definition_ui",
+          "name": "_resume"
+        },
+        {
+          "module": "character_designer.finger_loop_marks_ui",
+          "name": "_restore"
+        },
+        {
+          "module": "character_designer.reference_views",
+          "name": "_reference_images_load_post"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.body_calibration_overlay",
+          "name": "_load"
+        },
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_load_native_migration"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_load_post"
+        },
+        {
+          "module": "character_designer.generated_names",
+          "name": "_after_load"
+        }
+      ]
+    }
+  },
+  "memory_after_load": {
+    "available": true,
+    "system_load_percent": 89,
+    "system_available_mib": 1751.828125,
+    "system_total_mib": 16158.7578125,
+    "process_working_set_mib": 542.91796875,
+    "process_private_mib": 606.34765625,
+    "process_page_fault_count": 314265,
+    "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+  },
+  "scene": {
+    "filepath": "D:\\Blender\\Projects\\Character\\X\\validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "frame": 39,
+    "view_layer": "ViewLayer",
+    "mode_on_load": "OBJECT",
+    "active_object": "CoshaRig",
+    "selected_pose_bones": [],
+    "active_pose_bone": null,
+    "original_session": true,
+    "bones": 351,
+    "constraints": 116,
+    "visible_meshes": 6,
+    "total_meshes": 71,
+    "threads_mode": "FIXED",
+    "threads_setting": 2,
+    "post_load_handlers": {
+      "depsgraph_update_pre": [],
+      "depsgraph_update_post": [
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_graph_post"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        }
+      ],
+      "frame_change_pre": [],
+      "frame_change_post": [
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_frame_visibility"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_frame_post"
+        }
+      ],
+      "load_post": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "pose_library.gui",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "character_designer.finger_definition_ui",
+          "name": "_resume"
+        },
+        {
+          "module": "character_designer.finger_loop_marks_ui",
+          "name": "_restore"
+        },
+        {
+          "module": "character_designer.reference_views",
+          "name": "_reference_images_load_post"
+        },
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_load_native_migration"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_load_post"
+        },
+        {
+          "module": "character_designer.generated_names",
+          "name": "_after_load"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.body_calibration_overlay",
+          "name": "_load"
+        }
+      ]
+    }
+  },
+  "arm_inventory": {
+    "error": "Owned constraint 'CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77' on 'forearm.L' was disabled or had its influence edited."
+  },
+  "body_mesh": {
+    "name": "Hair",
+    "raw_vertices": 5463,
+    "raw_polygons": 5111,
+    "visible": true,
+    "shape_keys": 0,
+    "calibrated_meshes": []
+  },
+  "subsurf": [
+    {
+      "object": "Cosha",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 3658
+    },
+    {
+      "object": "Clothes",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 101
+    },
+    {
+      "object": "Stocking",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 528
+    },
+    {
+      "object": "Dress",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": true,
+      "base_vertices": 800
+    },
+    {
+      "object": "Jacket",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 139
+    },
+    {
+      "object": "Dress_Backup",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 60
+    },
+    {
+      "object": "ShoeBase",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 576
+    },
+    {
+      "object": "ShoeUpperBase",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 86
+    },
+    {
+      "object": "Embedded.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 300
+    },
+    {
+      "object": "Ear.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 260
+    },
+    {
+      "object": "ShoeUpper2.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 387
+    },
+    {
+      "object": "ShoeUpper3.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 2,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 377
+    },
+    {
+      "object": "Vamp.001",
+      "modifier": "Subdivision",
+      "enabled": true,
+      "levels": 1,
+      "render_levels": 2,
+      "visible": false,
+      "base_vertices": 450
+    }
+  ],
+  "forearm": {
+    "runtime_registered": true,
+    "registered_handlers": [
+      {
+        "list": "depsgraph_update_post",
+        "name": "_graph_post",
+        "registered": true
+      },
+      {
+        "list": "frame_change_post",
+        "name": "_frame_post",
+        "registered": true
+      },
+      {
+        "list": "load_pre",
+        "name": "_restore_preview",
+        "registered": true
+      },
+      {
+        "list": "save_pre",
+        "name": "_restore_preview",
+        "registered": true
+      },
+      {
+        "list": "undo_pre",
+        "name": "_restore_preview",
+        "registered": true
+      },
+      {
+        "list": "load_post",
+        "name": "_load_post",
+        "registered": true
+      },
+      {
+        "list": "undo_post",
+        "name": "_undo_post",
+        "registered": true
+      },
+      {
+        "list": "redo_post",
+        "name": "_undo_post",
+        "registered": true
+      }
+    ],
+    "errors_before": {}
+  },
+  "candidate_reason": "Original session active: native arm bone candidates; controls may be suppressed.",
+  "candidate_attempts": [
+    {
+      "bone": "upper_arm.L",
+      "movement": "rotation",
+      "axis": 0,
+      "amount": 0.04,
+      "deformation_witness": {
+        "valid": false,
+        "maximum_world_distance": 0.0,
+        "changed_sample_vertices": 0,
+        "sample_vertices": 5463,
+        "evaluated_vertices": 5463,
+        "sampling_note": "Evenly spaced evaluated vertices; maximum is a sampled lower bound.",
+        "chain_matrix_max_error": 0.03065049648284912,
+        "initial_update_seconds": 0.08584359999804292
+      }
+    },
+    {
+      "bone": "forearm.L",
+      "movement": "rotation",
+      "axis": 0,
+      "amount": 0.04,
+      "deformation_witness": {
+        "valid": false,
+        "maximum_world_distance": 0.0,
+        "changed_sample_vertices": 0,
+        "sample_vertices": 5463,
+        "evaluated_vertices": 5463,
+        "sampling_note": "Evenly spaced evaluated vertices; maximum is a sampled lower bound.",
+        "chain_matrix_max_error": 0.03068298101425171,
+        "initial_update_seconds": 0.04339379999873927
+      }
+    }
+  ],
+  "error": "Candidates did not move evaluated skin/arm chain; no valid arm benchmark performed",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py\", line 547, in <module>\n    main(args, report)\n    ~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py\", line 381, in main\n    raise ValueError('Candidates did not move evaluated skin/arm chain; no valid arm benchmark performed')\nValueError: Candidates did not move evaluated skin/arm chain; no valid arm benchmark performed\n",
+  "partial_results_preserved": true
+}

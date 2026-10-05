@@ -1,0 +1,29 @@
+{
+  "state": "review-only; no Unity Assets write, compiler, MCP, UI or native execution",
+  "base_file": "D:\\Unity Projects\\RandomRealm2\\Assets\\Scripts\\Editor\\CharacterPoseStressVerification.cs",
+  "base_sha256": "bfd5747d557cc140d632645ab4a28f6d252f2872373797bf83495a8657a98a3b",
+  "candidate_sha256": "eaa6d7dac781807ffe58812561706be7b5f6edad9a0789ae27c5fb876b72e7e6",
+  "helper_sha256": "b33241745e8d70984dd2a6afa5972689144be838cafdb01a551b34bd09b0d410",
+  "dynamic_sha256": "d7bc0644a32b94afa05f1678a9d156ea3d9910e0915dfc2f40eb7ba0b6e1516f",
+  "patch_sha256": "656a75d2cf92baf1947bd024a16856f2d834e2e6938028a60b6629a4bb267173",
+  "apply_check": {
+    "command": "git apply --check (read-only)",
+    "exit_code": 0,
+    "diagnostics": ""
+  },
+  "generator_ast": "passed",
+  "other_inputs": {
+    "Assets/Scripts/Editor/CharacterPhysicsProfile.cs": "86650b9e9e1d4fca8c42a9a5d2a0a962c2d166c15e141f195d30e05a8fa7b074",
+    "Assets/Scripts/Editor/CharacterPhysicsPersistence.cs": "f9fa25f7fa6a11ed91f0b64f3a3fd81efd7e2d39061945f8e1c0fa6a7ab9e1e1",
+    "Assets/Scripts/Editor/CharacterStressPoseDriver.cs": "b7f02af6cd709bd9f62c89e105d602f2e929df41fede6fbf3dbef354d63895c0",
+    "Assets/Scripts/Editor/CharacterRoundtripAnimationPhysicsVerification.cs": "56114a5c5d52e4264bb177785b4bf25f8c07f2ee1eb7f7dbefd3aaa27303bfa1",
+    "Assets/Plugins/MagicaCloth2/Scripts/Core/Cloth/Constraints/ColliderCollisionConstraint.cs": "90cdf76779c75964a9084760bd7f31bc119a6381120db5451ede8d6dc0171a27",
+    "Assets/Plugins/MagicaCloth2/Scripts/Core/Manager/Team/TeamManager.cs": "9b7cca44c0b46d2b5d1fa092003f17508f6c6942f1eaa14ba6edaa912074b8ab",
+    "Assets/Art/Character/Cosha/Cosha.fbx": "cabd19d5f06d211558e279630b20abdd5b48f8973709241ffeef629901742685",
+    "Assets/Prefabs/Characters/Cosha/Cosha.Player.Physics.asset": "78d94c5e9fdc191aee24299c7418fd586e1fdc594ef85486e266441f73bce1dc",
+    "Assets/Prefabs/Characters/Cosha/Cosha.Player.prefab": "1542255d4243f66f00a1ee7eb9681285a999c434099e385f3001540429855866"
+  },
+  "menu": "Tools/RandomRealm/Character/Pose Stress/Verify Current Dress Only (Transient Play)",
+  "scope": "Current imported production Cosha model; isolated saved-Dress simulation; nine poses plus native Walk_N two cycles/root turn/root abrupt stop; contact/attachment diagnostics; other cloth simulations disabled; no Hair migration/publication",
+  "native_validation": "pending explicit Unity writer handoff and native compile/menu execution"
+}

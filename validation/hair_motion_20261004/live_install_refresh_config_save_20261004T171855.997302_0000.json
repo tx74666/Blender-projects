@@ -1,0 +1,22 @@
+{
+  "started_utc": "2026-10-04T17:18:55.997302+00:00",
+  "phase": "preflight",
+  "status": "failed",
+  "saved": false,
+  "simulation_baked": false,
+  "preview_started": false,
+  "artist_opened": false,
+  "installer_rollback": "not attempted; native installation/preferences remain for review",
+  "automatic_refresh_plan_before": {
+    "migration_candidates": [],
+    "rename_candidates": [],
+    "name_reader_skips": []
+  },
+  "failure_phase": "preflight",
+  "error": "Select the intended existing local repository before installation; selection is ambiguous.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:/Blender/Projects/Character/X/Validation/hair_motion_20261004/live_install_refresh_config_save.py\", line 493, in run\n    plan = extension_plan(modules)\n  File \"D:/Blender/Projects/Character/X/Validation/hair_motion_20261004/live_install_refresh_config_save.py\", line 448, in extension_plan\n    require(len(local) == 1, 'Select the intended existing local repository before installation; selection is ambiguous.')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:/Blender/Projects/Character/X/Validation/hair_motion_20261004/live_install_refresh_config_save.py\", line 49, in require\n    raise RuntimeError(message)\nRuntimeError: Select the intended existing local repository before installation; selection is ambiguous.\n",
+  "editor_restored_after_failure": true,
+  "finished_utc": "2026-10-04T17:18:56.725644+00:00",
+  "elapsed_seconds": 0.7283367000054568,
+  "report_path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\live_install_refresh_config_save_20261004T171855.997302_0000.json"
+}

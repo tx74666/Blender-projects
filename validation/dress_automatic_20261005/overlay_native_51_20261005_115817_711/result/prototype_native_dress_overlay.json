@@ -1,0 +1,38 @@
+{
+  "status": "failed",
+  "artist_operation": false,
+  "scene_saved": false,
+  "cloth_replayed": false,
+  "production_effect_accepted": false,
+  "manual_Keys_Original_modes_export_workflow_accepted": false,
+  "formula": "O = S + (C - H), native relative exact-index vector fields before original Subsurf",
+  "frames": [],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\prototype_native_dress_overlay.py\", line 409, in main\n    names=neutral_preflight(source,rig,record,report)\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\prototype_native_dress_overlay.py\", line 106, in neutral_preflight\n    require(ORIGINAL not in rig and not source.get(CORRECTIONS),\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            'Neutral ambiguous: Original session/correction layer is present')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\experimental_actual_surface.py\", line 43, in require\n    raise RuntimeError(message)\nRuntimeError: Neutral ambiguous: Original session/correction layer is present\n"
+  ],
+  "dependency_sha256": {
+    "experimental_direct_cloth_render.py": "835d7f8caba4220f7aef2d74857d25a4c0c08a31a56dc9c5a7daf8b87fb28a2f",
+    "experimental_waist_body_attachment.py": "f4bb7711327d1ac7d6295073476c97a6ef9a2e2a85fc016ca0c6253c663c0278",
+    "capture_native_fit_inputs.py": "38601f52dafc1b922cd894889bacc1af27dbaa6deeaaaa65d27495ea8ce418a2"
+  },
+  "frozen_evidence_sha256": "a6618bea6487ccada08a6c52c852a788a6c277f1e8b62d9fc0a6cce42ad1e861",
+  "script_sha256": "7a0cb8d621e2e9630ffb4f9f497debad3796172a332dbbf878e45833608c94a9",
+  "limitations": [
+    "Four recorded Cloth snapshots; no new solver, 60-frame replay, bake, mode lifecycle or export.",
+    "Manual and asymmetric Key tests are isolated QA inputs, not existing production animation preservation.",
+    "Native field/layer/constraint evidence must pass; no nearest fallback or current DEF neutral guess."
+  ],
+  "protected_after": {
+    "success": true,
+    "missing": [],
+    "changed": {
+      "meshes": [],
+      "rest": [],
+      "actions": [],
+      "nla_assets": []
+    }
+  },
+  "artist_disk_exact": true,
+  "code_exact": true,
+  "sealed_input_exact": true
+}

@@ -1,0 +1,45 @@
+{
+  "command": [
+    "D:\\Blender5.1\\blender.exe",
+    "--background",
+    "--factory-startup",
+    "--disable-autoexec",
+    "--threads",
+    "2",
+    "--python-exit-code",
+    "17",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py",
+    "--",
+    "--input",
+    "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "--output",
+    "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\body_probe\\benchmark.json",
+    "--repeats",
+    "6",
+    "--mode",
+    "current"
+  ],
+  "startedEpoch": 1791040854.8009927,
+  "before": {
+    "availableBytes": 1453813760,
+    "totalBytes": 16943685632,
+    "usedPercent": 91
+  },
+  "logicalCpus": 16,
+  "guiPid": 40588,
+  "limits": [
+    "Saved independent scene copy; no GUI changes",
+    "Two worker threads; no GPU redraw or Undo timing",
+    "Process pageFaultCount includes soft and hard faults; system PDH page I/O is not Blender-specific"
+  ],
+  "ownedPid": 37032,
+  "exitCode": 0,
+  "elapsedSeconds": 7.04937549999886,
+  "endedEpoch": 1791040863.3314416,
+  "after": {
+    "availableBytes": 1240707072,
+    "totalBytes": 16943685632,
+    "usedPercent": 92
+  }
+}

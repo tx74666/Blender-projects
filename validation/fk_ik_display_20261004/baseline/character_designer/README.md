@@ -1,0 +1,2617 @@
+# Character Designer 0.75.0
+
+## Native FK and compact daily controls (0.75.0)
+
+**Rig > Body > Bone Setup** has one **IK / FK** row for both arms and legs.
+FK rotates the original upper, lower and end bones directly; no second FK
+skeleton is created. The switch matches the current pose and rolls all limbs
+back if any chain fails. Auto Key retains the existing constant mode cuts and
+pose bookends. Ambiguous multi-slot or multi-layer Actions are rejected before
+writing keys. Individual limb modes, foot details and Auto Align remain in
+**Advanced**.
+
+**Original / Controls** remains the broader Body/Hair/Dress workspace choice.
+Choosing a limb mode from Original transfers the current pose back to Controls
+before matching, as one transaction. A plain Controls FK switch only changes
+arms and legs.
+
+Daily **Spine Controls** shows shared **Bend Spine** and section FK selectors.
+New Body Setup no longer generates optional Spine IK. Existing optional IK is
+preserved by Update and its switches/removal remain in Advanced; animated or
+externally referenced controls still block removal. Hair keeps its own setup.
+
+## Original calibration and local Rest adaptation (0.74.0)
+
+Forearm **Capture & Preview** in Original validates the exact paused owned
+constraints and poses the native hand. Confirm or cancel the preview before
+switching Original / Controls. Artist mesh edits remain independent of the
+skeleton check; small float roundtrips through Edit Mode no longer block return.
+
+After an intentional Edit Mode change to an existing Direct upper/lower limb
+bone, finish Edit Mode and click **Bone Display > Controls**. Supported local
+geometry edits adapt their existing controls while keeping the current author
+Rest and pose. The operation validates the old graph, current skin and bound
+surfaces, and rolls back on failure. Returning to Original uses the accepted Rest.
+
+This adaptation preserves model data, weights and asymmetric Shape Keys. It
+does not accept changed bone names, ownership, parenting, connection flags or
+incompatible animation/dependencies. Existing Pose assets and Body Calibration
+confirmations retain their checks and may require explicit retargeting or
+recalibration. Prior Direct Rest provenance remains recoverable; removing the
+controls retains the newly accepted author Rest.
+
+Ordinary returns reuse one preflight and one native Rest read. Timing evidence
+and scene integration are recorded separately from GUI response time.
+
+## Clean Dress bone names (0.73.4)
+
+Verified legacy Dress bones and their generated Hook labels now drop the owner
+UUID: `SK_Dress_857c5a_DEF_08_01` becomes `SK_Dress_DEF_08_01`.
+Ownership stays in private properties. Cleanup updates exact native bindings,
+Original/Controls snapshots and recovery records in one rollback transaction.
+Coordinates, topology, Shape Keys, group indices/weights, pose and colors stay
+unchanged. Artist labels and unrelated characters are preserved.
+
+Cleanup runs once after Refresh or file load. A destination bone/group collision,
+linked/shared animation or active Edit Weights/Bake Preview prevents unsafe
+renaming and is reported. Newly generated Dress resources reserve readable
+namespaces; a collision uses `_02`, `_03` rather than random text.
+
+## Bone Display Color Palette (0.73.3)
+
+Open **Rig / Weight > Bone Display > Color Palette** and choose **Apply Palette**
+to use the current character's saved scheme. The five groups are **Body, Arms,
+Legs, Hair and Dress**. Arms includes forearms, wrists, hands and fingers; Legs
+includes feet and toes. Native bones and their controls use the same group.
+
+Each row shows actual **Normal / Selected / Active** colors. Click the group
+name to edit these three colors. **Mixed** identifies differing current colors,
+including manual native edits; drawing the panel does not overwrite them.
+Dress defaults to muted pink in all three states. Changes support **Ctrl+Z**.
+**Restore** restores colors from before palette application while retaining the
+edited scheme for later reuse. Save the `.blend` to retain the character's scheme.
+
+Colors belong to this character, including its owned Hair/Dress rigs. They do
+not change Blender's global theme, other characters, mesh data, weights, Shape
+Keys, Rest bones, constraints or posing. The closed panel performs no palette
+inventory scan; changes are applied only by explicit operations or new owned
+controller creation.
+
+## Pose Dress originals (0.72.0)
+
+Choose **Rig / Weight > Bone Display > Original**, select a Dress bone in
+Pose Mode, and rotate with **R**. The generated curve and physics constraints
+retain their native evaluation, while the bone's own pose becomes an additional
+local correction. Returning to **Controls** keeps that correction; controls and
+physics continue to move the skirt. The correction survives saving and reopening.
+An older saved Original session upgrades when Original is explicitly clicked.
+
+To remove these manual corrections, return to Controls and use **Rig > Skirt >
+Clear Dress Pose**, or **Selected** for only the selected Dress originals.
+Both switching and clearing support Undo. No Rest bones, painted weights,
+mesh topology, Shape Keys or character colors are rewritten. Existing animation
+or custom drivers on Dress original channels must be preserved before direct
+posing; rebuilding, adding physics and baking animation require Controls.
+
+## Dress in the Main Rig (0.71.0)
+
+New attached skirt setups use the character's Main Rig. Body, Hair and Dress
+remain separate native Bone Collections inside one armature, with one Pose Mode
+for their controls. Only the Dress bones, its collection and source-owned helpers
+belong to the skirt; removing a Dress setup keeps the character armature.
+
+For an existing independent skirt, return to **Controls**, choose the source in
+**Rig > Skirt**, and click **Use Main Rig**. Migration retains bone names,
+mesh topology, Shape Keys, UVs and painted weights, and retargets the native
+skin, hooks, constraints and generated drivers. Validation compares evaluated
+geometry and sampled bone poses before committing. A failed migration restores
+the previous rig and references; a completed operator supports **Ctrl+Z**.
+
+Separate Dress actions, active legacy physics, custom dependencies, conflicting
+bone names, linked/shared data and unsupported transform spaces keep their
+existing separate setup and report the reason. New shared setups can add physics
+and bake through the existing workflow. Version 0.72.0 also supports direct
+Dress original posing through persistent native local corrections.
+
+Weight tools restrict Dress to its own skinning bones and keep Body/Hair in their
+existing domain. The export worker removes skirt mechanisms by ownership rather
+than their names. Unity model exports must retain their matching sidecars;
+existing Unity assets are not overwritten merely by migrating the Blender rig.
+
+See the repository release record for actual validation and save state.
+
+Dress visibility now includes its independent armature object's actual viewport
+visibility. Clicking Dress reveals that owned rig when its object eye/viewport
+switch hid it; the blue button reflects effective visibility. Original snapshots
+retain object flags for restoration, including older saved sessions extended on
+their first explicit reveal. Hidden or excluded collections report a reason and
+roll back. Helper shape objects remain hidden and pose/binding data is retained.
+
+Original / Controls now publishes forearm corrective output once for the final
+pose, instead of recalculating intermediate transfer states. Nested calls retain
+the existing runtime guard. Final output refresh stays inside the full rollback
+transaction, including errors after the output was calculated. A verified pose
+transfer ends with redraw only, avoiding another synchronous scene evaluation.
+Native Original posing, complete rig checks, Shape Keys and saved recovery remain.
+
+Identical failed forearm mirror proofs now reuse their exact input fingerprint,
+retain the same error, and retry immediately after a geometry/frame/record edit.
+Original redraws reuse one saved-text projection of bone names; rig references
+and visibility are read live. Validation records and Rest data are reused only
+inside a single switch operation. Existing corrective and pose checks remain.
+
+Original / Controls now batches native pose conversion and changes only display
+values that differ. Switching no longer evaluates the complete scene once per
+native bone. Existing Pose Mode and bone selection are retained; return updates
+only the current character's control collection membership. Final pose validation,
+Shape Keys, weights, recovery snapshots and full failure rollback are preserved.
+
+In **Rig / Weight > Bone Display**, choose **Original** to show native Body,
+Hair and Dress bones together; choose **Controls** to keep the pose and restore
+the saved control modes and display. The three text-only group buttons share
+one row; blue indicates that the group's bones are visible. Body Controls is
+now named **Bone Setup**, with the switch centralized in Bone Display.
+Inside Original, **Edit Weights** opens Weight Paint; **Back to Original**
+finishes painting before choosing Controls. The session survives saving and
+reopening the scene. Native Bone Collection eyes and solo stars only control
+visibility; they no longer trigger add-on display presets.
+
+Only validated Body source constraints and temporary rotation locks are
+suspended. Dress retains native curve/physics evaluation and uses the local
+corrections described above. Original rig relationships, Rest bones, weights, Shape
+Keys and animation data are retained. If the saved IK/BLEND mode cannot express
+an edited native pose, return rolls back and keeps Original available without
+silently changing modes. Finish Original before rebuilding the generated rig.
+
+Refine Symmetry now reads Blender's actual Topology Mirror table. Select X,
+Y or Z, choose Left to Right or Right to Left, and click Refine Symmetry.
+Selected Region Only starts enabled. Analyze and tolerance controls are in
+the collapsed Advanced section; Average and read-only Preview remain available.
+The tool retains every Shape Key's original deformation delta and validates
+ordinary mirror matching in the chosen axis after repair.
+
+Refresh now tears down the actual registered UI runtime even if Blender’s module enabled flag is stale. Enable errors are displayed in the panel; failed refreshes retain a retry action and restore the previous runtime.
+
+## Refine Symmetry / Repair Mirror Symmetry (0.70.0)
+
+Open **Modeling or Weight → Refine Symmetry**. Analyze reports Matched,
+Misaligned, Unmatched and maximum Basis mirror error. Select Misaligned
+changes only selection. Preview displays current coordinates in orange and
+proposed coordinates in green without changing geometry or Shape Keys.
+
+Choose Average, Left to Right or Right to Left. Left is Mesh-local +X;
+Right is -X. Selected Region Only defaults on: Average requires both vertices
+of each affected pair selected, and directional modes write only selected
+destination vertices. Hidden vertices are excluded from the selected scope.
+
+Refine changes coordinates only. Reliable topology defines the pairs;
+ambiguous vertices remain unmatched without a nearest-vertex fallback.
+Centerline candidates within the tiny configured tolerance are restored to
+X=0. Every Shape Key retains its old delta from Basis, including independent
+left/right expressions. Ordinary mirror lookup and protected data are
+validated after writing; failure restores all coordinates and keys.
+Ctrl+Z undoes a completed repair. No topology replacement is performed.
+
+See the repository's `docs/refine_symmetry.md` for the complete workflow.
+
+## Reliable cleanup after startup and file load (0.69.4)
+
+Legacy name cleanup waits until Blender's scene data is available. Registration
+and file load queue one deferred cleanup, including add-on enabling during
+Blender's restricted registration context. Disabling cancels the pending task.
+
+Widget and skirt recovery records stay in the blend file through disabling,
+saving and reopening. The current X scene's 117 legacy object/data/collection
+names have been cleaned and saved, with no skipped resources. Four native
+lifecycle checks cover restricted registration, cancellation, retained records
+and legacy/cleaned save-reopen behavior.
+
+## Readable generated names (0.69.3)
+
+Controller meshes use the character and function, for example
+`WGT_CoshaRig_Foot_Roll.L`, `WGT_CoshaRig_Torso_FK_01` and
+`WGT_CoshaRig_Eyes_Left`. Skirt resources use the source and sequence, such as
+`SK_Dress_Rig`, `SK_Dress_Wire_01` and `SK_Dress_Hem_01_Shape`.
+The helper collection is `Skirt Wire and Shapes | Dress`. Ownership UUIDs stay
+in internal properties. Ordinary Blender numeric suffixes resolve name collisions.
+
+On add-on registration and file load, validated local legacy widget and skirt
+object/data/collection names are cleaned with their exact recovery references.
+Artist names, shared/linked data and edited ownership are preserved. Version
+0.73.4 also migrates verified legacy Dress bone names and native binding paths;
+other existing bone and constraint names are retained. New skirt bones and
+weight groups use the readable source prefix. Cleanup does
+not change geometry, weights, Shape Keys, poses or animation.
+
+## Character Setup in Rig (0.69.2)
+
+**Character Setup** appears only in **Rig**, above Body / Hair / Skirt navigation.
+Weight tools keep using its saved Main Rig, Body Weight Source and bone mappings.
+Quick Bind's missing-reference hints point to **Rig > Character Setup**.
+
+## Compact Unity Export (0.68.2)
+
+Unity Export keeps Main Rig, Folder, Name and Export / Update to Unity visible.
+Folder uses Blender's built-in directory picker; **Open Folder** is a secondary
+action under **Warnings**. **Objects** shows mesh and armature counts in its
+collapsed heading instead of repeating them elsewhere.
+
+**Use Simplified Materials** opens a compact per-material checklist. Checked
+materials use the existing temporary export approximation; **Use Original**
+removes only that material's saved export choice. Original shaders and other
+material choices stay unchanged. Materials on included meshes remain available
+after disabling an approximation, and retained choices can still be cleared.
+
+Objects, material choices and Warnings start collapsed. **Warnings** displays
+its count, actionable messages and one **Open Export Report** button when
+expanded. Expected scope skips remain report notices. Export success uses a
+brief completion notification; failures, cancellation and active progress remain
+visible. Forearm data, runtime-prefab usage and Unity verification status belong
+in the report and companion documentation.
+
+There is currently no production Unity import receipt returned to Blender.
+The export report remains truthful about that limitation; a successful Blender
+export is not recorded as a verified Unity import.
+
+## Quick Bind hierarchy (0.67.0)
+
+Successful Surface Transfer and Automatic Weights now parent the clothing mesh
+to Main Rig while preserving its world transform and local channels. Parenting
+is committed with the weights and modifier; failures roll back the whole change.
+Previous Weights also restores tool-owned parent changes, and existing Remove /
+Restore Binding disconnects / reconnects that hierarchy. The first weight backup
+is preserved byte-for-byte on rebind.
+
+## Compact Hair Bones workflow (0.66.1)
+
+Hair Bones uses Main Rig and Head from Character Setup. The panel has one strand
+selection button, a count, Bones per Chain and Bind Hair to Character. Retired
+local rig overrides no longer affect new bindings. Mesh changes keep Bind visible
+but disabled until Refresh Hair Strands validates and replaces the old capture.
+Refresh failures retain the saved capture, and existing bindings stay attached
+until explicitly removed.
+
+## Pose asset activation (0.66.0)
+
+Double-left-click applies a Pose asset. Shift-double-left-click applies it mirrored;
+the Asset Browser context menu also exposes both Character Designer commands.
+Unconstrained native fingers use Blender's normal application even on generated
+rigs without an old compatibility baseline. Constrained native poses retain the
+rest-compatibility guard and controller matching. When only an asset's source
+side is selected, mirrored finger application temporarily uses the corresponding
+destination subset and restores the original selection. Existing destination
+selection is respected. No scene polling or persistent gesture timer is added.
+
+## Hide finger setup guides after Body Setup (0.61.64)
+
+Successful Generate/Update Body Setup turns off the eye beside Capture Detection.
+This uses the existing finger overlay switch: references, loop marks and bend
+previews are hidden, while saved guide/Mark data and generated rig controls remain.
+The eye can be turned back on for further finger setup. Failed generation leaves
+its previous visibility intact; the setting persists when the blend file is saved.
+
+## Data preservation and runtime review (0.61.63)
+
+Topology Mirror and Repair now refuse animated/driven Mesh or Shape Key data
+before replacing it, preserving the original animation instead of silently
+disconnecting it. Static mesh replacement retains edge sharpness, seams,
+crease/bevel weights and reflected custom normals, including untouched regions.
+Failed replacement removes its temporary mesh after successful rollback.
+
+Quick Bind restoration detects unresolved bone/group renames and retains its
+backup rather than restoring weights to obsolete names. Shape Key cleanup
+resolves selected relative-key chains against their final baselines. Unity
+export follows active material-output dependencies, including nested groups,
+so unused missing textures no longer block export; required missing textures
+still fail explicitly.
+
+Forearm runtime validation caches unchanged structural evidence while retaining
+change detection for geometry, rig, weights, shape inputs and managed outputs.
+Focused regression tests cover the review cases in addition to existing suites.
+This release does not add support for topology replacement of animated keys.
+
+## Surface-centered internal reference (0.61.29)
+
+A narrow selected longitudinal face strip or edge path now supplies the lateral
+center reference. Regular section/strip intersections fit a straight centerline;
+root fans and the final tip ring do not tilt the reference. After the existing
+coverage and whole-volume safety requirements, the search prefers lateral
+alignment to that line, then surface clearance and stability. Depth is still
+automatic: this is not a move back onto the surface or a screen-space offset.
+The guide remains straight; it cannot follow every local wiggle in the strip.
+If exact centering is unsafe, only certified alternatives are eligible.
+Broad/short/transverse inputs without a reliable longitudinal plane retain the
+volume-based reference, with no new required controls.
+
+The center reference is stored separately from the original selection and the
+uninset topology range, reflected with the paired record and retained through
+owned ring updates. Existing saved guides do not move until recaptured.
+No mesh, bone, Shape Key or scene Empty is changed by Capture.
+
+Validation: 69 focused headless cases, including an asymmetric cross-section
+where maximizing clearance alone moves sideways, physical mesh rotation,
+mirrored metadata and ring-update persistence. Real-X tests on all ten long
+strips verify lateral alignment and full-segment containment; a scripted GUI
+Ring capture is inspected in a surface-aligned orthographic view. These are
+automated checks, not a manual Shift-Numpad7 test of the user's live scene.
+
+## Knuckle-to-tip capture correction (0.61.28)
+
+Long surface strips can include the real knuckle transition before the first
+regular finger ring. The old virtual root cap wrongly excluded that valid part
+of the selection. These captures now validate against the actual closed,
+connected surface, while the straight-axis search remains bounded by the
+selected finger span. It does not search deeper into the palm or lower the
+whole-segment clearance requirement. Open or inconsistent proof surfaces still
+fail safely; explicit root extensions are limited to the local transition.
+
+A small terminal surface wrap around the fingertip is treated as the end of
+the selected range, not a reversed finger direction. The original surface path
+is preserved; interior folds/backtracking still fail. Ring Layout continues to
+use the uninset geometric range. Local records remain local, with live surface
+containment rechecked after topology changes.
+
+Basic Setup has no L/R switch or side suffix: **Index**, **Detected rings: 7**,
+and one Capture operation. Both sides remain automatically paired. Different
+counts display a compact mismatch; unsafe/missing opposites still warn.
+Successful capture/switch/clear also removes stale downstream status messages.
+
+Validation: 68 focused headless cases, plus disposable real-X captures on ten
+long, ten-face strips including the knuckle transition (the earlier tests used
+six regular sleeve faces). Consecutive Index/Middle layouts retain the other
+references, ten Shape Keys, custom normals and the unchanged saved-file hash.
+The automated GUI regression repeats keyboard capture, failure, visibility,
+switching, layout and Undo/Redo. A separate real-X GUI operator capture and
+inspected screenshot verify the long-strip preview. These are scripted GUI
+checks, not a manual mouse-click test. No live user scene or saved X.blend is modified.
+
+## One-capture internal straight axis (0.61.27)
+
+In **Finger > Basic Setup**, select a longitudinal surface strip/open edge path
+or a transverse loop, then **Capture Detection**. Identity, root-to-tip order,
+the internal Start/End segment and the verified opposite reference update in
+one operation. No Mark Start/End, Confirm, Swap, Basis switch or separate top
+capture is needed. The compact panel retains five pair indicators, identity,
+L/R viewing, detected ring counts, capture, one eye toggle, clear and recheck.
+Errors appear only when relevant; length is available in the eye tooltip.
+
+The result is **one straight segment**, not a surface path or ring-center
+polyline. Ordered sections estimate the main direction and stable thickness.
+A bounded search near that direction compares straight segments with small
+endpoint retreats (10–15% of stable local thickness). A temporary closed finger
+volume uses actual body/tip triangles and a virtual proximal cap, never the
+palm. Winding and conservative distance bounds validate the **entire** segment
+with surface clearance. Excessive bends, holes, collapsed sections or no safe
+full-range straight axis are refused; no curve or dramatically shorter success
+is substituted. This is a conservative bounded search, not a global optimizer
+for all possible anatomy, nor evaluated Subdivision/posed/modifier geometry.
+
+Raw selected input, its original coordinates/path and topology provenance are
+kept separately from the inset internal segment. **Ring Layout** explicitly
+consumes the uninset topology range; its boundaries and total length do not
+change because of endpoint clearance. Bone Roll uses the internal direction and
+an automatically captured reliable strip normal. A loop can define an axis
+without defining a bend side; only Bone Roll then asks for a top-strip capture.
+This does not move bones or force their joints onto a straight line.
+
+There is one rest reference per finger, not one setup per Shape Key. Capture
+reads the rest geometry without changing the active key, key values or key data.
+If an active deformation would leave the axis outside the visible finger, it
+is rejected explicitly. Actual topology writes retain their existing Basis-only
+and data-protection guards; this release does not rebuild that write pipeline.
+
+The old completed-guide + pending-Start cross could look like two Start markers.
+Basic Setup now replaces one definition atomically and does not draw a second
+pending cross. Capture/show creates no Empty. Repeated capture, switching,
+show/hide and load/Undo/Redo invalidate preview caches. Failed updates retain
+old records and label any visible old result **Previous result - update failed**.
+No user Empty or legacy joint-marker object is deleted.
+
+Validation: 67 focused headless tests, including eight new internal-axis cases;
+automated Blender GUI keyboard capture/repeated capture/failure, switching,
+visibility and real Undo/Redo, with inspected screenshots; disposable real-X
+ten-finger interior verification, non-Basis capture, five bilateral Roll actions
+and two consecutive finger layouts. No live user scene or saved X.blend changed.
+
+## Five paired records (0.61.26)
+
+**Finger > Basic Setup** now keeps five paired definitions per mesh. One shared
+**Capture Detection / Mark Start / Mark End** row serves all fingers. Select
+faces or an internal ring on either hand: capped quad sleeves and the geometric
+four-finger/offset-thumb arrangement establish identity independently of bones,
+weights, capture order or viewport orientation. A short selection/closed loop
+supplies the detected full finger span; a long selected path retains its span.
+Successful automatic capture is already confirmed, with the exact opposite
+reference populated when safe. Manual Start/End remains separately reviewable.
+
+The five indicators represent Thumb, Index, Middle, Ring and Pinky **pairs**.
+A check means captured/confirmed and symmetric, a question mark needs completion
+or confirmation, and a red warning means missing/asymmetric geometry, mismatched
+ordered rings/connections, or stale local references. L/R switches only the
+viewed member, not a second setup workflow. Detection counts real closed body
+rings; it does not claim to count complicated palm topology or desired rings.
+
+Mesh Local X (or the first existing X Mirror modifier's reference object)
+defines the comparison plane. Geometry is checked in Basis; current-key
+references are validated separately. Symmetry checks do not repair or delete
+geometry. Missing opposite tips can be fixed manually and recovered with the
+refresh/Recheck button. Failed captures preserve previous definitions, and
+pending Start cannot be completed on another finger. Reference settings are
+saved on their source mesh object, not in one global overwritten slot.
+
+Local coordinate/face evidence rebinds unaffected fingers after index changes.
+Verified tool-owned layout edits restamp the changed finger, recheck both sides
+and keep the other four definitions. One-sided ring changes deliberately raise
+that pair's warning. Manual edits request Recheck; unresolved local changes
+preserve settings but require recapture of the affected finger only. Changing
+the active finger hides stale ring previews and requires Prepare Rings for that
+finger. Bilateral Roll now also refuses a different named finger's bone chain.
+
+Initial recognition needs one identifiable group of five regular closed-tip
+finger bodies and a distinguishable thumb. Ambiguous order, open source tips,
+arbitrary branching topology and a wrongly positioned mirror plane are not
+silently guessed. Previous single-definition/F3 services remain available.
+No new remeshing, bilateral topology repair, bone creation or weighting was added.
+
+Validation: 59 focused headless cases, a five-indicator GUI with actual keyboard
+Undo/Redo, and unbound X geometry recognition on both hands plus per-finger
+layout persistence. See [finger tool notes](../../docs/finger_joint_tool.md).
+
+## Shared reference foundation (0.61.25)
+
+**Rig > Body > Fingers > Finger Definition** is now the shared starting point.
+Select a longitudinal surface or open edge path, two endpoint patches, or one
+existing bone chain, then **Capture Selection**. Alternatively mark **Start**
+and **End** separately using faces, edges or vertices; neither marker needs to
+be a closed loop. Amber Start, mint End and a blue path/arrow show the exact
+reference span. A reliable selected top surface adds the orange inward bend
+arrow; edges/bones alone leave bend undefined. **Set Top Surface** supplies it
+without changing the length. Review the arrow, **Swap Ends** if necessary, and
+**Confirm** before an action. No prescribed root fan, binding or quad sleeve is
+required just to define a finger.
+
+Capture is read-only, including with a non-Basis active Shape Key. Current-key
+and Basis samples are distinct; **Use Basis Reference** does not change the
+active key or its values. Before topology editing, explicitly return the mesh
+to Basis. **Prepare Rings** checks the safe quad body inside the defined span;
+**Calibrate Both Hands** uses the same bend reference and existing L/R pairing.
+The immutable topology recipe remains reusable after its own generated edits.
+Manual changes to reference geometry or generated results are detected before
+another action. An ambiguous direction is labelled for confirmation, not
+advertised as detected anatomy.
+
+References are persistent Scene settings, cleared with X. They intentionally
+do not consume Edit Mode Ctrl+Z steps (Blender does not restore these Scene
+settings in mesh undo). Actual ring generation and bilateral Roll changes keep
+their native Undo/Redo and rollback. The workflow currently holds **one active
+definition**. Guides sample base mesh/key coordinates or rest bone coordinates,
+not evaluated modifiers/pose deformation; a surface path is not a bone center.
+No automatic placement/reweighting or arbitrary root remeshing was added.
+
+Validation: 51 focused finger/layout/UI tests, isolated GUI checks, and all ten
+X fingers through non-Basis capture, Basis ring updates and paired Roll reuse.
+The X test retains ten Shape Keys/custom normals and verifies the saved file
+hash and bone heads/tails. See [finger tool notes](../../docs/finger_joint_tool.md).
+
+## Bilateral bone-axis correction (0.61.24)
+
+Version 0.61.24 makes finger **Bone Roll calibration bilateral** by default.
+Capture the top surface on one hand, select finger bones on either hand, then
+**Calibrate Both Hands**. Existing matching `.L/.R` bones are included without
+selecting the other side; selecting both sides is deduplicated. Previews show
+both sets of hinges, proposed rolls and positive bend arcs. The captured
+surface's proximity identifies its hand; its inward direction is reflected
+about Armature Local X and projected against each counterpart's own length axis.
+Roll numbers are never copied. Positive Local X bends both hands inward.
+
+The legacy Roll Reference tool also includes matching counterparts (including
+the counterpart of the reference/base bone). When both sides are selected, the
+active selected side is authoritative, otherwise the sole selected side or L.
+Rotation axes use axial reflection, including the sign reversal, for Local X/Z.
+The source reference stays fixed. No new toggle/shortcut is required.
+
+Missing counterparts, incompatible directions/positions about Armature Local X,
+different parent/connect settings or locked bones stop the operation. Existing
+neutral-pose/constraint/animation and editable-rig guards now cover both sides
+and are shared with the legacy tool. Apply is one undoable transaction; errors
+restore both sides. Blender's X Mirror setting is temporarily disabled during
+explicit pair writes and always restored. Heads, tails, parents, lengths, mesh,
+Shape Keys and weights remain unchanged. No opposite bones are created.
+
+Validation: 40 focused finger/layout/UI regressions; real X tests from either
+hand calibrate six bones per selected three-bone chain and verify both hands'
+positive rotations, neutral skin matrices, geometry and unchanged asset/file.
+See [finger tool notes](../../docs/finger_joint_tool.md).
+
+## Root-surface layout (0.61.23)
+
+Version 0.61.23 upgrades **Rig > Body > Fingers > Finger Ring Layout**:
+
+- Select a connected root surface (optionally extending along the finger), then
+  **Capture Finger Root**. No prescribed 3-to-1 junction or root loop is needed.
+  A unique small closed cap versus continuing palm topology supplies direction;
+  open tips, two capped ends and ambiguous neighboring fingers are not guessed.
+- The proximal extreme of the selected surface defines the virtual root plane;
+  detected tip and centerline length set the two joint fractions. The dashed
+  root ring is a reference, not newly created topology or an exact palm contour.
+  The regular editable sleeve is separate from this full length definition.
+- **Slide Nearby Rings**, enabled by default for new captures, pulls suitable
+  existing rings to the coral/cyan targets along the captured surface rails.
+  Matching is one-to-one and bounded to less than half the adjacent spacing;
+  centers have priority, remaining support/filler targets insert missing rings.
+  Root/cap boundaries, transverse seams/sharp edges, face-data transitions and
+  unused original rings stay fixed. No original rings are dissolved.
+- Moved as well as new points receive interpolated relative Shape Keys, weights,
+  UVs, custom normals and supported attributes. Integers/booleans take the nearer
+  source endpoint. Existing rigs, group definitions and outside geometry/data
+  stay unchanged. This is surface-following relayout, not a guarantee that
+  Subdivision shape/shading or bending quality remains mathematically identical.
+- Preview stays read-only. Apply stages and validates the result; rollback,
+  Undo/Redo, idempotent updates and saved recipes remain supported. Targets in
+  protected root/cap regions can be previewed but cannot be applied. There is no
+  permanent controller association and no new shortcut or extra settings foldout.
+
+Existing schema-1 layouts keep their 0.61.22 semantics and Reverse Root / Tip;
+recapture to opt into automatic direction and nearby-ring sliding. The current
+capture needs a nearby sleeve of at least three regular quad bands. Arbitrary
+palm remeshing, open fingertips, direct viewport dragging and auto reweighting
+remain outside this release. See [finger joint documentation](../../docs/finger_joint_tool.md).
+
+Validation: 7 new root/slide cases, 29 existing regressions, actual GUI Undo/Redo,
+and both top-strip and root-only captures on all 10 real X fingers, retaining
+their 10 Shape Keys/custom normals and leaving the saved asset and rig unchanged.
+
+## Previous layout release
+
+Version 0.61.22 adds **Rig > Body > Fingers > Finger Ring Layout** in Mesh Edit
+Mode. Select one continuous top row of quads along the finger body, excluding the
+palm/webbing and fingertip cap, and click **Capture Top Strip**. Coral 1 and cyan 2
+are complete surface-following joint preview rings. Drag the numeric sliders to
+place them; choose single or three-ring joints, independent half-widths, and 0–8
+additional rings between joints. Root/tip boundary labels and Reverse Root / Tip
+make the chosen ordering explicit. Preview changes no mesh, bones or weights.
+
+**Generate / Update Rings** inserts missing rings and reuses coincident original
+rings. Original shape rings/vertices and both boundaries stay fixed; this is not
+arbitrary remeshing or removal of artist support loops. Every update is rebuilt
+from an immutable mesh snapshot saved with the scene, so reducing the added-ring
+count removes only this layout's generated rings. Capture a new strip to work on
+another finger; X releases the stored layout without deleting its applied result.
+Outside mesh/data edits invalidate the recipe rather than being overwritten.
+
+UVs, materials, supported attributes, existing weights and all relative Shape
+Keys are retained; new data is interpolated. Custom normals outside the section
+keep their original packed data; affected normals are interpolated/re-encoded
+with Blender's angular quantization. Validation occurs on a staged mesh, with
+rollback and real Undo/Redo. No rig is required; existing rigs are untouched.
+Animated/absolute/locked Shape Keys, baked/index-dependent modifiers, shared
+meshes, open/branched/nonquad bands and unsafe attributes are rejected up front.
+The overlay follows the undeformed base cage, not evaluated modifiers/poses.
+
+The existing one-loop-to-three-ring operator remains available through F3
+**Finger Joint Rings**, now with a Side A/B spacing dialog. Its old invalid
+Blender 5.2 icon is fixed. Viewport ring dragging, asymmetric inside/outside
+spacing, bone repositioning, automatic reweighting and bend-quality pose tests
+are not part of this first layout release. Numeric placement is live-previewed.
+
+Validation: 7 dedicated headless cases, existing finger/roll/root/page regressions,
+GUI preview plus actual Undo/Redo and post-redo update, and all 10 real X fingers
+(6 selected top quads each, 48 inserted vertices, idempotent repeat, 10 Shape Keys
+and custom normals preserved). The user's X.blend and live scene are not saved
+or modified by tests. See `docs/finger_joint_tool.md` in the source repository.
+
+Version 0.61.21 makes **Mirror Selected Region** one geometry-and-weights action
+for both bound and unbound meshes; existing armatures/bones are retained unchanged.
+In Mesh Edit Mode the section now contains only **Mirror Selected Region** and
+**Preview Replacement**. Binding-status, coordinate and Shift-settings hint lines
+are removed, as is Shift-click interception. Optional reference/tolerance settings
+remain accessible through F3 **Mirror Settings**, without a permanent advanced box.
+
+A complete selected strand replaces ONE opposite vertex-connected island, not a
+union of nearby strands and not just vertices that individually match. Holes,
+different face counts and connected dangling edges do not force a repair workflow:
+the old target island is removed in full and rebuilt from the immutable source.
+Partial face selections instead define attachment boundary loops (or paths ending
+on an existing open mesh border). Replacement stops at those boundaries, including
+damaged/dangling geometry inside them, and preserves the outside/root region.
+
+Matching uses deterministic area-uniform samples, bidirectional surface coverage,
+width-aware proximity and longitudinal cross-section offset/continuity. A clipped
+tip or smooth positional drift can match without equal vertex/face counts. A strong
+match separated from other plausible candidates is automatic; mere bounding-box
+overlap with neighboring layers no longer blocks it. Equally plausible targets or
+insufficient surface evidence require an explicit choice. Scores are geometric
+heuristics, not confidence probabilities. Disconnected fragments are not combined
+into one replacement. Unknown loose remnants prevent automatic deletion.
+
+Validation: 12 data/transaction regressions, 6 whole-strand/boundary/UI regressions
+(including an actual armature), GUI Undo/Redo and UI screenshot checks. The latest
+saved X Hair was tested unchanged, with an in-memory damaged counterpart, and with
+that whole counterpart deleted. All three automatically reconstruct exactly one
+118-face strand, preserve neighboring hair/UV/materials and remain idempotent.
+No test saves the user's X.blend or edits the live scene.
+
+The following version notes describe the earlier interfaces; the current entry
+points and matching behavior are documented above.
+
+Version 0.61.20 introduces **Weight > Weight Symmetry > Mirror Selected Region**.
+Geometry mirroring no longer requires an active vertex group, .L/.R bones, or an
+Armature modifier. Select one connected source face region or an entire unbound
+hair island in Mesh Edit Mode. Closed islands without boundary loops are valid.
+The selected source is unchanged and stays selected after execution. A single
+action creates a missing opposite region or replaces/repairs an identified target.
+
+The default plane is explicitly **Mesh Local X=0** (not Global X). **Shift-click
+Mirror Selected Region** opens its plane/seam settings: choose any reference
+object, including an Empty, to use that object's X=0 plane. Object transforms are
+handled without Apply Transform or binding. **Preview Mirror Plane / Target**
+shows cyan source, green mirrored result, grey plane and numbered target outlines;
+click again to clear. Changed geometry/selection/transforms invalidate the overlay.
+No modifier-evaluated or posed geometry is used.
+
+A unique close surface match is automatic. Multiple spatially overlapping islands
+or a weak match require a numbered target choice; there is no "append anyway"
+fallback. Matching uses whole regions, not nearest-vertex deletion. Attachments
+must have a uniquely matched seam; only those seam vertices can weld. Single-side
+selections may include centerline boundary edges, but truly cross-plane faces are
+not automatically cut. Repeated execution cannot append another copy over an
+existing candidate. Legacy Copy/Repair/Boundary operators remain registered for
+script compatibility but are no longer the displayed geometry workflow.
+
+UV coordinates/pins, material assignments, smooth/sharp/seam/crease/bevel data,
+supported point/edge/face/corner attributes, custom split normals, relative Shape
+Keys and weights are remapped transactionally. Generic attribute values are copied
+verbatim; only geometric positions and custom normals are reflected. .L/.R group
+names swap and missing opposite groups are created without bones; unsuffixed names
+stay unchanged. Locked groups cannot be altered. Unrelated loose edges/vertices
+and neighboring hair are retained. UV coordinates are copied, not flipped in UV space.
+
+Preflight refuses shared/linked meshes, non-Basis editing, locked or animated/driven
+or absolute Shape Keys, side-named Shape Key masks, vertex-parenting and unsupported
+bound/simulation/index-based modifier data. An enabled Mirror modifier must be
+explicitly disabled for viewport AND render first to prevent duplicate geometry.
+The tool never applies modifiers or disables them itself. Unsupported attributes
+fail during staging, before the original data is swapped. Shape Keys that move a
+shared centerline off the plane are refused rather than changing the source.
+Failure rolls back; successful replacement is one Blender Undo/Redo step.
+
+Validated with 12 synthetic regressions, a real GUI single-step Undo/Redo test and
+the saved X Hair mesh (unbound, asymmetric 118-face / 163-face strands). Neighboring
+hair, source positions, UV/materials and repeated-run counts were checked. Neither
+the saved X.blend nor the user's live scene was changed by validation.
+
+Version 0.61.19 corrects the surface workflow to treat the artist's selection as
+the **top of the finger**. **Finger Top Surface / Bone Roll > Capture Top Strip
+/ Edge** accepts a connected, one-quad-wide row of top faces (including short
+or square quads), a single elongated quad, or one longitudinal edge with an
+active adjacent top face. The strip's end cross-edges establish its length;
+an area-weighted surface normal establishes its top. New captures bend inward,
+opposite the outward top normal. Branches, loops, disconnected patches and rows
+that turn across the finger are refused. Existing saved 0.61.18 guides retain
+their original sign; recapture them to adopt the top-surface convention.
+
+Select the finger chain in Armature Edit Mode and use **Preview Roll + Bend**:
+red shows the current Local X axis, purple shows the proposed transverse hinge
+and wire bone orientation, and green shows a positive bend arc. Each hinge
+passes through its original bone Head inside the finger. **Calibrate Bone
+Roll** is always visible, enabled after capture in Armature Edit Mode. It
+aligns Local X across the finger; positive `R X X` in Pose Mode curls inward.
+This corrects Roll only; it does not reposition joint centers or move the
+longitudinal bone direction. The mesh-mode surface arc is only a direction
+guide, not a joint-position proposal.
+
+Version 0.61.18 adds **Rig > Body > Fingers > Bend Direction from Surface**.
+In Mesh Edit Mode on the Basis shape key, select one lengthwise quad and use
+**Capture Face / Edge**. Blue points toward the fingertip, orange follows the
+face normal (the bend side), and green previews a positive 45-degree arc.
+Use **Reverse Tip Arrow** or **Reverse Bend Arrow** to confirm the direction.
+For square/ambiguous faces, select the intended face first, switch to Edge
+Select and select one longitudinal edge; its active adjacent face supplies
+the normal. An edge with two sides and no active adjacent face is refused.
+
+Switch to Armature Edit Mode, select one continuous finger chain, preview,
+then **Align Selected Finger**. Every selected segment, including the first,
+gets a Local X axis whose positive rotation bends toward orange. Head/Tail,
+weights and Shape Keys stay unchanged. Apply supports Undo and rolls back on
+failure. Calibration requires a local, single-user, uniformly scaled armature,
+neutral finger/descendant pose transforms and no affected constraints;
+rig animation/drivers are currently refused. This is rest-axis calibration,
+not a new pose controller or weight correction.
+
+One current guide is saved per scene and follows its source object's transform.
+Recapture after changing the captured face or topology. The guide uses base edit
+geometry, not modifier-evaluated or posed surface normals. Existing Bone Roll
+Tools remain available in a collapsed optional section; they match existing
+axes and do not establish an anatomical bend side.
+
+Version 0.61.17 adds the unified **Rig > Body > Fingers** workflow. The
+**Joint Topology** section keeps the conservative closed-loop operation:
+select one loop in Mesh Edit Mode, lock it as the center loop, validate its two
+neighboring quad bands, and create one new loop on each side with independent
+Side A / Side B ratios. All three rings remain selected after creation.
+The **Finger Root / Placement** section provides five named finger slots;
+each locks one center face and uses the nearest matching Main Rig finger chain
+as the direction line, with two selected vertices as a manual fallback. It
+checks the face-normal-line/centerline intersection, previews the construction,
+and places the selected existing bone chain without changing weights or bone
+rolls.
+
+Version 0.61.16 hardens Shape Key cleanup verification. The operator now
+checks the Mesh KeyBlock, the Edit Mode BMesh Shape Key layer, and the active
+Shape Key's BMesh coordinates after every write and after rollback. Any
+mismatch is treated as a failure instead of being reported as a false success.
+
+Version 0.61.15 fixes Edit Mode Shape Key write-back. Cleanup now updates
+KeyBlock data, the BMesh Shape Key layer, and the active Shape Key's BMesh
+coordinates before committing the edit mesh, so dragging a key cannot restore
+the old accidental deformation. Full bilateral meshes are also paired from
+Basis coordinates.
+
+Version 0.61.14 fixes Shape Key cleanup for complete bilateral meshes without
+a Mirror modifier. Real opposite vertices are paired from Basis coordinates,
+so both sides are cleared and selected; half-meshes still rely on the Mirror
+modifier to generate the opposite side.
+
+Version 0.61.13 fixes Shape Key cleanup for mirrored meshes. Mirror pairing
+uses Basis coordinates rather than the currently edited expression coordinates,
+so a deformed source point can still find its real opposite. With an enabled
+object-local X Mirror and real opposite vertices, both sides are cleared and
+selected. A half-Mesh has no second base vertex, so clearing the source is
+enough for the Mirror modifier's generated side.
+
+Version 0.61.12 changes Shape Key cleanup to use Blender's native
+`ShapeKey.select` multi-selection. In Mesh Edit Mode, Shift-select the desired
+relative Shape Keys in the Shape Keys list, select the affected Mesh vertices,
+and click **Clear Selected from Chosen Keys**. Only those chosen keys and
+vertices are restored to their own `relative_key`; there is no broad All Keys
+operation.
+
+Version 0.61.11 adds the read-only **Analyze Topology Boundary** action to
+Topology Mirror. It builds a `BoundaryDescriptor` for a selected one-sided
+face region, including selected centerline vertices and a virtual centerline
+segment when the physical seam is not a closed loop. This release validates
+the analysis layer only; existing topology replacement and repair writes are
+unchanged until the descriptor is proven on more real meshes.
+
+Version 0.61.10 adds **Miscellaneous → Shape Key**. In Mesh Edit Mode,
+select the vertices whose accidental deformation should be removed, then clear
+them from the active relative Shape Key or from all editable relative keys.
+Each selected point is restored to that key's own `relative_key`; unselected
+points, Basis, topology, weights and animation settings stay unchanged. Shared
+Meshes, absolute keys and locked keys refuse before writing, and the operation
+is one Undo step.
+
+Version 0.61.9 removes **Surface Mirror · Different Topology**. The retained
+**Locate Unmatched Vertices** diagnostic now lives in Weight Symmetry and only
+selects the vertices that block strict weight copying. Different-topology
+weight interpolation is no longer registered or shown; repair actual local
+holes with **Topology Mirror · Repair Selection**.
+
+Version 0.61.8 adds **Topology Mirror · Repair Selection** beside the strict
+topology replacement action. Select a connected intact source face patch on
+one side, and the repair action mirrors its faces to the opposite side,
+welds nearby opposite vertices, creates missing vertices, removes old target
+faces made from the welded patch, then verifies weights, Shape Keys, UVs and
+mesh attributes transactionally. It is intended for a local hole or deleted
+vertex; it does not weaken the strict one-boundary-loop operation or guess an
+unbounded destination region.
+
+Version 0.61.7 adds **Rig → Body → Fingers**. Select finger bones and use
+**Check** to inspect the selected chains, **Preview** to see current local axes
+in red and proposed axes in green, and **Apply Correction** from Armature Edit
+Mode to correct only Bone Roll. Body bones are ignored, each finger's first
+selected segment is the default reference, and Head/Tail, bone length, weights
+and mesh data are preserved. The correction can use Local X for `R X X` or
+Local Z, and supports a manually chosen active finger as a shared reference.
+
+Version 0.61.4 adds **Topology Mirror · Replace Selected Region**. In Mesh
+Edit Mode, make the destination `.L`/`.R` deform group active. You may select
+the source patch you want to copy, or select the destination patch you want to
+replace; the tool infers the direction from the selected side and reports it
+as `source -> destination`. It validates a single boundary loop, matches it
+to the opposite side, and replaces the destination region with the reflected
+opposite patch and aligns the shared boundary to the reflected source Loop.
+Vertex weights, Shape Keys, UVs, materials, smooth flags and
+mesh attributes are carried across with the replacement. Boundary mismatch,
+ambiguous registration, shared mesh data or locked changed groups refuse
+before the mesh is swapped; the operation is one Undo step. After success,
+both the original source patch and the new destination patch remain selected
+so the mirrored scope is visible in Edit Mode.
+
+Version 0.59.0 adds **Animation > Import Latest from Unity** and an isolated Unity
+character preview at **Tools > Character Designer > Animation**. Existing evaluated
+clips become independent test Actions with play/pause, timeline scrubbing and full
+restoration, including Undo/Redo and save/reopen. Humanoid joint translations use a
+temporary Armature data copy when necessary; original rig data and weights stay
+intact. See [workflow and recovery](unity_runtime/ANIMATION.md).
+
+Unity import and local Kimodo generation use separate pose-adaptation paths.
+This phase does not add Blender Action export or realtime synchronization.
+
+Version 0.58.1 makes Unity export warnings actionable. **Locate Unweighted
+Vertices** rechecks the current original mesh, selects missing deform-bone weights
+in Edit Mode, enables X-Ray and frames the selection. It does not use stale FBX
+vertex indices or assign weights. A modifier-only problem with no missing source
+vertices is reported for separate inspection rather than selecting guessed points.
+
+**Use Simplified** records a reversible per-material choice on the
+character. On the next export, only the disposable snapshot receives a simple
+Principled material, retaining safe base-color/image inputs and standard values.
+Procedural patterns and advanced shader effects are approximated; details are in
+the export report. **Use Original** restores the original export
+choice. Both choices support Undo and saving/reopening; the live shader graph is
+never rewritten. Unity uses its own material shader, and authored Unity material
+remaps are not overwritten by this option.
+
+Character Designer is Randy's personal Blender add-on. It stays separate from
+RR Helper and focuses on character-modeling tools.
+
+Workflow principle: generated bindings and setups should remain editable and
+provide an explicit remove/restore path. Preserve the artist's original state
+and unrelated data; support saving/reopening where restoration depends on a backup.
+
+## Quick Bind: remove and restore a connection
+
+Version 0.57.4 shows **Rebind Weights** and a red **Remove Binding** for an
+ordinary mesh connected to Main Rig. Rebind recalculates weights; Remove
+disconnects the rig without deleting painted vertex groups. It retains the
+empty Armature modifier slot, settings and stack order for **Restore Binding**,
+which reconnects the current weights without running a solver. Matching rig
+parenting is disconnected/restored while keeping the object world transform.
+The connection record survives save/reopen and does not depend on vertex
+indices, so topology edits do not prevent disconnection or reconnection.
+
+The older **Restore Previous Binding** action is under **Previous Weights**.
+It restores the first pre-Quick-Bind weights/state, rather than merely removing
+the current connection; it still requires unchanged topology. Its baseline is
+preserved through Remove/Restore Binding. Conflicting or missing modifier slots
+are refused without discarding recovery data. These actions support Blender Undo.
+
+Version 0.64.2 allows **Rebind Weights** after editing the target topology.
+It calculates weights for the current vertices and retains the first backup
+unchanged. A successful rebind reports when **Previous Weights** belongs to
+different topology; restoring that backup still requires the original topology.
+Use Blender Undo to undo the latest rebind. Solver or write failures restore
+the state immediately before that attempt, including after topology edits.
+
+## Unity Export
+
+Version 0.58.0 includes a Unity companion for saved Forearm Correction. After
+installing it once with `tools/deploy_unity_runtime.py --project <Unity project>`,
+the usual **Export / Update to Unity** writes the FBX and a matching
+`<name>.forearm.json`. Unity verifies their association and automatically builds
+`<name>.Runtime.prefab` (for example, `Cosha.Runtime.prefab`) with the correction
+component. Use a variant of that prefab for your Animator and game setup; Blender
+remains the place to edit loop calibration. See the [companion setup and scope](unity_runtime/README.md).
+
+Version 0.57.5 reports successful exports separately from actionable warnings.
+Expected skips remain in the JSON report's `notices`, not its warning count.
+The panel reads the last successful report (including older reports) and shows
+concise, expandable warning summaries. Skin-weight gaps and custom material needs
+remain visible; they are not silently repaired.
+Cancelled or failed attempts retain their own status rather than displaying an
+older success. Unity import remains unverified until it is checked in Unity.
+
+Version 0.57.3 omits skipped-item notices from Objects and lists the body weight source (such as Cosha) first among meshes, after the armatures.
+
+In **Misc → Unity Export**, choose the shared Main Rig and a character folder
+inside the Unity project's `Assets`, then click **Export / Update to Unity**.
+The folder, filename and mesh exclusions are saved on that rig in the blend.
+Only meshes with an enabled Armature modifier bound to this character are
+included, even if the mesh object is hidden. Attached accessory rigs are included
+when used by those meshes. Parenting alone, Body Weight Source, asset registration
+and legacy additional-mesh entries do not qualify an unbound mesh for export.
+Disabled bindings and unbound hair or clothing are skipped; export never creates
+weights or enables a modifier. Expand **Objects** to inspect the actual scope or
+exclude/restore a bound mesh. Missing saved references, another character's rig,
+and controller widgets are rejected.
+
+Conversion runs in a disposable Blender process. The live scene's pose, rig,
+constraints, geometry, weights, Shape Keys, materials and selection are preserved.
+The result is a rest-model FBX, texture files and `<name>.cdesigner.json` report.
+Artist relative Shape Keys become FBX BlendShapes; supported topology modifiers
+are evaluated for each key with correspondence checks. The managed forearm keys
+are replaced by portable calibration in the sidecar; the Unity component computes
+their extra deformation from actual wrist-relative rotation, saved ratios and
+range transitions. It supports the existing ±120° range, ordinary Armature-first
+linear skinning and fixed Subdivision. It preserves artist BlendShapes, original
+weights and the shared mesh asset; disabling or removing the component restores
+the original mesh. Removing calibration in Blender and re-exporting updates the
+owned runtime prefab back to ordinary skinning. Controls and helpers are excluded.
+Separate accessory skeletons are
+combined only in the export copy, retaining attachment relationships; the source
+rigs stay separate. Unsupported conversions fail before publishing any files.
+
+Later exports update the same owned files and preserve Unity `.meta` files/GUIDs.
+Foreign files or externally modified prior outputs are not overwritten. Every
+publication backs up previous outputs under Blender's user data directory,
+`character_designer/export_backups`; its `restore.json` identifies the destination
+and prior files. A publication failure rolls back files already replaced. Esc
+cancels a running conversion. Blender Undo does not undo published files.
+
+The companion transfers additional correction, not Blender's entire deformation
+pipeline. Blender normally skins before Subdivision; Unity skins the exported
+subdivided mesh. Their ordinary baseline can differ. Local normal/tangent updates
+are approximate and do not reproduce all Blender custom-normal behavior.
+This version does not export animation, configure a Humanoid Avatar,
+translate custom shaders, or install runtime hair/skirt physics.
+**Exported** means files were written; the report distinguishes
+that from verification inside Unity. Keep the canonical blend as the editable
+source. The scoped exporter and publication regression tests are in
+`tests/test_unity_export_blender.py`.
+
+Version 0.57.2 also restores the Original collection after removing all generated
+body controls. Redundant add-on-owned Body/internal collections are removed while
+artist collections, hair and native bones are retained. Generating body controls
+again recreates their Body display. Refreshing the add-on repairs the recognized
+legacy post-removal layout without rebuilding the rig.
+
+Version 0.56.1 also prevents unchanged UI field commits from consuming local
+Undo or clearing Redo, and checks both owned Shape Key names before paired
+removal so a collision cannot leave only one side removed.
+
+Version 0.56.0 adds editable forearm loop ranges. Capture existing closed mesh
+loops automatically, or use a selected seed loop and expand through adjacent
+quad strips. Capture / Repair can add a missed loop without changing topology.
+The saved vertex correspondence and rest-position order stay fixed across poses.
+Invalid topology requires an explicit recapture preview; Cancel keeps the previous
+calibration, including an invalid record that may still be useful for recovery.
+
+In Edit Calibration, set Start / End, select the current loop in the viewport,
+or move between loops. Boundaries are light blue and the current loop is yellow.
+These lines follow the actual deformed control cage, including the owned correction;
+Subdivision does not change their base-mesh correspondence. Additional correction
+is zero outside and on the boundaries, with a configurable fade entirely inside.
+Original skinning remains active. No weights or topology are changed.
+
+New captures start with a mild spatial ease-in/out profile, strength 0.4, using
+actual rest positions rather than loop numbers. Batch / Distribution exposes
+distinct-loop count and interval, explicit default-profile application, and a
+separate smoothing operation. Applying the default keeps both boundary shares;
+reopening or changing pose never overwrites hand-tuned shares. The panel reports
+the current share, signed target angle and boundary blend. This is a distribution
+of the actual wrist twist, not a reduction of the wrist's total rotation.
+
+Confirm preserves editable parameters through save/reopen. Cancel restores the
+pre-edit pose, records and owned key data; local Undo / Redo work during preview.
+Keyed or driven wrist targets can edit the current pose without moving animation.
+Mirrored edits preflight both sides and roll back their outputs together. Disable
+and Remove retain the existing ownership and dependency checks. The existing
+prototype limits still apply: linear Armature skinning, relative shape keys,
+and correction up to ±120 degrees. In Blender the add-on must remain enabled;
+exported Unity characters use the 0.58.0 companion described above.
+
+The existing wrist local-axis mechanism is retained. New / rebuilt controls and
+160 actual-X rotation cases were checked for Local Y, Global and View rotation,
+both hands, Auto Align modes, arm poses and Root rotation, including skin vertices.
+An existing file with disabled custom-shape transform axes needs the existing
+Update Body Setup synchronization; updating display axes does not rebuild bones.
+
+Version 0.55.4 removes the separate Eye Controls panel. Body Setup continues
+to generate and remove the eye controls as part of the body. Select the mask
+and eye circles directly in the viewport. Eye display spacing and manual eye
+setup remain in Body Controls > Advanced. Existing rigs and gaze are unchanged.
+
+Version 0.55.3 aligns wrist viewport local axes with the displayed hand control.
+In Auto Align, Local Y / R Y Y follows the posed wrist rather than the IK target's
+old input frame. Global and View rotation directions remain unchanged. New body
+setups enable this automatically; **Update Body Setup** updates existing modern
+wrist controls without rebuilding bones or changing poses, weights or animation.
+Forearm correction now shows **Paused** when its calibration is invalid, and can
+be disabled despite a changed mesh or chain while retaining its captured profile.
+Enabling still validates the calibration. The redundant Both Arms label is removed.
+
+Version 0.55.2 fixes Foot Controls **Auto Align**: moving the IK target now lets
+the foot and toes follow the solved shin while retaining Foot Roll and Toe Bend.
+Manual mode keeps the target's orientation for planted-foot work. New setups use
+this behavior automatically. Existing feet expose **Fix Foot Auto Align** once;
+the upgrade preserves the current pose and checks affected animation before
+changing its evaluation. Auto/Manual and IK/FK handoffs match the current pose.
+The hidden references remain owned and removable, including Root reparenting
+and transaction rollback. Native bones, weights and controller shapes are kept.
+
+Version 0.55.1 removes the redundant Root, Head/Neck and breast/Hips selection
+buttons and Root Scale fields from Body Controls, including Advanced. Select
+these controls directly in the viewport. Automatic Root sizing and all existing
+control transforms, shapes and animation behavior remain unchanged.
+
+Version 0.55.0 combines supported body features in **Rig > Body > Generate Body
+Setup**. Existing limb, foot, spine, eye and display setups are reused; missing
+Root, eye targets, head/neck, breast/Hips and FK rings are added when their native
+bones can be identified. Fingers and shoulders receive displays where available.
+Missing anatomy is skipped, ambiguous mapping requires a choice, and existing
+artist shapes or animation are protected. New limb poles follow the current
+elbow/knee bend so generation does not turn the limbs toward a different plane.
+
+**Remove Generated Controls** removes the owned body graph together. It keeps
+the current native bind bones, weights, pose, unrelated hair/dress and forearm
+calibration. It does not reset later native modeling work to an earlier skeleton.
+Legacy Direct pre-roll recovery data is retained separately when its controls
+are removed. Authored control animation or external dependencies require explicit
+preservation before removal. Small solver rounding is checked against native
+skinning matrices and the evaluated bound surfaces; larger changes roll back.
+Generate and Remove have Blender Undo and an in-place rollback if an operation
+fails. Temporary Original display is restored automatically for these actions.
+
+Daily posing remains visible; individual builders and maintenance actions live
+under **Advanced**. Eye/Spine panels keep their posing controls without requiring
+separate Add steps. Hair and Dress retain their independent workflows.
+
+Version 0.54.5 makes both wrist controls follow viewport/global rotation in
+Auto Align and Manual modes, including rotated Root and armature transforms.
+**Rig > Body > Body Controls > Correct Wrist Rotation** explicitly upgrades
+legacy offsets while preserving the current pose, native rest bones, weights
+and existing control shapes. Two hidden, nondeforming reference bones keep
+input rotation in the right coordinate frame. Existing authored channels or
+external dependencies block unsafe reinterpretation. IK/FK matching, Root
+removal, rollback and save/reopen retain the new contract; a keyed IK/FK switch
+holds its immediately preceding bookend to avoid an early wrist rotation.
+
+Version 0.54.4 reserves red action buttons for removal/deletion. Bind, create,
+update, restore and refresh actions use ordinary button colors; genuine error
+messages remain visible. Button color does not indicate binding status. Existing
+weights, rig behavior and saved recovery records are unchanged.
+
+Version 0.54.3 keeps generated controller meshes under one `CDesigner Widgets`
+collection, grouped by character and named by purpose. New widgets use this
+hierarchy automatically. F3 → **Organize Controller Widgets** migrates validated
+existing resources without changing bone transforms, poses, weights, custom
+shapes, or view-layer visibility. It updates the exact collection references in
+removal records; each feature retains its own resources and reversible removal.
+
+Version 0.54.2 connects the native Bone Collections eye switches to the display
+views: enable **Original** to see ordinary native bones, disable it to restore
+the preceding view, or enable **Body** to return to control shapes. Selecting a
+collection row alone does not change display mode. Display snapshots now include
+Blender 5.2's separate pose-bone hide flag, fixing native bones that stayed hidden
+and foot mechanisms that remained visible. Older saved view records remain valid.
+
+Version 0.54.1 keeps registered Foot Controls mechanisms hidden whenever a
+control view is shown, even if a helper was accidentally exposed through another
+collection. Reverse-foot pivots and IK/FK references remain intact; Foot Roll,
+Toe Bend, native weighting bones and intentional direction guides are preserved.
+
+Version 0.54.0 organizes daily bone display as **Body, Hair, Dress, Original**.
+Body includes torso, limbs, fingers, head and face. Original is last and contains
+the native body skeleton. The complete generated-bone ownership group remains
+as a hidden internal child of Body, so validation, rebuild and removal still work.
+Body follows the current IK/FK mode, including keyed switches. Hair appears when
+present; an independent skirt keeps its own Dress group and armature.
+
+**Rig / Weight > Bone Display** provides text-only **Original / Controls** choices
+and independent Body, Hair and Dress visibility buttons in one compact row.
+Blue indicates the current mode and visible groups. Original shows the real body skeleton and Hair / Dress
+weighting bones together; Dress includes the deforming waist and DEF chains.
+Controls recovers the preceding visibility and display type, including
+after saving/reopening. Custom shape assignments, rest bones, hierarchy, weights,
+constraint configuration and actions are retained. Native body constraints are
+temporarily suspended for direct posing, while Hair/Dress keep their current
+constraints. Weight/pose edits made
+while viewing the native bones survive restoration. Exit the temporary view before
+reorganizing collections or rebuilding controls. **Organize Bone Collections**
+explicitly migrates existing layouts and retains their original layout backup.
+
+Version 0.53.2 corrects reversed Foot Roll rotation on both feet and reversed
+Bank on the right foot. The output now follows the input rotation, with the
+heel, ball and toe-tip pivots retained. Existing setups expose **Fix Roll Direction**
+for an explicit, pose-preserving update. Weights and displayed outlines stay intact;
+authored rotation animation or external dependencies block an unsafe conversion.
+Legacy setups are not converted automatically when loading a file.
+
+Version 0.53.1 corrects the breast rings' cup direction: the middle projects
+forward while the upper and lower rim recede toward the torso. Ring sizes,
+placement, native pivots, and recovery data stay intact. Only the depth curve
+changes; existing artist-edited geometry is preserved during explicit updates.
+
+Version 0.53.0 adds **Add Breasts / Hips** in **Rig > Body > Body Controls**.
+Two softly curved breast rings and one pelvis oval replace the displays on the
+existing native bones. Fitting uses the shared body and nearby registered clothing
+in rest space. Hips uses Character Setup; breast bones are detected by name, with
+a bone picker when the names are ambiguous or missing. Select **Breast L / R / Hips**
+to move or rotate them. The restore button recovers the previous displays and colors,
+including artist custom shapes after saving/reopening. The rings remain editable;
+native pivots, constraints, weights, animation, and bone collections are preserved.
+
+Version 0.52.3 places newly generated whole-body Root outlines at the lowest
+foot-sole display height in rest space, including fitted offsets and Auto Align
+display anchors. Direct and Enhanced builds share the rule. Root rest pivots,
+poses, existing widgets, and recovery snapshots remain unchanged.
+
+Version 0.52.2 rounds the crown and chin corners in the head widget's side
+profile on new builds. The frontal proportions, open face, and forward marker
+remain intact. Native pivots, pose, and removal behavior are unchanged;
+existing artist-edited widgets are not automatically replaced.
+
+Version 0.52.1 moves the three eye control outlines farther in front of the face
+on new builds. **Rig > Body > Body Controls > Advanced > Eye Display Spacing** adjusts their
+extra forward offset; zero restores their original display positions. Spacing
+and restoration data persist in the blend file. Gaze, target bones, animation,
+and weights remain unchanged; the transform gizmo stays at the actual target.
+
+Version 0.52.0 adds **Add Head / Neck** in **Rig > Body > Body Controls**.
+The Head frame is a three-dimensional, clipped-corner outline with a tapered
+chin and a small forward marker; the face remains open. Neck uses an open
+collar. Fit uses the shared Head mapping and weighted body vertices in rest
+space, excluding long hair. Without a usable body reference, proportions fall
+back to the bone. The head's native Neck parent supplies the neck control.
+
+These are local editable mesh Custom Shapes on the existing native bones.
+**Head / Neck** selects them; rotate with **R** around the original pivot.
+No bones, constraints, weights, animation or collection memberships are changed.
+The restore button returns the original displays and colors, including prior
+artist widgets. Recovery data persists in the blend file; shared or animated
+widget dependencies are checked before removing generated resources.
+
+Version 0.51.0 adds **Root · Whole Body** to **Rig > Body > Body Controls**.
+Direct rigs can add an optional root which moves native roots and every limb
+IK target/pole together, preserving native rest bones. **G/R** moves/rotates it;
+**Root Scale** applies uniform scaling. An existing Stable Master is reused.
+Remove Root preserves the current pose; animated or foreign dependencies are
+checked before changing its graph. Remove this extension before rebuilding
+the base limb rig.
+
+**Add FK Rings / Remove FK Rings** decorate the eight upper/lower limb joints
+with local, editable mesh widgets and preserve existing custom shapes.
+**Fit IK Sizes / Restore IK Sizes** reduce untouched default hand shapes to 80%
+and knee arrows to 55%; custom sizes and all display anchors are preserved.
+Remove rings and restore fitted sizes before rebuilding their limb rig.
+
+The IK/FK buttons match first and then switch between endpoints. An explicit
+partial value is still a blend of two poses, not a pinned-hand/foot guarantee.
+Both input branches stay visible in **Animation** at partial values, and
+**Match to IK / FK** offers pose-preserving recovery. Newly keyed limb switches
+use stepped mode keys; earlier artist-authored animation is not flattened.
+Spine still requires choosing the mode before animation. Chest IK and Shape
+follow Hips; this is not a separate world-space chest pin.
+
+Version 0.50.0 adds optional **Spine IK / FK** inside **Rig > Body > Spine
+Controls**. Add the extension to the existing three/four-section torso. It starts
+in FK, preserving the current pose and the original torso record. Click **IK**
+or **FK** to match the current pose before changing which controls drive the
+same native spine bones. The Animation collection shows the current controls.
+
+- **FK:** rotate Bend Spine and the individual spine sections, working upward
+  from Hips.
+- **IK:** move/rotate **Chest IK** with G/R; Blender solves the lower spine to
+  reach it. Rotate **Spine Shape** with R to adjust the curve. A perfectly
+  straight spine needs a small Shape rotation before axial compression. Targets
+  beyond the chain's reach stop at its natural length; there is no stretch.
+- **Reset Spine Pose:** restore the native neutral spine relative to the current
+  Hips, including both control branches and their internal matched posture.
+  Clearing only Chest/Shape with Alt+G/R does not clear all matched curvature.
+  Head/arms follow the reset spine naturally; their control inputs stay intact.
+- **Remove Spine IK / FK:** match the current pose back to the existing FK
+  controls and remove only the extension. Remove it before removing the base
+  Spine Controls or rebuilding Limb IK.
+
+Matching verifies all native solved bone poses and rolls back unsupported
+matches. Choose the mode before animating: matching/reset/removal currently
+refuse affected animation and Auto Key rather than silently altering keys.
+Existing limb IK/FK still supports its own animated switches. The spine graph
+uses native constraints/drivers, persists across saving/reopening, and leaves
+native rest bones and weights intact. It is a simpler endpoint IK design
+inspired by Rain's chest/shape workflow, not a transplant of Rain's B-Bone rig.
+
+Version 0.49.0 adds **Rig > Body > Eye Controls** to an existing CDesigner limb
+rig. One mask outline aims both eyes; each circle adjusts an individual eye.
+The shared Head mapping is reused, with explicit bone selection when automatic
+eye detection is ambiguous. The three controls follow Head and are sized from
+the character's eyes. Their wire geometry is generated analytically, inspired
+by Rain's shared-mask and individual-target arrangement.
+
+Use **Both Eyes**, **Left Eye**, or **Right Eye** to select a control, then move
+with **G**. Select all three eye controls and press **Alt+G** to restore the
+native rest gaze. Building preserves the current gaze, including eyes posed
+before installation; their original pivots, rest bones and weights are retained.
+**Remove Eye Controls** preserves the current gaze and restores native eye
+control. Existing eye animation/constraints and later external dependencies
+are protected. Remove this extension before rebuilding/removing the base Limb IK.
+The setup, muted/selected colors and restoration data survive saving/reopening.
+
+Version 0.48.0 adds soft pose-controller colors: mint/sky on the left,
+rose/peach on the right, lilac/iris on the spine, with mauve hair/skirt controls
+and a honey master control. Idle wires retain their hue; selected and active
+controls become progressively brighter. Blender handles this natively without
+a playback handler or changes to the application theme.
+
+New bone controls use these defaults. On an existing character, use **Rig >
+Body > Limb IK > Apply Colors**. **Restore Colors** restores the first saved
+pose colors and opts that armature out of automatic coloring. Applying again
+reenables the defaults without replacing the original backup. Per-bone color
+edits survive ordinary rig updates and rebuilds; color backups persist with
+the blend file and follow bone renaming. This only styles bone controls, not
+Spline IK's separate Empty handles. Poses, constraints, weights and shapes
+are unchanged by applying or restoring colors.
+
+Version 0.47.0 adds **Rig > Body > Spine Controls** on the existing spine under
+the shared Hips mapping. **Bend Spine** distributes an additive bend across the
+spine; the individual FK controls refine each section. Existing limb controls
+must be present. This uses the original deform bones and weights, with ordinary
+native Blender constraints. It does not convert the mesh to a B-Bone rig.
+**Remove Spine Controls** keeps the current body pose and restores native control;
+animated controls and external dependencies are protected. Remove this extension
+before rebuilding or removing its base Limb IK.
+
+The Foot Roll arrow now uses the solved foot as its display frame, so it follows
+raised and rotated feet. Open **Arrow Placement**, optionally choose **Footwear**
+with the eyedropper, then click **Fit Arrow**. The complete wire is placed behind
+the shoe heel; without a reference it fits the foot bones. A registered shoe bound
+to this main rig is used when unique. The explicit reference is stored per character.
+**Restore** returns the appearance saved before the first explicit fit, including
+after saving/reopening. Fitting changes only display transforms, preserving the
+rig's existing input channels, pivots, rest bones and weights. Animated display
+offsets are protected.
+
+Version 0.46.0 adds optional **Foot Controls** to existing Stable or Direct legs.
+In **Rig > Body > Limb IK**, choose Left Leg or Right Leg, then **Add Foot Controls**.
+The unique deform toe child is detected automatically; an explicit Toe Bone field
+handles ambiguous rigs. Existing toe animation or constraints must be resolved first.
+
+- **Foot Roll**: rotate local X to roll from heel through ball to toe-tip; rotate
+  local Y to bank. The foot turns in the input rotation's direction; heel, ball
+  and toe-tip pivots switch automatically as the foot rolls.
+- **Toe Bend**: rotate at the ball to bend the toes independently of the ankle.
+  This control remains available in both IK and FK. Foot Roll is shown in IK.
+
+Both Rain-derived wire shapes use the existing Controls / Animation collections.
+The original toe is retained in Original. Native rest bones, mesh geometry and
+weights remain unchanged. Foot roll and toe poses participate in IK/FK matching,
+including keyed switches; the authored roll angle remains intact during matching.
+With this extension, the foot follows the reverse-foot solver's ground orientation;
+Auto Align still aligns the main target's display frame and remains remembered.
+
+**Remove Foot Controls** matches the current pose back to the original leg and toe,
+then removes only its generated setup. Keyed foot controls and external references
+are protected and must be handled before removal. Remove this optional extension
+before rebuilding or removing the base Limb IK. Shoe weight gradients are a separate
+weight-painting step; adding these controls does not repaint or replace weights.
+
+Version 0.45.0 automatically presents new limb controls through **Animation**:
+generated IK controls replace their source chains in the default view, while
+uncontrolled torso, fingers and toes remain available as original bones.
+**Original / Controls / Animation** remain selectable in Bone Collections.
+**Restore Bone Collections** restores the first saved layout, including custom
+properties, while retaining later artist collections and generated controls;
+conflicting edits are reported. A restored layout opts out of automatic grouping.
+
+In **Rig > Body > Limb IK**, choose a limb and click **IK** or **FK** to match its
+current pose before changing the driver. FK uses the original three-bone chain.
+Stable and Direct rigs support matching, including Auto Align, manual target
+rotation, Master transforms and heel roll. Impossible matches (such as stretched
+FK limbs) are refused and rolled back. Auto Align remains remembered in FK; change
+that option in IK. Rebuild older rig schemas before using these switches.
+
+Enable Blender **Auto Key** to key matched channels and the discrete mode switch.
+Native drivers and constant mode keys survive saving/reopening; the Animation
+collection follows keyed mode changes without resetting manual eye/solo state.
+Rebuild/Remove require all limbs matched back to IK, and retain the existing
+animation/dependency guards. They do not delete or bake animator Actions.
+
+Version 0.44.0 groups rigging in **Rig > Body / Hair / Skirt**, with one level of
+navigation. The top-level Hair page keeps modeling and centerline tools; Weight
+keeps common weight operations. The former Clothing shortcut opens Rig > Skirt.
+
+**Rig > Character Setup** stores Main Rig, Body Weight Source,
+and Hips / Head mappings. Bone mappings belong to the chosen armature and survive
+saving/reopening. A search field or its **Use Selected Bone** button sets a mapping;
+the button also remembers the selected bone's armature. Unique central Hips/Head
+candidates are shown automatically. Manual choices are retained, invalid choices
+are reported, and detection never substitutes a left/right pelvis or Root.
+
+Skirt's **Attachment Bone** is the single main bone followed by the entire skirt,
+usually Hips. The panel shows the actual live attachment separately from a changed
+requested target. Optional overrides are collapsed by default. New setups start
+without physics so attachment can be checked first; **Add Physics + Colliders**
+remains available once the controls are ready. **Update Attachment**
+reconnects an existing setup while preserving current placement, authored control
+channels, weights and Actions. **Restore Attachment** retains the first previous
+parent and parent inverse across repeated updates and saving/reopening. Restore
+returns to that original animation space, which may move the skirt if the old
+parent has since moved. No bones are renamed, merged, or rebuilt by these actions.
+
+Changing an attachment with existing Physics + Colliders is currently blocked:
+the colliders are weighted to the old character and clearing the cache alone does
+not retarget them. An unchanged target remains a no-op. Establish the main-bone
+attachment before adding physics. Existing hair also keeps its actual binding
+until explicitly removed and rebound; changing Character Setup never silently
+reattaches generated work.
+
+Version 0.43.2 simplifies binding around the selected mesh. **Character Setup**
+shows Main Rig and, on the Weight page, Body Weight Source. There is no clothing
+inventory or role registration step. Select a mesh, choose **Surface Transfer**
+(Nearest Face Interpolated, the default) or **Automatic Weights**, then click
+**Bind Weights**. Hair and Skirt keep their source and custom binding controls in
+their dedicated pages. Previously saved references and restore records remain valid.
+
+Version 0.43.1 added **Character Setup** and **Weight > Quick Bind** with a saved
+**Restore Previous Binding** action. The first binding keeps the prior deform
+weights and binding state on the mesh object, including across saving/reopening.
+Repeated Quick Bind retains that first baseline. Restore returns an originally
+unbound mesh to an unbound state while retaining its modeling/helper groups.
+Vertex positions can still be edited; topology/index changes require restoring
+before remeshing because old per-vertex weights cannot be mapped safely by index.
+
+Version 0.43.0 introduced **Character Setup** and **Weight > Quick Bind**.
+Set **Main Rig** and the already weighted **Body Weight Source** once. References
+and previously remembered meshes are saved in the blend file and survive object
+renaming. Hair and Skirt use the saved main rig when their explicit override is
+empty and remember their sources through their dedicated setup tools.
+
+In Object Mode, select the mesh to bind and choose **Surface Transfer**
+to transfer body weights, or **Automatic Weights** for Blender's bone heat solver.
+Both operate on the active mesh, replace only the main rig's deform groups,
+normalize weights, retain modeling/helper groups, and add or reuse its Armature
+modifier. Geometry, UVs, shape keys, parent transforms and existing modifiers remain
+intact. New Armature modifiers go after Mirror and before Subdivision. Calculation
+uses Basis geometry and enabled Mirrors, independent of the current pose and shape
+key values; other geometric modifiers are not sampled. Enabled Mirrors must have
+Vertex Groups enabled to flip left/right weights correctly.
+
+Binding supports Undo and restores previous weights on calculation/write failure.
+Locked deform groups, conflicting armatures, disabled or masked Armature modifiers,
+shared target meshes and incomplete weight coverage are reported before committing.
+Registered Hair and Skirt meshes use their dedicated binding tools. Automatic
+Weights is a starting point and can fail on complex footwear; use nearest face
+transfer when the body is a suitable source, then paint the desired ankle/toe blend.
+
+Version 0.42.3 adds **Rig > Limb IK > Simplify Bone Collections** for the selected
+armature. Run it once to replace the old subdivisions with **Original**, **Controls**,
+and **Animation**. Animation is the default visible group: each built IK limb uses
+its controls and visible Pole guides; unbuilt limbs, torso, fingers, eyes and toes
+keep their original bones. Build, Rebuild and Remove refresh this choice automatically.
+The internal helpers retain their rig-owned visibility and selection rules.
+Hair uses one **Hair** group, and an attached independent skirt armature uses one
+**Skirt** group with its internal bones hidden. Armatures are not merged.
+Organization supports Undo and preserves bone transforms, animation, constraints,
+weights and shape keys. The layout survives saving/reopening without a runtime handler.
+New artist-created groups are preserved during later automatic refreshes; conflicting
+group names require explicit organization again rather than silent replacement.
+
+Version 0.42.2 enables **Auto Align** by default on newly built Limb IK rigs,
+for both Stable and Direct methods. Saving/reopening and Rebuild preserve the
+existing mode, including explicitly selected Manual mode. Existing rigs that
+have Auto Align disabled can be enabled once and saved to retain that choice.
+
+Version 0.42.1 consistently highlights removal actions in red: **Remove Skirt
+Setup**, forearm calibration **Remove**, and legacy hair **Cleanup Generated
+Copies**, alongside the existing Hair Binding and Limb/Spline IK removal buttons.
+The red style identifies removal of generated work; existing removal checks and
+confirmation behavior remain in place.
+
+Version 0.42.0 adds **Animation** to the second row of page tabs. It connects
+to a separately installed, free local Kimodo runtime. Model weights and Python
+dependencies are not bundled in the add-on ZIP. No paid Blender plug-in,
+subscription, hosted generation, or paid API is used.
+
+1. Choose **Animation**, check **Character Rig** (the selected armature or
+   CoshaRig is used when the field is empty), and describe a short motion in English.
+2. Start with **2 seconds**, then **Generate Local Motion**. Generation runs
+   outside Blender and can be cancelled. A new prompt first loads the local text
+   encoder, saves its embedding, and exits before loading the motion model.
+   Reusing the same prompt skips that encoder stage.
+3. **Import Preview** creates a separate BVH armature, preserving scene FPS and
+   playback range. **Apply as New Action** transfers body motion to the character.
+   **Restore Previous Action** switches back; the generated Action remains available.
+4. Under **Local Setup**, choose the configured Kimodo folder or reopen a previously
+   generated BVH via **Motion File**. **Open Job Folder** contains the result and logs.
+
+This first integration supports text-to-motion and conservative FK body transfer.
+Anatomical direction calibration accounts for SOMA's T Pose and CoshaRig's A Pose
+before applying motion, preserving the character's proportions and bone rolls.
+Pose anchors, paths, and automatic foot-contact correction are not exposed yet.
+Mapped bones with active constraints or drivers require a compatible retargeting
+workflow; this tool does not disable them. Hair and skirt bones are not keyed by
+the body transfer. Clothing simulation needs its normal playback/bake workflow.
+The previous Action and original unanimated pose are recorded on the new Action
+and can be restored after saving/reopening; Apply/Import also support Blender Undo.
+
+The local setup uses NVIDIA's SOMA motion model and the community NF4 text encoder.
+On 6GB GPUs, generating a new prompt can require closing other GPU-heavy apps.
+The runtime checks available memory before loading; setup alone does not guarantee
+that generation fits alongside all currently open projects. See
+[local runtime notes](../../docs/kimodo-local.md).
+
+Version 0.41.3 removes **Weight Flow**. The **Weight** page contains
+**Weight Tools** and **Weight Symmetry**. Use Blender's native weight-smoothing
+tools for local weight transitions.
+
+Version 0.41.2 combines Modeling and Reference in **Miscellaneous**. The
+modeling panel and its setup button are named **Build Symmetry**, with a
+short centerline/center-band selection hint. Its pairing and movement behavior
+are unchanged. The page grid is **Hair / Weight / Rig**, then
+**Clothing / Miscellaneous**.
+
+Version 0.41.1 highlights **Remove Hair Binding** in Blender's red alert style
+so the removal action is easy to locate.
+
+Version 0.41.0 binds the **original hair mesh** directly to the character's
+Armature. Each captured strand gets an independent chain parented to Head.
+No extra mesh, private hair rig, or attachment bone is created. The old
+Generate New Version workflow is removed from the panel. Shared procedural
+motion remains a future stage, not part of this release.
+
+The target defaults to an existing source binding, or the nearest recognizable
+humanoid Head when unbound. The panel shows the chosen rig and Head; an explicit
+Armature override is available. Equally near candidates require an explicit
+choice. Head and influencing bones must be at rest when binding; the tool
+never changes the character pose or its animation to force a bind.
+
+The complete strand capture is checked against the mesh before assigning the
+remaining root-connected cap region to Head with weight 1. Root rings are also
+Head 1; farther vertices blend through their own strand bones. Uncaptured long
+strands and ambiguous residual regions stop the operation. Nondeforming artist
+masks are preserved.
+
+Mirror remains native and precedes Armature. Both side chains are created,
+while a strand joined along the mirror seam uses one central chain. X Hair3's
+seven half-mesh captures give 13 full chains, or 52 hair bones at four per chain,
+directly under the existing Head. Initial bindings with an existing Armature
+modifier support either original Mirror order, restoring it on removal.
+
+Version 0.40.1 clarifies the skirt controls: use G / R / S on the three master
+rings, and G on the local side points. Each side point Hooks one curve point at
+its own origin, so rotating or scaling that point alone does not reshape the
+wire. Existing rigs and animations need no rebuild for this wording correction.
+
+Version 0.40.0 adds **Clothing > Skirt Setup**. Select an unbound skirt mesh in
+Object Mode and press **Create Skirt Setup**. The tool recognizes regular quad
+rings, fits a smooth tapered elliptical cage without changing the source mesh,
+and creates a separate native rig attached to the character's Hips. The default
+eight directions and four bones per direction can be changed before creating.
+If the scene contains several possible rigs, choose the character and pelvis
+under Attachment. With no character rig, the skirt can be controlled on its own.
+
+The three large rings control **Waist, Mid, and Hem**. Move, rotate, or scale
+them in Pose Mode; the small diamonds shape individual wire ribs. The visible
+wire follows those native controls. Skin weights blend down the skirt and
+between adjacent directions, while the top ring remains attached to the waist.
+Repeated Create selects the existing controls; changing source geometry or bone
+counts requires removing and recreating the owned setup.
+
+**Remove Skirt Setup** reverses this tool's binding without relying on Undo:
+it restores the recorded original parent and transforms, removes the generated
+Armature modifier and weight groups, and retains the source mesh, Shape Keys,
+original weight groups, and other original modifiers. The record survives saving
+and reopening. It does not undo later mesh edits. Generated controls and their
+animation are removed after confirmation; independent baked copies remain.
+Custom external constraints or drivers linked to the generated rig need to be
+handled before removal; this skirt cleanup does not yet scan every external
+dependency. It is restoration of the recorded source binding, not a full scene snapshot.
+
+**Physics** creates one connected low-resolution cloth cage, hidden physics
+bones, and closed convex collision proxies for the pelvis and identifiable
+left/right thighs. The Physics slider adds simulated sway to manual shaping.
+Use **Colliders / Select Colliders** to inspect and adjust the approximation.
+The proxies are an initial fit, and motion with large leg bends may need manual
+collision fitting or control animation. This control cage does not model every
+fold or guarantee collision-free final clothing. Its self-collision is disabled.
+
+Use **Bake Physics** before seeking freely through an animation. It evaluates
+every frame in the chosen scene range, then seals that cloth cache. After
+changing controls or colliders, clear and rebake. **Bake Animation Copy** creates
+a separate parentless deform rig and skirt mesh, sampling final bone transforms
+and character motion into quaternion keyframes on every frame. Its LINEAR keys
+avoid interpolation overshoot; the copy uses native skinning without simulation
+or add-on handlers. **Show Baked Copy / Return to Controls** compares the two in
+the viewport. The baked collection starts hidden for viewport and rendering so
+it does not overlap the editable setup. Enable its render visibility and hide
+the editable skirt when intentionally rendering the copy. Bake operations show
+progress and can be canceled with Esc; incomplete animation copies are removed.
+
+The first version accepts a complete, single, regular quad skirt surface with
+two closed boundaries. Slits, disconnected layers, existing skin/Cloth setups,
+and un-applied construction modifiers require an unbound prepared copy. Static
+Shape Keys and artist groups remain intact; animated/driven Shape Keys are not
+included in a bone-only animation copy. Generated controls and physics work
+after saving and reopening using native Blender data. Bake result quality still
+depends on collision fitting, the input animation, and the selected frame range.
+
+The implementation learns from Randy's Elaina Ex1 and ProfessionalEx scenes;
+their original scripts, objects, weights, and caches are not executed or edited.
+
+**Hair > Hair Bones** creates an independent chain for each captured strand.
+The default is four bones per chain, adjustable before binding.
+
+1. Enter Mesh Edit Mode on the original hair and press **Select All Hair Strands**.
+   This scans all visible geometry even when one strand is already selected.
+   Use **From Selected Tips** to capture only strands touching selected vertices.
+   Capture every strand before binding the whole mesh.
+2. Set **Bones per Chain**, check the displayed character/Head, and press
+   **Bind Hair to Character**. The original mesh remains the same object and
+   uses the character's own Armature. Rotate the selected hair bones in Pose Mode.
+3. **Remove Hair Binding** removes only recorded hair bones and their binding
+   changes, restoring pre-bind weights, parenting, Mirror settings and Armature
+   modifier order. A pre-existing binding is restored rather than erased. The
+   original geometry and shape keys remain. The record survives save/reopen.
+4. Remove before changing chain counts or topology, then use **Recapture
+   Strands** and bind again. Recapture retains old capture/guide infrastructure
+   required to read earlier files; it does not delete guide objects.
+
+Version 0.65.0 reuses the edge index and complete strand partitions during
+discovery instead of repeating whole-mesh scans for every edge. It preserves
+strict surface validation. Seams are not required for detection; seam-guided
+segmentation is not implemented by this update.
+
+The existing character **Head** controls the hair cap and strand roots. Weights
+blend into each independent strand chain near its root. Small, closed distal
+surface caps are validated separately from the regular strand core and follow
+the final strand bone. A terminal patch must be a short, finite disk bounded
+only by that strand's last closed ring; unrelated, branching or long residual
+geometry remains a binding error. Selection includes validated terminal patches.
+Core capture records remain compatible with earlier files. The whole binding,
+including terminal weights, is reversible with **Remove Hair Binding**.
+
+Old version-copy scenes remain readable, but no new copies are made by the UI.
+**Cleanup Generated Copies** deletes only verified plugin-owned version meshes,
+private rigs and Mirror helpers for the selected original source. It preserves
+and reveals the original hair. In an interactive Blender session, cleanup first
+writes a recovery file under `.character_designer_backups` beside the current
+blend file. Foreign objects in version collections, shared data and outside
+dependencies stop cleanup before deletion.
+
+Removal also stops if topology/ownership changed, or if other meshes, objects,
+constraints or drivers depend on the hair bones. Transfer or remove hair-bone
+animation/custom constraints before removing the binding; the character's
+unrelated animation is preserved. The generated native deformation works
+without the add-on; the add-on is needed for its reversible removal action.
+
+Version 0.38.0 originally added **Hair > Hair Bones**, next to the existing hair centerline
+workflow. It finds long, regular strips in a joined hair mesh and builds native
+connected FK bone chains with local, smoothly varying skin weights.
+The following 0.38 notes are historical; use the reversible original-mesh
+workflow above for current binding and removal.
+
+1. Select the hair mesh and enter **Edit Mode**. Deselect everything to search
+   the visible mesh, or select a hair tip/vertices to limit the search.
+2. Press **Select Hair Strands** and inspect the highlighted geometry.
+3. Set **Bones per Strand** (default 4) and press **Generate Hair Bones**.
+   Blender enters Pose Mode with the new hair bones selected. Rotate a bone
+   to bend its strand; the chains appear in the **Hair** collection.
+
+Discovery follows complete surface bands and stops at irregular welded root
+junctions. Closed tube sections and open hair cards are supported; the number
+of vertices in a section is not hard-coded. A collapsed tip sets the direction;
+otherwise endpoint height in world Z, then relative width, helps identify the
+root. This is a geometric aid, not semantic recognition of every hairstyle.
+Ambiguous or irregular regions remain outside the generated chains. You can
+also select complete regular strips or longitudinal guide edges manually,
+using the existing mesh-to-centerline selection rules, and generate directly.
+
+When possible, chains attach to the existing rig's Head bone (including X's
+`CoshaRig / spine.006`, identified by its paired eye bones). Otherwise a small
+Hair Rig with an anchor is created. Newly bound, previously unweighted hair
+outside the chosen strands follows that head/anchor. Existing outside weights,
+artist masks, Shape Keys, mesh coordinates, and other bone poses are preserved.
+Shared welded roots stay attached to the head, while each strand bends
+independently. Binding requires the attachment and replaced skin influences
+at Rest; unrelated posed limbs do not need resetting.
+
+The Armature modifier is placed before the existing surface modifiers. For an
+existing Mirror with its default object-local plane, one managed reference
+object keeps that plane attached to the head; both halves share the authored
+side's controls and follow head and whole-rig movement correctly. An existing
+custom Mirror reference is reported as unsupported. First binding parents the
+hair object to its Armature while preserving its world placement. The reference
+object is shared by that mesh's Mirror modifiers, not added per strand.
+
+Generating the same selection again selects its existing controls, without
+duplicating bones. New strands can be added later. Changes to an existing
+chain's captured topology, Rest bones, or requested bone count are reported
+instead of overwriting its animation; use Blender Undo to redo a new setup.
+The generated deformation uses native Blender data and continues after saving,
+reopening, or disabling Character Designer. No per-frame hair handler is used.
+
+Version 0.37.0 makes **Rig > Forearm Twist (Prototype)** symmetric by default.
+There is one calibration for both arms, with no Left/Right selector, Mirror
+checkbox or Sync button. Select the body Mesh or a Hand Target and use
+**Start 90° Test** / **Recalibrate 90°**. Choosing a Hand Target in Pose Mode
+automatically identifies its body and test arm; Confirm or Cancel restores
+the selection and Pose Mode. Enable and Remove act on both arms together.
+
+Loop shares remain attached to their mesh rings through FK, Build IK,
+Rebuild Rig and Remove Generated. The runtime automatically recaptures the
+current forearm frames after these operations, preserving the exact saved
+shares and each side's own influence region. This also runs after loading,
+Undo and add-on refresh. Legacy one-arm files migrate to both arms; an old
+pair without a recorded source uses its left profile. Both hands keep their
+own control poses. Pairing verifies mirrored Basis geometry, loop connectivity
+and Rest endpoints; changed topology or different captured loops require a
+new calibration. No operation modifies the rig to force a correspondence.
+
+The existing `CTRL_hand_IK.L` / `.R` **Twist (Y)** remains the hand orientation
+input. Within the calibrated region, the correction replaces the original
+weighted axial turn with the saved loop shares; it does not add a second turn.
+The Target Rotation panel now reports whether Forearm Twist is active or has
+fallen back to original skinning. Rotation tests preserve the starting wrist
+bend and side swing, and can jump directly between positive and negative
+90° / 120° without inheriting the previous preview's Euler singularity.
+
+Press **Start 90° Test** to preview the calibrated turn. The
+existing Hand Target previews a pure forearm-axis turn while the highlighted
+closed loop and **Twist Share** slider let you calibrate its distribution.
+Change **Loop** to adjust another ring; **Test Angle** previews either direction.
+**Confirm** saves the ratios and restores the starting target rotation;
+**Cancel** or Esc restores both the pose and previous calibration. The elbow
+and wrist anchors stay at 0% and 100%. X's current topology provides seven
+closed rings per side. The 100% endpoint continues through existing forearm
+weights past the wrist so the correction does not stop in the middle of a blend.
+If the arm has no generated IK yet, the test uses its existing unconstrained
+hand bone directly. Its original rotation mode and pose are restored afterward;
+building new control bones is not required. A third-party constrained hand is
+refused instead of modifying that rig's constraints.
+
+The feature adds one managed relative Shape Key, `CD Forearm Twist.L` or `.R`,
+per calibrated arm (and Basis only when necessary). It adds no bones or
+modifiers and does not repaint weights. Existing relative keys, including
+animated facial and forearm keys, remain independent. Runtime reads evaluated
+bone poses, removes the hand's existing axial twist from the affected skinning
+contribution, distributes the requested circular rotation, and inverse-solves
+the actual linear skinning to produce the pre-Armature correction. Pure twist
+preserves the distance to the axis where the forearm/hand own all influence;
+this is not a general volume solver for arbitrary wrist bends or other bones.
+
+The prototype supports **-120° to +120°**, ordinary Vertex Groups skinning,
+and exactly one **Armature first in the modifier stack**. Subdivision after
+Armature is supported. Preserve Volume, envelopes, modifier masks, preceding
+Mirror/deformation modifiers, and affected Bendy Bones are refused explicitly.
+Calibrate before animating the Hand Target. Playback and rendering then follow
+its animation with the add-on enabled; a saved key alone cannot reproduce the
+dynamic result in another application or with the add-on disabled. The Unity
+companion introduced in 0.58.0 carries the saved calibration separately and
+computes this extra correction in Unity. While a
+correction is enabled, Render > Lock Interface is managed to prevent concurrent
+viewport/render writes; disabling/removing the last correction or unloading the
+add-on restores the prior setting. Invalid topology, Rest changes, or unsupported
+angles mute the correction with an explanation in the panel, and supported
+poses resume automatically. Intact loops retain their shares through Rest
+changes automatically. Remove and recapture after topology changes.
+
+Validation includes disposable Blender 5.2 fixtures for both IK methods,
+Auto Align, independent sides, relative-key animation, out-of-order frame
+evaluation, render/static image equality, confirmation/cancellation, load and
+undo recovery, unsupported inputs, and real-X geometry/visual comparisons.
+The saved profile lives in the blend file; keep Character Designer enabled
+when reopening it. The ordinary file save includes both arms' calibration.
+
+Version 0.34.2 fixes the **Auto Align** display-frame handoff. Enabling Auto now
+keeps the controller's complete relation to its wrist/ankle and applies the
+same evaluated transform delta to both, rather than freezing the controller in
+its previous world orientation while the Hand/Foot turns. This specifically
+keeps nonzero fitted Foot-outline rotation and translation attached to the
+shoe. Target Rotation channels remain unchanged, and the IK solver point does
+not move. Mode-local visual defaults are retargeted with the visible frame so
+Reset Visual, artist offsets, Auto/Manual round-trips, and Rebuild remain
+consistent. Refresh the add-on and use **Rebuild Rig** once to upgrade an
+already-generated rig.
+
+Version 0.34.1 makes the Pole connector conditional on its control shape.
+Choosing **Sphere Wire** hides the separate joint-to-Pole connector; choosing
+**Arrow** or **Rig Default** restores it. Direct Pre-Roll filters its GPU guide,
+while Stable hides only the constrained VIS display bone, leaving the helper,
+constraints, IK result, and generated bone count unchanged. The choice also
+survives **Rebuild Rig**.
+
+Version 0.34.0 makes every generated Hand and Foot IK Target a complete aligned
+rotation control without creating another bone. Generated Targets use Local
+XYZ: Hand X = Flex/Extend, Y = Twist, Z = Side/Wave; Foot X = Toe Up/Down,
+Y = Bank, Z = Turn. The active Hand/Foot Target gets a contextual
+**Target Rotation** panel with those semantic channel names, keyframe
+decorators, and **Reset Rotation**. Reset clears only the three local rotation
+channels and preserves location, scale, and all display-only Custom Shape
+adjustments.
+
+Manual mode keeps its absolute end-rotation relationship. **Auto Align** now
+keeps the solved Forearm/Shin frame live while applying the same Target XYZ
+rotation as a local additive offset afterward; changing Auto/Manual remains
+no-pop and uses no polling loop. No hard foot-angle clamp is authored, so all
+three ankle channels remain available. One versioned owned constraint per limb
+implements the Auto offset; it adds no visible or hidden bone. Existing rigs
+migrate on **Rebuild Rig**, Remove cleans the new relation and marker, and
+transactional failure restores the exact pre-Rebuild rig.
+
+Version 0.33.0 unifies each Direct Pole's two drawing paths into one selection
+language. The dynamic GPU shaft now reads the same Pole bone and Blender theme
+state as its custom-shape arrowhead: both are black when unselected and both
+highlight blue when selected. They remain technically separate render paths so
+the shaft can change length and the head can re-aim continuously, but they act
+as one control and create no extra rig data.
+
+The **Control Visual** panel now includes a compact **Shape** menu for the
+active generated animator control. **Rig Default**, **Arrow**, and
+**Sphere Wire** are managed, reusable display widgets; the selected style and
+existing Offset/Rotation/Scale survive Rebuild and are cleaned by Remove.
+Changing the shape does not touch the control pose, Auto Align, constraints,
+Rest bones, source/deform bones, weights, Shape Keys, or meshes.
+
+Version 0.32.0 advances Direct Pre-Roll to schema 5. Each limb's visible,
+selectable animator controls remain only its Target and Pole, but the generated
+inventory now includes one hidden, non-selectable, non-Deform Pole display-aim
+helper. In Pose Mode the GPU overlay draws the straight line from the real bend
+joint to the Pole whenever the relevant viewport, Overlay, Bones, bone, and
+Bone Collection visibility allows it; Pole selection is not required. The
+existing `WGT_Randy_PoleArrow` custom shape remains the sole pyramid/cone head.
+Its display-aim helper tracks the live joint-to-Pole axis, so moving the Pole
+rotates that same head dynamically and keeps its base plane perpendicular to
+the shaft. No duplicate arrowhead or persistent scene object is created.
+
+**Auto Align** is one rig-wide toggle independent of the limb dropdown. A
+single switch applies atomically to every generated Arm and Leg. While enabled,
+each Hand and Foot Target's visible custom-shape frame follows its own evaluated
+end. The shoe-sole outline therefore follows the solved Foot/Shin pitch and roll
+continuously instead of remaining visually flat while the leg changes
+direction. Switching back to Manual first matches all Targets to their live end
+orientations and then restores each Target's own custom-shape frame without a
+visible pop. This is a display/rotation-control contract only; it does not edit
+Rest bones, weights, or meshes.
+
+Version 0.31.1 kept each Direct Pre-Roll Pole as one visual arrow without a
+display helper. The existing `WGT_Randy_PoleArrow` was the sole arrowhead, and
+the selected-only GPU overlay contributed only the line from the real bend
+joint to that displayed tip. No persistent scene object was created.
+
+Version 0.31.0 turns **Auto Align Target** into a persistent Hand/Foot mode.
+While it is enabled, the generated end-rotation constraint stays muted so the
+end uses the limb's natural solved orientation instead of Target rotation.
+Disabling the mode first matches the Target to that live orientation, then
+restores ordinary manual Target rotation without a visible pop. The choice is
+stored on the generated Target and survives Rebuild. Transitions follow the
+constraint's actual coordinate spaces and roll back on failure; any transition
+that would need to overwrite locked, keyed, NLA-driven, or driver-controlled
+Target channels is refused instead of overwriting animation.
+
+Version 0.31.1 showed Direct Pre-Roll elbow and knee guides only while their
+Pole control was selected in Pose Mode. Version 0.32.0 supersedes that
+selection rule with the always-present Pose Mode shaft described above. Both
+versions respect Viewport, Overlay, Bones, bone, and Bone Collection visibility;
+Stable rigs keep their existing constrained Pole guide.
+
+The new **Control Visual** child panel exposes display-only Offset, Rotation,
+and Scale for the active generated Master, Hand IK, Foot IK, Pole, or Heel Roll
+control. **Reset** restores that control's generated display defaults, and a
+successful Rebuild preserves deliberate visual adjustments relative to the new
+fit. These controls change only Pose-bone Custom Shape presentation: control
+transforms, IK behavior, Rest bones, constraints, weights, and meshes remain
+untouched. Source finger and shoulder displays and internal helper bones are
+not editable through this panel.
+
+Version 0.30.0 finished the first joint-oriented presentation pass without
+adding controls to the deform skeleton. Finger rings now sit at each detected
+source finger bone's Head, which is the bend joint, and their wire plane remains
+normal to the bone-local Y direction. Existing version-1 midpoint displays
+migrate only when their saved generated state still matches the live bone; an
+artist-edited display fails closed, and failed Rebuild restores the old registry
+and display exactly.
+
+Direct Foot controls are now independent `FOOT_L` and `FOOT_R` 64-point closed
+outlines. Each side fits its own visible evaluated shoe sole, yaw, center,
+width, and length with a small perimeter margin; raw +Y stays toe-forward and
+raw +X maps to the medial big-toe edge. The outline stays horizontal, just below
+the sole, and away from the body centerline in its authored frame. In 0.32.0 its
+displayed frame follows the evaluated Foot while Auto Align is enabled, and
+uses the Target frame in Manual. Old rigs that share the 46-point `FOOT` widget
+remain removable; successful Rebuild upgrades them, while failed Rebuild
+restores the old shared object, mesh, assignments, and display state.
+
+Version 0.29.9 corrects the Rain Foot outline's signed left/right mapping. Its
+raw +Y axis remains the toe direction, while raw +X now maps to the medial,
+big-toe side on both feet; the previous mapping put that edge on the outside.
+The visible-geometry fit still derives its yaw and footprint from the evaluated
+shoe geometry. If no usable visible mesh is available, the fallback display is
+now flattened into a horizontal Foot-forward frame instead of inheriting the
+Foot bone's pitch and roll. This is a display-only correction: IK motion, Rest
+bones, weights, and the character meshes are not changed.
+
+Version 0.29.8 connects the two remaining Rain-inspired selection shapes to
+the existing character bones. Each detected three-segment Thumb/Index/Middle/
+Ring/Pinky chain now receives the 32-edge circular control with two small side
+bumps, and each high-confidence Shoulder/Clavicle parent receives the 44-edge
+arched control. The shapes are shared display meshes assigned directly to the
+source Pose bones: no finger, shoulder, MCH, or helper bones are added, and
+bone names, parentage, Rest matrices, constraints, animation paths, Deform
+flags, Vertex Groups, and weights remain untouched.
+
+Only fingers descended from an analyzed Hand and the immediate named parent of
+an analyzed Upper Arm are eligible. Existing artist or third-party Custom
+Shapes are skipped instead of overwritten. A versioned source-display registry
+records the exact prior scale, translation, rotation, bone-size, and wire-width
+state; **Remove Generated Rig** restores it before deleting shared widgets.
+Build failure and Rebuild recovery cover the same state, while older generated
+rigs without this registry remain removable and migrate on a successful
+Rebuild.
+
+Version 0.29.7 makes the generated wrist and foot controls follow the character
+instead of relying on fixed bone-length guesses. A Direct Pre-Roll Hand Target
+now uses the final Forearm Rest frame and transports animator rotation through
+`Local Owner Orientation -> Local With Parent`. The modeled wrist offset stays
+unchanged at Build, while the hand-shaped widget points along the Forearm on
+both sides. Stable rigs keep their existing pose contract and receive the same
+straight Forearm-aligned widget presentation without adding another bone.
+
+In version 0.29.7, Foot Targets began fitting their flat shoe outline from
+evaluated, currently visible geometry. Deform weights establish the trusted
+left/right foot seed; nearby separate footwear is included, while hidden backup
+meshes and unrelated distant objects are ignored. The outline receives a small
+perimeter margin, is placed wholly below the lowest captured sole, and is
+clamped away from the character centerline. At that release Direct Pre-Roll
+still generated exactly two bones per limb: Target + Pole.
+
+An untouched 0.29.6 Direct arm can be migrated with **Rebuild Rig**. If its old
+world-space Hand Target has already been posed, Rebuild refuses before changing
+anything; return that Target to Rest first so its animation is not silently
+reinterpreted.
+
+Version 0.29.6 turns **Direct Pre-Roll (Minimal)** into a real selectable Limb IK
+Build Method. It re-planes the source Rest joint and pre-rolls the upper/lower
+pair before placing direct IK on the deform chain. Each limb adds exactly two
+control bones: its Target and Pole. It deliberately omits Master, MCH/ORI,
+Pole-line/display helpers, and Heel Roll. **Remove Generated Rig** restores the
+recorded original Rest chain exactly, while **Rebuild Rig** remains in Direct
+schema and reuses the reversible Rest record.
+
+Direct Pre-Roll is experimental and intended for a clean Rest/start pose with a
+mostly fixed Pole range. It refuses posed, constrained, animated, effectively
+straight, or unsafe shared-connected chains. It protects the calibrated start
+frame, but does not promise twist-free motion across the complete animation
+range. **Stable (MCH/ORI)** therefore remains the default production method.
+
+Version 0.29.5 introduced the read-only **Direct Pre-Roll Lab** calculation now
+used by the Direct builder. **Check Selected Limb** still previews its Rest-plane
+offset, required joint shift, and coherent upper/lower rolls without editing
+bones.
+
+Version 0.29.4 decouples a limb's bend plane from its deform cross-section.
+Each generated limb now has a hidden two-bone MCH chain for IK plus two
+independent ORI helpers sharing the original upper bone's upstream anchor. The
+MCH chain follows the explicit Pole direction; each ORI helper uses a World
+Copy Location and `Damped Track +Y` to apply only the minimum swing needed to
+follow its corresponding segment. The deform upper/lower bones copy those ORI
+rotations, while Hand/Foot rotation remains driven by its existing target.
+
+This prevents the former failure where correcting an elbow to bend behind the
+character also turned the forearm cross-section by roughly 180 degrees. In
+topology terms, the inset elbow pit remains on the compression side and the
+rounded elbow tip remains on the stretch side. Arms still default to
+Armature-local `+Y` behind and legs to `-Y` in front.
+
+**Rebuild Rig** upgrades schema-1/2 rigs transactionally. It first removes the
+old direct-IK graph, then reads the clean underlying source frames so the old
+Pole-induced roll cannot be baked into ORI. Same-schema rebuilds preserve the
+live MCH inputs and rebaseline the ORI helpers at the current pose; repeated
+rebuilds remain stable, while a changed or flipped Pole direction is calibrated
+again. Strict ownership, Remove, and rollback include every added MCH/ORI bone
+and constraint.
+
+Version 0.29.3 fixes repeated **Rebuild Rig** of the short Edit Mode Pole-line
+helpers. Both helper endpoints are now authored in Armature-local Rest space:
+the real elbow/knee joint points toward the newly-created Pole. A second or
+later rebuild can no longer reverse only the helper through an already-solved
+upper-bone pose. The helper remains short, unconnected, and Keep Offset; its
+Pose Mode Stretch To guide still reaches the Pole.
+
+Version 0.29.2 restores one unambiguous anatomical default for Character
+Designer's Armature-local `-Y`-forward humanoid convention: Arm Poles use `+Y`
+behind the character and Leg Poles use `-Y` in front. Version 0.29.1 had treated
+the normalized modeled rest-joint residual as Default Direction. On an almost
+straight chain that amplified tiny noise: X's elbows went forward and its knee
+defaults became about 91% lateral. The residual is no longer substituted for
+an artist-facing default. Explicit XYZ input and an existing generated Pole's
+saved direction remain authoritative, so updating never silently migrates a
+rig. To adopt the corrected defaults, Analyze, choose each generated limb,
+press **Default Direction**, and run **Rebuild Rig** once.
+
+The actual Pole, solved bend, and dynamic arrow stay aligned. `CTRL_*_pole`
+remains a short, unconnected Keep Offset bone at the Pole target and its Edit
+tail now follows the real bend direction. The non-selectable `VIS_*_pole_line`
+helper also has a short Edit-rest body instead of spanning the whole gap; its
+existing Stretch To constraint still draws the complete joint-to-Pole guide in
+Pose Mode. Rebuild rollback records and restores the prior helper endpoints.
+
+Version 0.29.0 expands **Copy Weight to Opposite** with same-side multi-bone
+selection in Pose Mode and Weight Paint. Every selected Deform-bone pair is
+planned from one immutable Vertex Group snapshot, then the complete batch is
+preflighted before the first write. All pairs commit as one Undo step, or any
+invalid pair leaves every Vertex Group unchanged. The original active-group
+single-copy workflow remains available when there is no intentional multi-bone
+selection. Source names must end in exactly `.L` or `.R`; the tool never strips
+or guesses through suffixes such as `.001`.
+
+The directed copy treats each source as explicit rather than relying on
+Blender's selection-dependent Mirror command. Character Designer resolves each
+paired Deform bone, derives the source half from that bone in Mesh-local space,
+keeps the source half exact, replaces the paired group on the opposite half,
+and clears wrong-side memberships from both group names. The operation requires
+unique spatial X pairs for every weighted source vertex, unlocked groups,
+single-user editable Mesh data, and unchanged per-vertex Deform totals. It
+fails before writing when the result would need an implicit Normalize or when
+the rig, names, transform, or pairing is ambiguous. Other Vertex Groups remain
+point-for-point unchanged and context is restored.
+
+## Weight Symmetry
+
+In Pose Mode or Weight Paint, select two or more same-side Deform Pose bones,
+then open **Character Designer > Weight > Weight Symmetry**. The button reports
+the selected count and copies all pairs together. In Weight Paint, leaving no
+intentional multi-bone Pose selection preserves the original workflow: make a
+side-named group such as `forearm.L` active and use the exact one-way action
+**Copy forearm.L -> forearm.R**. Each pair uses its source group's retained
+weighted support, so unrelated asymmetric parts of the same character mesh
+do not block the operation. Positive weights connected by actual mesh edges
+define a weight island. Only an island entirely on the wrong side, with no
+positive-weight path to the source side or center, is removed. Continuous
+shoulder influence across the midline is retained and mirrored, not deleted.
+
+This is an exact reassignment/copy tool, not a global Normalize command. It
+overwrites the opposite group's non-center support from that retained source,
+preserves each group's original center-line memberships and every other group, and
+cancels the entire batch before writing if any pair is invalid or a per-vertex
+Deform total would change. A completed single- or multi-pair operation is one
+Blender Undo step.
+
+**Locate Unmatched Vertices** selects the exact vertices that block strict
+mirroring and enters vertex Edit Mode without changing weights. Return to Weight
+Paint/Object/Pose Mode to copy. Different topology is not proof of a bad weight
+island; do not delete valid weighted vertices to silence a pairing warning.
+
+Version 0.27.0 refines **Randy Rig: Limb IK** around the compact single-limb
+selector and a first complete animator-facing control set. One identity-rest
+`CTRL_master` moves the character through exact source-root constraints without
+rewriting the artist hierarchy; its head and horizontal widget rest at
+Armature-local ground zero. Arms use concave hand targets and dynamic
+elbow Pole arrows; legs use sole-level foot targets, dynamic knee Pole arrows,
+and `CTRL_heel_roll.*` controls driving hidden solver targets. Pole guide lines
+stretch and aim live while only the actual Pole remains selectable. **Build IK**
+creates only the limb shown in the dropdown; **Build All** completes every
+populated Arm/Leg chain through one atomic build transaction and Undo step.
+Partly filled chains fail closed before anything is generated. The former Build
+Arms/Build Legs operators remain registered for script/keymap compatibility but
+are no longer drawn. Finger-ring-with-bump and shoulder-arch shapes are applied
+directly to eligible source bones and create no bones.
+
+Every dropdown limb has an explicit Armature-local **Pole Direction XYZ** and a
+**Default Direction** button. Arms default to `+Y` behind the character and
+legs default to `-Y` in front under the add-on's `-Y`-forward convention.
+Magnitude is normalized, so **Pole Distance** remains the only distance control. Zero,
+non-finite, or chain-parallel
+directions fail before generated data is changed. Blender's evaluated IK solver
+aligns the real elbow/knee residual to the visible Pole instead of compensating
+back to a shallow modeled bend. A mathematically straight two-bone chain has no
+stable bend plane, so Build fails closed with an instruction to add a small
+elbow/knee bend first; measurable near-straight chains remain supported. New
+Pole bones remember the applied direction;
+0.26.1 rigs without that optional tag remain removable and rebuildable.
+
+The generated graph is schema-versioned. Rebuild upgrades owned 0.25 legacy
+limb controls in one transaction, while Remove continues to understand the old
+inventory. Incremental Build and Rebuild neutralize and restore a moved Master
+so no transform is baked twice. Master translation, rotation, and uniform scale
+are supported; non-uniform scale is refused during Build/Rebuild because it
+would introduce ambiguous IK shear. The heel control is a deliberately compact
+first-pass heel/bank pivot, not Rain's complete reverse-pivot ball/toe system.
+The Rain-inspired visual language is documented in
+[ATTRIBUTION.md](ATTRIBUTION.md).
+
+Generated bones, constraints, collections, widgets, and registries carry exact
+versioned ownership. Repeated Build does not create suffix duplicates; foreign
+same-name bones, pre-existing constraints, shared or linked Armature data, and
+corrupt ownership fail closed. Remove/Rebuild validate the complete graph and
+refuse artist animation, Drivers, foreign constraint references, foreign child
+bones, or foreign collection members. Stable leaves source Rest matrices
+untouched. Direct changes only the selected upper/lower Rest frames while its
+owned rig exists, records both original and applied states, and restores the
+original state on Remove. Deform-bone names, Deform flags, Meshes, modifiers,
+Vertex Groups, and weights are never rewritten by Limb IK. The original release
+described here predates the IK/FK and torso extensions documented above. Finger
+and shoulder additions remain selection shapes on the existing bones; they do
+not add a generated finger rig or corrective deformation system.
+
+Version 0.24.0 replaces proportional affected-weight scaling with **Full Auto
+Blend (Normalized)**. When enabled, all editable Deform bones on the current rig
+compete in one full Automatic Weights solve. Character Designer then applies
+only the selected bones' old/new influence region: after locked weights reserve
+their exact share, selected Bone Heat values get first claim on the remaining
+budget, full-solver neighboring bones fill the remainder, and every affected
+vertex totals one. Where locked weights leave the full budget available, a
+target core therefore stays at weight 1 instead of turning an old `1 + 1`
+overlap into `0.5 + 0.5`.
+Pre-existing target leakage outside the full-rig solution is removed and repaired
+from the full solver's local support. On a true half Mesh, generated-side pair
+groups are kept empty so the Mirror modifier owns the opposite side. Non-Deform
+groups, locked weights, and all vertices outside the repaired region remain
+exact, except that a supported half Mesh has all invalid generated-side base
+weights cleared. A non-empty locked generated-side group is refused and the
+complete Vertex Group snapshot is restored. Any failed weighting transaction
+likewise restores that snapshot. The session-only UI checkbox defaults on
+but never dirties or persists into the `.blend`. The direct operator property
+defaults to false, preserving omitted or explicit-false calls; scripts that
+previously passed the 0.23 normalization flag as true now opt into the new Full
+Auto Blend semantics.
+
+Version 0.23.0 introduced the earlier **Normalize Affected Deform Weights**
+option. Its equal proportional scaling is superseded in 0.24.0 because it could
+dilute a full selected core and could not repair the spatial leakage of a
+single-bone Bone Heat solve.
+
+Version 0.22.0 introduced the compact two-row page grid used by RR Helper.
+The current layout is **Hair / Weight / Rig**, then **Clothing / Miscellaneous**.
+The active page is visibly pressed. Weight Tools and Weight Symmetry share Weight;
+Spline IK is under Rig, and Skirt Setup is under Clothing. **Build Symmetry**
+and **Reference Views** appear together under **Miscellaneous**. The page
+choice is session-only (`SKIP_SAVE`), so changing pages does not dirty or
+persist into `X.blend`.
+
+Version 0.21.0 introduced **Weight Flow**, a two-bone weight-transition tool.
+It was removed in version 0.41.3.
+
+Version 0.20.3 makes selected-bone weighting fail closed before it can produce
+misleading results on an unsupported half-Mesh stack. A true half Mesh must use
+one active object-local X Mirror with **Vertex Groups** enabled, and that Mirror
+must be before the Armature modifier. Multiple X Mirrors, a custom Mirror
+Object, extra Mirror axes, or an Armature-before-Mirror stack are refused with
+a normal warning. Shared Mesh data is also refused so an unselected linked
+duplicate cannot receive the same underlying weight edits; make the Mesh data
+Single User first. Version 0.20.2 makes selected-bone weighting complete the Vertex Group naming
+contract for a true half Mesh with X Mirror and **Vertex Groups** enabled. When
+a selected source-side `.L`/`.R` bone has a real Deform counterpart but that
+counterpart group is missing, the tool creates only an empty paired group. The
+base Mesh receives no opposite-side weights; Blender's Mirror modifier then
+assigns the evaluated mirrored vertices to the paired bone correctly. Existing
+unselected groups and every weight remain byte-for-byte protected, and failure
+removes any newly created empty pair during rollback. Version 0.20.1 makes the
+Weight Tools UI English-only. Version 0.20.0 adds a
+separate **Weight Tools** section with **Auto Weight Selected Bones**. It wraps
+Blender's selected-bone Bone Heat solver in
+an all-or-nothing transaction: only visible selected Deform bones may receive
+new weights, while every other Vertex Group is checked point by point and must
+remain exactly unchanged. It works with an existing Armature modifier and does
+not re-parent the Mesh or replace modifiers. Mesh X Mirror and paint masks are
+temporarily isolated so they cannot redirect the write into an unselected
+counterpart group or limit the calculation to a masked subset, then their exact
+states are restored. Parenting, modifier identity and order, every bone's
+Deform flag, active Vertex Group, selection, and Pose/Weight Paint mode are
+preserved. Any failure rolls the complete Vertex Group state back, and the
+finished operation supports Undo.
+
+Version 0.19.0 makes **Recover Applied Curve** modifier-aware without adding
+another mode control. A source stack made only of **Mirror** and **Subdivision
+Surface** is copied to each recovered Curve in its exact original order,
+including Mirror axes/object/Bisect settings and Catmull-Clark or Simple
+Subdivision levels. This retains a non-destructive stack instead of baking it
+twice, and works for both Half and Full source profiles. Preview reports the
+stack that will be preserved. Any other modifier is refused before a Curve is
+written. Version 0.18.0 expands **Recover Applied Curve** with explicit Aligned Bezier
+handles, a GPU-only live preview, and **Add** or **Replace Mesh** output. Add
+keeps the source Mesh. Replace removes only the source Object, and only after a
+complete source passes preflight and every recovered strand succeeds. Version
+0.17.2 matches RR Helper's unobtrusive **Refresh Add-on** workflow. The button
+appears only when installed Python files changed (or refresh needs attention),
+reloads the add-on without saving or reloading the current `.blend`, and
+disappears after the refreshed code becomes current. Version 0.15.3 makes the
+compact placement controls operate directly on the
+active generated Centerline in either Object Mode or Curve Edit Mode. Centered
+and Surface move the Curve immediately; Blend's 0–1 Mix updates continuously
+and persists on that Curve. Curve Edit Mode uses an in-place point update, so
+the active object, edited data, control-point selection, and mode are preserved.
+No new button is added. Version 0.15.2 originally introduced a save-first guard
+for add-on refresh; the newer 0.17.2 workflow supersedes that guard by reloading
+only Python modules, matching RR Helper and leaving the current `.blend` open
+and unsaved in memory. Version 0.15.1 turns Hair Centerline **Blend** into a continuous 0–1 Mix:
+0 is the exact Centered endpoint, 1 is the exact Surface endpoint, and every
+intermediate value is available. The compact mode order is **Centered**,
+**Surface**, **Blend**; the Mix slider appears only for Blend and is stored on
+each generated Curve. Every value reuses the same outward ribbon, normal, and
+Tilt logic, so placement never reverses the hair profile.
+
+## Randy Rig: Limb IK
+
+1. Make the intended source Armature active in Object or Pose Mode, open the
+   **Rig** page, and click **Analyze Rig**. Choose Left/Right Arm or Leg in the
+   dropdown, then review or correct that limb's Upper, Lower, and End fields.
+   Set **Pole Direction (Local)** with XYZ, or use **Default Direction**. For
+   Character Designer's Armature-local `-Y`-forward convention, the fixed
+   defaults are elbow-behind (`+Y`) and knee-forward (`-Y`). Choose **Stable
+   (MCH/ORI)** or **Direct Pre-Roll (Minimal)** in **Build Method**.
+2. Click **Build IK** to create only the limb selected in the dropdown, or
+   **Build All** to complete every populated Arm and Leg together in one atomic
+   Undo step. Direct schema 5 exposes only Target + Pole per limb and adds one
+   hidden, non-selectable, non-Deform Pole display-aim helper; Stable adds its
+   hidden roll-preserving graph and animator helpers. A partly filled mapping
+   cancels Build All before any generated data is written.
+3. In Stable mode, move the whole character with `CTRL_master`. Pose limbs with
+   `CTRL_hand_IK.*`, `CTRL_foot_IK.*`, `CTRL_elbow_pole.*`, and
+   `CTRL_knee_pole.*`; rotate `CTRL_heel_roll.*` for the first-pass heel/bank
+   pivot. Direct mode exposes only the Target and Pole controls and has no Heel
+   Roll or whole-rig Master. Its joint-to-Pole shaft remains visible in Pose
+   Mode, and moving the Pole dynamically re-aims the single existing arrowhead.
+   **Auto Align** is separate from this limb dropdown: one toggle applies to all
+   generated Arms and Legs. In Auto, every Hand and Foot custom-shape frame
+   follows its own evaluated end, so each shoe-sole display follows its live
+   Foot/Shin frame. Manual restores every Target's own frame.
+4. Change a direction and use **Rebuild Rig** to apply it to exactly the sides
+   already generated, or to transactionally upgrade an owned 0.25 rig. The
+   upper/lower pair deliberately re-planes to the chosen Pole while its End and
+   unrelated source bones remain protected. Use **Remove Generated Rig** to
+   restore the exact source rig; Direct also restores the exact recorded
+   pre-Build Rest state. Stable removal remains available even if its Master was
+   scaled non-uniformly, although Build/Rebuild require finite positive uniform
+   scale.
+
+Analyze is read-only. Build, Remove, and Rebuild are Undoable.
+Generated controls never deform the Mesh, and exact ownership prevents the
+cleanup tools from deleting artist-authored rig parts. If a generated control
+is referenced by animation, a Driver, a foreign constraint, or a foreign child
+bone, removal is refused.
+
+When Direct is selected, the collapsed **Direct Pre-Roll Lab** remains a
+read-only preview. Its absolute Roll U/L values describe the frame *after* the
+reported Rest-joint re-plane; entering those Roll values alone does not repair
+skin twist. A result of **Aligned** means only that the starting Rest plane is a
+plausible Direct IK candidate, not that every Target/Pole pose will remain
+twist-free.
+
+Limb IK improves posing and joint aim; it does not by itself preserve shoulder
+volume. Shoulder thinning at high arm elevation still calls for weight work and
+later clavicle/scapular or corrective deformation helpers.
+
+## Weight Tools
+
+**Auto Weight Selected Bones** repairs the currently selected, visible Deform
+bones. With the default Full Auto Blend it temporarily solves all eligible
+current-rig Deform bones together; strict mode solves only the selection:
+
+1. Select one already bound Mesh together with its Armature. In Pose Mode or
+   Armature Edit Mode, select the exact bones to recalculate. The same button
+   also works while the bound Mesh is already in Weight Paint Mode.
+2. Open **Character Designer > Weight Tools** and click
+   **Auto Weight Selected Bones**. Keep **Full Auto Blend (Normalized)** enabled
+   for the healthy default: all current-rig Deform bones compete in Bone Heat,
+   then only the selected bones' repaired local region is written back. The Mesh
+   must have one unambiguous existing Armature modifier; the tool never creates,
+   removes, or reorders modifiers and never changes parenting.
+3. Existing target groups are replaced and a missing selected-bone group is
+   created. A locked target group is refused until the artist unlocks it.
+
+The complete Vertex Group state is snapshotted before the native solver runs.
+In Full Auto Blend, unlocked Deform groups may be rewritten only inside the
+selected groups' old/new influence union; non-Deform groups, locked groups, and
+all membership outside that union stay exact, except that invalid generated-side
+base weights on a supported half Mesh are cleared as described below. In strict
+mode, every group not named after a selected Deform bone stays exact everywhere.
+Mesh X Mirror is temporarily disabled, while face/vertex paint masks are temporarily disabled so
+the calculation covers the complete base Mesh. All three flags are restored in
+`finally`. Any protected-state change, native cancellation, unusable selected
+result, or Python failure restores the complete original Vertex Group state
+before returning.
+
+The UI starts with **Full Auto Blend (Normalized)** enabled. It does not use a
+single isolated bone as the heat source: all editable current-rig Deform bones
+participate, so the selected result is the same spatial field it would receive
+inside a complete Automatic Weights calculation. Only vertices influenced by
+the selected groups before or after that solve are replaced. At each such
+vertex, locked Deform weights first reserve their exact share. Selected solver
+values then receive first claim on the available budget; the full solver's other
+unlocked Deform values are scaled into the remainder. Consequently an unlocked
+weight-1 core stays at 1, while a locked reservation can reduce the selected
+value. Utility, mask, foreign, and non-Deform groups stay exact. “Normalized”
+means that affected Deform totals equal one; this command does not run an
+additional topology Smooth pass. The spatial transition comes from the complete
+Bone Heat solver's local proportions. If the locked budget exceeds one, leaves
+no room for the selected result, or the full solve has no support for a required
+repair, the whole operation rolls back. One Undo removes the complete result
+(including new groups), and one Redo restores it.
+
+Turning the checkbox off retains the historical strict mode for scripts and
+special cases: Blender recalculates only the selected groups and every other
+group is verified byte-for-byte unchanged. That isolated solve is not a full-rig
+weight column and can reach distant geometry when no neighboring bones compete,
+so it is not recommended for ordinary character binding. Strict mode does not
+normalize the combined Deform column; its final per-vertex total may exceed one.
+
+For a true half Mesh that relies on a Mirror modifier's Vertex Group mirroring,
+only source-side and center bones can own meaningful base-mesh weights. A bone
+located solely on the generated side is refused with a normal warning; select
+its source-side counterpart instead. Blender requires both `.L`/`.R` group
+definitions before the Mirror modifier can flip evaluated membership, but only
+the source-side group should own base vertices. Strict mode adds a missing empty
+pair. Full Auto Blend clears every generated-side Deform group on the base Mesh,
+including stale weights unrelated to the selected pair, then verifies that all
+of those groups remain empty. The supported stack has one
+object-local, X-only Mirror with **Vertex Groups** enabled before Armature;
+Subdivision may be before or after that Mirror. The tool refuses ambiguous
+Mirror stacks and shared Mesh data rather than claiming success when an opposite
+bone could not independently deform its side.
+
+## Spline IK Setup
+
+**Spline IK Setup** builds the repetitive Curve, Hook-controller, and
+constraint wiring for a flexible strap or other connected bone chain. It does
+not create or edit deform bones, vertex groups, weights, or meshes.
+
+1. In Armature Edit Mode or Pose Mode, select the exact continuous span the
+   Curve should cover. Selecting the full chain produces a Curve from the
+   captured root Head to the captured tip Tail; leaving rigid end bones
+   unselected produces a flexible middle-only span.
+2. Click **Capture Selected Chain**. The selection must be one unbranched,
+   gap-free parent-to-child path with at least two bones.
+3. Set **Curve Points** (default 5) and **Control Size Ratio** (default 6% of
+   the chain's local length), then click **Build Spline IK Setup**. A stored
+   capture can be built directly from Object Mode even when another object is
+   active.
+4. Click **Select & Reveal Controls** to select and frame every controller,
+   enable Viewport Extras, and reveal the active middle controller in the
+   Outliner. Move the generated spherical middle controls to bend the Curve. Move or
+   rotate either cube end control to position the end and steer its Bezier
+   tangent. Every controller exposes a Curve/strap-aware local frame: X follows
+   strap width, Y follows the exact hooked Bezier tangent, and Z follows the
+   evaluated strap-front normal. Rotate local Y to drive the matching Curve
+   point's Tilt 1:1. The same Y-first rotation channel is distributed smoothly
+   across the captured chain as incremental bone Roll, so a weighted non-round
+   strap visibly twists instead of only changing Curve metadata. Local X/Z can
+   be combined to steer the Curve without leaking into Tilt.
+
+New setups include **Rotation Tilt** automatically. An older valid setup exposes
+one contextual action: **Enable Rotation Tilt** when the drivers are absent, or
+**Align Rotation Tilt Axes** when its saved v1/Swing drivers still use the old
+frame. A fully enabled older setup shows the same contextual action once as
+**Clean Hook Names**. Version 0.14.1 keeps the generated rig UUID exclusively
+inside ownership metadata; visible modifiers use `CD Spline IK Hook 01`, `02`,
+and so on. Existing UUID-bearing modifiers are renamed in place without
+replacing their pointers, bindings, animation paths, or evaluated Curve. All
+three paths work in place. They derive width/front from the evaluated
+deform-bone frame, align the visible Empty axes, and use the Curve's actual
+evaluated four-sided profile direction rather than the loose-edge Mesh `normal`
+(which is only a tangent). The missing-driver path rebases Curve Tilt so a
+zeroed controller represents the authored strap front. The v1 path freezes the
+current evaluated Tilt and bone Roll into the new zero point, then converts the
+same FCurves to isolated YXZ targets. Hook inverse compensation preserves the
+Curve and evaluated bone pose while the controls change orientation. The small
+profile probe exists only during evaluation and is removed immediately; no
+persistent helper object or dependency cycle is added. Local axes are shown on
+the controls. Artist bone constraints, unrelated animation, and the existing
+X/Z Curve shape remain unchanged.
+
+An invalid recapture never replaces the last valid chain. It reports a neutral
+warning that the previous capture was kept. Routine mode/selection preconditions
+also remain non-red; red status is reserved for a failed data transaction or
+damaged generated setup, and every status message has a dismiss button.
+
+The Curve and controls are created in Armature-local space and parented to the
+Armature, so the complete setup follows its object transform. Every Bezier
+point, including its two handles, is bound to its corresponding wire Empty by
+one Hook modifier. Controls are independent after creation; no symmetry is
+forced, so an initially symmetric chain may be adjusted symmetrically or
+asymmetrically.
+
+The Spline IK constraint is placed on the selected tip bone with its Chain
+Length equal to the captured bone count. Y Scale and XZ Scale are both `None`,
+Curve Radius, Even Divisions, and Chain Offset are disabled, and the constraint
+is unmuted. This strictly prevents the Spline IK solver from introducing bone
+scale. Consequently, if an artist later makes the Curve longer than the fixed
+bone chain, the tip cannot both remain unscaled and reach the Curve endpoint.
+
+Generated data carries an exact versioned internal UUID; it is not exposed in
+artist-facing Hook modifier names. Rebuilding or **Remove Generated** only
+removes a matching Character Designer setup. A foreign Spline
+IK on the selected tip blocks Build by default; **Replace Existing Spline IK**
+must be enabled explicitly, replaces only one unambiguous constraint, and never
+deletes its target Curve.
+
+If the generated Curve Object itself has artist Action, Driver, or NLA data,
+**Remove Generated** stops before deleting anything and reports a normal
+warning. This avoids pretending to recover Object animation that Blender's
+manual Curve-object removal backup cannot reproduce losslessly.
+
+## Generic Reference View Sets
+
+The **Reference Views** panel creates spatial image references for any subject:
+a prop, vehicle, building, room, creature, or character. It does not assume a
+human height or anatomy. Codex Console (or another tool) writes a set beneath
+`//References/CDesigner/<set>/reference-views.json`; **Scan Standard Folder**
+finds those manifests and **Create / Update Views** synchronizes the selected
+set.
+
+The version-1 contract is:
+
+```json
+{
+  "schema": "blackunity.cdesigner.reference-view-set",
+  "version": 1,
+  "setId": "2ed7799e-5b80-41da-a8cf-502aa32d09db",
+  "name": "Any Subject",
+  "updatedAt": "2026-08-04T08:00:00Z",
+  "units": "METERS",
+  "placement": {
+    "origin": [0.0, 0.0, 0.0],
+    "displaySizeMeters": 2.0,
+    "distanceMeters": 10.0,
+    "opacity": 0.35,
+    "showInFront": true
+  },
+  "views": {
+    "front": {
+      "file": "front.png",
+      "enabled": true,
+      "flipHorizontal": false,
+      "flipVertical": false,
+      "distanceMeters": null,
+      "displaySizeMeters": null,
+      "opacity": null
+    }
+  }
+}
+```
+
+`null` per-view values inherit `placement`. Image paths use drive-free POSIX
+relative syntax and are rejected for backslashes, `.`/`..` components, or any
+real-path escape from the manifest folder. Unknown fields are ignored
+for forward-compatible producers, while schema, version, UUID, units, numeric
+ranges, booleans, and enabled image files are validated before the Scene is
+changed. Meter values are divided by `Scene.unit_settings.scale_length` to get
+Blender Units.
+
+Project-local loaded Images are stored with Blender `//` paths so moving the
+saved `.blend` together with its `References` directory keeps links portable;
+images outside the `.blend` directory retain absolute paths.
+When Blender opens a Temp recovery file such as `quit.blend` or an autosave,
+Character Designer detects only its exactly tagged managed Images whose `//`
+path is now missing and reconnects them from the validated absolute source path
+stored with the view. Existing valid paths, packed Images, and user Images are
+left untouched. Version 0.7.3 defers this current-file check until add-on
+registration has left Blender's restricted-data context, so both normal enable
+and **Refresh Add-on** can complete safely.
+
+An unused direction may be omitted or use `"file": null`. A null file is always
+an unconfigured slot—even if an older producer accidentally leaves
+`"enabled": true`—so a partial Front-only set remains usable. When a previously
+created direction becomes empty or disabled, synchronization hides its managed
+Empty but does not delete it; only **Clear Current Set** performs deletion.
+
+Each Scene receives one tagged `C Designer References` collection. Every set
+has a tagged root Empty and up to six tagged Image Empties. The image planes are
+single-sided toward the subject so opposite views do not overlap; all remain
+non-rendering. Synchronization leaves Edit Mode, the active object, and the
+selection untouched. A failure rolls back new data and restores already managed
+objects. **Clear Current Set** never claims same-named user data and retains a
+managed object if another Scene or an unowned child depends on it.
+Synchronization and visibility changes are refused before mutation when their
+managed collection or objects are shared by multiple Scenes, preventing one
+Scene's operation from silently changing another Scene.
+Standard-folder discovery also refuses symlink, Junction, and other Windows
+reparse-point directories, and rechecks every traversed directory and manifest
+against the real `//References/CDesigner` boundary.
+
+The WindowManager controls are intentionally session-only, but managed Scene
+objects are persistent. On reopen, **Managed Scene Sets** reconstructs available
+sets from exact current-version tags. A single set is adopted automatically;
+multiple sets require an explicit UUID-backed dropdown choice before Show,
+Hide, or Clear becomes available. This recovery does not require the original
+manifest to still exist.
+
+## Build Symmetry
+
+Open **Miscellaneous > Build Symmetry**. This tool links the two topological sides of an asymmetric mesh
+without forcing their absolute positions to become mirror images. It reflects
+only the movement delta: an X-axis local delta `(dx, dy, dz)` becomes
+`(-dx, dy, dz)` on the paired vertex, while both vertices keep their existing
+different baselines.
+
+1. Edit one Mesh and select either one continuous, non-branching center edge
+   chain/loop, or two adjacent center-band boundary chains. For a center band,
+   both boundaries must have matching open/closed structure and edge count;
+   every boundary edge must have one band face and one outer face.
+2. Choose **Local** or **World** and the reflection axis, then click **Build
+   Symmetry**. The topology is detected automatically; there is no mode switch.
+3. Enable **Auto Select Opposite** in Vertex Select mode. Selecting or
+   deselecting a paired vertex immediately applies the same selection state to
+   its partner while keeping the vertex you clicked active. To clear a linked
+   pair, Shift-deselect its active/source vertex or use `Alt+A`.
+4. Enable **Mirror Movement** and use normal Blender transforms. It remembers
+   which side you selected first, so multi-vertex transforms still use the
+   intended side as the driver.
+
+Pairing is propagated face-by-face from the chosen centerline or center band.
+With a band, its two boundary rows become the first vertex pairs, then pairing
+grows outward. On an even-column closed tube, the two directions may meet at a
+topologically proven opposite self-mapped face, so selecting only the front
+band boundaries is sufficient. The tool supports matching quad, triangle, and
+n-gon topology and never substitutes a nearest spatial vertex when topology is
+ambiguous. Side labels are assigned to whole topological components, not sorted
+independently for every pair.
+
+Mirror Movement currently supports one edited Mesh at a time. While it is on,
+Character Designer temporarily disables Blender's native Mesh Mirror axes and
+restores their exact previous state when the feature turns off, the add-on is
+refreshed, or the file is saved. Auto Merge and Proportional Editing remain
+untouched; if either conflicts with the workflow, Mirror Movement simply turns
+itself off. Leaving the paired mesh, changing topology, or leaving Vertex
+Select mode likewise turns the relevant toggle off without a persistent red
+error. Native modal translation with Auto Select Opposite has been verified as
+one Undo/Redo step, and Esc restores both sides. The pair map is deliberately
+session-only and must be rebuilt after an add-on reload or Blender restart.
+
+## Hair Centerline
+
+Character Designer turns selected hair cross-sections into an exact, shaped
+center curve with one visible action and one compact placement selector:
+
+1. In Mesh Edit Mode, select the complete connected strip that should define
+   the centerline.
+2. Choose **Centered**, **Surface**, or **Blend**. Centered preserves the
+   original section centers and allows the Half profile to protrude; Surface
+   keeps the evaluated visible front flush with the source mesh. Blend reveals
+   a **Mix** slider: 0 is Centered, 1 is Surface, and the full range is usable.
+3. Click **Generate / Update Centerline**. If the current scene already has a
+   Character Designer Curve with the same source-layer record, that exact Curve
+   is updated in place. A new Curve is created only when the source has no
+   generated Curve in the current scene; a related but nonmatching or ambiguous
+   target stops with a normal informational message and creates nothing.
+4. With a generated Curve active in Object Mode, the same control reads
+   **Refresh Centerline**, re-reads its recorded source layers, and preserves
+   that Curve's saved placement and Mix.
+
+Generation uses the selected placement mode; Object Mode refresh uses the
+Curve's saved placement. **Blend** first solves the complete Centered and
+Surface endpoints, then interpolates every Curve point by Mix and recomputes
+Tilt from the resulting Curve's own tangent; raw Tilt values are never averaged.
+The dominant-ribbon front direction is shared by every value, so changing Mix
+cannot turn the Half profile into the head. Old fixed-Blend Curves without a
+stored Mix read as exactly 0.5. The legacy preview, alignment, and explicit-target
+operators remain registered for file and shortcut compatibility but are no
+longer exposed as separate panel buttons.
+
+Open rows, closed profile loops, and a collapsed `POINT` tip are supported. The
+selection parser is independent of Blender's vertex/edge/face selection mode.
+For example, four selected triangular profile loops plus one pointed tip are
+read as `3 → 3 → 3 → 3 → 1` and create five center points; selected side faces
+are never mistaken for one large root cap.
+
+Each valid topological layer contributes one preview point at the arithmetic
+mean of that layer's current vertices. The points stay in source-object local
+space and the source transform is copied to the confirmed Curve, preserving
+the original placement and local precision.
+
+The confirmed Curve is immediately usable as a hair profile. It uses a
+**Round** bevel with **Half** fill. The widest source cross-section sets the
+default Depth, while every control point receives a proportional Radius. A
+collapsed `POINT` endpoint keeps 1.5% of its nearest non-`POINT` loop's Radius:
+visually pointed at normal scale, but still nonzero when inspected closely.
+
+For a closed four-sided strand, width comes from the longest real boundary
+edge rather than a diagonal vertex chord. Four-point rectangles and rounded
+rectangles with more vertices both identify their two dominant longitudinal
+face ribbons. The outward ribbon is chosen once for the full strip from
+cumulative surface area and the direction opposite centerline curvature, with
+the source-origin radial test retained only as a fallback. This prevents a
+single noisy segment or reversed polygon winding from flipping the profile into
+the head. Point Tilt aligns the Half-round bulge to that outward normal and is
+unwrapped continuously along Blender's Minimum-twist frame.
+
+Closed profiles without a dominant opposite face pair keep their complete
+tangent-plane span, so a smooth regular 8- or 10-sided profile is not reduced to
+one polygon edge. Open rows likewise use their complete end-to-end span. The
+one-action workflow does not modify the source mesh or its selection. In-place
+updates retain the Curve object, its materials, collections, and identity.
+
+### Recover Applied Curve
+
+When hair was previously converted or applied to a Mesh, select its complete
+regular surface band in Mesh Edit Mode and click **Recover Applied Curve**. You
+may select several disconnected strands at once. For a clean quad strand, a
+single unbranched longitudinal edge path is also enough; its endpoints define
+the recovered range and Character Designer expands it across the complete
+cross-sections without changing the visible selection.
+
+Each connected strand becomes one independent Curve Object. Choose **Bezier**
+for a smaller, smoother editing cage: its **Control Points** slider is bounded
+to 3–32 and defaults to 5. The endpoints stay exact, while interior position,
+Radius, and continuously unwrapped Tilt are interpolated uniformly by source
+arc length. Explicit **Aligned** Bezier handles keep the reduced cage smooth,
+stable, and directly editable without relying on Blender's Auto-handle solver.
+Choose **Exact** when geometric fidelity matters more than control count; it
+keeps one Poly point for every recovered source cross-section. Changing the
+mode or point count and repeating the action updates the same Curve Object.
+Use the slider—not manual point deletion—to change the managed cage size.
+Moving points or handles is normal Curve editing, but running Recover again
+rebuilds the cage from the selected source Mesh and therefore replaces those
+manual Curve edits. A manually added/deleted control point is treated as an
+unreadable managed output and is refused rather than guessed over.
+
+Point Radius keeps Alt+S meaningful, and point Tilt restores roll around the
+local path. Common applied hair profiles are reconstructed without helper
+objects:
+
+- Round + Half with Extrude;
+- Round + Full capsule profiles;
+- rectangular Full profiles using Curve's embedded Profile data.
+
+For Half profiles, the open endpoints identify the applied axis. Character
+Designer also solves an equivalent Curve Offset when the section planes provide
+enough evidence; otherwise the equivalent position stays in the recovered
+control points with Offset zero. Mesh geometry cannot uniquely reveal the
+historical split between Offset, control-point position, and some profile
+parameters, so Exact mode promises equivalent editable geometry rather than the
+original hidden parameter history. An applied Mesh cannot recover deleted
+historical Bezier handles; Bezier mode creates a new explicit Aligned-handle
+cage and is intentionally a smooth approximation when its point count is
+reduced. A strand whose width/depth ratio changes along its length is refused
+instead of being silently approximated by Radius alone.
+
+**Recovery Preview** draws the current result directly in the viewport using
+the GPU. Curve type, control-point count, and output changes update it
+immediately, so the cage can be judged before recovery is confirmed. Preview
+never deletes the source Mesh and never creates a temporary Object or datablock.
+Turning preview off, confirming recovery, or refreshing the add-on clears all
+preview drawing state. If the source has a compatible Mirror/Subdivision stack,
+Preview also names the original-order stack that the Curve will retain.
+
+The **Output** choice controls source ownership:
+
+- **Add** is the default. It keeps the source Mesh Object and creates or updates
+  the matching recovered Curve Object.
+- **Replace Mesh** is destructive only after every strand in the complete source
+  Mesh has passed preflight and the entire Curve batch has succeeded. It then
+  removes the source Object, but does not delete its Mesh datablock; shared Mesh
+  data therefore remains available to other Objects.
+
+Replace Mesh refuses a partial source selection rather than deleting unselected
+geometry. Mirror and Subdivision Surface are transferred in original stack
+order, so ordinary combinations of either modifier no longer block Replace.
+Other modifier types are refused. Sources with parent/child relationships,
+constraints, animation or drivers, shape keys, links to multiple scenes, or
+other ownership that cannot be transferred safely are still refused.
+Replacement is a single Undo transaction, and any failure before source removal
+leaves the source Object intact. A managed recovery output may update its copied
+stack, but an extra or reordered artist modifier is never silently deleted.
+
+In Add mode, recovery objects keep the exact source Mesh identity plus a
+direction-independent source-layer signature. Renaming a source or reusing its
+former name cannot send an update to the wrong Curve. The same component
+updates its existing Curve Object; another component from the same Mesh creates
+its own Curve and can later be refreshed independently. Replace outputs retain
+their provenance metadata after the source Object is removed. The whole
+selection is preflighted before any write, and creation/update is all-or-nothing
+across the batch.
+
+## Source Metadata
+
+The confirmed Curve keeps lossless, versioned source metadata behind the
+automatic profile. For every layer it records:
+
+- the raw maximum vertex-to-vertex chord and the vertex pair that defines it;
+- the maximum profile span used as the cross-section sizing reference;
+- the longest real boundary edge and its vertex pair;
+- the final shaping width, front normal, width axis, source face, and
+  orientation source;
+- the local center, the exact front-surface target and how it was found, the
+  tangent, legacy width axis, and raw mesh normal.
+
+The metadata is stored in `SOURCE_OBJECT_LOCAL` space together with the source
+matrix at confirmation time. Metadata v4 added the Centered and Front Surface
+solutions; v5 refreshes the front semantics with continuous dominant-ribbon and
+curvature evidence. Valid v2, v3, and v4 Curve metadata remains readable and is
+safely upgraded from its recorded source by the one-action workflow.
+`profile_tip_radius` stores a ratio applied to the nearest non-`POINT` layer
+Radius, not a global Radius. `shape_span_local` uses the longest boundary edge
+only for a four-sided `CLOSED` layer; every other non-point layer keeps its full
+tangent-plane profile span.
+
+## Refresh Add-on
+
+Character Designer watches its installed Python files. **Refresh Add-on** is
+hidden while the loaded code matches disk and appears only when source changed,
+a refresh is running, or an error needs attention. Refresh validates the Python
+files and then reloads only the add-on modules; it neither saves nor reloads the
+current `.blend`, so unsaved modeling remains in Blender memory without a save
+prompt. Successful reload establishes the new source signature and the button
+disappears. Session-only live preview and symmetry capture are stopped
+safely as part of unloading the old runtime.
+
+## Workspace Filter Guard
+
+Character Designer preserves Blender's per-workspace add-on filtering. In each
+workspace where filtering is enabled, it only ensures that Character Designer
+and the owner required by the current render engine are present. For Cycles,
+that owner is `cycles`, which keeps Material Slots, Preview, and Surface
+available in Material Properties. Existing allow-list entries are never removed
+and filtering is never disabled. The guard runs after registration and continues
+to cover project loads, add-on refreshes, workspace changes, and render-engine
+changes.

@@ -1,0 +1,2671 @@
+{
+  "ok": true,
+  "runtime": "5.1.0",
+  "baseline_zip": "D:\\MyRepository\\Blender-addons-by-Randy\\dist\\character_designer-0.76.1.zip",
+  "baseline_sha256": "52fed6e515892bbe84a2d0a1702719b9750d11d0848cfd3bf9c95a640983ca2e",
+  "baseline": {
+    "version": [
+      0,
+      76,
+      1
+    ],
+    "module_and_shared_dependency_sha256": {
+      "unity_export.py": "2ec43e98708e8d868fc3f4da623f95105bbc8c9faccf2a94bcf480bfc054da7c",
+      "unity_export_ui.py": "2578e093ee20f31d698cf7c76cfb49deef0ce1b6a4c0207f83cb1898d493eb01",
+      "character_setup.py": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9",
+      "ui_constants.py": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e"
+    }
+  },
+  "current_version": [
+    0,
+    76,
+    2
+  ],
+  "current_sha256": {
+    "unity_export.py": "8fb200ad8ea4153db3d9b3e7beb9fca9bca728370fc71eda8841f0b58c406bd0",
+    "unity_export_ui.py": "8914fec48d3a55f61d042166f20e54c5124b98e74af787e69186c27af94b169d",
+    "character_setup.py": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9",
+    "ui_constants.py": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e"
+  },
+  "shared_dependencies": "Both unregistered baseline modules reuse the same registered canonical character_setup/ui_constants.",
+  "fixture": {
+    "total_bones": 2415,
+    "main_bones": 351,
+    "foreign_bones": 2064,
+    "meshes": 377,
+    "bound_meshes": 5,
+    "widget_meshes_in_total": 64,
+    "unrelated_empty_objects": 128,
+    "scene_objects": 507,
+    "custom_shapes_per_rig": 240,
+    "distinct_materials": 64,
+    "bound_material_slots": 320,
+    "chosen_materials": 1
+  },
+  "samples_per_condition": 5,
+  "warmups_per_condition": 1,
+  "conditions": {
+    "collapsed": {
+      "warmups": {
+        "baseline": {
+          "elapsed_ms": 30.165999982273206,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 29.003500007092953
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.30010001501068473
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 29.91360001033172
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.09289997979067266
+            },
+            "_material_choices": {
+              "calls": 0,
+              "milliseconds": 0
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [],
+            "selected_material_labels": [],
+            "material_body_buttons": 0
+          },
+          "strict_hair_or_backend_calls": 0
+        },
+        "current": {
+          "elapsed_ms": 4.593999998178333,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 2.487899997504428
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.4264000162947923
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 4.270600009476766
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.0990999978967011
+            },
+            "_material_choices": {
+              "calls": 0,
+              "milliseconds": 0
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [],
+            "selected_material_labels": [],
+            "material_body_buttons": 0
+          },
+          "strict_hair_or_backend_calls": 0
+        }
+      },
+      "pairs": [
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 20.463399996515363,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 19.609500013757497
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.22570000146515667
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 20.28900000732392
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06580000626854599
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.4714000173844397,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.428000017767772
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.218400004087016
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.299899992067367
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.045400025555863976
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 2.4738000065553933,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.3844000059179962
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.24149997625499964
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.2988000127952546
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.04569999873638153
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 22.114799998234957,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 20.959399989806116
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2537999826017767
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 21.90560000599362
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.08829997386783361
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 23.312600009376183,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 22.389099991414696
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.22620000527240336
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 23.13230000436306
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.07319997530430555
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.439600008074194,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.3709999911952764
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.22799998987466097
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.272400015499443
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.04549999721348286
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 2.705999999307096,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.5952000103425235
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.24649998522363603
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.525900024920702
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.04770001396536827
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 21.87880000565201,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 21.003999980166554
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.222400005441159
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 21.704699989641085
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.07080001523718238
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 22.679499990772456,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 21.77219997975044
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2835999766830355
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 22.509700007503852
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06749999010935426
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.553700003772974,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.4284000208135694
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.24170000688172877
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.365099993767217
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.04579999949783087
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "aaa62d022679c9d582e7a2d8ec6e60cd4aee2051ed5430560bb875ce9ccbc294",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        }
+      ],
+      "baseline_samples_ms": [
+        20.463399996515363,
+        22.114799998234957,
+        23.312600009376183,
+        21.87880000565201,
+        22.679499990772456
+      ],
+      "current_samples_ms": [
+        2.4714000173844397,
+        2.4738000065553933,
+        2.439600008074194,
+        2.705999999307096,
+        2.553700003772974
+      ],
+      "baseline_median_ms": 22.114799998234957,
+      "current_median_ms": 2.4738000065553933,
+      "paired_differences_current_minus_baseline_ms": [
+        -17.991999979130924,
+        -19.640999991679564,
+        -20.87300000130199,
+        -19.172800006344914,
+        -20.125799986999482
+      ]
+    },
+    "objects": {
+      "warmups": {
+        "baseline": {
+          "elapsed_ms": 21.79600001545623,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 20.8652000001166
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.24429999757558107
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 21.568900003330782
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.06670001312159002
+            },
+            "_material_choices": {
+              "calls": 0,
+              "milliseconds": 0
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04",
+              "Foldout Main Rig"
+            ],
+            "selected_material_labels": [],
+            "material_body_buttons": 0
+          },
+          "strict_hair_or_backend_calls": 0
+        },
+        "current": {
+          "elapsed_ms": 2.4923000019043684,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 1.3954000023659319
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.21769999875687063
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 2.2778999991714954
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.05189998773857951
+            },
+            "_material_choices": {
+              "calls": 0,
+              "milliseconds": 0
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04",
+              "Foldout Main Rig"
+            ],
+            "selected_material_labels": [],
+            "material_body_buttons": 0
+          },
+          "strict_hair_or_backend_calls": 0
+        }
+      },
+      "pairs": [
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 24.366199999349192,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 23.359699989669025
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2896000223699957
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 24.1266000084579
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06329998723231256
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.976300020236522,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.7628000059630722
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2570000069681555
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.7379999810364097
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.05199998850002885
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 2.855200000340119,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.6368000069633126
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2582999877631664
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.607299975352362
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.054899981478229165
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 23.84189999429509,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 22.898700000951067
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.24189997930079699
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 23.627699993085116
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06710001616738737
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 26.05230000335723,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 24.951200000941753
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2767000114545226
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 25.8107999979984
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.07229999755509198
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.7938999992329627,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.5879000129643828
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.24500000290572643
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.557100000558421
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.05469997995533049
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 2.7763000107370317,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.5615999873261899
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2728999825194478
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.551800018409267
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.05040000542066991
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 21.221900009550154,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 20.34540000022389
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.21379999816417694
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 21.026300004450604
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06089999806135893
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 30.761600006371737,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 29.362699977355078
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.5471000040415674
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 30.419800023082644
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.096399977337569
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.9045999981462955,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.6347999917343259
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.26169998454861343
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.6513000193517655
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.05699999746866524
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "a6bf6d17a667f390afefe4887024b7fe4badb656e88971f177fcdf6e77b4fbc4",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [],
+              "material_body_buttons": 0
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        }
+      ],
+      "baseline_samples_ms": [
+        24.366199999349192,
+        23.84189999429509,
+        26.05230000335723,
+        21.221900009550154,
+        30.761600006371737
+      ],
+      "current_samples_ms": [
+        2.976300020236522,
+        2.855200000340119,
+        2.7938999992329627,
+        2.7763000107370317,
+        2.9045999981462955
+      ],
+      "baseline_median_ms": 24.366199999349192,
+      "current_median_ms": 2.855200000340119,
+      "paired_differences_current_minus_baseline_ms": [
+        -21.38989997911267,
+        -20.98669999395497,
+        -23.25840000412427,
+        -18.445599998813123,
+        -27.85700000822544
+      ]
+    },
+    "materials": {
+      "warmups": {
+        "baseline": {
+          "elapsed_ms": 25.585199997294694,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 24.187900009565055
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.2696000155992806
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 24.97229998698458
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.08299999171867967
+            },
+            "_material_choices": {
+              "calls": 1,
+              "milliseconds": 0.24240001221187413
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [],
+            "selected_material_labels": [
+              "Fixture Material 00"
+            ],
+            "material_body_buttons": 65
+          },
+          "strict_hair_or_backend_calls": 0
+        },
+        "current": {
+          "elapsed_ms": 2.748500002780929,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 1.5727000136394054
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.2423000114504248
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 2.545700001064688
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.0501000031363219
+            },
+            "_material_choices": {
+              "calls": 0,
+              "milliseconds": 0
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [],
+            "selected_material_labels": [
+              "Fixture Material 00"
+            ],
+            "material_body_buttons": 1
+          },
+          "strict_hair_or_backend_calls": 0
+        }
+      },
+      "pairs": [
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 21.63900001323782,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 20.458999992115423
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2334000018890947
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 21.138699987204745
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06540000322274864
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.19890000112354755
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.6914000045508146,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.5944000042509288
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2403999969828874
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.487299992935732
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.051000009989365935
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 2.3486000136472285,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.3538000057451427
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.21470000501722097
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.184899989515543
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.040399987483397126
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 19.748599996091798,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 18.634799984283745
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.21410000044852495
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 19.276499981060624
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06250001024454832
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.18709999858401716
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 21.06560001266189,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 19.880599982570857
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2510999911464751
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 20.56920001632534
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06479999865405262
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.1922000083141029
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.858599997125566,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.6107000119518489
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.3038999857380986
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.642000006744638
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.052799994591623545
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 4.076299985172227,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 2.2874999849591404
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.4558000073302537
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 3.7816000112798065
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.07380000897683203
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 26.281099999323487,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 24.895899987313896
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.26130001060664654
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 25.673800002550706
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.07169999298639596
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.21260001813061535
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 22.923799988348037,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 21.64169997558929
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.27409999165683985
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 22.393299994291738
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06590000702999532
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.21539998124353588
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.4935000110417604,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.4495000068563968
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.22070002160035074
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.3157999967224896
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.04409998655319214
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "42b4ec8133605e51e217b0e899e6f14f4cc9c7f9efddad5d3ad89a74d17da285",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        }
+      ],
+      "baseline_samples_ms": [
+        21.63900001323782,
+        19.748599996091798,
+        21.06560001266189,
+        26.281099999323487,
+        22.923799988348037
+      ],
+      "current_samples_ms": [
+        2.6914000045508146,
+        2.3486000136472285,
+        2.858599997125566,
+        4.076299985172227,
+        2.4935000110417604
+      ],
+      "baseline_median_ms": 21.63900001323782,
+      "current_median_ms": 2.6914000045508146,
+      "paired_differences_current_minus_baseline_ms": [
+        -18.947600008687004,
+        -17.39999998244457,
+        -18.207000015536323,
+        -22.20480001415126,
+        -20.430299977306277
+      ]
+    },
+    "both": {
+      "warmups": {
+        "baseline": {
+          "elapsed_ms": 23.31170000252314,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 22.074699983932078
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.2266000083182007
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 22.755399986635894
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.0633999879937619
+            },
+            "_material_choices": {
+              "calls": 1,
+              "milliseconds": 0.2212999970652163
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04",
+              "Foldout Main Rig"
+            ],
+            "selected_material_labels": [
+              "Fixture Material 00"
+            ],
+            "material_body_buttons": 65
+          },
+          "strict_hair_or_backend_calls": 0
+        },
+        "current": {
+          "elapsed_ms": 2.7815999928861856,
+          "inclusive_functions": {
+            "_helpers": {
+              "calls": 1,
+              "milliseconds": 1.5161000192165375
+            },
+            "_character_armatures": {
+              "calls": 1,
+              "milliseconds": 0.3251000016462058
+            },
+            "_collection_scope": {
+              "calls": 1,
+              "milliseconds": 2.5308000040240586
+            },
+            "collect_character": {
+              "calls": 1,
+              "milliseconds": 0.047699984861537814
+            },
+            "_material_choices": {
+              "calls": 0,
+              "milliseconds": 0
+            }
+          },
+          "raw_pointer_config_purity": true,
+          "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+          "collection": {
+            "objects": [
+              "Foldout Main Rig",
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04"
+            ],
+            "warnings": []
+          },
+          "layout": {
+            "object_header": "Objects · 5 Meshes · 1 Armatures",
+            "expanded_objects": [
+              "Bound Mesh 00",
+              "Bound Mesh 01",
+              "Bound Mesh 02",
+              "Bound Mesh 03",
+              "Bound Mesh 04",
+              "Foldout Main Rig"
+            ],
+            "selected_material_labels": [
+              "Fixture Material 00"
+            ],
+            "material_body_buttons": 1
+          },
+          "strict_hair_or_backend_calls": 0
+        }
+      },
+      "pairs": [
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 23.15170000656508,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 21.828199998708442
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.22929999977350235
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 22.581900004297495
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.06819999543949962
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.20479998784139752
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 3.583300014724955,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.6750000067986548
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.4258000117260963
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 3.3164999913424253
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.05699999746866524
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 2.6510000170674175,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.4749999972991645
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.24540000595152378
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.424100006464869
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.045199994929134846
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 25.4477999988012,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 23.482699994929135
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.28310000197961926
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 24.593800015281886
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.13530001160688698
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.35730001400224864
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 22.13219998520799,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 20.86699998471886
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2229000092484057
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 21.56619998277165
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.07120001828297973
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.21120000747032464
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 2.5662000116426498,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.430500007700175
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2269999822601676
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.3336000158451498
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.04610000178217888
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "current",
+            "baseline"
+          ],
+          "current": {
+            "elapsed_ms": 2.5074000004678965,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.3741999864578247
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2542999864090234
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.3090000031515956
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.04189999890513718
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "baseline": {
+            "elapsed_ms": 23.733099980745465,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 22.313800000119954
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.2491000050213188
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 23.12960001290776
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.07670000195503235
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.20619999850168824
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        },
+        {
+          "order": [
+            "baseline",
+            "current"
+          ],
+          "baseline": {
+            "elapsed_ms": 24.20929999789223,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 22.83619999070652
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.24569997913204134
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 23.596899991389364
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.1058999914675951
+              },
+              "_material_choices": {
+                "calls": 1,
+                "milliseconds": 0.20879998919554055
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 65
+            },
+            "strict_hair_or_backend_calls": 0
+          },
+          "current": {
+            "elapsed_ms": 3.0313000024762005,
+            "inclusive_functions": {
+              "_helpers": {
+                "calls": 1,
+                "milliseconds": 1.6580000228714198
+              },
+              "_character_armatures": {
+                "calls": 1,
+                "milliseconds": 0.274300022283569
+              },
+              "_collection_scope": {
+                "calls": 1,
+                "milliseconds": 2.7179000026080757
+              },
+              "collect_character": {
+                "calls": 1,
+                "milliseconds": 0.05240002064965665
+              },
+              "_material_choices": {
+                "calls": 0,
+                "milliseconds": 0
+              }
+            },
+            "raw_pointer_config_purity": true,
+            "fingerprint_sha256": "ec117a16004a8604e1f118324cb1cba020782330290e76638ae768a195f7e547",
+            "collection": {
+              "objects": [
+                "Foldout Main Rig",
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04"
+              ],
+              "warnings": []
+            },
+            "layout": {
+              "object_header": "Objects · 5 Meshes · 1 Armatures",
+              "expanded_objects": [
+                "Bound Mesh 00",
+                "Bound Mesh 01",
+                "Bound Mesh 02",
+                "Bound Mesh 03",
+                "Bound Mesh 04",
+                "Foldout Main Rig"
+              ],
+              "selected_material_labels": [
+                "Fixture Material 00"
+              ],
+              "material_body_buttons": 1
+            },
+            "strict_hair_or_backend_calls": 0
+          }
+        }
+      ],
+      "baseline_samples_ms": [
+        23.15170000656508,
+        25.4477999988012,
+        22.13219998520799,
+        23.733099980745465,
+        24.20929999789223
+      ],
+      "current_samples_ms": [
+        3.583300014724955,
+        2.6510000170674175,
+        2.5662000116426498,
+        2.5074000004678965,
+        3.0313000024762005
+      ],
+      "baseline_median_ms": 23.733099980745465,
+      "current_median_ms": 2.6510000170674175,
+      "paired_differences_current_minus_baseline_ms": [
+        -19.568399991840124,
+        -22.796799981733784,
+        -19.56599997356534,
+        -21.225699980277568,
+        -21.17799999541603
+      ]
+    }
+  },
+  "timing_scope": "Real bpy synthetic scene and RecordingLayout; wrapper-inclusive Python draw time only.",
+  "limitations": [
+    "Not rendered UI latency, mouse response, viewport FPS, memory or whole FBX timing.",
+    "Synthetic triangles/material slot density and foreign rig are explicit scaling conditions, not the artist model.",
+    "Inclusive profiler function times overlap and must not be added.",
+    "Registration, data generation, purity fingerprints and validation are outside the timed region.",
+    "No artist input, .blend save, preview, worker, renderer or Unity operation. Old 0.69.0 benchmarks are not combined."
+  ],
+  "baseline_archive_unchanged": true,
+  "current_sources_unchanged": true
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "character-designer.loaded-release-audit/1",
+  "started_utc": "2026-10-05T16:00:23.061156+00:00",
+  "activation_performed": false,
+  "refresh_performed": false,
+  "activation_source": "unrecorded; preflight already reported 0.76.3",
+  "saved": false,
+  "imported": false,
+  "action_switched": false,
+  "status": "failed",
+  "error": "Loaded function does not match installed release: stop_animation_runtime",
+  "traceback": "Traceback (most recent call last):\n  File \"D:/Blender/Projects/Character/X/Validation/animation_collection_20261005/audit_loaded_live.py\", line 59, in <module>\n    require(equal, 'Loaded function does not match installed release: ' + name)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 56, in require\n    raise RuntimeError(message)\nRuntimeError: Loaded function does not match installed release: stop_animation_runtime\n",
+  "finished_utc": "2026-10-05T16:00:26.406964+00:00"
+}

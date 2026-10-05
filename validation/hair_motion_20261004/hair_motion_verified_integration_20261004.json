@@ -1,0 +1,355 @@
+{
+  "schema": "cdesigner.hair-motion-integration-evidence/1",
+  "recordedUtc": "2026-10-04T17:35:54.1979218Z",
+  "taskComplete": true,
+  "status": "isolated Blender/Unity lifecycle, gravity and direct single-strand collision integration verified; live official Wiggle installation/CD0.76.1 refresh/configuration/artist save passed",
+  "model": "gpt-6.1-sol",
+  "reasoningEffort": "ultra",
+  "modelEvidence": "verified turn_context at UTC 2026-10-04T16:41:33.821Z; identifies this recorded phase, not every historical stage",
+  "modelEvidencePath": "C:/Users/Randy/.codex/sessions/2026/10/02/rollout-2026-10-02T02-58-29-01a0f8d5-1398-7482-bbe4-d123cd51098d.jsonl",
+  "modelEvidenceLine": 22778,
+  "modelEvidenceUtc": "2026-10-04T16:41:33.821Z",
+  "characterDesigner": "0.76.1",
+  "wiggle": "official 1.1.2; isolated native tests verified and installed/enabled as bl_ext.user_default.wiggle_bones in the live Blender5.1 artist session",
+  "blenderNative": "5.1.0 adfe2921d5f3",
+  "unityNative": "6000.5.9f1",
+  "sourceFiles": [
+    {
+      "path": "Assets/CharacterDesigner/Editor/HairMotionContractReader.cs",
+      "sha256": "6f6ff16a34bf662d81893ae9e8c0c68a4ad2a8568e778f807fdb2bd7eece85fd"
+    },
+    {
+      "path": "Assets/CharacterDesigner/Runtime/HairMotionContract.cs",
+      "sha256": "4f2d99c4a4f02abf3cc1268a2708ea33efbae4c204f9d3842b0d6492a9606993"
+    },
+    {
+      "path": "Assets/Scripts/Editor/AdventureCharacterWeaponTuningWindow.Physics.cs",
+      "sha256": "520ebaff78ea2ccf5c940d1b8d1275ae7db87f94250dd80dbe7637790d58936b"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterHairMotionBaselineHandoff.cs",
+      "sha256": "feb29451d0b8ae23347db764709e48dfb7323eb0b1911bc21951dfcf86666720"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterHairMotionConversion.cs",
+      "sha256": "36bee9f86c6e12886989de18d384f052c24538dbd575e10406c4f5926998af2d"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterHairMotionPlaybackVerification.cs",
+      "sha256": "429d54455c78a341c0112d147028b0598a76f48c39caee89b2e9f908f0517896"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterHairMotionPreviewGuard.cs",
+      "sha256": "065a632f64296b5bf04a6ad8dad11e7e0fedb24a5732caf9a4bab1eeb585db1c"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterHairMotionVerification.cs",
+      "sha256": "c2a8e1c3ccc35d6ee426712f52e504a9ea911dca0d44e2a1290aa0b997303fa7"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterHairMotionWindow.cs",
+      "sha256": "6007ddf5b0ef9c5891598597e304b188da8b431216290c4cc5f3740ee3952dc0"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterPhysicsPersistence.cs",
+      "sha256": "f9fa25f7fa6a11ed91f0b64f3a3fd81efd7e2d39061945f8e1c0fa6a7ab9e1e1"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterPhysicsPrefabPublisher.cs",
+      "sha256": "9c09000977bca59689350d59073ef33d1c87e7bfe897a055fafffc2ebb848ebd"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterPhysicsProfile.cs",
+      "sha256": "86650b9e9e1d4fca8c42a9a5d2a0a962c2d166c15e141f195d30e05a8fa7b074"
+    },
+    {
+      "path": "Assets/Scripts/Editor/CharacterPhysicsSetupService.cs",
+      "sha256": "5ab96e1528489cd29965955665d91b1fa8fe06495f32325b6f482a8bb0f10d7c"
+    },
+    {
+      "path": "Assets/Scripts/Editor/SceneBootstrapper.cs",
+      "sha256": "ac4bffffead76545b39e186a0c1e792a12290c1612f10a333a2842559497e5ea"
+    },
+    {
+      "path": "Assets/Scripts/Gameplay/Character/Physics/CharacterHairMotionPreviewTicket.cs",
+      "sha256": "22126c6cdc86ae5d099af4c2155ee00ecf1132ccc0f6d47e583c3db3a61ba5a3"
+    },
+    {
+      "path": "Assets/Scripts/Gameplay/Character/Physics/CharacterHairMotionRig.cs",
+      "sha256": "0b29c9bf333866c1e8cea3bd69484a427ae10fbaa2d5c0303fd4a293f0808244"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\HairMotion\\native-lifecycle-20261004-115839-0506100.json",
+      "sha256": "beb25e7c119b66596ec6e4fdd99a420d3c18fa4d4454ab3a6e7e3dbcce3ccefa"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\HairMotion\\native-play-537cc03b542243898eabc2645653958a-final-ef81022ad2004c18b47aa72ca7680f0f.json",
+      "sha256": "0ab87144ccfb404a81f18faf083717a07a46a1870d4181bb53808fcebeb3a9fa"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\HairMotion\\native-play-31b7b2675985466eb535cc5206b6dd38-final-9e9ac4da1590448c95e8ec88a7c092fe.json",
+      "sha256": "cb6d7f7de3d7dbf52dea2649ecfc79992da21744ced8efadf0d4ebb20af0c0c9"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\HairMotion\\native-play-31b7b2675985466eb535cc5206b6dd38-runtime-pending.json",
+      "sha256": "02294e165e8d756041bbd4b87fd7177a6206c09c0b0029b4decacc1623e049d7"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\unity_editor_support_build_final_20261004.log",
+      "sha256": "f9e34f19f1b727aa301a0339afbc5e5392089e3ad2a826ab6b5274e5d090538a",
+      "status": "historical successful supporting build for the preserved gravity integration"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\live_install_refresh_config_save_20261004T173113.695674_0000.json",
+      "sha256": "45687a1ef5f4bd3fdf8e5170322bd9537c708ffb67ae76e9f914108eee8c25b5",
+      "status": "immutable passed live install/refresh/configuration/preferences-save/artist-save report"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\live_install_refresh_config_save.py",
+      "sha256": "2024268eaf4a912d5b03453c8fc8ea1bcc555b8c70a900b732207ae96f26c437",
+      "status": "reviewed live installer/protection source; not an automatic startup task"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\wiggle_legacy_transition_51_20261004T171325895958Z.json",
+      "sha256": "def86a212d428441e19697f6d96ee9c30ecfd9817b03e89080907b6a65bc75f5",
+      "status": "passed isolated factory native legacy transition and rollback proof; no reload or automatic semantic migration"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\live_legacy_wiggle_read_20261005_005917_002501.json",
+      "sha256": "87025ef614f02aa1a0752bc0e5fd29a7779687fbd50e189d61cf36a1cd86c9ae",
+      "status": "pre-install live legacy audit retained as its original observation"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\restore_legacy_audit_empty_pointers_20261005_011758_595550.json",
+      "sha256": "5781322c84a5973a914bbe6b1fe706e21417efc126f7759de21d72de7e982767",
+      "status": "passed audit-pointer recovery check: zero empty pointers restored, zero nonempty values modified; raw/pose/selection/display exact; no artist save/reload"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\Wiggle2_inactive_settings_20261005_013122_907227.json",
+      "sha256": "7ad81e44e05ede3450c072899b851f0ca05bc2553da55dbfb3ecab9e95d0cf16",
+      "status": "independent inactive legacy settings backup"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\X_before_hair_motion_20261005_013122_907227.blend",
+      "sha256": "e9c1b94bb5aa4303d640db87b79d818cb5d900bb5cc4131745e1813c10dc0bb3",
+      "status": "independent recovery copy; native FINISHED; not an artist reopen proof"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\real_hair_preview_validation_51_headlocal3.json",
+      "sha256": "e77db2307671820d39ce45f79a6551dc4c74df69202e5deb843a1c1dbebf0883",
+      "status": "frozen isolated real-character preview/candidate context; historical 375 meshes/20 Shape Keys retained"
+    }
+  ],
+  "artistIntegration": {
+    "reportStatus": "passed",
+    "reportFinishedUtc": "2026-10-04T17:32:29.600338+00:00",
+    "blenderRuntime": "5.1.0",
+    "loadedCharacterDesigner": "0.76.1",
+    "backendModule": "bl_ext.user_default.wiggle_bones",
+    "backendVersion": "1.1.2",
+    "officialHashesExact": true,
+    "nativeExtensionInstallResult": "FINISHED",
+    "nativeExtensionEnableResult": "already_enabled_preserved",
+    "preferencesSaveResult": "FINISHED",
+    "artistSaveResult": "FINISHED",
+    "artistPath": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "artistSavedLocal": "2026-10-05T01:32:20.3313822+08:00",
+    "artistBytes": 32258575,
+    "artistSha256": "2690a4a97fa30e0e94f7df6a14d3f75e7ec8f5b4e71175d91ac966da6875445d",
+    "uiTitleClean": true,
+    "uiTitleProof": "Root post-save native/UI observation",
+    "sourceUid": "331afdb7e5154ae1aaa39603a4f61768",
+    "configuredStrands": 32,
+    "groups": { "FRONT": 10, "SIDE": 8, "BACK": 14, "UNASSIGNED": 0 },
+    "mirrorIdRecords": 24,
+    "centerSelfIdentityRecords": 2,
+    "mirrorCountScope": "24 strand records carrying mirror IDs, including two center self-identities; not a count of bilateral pairs",
+    "liveAssetCounts": {
+      "meshes": 377,
+      "vertices": 118221,
+      "shapeKeys": 40,
+      "restBones": 2415,
+      "weightAssignments": 140535,
+      "actions": 3
+    },
+    "isolatedHistoricalAssetCounts": {
+      "meshes": 375,
+      "shapeKeys": 20,
+      "scope": "frozen isolated preview/candidate input; compare within its original fingerprint schema and input, not against current live scene totals"
+    },
+    "liveRawAssetSha256": "cd2c98b94f2aa7686d40b0301d08486a5b69593c8ad4c94d9e87c36533cc81c6",
+    "livePortableAssetSha256": "a30445c7cc30cd8df74b85538ca7f633b2dd13844d614128ea13d91aabe85724",
+    "protectionCheckpoints": 7,
+    "allRawSelectionDisplayPoseInputsLegacySettingsExact": true,
+    "maximumEvaluatedPoseMatrixError": 0.0,
+    "mode": "OBJECT",
+    "activeObject": "Cosha",
+    "selectedObjects": [ "Cosha" ],
+    "frame": 39,
+    "subframe": 0.0,
+    "editorRestored": "VIEW_3D",
+    "automaticUiHighlight": false,
+    "newOwnedIdentityTexts": 1,
+    "previewStarted": false,
+    "simulationBaked": false,
+    "artistOpenedOrReloaded": false,
+    "independentArtistDiskReopenAudit": false,
+    "runtimeSourceChangedByLiveStep": false,
+    "legacy": {
+      "module": "wiggle_2",
+      "version": "2.2.4",
+      "inactive": true,
+      "nativeDisableVerified": true,
+      "originalFileRetained": true,
+      "sourceSha256": "7333687ae3b6fd20feae8afda649faed1d99bc7b98e92622a8993c09061deac1",
+      "topLevelValuesAndPresenceExact": true,
+      "inactiveRawBackingExactAfterOfficialRegister": true,
+      "automaticConversion": false,
+      "settingsBackup": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\Wiggle2_inactive_settings_20261005_013122_907227.json",
+      "settingsBackupSha256": "7ad81e44e05ede3450c072899b851f0ca05bc2553da55dbfb3ecab9e95d0cf16"
+    },
+    "recovery": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\X_before_hair_motion_20261005_013122_907227.blend",
+      "sha256": "e9c1b94bb5aa4303d640db87b79d818cb5d900bb5cc4131745e1813c10dc0bb3",
+      "nativeResult": "FINISHED"
+    }
+  },
+  "nativeDynamic": {
+    "samplingMode": "focused-eight-concurrent-then-thirty-two",
+    "sampleCount": 2688,
+    "preparedConfigurations": 96,
+    "maximumActiveCohort": 32,
+    "passed": true,
+    "nativeChecksPassed": true,
+    "nativeIndependentResponseValidated": true,
+    "exactNativeStageScheduleComparable": true,
+    "contextPreserved": true,
+    "filesPreserved": true,
+    "playStartSettingPreserved": true,
+    "builderLeaseReleased": true,
+    "maximumFixedRootErrorMeters": 2.604774635983631E-07,
+    "maximumUnchangedStrandDifferenceMeters": 0.0,
+    "changedStrandDifferenceMeters": 0.02753540128469467,
+    "physicalEquivalenceValidated": false,
+    "exactTimeScheduleComparableWithBlender": false,
+    "independenceStimulus": "single-strand gravity counterfactual; not a direct collision-contact test",
+    "playbackSourceSha256": "4eac0e51932b39bfaae6aee8f2cf3f9639936d0e9a609234913e53de8f79aba8"
+  },
+  "nativeCollision": {
+    "completedUtc": "2026-10-04T16:20:46.2943173Z",
+    "samplingMode": "owned-sphere-contact-versus-control-eight-concurrent",
+    "sampleCount": 768,
+    "contactFrames": 32,
+    "preparedConfigurations": 96,
+    "maximumActiveCohort": 8,
+    "passed": true,
+    "nativeChecksPassed": true,
+    "nativeCollisionContactValidated": true,
+    "nativeCollisionIsolationValidated": true,
+    "nativeIndependentResponseValidated": true,
+    "exactNativeStageScheduleComparable": true,
+    "contextPreserved": true,
+    "filesPreserved": true,
+    "playStartSettingPreserved": true,
+    "builderLeaseReleased": true,
+    "maximumFixedRootErrorMeters": 2.604774635983631E-07,
+    "maximumUnchangedStrandDifferenceMeters": 0.0,
+    "changedStrandDifferenceMeters": 0.00666339136660099,
+    "minimumOtherConservativeClearanceMeters": 0.09564614507482139,
+    "physicalEquivalenceValidated": false,
+    "exactTimeScheduleComparableWithBlender": false,
+    "independenceStimulus": "equal native/semantic/SyncMirror/collider settings; only the owned Head sphere trajectory differs between same-clock focused twins",
+    "playbackSourceSha256": "429d54455c78a341c0112d147028b0598a76f48c39caee89b2e9f908f0517896",
+    "cleanup": {
+      "firstBackgroundAttempt": "StableCleanup reached its 120-second timeout; exact owned fixture/Pending/Builder lease retained",
+      "successfulRetry": "Unity foreground plus existing idle Cancel requeued the same exact guarded cleanup after fresh authorized normal Stop",
+      "persistenceFlagsCleared": false,
+      "codeGateWaived": false,
+      "timeoutCause": "not established; this run does not prove reliable unattended cleanup"
+    }
+  },
+  "supportingBuild": {
+    "editor": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\unity_editor_collision_support_build_20261005.log",
+      "exitCode": 0,
+      "errors": 0,
+      "warnings": 220,
+      "seconds": 197.48,
+      "sha256": "1c4a973353fc4d325528efccca43689bf3cef9c37679dab9f574b300e0cea728",
+      "playbackSourceSha256": "429d54455c78a341c0112d147028b0598a76f48c39caee89b2e9f908f0517896"
+    },
+    "characterPhysics": {
+      "exitCode": 0,
+      "errors": 0,
+      "warnings": 49,
+      "seconds": 11.88,
+      "source": "earlier completed command result in this task"
+    },
+    "retainedDotnetBuildWorkers": 0,
+    "workerVerificationSource": "Root Get-Process after the completed collision supporting build returned no retained task dotnet/MSBuild/VBCS workers"
+  },
+  "deployment": {
+    "cdFileChecks": "144 files; 5.1, 5.2 and X zero differences",
+    "artistRefresh": "passed; live Blender5.1 loaded Character Designer0.76.1",
+    "artistConfiguration": "passed; source-owned32 strands Front10/Side8/Back14 with strict native proof",
+    "artistSave": "FINISHED; current X.blend disk hash and clean UI title verified",
+    "officialWiggleInstallation": "FINISHED; bl_ext.user_default.wiggle_bones1.1.2 enabled; preferences save FINISHED",
+    "unityRefresh": "verified native compile and actual Play",
+    "nativeEditorDllUtc": "2026-10-04T16:00:24.9005288Z",
+    "nativeEditorDllBytes": 6639104,
+    "gravityPlaybackDeployment": "Docs/PendingPatches/CharacterHairMotion_20261004/ConcurrentOriginalSources-20261004-140616-a2e46dde/deployment.json",
+    "collisionPlaybackDeployment": "Docs/PendingPatches/CharacterHairMotion_20261004/CollisionCompileFixOriginalSources-20261004-155932-6846997f/deployment.json",
+    "collisionDeploymentProof": "Current formal source SHA and actual native Editor DLL timestamp match the subsequently successful native collision execution; deployment.json retains its original pre-compile pending state"
+  },
+  "endScene": {
+    "name": "Adventure",
+    "path": "Assets/Scenes/Main/Adventure.unity",
+    "loadedScenes": 1,
+    "dirty": true,
+    "roots": 46,
+    "diskSha256": "1e52f0a3ecbe310ebe2031232b78c46ec296cd3a94ad90d908f825eaa3abb3f6",
+    "proof": "Root fresh native read after authorized normal Stop and exact guarded cleanup; final collision report ContextPreserved/FilesPreserved true; scene disk hash independently read unchanged",
+    "originalSceneSavedByQa": false,
+    "scope": "Unity end-scene snapshot at release to Main; no claim about subsequent Main scene activity"
+  },
+  "limitations": [
+    "Functional native QA with 96 prepared configurations; not a per-component performance benchmark.",
+    "Wiggle-to-Magica equal-time trajectory and physical equivalence are not asserted.",
+    "Production Hair baseline application remains explicit; isolated fixtures do not apply a profile to the artist or production actor.",
+    "Lifecycle Adventure46 dirty, gravity Billiards1 clean, and later collision Adventure46 dirty are separate human-selected contexts; no original scene save or reload claim.",
+    "Old staged uncompiled hash index and sequential failed reports remain historical evidence.",
+    "Collision background cleanup first timed out; foreground plus exact guarded idle Cancel completed it without flag clearing or gate waiver. Scheduling cause remains unproven.",
+    "Supporting offline builds supplement actual native compilation/Play; the separate immutable live report establishes artist installation, refresh, configuration and save.",
+    "No artist preview/bake/reload was started during installation/save, and no independent artist disk-reopen audit is claimed.",
+    "Live377-mesh/40-key and isolated375-mesh/20-key fingerprints describe different saved/scene inputs; their preservation comparisons remain scoped to each original input.",
+    "Inactive legacy Wiggle2 settings are retained separately; official registration does not automatically migrate their semantic values."
+  ],
+  "nextAction": "Task completed with one final central record. Future targeted review is triggered by intentional Rest/identity/backend changes or an explicit production Unity profile Apply.",
+  "centralRecord": {
+    "path": "D:\\Codex\\資料庫\\电脑与工作环境\\Blender性能優化台帳.md",
+    "entry": "CD-HAIR-MOTION-20261005-01",
+    "dateLocal": "2026-10-05",
+    "policy": "one final task entry; existing switch-performance history updated in place"
+  },
+  "collisionIndependence": {
+    "status": "direct native contact and unilateral response check passed",
+    "existingEvidence": "unique owned native sphere index; complete Rest-particle/edge/attribute proof; actual native edge geometry, new normal/friction relative to initial and simultaneous control, significant target response and positive other-chain clearance under equal measured native clocks",
+    "nativePlaybackSha256": "429d54455c78a341c0112d147028b0598a76f48c39caee89b2e9f908f0517896",
+    "stagedReview": "independent read-only reviews preceded native compilation and execution; current formal/native evidence supersedes the earlier staged pending status",
+    "nativeMenu": "Tools/RandomRealm/Character/Verify Hair Motion Native Collision (Latest Proven QA)",
+    "verifiedScope": "same-clock eight-team 96-frame owned-sphere trajectory counterfactual; all96 saved settings/references/selection/Rest preserved; gravity/all32 historical pass unchanged"
+  },
+  "unityOwnership": {
+    "owner": "Main; explicitly released after completed Root verification",
+    "mainReturned": true,
+    "collisionNativeRun": "completed with all native collision and preservation flags true",
+    "normalStopAuthorization": "fresh human authorization for the current Adventure Play; older Billiards authorization was not reused",
+    "releasedToMain": true,
+    "endSceneAtRelease": "Adventure, sole loaded scene, dirty, 46 roots; owned HairPlay closed without saving the original scene",
+    "releaseProof": "Root explicit handback after native contract/scene/Console checks; no further Unity or Assets actions in this documentation update",
+    "readSourceAtRelease": "Root native idle/end-scene audit and final collision report; this is a release snapshot without a claim about Main's later activity",
+    "pendingQuestion": null
+  }
+}

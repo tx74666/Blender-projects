@@ -1,0 +1,31 @@
+{
+  "schema": "cdesigner.wiggle-legacy-native-transition/1",
+  "started_utc": "20261004T170439326844Z",
+  "ok": false,
+  "factory_only": true,
+  "blender_version": [
+    5,
+    1,
+    0
+  ],
+  "legacy_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\wiggle_2.py",
+  "official_source": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\backend\\wiggle_bones",
+  "report_path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\wiggle_legacy_transition_51_20261004T170439326844Z.json",
+  "forbidden_calls": [],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 264, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 192, in main\n    before = phase('legacy_enabled', scene, armature, bone, legacy, minimal_scene, inactive_bone)\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 102, in phase\n    record = {'snapshot': snapshot(scene, armature, bone), 'schema': schemas(), 'handlers': handler_inventory(),\n                          ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 96, in snapshot\n    'object_world': native(armature.matrix_world), 'bone_basis': native(bone.matrix_basis),\n                    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 61, in native\n    raise TypeError('Unproven snapshot value: ' + type(value).__name__)\nTypeError: Unproven snapshot value: Matrix\n"
+  ],
+  "phases": {},
+  "legacy_sha256_before": "7333687ae3b6fd20feae8afda649faed1d99bc7b98e92622a8993c09061deac1",
+  "official_hashes_before": {
+    "__init__.py": "b846515333d4df39ee9364f7c580fa8c23800e28f030fb5a52ff1e84c63d5970",
+    "blender_manifest.toml": "c55705d843420ec1ed5e0006bb46ba41eabdb57de4577d78b5cbc1fcc7a6e42c",
+    "LICENSE": "a0ee746064b06d09cab0768116ec265fd0d45261d4087c9ad2c698a07c7aac0e",
+    "operators.py": "077dcbed00077eb5d4d18ee2709db8865bf117397d497cc5642653b6573abad5",
+    "physics_engine.py": "5ab41f52cc8d69a62da04c9809abac4e35b15f4aafc5619fb22eb1384c86b086",
+    "properties.py": "8dee2a28f0ba8e515efa5dc0aa2257c1fdd0d51e7d5d0abb8fb0397baf7719b9",
+    "wiggle_core.py": "366708f1fb2e15e4026ee4436df0d33080753e2cb33b411b03d1c941daa96d5c",
+    "wiggle_ui.py": "3eac1c3ea339bbc9e35a23c76b8a184dbbedff43fd71282ea99794c0f1021d5a"
+  },
+  "completed_utc": "2026-10-04T17:04:39.360853+00:00"
+}

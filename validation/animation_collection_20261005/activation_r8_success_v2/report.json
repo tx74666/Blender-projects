@@ -1,0 +1,16 @@
+{
+  "schema": "character-designer.minimal-live-activation/1",
+  "script_sha256": "7bec23c40df218032278274c34863ce06cf31b4fd668b87427c359ba9827b807",
+  "inventory_sha256": "89a55c7005131d2175a2b18568d3f57938b9ac34deed51f0a4175873556d19d5",
+  "utc": "2026-10-05T14:41:44.625825+00:00",
+  "background": true,
+  "runtime": "5.1.0",
+  "status": "blocked",
+  "injected_failure": null,
+  "preserved": false,
+  "rollback_complete": false,
+  "old_registered_classes_preserved": false,
+  "saved": false,
+  "error": "Cannot prove saved native value: Vector",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 388, in run\n    before = snapshot(main)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 215, in snapshot\n    pose = [(bone.name, plain(bone.location), plain(bone.rotation_euler),\n                        ~~~~~^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 93, in plain\n    raise RuntimeError('Cannot prove saved native value: ' + type(value).__name__)\nRuntimeError: Cannot prove saved native value: Vector\n"
+}

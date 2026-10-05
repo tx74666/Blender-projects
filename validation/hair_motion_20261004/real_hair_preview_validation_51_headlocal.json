@@ -1,0 +1,412 @@
+{
+  "ok": false,
+  "blender": "5.1.0",
+  "source": "Hair",
+  "artist_path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "artist_saved": false,
+  "simulation_baked": false,
+  "stages": [],
+  "limitations": [
+    "backend colliders/wind/pins are disabled for this preview",
+    "no GUI or Unity validation",
+    "solver coefficients are not a native-material physical-equivalence measurement",
+    "settings sync is checked; mirrored trajectory equivalence is not asserted",
+    "decay is an observed trajectory diagnostic, not a material calibration"
+  ],
+  "source_uid": "331afdb7e5154ae1aaa39603a4f61768",
+  "topology": "7d502a198f63f0d03d6eb477ae54a30539eb276106aa177d772863f16bb5fc34",
+  "counts": {
+    "strands": 32,
+    "segments": 128
+  },
+  "groups": {
+    "BACK": 14,
+    "FRONT": 10,
+    "SIDE": 8
+  },
+  "firstpair_ids": [
+    "9333e016c13a5b3a8604ba72db574938",
+    "21b5f9ba9afd52d98498cf3bc52dd068"
+  ],
+  "longpair_ids": [
+    "ddef6bde2587569d90b4ccf2837ed239",
+    "201e0051e6fa5a87b67945dd842abd07"
+  ],
+  "initial_fingerprint": {
+    "sha256": "ed5ea33f5ab08328e6e6b81cb7b9b06f9b64b15390558804261813c1000e7faf",
+    "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+    "counts": {
+      "meshes": 375,
+      "vertices": 110905,
+      "coordinate_bytes": 2182140,
+      "uv_bytes": 5154032,
+      "uv_layers": 21,
+      "shape_keys": 20,
+      "rest_bones": 2415,
+      "armature_modifiers": 7,
+      "weight_assignments": 140562,
+      "actions": 3
+    },
+    "elapsed_seconds": 5.5616813999949954,
+    "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+    "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+  },
+  "metadata_fingerprint": {
+    "sha256": "ed5ea33f5ab08328e6e6b81cb7b9b06f9b64b15390558804261813c1000e7faf",
+    "portable_sha256": "c0a05c28207cfefb5e441686ee14b56eb5da91495bc2fe2f81a97ce9f576e4c2",
+    "counts": {
+      "meshes": 375,
+      "vertices": 110905,
+      "coordinate_bytes": 2182140,
+      "uv_bytes": 5154032,
+      "uv_layers": 21,
+      "shape_keys": 20,
+      "rest_bones": 2415,
+      "armature_modifiers": 7,
+      "weight_assignments": 140562,
+      "actions": 3
+    },
+    "elapsed_seconds": 5.955381599997054,
+    "method": "raw foreach_get coordinate/UV arrays + streamed weights/Rest + material/parent/Armature modifier/Action proof",
+    "portable_method": "ID references use RNA type/name/library; byte data is unchanged; compare only the same fingerprint schema"
+  },
+  "input": {
+    "kind": "root_armature_world_rotation",
+    "anchor": "Head",
+    "input": "CoshaRig",
+    "axis": "X",
+    "constraint_trace": [],
+    "fallback_reason": "Terminal input is animated/driven, Hair-owned or has unproven parent feedback.",
+    "proof_diagnostics": {
+      "terminal_bone": "Head",
+      "rotation_driver_or_animation_paths": [],
+      "parent_or_driver_feedback_rejection": [
+        {
+          "kind": "transform_or_constraint_driver",
+          "bone": "CTRL_master",
+          "paths": [
+            "pose.bones[\"CTRL_master\"].scale",
+            "pose.bones[\"CTRL_master\"].scale",
+            "pose.bones[\"CTRL_master\"].scale"
+          ]
+        }
+      ],
+      "dependency_closure": {
+        "proved": false,
+        "entry_anchor": "Head",
+        "nodes": [
+          {
+            "bone": "Head",
+            "parent": "Neck",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "Neck",
+            "parent": "UpperChest",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "UpperChest",
+            "parent": "Chest",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "Chest",
+            "parent": "spine",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "spine",
+            "parent": "Hips",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "Hips",
+            "parent": null,
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_master",
+            "parent": null,
+            "owner": null,
+            "transform_or_constraint_driver_paths": [
+              "pose.bones[\"CTRL_master\"].scale",
+              "pose.bones[\"CTRL_master\"].scale",
+              "pose.bones[\"CTRL_master\"].scale"
+            ],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_1",
+            "parent": "MCH_torso_offset_1",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "MCH_torso_offset_1",
+            "parent": "Hips",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_bend",
+            "parent": "Hips",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_2",
+            "parent": "MCH_torso_offset_2",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "MCH_torso_offset_2",
+            "parent": "CTRL_torso_1",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "CTRL_torso_3",
+            "parent": "MCH_torso_offset_3",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          },
+          {
+            "bone": "MCH_torso_offset_3",
+            "parent": "CTRL_torso_2",
+            "owner": null,
+            "transform_or_constraint_driver_paths": [],
+            "rest_driver_or_animation_paths": []
+          }
+        ],
+        "edges": [
+          {
+            "from": "Head",
+            "to": "Neck",
+            "kind": "parent"
+          },
+          {
+            "from": "Neck",
+            "to": "UpperChest",
+            "kind": "parent"
+          },
+          {
+            "from": "UpperChest",
+            "to": "Chest",
+            "kind": "parent"
+          },
+          {
+            "from": "Chest",
+            "to": "spine",
+            "kind": "parent"
+          },
+          {
+            "from": "spine",
+            "to": "Hips",
+            "kind": "parent"
+          },
+          {
+            "from": "Hips",
+            "to": "CTRL_master",
+            "kind": "constraint",
+            "name": "CD Root Follow",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "POSE",
+            "target_space": "POSE",
+            "animated_or_driven_fields": [],
+            "mix_mode": "BEFORE"
+          },
+          {
+            "from": "spine",
+            "to": "CTRL_torso_1",
+            "kind": "constraint",
+            "name": "CD Torso FK",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "WORLD",
+            "target_space": "WORLD",
+            "animated_or_driven_fields": [],
+            "mix_mode": "REPLACE"
+          },
+          {
+            "from": "CTRL_torso_1",
+            "to": "MCH_torso_offset_1",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_1",
+            "to": "Hips",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_1",
+            "to": "CTRL_torso_bend",
+            "kind": "constraint",
+            "name": "CD Torso Shared Bend",
+            "type": "COPY_ROTATION",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 0.3333333432674408,
+            "owner_space": "LOCAL",
+            "target_space": "LOCAL",
+            "animated_or_driven_fields": [],
+            "mix_mode": "AFTER",
+            "use_offset": true,
+            "use_x": true,
+            "use_y": true,
+            "use_z": true,
+            "invert_x": false,
+            "invert_y": false,
+            "invert_z": false
+          },
+          {
+            "from": "CTRL_torso_bend",
+            "to": "Hips",
+            "kind": "parent"
+          },
+          {
+            "from": "Chest",
+            "to": "CTRL_torso_2",
+            "kind": "constraint",
+            "name": "CD Torso FK",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "WORLD",
+            "target_space": "WORLD",
+            "animated_or_driven_fields": [],
+            "mix_mode": "REPLACE"
+          },
+          {
+            "from": "CTRL_torso_2",
+            "to": "MCH_torso_offset_2",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_2",
+            "to": "CTRL_torso_1",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_2",
+            "to": "CTRL_torso_bend",
+            "kind": "constraint",
+            "name": "CD Torso Shared Bend",
+            "type": "COPY_ROTATION",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 0.3333333432674408,
+            "owner_space": "LOCAL",
+            "target_space": "LOCAL",
+            "animated_or_driven_fields": [],
+            "mix_mode": "AFTER",
+            "use_offset": true,
+            "use_x": true,
+            "use_y": true,
+            "use_z": true,
+            "invert_x": false,
+            "invert_y": false,
+            "invert_z": false
+          },
+          {
+            "from": "UpperChest",
+            "to": "CTRL_torso_3",
+            "kind": "constraint",
+            "name": "CD Torso FK",
+            "type": "COPY_TRANSFORMS",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 1.0,
+            "owner_space": "WORLD",
+            "target_space": "WORLD",
+            "animated_or_driven_fields": [],
+            "mix_mode": "REPLACE"
+          },
+          {
+            "from": "CTRL_torso_3",
+            "to": "MCH_torso_offset_3",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_3",
+            "to": "CTRL_torso_2",
+            "kind": "parent"
+          },
+          {
+            "from": "MCH_torso_offset_3",
+            "to": "CTRL_torso_bend",
+            "kind": "constraint",
+            "name": "CD Torso Shared Bend",
+            "type": "COPY_ROTATION",
+            "target_object": "CoshaRig",
+            "mute": false,
+            "influence": 0.3333333432674408,
+            "owner_space": "LOCAL",
+            "target_space": "LOCAL",
+            "animated_or_driven_fields": [],
+            "mix_mode": "AFTER",
+            "use_offset": true,
+            "use_x": true,
+            "use_y": true,
+            "use_z": true,
+            "invert_x": false,
+            "invert_y": false,
+            "invert_z": false
+          }
+        ],
+        "Object_dependencies": [
+          {
+            "object": "CoshaRig",
+            "parent": null,
+            "transform_driver_paths": [],
+            "constraint_count": 0
+          }
+        ],
+        "rejections": [
+          {
+            "kind": "transform_or_constraint_driver",
+            "bone": "CTRL_master",
+            "paths": [
+              "pose.bones[\"CTRL_master\"].scale",
+              "pose.bones[\"CTRL_master\"].scale",
+              "pose.bones[\"CTRL_master\"].scale"
+            ]
+          }
+        ],
+        "accepted_constraint_types": [
+          "COPY_TRANSFORMS",
+          "COPY_ROTATION",
+          "COPY_LOCATION"
+        ],
+        "proof_scope": "native same-Armature parent/copy-constraint DAG, Hair-disjoint, without transform/constraint drivers"
+      },
+      "terminal_Hair_owned": false
+    }
+  },
+  "error": "Head-local input is unproven; inspect native dependency_closure rejections before changing the gate."
+}

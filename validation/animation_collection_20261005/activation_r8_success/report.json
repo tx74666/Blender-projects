@@ -1,0 +1,16 @@
+{
+  "schema": "character-designer.minimal-live-activation/1",
+  "script_sha256": "ce119b091d578ccf6bed6a9e114e0d14a8e858591e21eba75f6d278e7f8f9c1f",
+  "inventory_sha256": "89a55c7005131d2175a2b18568d3f57938b9ac34deed51f0a4175873556d19d5",
+  "utc": "2026-10-05T14:36:43.178927+00:00",
+  "background": true,
+  "runtime": "5.1.0",
+  "status": "blocked",
+  "injected_failure": null,
+  "preserved": false,
+  "rollback_complete": false,
+  "old_registered_classes_preserved": false,
+  "saved": false,
+  "error": "'bpy_prop_collection_idprop' object is not callable",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 384, in run\n    before = snapshot(main)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 197, in snapshot\n    groups = [(identity(owner), id_pg_snapshot(owner)) for collection in (\n                                ~~~~~~~~~~~~~~^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 129, in id_pg_snapshot\n    result[prop.identifier] = [True, pg_snapshot(value)]\n                                     ~~~~~~~~~~~^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 95, in pg_snapshot\n    result = {'type': group.bl_rna.identifier, 'raw': plain(dict(group.items())), 'fields': {}}\n                                                                 ~~~~~~~~~~~^^\nTypeError: 'bpy_prop_collection_idprop' object is not callable\n"
+}

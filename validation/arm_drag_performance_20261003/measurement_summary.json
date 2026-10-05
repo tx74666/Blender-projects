@@ -1,0 +1,628 @@
+{
+  "method": "PDH 0.5s snapshots cover windows, not individual ~20ms movements; system page I/O has no per-process attribution.",
+  "runs": {
+    "body_probe_fixed": {
+      "status": "complete",
+      "cases": [
+        {
+          "name": "baseline",
+          "n": 6,
+          "p50Ms": 21.77904999916791,
+          "p95Ms": 22.768400001950795,
+          "cacheColdMs": 21.257199994579423,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 1,
+            "availableMiBMin": 724.8984375,
+            "availableMiBMax": 724.8984375,
+            "usedPercentMax": 95,
+            "counters": {
+              "pagesInputPerSec": {
+                "median": 1957.814,
+                "max": 1957.814
+              },
+              "pagesOutputPerSec": {
+                "median": 0.0,
+                "max": 0.0
+              },
+              "pageReadsPerSec": {
+                "median": 159.496,
+                "max": 159.496
+              },
+              "systemCpuPercent": {
+                "median": 47.631,
+                "max": 47.631
+              },
+              "diskReadBytesPerSec": {
+                "median": 7749721.978,
+                "max": 7749721.978
+              },
+              "diskWriteBytesPerSec": {
+                "median": 2196707.284,
+                "max": 2196707.284
+              }
+            },
+            "processes": {
+              "31344": {
+                "workingSetBytes": {
+                  "median": 643678208,
+                  "max": 643678208
+                },
+                "privateCommitBytes": {
+                  "median": 712232960,
+                  "max": 712232960
+                },
+                "cpuCoreEquivalents": {
+                  "median": 1.308,
+                  "max": 1.308
+                },
+                "allPageFaultsPerSec": {
+                  "median": 51527.3,
+                  "max": 51527.3
+                }
+              },
+              "40588": {
+                "workingSetBytes": {
+                  "median": 345976832,
+                  "max": 345976832
+                },
+                "privateCommitBytes": {
+                  "median": 4571873280,
+                  "max": 4571873280
+                },
+                "cpuCoreEquivalents": {
+                  "median": 0.125,
+                  "max": 0.125
+                },
+                "allPageFaultsPerSec": {
+                  "median": 0.0,
+                  "max": 0.0
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "no_subsurf",
+          "n": 6,
+          "p50Ms": 22.382750001270324,
+          "p95Ms": 23.340250001638196,
+          "cacheColdMs": 22.92279999528546,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 0
+          }
+        },
+        {
+          "name": "no_forearm",
+          "n": 6,
+          "p50Ms": 21.892599997954676,
+          "p95Ms": 23.830574997191434,
+          "cacheColdMs": 25.746799998159986,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 0
+          }
+        },
+        {
+          "name": "no_subsurf_no_forearm",
+          "n": 6,
+          "p50Ms": 30.109100003755884,
+          "p95Ms": 31.977749998986837,
+          "cacheColdMs": 26.688899997679982,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 0
+          }
+        }
+      ],
+      "fullRun": {
+        "count": 17,
+        "availableMiBMin": 686.1875,
+        "availableMiBMax": 1244.27734375,
+        "usedPercentMax": 95,
+        "counters": {
+          "pagesInputPerSec": {
+            "median": 11745.994,
+            "max": 69359.017
+          },
+          "pagesOutputPerSec": {
+            "median": 0.0,
+            "max": 9638.242
+          },
+          "pageReadsPerSec": {
+            "median": 307.197,
+            "max": 6726.822
+          },
+          "systemCpuPercent": {
+            "median": 41.841,
+            "max": 67.55
+          },
+          "diskReadBytesPerSec": {
+            "median": 47684648.796,
+            "max": 282590338.729
+          },
+          "diskWriteBytesPerSec": {
+            "median": 2645494.798,
+            "max": 53469805.054
+          }
+        },
+        "processes": {
+          "31344": {
+            "workingSetBytes": {
+              "median": 502632448,
+              "max": 649711616
+            },
+            "privateCommitBytes": {
+              "median": 573730816,
+              "max": 717234176
+            },
+            "cpuCoreEquivalents": {
+              "median": 0.998,
+              "max": 1.434
+            },
+            "allPageFaultsPerSec": {
+              "median": 28117.15,
+              "max": 190691.0
+            }
+          },
+          "40588": {
+            "workingSetBytes": {
+              "median": 345976832,
+              "max": 353673216
+            },
+            "privateCommitBytes": {
+              "median": 4571873280,
+              "max": 4571873280
+            },
+            "cpuCoreEquivalents": {
+              "median": 0.0935,
+              "max": 0.187
+            },
+            "allPageFaultsPerSec": {
+              "median": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      },
+      "caseWindow": {
+        "count": 3,
+        "availableMiBMin": 686.1875,
+        "availableMiBMax": 724.8984375,
+        "usedPercentMax": 95,
+        "counters": {
+          "pagesInputPerSec": {
+            "median": 1957.814,
+            "max": 2738.841
+          },
+          "pagesOutputPerSec": {
+            "median": 0.0,
+            "max": 0.0
+          },
+          "pageReadsPerSec": {
+            "median": 183.513,
+            "max": 307.197
+          },
+          "systemCpuPercent": {
+            "median": 47.976,
+            "max": 55.394
+          },
+          "diskReadBytesPerSec": {
+            "median": 7749721.978,
+            "max": 10917001.142
+          },
+          "diskWriteBytesPerSec": {
+            "median": 2230498.932,
+            "max": 7141142.482
+          }
+        },
+        "processes": {
+          "31344": {
+            "workingSetBytes": {
+              "median": 645074944,
+              "max": 647462912
+            },
+            "privateCommitBytes": {
+              "median": 715173888,
+              "max": 716177408
+            },
+            "cpuCoreEquivalents": {
+              "median": 1.402,
+              "max": 1.434
+            },
+            "allPageFaultsPerSec": {
+              "median": 29809.9,
+              "max": 51527.3
+            }
+          },
+          "40588": {
+            "workingSetBytes": {
+              "median": 345976832,
+              "max": 345976832
+            },
+            "privateCommitBytes": {
+              "median": 4571873280,
+              "max": 4571873280
+            },
+            "cpuCoreEquivalents": {
+              "median": 0.125,
+              "max": 0.125
+            },
+            "allPageFaultsPerSec": {
+              "median": 0.0,
+              "max": 0.0
+            }
+          }
+        }
+      }
+    },
+    "body_probe_reverse": {
+      "status": "complete",
+      "cases": [
+        {
+          "name": "no_subsurf_no_forearm",
+          "n": 8,
+          "p50Ms": 22.218749996682163,
+          "p95Ms": 24.04268999962369,
+          "cacheColdMs": 21.099999998114072,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 1,
+            "availableMiBMin": 573.890625,
+            "availableMiBMax": 573.890625,
+            "usedPercentMax": 96,
+            "counters": {
+              "pagesInputPerSec": {
+                "median": 530.884,
+                "max": 530.884
+              },
+              "pagesOutputPerSec": {
+                "median": 0.0,
+                "max": 0.0
+              },
+              "pageReadsPerSec": {
+                "median": 59.874,
+                "max": 59.874
+              },
+              "systemCpuPercent": {
+                "median": 27.691,
+                "max": 27.691
+              },
+              "diskReadBytesPerSec": {
+                "median": 1872032.613,
+                "max": 1872032.613
+              },
+              "diskWriteBytesPerSec": {
+                "median": 2918408.921,
+                "max": 2918408.921
+              }
+            },
+            "processes": {
+              "40588": {
+                "workingSetBytes": {
+                  "median": 350932992,
+                  "max": 350932992
+                },
+                "privateCommitBytes": {
+                  "median": 4571938816,
+                  "max": 4571938816
+                },
+                "cpuCoreEquivalents": {
+                  "median": 0.0,
+                  "max": 0.0
+                },
+                "allPageFaultsPerSec": {
+                  "median": 0.0,
+                  "max": 0.0
+                }
+              },
+              "24652": {
+                "workingSetBytes": {
+                  "median": 647524352,
+                  "max": 647524352
+                },
+                "privateCommitBytes": {
+                  "median": 713588736,
+                  "max": 713588736
+                },
+                "cpuCoreEquivalents": {
+                  "median": 1.185,
+                  "max": 1.185
+                },
+                "allPageFaultsPerSec": {
+                  "median": 91244.1,
+                  "max": 91244.1
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "no_forearm",
+          "n": 8,
+          "p50Ms": 20.140050000918563,
+          "p95Ms": 22.23827000198071,
+          "cacheColdMs": 21.551799996814225,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 1,
+            "availableMiBMin": 600.4140625,
+            "availableMiBMax": 600.4140625,
+            "usedPercentMax": 96,
+            "counters": {
+              "pagesInputPerSec": {
+                "median": 42978.905,
+                "max": 42978.905
+              },
+              "pagesOutputPerSec": {
+                "median": 0.0,
+                "max": 0.0
+              },
+              "pageReadsPerSec": {
+                "median": 486.787,
+                "max": 486.787
+              },
+              "systemCpuPercent": {
+                "median": 37.648,
+                "max": 37.648
+              },
+              "diskReadBytesPerSec": {
+                "median": 178480829.469,
+                "max": 178480829.469
+              },
+              "diskWriteBytesPerSec": {
+                "median": 9307495.583,
+                "max": 9307495.583
+              }
+            },
+            "processes": {
+              "40588": {
+                "workingSetBytes": {
+                  "median": 350937088,
+                  "max": 350937088
+                },
+                "privateCommitBytes": {
+                  "median": 4571938816,
+                  "max": 4571938816
+                },
+                "cpuCoreEquivalents": {
+                  "median": 0.031,
+                  "max": 0.031
+                },
+                "allPageFaultsPerSec": {
+                  "median": 2.0,
+                  "max": 2.0
+                }
+              },
+              "24652": {
+                "workingSetBytes": {
+                  "median": 649715712,
+                  "max": 649715712
+                },
+                "privateCommitBytes": {
+                  "median": 715685888,
+                  "max": 715685888
+                },
+                "cpuCoreEquivalents": {
+                  "median": 1.528,
+                  "max": 1.528
+                },
+                "allPageFaultsPerSec": {
+                  "median": 39475.2,
+                  "max": 39475.2
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "no_subsurf",
+          "n": 8,
+          "p50Ms": 22.37819999936619,
+          "p95Ms": 24.91456500138156,
+          "cacheColdMs": 22.55670000158716,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 0
+          }
+        },
+        {
+          "name": "baseline",
+          "n": 8,
+          "p50Ms": 23.19070000157808,
+          "p95Ms": 26.39375000144355,
+          "cacheColdMs": 22.597199997107964,
+          "validDeformation": true,
+          "resourceWindow": {
+            "count": 0
+          }
+        }
+      ],
+      "fullRun": {
+        "count": 16,
+        "availableMiBMin": 541.15625,
+        "availableMiBMax": 1105.3046875,
+        "usedPercentMax": 96,
+        "counters": {
+          "pagesInputPerSec": {
+            "median": 14524.839,
+            "max": 91346.707
+          },
+          "pagesOutputPerSec": {
+            "median": 0.0,
+            "max": 354049.663
+          },
+          "pageReadsPerSec": {
+            "median": 509.644,
+            "max": 4206.796
+          },
+          "systemCpuPercent": {
+            "median": 37.745000000000005,
+            "max": 67.749
+          },
+          "diskReadBytesPerSec": {
+            "median": 62687759.79349999,
+            "max": 371326145.943
+          },
+          "diskWriteBytesPerSec": {
+            "median": 3640658.376,
+            "max": 1581362998.475
+          }
+        },
+        "processes": {
+          "40588": {
+            "workingSetBytes": {
+              "median": 350932992.0,
+              "max": 350953472
+            },
+            "privateCommitBytes": {
+              "median": 4571938816.0,
+              "max": 4571938816
+            },
+            "cpuCoreEquivalents": {
+              "median": 0.062,
+              "max": 0.125
+            },
+            "allPageFaultsPerSec": {
+              "median": 0.0,
+              "max": 8.0
+            }
+          },
+          "24652": {
+            "workingSetBytes": {
+              "median": 512350208.0,
+              "max": 655327232
+            },
+            "privateCommitBytes": {
+              "median": 553764864.0,
+              "max": 720068608
+            },
+            "cpuCoreEquivalents": {
+              "median": 0.997,
+              "max": 1.528
+            },
+            "allPageFaultsPerSec": {
+              "median": 31702.5,
+              "max": 215865.6
+            }
+          }
+        }
+      },
+      "caseWindow": {
+        "count": 4,
+        "availableMiBMin": 573.890625,
+        "availableMiBMax": 600.4140625,
+        "usedPercentMax": 96,
+        "counters": {
+          "pagesInputPerSec": {
+            "median": 42387.2005,
+            "max": 42978.905
+          },
+          "pagesOutputPerSec": {
+            "median": 0.0,
+            "max": 0.0
+          },
+          "pageReadsPerSec": {
+            "median": 421.996,
+            "max": 532.501
+          },
+          "systemCpuPercent": {
+            "median": 41.054500000000004,
+            "max": 46.64
+          },
+          "diskReadBytesPerSec": {
+            "median": 173215016.54900002,
+            "max": 178480829.469
+          },
+          "diskWriteBytesPerSec": {
+            "median": 2832403.171,
+            "max": 9307495.583
+          }
+        },
+        "processes": {
+          "40588": {
+            "workingSetBytes": {
+              "median": 350937088.0,
+              "max": 350953472
+            },
+            "privateCommitBytes": {
+              "median": 4571938816.0,
+              "max": 4571938816
+            },
+            "cpuCoreEquivalents": {
+              "median": 0.031,
+              "max": 0.094
+            },
+            "allPageFaultsPerSec": {
+              "median": 1.0,
+              "max": 8.0
+            }
+          },
+          "24652": {
+            "workingSetBytes": {
+              "median": 650035200.0,
+              "max": 654086144
+            },
+            "privateCommitBytes": {
+              "median": 717260800.0,
+              "max": 718835712
+            },
+            "cpuCoreEquivalents": {
+              "median": 1.4649999999999999,
+              "max": 1.528
+            },
+            "allPageFaultsPerSec": {
+              "median": 35588.85,
+              "max": 91244.1
+            }
+          }
+        }
+      }
+    }
+  },
+  "postProbe": {
+    "count": 40,
+    "availableMiBMin": 937.80859375,
+    "availableMiBMax": 1136.09765625,
+    "usedPercentMax": 94,
+    "counters": {
+      "pagesInputPerSec": {
+        "median": 16382.314999999999,
+        "max": 64808.95
+      },
+      "pagesOutputPerSec": {
+        "median": 0.0,
+        "max": 0.0
+      },
+      "pageReadsPerSec": {
+        "median": 281.44100000000003,
+        "max": 980.274
+      },
+      "systemCpuPercent": {
+        "median": 23.755000000000003,
+        "max": 47.171
+      },
+      "diskReadBytesPerSec": {
+        "median": 66748827.023,
+        "max": 265045302.345
+      },
+      "diskWriteBytesPerSec": {
+        "median": 2685751.4715,
+        "max": 9771370.781
+      }
+    },
+    "processes": {
+      "40588": {
+        "workingSetBytes": {
+          "median": 314236928.0,
+          "max": 314236928
+        },
+        "privateCommitBytes": {
+          "median": 4572102656.0,
+          "max": 4572102656
+        }
+      }
+    }
+  }
+}

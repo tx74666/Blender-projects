@@ -1,0 +1,2833 @@
+{
+  "schema": "cdesigner.wiggle-legacy-native-transition/1",
+  "started_utc": "20261004T171046842629Z",
+  "ok": false,
+  "factory_only": true,
+  "blender_version": [
+    5,
+    1,
+    0
+  ],
+  "legacy_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\wiggle_2.py",
+  "official_source": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\backend\\wiggle_bones",
+  "report_path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\wiggle_legacy_transition_51_20261004T171046842629Z.json",
+  "forbidden_calls": [],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 289, in <module>\n    main()\n    ~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 227, in main\n    require(disabled['snapshot'] == before['snapshot'], 'Native legacy disable changed raw metadata, pointers, pose or frame.')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\hair_motion_20261004\\prove_wiggle_legacy_transition_51.py\", line 38, in require\n    raise RuntimeError(message)\nRuntimeError: Native legacy disable changed raw metadata, pointers, pose or frame.\n"
+  ],
+  "phases": {
+    "legacy_enabled": {
+      "snapshot": {
+        "scene": {
+          "flat": {
+            "wiggle_enable": {
+              "is_set": true,
+              "value": true
+            }
+          },
+          "custom": {},
+          "group_is_set": true,
+          "group_raw": {
+            "dt": 0.03125,
+            "iterations": 7,
+            "lastframe": 39,
+            "list": [
+              {
+                "list": [
+                  {
+                    "name": "Migration Proof Bone"
+                  }
+                ],
+                "name": "Migration Proof Armature"
+              }
+            ],
+            "loop": 0,
+            "preroll": 13
+          }
+        },
+        "object": {
+          "flat": {
+            "wiggle_enable": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_mute": {
+              "is_set": true,
+              "value": false
+            },
+            "wiggle_freeze": {
+              "is_set": true,
+              "value": true
+            }
+          },
+          "custom": {},
+          "group_is_set": true,
+          "group_raw": {
+            "list": [
+              {
+                "list": [
+                  {
+                    "name": "Migration Proof Bone"
+                  }
+                ],
+                "name": "Existing Object List"
+              }
+            ]
+          }
+        },
+        "bone": {
+          "flat": {
+            "wiggle_enable": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_mute": {
+              "is_set": false,
+              "value": false
+            },
+            "wiggle_head": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_tail": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_head_mute": {
+              "is_set": false,
+              "value": false
+            },
+            "wiggle_tail_mute": {
+              "is_set": false,
+              "value": false
+            },
+            "wiggle_mass": {
+              "is_set": true,
+              "value": 1.75
+            },
+            "wiggle_stiff": {
+              "is_set": true,
+              "value": 333.25
+            },
+            "wiggle_stretch": {
+              "is_set": true,
+              "value": 0.125
+            },
+            "wiggle_damp": {
+              "is_set": true,
+              "value": 0.375
+            },
+            "wiggle_gravity": {
+              "is_set": true,
+              "value": -2.5
+            },
+            "wiggle_wind_ob": {
+              "is_set": true,
+              "value": {
+                "id_type": "Object",
+                "name": "Migration Proof Collider",
+                "pointer": 2746555354792,
+                "library": null
+              }
+            },
+            "wiggle_wind": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_chain": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_mass_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_stiff_head": {
+              "is_set": false,
+              "value": 400.0
+            },
+            "wiggle_stretch_head": {
+              "is_set": false,
+              "value": 0.0
+            },
+            "wiggle_damp_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_gravity_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_wind_ob_head": {
+              "is_set": false,
+              "value": null
+            },
+            "wiggle_wind_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_chain_head": {
+              "is_set": false,
+              "value": true
+            },
+            "wiggle_collider_type": {
+              "is_set": false,
+              "value": "Object"
+            },
+            "wiggle_collider": {
+              "is_set": true,
+              "value": {
+                "id_type": "Object",
+                "name": "Migration Proof Collider",
+                "pointer": 2746555354792,
+                "library": null
+              }
+            },
+            "wiggle_collider_collection": {
+              "is_set": true,
+              "value": {
+                "id_type": "Collection",
+                "name": "Migration Proof Collider Collection",
+                "pointer": 2746553354376,
+                "library": null
+              }
+            },
+            "wiggle_radius": {
+              "is_set": true,
+              "value": 0.023000000044703484
+            },
+            "wiggle_friction": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_bounce": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_sticky": {
+              "is_set": false,
+              "value": 0.0
+            },
+            "wiggle_collider_type_head": {
+              "is_set": false,
+              "value": "Object"
+            },
+            "wiggle_collider_head": {
+              "is_set": false,
+              "value": null
+            },
+            "wiggle_collider_collection_head": {
+              "is_set": false,
+              "value": null
+            },
+            "wiggle_radius_head": {
+              "is_set": false,
+              "value": 0.0
+            },
+            "wiggle_friction_head": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_bounce_head": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_sticky_head": {
+              "is_set": false,
+              "value": 0.0
+            }
+          },
+          "custom": {},
+          "group_is_set": true,
+          "group_raw": {
+            "collision_col": {
+              "id_type": "Collection",
+              "name": "Migration Proof Collider Collection",
+              "pointer": 2746553354376,
+              "library": null
+            },
+            "collision_normal": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "collision_ob": {
+              "id_type": "Object",
+              "name": "Migration Proof Collider",
+              "pointer": 2746555354792,
+              "library": null
+            },
+            "collision_ob_head": {
+              "id_type": "Object",
+              "name": "Migration Proof Collider",
+              "pointer": 2746555354792,
+              "library": null
+            },
+            "matrix": [
+              0.0,
+              0.25,
+              0.5,
+              0.75,
+              1.0,
+              1.25,
+              1.5,
+              1.75,
+              2.0,
+              2.25,
+              2.5,
+              2.75,
+              3.0,
+              3.25,
+              3.5,
+              3.75
+            ],
+            "position": [
+              1.25,
+              2.5,
+              3.75
+            ],
+            "position_last": [
+              -1.0,
+              -2.0,
+              -3.0
+            ],
+            "qa_unknown_nested": {
+              "message": "preserve legacy raw",
+              "numbers": [
+                3,
+                5,
+                8
+              ]
+            },
+            "velocity": [
+              0.125,
+              0.25,
+              0.5
+            ]
+          }
+        },
+        "frame_current": 1,
+        "frame_subframe": 0.0,
+        "object_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bone_basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "scene_pointer": 2746518474464,
+        "object_pointer": 2746554605016,
+        "bone_pointer": 2746555292880,
+        "filepath": ""
+      },
+      "schema": {
+        "Scene": {
+          "wiggle_enable": {
+            "type": "BOOLEAN"
+          },
+          "wiggle": {
+            "type": "POINTER",
+            "fixed_type": "WiggleScene",
+            "fields": [
+              "bake_nla",
+              "bake_overwrite",
+              "dt",
+              "is_preroll",
+              "is_rendering",
+              "iterations",
+              "lastframe",
+              "list",
+              "loop",
+              "name",
+              "preroll",
+              "reset",
+              "rna_type"
+            ]
+          }
+        },
+        "Object": {
+          "wiggle_enable": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_freeze": {
+            "type": "BOOLEAN"
+          },
+          "wiggle": {
+            "type": "POINTER",
+            "fixed_type": "WiggleObject",
+            "fields": [
+              "list",
+              "name",
+              "rna_type"
+            ]
+          }
+        },
+        "PoseBone": {
+          "wiggle_enable": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_head": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_tail": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_head_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_tail_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mass": {
+            "type": "FLOAT"
+          },
+          "wiggle_stiff": {
+            "type": "FLOAT"
+          },
+          "wiggle_stretch": {
+            "type": "FLOAT"
+          },
+          "wiggle_damp": {
+            "type": "FLOAT"
+          },
+          "wiggle_gravity": {
+            "type": "FLOAT"
+          },
+          "wiggle_wind_ob": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_wind": {
+            "type": "FLOAT"
+          },
+          "wiggle_chain": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mass_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_stiff_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_stretch_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_damp_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_gravity_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_wind_ob_head": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_wind_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_chain_head": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_collider_type": {
+            "type": "ENUM"
+          },
+          "wiggle_collider": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_collider_collection": {
+            "type": "POINTER",
+            "fixed_type": "Collection",
+            "fields": [
+              "active_exporter_index",
+              "all_objects",
+              "asset_data",
+              "children",
+              "collection_children",
+              "collection_objects",
+              "color_tag",
+              "exporters",
+              "hide_render",
+              "hide_select",
+              "hide_viewport",
+              "id_type",
+              "instance_offset",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "library",
+              "library_weak_reference",
+              "lineart_intersection_mask",
+              "lineart_intersection_priority",
+              "lineart_usage",
+              "lineart_use_intersection_mask",
+              "name",
+              "name_full",
+              "objects",
+              "original",
+              "override_library",
+              "preview",
+              "rna_type",
+              "session_uid",
+              "tag",
+              "use_extra_user",
+              "use_fake_user",
+              "use_lineart_intersection_priority",
+              "users"
+            ]
+          },
+          "wiggle_radius": {
+            "type": "FLOAT"
+          },
+          "wiggle_friction": {
+            "type": "FLOAT"
+          },
+          "wiggle_bounce": {
+            "type": "FLOAT"
+          },
+          "wiggle_sticky": {
+            "type": "FLOAT"
+          },
+          "wiggle_collider_type_head": {
+            "type": "ENUM"
+          },
+          "wiggle_collider_head": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_collider_collection_head": {
+            "type": "POINTER",
+            "fixed_type": "Collection",
+            "fields": [
+              "active_exporter_index",
+              "all_objects",
+              "asset_data",
+              "children",
+              "collection_children",
+              "collection_objects",
+              "color_tag",
+              "exporters",
+              "hide_render",
+              "hide_select",
+              "hide_viewport",
+              "id_type",
+              "instance_offset",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "library",
+              "library_weak_reference",
+              "lineart_intersection_mask",
+              "lineart_intersection_priority",
+              "lineart_usage",
+              "lineart_use_intersection_mask",
+              "name",
+              "name_full",
+              "objects",
+              "original",
+              "override_library",
+              "preview",
+              "rna_type",
+              "session_uid",
+              "tag",
+              "use_extra_user",
+              "use_fake_user",
+              "use_lineart_intersection_priority",
+              "users"
+            ]
+          },
+          "wiggle_radius_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_friction_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_bounce_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_sticky_head": {
+            "type": "FLOAT"
+          },
+          "wiggle": {
+            "type": "POINTER",
+            "fixed_type": "WiggleBone",
+            "fields": [
+              "collision_col",
+              "collision_normal",
+              "collision_normal_head",
+              "collision_ob",
+              "collision_ob_head",
+              "collision_point",
+              "collision_point_head",
+              "matrix",
+              "name",
+              "position",
+              "position_head",
+              "position_last",
+              "position_last_head",
+              "rna_type",
+              "velocity",
+              "velocity_head"
+            ]
+          }
+        }
+      },
+      "handlers": {
+        "frame_change_pre": [
+          {
+            "module": "wiggle_2",
+            "name": "wiggle_pre",
+            "identity": 2746571044832
+          }
+        ],
+        "frame_change_post": [
+          {
+            "module": "wiggle_2",
+            "name": "wiggle_post",
+            "identity": 2746571044992
+          }
+        ],
+        "render_pre": [
+          {
+            "module": "wiggle_2",
+            "name": "wiggle_render_pre",
+            "identity": 2746571045152
+          }
+        ],
+        "render_post": [
+          {
+            "module": "wiggle_2",
+            "name": "wiggle_render_post",
+            "identity": 2746571045312
+          }
+        ],
+        "render_cancel": [
+          {
+            "module": "wiggle_2",
+            "name": "wiggle_render_cancel",
+            "identity": 2746571045472
+          }
+        ],
+        "load_post": [
+          {
+            "module": "bl_operators.copy_global_transform",
+            "name": "_on_blendfile_load_post",
+            "identity": 2746537462656
+          },
+          {
+            "module": "pose_library.gui",
+            "name": "_on_blendfile_load_post",
+            "identity": 2746567945216
+          },
+          {
+            "module": "wiggle_2",
+            "name": "wiggle_load",
+            "identity": 2746571045632
+          }
+        ]
+      },
+      "legacy_classes_registered": {
+        "WiggleBoneItem": true,
+        "WiggleItem": true,
+        "WiggleBone": true,
+        "WiggleObject": true,
+        "WiggleScene": true,
+        "WiggleReset": true,
+        "WiggleCopy": true,
+        "WiggleSelect": true,
+        "WiggleBake": true,
+        "WIGGLE_PT_Settings": true,
+        "WIGGLE_PT_Head": true,
+        "WIGGLE_PT_Tail": true,
+        "WIGGLE_PT_Utilities": true,
+        "WIGGLE_PT_Bake": true
+      },
+      "live_like_minimal_scene": {
+        "flat": {
+          "wiggle_enable": {
+            "is_set": false,
+            "value": false
+          }
+        },
+        "custom": {},
+        "group_is_set": true,
+        "group_raw": {
+          "is_rendering": 0
+        }
+      },
+      "inactive_bone_without_raw_data": {
+        "flat": {
+          "wiggle_enable": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_mute": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_head": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_tail": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_head_mute": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_tail_mute": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_mass": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_stiff": {
+            "is_set": false,
+            "value": 400.0
+          },
+          "wiggle_stretch": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_damp": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_gravity": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_wind_ob": {
+            "is_set": false,
+            "value": null
+          },
+          "wiggle_wind": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_chain": {
+            "is_set": false,
+            "value": true
+          },
+          "wiggle_mass_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_stiff_head": {
+            "is_set": false,
+            "value": 400.0
+          },
+          "wiggle_stretch_head": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_damp_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_gravity_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_wind_ob_head": {
+            "is_set": false,
+            "value": null
+          },
+          "wiggle_wind_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_chain_head": {
+            "is_set": false,
+            "value": true
+          },
+          "wiggle_collider_type": {
+            "is_set": false,
+            "value": "Object"
+          },
+          "wiggle_collider": {
+            "is_set": false,
+            "value": null
+          },
+          "wiggle_collider_collection": {
+            "is_set": false,
+            "value": null
+          },
+          "wiggle_radius": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_friction": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_bounce": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_sticky": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_collider_type_head": {
+            "is_set": false,
+            "value": "Object"
+          },
+          "wiggle_collider_head": {
+            "is_set": false,
+            "value": null
+          },
+          "wiggle_collider_collection_head": {
+            "is_set": false,
+            "value": null
+          },
+          "wiggle_radius_head": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_friction_head": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_bounce_head": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_sticky_head": {
+            "is_set": false,
+            "value": 0.0
+          }
+        },
+        "custom": {},
+        "group_is_set": false,
+        "group_raw": null
+      }
+    },
+    "legacy_disabled": {
+      "snapshot": {
+        "scene": {
+          "flat": {
+            "wiggle_enable": {
+              "is_set": true,
+              "value": true
+            }
+          },
+          "custom": {},
+          "group_is_set": true,
+          "group_raw": {
+            "dt": 0.03125,
+            "iterations": 7,
+            "lastframe": 39,
+            "list": [
+              {
+                "list": [
+                  {
+                    "name": "Migration Proof Bone"
+                  }
+                ],
+                "name": "Migration Proof Armature"
+              }
+            ],
+            "loop": 0,
+            "preroll": 13
+          }
+        },
+        "object": {
+          "flat": {
+            "wiggle_enable": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_mute": {
+              "is_set": true,
+              "value": false
+            },
+            "wiggle_freeze": {
+              "is_set": true,
+              "value": true
+            }
+          },
+          "custom": {},
+          "group_is_set": true,
+          "group_raw": {
+            "list": [
+              {
+                "list": [
+                  {
+                    "name": "Migration Proof Bone"
+                  }
+                ],
+                "name": "Existing Object List"
+              }
+            ]
+          }
+        },
+        "bone": {
+          "flat": {
+            "wiggle_enable": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_mute": {
+              "is_set": false,
+              "value": false
+            },
+            "wiggle_head": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_tail": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_head_mute": {
+              "is_set": false,
+              "value": false
+            },
+            "wiggle_tail_mute": {
+              "is_set": false,
+              "value": false
+            },
+            "wiggle_mass": {
+              "is_set": true,
+              "value": 1.75
+            },
+            "wiggle_stiff": {
+              "is_set": true,
+              "value": 333.25
+            },
+            "wiggle_stretch": {
+              "is_set": true,
+              "value": 0.125
+            },
+            "wiggle_damp": {
+              "is_set": true,
+              "value": 0.375
+            },
+            "wiggle_gravity": {
+              "is_set": true,
+              "value": -2.5
+            },
+            "wiggle_wind_ob": {
+              "is_set": true,
+              "value": {
+                "id_type": "Object",
+                "name": "Migration Proof Collider",
+                "pointer": 2746555354792,
+                "library": null
+              }
+            },
+            "wiggle_wind": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_chain": {
+              "is_set": true,
+              "value": true
+            },
+            "wiggle_mass_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_stiff_head": {
+              "is_set": false,
+              "value": 400.0
+            },
+            "wiggle_stretch_head": {
+              "is_set": false,
+              "value": 0.0
+            },
+            "wiggle_damp_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_gravity_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_wind_ob_head": {
+              "is_set": true,
+              "value": null
+            },
+            "wiggle_wind_head": {
+              "is_set": false,
+              "value": 1.0
+            },
+            "wiggle_chain_head": {
+              "is_set": false,
+              "value": true
+            },
+            "wiggle_collider_type": {
+              "is_set": false,
+              "value": "Object"
+            },
+            "wiggle_collider": {
+              "is_set": true,
+              "value": {
+                "id_type": "Object",
+                "name": "Migration Proof Collider",
+                "pointer": 2746555354792,
+                "library": null
+              }
+            },
+            "wiggle_collider_collection": {
+              "is_set": true,
+              "value": {
+                "id_type": "Collection",
+                "name": "Migration Proof Collider Collection",
+                "pointer": 2746553354376,
+                "library": null
+              }
+            },
+            "wiggle_radius": {
+              "is_set": true,
+              "value": 0.023000000044703484
+            },
+            "wiggle_friction": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_bounce": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_sticky": {
+              "is_set": false,
+              "value": 0.0
+            },
+            "wiggle_collider_type_head": {
+              "is_set": false,
+              "value": "Object"
+            },
+            "wiggle_collider_head": {
+              "is_set": true,
+              "value": null
+            },
+            "wiggle_collider_collection_head": {
+              "is_set": true,
+              "value": null
+            },
+            "wiggle_radius_head": {
+              "is_set": false,
+              "value": 0.0
+            },
+            "wiggle_friction_head": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_bounce_head": {
+              "is_set": false,
+              "value": 0.5
+            },
+            "wiggle_sticky_head": {
+              "is_set": false,
+              "value": 0.0
+            }
+          },
+          "custom": {},
+          "group_is_set": true,
+          "group_raw": {
+            "collision_col": {
+              "id_type": "Collection",
+              "name": "Migration Proof Collider Collection",
+              "pointer": 2746553354376,
+              "library": null
+            },
+            "collision_normal": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "collision_ob": {
+              "id_type": "Object",
+              "name": "Migration Proof Collider",
+              "pointer": 2746555354792,
+              "library": null
+            },
+            "collision_ob_head": {
+              "id_type": "Object",
+              "name": "Migration Proof Collider",
+              "pointer": 2746555354792,
+              "library": null
+            },
+            "matrix": [
+              0.0,
+              0.25,
+              0.5,
+              0.75,
+              1.0,
+              1.25,
+              1.5,
+              1.75,
+              2.0,
+              2.25,
+              2.5,
+              2.75,
+              3.0,
+              3.25,
+              3.5,
+              3.75
+            ],
+            "position": [
+              1.25,
+              2.5,
+              3.75
+            ],
+            "position_last": [
+              -1.0,
+              -2.0,
+              -3.0
+            ],
+            "qa_unknown_nested": {
+              "message": "preserve legacy raw",
+              "numbers": [
+                3,
+                5,
+                8
+              ]
+            },
+            "velocity": [
+              0.125,
+              0.25,
+              0.5
+            ]
+          }
+        },
+        "frame_current": 1,
+        "frame_subframe": 0.0,
+        "object_world": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bone_basis": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "scene_pointer": 2746518474464,
+        "object_pointer": 2746554605016,
+        "bone_pointer": 2746555292880,
+        "filepath": ""
+      },
+      "schema": {
+        "Scene": {
+          "wiggle_enable": {
+            "type": "BOOLEAN"
+          },
+          "wiggle": {
+            "type": "POINTER",
+            "fixed_type": "WiggleScene",
+            "fields": [
+              "name",
+              "rna_type"
+            ]
+          }
+        },
+        "Object": {
+          "wiggle_enable": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_freeze": {
+            "type": "BOOLEAN"
+          },
+          "wiggle": {
+            "type": "POINTER",
+            "fixed_type": "WiggleObject",
+            "fields": [
+              "name",
+              "rna_type"
+            ]
+          }
+        },
+        "PoseBone": {
+          "wiggle_enable": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_head": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_tail": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_head_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_tail_mute": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mass": {
+            "type": "FLOAT"
+          },
+          "wiggle_stiff": {
+            "type": "FLOAT"
+          },
+          "wiggle_stretch": {
+            "type": "FLOAT"
+          },
+          "wiggle_damp": {
+            "type": "FLOAT"
+          },
+          "wiggle_gravity": {
+            "type": "FLOAT"
+          },
+          "wiggle_wind_ob": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_wind": {
+            "type": "FLOAT"
+          },
+          "wiggle_chain": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_mass_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_stiff_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_stretch_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_damp_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_gravity_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_wind_ob_head": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_wind_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_chain_head": {
+            "type": "BOOLEAN"
+          },
+          "wiggle_collider_type": {
+            "type": "ENUM"
+          },
+          "wiggle_collider": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_collider_collection": {
+            "type": "POINTER",
+            "fixed_type": "Collection",
+            "fields": [
+              "active_exporter_index",
+              "all_objects",
+              "asset_data",
+              "children",
+              "collection_children",
+              "collection_objects",
+              "color_tag",
+              "exporters",
+              "hide_render",
+              "hide_select",
+              "hide_viewport",
+              "id_type",
+              "instance_offset",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "library",
+              "library_weak_reference",
+              "lineart_intersection_mask",
+              "lineart_intersection_priority",
+              "lineart_usage",
+              "lineart_use_intersection_mask",
+              "name",
+              "name_full",
+              "objects",
+              "original",
+              "override_library",
+              "preview",
+              "rna_type",
+              "session_uid",
+              "tag",
+              "use_extra_user",
+              "use_fake_user",
+              "use_lineart_intersection_priority",
+              "users"
+            ]
+          },
+          "wiggle_radius": {
+            "type": "FLOAT"
+          },
+          "wiggle_friction": {
+            "type": "FLOAT"
+          },
+          "wiggle_bounce": {
+            "type": "FLOAT"
+          },
+          "wiggle_sticky": {
+            "type": "FLOAT"
+          },
+          "wiggle_collider_type_head": {
+            "type": "ENUM"
+          },
+          "wiggle_collider_head": {
+            "type": "POINTER",
+            "fixed_type": "Object",
+            "fields": [
+              "active_material",
+              "active_material_index",
+              "active_selection_set",
+              "active_shape_key",
+              "active_shape_key_index",
+              "add_rest_position_attribute",
+              "animation_data",
+              "animation_visualization",
+              "asset_data",
+              "bound_box",
+              "collision",
+              "color",
+              "constraints",
+              "cycles",
+              "data",
+              "delta_location",
+              "delta_rotation_euler",
+              "delta_rotation_quaternion",
+              "delta_scale",
+              "dimensions",
+              "display",
+              "display_bounds_type",
+              "display_type",
+              "empty_display_size",
+              "empty_display_type",
+              "empty_image_depth",
+              "empty_image_offset",
+              "empty_image_side",
+              "field",
+              "hide_probe_plane",
+              "hide_probe_sphere",
+              "hide_probe_volume",
+              "hide_render",
+              "hide_select",
+              "hide_surface_pick",
+              "hide_viewport",
+              "id_type",
+              "image_user",
+              "instance_collection",
+              "instance_faces_scale",
+              "instance_type",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_from_instancer",
+              "is_from_set",
+              "is_holdout",
+              "is_instancer",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "is_shadow_catcher",
+              "library",
+              "library_weak_reference",
+              "light_linking",
+              "lightgroup",
+              "lineart",
+              "location",
+              "lock_location",
+              "lock_rotation",
+              "lock_rotation_w",
+              "lock_rotations_4d",
+              "lock_scale",
+              "material_slots",
+              "matrix_basis",
+              "matrix_local",
+              "matrix_parent_inverse",
+              "matrix_world",
+              "mode",
+              "modifiers",
+              "motion_path",
+              "name",
+              "name_full",
+              "original",
+              "override_library",
+              "parent",
+              "parent_bone",
+              "parent_type",
+              "parent_vertices",
+              "particle_systems",
+              "pass_index",
+              "pose",
+              "preview",
+              "rigid_body",
+              "rigid_body_constraint",
+              "rna_type",
+              "rotation_axis_angle",
+              "rotation_euler",
+              "rotation_mode",
+              "rotation_quaternion",
+              "scale",
+              "selection_sets",
+              "session_uid",
+              "shader_effects",
+              "shadow_terminator_geometry_offset",
+              "shadow_terminator_normal_offset",
+              "shadow_terminator_shading_offset",
+              "show_all_edges",
+              "show_axis",
+              "show_bounds",
+              "show_empty_image_only_axis_aligned",
+              "show_empty_image_orthographic",
+              "show_empty_image_perspective",
+              "show_in_front",
+              "show_instancer_for_render",
+              "show_instancer_for_viewport",
+              "show_name",
+              "show_only_shape_key",
+              "show_texture_space",
+              "show_transparent",
+              "show_wire",
+              "soft_body",
+              "tag",
+              "track_axis",
+              "type",
+              "up_axis",
+              "use_camera_lock_parent",
+              "use_dynamic_topology_sculpting",
+              "use_empty_image_alpha",
+              "use_extra_user",
+              "use_fake_user",
+              "use_grease_pencil_lights",
+              "use_instance_faces_scale",
+              "use_instance_vertices_rotation",
+              "use_mesh_mirror_x",
+              "use_mesh_mirror_y",
+              "use_mesh_mirror_z",
+              "use_parent_final_indices",
+              "use_shape_key_edit_mode",
+              "use_simulation_cache",
+              "users",
+              "vertex_groups",
+              "visible_camera",
+              "visible_diffuse",
+              "visible_glossy",
+              "visible_shadow",
+              "visible_transmission",
+              "visible_volume_scatter",
+              "wiggle",
+              "wiggle_enable",
+              "wiggle_freeze",
+              "wiggle_mute"
+            ]
+          },
+          "wiggle_collider_collection_head": {
+            "type": "POINTER",
+            "fixed_type": "Collection",
+            "fields": [
+              "active_exporter_index",
+              "all_objects",
+              "asset_data",
+              "children",
+              "collection_children",
+              "collection_objects",
+              "color_tag",
+              "exporters",
+              "hide_render",
+              "hide_select",
+              "hide_viewport",
+              "id_type",
+              "instance_offset",
+              "is_editable",
+              "is_embedded_data",
+              "is_evaluated",
+              "is_library_indirect",
+              "is_linked_packed",
+              "is_missing",
+              "is_runtime_data",
+              "library",
+              "library_weak_reference",
+              "lineart_intersection_mask",
+              "lineart_intersection_priority",
+              "lineart_usage",
+              "lineart_use_intersection_mask",
+              "name",
+              "name_full",
+              "objects",
+              "original",
+              "override_library",
+              "preview",
+              "rna_type",
+              "session_uid",
+              "tag",
+              "use_extra_user",
+              "use_fake_user",
+              "use_lineart_intersection_priority",
+              "users"
+            ]
+          },
+          "wiggle_radius_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_friction_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_bounce_head": {
+            "type": "FLOAT"
+          },
+          "wiggle_sticky_head": {
+            "type": "FLOAT"
+          },
+          "wiggle": {
+            "type": "POINTER",
+            "fixed_type": "WiggleBone",
+            "fields": [
+              "name",
+              "rna_type"
+            ]
+          }
+        }
+      },
+      "handlers": {
+        "frame_change_pre": [],
+        "frame_change_post": [],
+        "render_pre": [],
+        "render_post": [],
+        "render_cancel": [],
+        "load_post": [
+          {
+            "module": "bl_operators.copy_global_transform",
+            "name": "_on_blendfile_load_post",
+            "identity": 2746537462656
+          },
+          {
+            "module": "pose_library.gui",
+            "name": "_on_blendfile_load_post",
+            "identity": 2746567945216
+          }
+        ]
+      },
+      "legacy_classes_registered": {
+        "WiggleBoneItem": false,
+        "WiggleItem": false,
+        "WiggleBone": false,
+        "WiggleObject": false,
+        "WiggleScene": false,
+        "WiggleReset": false,
+        "WiggleCopy": false,
+        "WiggleSelect": false,
+        "WiggleBake": false,
+        "WIGGLE_PT_Settings": false,
+        "WIGGLE_PT_Head": false,
+        "WIGGLE_PT_Tail": false,
+        "WIGGLE_PT_Utilities": false,
+        "WIGGLE_PT_Bake": false
+      },
+      "live_like_minimal_scene": {
+        "flat": {
+          "wiggle_enable": {
+            "is_set": false,
+            "value": false
+          }
+        },
+        "custom": {},
+        "group_is_set": true,
+        "group_raw": {
+          "is_rendering": 0
+        }
+      },
+      "inactive_bone_without_raw_data": {
+        "flat": {
+          "wiggle_enable": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_mute": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_head": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_tail": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_head_mute": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_tail_mute": {
+            "is_set": false,
+            "value": false
+          },
+          "wiggle_mass": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_stiff": {
+            "is_set": false,
+            "value": 400.0
+          },
+          "wiggle_stretch": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_damp": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_gravity": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_wind_ob": {
+            "is_set": true,
+            "value": null
+          },
+          "wiggle_wind": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_chain": {
+            "is_set": false,
+            "value": true
+          },
+          "wiggle_mass_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_stiff_head": {
+            "is_set": false,
+            "value": 400.0
+          },
+          "wiggle_stretch_head": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_damp_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_gravity_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_wind_ob_head": {
+            "is_set": true,
+            "value": null
+          },
+          "wiggle_wind_head": {
+            "is_set": false,
+            "value": 1.0
+          },
+          "wiggle_chain_head": {
+            "is_set": false,
+            "value": true
+          },
+          "wiggle_collider_type": {
+            "is_set": false,
+            "value": "Object"
+          },
+          "wiggle_collider": {
+            "is_set": true,
+            "value": null
+          },
+          "wiggle_collider_collection": {
+            "is_set": true,
+            "value": null
+          },
+          "wiggle_radius": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_friction": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_bounce": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_sticky": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_collider_type_head": {
+            "is_set": false,
+            "value": "Object"
+          },
+          "wiggle_collider_head": {
+            "is_set": true,
+            "value": null
+          },
+          "wiggle_collider_collection_head": {
+            "is_set": true,
+            "value": null
+          },
+          "wiggle_radius_head": {
+            "is_set": false,
+            "value": 0.0
+          },
+          "wiggle_friction_head": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_bounce_head": {
+            "is_set": false,
+            "value": 0.5
+          },
+          "wiggle_sticky_head": {
+            "is_set": false,
+            "value": 0.0
+          }
+        },
+        "custom": {},
+        "group_is_set": false,
+        "group_raw": null
+      }
+    }
+  },
+  "legacy_sha256_before": "7333687ae3b6fd20feae8afda649faed1d99bc7b98e92622a8993c09061deac1",
+  "official_hashes_before": {
+    "__init__.py": "b846515333d4df39ee9364f7c580fa8c23800e28f030fb5a52ff1e84c63d5970",
+    "blender_manifest.toml": "c55705d843420ec1ed5e0006bb46ba41eabdb57de4577d78b5cbc1fcc7a6e42c",
+    "LICENSE": "a0ee746064b06d09cab0768116ec265fd0d45261d4087c9ad2c698a07c7aac0e",
+    "operators.py": "077dcbed00077eb5d4d18ee2709db8865bf117397d497cc5642653b6573abad5",
+    "physics_engine.py": "5ab41f52cc8d69a62da04c9809abac4e35b15f4aafc5619fb22eb1384c86b086",
+    "properties.py": "8dee2a28f0ba8e515efa5dc0aa2257c1fdd0d51e7d5d0abb8fb0397baf7719b9",
+    "wiggle_core.py": "366708f1fb2e15e4026ee4436df0d33080753e2cb33b411b03d1c941daa96d5c",
+    "wiggle_ui.py": "3eac1c3ea339bbc9e35a23c76b8a184dbbedff43fd71282ea99794c0f1021d5a"
+  },
+  "fixture_seed_callback_suppression_restored_before_transition": true,
+  "isolated_legacy_copy": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_motion_20261004\\wiggle_transition_20261004T171046842629Z_legacy.blend",
+  "completed_utc": "2026-10-04T17:10:46.962797+00:00"
+}

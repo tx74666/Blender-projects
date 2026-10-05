@@ -1,0 +1,152 @@
+Status: review-only candidate, 2026-10-05. No Unity Assets, project settings,
+production profile or Docs have been written. No Unity MCP/UI/compiler/native
+test has been run. The source copies and unified diff are confined to X Validation.
+
+Route comparison
+
+A. Reuse the current Player's old native Dress component and repair eight refs.
+   Small apparent diff, but its lost imported fileIDs, existing component order,
+   native selection/cache state and shared collider provenance all need proof.
+   Whole V1 profile restore would also replay old Hair, and rejects managed Hair.
+
+B. Chosen: clone current Player/current Cosha import, create a dedicated QA-only
+   Dress component and three dedicated QA collider copies. Read only the saved
+   Dress record, copy its complete native parameters, and explicitly bind the
+   eight renamed roots. Other Magica cloths are disabled on the disposable clone
+   so Hair has no independent simulation (body/root transport still moves it).
+   Production Hair and profile are neither restored nor
+   changed. There is no 32-strand Hair integration prerequisite or Hair acceptance.
+
+Candidate contents
+
+- CharacterPoseStressVerification.cs: full reviewable source copy. Adds one menu
+  and a dressCurrent branch. Default old menus retain their original route.
+- CharacterDressOnlyStressPreparation.cs: bounded, inactive PreviewScene-only
+  builder; no Setup service mutation, WholeProfileRestore, Hair Setup or Apply.
+- CharacterDressDynamicStressDriver.cs: owned Play-clone-only native Walk_N and
+  root input driver; no production controller/clip/Avatar/bones/settings writes.
+- dress_only_candidate.patch: unified diff for the three eventual Editor files.
+- candidate_manifest.json: source/input/candidate hashes, scope and unrun state.
+- prepare_candidate.py: regenerates this candidate only; rejects changed base text.
+  AST and read-only git apply --check outcomes are embedded in the manifest.
+
+Minimum dynamic addition (only dressCurrent)
+
+The original nine leg/squat/lunge cases and all original menu routes remain.
+Three more cases are appended, bringing this route to twelve cases:
+
+- walk_native_two_cycles resolves one exact base slot named Walk_N through the
+  current saved controller/override hierarchy. It rejects cycles/null controllers,
+  ambiguous slots/paths, unsaved asset identities, object curves and unknown or
+  non-Humanoid body curves. The effective saved clip must already be a looping
+  native Humanoid clip of 0.1-5 seconds. No fallback, clip authoring, loop-setting
+  change or retiming is performed. Each of the first two full-weight periods needs
+  native clip/body samples, actual changes on both thigh bones, and at least ten
+  real positive-substep Magica frames. Missing bindings reject before fixture work.
+- root_yaw_turn applies a continuous 90-degree root yaw, hold and return. The
+  physics-off reference receives the identical input; captured view axes turn with
+  the character. Root input is applied after body blending, before native transform
+  reads. The source clip's automatic root motion/events are disabled on clones only.
+- root_abrupt_stop moves the root with a commanded 0.5 m/s trajectory, changes
+  velocity to zero while keeping position continuous, holds, and then returns.
+  Actual Time.deltaTime-derived velocity and capped QA-clock velocity are recorded
+  separately. Real approach speed must reach 0.45 m/s and at least ten observed
+  stationary frames must follow. An extra stop-phase native image captures response.
+
+Root/native center input is compared read-only to the actual native historical
+component frame and runtime teleport parameters using |scale|/|initScale|. Anchored,
+synchronized, external or negative-scale frames refuse; a stimulus reaching the
+saved auto-teleport threshold refuses rather than changing a setting or accepting
+a silent reset. Build/reset warmup is excluded from this effect check.
+
+Each current-Dress case records moving-particle response in a Waist rigid frame:
+translation and rotation are removed, while distances retain world metres (no
+scale division). Finite/root/frame checks are separate from settling. At least
+five real tail frames and thirty native positive-substep frames are required.
+The existing 0.35 m/s QA tail threshold is exposed as diagnostic attachmentSettled;
+above-threshold cases do not receive numerical completion. It is not an art/game
+quality or triangle-safety threshold.
+
+Contact evidence is paired Pre/Post collisionNormalArray data on moving particles.
+Edge mode can retain an old normal after contact ends. Retained nonzero normals are
+counted separately; only a nonzero direction change in a frame with native substeps
+is a sufficient fresh collider-normal witness. This undercounts same-direction
+persistent contact and describes native friction/proximity in the last solver
+substep, not the interpolated displayed particle pose or mesh intersection.
+At least one fresh witness is required for this batch's contact coverage to be
+marked observed. No native arrays are cleared and no solver/parameters are modified.
+
+Exact bounded mapping
+
+Saved old attachment:
+  CoshaRig@0/Hips@0/SK_Dress_857c5a_Waist@0
+Current required attachment:
+  CoshaRig@0/Hips@0/SK_Dress_Waist@0
+
+Saved and new roots retain order 04,03,02,01,08,07,06,05.
+Each old SK_Dress_857c5a_DEF_##_01@0 maps only to the same numbered new
+SK_Dress_DEF_##_01@0 beneath that one exact Waist. Every chain must contain
+exactly four same-numbered, ordered, singly connected DEF bones. Existing native
+DiscoverRoots performs the read-only skin-weight/disjoint-chain/weighted-Waist
+proof. The Dress mesh must belong to Assets/Art/Character/Cosha/Cosha.fbx.
+No nearest, positional sorting, inferred children, root regeneration or reweighting.
+
+The saved record must have SequentialLoopMesh, eight explicit root references,
+three explicit capsule references, one dedicated pose record for each collider,
+and no authored painted selection requiring topology migration. All extra native
+references must be explicit nulls. Unknown fields/types/order/hierarchy or another
+profile owner reject before creation. Late failures discard the whole owned clone
+through the existing PrepareFixture finally path, leaving artist state untouched.
+
+Copies preserve full native Dress JSON, the source root order, all three capsule
+dimensions/centers/directions/symmetry settings and dedicated local poses. Capsule
+parents/symmetry attachments resolve by exact character path plus ordinal. Existing
+Hair native settings, selection and managed metadata are checked before/after
+construction; only enable flags are subsequently disabled in the test clone.
+
+Existing shared guards retained
+
+Main Editor/idle/import/compile/animation guards; explicit writer ownership is still
+required externally. Disable Domain Reload + normal Scene Reload are required,
+not adjusted. CharacterTuning persistence scene cannot be loaded. The original
+owned cleanup ticket, Builder transient lease/save snapshots, private camera/light
+startup, previous playModeStartScene restoration, source dependency hashes/mtime/
+dirty counts, original scene dirtyID/roots/identity, Selection and preview protection,
+timeouts and cleanup all use the existing implementation.
+
+After Building's explicit current Unity handoff only
+
+1. Read current main Editor identity, loaded/dirty scenes, Play/Pause/change,
+   compile/import/reload/tests/pending QA/restore and Console baseline. Read current
+   RAM; stay serial and do not start a heavy job below approximately 200 MB free.
+2. Recheck candidate base and input hashes. If any changed, inspect new evidence
+   and regenerate/review; do not overwrite newer Character or Building work.
+3. Deploy only the three Editor source files in the diff. Let Unity compile and
+   inspect diagnostics before any menu. Do not invoke MCP run_tests/manage_build
+   against dirty scenes; do not save/close/reload the artist scene or Apply profile.
+4. Run Tools/RandomRealm/Character/Pose Stress/Verify Current Dress Only
+   (Transient Play). The entry verifies the current import at execution. Require
+   three registered native Dress colliders, 32 native particles, eight fixed roots,
+   real simulation frames and all nine leg/squat/lunge transitions/recovery stages,
+   plus the three dynamic cases and verified fresh native collider-normal evidence.
+5. Inspect Logs/CharacterTuning/PoseStress/<new run>/verification.json and images.
+   Require all source/profile/scene/selection/Builder-save/Play cleanup protections.
+   Review front/side/hips/physics-off images and rendered skin separately from the
+   coarse 32-particle proxy. A finite/root/numerical pass is not no-penetration or
+   acceptable-art proof. Record any folding/intersection as unresolved rather than
+   silently adjusting native parameters or disabling production collisions.
+6. Confirm native idle Edit, original dirty state and hashes, release the Unity
+   writer lease to Building. Record one final result for the completed task.
+
+Explicit limits
+
+This validates current imported model plus saved Unity Dress parameters in an
+isolated native fixture. It does not publish repaired binding paths, update the
+production Player/profile, transfer new Blender Cloth/Motion tuning to Magica,
+validate 32-strand Hair, or prove authored gameplay locomotion/all-frame collision.
+Walk_N is an existing authored clip exercised in-place on the QA clone; root turn
+and abrupt stop are explicit QA transport stimuli, not the production locomotion
+controller or gameplay. Dynamic clip/body evidence is not a production-profile Apply.
+The existing CharacterStressGeometry diagnostic explicitly has no signed body
+intersection pass. Historical 10/04 Dress results used a different FBX hash and
+cannot substitute for this new run. Live new-Hair ownership is unknown and unused.

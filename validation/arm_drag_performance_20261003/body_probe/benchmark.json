@@ -1,0 +1,138 @@
+{
+  "schema": 1,
+  "status": "error",
+  "args": {
+    "input": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "output": "D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\body_probe\\benchmark.json",
+    "addon_root": "C:/Users/Randy/AppData/Roaming/Blender Foundation/Blender/5.1/scripts/addons",
+    "rig": "CoshaRig",
+    "body": "Cosha",
+    "bone": "",
+    "side": "L",
+    "mode": "current",
+    "movement": "auto",
+    "repeats": 6,
+    "warmups": 2,
+    "cases": "baseline,no_subsurf,no_forearm,no_subsurf_no_forearm",
+    "sample_vertices": 8192
+  },
+  "limits": [
+    "Background CPU/depsgraph test, not end-to-end interactive latency.",
+    "Only installed Character Designer is explicitly registered; other GUI add-ons may differ.",
+    "No render, frame stepping, scene save, installation change or artist-window connection.",
+    "No-subdivision and no-correction cases are isolated diagnostic counterfactuals.",
+    "Warm p95 uses a small sample and must not be presented as a long-term guarantee.",
+    "Process page faults include soft faults; system paging requires external counters."
+  ],
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\arm_drag_performance_20261003\\X_saved_input.blend",
+    "sha256_before": "aff215d04fb3b4349c6f01e97abf0ccf81646a36ed87b348ca2ecb52766e06fd",
+    "bytes": 32311941
+  },
+  "memory_start": {
+    "available": true,
+    "system_load_percent": 93,
+    "system_available_mib": 1012.38671875,
+    "system_total_mib": 16158.7578125,
+    "process_working_set_mib": 158.73046875,
+    "process_private_mib": 217.2734375,
+    "process_page_fault_count": 50692,
+    "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+  },
+  "runtime": {
+    "blender_version": "5.1.0",
+    "background": true,
+    "binary": "D:\\Blender5.1\\blender.exe",
+    "addon_version": [
+      0,
+      73,
+      3
+    ],
+    "addon_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\scripts\\addons\\character_designer\\__init__.py",
+    "addon_sources": {
+      "init": "4897c5796d24ba46db1d5abd14dcd994c3847e0f182a53dd152ad110daf7f4dd",
+      "forearm_twist": "12b298520389598cbf5bc8cd0dc51fce21e346b6928106e6bb48ca65ed1eb8aa",
+      "limb_ik": "fc747da16c60df1f607eec5651231809b60ac1858307037b3a806a9fbfd52a9e",
+      "original": "424b44189e0a10451534cd323b3040ba1eea453eb47cafd97cd28ee3794827b6"
+    },
+    "before_load_handlers": {
+      "depsgraph_update_pre": [],
+      "depsgraph_update_post": [
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_graph_post"
+        }
+      ],
+      "frame_change_pre": [],
+      "frame_change_post": [
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_frame_visibility"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_frame_post"
+        }
+      ],
+      "load_post": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "pose_library.gui",
+          "name": "_on_blendfile_load_post"
+        },
+        {
+          "module": "character_designer.finger_definition_ui",
+          "name": "_resume"
+        },
+        {
+          "module": "character_designer.finger_loop_marks_ui",
+          "name": "_restore"
+        },
+        {
+          "module": "character_designer.reference_views",
+          "name": "_reference_images_load_post"
+        },
+        {
+          "module": "character_designer.body_calibration_display",
+          "name": "_invalidate"
+        },
+        {
+          "module": "character_designer.body_calibration_overlay",
+          "name": "_load"
+        },
+        {
+          "module": "character_designer.bone_collections",
+          "name": "_load_native_migration"
+        },
+        {
+          "module": "character_designer.forearm_twist",
+          "name": "_load_post"
+        },
+        {
+          "module": "character_designer.generated_names",
+          "name": "_after_load"
+        }
+      ]
+    }
+  },
+  "memory_after_load": {
+    "available": true,
+    "system_load_percent": 95,
+    "system_available_mib": 683.41015625,
+    "system_total_mib": 16158.7578125,
+    "process_working_set_mib": 546.98828125,
+    "process_private_mib": 608.16796875,
+    "process_page_fault_count": 315108,
+    "page_fault_warning": "Includes soft faults; this count does not prove disk paging."
+  },
+  "error": "'Bone' object has no attribute 'select'",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py\", line 634, in <module>\n    main(args, report)\n    ~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\arm_drag_performance_20261003\\profile_arm_drag.py\", line 320, in main\n    'selected_data_bones': [bone.name for bone in rig.data.bones if bone.select],\n                                                                    ^^^^^^^^^^^\nAttributeError: 'Bone' object has no attribute 'select'\n",
+  "partial_results_preserved": true
+}

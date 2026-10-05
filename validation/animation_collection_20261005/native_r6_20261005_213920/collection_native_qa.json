@@ -1,0 +1,225 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "Fresh factory-startup process",
+      "passed": true
+    },
+    {
+      "name": "Artist file is not a QA destination",
+      "passed": true
+    },
+    {
+      "name": "Candidate package exists",
+      "passed": true
+    },
+    {
+      "name": "No cached Character Designer package",
+      "passed": true
+    },
+    {
+      "name": "Exactly two Ready motions in full catalog",
+      "passed": true
+    },
+    {
+      "name": "Explicit private root is below AW/Pairs",
+      "passed": true
+    },
+    {
+      "name": "Original workspace and both Ready Links lie inside explicit QA root",
+      "passed": true
+    },
+    {
+      "name": "Packets contain two distinct real motions",
+      "passed": true
+    },
+    {
+      "name": "Entire supplied catalog preserved",
+      "passed": true
+    },
+    {
+      "name": "Add Ready queued both motions",
+      "passed": true
+    },
+    {
+      "name": "Add Ready completed",
+      "passed": true,
+      "details": {
+        "state": "COMPLETED",
+        "total": 2,
+        "completed": 2,
+        "failure": null
+      }
+    },
+    {
+      "name": "One native editing rig shared by two entries",
+      "passed": true
+    },
+    {
+      "name": "Sources linked/read-only and Customs independent/local",
+      "passed": true
+    },
+    {
+      "name": "Factory author assets/context unaffected by imports",
+      "passed": true
+    },
+    {
+      "name": "Motion Action remains in native membership",
+      "passed": true
+    },
+    {
+      "name": "Native Action content is inspectable",
+      "passed": true,
+      "details": "Complete selected-slot Action content."
+    },
+    {
+      "name": "Linked Source remains immutable and its source file exact",
+      "passed": true
+    },
+    {
+      "name": "Artist file, supplied inputs/model and private packets remain exact",
+      "passed": true
+    }
+  ],
+  "errors": [
+    {
+      "stage": "Add Ready",
+      "type": "InterruptedError",
+      "message": "QA cancellation requested; completed work will be retained.",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\tests\\verify_animation_worklist_collection_blender.py\", line 373, in main\n    motion(item, 'source', full=True)\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\tests\\verify_animation_worklist_collection_blender.py\", line 230, in motion\n    budget()\n    ~~~~~~^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\tests\\verify_animation_worklist_collection_blender.py\", line 122, in budget\n    raise InterruptedError('QA cancellation requested; completed work will be retained.')\nInterruptedError: QA cancellation requested; completed work will be retained.\n"
+    }
+  ],
+  "timings": [
+    {
+      "stage": "Add Ready",
+      "key": "12e52e465ed793a4d801955e9f964a82:-3100369314251171874",
+      "seconds": 8.109525699983351
+    },
+    {
+      "stage": "Add Ready",
+      "key": "8269a9f8cf495034c817722ac21f309f:1657602633327794031",
+      "seconds": 1.9735797999892384
+    },
+    {
+      "stage": "Add Ready",
+      "operation": "Complete runner motion hash",
+      "key": "b63039b61a6a446baa673bb58199140d",
+      "side": "source",
+      "action": "Source · Idle",
+      "slot": 929201142,
+      "curves": 2170,
+      "keyframe_points": 644490,
+      "sampled_points": 0,
+      "points": 644490,
+      "seconds": 41.175791299989214
+    }
+  ],
+  "worker_processes": [],
+  "artist_file": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "artist_sha_before": "da79369f32b81c8db425e3cb59dab6f8a926b6a059089de89cdf2e401e0d4bb3",
+  "blender_version": "5.1.0",
+  "runner_sha": "9e4a57eb553a7609fb34f48901cd8da1e6dc3c7ed955d93f71073ef6f84c6d1a",
+  "candidate_addons": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\candidate_source_r6\\addons",
+  "supplied_workspace": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\Workspaces\\16c8d53b-f513-46c0-9778-4789d512ea56\\751f9b7475c20a540b4f368d19af268b\\character_animation_workspace.json",
+  "output": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\native_r6_20261005_213920",
+  "qa_publication_root": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d",
+  "memory_checks": [
+    {
+      "stage": "Add Ready next launch",
+      "key": "12e52e465ed793a4d801955e9f964a82:-3100369314251171874",
+      "available_bytes": 588103680,
+      "load_percent": 96,
+      "at": 4.737944900000002
+    },
+    {
+      "stage": "Add Ready next launch",
+      "key": "8269a9f8cf495034c817722ac21f309f:1657602633327794031",
+      "available_bytes": 550105088,
+      "load_percent": 96,
+      "at": 12.90901400000439
+    }
+  ],
+  "motion_proof_policy": "Full after Add, after own Custom edit and edited Custom reopen; cached runner expectations otherwise; runtime publication/scan proofs never cached.",
+  "cancellation_sentinel": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\native_r6_20261005_213920\\cancel.request",
+  "candidate_version": [
+    0,
+    76,
+    3
+  ],
+  "candidate_path": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\candidate_source_r6\\addons\\character_designer\\__init__.py",
+  "catalog_count": 29,
+  "private_workspace": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\Workspaces\\16c8d53b-f513-46c0-9778-4789d512ea56\\751f9b7475c20a540b4f368d19af268b\\character_animation_workspace.json",
+  "qa_links_before": [
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124429-8e2801cfd901\\character_animation_link.json",
+      "sha": "f50fc84ccb6dabc64151552e9d30de4fd035972cd4c6629502398b4e711ab7c6",
+      "link_id": "82a9b6fad735432fb05214f078e4a8eb",
+      "revision": 0,
+      "name": null
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124427-79673a6496f4\\character_animation_link.json",
+      "sha": "112cb1f843be883d646330dc102679e564fe18bb68a077168decd8b11c0bb69c",
+      "link_id": "21aa9c9ba9f6455c948004907cba4729",
+      "revision": 1,
+      "name": null
+    }
+  ],
+  "cancelled": true,
+  "qa_links_after": [
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124429-8e2801cfd901\\character_animation_link.json",
+      "sha": "f50fc84ccb6dabc64151552e9d30de4fd035972cd4c6629502398b4e711ab7c6",
+      "link_id": "82a9b6fad735432fb05214f078e4a8eb",
+      "revision": 0
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124427-79673a6496f4\\character_animation_link.json",
+      "sha": "112cb1f843be883d646330dc102679e564fe18bb68a077168decd8b11c0bb69c",
+      "link_id": "21aa9c9ba9f6455c948004907cba4729",
+      "revision": 1
+    }
+  ],
+  "protected_inputs": [
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\Workspaces\\16c8d53b-f513-46c0-9778-4789d512ea56\\751f9b7475c20a540b4f368d19af268b\\character_animation_workspace.json",
+      "before": "7b1ca64d6b34f72f07596f729b68e4bde2648968cc4c870cd8f2c0eeed0f7d43",
+      "after": "7b1ca64d6b34f72f07596f729b68e4bde2648968cc4c870cd8f2c0eeed0f7d43"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124429-8e2801cfd901\\Cosha_Idle.cdanim.json",
+      "before": "ae2c3913daf359215f35f7fdfdb3a373fb122b829e972528d79eac2d50541d8b",
+      "after": "ae2c3913daf359215f35f7fdfdb3a373fb122b829e972528d79eac2d50541d8b"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Art\\Character\\Cosha\\Cosha.fbx",
+      "before": "cabd19d5f06d211558e279630b20abdd5b48f8973709241ffeef629901742685",
+      "after": "cabd19d5f06d211558e279630b20abdd5b48f8973709241ffeef629901742685"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124427-79673a6496f4\\Cosha_Walk_N.cdanim.json",
+      "before": "f4fb63deea3b406a27d28ea5ff673132bcc66b353106b1e62be0f097ccd758e8",
+      "after": "f4fb63deea3b406a27d28ea5ff673132bcc66b353106b1e62be0f097ccd758e8"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124427-79673a6496f4\\blender_revisions\\21aa9c9ba9f6455c948004907cba4729\\action-2e36206addcf4ab683d030d818d9dfaa.fbx",
+      "before": "79c27108e2d5a4b571b91afe170a786231f82f5804e16de9fa1bfe25d20e3382",
+      "after": "79c27108e2d5a4b571b91afe170a786231f82f5804e16de9fa1bfe25d20e3382"
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\AW\\Pairs\\d948988d\\CharacterTuning\\20261005-124427-79673a6496f4\\blender_revisions\\21aa9c9ba9f6455c948004907cba4729\\action-2e36206addcf4ab683d030d818d9dfaa.animation.json",
+      "before": "294af19c6af74a47eedc2e30a16a5dc97e529fa41e3e37b127844bcbaa84a50f",
+      "after": "294af19c6af74a47eedc2e30a16a5dc97e529fa41e3e37b127844bcbaa84a50f"
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.1\\datafiles\\character_designer\\animation_sources\\12b79d5141304a90bb25539afb53352f\\cabd19d5f06d211558e279630b20abdd5b48f8973709241ffeef629901742685\\b63039b61a6a446baa673bb58199140d.blend",
+      "before": "365e3b18203f3b44e23eda1c55121d2547055b55242f4e3e787bbd8fe4fa720f",
+      "after": "365e3b18203f3b44e23eda1c55121d2547055b55242f4e3e787bbd8fe4fa720f"
+    }
+  ],
+  "artist_sha_after": "da79369f32b81c8db425e3cb59dab6f8a926b6a059089de89cdf2e401e0d4bb3",
+  "checkpoints": [
+    "D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\native_r6_20261005_213920\\partial_worklist.blend"
+  ],
+  "elapsed_seconds": 57.567548199993325
+}

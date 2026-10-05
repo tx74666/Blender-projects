@@ -1,0 +1,80 @@
+{
+  "ok": false,
+  "blender_version": "5.1.0",
+  "baseline_zip": "D:\\MyRepository\\Blender-addons-by-Randy\\dist\\character_designer-0.69.0.zip",
+  "baseline_sha256": "3956ad897dd079011a9287f4d128f1a80c169c21c3bda1f558b746ba44ba3273",
+  "source_sha256": {
+    "unity_export.py": "8fb200ad8ea4153db3d9b3e7beb9fca9bca728370fc71eda8841f0b58c406bd0",
+    "unity_export_ui.py": "8914fec48d3a55f61d042166f20e54c5124b98e74af787e69186c27af94b169d"
+  },
+  "timing_scope": "Python draw with recording layout and real bpy data; no viewport/GPU timing",
+  "fixture": {
+    "unrelated_objects": 300,
+    "main_bones": 180,
+    "bound_triangle_meshes": 8
+  },
+  "baseline": {
+    "collapsed": {
+      "counts": {
+        "helpers": 3,
+        "character_armatures": 3,
+        "material_choices": 1,
+        "binding_queries": 24
+      },
+      "samples_ms": [
+        31.220900011248887,
+        38.981699995929375,
+        36.42079999553971
+      ],
+      "median_ms": 36.42079999553971
+    },
+    "expanded": {
+      "counts": {
+        "helpers": 4,
+        "character_armatures": 4,
+        "material_choices": 1,
+        "binding_queries": 24
+      },
+      "samples_ms": [
+        57.51330000930466,
+        52.79280000831932,
+        54.82730001676828
+      ],
+      "median_ms": 54.82730001676828
+    }
+  },
+  "current": {
+    "collapsed": {
+      "counts": {
+        "helpers": 1,
+        "character_armatures": 1,
+        "material_choices": 0,
+        "binding_queries": 8,
+        "helper_role_candidates": 8
+      },
+      "samples_ms": [
+        1.1696000001393259,
+        1.0652999917510897,
+        0.9146000084001571
+      ],
+      "median_ms": 1.0652999917510897
+    },
+    "expanded": {
+      "counts": {
+        "helpers": 1,
+        "character_armatures": 1,
+        "material_choices": 0,
+        "binding_queries": 8,
+        "helper_role_candidates": 8
+      },
+      "samples_ms": [
+        0.7825000211596489,
+        0.8103000000119209,
+        0.7340000011026859
+      ],
+      "median_ms": 0.7825000211596489
+    }
+  },
+  "error": "Traceback (most recent call last):\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_unity_export_scope_performance_blender.py\", line 400, in main\n    report['checks'] = check_freshness(f, old_exporter)\n                       ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_unity_export_scope_performance_blender.py\", line 291, in check_freshness\n    observe('direct scene member removed', excluded=[changed.name])\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_unity_export_scope_performance_blender.py\", line 244, in observe\n    assert not set(excluded) & set(current['objects']), (label, current)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('direct scene member removed', {'objects': ['ScopeMainRig', 'ScopeMesh00', 'ScopeMesh01', 'ScopeMesh02', 'ScopeMesh03', 'ScopeMesh04', 'ScopeMesh05', 'ScopeMesh06', 'ScopeMesh07'], 'warnings': []})\n",
+  "baseline_zip_unchanged": true
+}

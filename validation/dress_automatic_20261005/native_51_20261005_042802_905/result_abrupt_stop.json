@@ -1,0 +1,2947 @@
+{
+  "name": "abrupt_stop",
+  "representative_input_only": true,
+  "frames": 60,
+  "collision_stride": 6,
+  "checks": [
+    {
+      "name": "reset_returns_start_unbaked",
+      "passed": true
+    },
+    {
+      "name": "finite_all_frames",
+      "passed": true
+    },
+    {
+      "name": "representative_native_leg_inputs_reach_evaluated_bones",
+      "passed": true,
+      "maximum_knee_motion_m": {
+        "L": 0.13820559769597762,
+        "R": 0.13820584228857385
+      },
+      "minimum_representative_response_m": 0.01573037574940555
+    },
+    {
+      "name": "fixed_waist_attachment",
+      "passed": true,
+      "maximum_error_m": 2.6749555872404934e-07,
+      "guard_m": 5e-05
+    },
+    {
+      "name": "diagnostic_neighbor_continuity",
+      "passed": true,
+      "maximum_ratio": 1.8756713613449216,
+      "diagnostic_limit": 3.0
+    },
+    {
+      "name": "both_native_leg_colliders_measured",
+      "passed": true,
+      "roles": [
+        "leg.L",
+        "leg.R"
+      ]
+    },
+    {
+      "name": "evaluated_final_weight_identity_available",
+      "passed": true
+    },
+    {
+      "name": "diagnostic_final_free_surface_penetration",
+      "passed": false,
+      "maximum_m": 0.013307525776326656,
+      "diagnostic_limit_m": 0.002
+    },
+    {
+      "name": "diagnostic_stop_tail_jitter",
+      "passed": true,
+      "maximum_m_per_frame": {
+        "proxy": 0.00035197518182260366,
+        "final": 0.00037922348730473875
+      },
+      "diagnostic_limit_m_per_frame": 0.001
+    },
+    {
+      "name": "reset_replay_surface",
+      "passed": true,
+      "maximum_error_m": {
+        "final_m": 0.0,
+        "proxy_m": 0.0
+      },
+      "guard_m": 5e-05
+    },
+    {
+      "name": "native_bake_sealed",
+      "passed": true,
+      "native_cache": {
+        "pointer": 1568241688336,
+        "start": 1,
+        "end": 60,
+        "step": 1,
+        "is_baked": true,
+        "disk": true,
+        "external": false,
+        "name": ""
+      },
+      "saved_range": [
+        1,
+        60
+      ]
+    },
+    {
+      "name": "bake_random_seek_surface",
+      "passed": true,
+      "maximum_error_m": {
+        "final_m": 0.0,
+        "proxy_m": 0.0
+      },
+      "guard_m": 5e-05
+    },
+    {
+      "name": "automatic_manual_automatic_keeps_sealed_cache",
+      "passed": true,
+      "before": {
+        "pointer": 1568241688336,
+        "start": 1,
+        "end": 60,
+        "step": 1,
+        "is_baked": true,
+        "disk": true,
+        "external": false,
+        "name": ""
+      },
+      "manual": {
+        "pointer": 1568241688336,
+        "start": 1,
+        "end": 60,
+        "step": 1,
+        "is_baked": true,
+        "disk": true,
+        "external": false,
+        "name": ""
+      },
+      "restored": {
+        "pointer": 1568241688336,
+        "start": 1,
+        "end": 60,
+        "step": 1,
+        "is_baked": true,
+        "disk": true,
+        "external": false,
+        "name": ""
+      }
+    },
+    {
+      "name": "automatic_mode_has_actual_surface_effect",
+      "passed": true,
+      "displacement_m": 0.10359632608057599
+    },
+    {
+      "name": "mode_roundtrip_surface",
+      "passed": true,
+      "error_m": 0.0,
+      "guard_m": 5e-05
+    },
+    {
+      "name": "manual_fine_tune_after_physics_bake_surface",
+      "passed": true,
+      "control": "SK_Dress_Hem",
+      "displacement_m": 0.004054891321950217,
+      "synthetic_control_delta": [
+        0.0047704074531793594,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "manual_fine_tune_keeps_cache_and_qa_action",
+      "passed": true,
+      "before_cache": {
+        "pointer": 1568241688336,
+        "start": 1,
+        "end": 60,
+        "step": 1,
+        "is_baked": true,
+        "disk": true,
+        "external": false,
+        "name": ""
+      },
+      "after_cache": {
+        "pointer": 1568241688336,
+        "start": 1,
+        "end": 60,
+        "step": 1,
+        "is_baked": true,
+        "disk": true,
+        "external": false,
+        "name": ""
+      }
+    },
+    {
+      "name": "manual_fine_tune_restore_surface",
+      "passed": true,
+      "error_m": 0.0,
+      "guard_m": 5e-05
+    },
+    {
+      "name": "original_models_rest_actions_nla_preserved",
+      "passed": true,
+      "details": {
+        "success": true,
+        "missing": [],
+        "changed": {
+          "meshes": [],
+          "rest": [],
+          "actions": [],
+          "nla_assets": []
+        }
+      }
+    }
+  ],
+  "success": false,
+  "scene_units_to_meters": 1.0,
+  "body_height_world_units": 1.573037574940555,
+  "candidate": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\Cosha_Dress_QA_abrupt_stop.blend",
+  "qa_action": "QA Representative · Abrupt Stop",
+  "qa_action_sha256": "ab83d5e367ec2ddd8ca4fd4e31107ae0ab9f3af523d2507ecd592423acf2079f",
+  "reset_initial": {
+    "start": 1,
+    "is_baked": false
+  },
+  "visual_keyframes": [
+    1,
+    12,
+    21,
+    30,
+    39,
+    48,
+    60
+  ],
+  "measurements": [
+    {
+      "frame": 1,
+      "finite": true,
+      "waist_pin_error_m": 2.9802322387695312e-08,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0,
+      "proxy_ring_neighbor_ratio": 1.0,
+      "native_knee_motion_without_root_m": {
+        "L": 0.0,
+        "R": 0.0
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.017553085461258888,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.021889707073569298,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027502410113811493,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027502410113811493,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.0194790530949831,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.028248529881238937,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.028248529881238937,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01918095164000988,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 0.0007648029713891447,
+        "unproven_minimum_nearest_normal_distance_m": 0.0007648030027667119,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 2,
+      "finite": true,
+      "waist_pin_error_m": 1.251165242772301e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0289994651214511,
+      "proxy_ring_neighbor_ratio": 1.0006401532053224,
+      "native_knee_motion_without_root_m": {
+        "L": 0.02933971400505704,
+        "R": 0.029339751464121717
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00843458584537522,
+      "proxy_hem_delta_rms_m": 0.006588692011060095,
+      "final_hem_delta_max_m": 0.008778938783756655,
+      "final_hem_delta_rms_m": 0.006154414828596377
+    },
+    {
+      "frame": 3,
+      "finite": true,
+      "waist_pin_error_m": 1.284009809763289e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0258814794763709,
+      "proxy_ring_neighbor_ratio": 1.0021166460714008,
+      "native_knee_motion_without_root_m": {
+        "L": 0.057323629851529334,
+        "R": 0.05732370033702215
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.009539518524688363,
+      "proxy_hem_delta_rms_m": 0.008633838187946299,
+      "final_hem_delta_max_m": 0.009315822441875926,
+      "final_hem_delta_rms_m": 0.007929950633181047
+    },
+    {
+      "frame": 4,
+      "finite": true,
+      "waist_pin_error_m": 1.257802770743827e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0160318052769297,
+      "proxy_ring_neighbor_ratio": 1.002586695134114,
+      "native_knee_motion_without_root_m": {
+        "L": 0.08266925909682621,
+        "R": 0.08266941930756919
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0031333747543370823,
+      "proxy_hem_delta_rms_m": 0.0024849376728939346,
+      "final_hem_delta_max_m": 0.0030565904969682384,
+      "final_hem_delta_rms_m": 0.002242093558125764
+    },
+    {
+      "frame": 5,
+      "finite": true,
+      "waist_pin_error_m": 2.4268772415671244e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0190599815311654,
+      "proxy_ring_neighbor_ratio": 1.002341697540403,
+      "native_knee_motion_without_root_m": {
+        "L": 0.10423200851954417,
+        "R": 0.10423215006735355
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0025810468611676823,
+      "proxy_hem_delta_rms_m": 0.0018062366490115894,
+      "final_hem_delta_max_m": 0.002155243861681471,
+      "final_hem_delta_rms_m": 0.0015959245302939221
+    },
+    {
+      "frame": 6,
+      "finite": true,
+      "waist_pin_error_m": 1.2489448945403256e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0153679306925425,
+      "proxy_ring_neighbor_ratio": 1.0025502950814529,
+      "native_knee_motion_without_root_m": {
+        "L": 0.12105660423999959,
+        "R": 0.12105673057804085
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0030105415465612986,
+      "proxy_hem_delta_rms_m": 0.0021780323388276915,
+      "final_hem_delta_max_m": 0.0029461517605418484,
+      "final_hem_delta_rms_m": 0.00195809144618842
+    },
+    {
+      "frame": 7,
+      "finite": true,
+      "waist_pin_error_m": 1.257802770743827e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0222197871982044,
+      "proxy_ring_neighbor_ratio": 1.0066237934670506,
+      "native_knee_motion_without_root_m": {
+        "L": 0.13241295763171165,
+        "R": 0.1324132344094545
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.004675086686218712,
+      "proxy_hem_delta_rms_m": 0.0012333201602026172,
+      "final_hem_delta_max_m": 0.002336488192745734,
+      "final_hem_delta_rms_m": 0.0009250312268705247,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.01755570061504841,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.021889694035053253,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.002478203037753701,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.002478203037753701,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.014111490920186043,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": -0.031085766851902008,
+            "maximum_penetration_m": 0.031085766851902008,
+            "inside_vertices": 6
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": -0.006723823957145214,
+            "maximum_penetration_m": 0.006723823957145214,
+            "inside_vertices": 5
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.004700390622019768,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.4554265036235975,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 2.6229552531731315e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.028682925505563617,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 8,
+      "finite": true,
+      "waist_pin_error_m": 1.2489448945403256e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0403825574361356,
+      "proxy_ring_neighbor_ratio": 1.0068338048686603,
+      "native_knee_motion_without_root_m": {
+        "L": 0.13781705406267322,
+        "R": 0.13781725610637977
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.002191251294537858,
+      "proxy_hem_delta_rms_m": 0.0008066672133118263,
+      "final_hem_delta_max_m": 0.0019898401274683476,
+      "final_hem_delta_rms_m": 0.0007817186198109437
+    },
+    {
+      "frame": 9,
+      "finite": true,
+      "waist_pin_error_m": 2.443972150513042e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0450638081671415,
+      "proxy_ring_neighbor_ratio": 1.002776573509064,
+      "native_knee_motion_without_root_m": {
+        "L": 0.13704099469189798,
+        "R": 0.13704118237655147
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0017654280890086345,
+      "proxy_hem_delta_rms_m": 0.0007503148945889815,
+      "final_hem_delta_max_m": 0.0012749303997214752,
+      "final_hem_delta_rms_m": 0.000513404927089593
+    },
+    {
+      "frame": 10,
+      "finite": true,
+      "waist_pin_error_m": 1.3333208984265686e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0374705709559098,
+      "proxy_ring_neighbor_ratio": 1.0029734832832469,
+      "native_knee_motion_without_root_m": {
+        "L": 0.13011738449437332,
+        "R": 0.13011752138257068
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0029086870696598205,
+      "proxy_hem_delta_rms_m": 0.0009312845448635546,
+      "final_hem_delta_max_m": 0.0020569892345481777,
+      "final_hem_delta_rms_m": 0.0007432662051945311
+    },
+    {
+      "frame": 11,
+      "finite": true,
+      "waist_pin_error_m": 2.4268772415671244e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0601991857625037,
+      "proxy_ring_neighbor_ratio": 1.0025127002789285,
+      "native_knee_motion_without_root_m": {
+        "L": 0.11733869631157583,
+        "R": 0.11733881809554927
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.003881962619826212,
+      "proxy_hem_delta_rms_m": 0.0011360494922701854,
+      "final_hem_delta_max_m": 0.0032509512803685693,
+      "final_hem_delta_rms_m": 0.0009148107091649572
+    },
+    {
+      "frame": 12,
+      "finite": true,
+      "waist_pin_error_m": 1.3328003749250113e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.0909087007589737,
+      "proxy_ring_neighbor_ratio": 1.0023207272112395,
+      "native_knee_motion_without_root_m": {
+        "L": 0.0992517875561866,
+        "R": 0.09925194087990408
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0036316075843235715,
+      "proxy_hem_delta_rms_m": 0.001103778435405968,
+      "final_hem_delta_max_m": 0.004285366298037333,
+      "final_hem_delta_rms_m": 0.0009925274027154673,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.017265383154153824,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.021889671683311462,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.014672341756522655,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.014672341756522655,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.016674406826496124,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": -0.030929671600461006,
+            "maximum_penetration_m": 0.030929671600461006,
+            "inside_vertices": 1
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.008813953027129173,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.015404055826365948,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46235238453256355,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 1.825133722377359e-06,
+        "unproven_minimum_nearest_normal_distance_m": -0.016199285222683102,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 13,
+      "finite": true,
+      "waist_pin_error_m": 1.3514129182113002e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.125593948890656,
+      "proxy_ring_neighbor_ratio": 1.0024403252981227,
+      "native_knee_motion_without_root_m": {
+        "L": 0.07664563821980908,
+        "R": 0.07664583622537902
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00399972754371355,
+      "proxy_hem_delta_rms_m": 0.0011269626368975568,
+      "final_hem_delta_max_m": 0.004655182611542229,
+      "final_hem_delta_rms_m": 0.001053417006533154,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.01725667156279087,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.021889716386795044,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.021954232826828957,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.021954232826828957,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01772576943039894,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": -0.031114501878619194,
+            "maximum_penetration_m": 0.031114501878619194,
+            "inside_vertices": 1
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.018729625269770622,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.017688201740384102,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46563564678537117,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 2.5069475668715313e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.008661093874252401,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 14,
+      "finite": true,
+      "waist_pin_error_m": 6.664001874625056e-08,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1529506935694989,
+      "proxy_ring_neighbor_ratio": 1.0023152625245302,
+      "native_knee_motion_without_root_m": {
+        "L": 0.050526834660116274,
+        "R": 0.0505268251956285
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0031294238181389573,
+      "proxy_hem_delta_rms_m": 0.0010658840921154017,
+      "final_hem_delta_max_m": 0.003620821089752713,
+      "final_hem_delta_rms_m": 0.0008110220421489262
+    },
+    {
+      "frame": 15,
+      "finite": true,
+      "waist_pin_error_m": 4.7706993203109864e-08,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.172492704234062,
+      "proxy_ring_neighbor_ratio": 1.0023111172989494,
+      "native_knee_motion_without_root_m": {
+        "L": 0.022079638644405108,
+        "R": 0.022079637225868497
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0024188030313076502,
+      "proxy_hem_delta_rms_m": 0.000917038740959047,
+      "final_hem_delta_max_m": 0.002306450026872287,
+      "final_hem_delta_rms_m": 0.0005862788928347142
+    },
+    {
+      "frame": 16,
+      "finite": true,
+      "waist_pin_error_m": 2.4314476359010817e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1782363386905643,
+      "proxy_ring_neighbor_ratio": 1.0021230949672157,
+      "native_knee_motion_without_root_m": {
+        "L": 0.007388483908861688,
+        "R": 0.00738847632689782
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.002007614509352043,
+      "proxy_hem_delta_rms_m": 0.0007821274571892017,
+      "final_hem_delta_max_m": 0.0009961437717058593,
+      "final_hem_delta_rms_m": 0.0003583385238432496
+    },
+    {
+      "frame": 17,
+      "finite": true,
+      "waist_pin_error_m": 2.573418027038953e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.177520369197836,
+      "proxy_ring_neighbor_ratio": 1.0023174472435616,
+      "native_knee_motion_without_root_m": {
+        "L": 0.03651462987716296,
+        "R": 0.0365147707782669
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.002336940646673125,
+      "proxy_hem_delta_rms_m": 0.0007452305298266811,
+      "final_hem_delta_max_m": 0.0012806899404902278,
+      "final_hem_delta_rms_m": 0.00039133197944608085
+    },
+    {
+      "frame": 18,
+      "finite": true,
+      "waist_pin_error_m": 5.972094663188382e-08,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1693179393871707,
+      "proxy_ring_neighbor_ratio": 1.0024850814978061,
+      "native_knee_motion_without_root_m": {
+        "L": 0.06395492824932672,
+        "R": 0.06395498057409783
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0022419020852356216,
+      "proxy_hem_delta_rms_m": 0.0007122593616237639,
+      "final_hem_delta_max_m": 0.001420628247625794,
+      "final_hem_delta_rms_m": 0.00040743235816889287
+    },
+    {
+      "frame": 19,
+      "finite": true,
+      "waist_pin_error_m": 1.284009809763289e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.166143759612302,
+      "proxy_ring_neighbor_ratio": 1.0021410102003152,
+      "native_knee_motion_without_root_m": {
+        "L": 0.08845552584563951,
+        "R": 0.08845552518758285
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0021202649293075,
+      "proxy_hem_delta_rms_m": 0.0007074301924138118,
+      "final_hem_delta_max_m": 0.0017644978238493527,
+      "final_hem_delta_rms_m": 0.0005092483716785698,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.01707930862903595,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.02150590717792511,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.01369304396212101,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.01369304396212101,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01666543446481228,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.017781730741262436,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.017781730741262436,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01594458520412445,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.4640673293720411,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 6.988279346842319e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.008478669929900207,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 20,
+      "finite": true,
+      "waist_pin_error_m": 1.284009809763289e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1814153327680728,
+      "proxy_ring_neighbor_ratio": 1.0022881939740735,
+      "native_knee_motion_without_root_m": {
+        "L": 0.10891484890966861,
+        "R": 0.10891516146885037
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0022126199656953755,
+      "proxy_hem_delta_rms_m": 0.000866247659418807,
+      "final_hem_delta_max_m": 0.002675180053122743,
+      "final_hem_delta_rms_m": 0.0007813571797406134
+    },
+    {
+      "frame": 21,
+      "finite": true,
+      "waist_pin_error_m": 1.3657139822709083e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.2272889556126647,
+      "proxy_ring_neighbor_ratio": 1.0073017449569261,
+      "native_knee_motion_without_root_m": {
+        "L": 0.12443158151388478,
+        "R": 0.12443179602393704
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.005756910510616994,
+      "proxy_hem_delta_rms_m": 0.0017135768612109134,
+      "final_hem_delta_max_m": 0.006057905964238865,
+      "final_hem_delta_rms_m": 0.001744925145052336,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566097848117352,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.016948340460658073,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.021065078675746918,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": -0.0014161010039970279,
+            "maximum_penetration_m": 0.0014161010039970279,
+            "inside_vertices": 2
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": -0.0014161010039970279,
+            "maximum_penetration_m": 0.0014161010039970279,
+            "inside_vertices": 2
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.0052821096032857895,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": -0.0002227536024292931,
+            "maximum_penetration_m": 0.0002227536024292931,
+            "inside_vertices": 1
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": -0.0002227536024292931,
+            "maximum_penetration_m": 0.0002227536024292931,
+            "inside_vertices": 1
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.009949029423296452,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.4573246135364698,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 1.3084924830764066e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.020546576648484915,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 22,
+      "finite": true,
+      "waist_pin_error_m": 1.333093194403317e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.284678072969041,
+      "proxy_ring_neighbor_ratio": 1.0071462125825168,
+      "native_knee_motion_without_root_m": {
+        "L": 0.13433520869253476,
+        "R": 0.1343356928520141
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.007225509359030145,
+      "proxy_hem_delta_rms_m": 0.002395191675290885,
+      "final_hem_delta_max_m": 0.007605123908718247,
+      "final_hem_delta_rms_m": 0.0022690723873191156
+    },
+    {
+      "frame": 23,
+      "finite": true,
+      "waist_pin_error_m": 1.341104507446289e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.3469355502329214,
+      "proxy_ring_neighbor_ratio": 1.0057200236083,
+      "native_knee_motion_without_root_m": {
+        "L": 0.13820559769597762,
+        "R": 0.13820584228857385
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.007770160429610561,
+      "proxy_hem_delta_rms_m": 0.0024930022607794976,
+      "final_hem_delta_max_m": 0.008088208910546886,
+      "final_hem_delta_rms_m": 0.002362816801929676
+    },
+    {
+      "frame": 24,
+      "finite": true,
+      "waist_pin_error_m": 1.50678667546486e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.4050091348973595,
+      "proxy_ring_neighbor_ratio": 1.0047137231799168,
+      "native_knee_motion_without_root_m": {
+        "L": 0.135879323617619,
+        "R": 0.13587970765758672
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.007889295166253684,
+      "proxy_hem_delta_rms_m": 0.002406839547816327,
+      "final_hem_delta_max_m": 0.008177604155577323,
+      "final_hem_delta_rms_m": 0.002452569287019038
+    },
+    {
+      "frame": 25,
+      "finite": true,
+      "waist_pin_error_m": 1.3514129182113002e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.4639385177682838,
+      "proxy_ring_neighbor_ratio": 1.0022791428985365,
+      "native_knee_motion_without_root_m": {
+        "L": 0.12670217410295007,
+        "R": 0.12670243561917138
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.008044441105854061,
+      "proxy_hem_delta_rms_m": 0.0028246627984019872,
+      "final_hem_delta_max_m": 0.008340480389199224,
+      "final_hem_delta_rms_m": 0.002628010960009747,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566068045794964,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.016013484448194504,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.018781807273626328,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": -0.002914931159466505,
+            "maximum_penetration_m": 0.002914931159466505,
+            "inside_vertices": 2
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": -0.002914931159466505,
+            "maximum_penetration_m": 0.002914931159466505,
+            "inside_vertices": 2
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.006813065614551306,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": -0.013307525776326656,
+            "maximum_penetration_m": 0.013307525776326656,
+            "inside_vertices": 14
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": -0.013307525776326656,
+            "maximum_penetration_m": 0.013307525776326656,
+            "inside_vertices": 14
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.0037619792856276035,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.45679991384851204,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 2.2803676529292716e-06,
+        "unproven_minimum_nearest_normal_distance_m": -0.024773271405138075,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 26,
+      "finite": true,
+      "waist_pin_error_m": 2.6749555872404934e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.528018386926524,
+      "proxy_ring_neighbor_ratio": 1.002332936831192,
+      "native_knee_motion_without_root_m": {
+        "L": 0.10571766233029246,
+        "R": 0.1057175985300118
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00852106266570396,
+      "proxy_hem_delta_rms_m": 0.0030985402344548556,
+      "final_hem_delta_max_m": 0.0088378032875429,
+      "final_hem_delta_rms_m": 0.00284583799053267
+    },
+    {
+      "frame": 27,
+      "finite": true,
+      "waist_pin_error_m": 1.6875194986024685e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.587851585608176,
+      "proxy_ring_neighbor_ratio": 1.0025982244607743,
+      "native_knee_motion_without_root_m": {
+        "L": 0.07704859759838104,
+        "R": 0.07704894103991333
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.008604597102640662,
+      "proxy_hem_delta_rms_m": 0.0031994372140696048,
+      "final_hem_delta_max_m": 0.008913563081924052,
+      "final_hem_delta_rms_m": 0.0028822732142907226
+    },
+    {
+      "frame": 28,
+      "finite": true,
+      "waist_pin_error_m": 1.197320124506071e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.63981635754502,
+      "proxy_ring_neighbor_ratio": 1.0027785360522838,
+      "native_knee_motion_without_root_m": {
+        "L": 0.047240328622659304,
+        "R": 0.047240622020874805
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00798433525536817,
+      "proxy_hem_delta_rms_m": 0.003157091188262376,
+      "final_hem_delta_max_m": 0.008274592593652753,
+      "final_hem_delta_rms_m": 0.002782071273162556
+    },
+    {
+      "frame": 29,
+      "finite": true,
+      "waist_pin_error_m": 1.3838839248572819e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.6935745933767652,
+      "proxy_ring_neighbor_ratio": 1.002164128327783,
+      "native_knee_motion_without_root_m": {
+        "L": 0.021983088120341825,
+        "R": 0.021983443139181717
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.007843125650151528,
+      "proxy_hem_delta_rms_m": 0.003083382555484218,
+      "final_hem_delta_max_m": 0.008117462697767518,
+      "final_hem_delta_rms_m": 0.002735535519632635
+    },
+    {
+      "frame": 30,
+      "finite": true,
+      "waist_pin_error_m": 2.4755668231600746e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.7456739089876192,
+      "proxy_ring_neighbor_ratio": 1.0026880698361333,
+      "native_knee_motion_without_root_m": {
+        "L": 0.004978848214569067,
+        "R": 0.00497906826132493
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00819762547750765,
+      "proxy_hem_delta_rms_m": 0.003228446603469617,
+      "final_hem_delta_max_m": 0.008523472245013368,
+      "final_hem_delta_rms_m": 0.0028260784775436757,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.01156618446111679,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.014629860408604145,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.009754340164363384,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011652004905045033,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.011652004905045033,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01756277121603489,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.014107629656791687,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.014107629656791687,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01700071431696415,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.4683703078876661,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 2.4560273232054897e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.016214736853726208,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 31,
+      "finite": true,
+      "waist_pin_error_m": 6.143906154658885e-08,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.7926366759583285,
+      "proxy_ring_neighbor_ratio": 1.0026019904802606,
+      "native_knee_motion_without_root_m": {
+        "L": 0.002766581871358938,
+        "R": 0.002766457237676119
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00789429070918867,
+      "proxy_hem_delta_rms_m": 0.0031625611222380343,
+      "final_hem_delta_max_m": 0.008251558616798757,
+      "final_hem_delta_rms_m": 0.0027990331459522328,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.014458360150456429,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.008577327243983746,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.005275865085422993,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.005275865085422993,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.017637798562645912,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.0120127247646451,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.0120127247646451,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01688949391245842,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46826766868936287,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 1.0904942428169306e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.017423913348466158,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 32,
+      "finite": true,
+      "waist_pin_error_m": 1.7265424469495516e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.8357847771187925,
+      "proxy_ring_neighbor_ratio": 1.0024758086537764,
+      "native_knee_motion_without_root_m": {
+        "L": 0.003127925204131266,
+        "R": 0.003127634210651779
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.007313517862862309,
+      "proxy_hem_delta_rms_m": 0.003017287016563449,
+      "final_hem_delta_max_m": 0.007657921455393022,
+      "final_hem_delta_rms_m": 0.0026351897785740386
+    },
+    {
+      "frame": 33,
+      "finite": true,
+      "waist_pin_error_m": 1.3838839248572819e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.8756713613449216,
+      "proxy_ring_neighbor_ratio": 1.0023933332918982,
+      "native_knee_motion_without_root_m": {
+        "L": 0.0005281653231722141,
+        "R": 0.0005281266302439461
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.006767931345779495,
+      "proxy_hem_delta_rms_m": 0.002758886384180981,
+      "final_hem_delta_max_m": 0.007134295202147724,
+      "final_hem_delta_rms_m": 0.002477515903576943
+    },
+    {
+      "frame": 34,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.8436664542245824,
+      "proxy_ring_neighbor_ratio": 1.0031361017307343,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.007700845590740614,
+      "proxy_hem_delta_rms_m": 0.005258244554612789,
+      "final_hem_delta_max_m": 0.0079903351731181,
+      "final_hem_delta_rms_m": 0.004454161631772375
+    },
+    {
+      "frame": 35,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.740516216936408,
+      "proxy_ring_neighbor_ratio": 1.0024626438623903,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.018175056268577926,
+      "proxy_hem_delta_rms_m": 0.008148983198168203,
+      "final_hem_delta_max_m": 0.018792499735245622,
+      "final_hem_delta_rms_m": 0.007248974190220094
+    },
+    {
+      "frame": 36,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.6422187502994616,
+      "proxy_ring_neighbor_ratio": 1.00230740044583,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.016729470740490856,
+      "proxy_hem_delta_rms_m": 0.0072644835300757545,
+      "final_hem_delta_max_m": 0.017355764408311145,
+      "final_hem_delta_rms_m": 0.006572533276830558
+    },
+    {
+      "frame": 37,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.5510077294961448,
+      "proxy_ring_neighbor_ratio": 1.0021911669825796,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.015787371359768407,
+      "proxy_hem_delta_rms_m": 0.006450009810854936,
+      "final_hem_delta_max_m": 0.016536858000915346,
+      "final_hem_delta_rms_m": 0.005722626194873976,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.015743399038910866,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.016517529264092445,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027650458738207817,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027650458738207817,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01740131340920925,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027485040947794914,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027485040947794914,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01675047166645527,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 5.257737575448118e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.0075687373864639085,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 38,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.4495480084337782,
+      "proxy_ring_neighbor_ratio": 1.001785902181205,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.013547556107314056,
+      "proxy_hem_delta_rms_m": 0.004873689382851509,
+      "final_hem_delta_max_m": 0.01410218375153923,
+      "final_hem_delta_rms_m": 0.004247399215913458
+    },
+    {
+      "frame": 39,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.363104277625366,
+      "proxy_ring_neighbor_ratio": 1.0022220359694358,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.010346031542868447,
+      "proxy_hem_delta_rms_m": 0.003561775556301443,
+      "final_hem_delta_max_m": 0.010666903312044446,
+      "final_hem_delta_rms_m": 0.003171489077162571,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.016519010066986084,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.019061684608459473,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027664830908179283,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027664830908179283,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.017406471073627472,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.02790721505880356,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.02790721505880356,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.017078571021556854,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 6.031909288140014e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.0030391727141250158,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 40,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.2967572409517214,
+      "proxy_ring_neighbor_ratio": 1.0020508899789717,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0076199231190354315,
+      "proxy_hem_delta_rms_m": 0.0027348146457712415,
+      "final_hem_delta_max_m": 0.007902303563554865,
+      "final_hem_delta_rms_m": 0.002279184441515917
+    },
+    {
+      "frame": 41,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.2458983804887067,
+      "proxy_ring_neighbor_ratio": 1.002118356344177,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00568975008247534,
+      "proxy_hem_delta_rms_m": 0.0020842047819998348,
+      "final_hem_delta_max_m": 0.005970510576836967,
+      "final_hem_delta_rms_m": 0.0016958238883493183
+    },
+    {
+      "frame": 42,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.2052873605218948,
+      "proxy_ring_neighbor_ratio": 1.0021479964752713,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00406207205786293,
+      "proxy_hem_delta_rms_m": 0.0014846593275288811,
+      "final_hem_delta_max_m": 0.0043096087552987215,
+      "final_hem_delta_rms_m": 0.0011916614847396402
+    },
+    {
+      "frame": 43,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1786692737827813,
+      "proxy_ring_neighbor_ratio": 1.0019981916458627,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.002423332749378459,
+      "proxy_hem_delta_rms_m": 0.0008909034691316432,
+      "final_hem_delta_max_m": 0.0025768082869452535,
+      "final_hem_delta_rms_m": 0.000746193061672159,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.016982898116111755,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.020731881260871887,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027644429355859756,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027644429355859756,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.017714403569698334,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027971433475613594,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027971433475613594,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.017443066462874413,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 3.3211250411113724e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.000541922437150788,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 44,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1664355237663824,
+      "proxy_ring_neighbor_ratio": 1.0020788572669164,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0010001082005489925,
+      "proxy_hem_delta_rms_m": 0.0004182257749461187,
+      "final_hem_delta_max_m": 0.0009899369557404302,
+      "final_hem_delta_rms_m": 0.0003553839684401217
+    },
+    {
+      "frame": 45,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.162853640273293,
+      "proxy_ring_neighbor_ratio": 1.0021128207639427,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0004931804685519686,
+      "proxy_hem_delta_rms_m": 0.00026576741934007377,
+      "final_hem_delta_max_m": 0.0003256397679043907,
+      "final_hem_delta_rms_m": 0.00016029992114680313
+    },
+    {
+      "frame": 46,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1644835397478588,
+      "proxy_ring_neighbor_ratio": 1.0021462914568233,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0006180365794934916,
+      "proxy_hem_delta_rms_m": 0.000308030511491889,
+      "final_hem_delta_max_m": 0.0003699391796883503,
+      "final_hem_delta_rms_m": 0.00016210213040299297
+    },
+    {
+      "frame": 47,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1671590914938759,
+      "proxy_ring_neighbor_ratio": 1.0024119818810382,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0006697315571428256,
+      "proxy_hem_delta_rms_m": 0.00030497241841609797,
+      "final_hem_delta_max_m": 0.0005393617078681777,
+      "final_hem_delta_rms_m": 0.00021242577242399857
+    },
+    {
+      "frame": 48,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1711616837038805,
+      "proxy_ring_neighbor_ratio": 1.0022313778152199,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0006085759050259508,
+      "proxy_hem_delta_rms_m": 0.00030182689702784544,
+      "final_hem_delta_max_m": 0.0006605844314997905,
+      "final_hem_delta_rms_m": 0.00022736726391253957,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.01706213504076004,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.021164847537875175,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027823902666568756,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027823902666568756,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01770845241844654,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.028033196926116943,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.028033196926116943,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.018142230808734894,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 2.365193358855322e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.00027100226475340605,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 49,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1755182193782456,
+      "proxy_ring_neighbor_ratio": 1.0022642068466228,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0006118975888072124,
+      "proxy_hem_delta_rms_m": 0.0002579642637254025,
+      "final_hem_delta_max_m": 0.0005396380356022722,
+      "final_hem_delta_rms_m": 0.00020738268190709276,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.017057739198207855,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.021148523315787315,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.02781297266483307,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.02781297266483307,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01773987151682377,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.028156377375125885,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.028156377375125885,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01820170320570469,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 1.1013964467565529e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.00027094487859358196,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 50,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.178364967469899,
+      "proxy_ring_neighbor_ratio": 1.002258965627082,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0005691363496925999,
+      "proxy_hem_delta_rms_m": 0.00017648799718901115,
+      "final_hem_delta_max_m": 0.0005857800205663951,
+      "final_hem_delta_rms_m": 0.00016020990838990003
+    },
+    {
+      "frame": 51,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.181045560767295,
+      "proxy_ring_neighbor_ratio": 1.0020311001994653,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0003252753238565718,
+      "proxy_hem_delta_rms_m": 0.0001480578471917364,
+      "final_hem_delta_max_m": 0.00021247878801734373,
+      "final_hem_delta_rms_m": 0.00010642230108053343
+    },
+    {
+      "frame": 52,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.18285634393001,
+      "proxy_ring_neighbor_ratio": 1.0023193265949832,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00034964904671370696,
+      "proxy_hem_delta_rms_m": 0.00017022867739586604,
+      "final_hem_delta_max_m": 0.00037922348730473875,
+      "final_hem_delta_rms_m": 0.00014702865218007175
+    },
+    {
+      "frame": 53,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1848264155055694,
+      "proxy_ring_neighbor_ratio": 1.0021048444761822,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0003149659840928468,
+      "proxy_hem_delta_rms_m": 0.00016302027528406312,
+      "final_hem_delta_max_m": 0.0002656553996977226,
+      "final_hem_delta_rms_m": 0.00011136822134124943
+    },
+    {
+      "frame": 54,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1851300813673564,
+      "proxy_ring_neighbor_ratio": 1.0020707677805831,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00035197518182260366,
+      "proxy_hem_delta_rms_m": 0.0001278683649948022,
+      "final_hem_delta_max_m": 0.00021728394340088988,
+      "final_hem_delta_rms_m": 9.717750626873534e-05
+    },
+    {
+      "frame": 55,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1854926617393209,
+      "proxy_ring_neighbor_ratio": 1.002062923697448,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00027774000652250883,
+      "proxy_hem_delta_rms_m": 0.0001432403151897676,
+      "final_hem_delta_max_m": 0.0002829168877762896,
+      "final_hem_delta_rms_m": 0.00011248241088811484,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.017003323882818222,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.02085956558585167,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027791641652584076,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027791641652584076,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01752569153904915,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.0282150711864233,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.0282150711864233,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01872137188911438,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 0.00010118871432496235,
+        "unproven_minimum_nearest_normal_distance_m": -0.0003376688243861281,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    },
+    {
+      "frame": 56,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.186297789592294,
+      "proxy_ring_neighbor_ratio": 1.002231990999913,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0002673448259838529,
+      "proxy_hem_delta_rms_m": 0.00013853196049903085,
+      "final_hem_delta_max_m": 0.00025711109309746975,
+      "final_hem_delta_rms_m": 0.00012242021739157643
+    },
+    {
+      "frame": 57,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1873064215746183,
+      "proxy_ring_neighbor_ratio": 1.0023099385282457,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.0003337991447930072,
+      "proxy_hem_delta_rms_m": 0.00015417092200736482,
+      "final_hem_delta_max_m": 0.00032510144637635694,
+      "final_hem_delta_rms_m": 0.00014601892142749969
+    },
+    {
+      "frame": 58,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1883420609761264,
+      "proxy_ring_neighbor_ratio": 1.0021937810030677,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00023487827729230812,
+      "proxy_hem_delta_rms_m": 0.00013119222289221526,
+      "final_hem_delta_max_m": 0.00020594001023359695,
+      "final_hem_delta_rms_m": 0.00010017045341632838
+    },
+    {
+      "frame": 59,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.189968945176273,
+      "proxy_ring_neighbor_ratio": 1.002177288615735,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00031006546752648264,
+      "proxy_hem_delta_rms_m": 0.00016388550938866567,
+      "final_hem_delta_max_m": 0.0002486385687052718,
+      "final_hem_delta_rms_m": 0.00012943232027130266
+    },
+    {
+      "frame": 60,
+      "finite": true,
+      "waist_pin_error_m": 1.2013700229374393e-07,
+      "pinned_vertices": 32,
+      "final_edge_ratio": 1.1914155672855882,
+      "proxy_ring_neighbor_ratio": 1.0021240426534765,
+      "native_knee_motion_without_root_m": {
+        "L": 5.828706385054656e-08,
+        "R": 5.828706385054656e-08
+      },
+      "final_vertices": 3040,
+      "proxy_vertices": 416,
+      "final_hem_vertices": 800,
+      "evaluated_weights_available": true,
+      "proxy_hem_delta_max_m": 0.00027121058946806103,
+      "proxy_hem_delta_rms_m": 0.00013050642153902554,
+      "final_hem_delta_max_m": 0.00030080429965183503,
+      "final_hem_delta_rms_m": 0.00013419433062101553,
+      "collision": {
+        "CD Collider Pelvis · Dress": {
+          "binding_bone": "Hips",
+          "role": "pelvis_or_other",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.011566126719117165,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.016976576298475266,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.020745372399687767,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.L · Dress": {
+          "binding_bone": "thigh.L",
+          "role": "leg.L",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027923518791794777,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027923518791794777,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.017463022843003273,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        },
+        "CD Collider Thigh.R · Dress": {
+          "binding_bone": "thigh.R",
+          "role": "leg.R",
+          "sign_method": "proved_convex_triangle_normal",
+          "final_all": {
+            "sampled_vertices": 3040,
+            "minimum_signed_distance_m": 0.027616769075393677,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "final_free": {
+            "sampled_vertices": 2880,
+            "minimum_signed_distance_m": 0.027616769075393677,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          },
+          "proxy": {
+            "sampled_vertices": 416,
+            "minimum_signed_distance_m": 0.01749606430530548,
+            "maximum_penetration_m": 0.0,
+            "inside_vertices": 0
+          }
+        }
+      },
+      "registered_body_surface": {
+        "measured": true,
+        "object": "Cosha",
+        "evaluated_vertices": 14470,
+        "sampled_dress_free_vertices": 2880,
+        "closed_triangle_edge_incidence": false,
+        "open_or_nonmanifold_edges": 288,
+        "region_projection_world_units": [
+          -0.46812795540200935,
+          0.1258430059952444
+        ],
+        "region_definition": "Dress free surface between lowest posed native knee minus 2% height and pelvis plus 8% height",
+        "unsigned_minimum_surface_distance_m": 1.4784296581638046e-05,
+        "unproven_minimum_nearest_normal_distance_m": -0.0005097910589029198,
+        "sign_method": "UNPROVEN_nearest_triangle_normal_only",
+        "limitation": "Registered Body is not closed; actual inside/outside and body penetration are NOT established"
+      }
+    }
+  ],
+  "collider_summary": {
+    "CD Collider Pelvis · Dress": {
+      "role": "pelvis_or_other",
+      "binding_bone": "Hips",
+      "final_maximum_penetration_m": 0.0,
+      "proxy_maximum_penetration_m": 0.0,
+      "worst_final_frame": null,
+      "minimum_final_signed_distance_m": 0.014458360150456429
+    },
+    "CD Collider Thigh.L · Dress": {
+      "role": "leg.L",
+      "binding_bone": "thigh.L",
+      "final_maximum_penetration_m": 0.002914931159466505,
+      "proxy_maximum_penetration_m": 0.0,
+      "worst_final_frame": 25,
+      "minimum_final_signed_distance_m": -0.002914931159466505
+    },
+    "CD Collider Thigh.R · Dress": {
+      "role": "leg.R",
+      "binding_bone": "thigh.R",
+      "final_maximum_penetration_m": 0.013307525776326656,
+      "proxy_maximum_penetration_m": 0.0,
+      "worst_final_frame": 25,
+      "minimum_final_signed_distance_m": -0.013307525776326656
+    }
+  },
+  "collision_sampled_frames": [
+    1,
+    7,
+    12,
+    13,
+    19,
+    21,
+    25,
+    30,
+    31,
+    37,
+    39,
+    43,
+    48,
+    49,
+    55,
+    60
+  ],
+  "registered_body_diagnostic_summary": {
+    "sampled_frames": 16,
+    "signed_frames": 0,
+    "actual_body_penetration_proved_by_this_qa": false,
+    "maximum_sampled_signed_penetration_m": null,
+    "coverage": "Unsigned/normal distance only or skipped; actual body penetration is unproved"
+  },
+  "stop_settling": {
+    "frames": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "waist_relative_max_delta_m_per_frame": {
+      "proxy": 0.00035197518182260366,
+      "final": 0.00037922348730473875
+    },
+    "observation": "Last ten frames only; this short interval is not long-run equilibrium"
+  },
+  "reset_replay": {
+    "start": 1,
+    "is_baked": false
+  },
+  "reset_replay_error": {
+    "final_m": 0.0,
+    "proxy_m": 0.0
+  },
+  "bake_seek_order": [
+    60,
+    1,
+    48,
+    21,
+    39
+  ],
+  "bake_seek_error": {
+    "final_m": 0.0,
+    "proxy_m": 0.0
+  },
+  "mode_capability": "BOTH",
+  "protection": {
+    "success": true,
+    "missing": [],
+    "changed": {
+      "meshes": [],
+      "rest": [],
+      "actions": [],
+      "nla_assets": []
+    }
+  },
+  "saved_visual_frame": 60,
+  "saved_frame_reference": {
+    "final": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\reference_abrupt_stop_final.float32",
+      "float32_values": 9120,
+      "byte_order": "little",
+      "sha256": "7ed12bfac5aeb8cf7203983c7b98acaf78e2322826f038bd6c8a2f438bdcf8d7"
+    },
+    "proxy": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\reference_abrupt_stop_proxy.float32",
+      "float32_values": 1248,
+      "byte_order": "little",
+      "sha256": "dd670e919ba722ed70eb49ec08122daa83b05c6e3829bc4ee74ccac34b4bfc63"
+    }
+  },
+  "candidate_file": {
+    "bytes": 32160225,
+    "mtime_ns": 1791145739397739500,
+    "sha256": "39e7b5e61af6277fa2a306eb0099d21eeeefe2da984a93e6169e6835102f3a34"
+  },
+  "cache_folder_hint": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\native_51_20261005_042802_905\\blendcache_Cosha_Dress_QA_abrupt_stop",
+  "elapsed_seconds": 27.26314170000842
+}

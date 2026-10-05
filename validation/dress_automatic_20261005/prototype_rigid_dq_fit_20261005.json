@@ -1,0 +1,293 @@
+{
+  "status": "failed",
+  "diagnostic_only": true,
+  "production_effect_accepted": false,
+  "native_graph_or_export_compatibility_proved": false,
+  "collision_proved": false,
+  "model": "rigid DQ,32 free proper R+t and one fixed native Waist; no scale/shear",
+  "primary_source": "https://raw.githubusercontent.com/blender/blender/blender-v5.1-release/source/blender/blenlib/intern/math_rotation_c.cc",
+  "primary_functions": [
+    "mat4_to_dquat",
+    "add_weighted_dq_dq",
+    "mul_v3m3_dq"
+  ],
+  "limits": {
+    "orthogonality": 5e-05,
+    "axis_scale_delta": 0.0001,
+    "native_calibration_m": 5e-06,
+    "steps_per_frame": 40,
+    "global_seconds": 60.0
+  },
+  "code_path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\prototype_rigid_dq_fit.py",
+  "code_sha256": "050123cfd7f8219b30732a06b12f9f81a286ef4cd5bae6e1213d5cb933bea40e",
+  "numpy_version": "2.3.4",
+  "inputs": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\fit_inputs_51_20261005_102341_056\\result\\native_fit_inputs.json": "2ad843be7853801c6054c829488f269518d15d9b5334757f792e45277e20e19c",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\waist_body_attachment_51_20261005_094107_823\\result\\experimental_actual_surface.json": "a6618bea6487ccada08a6c52c852a788a6c277f1e8b62d9fc0a6cce42ad1e861",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\math_free_weighted_lbs_waist_20261005.json": "6c7d7646d22b5092c90377eac94eb3bc31d830369392466538bbd1ec63d2e2d0"
+  },
+  "calibration": [
+    {
+      "frame": 1,
+      "all800_max_error_m": 1.8638493412698664e-06,
+      "all800_rms_error_m": 6.284046932899183e-07,
+      "maximum_raw_vertex_index": 799,
+      "matrix_proof": {
+        "orthogonality_max": 1.2849975997153429e-05,
+        "axis_scale_delta_max": 6.425008638899499e-06,
+        "determinant_min": 0.9999912815889952,
+        "determinant_max": 1.0000064738646604,
+        "affine_last_row_max": 0.0
+      },
+      "source_relative_rig_max_delta": 0.0,
+      "captured_bind_chart_max_delta": 1.1603783511837662e-07,
+      "matrix_equation": "Dworld=Acurrent*Ppose*inverse(Brest)*inverse(Acurrent)*MsourceCurrent*inverse(MsourceBind)",
+      "not_source_world_before_scene60": true
+    },
+    {
+      "frame": 7,
+      "all800_max_error_m": 6.003611843711977e-06,
+      "all800_rms_error_m": 1.1086138522566316e-06,
+      "maximum_raw_vertex_index": 75,
+      "matrix_proof": {
+        "orthogonality_max": 1.329005542061168e-05,
+        "axis_scale_delta_max": 6.645049788644997e-06,
+        "determinant_min": 0.999990738818434,
+        "determinant_max": 1.0000103751522313,
+        "affine_last_row_max": 0.0
+      },
+      "source_relative_rig_max_delta": 5.714250872479454e-08,
+      "captured_bind_chart_max_delta": 1.1603783511837662e-07,
+      "matrix_equation": "Dworld=Acurrent*Ppose*inverse(Brest)*inverse(Acurrent)*MsourceCurrent*inverse(MsourceBind)",
+      "not_source_world_before_scene60": true,
+      "first_mismatch": {
+        "raw_vertex_index": 75,
+        "predicted_world": [
+          0.09117334626794779,
+          0.10541315654238244,
+          1.1207600255403478
+        ],
+        "native_world": [
+          0.09117228537797928,
+          0.10541350394487381,
+          1.1207659244537354
+        ],
+        "native_weights": {
+          "raw_vertex_index": 75,
+          "weights": [
+            {
+              "group_index": 28,
+              "group_name": "SK_Dress_DEF_08_01",
+              "weight": 0.10184092074632645
+            },
+            {
+              "group_index": 29,
+              "group_name": "SK_Dress_DEF_08_02",
+              "weight": 0.8981590867042542
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "frames": [],
+  "errors": [
+    "Rigid DQ calibration exceeds5um; no fitting or DQ exact claim"
+  ],
+  "source_bind_matrix_world": [
+    [
+      0.729964554309845,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.729964554309845,
+      0.0,
+      0.10510384291410446
+    ],
+    [
+      0.0,
+      0.0,
+      0.729964554309845,
+      1.1820247173309326
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "native_inputs_sha256": "2ad843be7853801c6054c829488f269518d15d9b5334757f792e45277e20e19c",
+  "native_group_order33": [
+    [
+      0,
+      "SK_Dress_DEF_01_01",
+      false
+    ],
+    [
+      1,
+      "SK_Dress_DEF_01_02",
+      false
+    ],
+    [
+      2,
+      "SK_Dress_DEF_01_03",
+      false
+    ],
+    [
+      3,
+      "SK_Dress_DEF_01_04",
+      false
+    ],
+    [
+      4,
+      "SK_Dress_DEF_02_01",
+      false
+    ],
+    [
+      5,
+      "SK_Dress_DEF_02_02",
+      false
+    ],
+    [
+      6,
+      "SK_Dress_DEF_02_03",
+      false
+    ],
+    [
+      7,
+      "SK_Dress_DEF_02_04",
+      false
+    ],
+    [
+      8,
+      "SK_Dress_DEF_03_01",
+      false
+    ],
+    [
+      9,
+      "SK_Dress_DEF_03_02",
+      false
+    ],
+    [
+      10,
+      "SK_Dress_DEF_03_03",
+      false
+    ],
+    [
+      11,
+      "SK_Dress_DEF_03_04",
+      false
+    ],
+    [
+      12,
+      "SK_Dress_DEF_04_01",
+      false
+    ],
+    [
+      13,
+      "SK_Dress_DEF_04_02",
+      false
+    ],
+    [
+      14,
+      "SK_Dress_DEF_04_03",
+      false
+    ],
+    [
+      15,
+      "SK_Dress_DEF_04_04",
+      false
+    ],
+    [
+      16,
+      "SK_Dress_DEF_05_01",
+      false
+    ],
+    [
+      17,
+      "SK_Dress_DEF_05_02",
+      false
+    ],
+    [
+      18,
+      "SK_Dress_DEF_05_03",
+      false
+    ],
+    [
+      19,
+      "SK_Dress_DEF_05_04",
+      false
+    ],
+    [
+      20,
+      "SK_Dress_DEF_06_01",
+      false
+    ],
+    [
+      21,
+      "SK_Dress_DEF_06_02",
+      false
+    ],
+    [
+      22,
+      "SK_Dress_DEF_06_03",
+      false
+    ],
+    [
+      23,
+      "SK_Dress_DEF_06_04",
+      false
+    ],
+    [
+      24,
+      "SK_Dress_DEF_07_01",
+      false
+    ],
+    [
+      25,
+      "SK_Dress_DEF_07_02",
+      false
+    ],
+    [
+      26,
+      "SK_Dress_DEF_07_03",
+      false
+    ],
+    [
+      27,
+      "SK_Dress_DEF_07_04",
+      false
+    ],
+    [
+      28,
+      "SK_Dress_DEF_08_01",
+      false
+    ],
+    [
+      29,
+      "SK_Dress_DEF_08_02",
+      false
+    ],
+    [
+      30,
+      "SK_Dress_DEF_08_03",
+      false
+    ],
+    [
+      31,
+      "SK_Dress_DEF_08_04",
+      false
+    ],
+    [
+      32,
+      "SK_Dress_Waist",
+      false
+    ]
+  ],
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\prototype_rigid_dq_fit.py\", line 375, in main\n    require(maximum <= CALIBRATION_METRES, 'Rigid DQ calibration exceeds5um; no fitting or DQ exact claim')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\prototype_rigid_dq_fit.py\", line 35, in require\n    raise RuntimeError(message)\nRuntimeError: Rigid DQ calibration exceeds5um; no fitting or DQ exact claim\n",
+  "elapsed_math_seconds": 0.5675297999987379
+}

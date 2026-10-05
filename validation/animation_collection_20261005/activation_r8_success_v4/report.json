@@ -1,0 +1,28 @@
+{
+  "schema": "character-designer.minimal-live-activation/1",
+  "script_sha256": "66d412e3740667b8133ae37efbcfb30168393c6f19ad30afee59512125ab99a4",
+  "inventory_sha256": "89a55c7005131d2175a2b18568d3f57938b9ac34deed51f0a4175873556d19d5",
+  "utc": "2026-10-05T15:13:46.515939+00:00",
+  "background": true,
+  "runtime": "5.1.0",
+  "status": "rolled_back",
+  "injected_failure": null,
+  "preserved": true,
+  "rollback_complete": true,
+  "old_registered_classes_preserved": true,
+  "saved": false,
+  "before_sha256": "fd5f3b7384bbbaacab2a0f4bff785b938e59a81675241593fb11e0574c294cf7",
+  "fixture_worklist_rows": 2,
+  "artist_path": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\native_r4_20261005_210115\\partial_worklist.blend",
+  "artist_disk_sha256_before": "7a80159fef5a35a2fd65cfed335e4e8be5e24c6063357417cef5c20296a7c5b4",
+  "error": "Activation wrote a new State field.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 499, in run\n    require(not saved.is_property_set('collection_status') and not saved.is_property_set('scan_completed'),\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            'Activation wrote a new State field.')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\animation_collection_20261005\\activate_minimal_live.py\", line 56, in require\n    raise RuntimeError(message)\nRuntimeError: Activation wrote a new State field.\n",
+  "after_sha256": "fd5f3b7384bbbaacab2a0f4bff785b938e59a81675241593fb11e0574c294cf7",
+  "version": [
+    0,
+    76,
+    2
+  ],
+  "artist_disk_sha256_after": "7a80159fef5a35a2fd65cfed335e4e8be5e24c6063357417cef5c20296a7c5b4",
+  "rollback_errors": []
+}

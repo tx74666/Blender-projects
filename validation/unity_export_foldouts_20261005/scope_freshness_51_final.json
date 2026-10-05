@@ -1,0 +1,115 @@
+{
+  "ok": true,
+  "blender_version": "5.1.0",
+  "baseline_zip": "D:\\MyRepository\\Blender-addons-by-Randy\\dist\\character_designer-0.69.0.zip",
+  "baseline_sha256": "3956ad897dd079011a9287f4d128f1a80c169c21c3bda1f558b746ba44ba3273",
+  "source_sha256": {
+    "unity_export.py": "8fb200ad8ea4153db3d9b3e7beb9fca9bca728370fc71eda8841f0b58c406bd0",
+    "unity_export_ui.py": "8914fec48d3a55f61d042166f20e54c5124b98e74af787e69186c27af94b169d"
+  },
+  "timing_scope": "Python draw with recording layout and real bpy data; no viewport/GPU timing",
+  "fixture": {
+    "unrelated_objects": 300,
+    "main_bones": 180,
+    "bound_triangle_meshes": 8
+  },
+  "baseline": {
+    "collapsed": {
+      "counts": {
+        "helpers": 3,
+        "character_armatures": 3,
+        "material_choices": 1,
+        "binding_queries": 24
+      },
+      "samples_ms": [
+        27.039699984015897,
+        27.382300002500415,
+        25.887499999953434
+      ],
+      "median_ms": 27.039699984015897
+    },
+    "expanded": {
+      "counts": {
+        "helpers": 4,
+        "character_armatures": 4,
+        "material_choices": 1,
+        "binding_queries": 24
+      },
+      "samples_ms": [
+        42.01849998207763,
+        34.45869998540729,
+        35.51210000296123
+      ],
+      "median_ms": 35.51210000296123
+    }
+  },
+  "current": {
+    "collapsed": {
+      "counts": {
+        "helpers": 1,
+        "character_armatures": 1,
+        "material_choices": 0,
+        "binding_queries": 8,
+        "helper_role_candidates": 8
+      },
+      "samples_ms": [
+        0.7101999945007265,
+        0.6551000114995986,
+        0.6919000006746501
+      ],
+      "median_ms": 0.6919000006746501
+    },
+    "expanded": {
+      "counts": {
+        "helpers": 1,
+        "character_armatures": 1,
+        "material_choices": 0,
+        "binding_queries": 8,
+        "helper_role_candidates": 8
+      },
+      "samples_ms": [
+        0.6992999988142401,
+        0.6971000111661851,
+        0.6528999947477132
+      ],
+      "median_ms": 0.6971000111661851
+    }
+  },
+  "checks": [
+    "baseline",
+    "direct modifier disabled",
+    "direct modifier reenabled",
+    "both binding channels disabled",
+    "envelope binding enabled",
+    "direct helper role added",
+    "direct helper role removed",
+    "direct widget container role added",
+    "direct widget container role removed",
+    "direct custom shape assigned",
+    "direct custom shape cleared",
+    "foreign rig custom shape assigned",
+    "foreign rig custom shape cleared",
+    "direct binding changed to foreign rig",
+    "direct rig ancestry attached",
+    "direct rig ancestry detached",
+    "direct character binding restored",
+    "direct scene member removed",
+    "direct scene member restored",
+    "hidden bound clothing retained",
+    "saved exclusion retained",
+    "clear exclusion restores automatic binding",
+    "foreign binding rejected",
+    "foreign binding removed",
+    "missing saved reference rejected",
+    "missing reference cleanup recovers",
+    "main body exclusion rejected",
+    "main body cleanup recovers",
+    "saved unbound reference remains skipped",
+    "unbound saved helper role rejected",
+    "unbound setup asset remains skipped",
+    "unbound setup helper warning suppressed",
+    "unbound setup helper removed",
+    "collapsed and expanded material bodies never enumerate slots or capture Hair"
+  ],
+  "baseline_zip_unchanged": true
+}

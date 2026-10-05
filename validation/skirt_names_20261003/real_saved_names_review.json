@@ -1,0 +1,26 @@
+{
+  "source_report": "D:\\Blender\\Projects\\Character\\X\\validation\\skirt_names_20261003\\real_saved_names_run5.json",
+  "source_report_sha256": "d176a3c9b27fbf9dad08aa993538b80a84214e8def9bc9a111a85d00d67d3107",
+  "original_strict_overall_passed": false,
+  "rename_raw_protection_passed": true,
+  "reopened_core_model_and_reference_protection_passed": true,
+  "bone_renames": 115,
+  "hook_renames": 48,
+  "evaluated_meshes": 71,
+  "maximum_position_error": 0.0,
+  "evaluated_bones": 2420,
+  "maximum_matrix_error": 0.0,
+  "second_cleanup_events": 0,
+  "save_and_reopen": "FINISHED",
+  "reopen_exceptions": [
+    "protected.extra_ids.images:1d63a26f-110a-4ff2-9145-a350633c3dd5.png.fields.use_extra_user: True -> False",
+    "protected.extra_ids.images:AnimeFront.png.fields.use_extra_user: True -> False",
+    "protected.extra_ids.images:Hair.fields.use_extra_user: True -> False",
+    "protected.extra_ids.other_object_data:Front.fields.use_extra_user: True -> False"
+  ],
+  "limits": [
+    "Four extra-ID use_extra_user flags changed on native save/reopen; the original strict report remains failed and has not been overwritten.",
+    "Real-scene post-reopen evaluated-world and byte-exact recovery-text checks did not run after that assertion; reopened structured raw state contains no other differences. Dedicated native tests cover those paths.",
+    "This isolated result uses the saved 2026-10-03 22:57 X input, not the later unsaved GUI state."
+  ]
+}
