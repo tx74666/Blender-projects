@@ -12,9 +12,12 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import shutil
 import sys
 import time
 import traceback
+from types import SimpleNamespace
+from unittest.mock import patch
 
 import bpy
 from mathutils import Matrix, Vector
@@ -65,7 +68,8 @@ def arguments():
     require(args.output.is_relative_to(HERE) and args.output != HERE
             and not args.input.is_relative_to(args.output) and not args.install_report.is_relative_to(args.output),
             "Use a new dedicated Validation child output directory")
-    for relative in ("result/surface_export.json", "scenes/Cosha_Dress_QA_export_snapshot.blend", "stage/" + FILENAME):
+    for relative in ("result/surface_export.json", "scenes/Cosha_Dress_QA_export_snapshot.blend",
+                     "scenes/Cosha_Dress_QA_public_library.blend", "result/public_job.json", "stage/" + FILENAME):
         require(not (args.output / relative).exists(), "Refusing to overwrite a QA artifact: " + relative)
     return args
 
@@ -139,11 +143,14 @@ def remove_owned_keys(owned):
         if key is None:
             removed.append({**entry, "already_removed_with_owned_mesh": True})
             continue
-        require(key.as_pointer() == entry["pointer"] and key.users == 0,
+        native_users = bpy.data.user_map(subset={key}).get(key, set())
+        require(key.as_pointer() == entry["pointer"] and key.library is None and not native_users,
                 "A captured owned transient Key changed identity or acquired a user: " + name)
+        counter_before_removal = key.users
         bpy.data.batch_remove(ids=(key,))
         require(bpy.data.shape_keys.get(name) is None, "Blender did not remove the exact owned transient Key")
-        removed.append({**entry, "removed_after_owned_mesh": True})
+        removed.append({**entry, "removed_after_owned_mesh": True,
+                        "native_reverse_users": [], "counter_before_removal": counter_before_removal})
     return removed
 
 
@@ -356,13 +363,31 @@ def observe_export(job, source, rig, cloth, record, report, qa, surface, worker)
 
     def clean(context, obj, objects):
         before = qa.rest_content(obj)
+        geometry = {bone.name: {"head": list(bone.head_local), "tail": list(bone.tail_local)}
+                    for bone in obj.data.bones}
         result = old_clean(context, obj, objects)
-        maximum = max((abs(before[name]["matrix"][row][col] - obj.data.bones[name].matrix_local[row][col])
-                       for name in result for row in range(4) for col in range(4)), default=0.)
-        require(maximum <= REST_MATRIX_GUARD, "Static worker cleanup changed retained native Rest matrices")
+        differences = []
+        for name in result:
+            bone = obj.data.bones[name]
+            entries = [(abs(before[name]["matrix"][row][col] - bone.matrix_local[row][col]), row, col)
+                       for row in range(4) for col in range(4)]
+            difference, row, col = max(entries)
+            differences.append({"bone": name, "matrix_max_error": difference,
+                "worst_entry": [row, col], "before_matrix": before[name]["matrix"],
+                "after_matrix": [list(entry) for entry in bone.matrix_local],
+                "before_geometry": geometry[name],
+                "after_geometry": {"head": list(bone.head_local), "tail": list(bone.tail_local)},
+                "before_length": before[name]["length"], "after_length": bone.length,
+                "before_parent": before[name]["parent"], "after_parent": bone.parent.name if bone.parent else None,
+                "before_connect": before[name]["connect"], "after_connect": bone.use_connect})
+        maximum = max((entry["matrix_max_error"] for entry in differences), default=0.)
         report["retained_source_rest"] = {"names": result, "matrix_max_error": maximum,
                                           "guard": REST_MATRIX_GUARD,
+                                          "outside_guard_bones": sorted(entry["bone"] for entry in differences
+                                                                         if entry["matrix_max_error"] > REST_MATRIX_GUARD),
+                                          "worst_bones": sorted(differences, key=lambda item: item["matrix_max_error"], reverse=True)[:8],
                                           "scope": "Retained native Rest matrices; control filtering reconnects retained parents and clears use_connect as existing export behavior"}
+        require(maximum <= REST_MATRIX_GUARD, "Static worker cleanup changed retained native Rest matrices")
         return result
 
     class Delegate:
@@ -391,47 +416,147 @@ def observe_export(job, source, rig, cloth, record, report, qa, surface, worker)
 
 def roundtrip(filepath, mesh_expected, rest_expected, meters, expected_names, report, qa):
     # All references needed below are plain dictionaries, not stale RNA.
+    physical_guard = min(COORDINATE_GUARD, COORDINATE_GUARD * meters)
+    diagnostic = {"status": "collecting", "filepath": str(filepath),
+                  "blender_version": str(bpy.app.version_string),
+                  "source_meters": float(meters), "imported_meters": None,
+                  "guards": {"coordinates_and_heads_m": float(physical_guard),
+                             "weights": float(WEIGHT_GUARD), "normalized_axis_vectors": float(REST_MATRIX_GUARD)},
+                  "coordinates_max_error_m": None, "shape_key_errors_m": {},
+                  "weights_max_error": None, "rest_head_max_error_m": None, "rest_axis_max_error": None,
+                  "per_bone": {}, "worst_bones": [], "outside_guard": {},
+                  "scope": "Existing guard diagnostics only; missing measurements are not accepted as zero/Pass"}
+    report["native_static_fbx_roundtrip_diagnostics"] = diagnostic
     bpy.ops.wm.read_factory_settings(use_empty=True)
     before_actions = {action.name for action in bpy.data.actions}
     bpy.ops.preferences.addon_enable(module="io_scene_fbx")
+    diagnostic["importer_options"] = {"explicit": {"filepath": str(filepath), "use_anim": True},
+                                      "native_rna_defaults": {}}
+    # Record defaults without passing new options or changing the native call.
+    try:
+        for prop in bpy.ops.import_scene.fbx.get_rna_type().properties:
+            if prop.identifier == "rna_type":
+                continue
+            if getattr(prop, "is_array", False):
+                value = list(prop.default_array)
+            else:
+                value = getattr(prop, "default", None)
+            if isinstance(value, set):
+                value = sorted(value)
+            diagnostic["importer_options"]["native_rna_defaults"][prop.identifier] = value
+    except Exception as error:
+        diagnostic["importer_options"]["defaults_read_error"] = str(error)
     result = bpy.ops.import_scene.fbx(filepath=str(filepath), use_anim=True)
+    diagnostic["import_operator_result"] = sorted(result)
     require("FINISHED" in result, "Native FBX reimport did not finish")
     rigs = [obj for obj in bpy.context.scene.objects if obj.type == "ARMATURE"]
     meshes = [obj for obj in bpy.context.scene.objects if obj.type == "MESH"]
+    diagnostic["imported_objects"] = [{"name": obj.name, "type": obj.type} for obj in bpy.context.scene.objects]
     require(len(rigs) == len(meshes) == 1, "Dress-only FBX did not contain exactly one Mesh and one Rig")
     rig, mesh = rigs[0], meshes[0]
+    diagnostic["root_transform"] = {
+        "rig": rig.name, "parent": rig.parent.name if rig.parent else None,
+        "matrix_world": [[float(value) for value in row] for row in rig.matrix_world],
+        "matrix_local": [[float(value) for value in row] for row in rig.matrix_local],
+        "matrix_basis": [[float(value) for value in row] for row in rig.matrix_basis],
+        "location": [float(value) for value in rig.location],
+        "rotation_mode": rig.rotation_mode, "rotation_euler": [float(value) for value in rig.rotation_euler],
+        "rotation_quaternion": [float(value) for value in rig.rotation_quaternion],
+        "rotation_axis_angle": [float(value) for value in rig.rotation_axis_angle],
+        "scale": [float(value) for value in rig.scale],
+        "expected_root_bones": sorted(name for name, item in rest_expected.items() if item["parent"] is None),
+        "imported_root_bones": sorted(bone.name for bone in rig.data.bones if bone.parent is None)}
     require({rig.name, mesh.name} == set(expected_names), "FBX imported extra/missing helper objects")
     require(len(bpy.context.scene.objects) == 2, "The static Dress FBX contains unexpected non-Mesh/Rig objects")
     actual = static_mesh(mesh)
     imported_meters = float(bpy.context.scene.unit_settings.scale_length)
+    diagnostic["imported_meters"] = imported_meters
     require(math.isfinite(imported_meters) and imported_meters > 0., "Invalid imported metre scale")
     expected_world = Matrix(mesh_expected["matrix_world"])
     actual_world = mesh.matrix_world
+    diagnostic["mesh_transform"] = {
+        "expected_world": [[float(value) for value in row] for row in expected_world],
+        "imported_world": [[float(value) for value in row] for row in actual_world]}
+    diagnostic["topology"] = {"expected_vertices": len(mesh_expected["vertices"]), "imported_vertices": len(actual["vertices"]),
+                              "faces_equal": actual["faces"] == mesh_expected["faces"],
+                              "edges_equal": actual["edges"] == mesh_expected["edges"]}
     require(actual["faces"] == mesh_expected["faces"] and actual["edges"] == mesh_expected["edges"],
             "FBX roundtrip changed the explicit vertex-index topology")
     coordinate_error = point_error([expected_world @ Vector(point) * meters for point in mesh_expected["vertices"]],
                                    [actual_world @ Vector(point) * imported_meters for point in actual["vertices"]])
+    diagnostic["coordinates_max_error_m"] = float(coordinate_error)
+    diagnostic["coordinates_max_error_source_world"] = float(coordinate_error / meters)
+    diagnostic["outside_guard"]["coordinate_vertex_indices"] = [index for index, (expected, imported) in
+        enumerate(zip(mesh_expected["vertices"], actual["vertices"])) if
+        (expected_world @ Vector(expected) * meters - actual_world @ Vector(imported) * imported_meters).length > physical_guard]
     deform_names = {name for name, item in rest_expected.items() if item["deform"]}
     weights = weight_error(retained_skin_weights(mesh_expected["weights"], deform_names),
                            retained_skin_weights(actual["weights"], deform_names))
+    diagnostic["weights_max_error"] = float(weights)
+    weight_errors = {name: {"max_error": 0., "compared_positive_entries": 0, "outside_guard_vertices": []}
+                     for name in sorted(deform_names)}
+    for index, (expected, imported) in enumerate(zip(mesh_expected["weights"], actual["weights"])):
+        for name in expected.keys() & deform_names:
+            error = abs(expected[name] - imported[name])
+            weight_errors[name]["max_error"] = max(weight_errors[name]["max_error"], float(error))
+            weight_errors[name]["compared_positive_entries"] += 1
+            if error > WEIGHT_GUARD:
+                weight_errors[name]["outside_guard_vertices"].append(index)
+    diagnostic["weights_per_deform_bone"] = weight_errors
+    diagnostic["outside_guard"]["weight_bones"] = sorted(name for name, item in weight_errors.items()
+                                                        if item["max_error"] > WEIGHT_GUARD)
+    diagnostic["shape_key_inventory"] = {"expected": sorted(mesh_expected["keys"]), "imported": sorted(actual["keys"])}
     require(set(actual["keys"]) == set(mesh_expected["keys"]), "FBX dropped or added an artist/QA Shape Key")
     key_errors = {name: point_error([expected_world @ Vector(point) * meters for point in points],
                                    [actual_world @ Vector(point) * imported_meters for point in actual["keys"][name]])
                   for name, points in mesh_expected["keys"].items()}
+    diagnostic["shape_key_errors_m"] = {name: float(error) for name, error in key_errors.items()}
+    diagnostic["outside_guard"]["shape_key_names"] = sorted(name for name, error in key_errors.items() if error > physical_guard)
+    diagnostic["shape_key_outside_guard_vertices"] = {name: [index for index, (expected, imported) in
+        enumerate(zip(points, actual["keys"][name])) if
+        (expected_world @ Vector(expected) * meters - actual_world @ Vector(imported) * imported_meters).length > physical_guard]
+        for name, points in mesh_expected["keys"].items()}
+    diagnostic["bone_inventory"] = {"expected": sorted(rest_expected), "imported": sorted(rig.data.bones.keys())}
     require(set(rig.data.bones.keys()) == set(rest_expected), "FBX changed retained deform/attachment inventory")
     head_error, axis_error = 0., 0.
     for name, expected in rest_expected.items():
         bone = rig.data.bones[name]
+        details = {"bone": name, "expected_parent": expected["parent"],
+                   "imported_parent": bone.parent.name if bone.parent else None,
+                   "expected_deform": bool(expected["deform"]), "imported_deform": bool(bone.use_deform),
+                   "weight_max_error": weight_errors.get(name, {}).get("max_error"),
+                   "weight_compared_positive_entries": weight_errors.get(name, {}).get("compared_positive_entries", 0)}
+        diagnostic["per_bone"][name] = details
         require((bone.parent.name if bone.parent else None) == expected["parent"], "FBX changed retained parent: " + name)
         matrix = rig.matrix_world @ bone.matrix_local
         native = Matrix(expected["world"])
         require(all(math.isfinite(value) for owner in (matrix, native) for row in owner for value in row)
                 and all(owner.to_3x3().col[index].length > 1.e-12
                         for owner in (matrix, native) for index in range(3)), "Nonfinite or degenerate retained Rest matrix")
-        head_error = max(head_error, (matrix.translation * imported_meters - native.translation * meters).length)
-        axis_error = max(axis_error, max((matrix.to_3x3().col[index].normalized()
-                                         - native.to_3x3().col[index].normalized()).length for index in range(3)))
-    physical_guard = min(COORDINATE_GUARD, COORDINATE_GUARD * meters)
+        bone_head_error = (matrix.translation * imported_meters - native.translation * meters).length
+        bone_axis_errors = [(matrix.to_3x3().col[index].normalized()
+                             - native.to_3x3().col[index].normalized()).length for index in range(3)]
+        head_error = max(head_error, bone_head_error)
+        axis_error = max(axis_error, max(bone_axis_errors))
+        details.update({"head_error_m": float(bone_head_error), "axis_errors": [float(value) for value in bone_axis_errors],
+                        "axis_max_error": float(max(bone_axis_errors)),
+                        "expected_world_rest": [[float(value) for value in row] for row in native],
+                        "imported_world_rest": [[float(value) for value in row] for row in matrix],
+                        "imported_local_rest": [[float(value) for value in row] for row in bone.matrix_local],
+                        "expected_head_m": [float(value * meters) for value in native.translation],
+                        "imported_head_m": [float(value * imported_meters) for value in matrix.translation],
+                        "expected_normalized_axes": [[float(value) for value in native.to_3x3().col[index].normalized()] for index in range(3)],
+                        "imported_normalized_axes": [[float(value) for value in matrix.to_3x3().col[index].normalized()] for index in range(3)]})
+        diagnostic["rest_head_max_error_m"], diagnostic["rest_axis_max_error"] = float(head_error), float(axis_error)
+    diagnostic["outside_guard"]["head_bones"] = sorted(name for name, item in diagnostic["per_bone"].items()
+                                                      if item["head_error_m"] > physical_guard)
+    diagnostic["outside_guard"]["axis_bones"] = sorted(name for name, item in diagnostic["per_bone"].items()
+                                                      if item["axis_max_error"] > REST_MATRIX_GUARD)
+    diagnostic["worst_bones_order"] = "Maximum of head/physical_guard, axis/REST_MATRIX_GUARD and weight/WEIGHT_GUARD"
+    diagnostic["worst_bones"] = sorted(diagnostic["per_bone"].values(), key=lambda item: max(
+        item["head_error_m"] / physical_guard, item["axis_max_error"] / REST_MATRIX_GUARD,
+        (item["weight_max_error"] or 0.) / WEIGHT_GUARD), reverse=True)[:8]
+    diagnostic["status"] = "all_guard_metrics_collected_before_acceptance"
     require(coordinate_error <= physical_guard and max(key_errors.values(), default=0.) <= physical_guard,
             "FBX changed source static Basis or Shape Key coordinates beyond the existing native-world and metre guards")
     require(weights <= WEIGHT_GUARD and head_error <= physical_guard and axis_error <= REST_MATRIX_GUARD,
@@ -445,6 +570,7 @@ def roundtrip(filepath, mesh_expected, rest_expected, meters, expected_names, re
                 (owner.animation_data.action is None and not owner.animation_data.nla_tracks)
                 for owner in (rig, mesh, mesh.data.shape_keys) if owner is not None),
             "Static FBX unexpectedly imported an Action/NLA binding")
+    diagnostic["status"] = "accepted_by_existing_guards"
     check(report, qa, "native_static_fbx_roundtrip", True,
           vertices=len(mesh.data.vertices), faces=len(mesh.data.polygons), retained_bones=len(rest_expected),
           coordinates_max_error_m=coordinate_error, shape_key_errors_m=key_errors,
@@ -453,6 +579,60 @@ def roundtrip(filepath, mesh_expected, rest_expected, meters, expected_names, re
           weight_scope="Exact named positive weights on retained deform bones; FBX does not encode generic Blender mask groups",
           imported_objects=sorted(expected_names), imported_new_actions=0,
           original_fbx_tail_lengths_and_use_connect="Not encoded/accepted as Blender author metadata by this check")
+
+
+def public_snapshot(source, rig, report, qa, surface, exporter, args):
+    """Real public host/write, with explicit Dress-only scope and no child launch.
+
+    The ordinary whole-character scope is covered elsewhere. Restrict the
+    collected native binding inventory here to this one Dress for a focused
+    static roundtrip; all remaining launcher/proof/library code is unchanged.
+    """
+    record = qa.skirt.read_record(source)
+    _actual, cloth = surface.validate(source, rig, record)
+    before = strip_boundary(source, rig, cloth, qa, surface)
+    before_inventory = inventory()
+    scope = exporter._collection_scope(bpy.context, rig)
+    require(source in scope['eligible'] and scope['bindings'][source] == {rig},
+            "This focused Dress is not natively bound only to its proved Main Rig")
+    scope = {**scope, 'eligible': [source]}
+    native_collect = exporter.collect_character
+    config = SimpleNamespace(directory=str(args.output / 'unpublished'),
+                             filename=Path(FILENAME).stem, asset_id='', extras=[], simple_materials=[])
+
+    def collect(context, selected_rig, selected_config):
+        require(selected_rig == rig and selected_config is config, "Public launcher changed focused scope")
+        result = native_collect(context, selected_rig, selected_config, _scope=scope)
+        require(set(result['objects']) == {rig, source}, "The explicit FBX scope grew unexpectedly")
+        return result
+
+    require(exporter._ACTIVE_JOB is None, "The disposable process already owns an export")
+    with patch.object(exporter, 'collect_character', side_effect=collect), \
+            patch.object(exporter.subprocess, 'Popen') as process:
+        job = exporter.begin_export(bpy.context, rig, config)
+    try:
+        require(process.call_count == 1, "Public launcher did not reach its intercepted process boundary")
+        require(strip_boundary(source, rig, cloth, qa, surface) == before and inventory() == before_inventory,
+                "The public host snapshot changed original native inputs or datablock inventory")
+        specification = json.loads((job['root'] / 'job.json').read_text(encoding='utf-8'))
+        require(set(specification['objects']) == {rig.name, source.name}
+                and len(specification['dress_surfaces']) == 1,
+                "Public snapshot lost or expanded its captured source inventory")
+        library = args.output / 'scenes/Cosha_Dress_QA_public_library.blend'
+        library.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(job['root'] / 'character.blend', library)
+        (args.output / 'result').mkdir(parents=True, exist_ok=True)
+        shutil.copy2(job['root'] / 'job.json', args.output / 'result/public_job.json')
+        report['public_library_snapshot'] = {
+            'path': str(library), 'sha256': sha(library), 'bytes': library.stat().st_size,
+            'public_begin_export_reached': True, 'native_libraries_write': True,
+            'host_inputs_exact': True, 'child_process_launched': False,
+            'objects': specification['objects'],
+            'scope': 'Native bound Dress-only collected subset; no whole-character scope or publication acceptance'}
+        return job, specification, library
+    except Exception:
+        exporter._dispose(job)
+        raise
 
 
 def run(args, report, qa, surface, exporter, worker, protection):
@@ -474,36 +654,62 @@ def run(args, report, qa, surface, exporter, worker, protection):
     report["plain_source_reference"] = plain_facts
     require(qa_name in plain["keys"] and point_error(plain["keys"][qa_name], plain["keys"]["Basis"]) > COORDINATE_GUARD,
             "The asymmetric QA Shape Key did not survive the plain native static baker")
+    # Freeze this independently of worker filtering, so deleting a weighted
+    # source bone cannot remove that same weight from both sides of the check.
+    deform_names = {bone.name for bone in rig.data.bones if bone.use_deform}
+    required_weighted_deforms = {name for weights in plain['weights'] for name, weight in weights.items()
+                                if name in deform_names and weight > 0.}
+    require(required_weighted_deforms, "The independent source has no positive deform skin weights")
     # Retain original Action assets through the disposable snapshot/worker.
     for index, action in enumerate(protection.action_refs):
         bpy.context.scene[f"CD_QA_ExportAuthorAction_{index:04d}"] = action
     qa.save_candidate(args.output / "scenes/Cosha_Dress_QA_export_snapshot.blend", args.input)
-    job = {"stage": str(args.output / "stage"), "filename": FILENAME, "rig": rig_name,
-           "objects": [rig_name, source_name], "unit_scale": bpy.context.scene.unit_settings.scale_length,
-           "owned_keys": {source_name: owned_keys}, "dress_surfaces": proof, "warnings": []}
-    result = observe_export(job, source, rig, cloth, record, report, qa, surface, worker)
-    require(result.get("ok") is True, "The native model worker did not finish")
-    exporter._dress_publication(job, result)  # Facts validation only; no publication.
-    report["worker_result"] = result
-    generated = static_mesh(bpy.data.objects[source_name])
-    retained = bpy.data.objects[rig_name]
-    deform_names = {bone.name for bone in retained.data.bones if bone.use_deform}
-    check(report, qa, "worker_output_is_plain_source_basis_keys_skin",
-          generated["faces"] == plain["faces"] and generated["edges"] == plain["edges"]
-          and point_error(generated["vertices"], plain["vertices"]) <= COORDINATE_GUARD
-          and weight_error(retained_skin_weights(generated["weights"], deform_names),
-                           retained_skin_weights(plain["weights"], deform_names)) <= WEIGHT_GUARD
-          and set(generated["keys"]) == set(plain["keys"])
-          and all(point_error(generated["keys"][name], plain["keys"][name]) <= COORDINATE_GUARD for name in plain["keys"]),
-          plain_basis_max_error=point_error(generated["vertices"], plain["vertices"]),
-          scope="Original author Basis/Keys and retained deform skin plus the normal static modifier bake; never C coordinates. All raw groups/weights were exact at strip.")
-    rest = {bone.name: {"parent": bone.parent.name if bone.parent else None,
-                        "deform": bone.use_deform,
-                        "world": [list(row) for row in retained.matrix_world @ bone.matrix_local]}
-            for bone in retained.data.bones}
-    filepath = args.output / "stage" / FILENAME
-    report["fbx"] = {"path": str(filepath), "sha256": sha(filepath), "bytes": filepath.stat().st_size}
-    roundtrip(filepath, generated, rest, float(job["unit_scale"]), [rig_name, source_name], report, qa)
+    host_job, job, library = public_snapshot(source, rig, report, qa, surface, exporter, args)
+    try:
+        bpy.ops.wm.open_mainfile(filepath=str(library), load_ui=False, use_scripts=False)
+        source, rig, record = qa.owned_source(source_name)
+        surface.validate_snapshot(source, job['dress_surfaces'][0])
+        _actual, cloth = surface.validate(source, rig, record)
+        check(report, qa, "native_public_library_retains_exact_home_scene_proof", True,
+              home_scene=record['physics']['surface']['home_scene'],
+              explicit_objects=job['objects'], replacement_scene_or_repair_created=False)
+        result = observe_export(job, source, rig, cloth, record, report, qa, surface, worker)
+        require(result.get("ok") is True, "The native model worker did not finish")
+        exporter._dress_publication(job, result)  # Facts validation only; no publication.
+        report["worker_result"] = result
+        generated = static_mesh(bpy.data.objects[source_name])
+        retained = bpy.data.objects[rig_name]
+        check(report, qa, "original_weighted_deform_bones_remain_native_deforms",
+              all(name in retained.data.bones and retained.data.bones[name].use_deform
+                  for name in required_weighted_deforms),
+              independent_required_deforms=sorted(required_weighted_deforms),
+              criterion="Frozen from original native deform flags and positive source skin weights before worker filtering")
+        check(report, qa, "worker_output_is_plain_source_basis_keys_skin",
+              generated["faces"] == plain["faces"] and generated["edges"] == plain["edges"]
+              and point_error(generated["vertices"], plain["vertices"]) <= COORDINATE_GUARD
+              and weight_error(retained_skin_weights(generated["weights"], deform_names),
+                               retained_skin_weights(plain["weights"], deform_names)) <= WEIGHT_GUARD
+              and set(generated["keys"]) == set(plain["keys"])
+              and all(point_error(generated["keys"][name], plain["keys"][name]) <= COORDINATE_GUARD for name in plain["keys"]),
+              plain_basis_max_error=point_error(generated["vertices"], plain["vertices"]),
+              scope="Original author Basis/Keys and retained deform skin plus the normal static modifier bake; never C coordinates. All raw groups/weights were exact at strip.")
+        rest = {bone.name: {"parent": bone.parent.name if bone.parent else None,
+                            "deform": bone.use_deform,
+                            "world": [list(row) for row in retained.matrix_world @ bone.matrix_local]}
+                for bone in retained.data.bones}
+        filepath = args.output / "stage" / FILENAME
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(Path(job['stage']) / FILENAME, filepath)
+        report["fbx"] = {"path": str(filepath), "sha256": sha(filepath), "bytes": filepath.stat().st_size}
+        roundtrip(filepath, generated, rest, float(job["unit_scale"]), [rig_name, source_name], report, qa)
+    finally:
+        temporary_path = Path(host_job['root'])
+        exporter._dispose(host_job)
+        check(report, qa, "public_host_job_fully_disposed",
+              not temporary_path.exists() and exporter._ACTIVE_JOB is None,
+              temporary_directory_removed=not temporary_path.exists(),
+              active_job_cleared=exporter._ACTIVE_JOB is None,
+              child_process_launched=False)
 
 
 def main(args):

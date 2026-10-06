@@ -1,0 +1,2712 @@
+{
+  "schema": "STATIC_SERIALIZED_FBX_BIND_DIAGNOSTIC_V1",
+  "created_utc": "2026-10-05T20:51:38.997283+00:00",
+  "status": "serialized_bind_comparison_complete",
+  "scope": {
+    "blender_native_import_validated": false,
+    "unity_import_validated": false,
+    "animation_validated": false,
+    "artist_scene_modified": false,
+    "new_export_performed": false,
+    "bpy_imported": false,
+    "warning": "This result is not native import, Unity, animation, or final model acceptance."
+  },
+  "inputs": {
+    "fbx": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_export_51_20261006_043154_764\\stage\\Cosha_Dress_StaticQA.fbx",
+      "bytes": 709836,
+      "sha256": "e751e716eaf96347ec962d5272b2c8a6520f999539542f9c1ab14a8abb77d1ad"
+    },
+    "public_library_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_export_51_20261006_043154_764\\scenes\\Cosha_Dress_QA_public_library.blend",
+      "bytes": 14963574,
+      "sha256": "72ab7da273caa6afe1e36689649af11e65934cc8e7085909eadf96bd985629e6"
+    },
+    "source_rest_library_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_export_51_20261006_035935_884\\scenes\\Cosha_Dress_QA_public_library.blend",
+      "bytes": 14963364,
+      "sha256": "16bcd02c4a805b47b1f6d1f3a39ea33d03b9457f1f5078f9b381fdce303748c7"
+    },
+    "current_export_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_export_51_20261006_043154_764\\result\\surface_export.json",
+      "bytes": 195351,
+      "sha256": "39fce842d4701e8b8b2dad4463edd1ae11ac7c69bf36b546080b1e350df53e2b"
+    },
+    "source_export_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_export_51_20261006_035935_884\\result\\surface_export.json",
+      "bytes": 154720,
+      "sha256": "fd95f35895d99434895a47a64f89d152e124ab7e30eaaa202b2bf33ce461c873"
+    },
+    "source_rest_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_rest_51_20261006_042142_958\\static_rest_roundtrip.json",
+      "bytes": 6136072,
+      "sha256": "69815662f84f1adb8afe8311a0ce8474b02d69d898d4a44533d68576d4153abb"
+    },
+    "official_parser_files": {
+      "parse_fbx.py": {
+        "path": "D:\\Blender5.1\\5.1\\scripts\\addons_core\\io_scene_fbx\\parse_fbx.py",
+        "bytes": 11409,
+        "sha256": "96fe3f11b5c9b2950d9c434857e3b0db1a1b558510e2ad360b767643a69c2047"
+      },
+      "data_types.py": {
+        "path": "D:\\Blender5.1\\5.1\\scripts\\addons_core\\io_scene_fbx\\data_types.py",
+        "bytes": 1726,
+        "sha256": "24328144f5b60338b1b47cc47ff76e8aee5c97c89ca4a419482978bb961f18fa"
+      },
+      "fbx_utils_threading.py": {
+        "path": "D:\\Blender5.1\\5.1\\scripts\\addons_core\\io_scene_fbx\\fbx_utils_threading.py",
+        "bytes": 11779,
+        "sha256": "469262ab602b44119b4e7f0e2a7fe97e13f957000e239f3e5713a1c3c12f55e3"
+      }
+    },
+    "diagnostic_script": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\static_bind_diagnostic_20261006\\compare_existing_static_bind.py",
+      "bytes": 15695,
+      "sha256": "d510af4e1f1503a84d98e960dcd61bee6dcb84fddc870a960477f9e1d2306288"
+    }
+  },
+  "all_inputs_unchanged": true,
+  "source_rest_link": {
+    "rig": "CoshaRig",
+    "source_bone_count": 346,
+    "rest_report_native_content_sha256": "4f685dab50b70bc503f5a1da68e898fc5db7d4255921686ccf698c75cf77444e",
+    "projected_validate_real_dress_schema_sha256": "7511de8262a7db5389f36c056850870c1db11ecd85b191ad6c975ee7880f95f5",
+    "current_capture_rest_sha256": "7511de8262a7db5389f36c056850870c1db11ecd85b191ad6c975ee7880f95f5",
+    "source_capture_rest_sha256": "7511de8262a7db5389f36c056850870c1db11ecd85b191ad6c975ee7880f95f5",
+    "fingerprints_equal": true,
+    "source_rest_library_file_link_exact": true
+  },
+  "coordinate_convention": {
+    "fbx_matrix_storage": "16 double values in column-major order; converted to four plain-float rows",
+    "comparison": "inverse(FBX armature PoseNode world matrix) * FBX bone PoseNode world matrix versus native Bone.matrix_local plain floats",
+    "units": "Armature object units. The common file-world/root transformation and scale cancel in the inverse product; head metric is not a world/metre head guard.",
+    "axis_metric": "Euclidean difference of separately normalized 3-vector matrix columns; no roll/Euler decomposition",
+    "source_rest_schema_projection": [
+      "parent",
+      "matrix",
+      "length",
+      "connect",
+      "deform",
+      "inherit_scale",
+      "inherit_rotation",
+      "local_location"
+    ],
+    "cluster_comparison": "Cluster.TransformLink world matrix versus its bone PoseNode world matrix, in the same serialized FBX coordinates",
+    "parser_runtime": "Official installed parse_fbx.py; array decoding forced serial in this private pure-Python module; no bpy or mathutils"
+  },
+  "fbx": {
+    "version": 7400,
+    "global_settings": {
+      "UpAxis": [
+        1
+      ],
+      "UpAxisSign": [
+        1
+      ],
+      "FrontAxis": [
+        2
+      ],
+      "FrontAxisSign": [
+        1
+      ],
+      "CoordAxis": [
+        0
+      ],
+      "CoordAxisSign": [
+        1
+      ],
+      "UnitScaleFactor": [
+        100.0
+      ],
+      "OriginalUnitScaleFactor": [
+        100.0
+      ]
+    },
+    "model_count": 219,
+    "pose_count": 2,
+    "pose_node_count": 219,
+    "pose_node_total": 220,
+    "repeated_pose_nodes_exact": 1,
+    "retained_bones": 217
+  },
+  "bind_summary": {
+    "compared_bones": 217,
+    "matrix_max_abs_error": 3.181842846977645e-07,
+    "head_max_abs_error_armature_units": 3.181842846977645e-07,
+    "normalized_axis_vector_max_error": 1.3571134903058012e-07,
+    "worst8": [
+      {
+        "bone": "Hair Hair 20.04",
+        "matrix_max_abs_error": 3.181842846977645e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 3.181842846977645e-07,
+        "normalized_axis_vector_max_error": 7.229676653114682e-08
+      },
+      {
+        "bone": "Hair Hair 12.02",
+        "matrix_max_abs_error": 3.0170024278852736e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 3.0170024278852736e-07,
+        "normalized_axis_vector_max_error": 2.058785055484619e-08
+      },
+      {
+        "bone": "Hair Hair 31.02",
+        "matrix_max_abs_error": 2.950126469780656e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 2.950126469780656e-07,
+        "normalized_axis_vector_max_error": 4.275322272010897e-08
+      },
+      {
+        "bone": "Hair Hair 03.03",
+        "matrix_max_abs_error": 2.8760803760796705e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 2.8760803760796705e-07,
+        "normalized_axis_vector_max_error": 3.1670265303309475e-08
+      },
+      {
+        "bone": "hand.L",
+        "matrix_max_abs_error": 2.510114356368831e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 2.510114356368831e-07,
+        "normalized_axis_vector_max_error": 1.193919138667524e-08
+      },
+      {
+        "bone": "Hair Hair 27.02",
+        "matrix_max_abs_error": 2.3492150402759648e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 2.3492150402759648e-07,
+        "normalized_axis_vector_max_error": 2.013407802836331e-08
+      },
+      {
+        "bone": "Hair Hair 15.03",
+        "matrix_max_abs_error": 2.3443809382683867e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 2.3443809382683867e-07,
+        "normalized_axis_vector_max_error": 4.933677108920748e-08
+      },
+      {
+        "bone": "Hair Hair 17.04",
+        "matrix_max_abs_error": 2.3348638733544647e-07,
+        "worst_component": [
+          2,
+          3
+        ],
+        "head_max_abs_error_armature_units": 2.3348638733544647e-07,
+        "normalized_axis_vector_max_error": 2.7408850764934066e-08
+      }
+    ]
+  },
+  "cluster_summary": {
+    "compared_bones": 217,
+    "matrix_max_abs_error": 0.0,
+    "all_transformlink_pose_matrices_exact": true,
+    "worst8": [
+      {
+        "bone": "upper_arm.R",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      },
+      {
+        "bone": "upper_arm.L",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      },
+      {
+        "bone": "toe.R",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      },
+      {
+        "bone": "toe.L",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      },
+      {
+        "bone": "thumb.03.R",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      },
+      {
+        "bone": "thumb.03.L",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      },
+      {
+        "bone": "thumb.02.R",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      },
+      {
+        "bone": "thumb.02.L",
+        "matrix_max_abs_error": 0.0,
+        "worst_component": [
+          3,
+          3
+        ],
+        "head_max_abs_error_armature_units": 0.0,
+        "normalized_axis_vector_max_error": 0.0
+      }
+    ]
+  },
+  "per_bone_compact": [
+    {
+      "bone": "Chest",
+      "matrix_max_abs_error": 2.3627654721636304e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.3627654721636304e-08,
+      "normalized_axis_vector_max_error": 5.328710467216015e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 01.01",
+      "matrix_max_abs_error": 1.0245556825161373e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 8.112852500907763e-08,
+      "normalized_axis_vector_max_error": 3.636321323049498e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 01.02",
+      "matrix_max_abs_error": 1.8102110477258293e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.8102110477258293e-07,
+      "normalized_axis_vector_max_error": 2.417051268880598e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 01.03",
+      "matrix_max_abs_error": 9.854062282821374e-08,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.854062282821374e-08,
+      "normalized_axis_vector_max_error": 9.513565752839701e-10,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 01.04",
+      "matrix_max_abs_error": 1.1796178212009067e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1796178212009067e-07,
+      "normalized_axis_vector_max_error": 8.857118842916585e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 02.01",
+      "matrix_max_abs_error": 2.6730692326282224e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 2.1944330130807543e-08,
+      "normalized_axis_vector_max_error": 2.4846244302958917e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 02.02",
+      "matrix_max_abs_error": 1.0518716542229356e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 3.927457575825244e-08,
+      "normalized_axis_vector_max_error": 4.9346807397910634e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 02.03",
+      "matrix_max_abs_error": 8.601239764871593e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 6.009586561717128e-08,
+      "normalized_axis_vector_max_error": 4.6395281341927315e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 02.04",
+      "matrix_max_abs_error": 6.929044721326605e-08,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 6.929044721326605e-08,
+      "normalized_axis_vector_max_error": 1.0412411321357479e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 03.01",
+      "matrix_max_abs_error": 1.1424923240799245e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 1.1697234653107458e-08,
+      "normalized_axis_vector_max_error": 4.130987524145496e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 03.02",
+      "matrix_max_abs_error": 1.051593001566431e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 6.298231156054435e-08,
+      "normalized_axis_vector_max_error": 6.087311160411165e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 03.03",
+      "matrix_max_abs_error": 2.8760803760796705e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.8760803760796705e-07,
+      "normalized_axis_vector_max_error": 3.1670265303309475e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 03.04",
+      "matrix_max_abs_error": 1.7226057869024203e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.7226057869024203e-07,
+      "normalized_axis_vector_max_error": 2.941593090254152e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 04.01",
+      "matrix_max_abs_error": 1.0527555693862212e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 6.093981697041784e-08,
+      "normalized_axis_vector_max_error": 3.202219529904872e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 04.02",
+      "matrix_max_abs_error": 8.029016873578598e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 4.616292337278338e-08,
+      "normalized_axis_vector_max_error": 4.5475758235659513e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 04.03",
+      "matrix_max_abs_error": 1.1344873213081641e-07,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1344873213081641e-07,
+      "normalized_axis_vector_max_error": 8.394505278925014e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 04.04",
+      "matrix_max_abs_error": 1.0602083533317597e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 2.9768262965745862e-08,
+      "normalized_axis_vector_max_error": 5.5871625735400684e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 05.01",
+      "matrix_max_abs_error": 1.0618308587950764e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0618308587950764e-07,
+      "normalized_axis_vector_max_error": 3.2382233622409415e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 05.02",
+      "matrix_max_abs_error": 2.0279482804141935e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.0279482804141935e-07,
+      "normalized_axis_vector_max_error": 2.3861040444845492e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 05.03",
+      "matrix_max_abs_error": 5.293822946672577e-08,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 3.1540451361777855e-08,
+      "normalized_axis_vector_max_error": 4.5875175444088335e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 05.04",
+      "matrix_max_abs_error": 1.0143134654416741e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 2.0033941394714816e-08,
+      "normalized_axis_vector_max_error": 2.735547508164104e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 06.01",
+      "matrix_max_abs_error": 1.1424923240799245e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 9.280193724592323e-09,
+      "normalized_axis_vector_max_error": 6.146809920166419e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 06.02",
+      "matrix_max_abs_error": 1.4710809870255304e-07,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.4710809870255304e-07,
+      "normalized_axis_vector_max_error": 4.7881550799530784e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 06.03",
+      "matrix_max_abs_error": 1.6953203330061228e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.6953203330061228e-07,
+      "normalized_axis_vector_max_error": 5.0648494470359444e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 06.04",
+      "matrix_max_abs_error": 4.739928638475277e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 4.245208115594146e-08,
+      "normalized_axis_vector_max_error": 3.67175818669604e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 07.01",
+      "matrix_max_abs_error": 8.869018985890875e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 6.093981697041784e-08,
+      "normalized_axis_vector_max_error": 3.1055998475730115e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 07.02",
+      "matrix_max_abs_error": 6.935676807873214e-08,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 6.935676807873214e-08,
+      "normalized_axis_vector_max_error": 1.1999803571125476e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 07.03",
+      "matrix_max_abs_error": 1.3145101451783603e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 7.702629734041011e-08,
+      "normalized_axis_vector_max_error": 4.3717676524855036e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 07.04",
+      "matrix_max_abs_error": 1.2261176074446212e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.2261176074446212e-07,
+      "normalized_axis_vector_max_error": 3.4200634898326714e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 08.01",
+      "matrix_max_abs_error": 1.0618308587950764e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0618308587950764e-07,
+      "normalized_axis_vector_max_error": 3.888442732382491e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 08.02",
+      "matrix_max_abs_error": 2.0279482804141935e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.0279482804141935e-07,
+      "normalized_axis_vector_max_error": 3.392228105215188e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 08.03",
+      "matrix_max_abs_error": 5.642251635351592e-08,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 4.267687442327528e-08,
+      "normalized_axis_vector_max_error": 4.444030449175637e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 08.04",
+      "matrix_max_abs_error": 1.1439161062831715e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 2.663615203402081e-08,
+      "normalized_axis_vector_max_error": 4.257582382903895e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 09.01",
+      "matrix_max_abs_error": 9.77332559326527e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.77332559326527e-08,
+      "normalized_axis_vector_max_error": 2.8519368035340405e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 09.02",
+      "matrix_max_abs_error": 1.2338875532424964e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 8.95924420624139e-08,
+      "normalized_axis_vector_max_error": 8.508350655817469e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 09.03",
+      "matrix_max_abs_error": 1.0486909429729963e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 6.987654477264016e-08,
+      "normalized_axis_vector_max_error": 9.014752199458929e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 09.04",
+      "matrix_max_abs_error": 2.1484462009446759e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.1484462009446759e-07,
+      "normalized_axis_vector_max_error": 5.1201919069310094e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 10.01",
+      "matrix_max_abs_error": 1.0881386680594574e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 8.7281703198272e-08,
+      "normalized_axis_vector_max_error": 2.919783098036101e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 10.02",
+      "matrix_max_abs_error": 1.2513583969031572e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.2513583969031572e-07,
+      "normalized_axis_vector_max_error": 4.1304013735039017e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 10.03",
+      "matrix_max_abs_error": 1.0583476997561014e-07,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0583476997561014e-07,
+      "normalized_axis_vector_max_error": 5.81961955961749e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 10.04",
+      "matrix_max_abs_error": 1.7892413299580578e-07,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.7892413299580578e-07,
+      "normalized_axis_vector_max_error": 4.82114200352182e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 11.01",
+      "matrix_max_abs_error": 1.2870706489476191e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.0462887889417516e-08,
+      "normalized_axis_vector_max_error": 4.913318856198174e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 11.02",
+      "matrix_max_abs_error": 1.5464586744506903e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.5464586744506903e-07,
+      "normalized_axis_vector_max_error": 7.20578835469156e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 11.03",
+      "matrix_max_abs_error": 1.2633259383054707e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 9.830763714191448e-08,
+      "normalized_axis_vector_max_error": 6.347502018475928e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 11.04",
+      "matrix_max_abs_error": 1.670929667962895e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.670929667962895e-07,
+      "normalized_axis_vector_max_error": 7.491699820727222e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 12.01",
+      "matrix_max_abs_error": 8.905120330027216e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 8.905120330027216e-08,
+      "normalized_axis_vector_max_error": 8.835087693148073e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 12.02",
+      "matrix_max_abs_error": 3.0170024278852736e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 3.0170024278852736e-07,
+      "normalized_axis_vector_max_error": 2.058785055484619e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 12.03",
+      "matrix_max_abs_error": 8.596960077156268e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 8.596960077156268e-08,
+      "normalized_axis_vector_max_error": 6.50807003757668e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 12.04",
+      "matrix_max_abs_error": 1.2160548612527577e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.2160548612527577e-07,
+      "normalized_axis_vector_max_error": 3.6502154310455145e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 13.01",
+      "matrix_max_abs_error": 9.448555160496142e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.448555160496142e-08,
+      "normalized_axis_vector_max_error": 7.475729358595625e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 13.02",
+      "matrix_max_abs_error": 1.302557135485216e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 9.551886966108203e-08,
+      "normalized_axis_vector_max_error": 6.535120652935199e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 13.03",
+      "matrix_max_abs_error": 2.1032630237449723e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.1032630237449723e-07,
+      "normalized_axis_vector_max_error": 1.0514460476009706e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 13.04",
+      "matrix_max_abs_error": 8.459904286134412e-08,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 8.459904286134412e-08,
+      "normalized_axis_vector_max_error": 4.788745302309234e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 14.01",
+      "matrix_max_abs_error": 5.010930348436915e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 3.7293270471749906e-08,
+      "normalized_axis_vector_max_error": 2.965347063919582e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 14.02",
+      "matrix_max_abs_error": 9.52073605509085e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 7.603350127283193e-08,
+      "normalized_axis_vector_max_error": 7.922546454303008e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 14.03",
+      "matrix_max_abs_error": 1.3030290646476317e-07,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 5.137421310585921e-08,
+      "normalized_axis_vector_max_error": 7.21288335348984e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 14.04",
+      "matrix_max_abs_error": 1.529065938310481e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.529065938310481e-07,
+      "normalized_axis_vector_max_error": 7.161606261736188e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 15.01",
+      "matrix_max_abs_error": 1.0449692744440853e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 5.716125572874375e-09,
+      "normalized_axis_vector_max_error": 3.750530514889942e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 15.02",
+      "matrix_max_abs_error": 6.931814899857613e-08,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 6.682378805855649e-08,
+      "normalized_axis_vector_max_error": 6.477194839122586e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 15.03",
+      "matrix_max_abs_error": 2.3443809382683867e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.3443809382683867e-07,
+      "normalized_axis_vector_max_error": 4.933677108920748e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 15.04",
+      "matrix_max_abs_error": 9.00948617932329e-08,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 6.62219041547285e-08,
+      "normalized_axis_vector_max_error": 7.946297123705824e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 16.01",
+      "matrix_max_abs_error": 8.742742374501233e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 3.1841265180077016e-09,
+      "normalized_axis_vector_max_error": 2.761699861495316e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 16.02",
+      "matrix_max_abs_error": 7.126130774359751e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 4.0584907212704024e-08,
+      "normalized_axis_vector_max_error": 2.7376858591967648e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 16.03",
+      "matrix_max_abs_error": 1.0279645468180831e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0279645468180831e-07,
+      "normalized_axis_vector_max_error": 4.90642885578134e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 16.04",
+      "matrix_max_abs_error": 1.3568068868430316e-07,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.0238715830723777e-07,
+      "normalized_axis_vector_max_error": 5.706127325910284e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 17.01",
+      "matrix_max_abs_error": 1.0473394573828898e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0473394573828898e-07,
+      "normalized_axis_vector_max_error": 1.0694034472209914e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 17.02",
+      "matrix_max_abs_error": 1.0043077558474778e-07,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 7.51840278923055e-08,
+      "normalized_axis_vector_max_error": 9.284372560469522e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 17.03",
+      "matrix_max_abs_error": 1.6721496387539503e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.6721496387539503e-07,
+      "normalized_axis_vector_max_error": 8.14686118459645e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 17.04",
+      "matrix_max_abs_error": 2.3348638733544647e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.3348638733544647e-07,
+      "normalized_axis_vector_max_error": 2.7408850764934066e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 18.01",
+      "matrix_max_abs_error": 8.009013441334645e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 3.2015796014306375e-08,
+      "normalized_axis_vector_max_error": 1.66103871130459e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 18.02",
+      "matrix_max_abs_error": 1.3793657793748082e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.3793657793748082e-07,
+      "normalized_axis_vector_max_error": 7.137779967032555e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 18.03",
+      "matrix_max_abs_error": 8.17109350181866e-08,
+      "worst_component": [
+        1,
+        1
+      ],
+      "head_max_abs_error_armature_units": 4.14745890964241e-08,
+      "normalized_axis_vector_max_error": 5.787155487767016e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 18.04",
+      "matrix_max_abs_error": 1.605529809101114e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 1.350457816684525e-07,
+      "normalized_axis_vector_max_error": 5.644737257655144e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 19.01",
+      "matrix_max_abs_error": 5.5760688510986256e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 1.1238465491558713e-08,
+      "normalized_axis_vector_max_error": 5.226606036029392e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 19.02",
+      "matrix_max_abs_error": 1.2215276468108272e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 2.17372931737847e-08,
+      "normalized_axis_vector_max_error": 3.7879487532508085e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 19.03",
+      "matrix_max_abs_error": 8.504222624716729e-08,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 8.504222624716729e-08,
+      "normalized_axis_vector_max_error": 3.922407070981425e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 19.04",
+      "matrix_max_abs_error": 1.7106066407812648e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.7106066407812648e-07,
+      "normalized_axis_vector_max_error": 1.1162833808801442e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 20.01",
+      "matrix_max_abs_error": 7.981511473964531e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 3.518771585220293e-08,
+      "normalized_axis_vector_max_error": 1.854130773945247e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 20.02",
+      "matrix_max_abs_error": 1.7518454453746557e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 8.254148053943311e-08,
+      "normalized_axis_vector_max_error": 3.6142388861518565e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 20.03",
+      "matrix_max_abs_error": 1.3228860784586516e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 5.697379146241133e-08,
+      "normalized_axis_vector_max_error": 1.3481540663664376e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 20.04",
+      "matrix_max_abs_error": 3.181842846977645e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 3.181842846977645e-07,
+      "normalized_axis_vector_max_error": 7.229676653114682e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 21.01",
+      "matrix_max_abs_error": 5.7234351480417445e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 5.7234351480417445e-08,
+      "normalized_axis_vector_max_error": 3.4546766201811803e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 21.02",
+      "matrix_max_abs_error": 7.198526019713825e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 2.9623450359395065e-08,
+      "normalized_axis_vector_max_error": 7.35928178465487e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 21.03",
+      "matrix_max_abs_error": 1.0278119599860247e-07,
+      "worst_component": [
+        0,
+        2
+      ],
+      "head_max_abs_error_armature_units": 9.800367110901487e-08,
+      "normalized_axis_vector_max_error": 8.282035418699106e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 21.04",
+      "matrix_max_abs_error": 1.4244327006807112e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.4244327006807112e-07,
+      "normalized_axis_vector_max_error": 8.562316172644558e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 22.01",
+      "matrix_max_abs_error": 9.817633950248705e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.817633950248705e-08,
+      "normalized_axis_vector_max_error": 1.635336877030404e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 22.02",
+      "matrix_max_abs_error": 1.2789744585628426e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 2.6154131749223097e-08,
+      "normalized_axis_vector_max_error": 4.695503161349579e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 22.03",
+      "matrix_max_abs_error": 1.796939614884252e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.796939614884252e-07,
+      "normalized_axis_vector_max_error": 2.3647988701436005e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 22.04",
+      "matrix_max_abs_error": 6.670288099641652e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 6.670288099641652e-08,
+      "normalized_axis_vector_max_error": 3.020511825667931e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 23.01",
+      "matrix_max_abs_error": 5.5530318565644166e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 5.5530318565644166e-08,
+      "normalized_axis_vector_max_error": 1.3315555672346196e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 23.02",
+      "matrix_max_abs_error": 1.2517609349060876e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.2517609349060876e-07,
+      "normalized_axis_vector_max_error": 3.189492705996323e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 23.03",
+      "matrix_max_abs_error": 8.990476396686375e-08,
+      "worst_component": [
+        1,
+        1
+      ],
+      "head_max_abs_error_armature_units": 2.5511994850013764e-08,
+      "normalized_axis_vector_max_error": 6.263827823693929e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 23.04",
+      "matrix_max_abs_error": 9.900074515734048e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.900074515734048e-08,
+      "normalized_axis_vector_max_error": 2.3300183600998727e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 24.01",
+      "matrix_max_abs_error": 7.657525757931438e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 7.021230841175452e-08,
+      "normalized_axis_vector_max_error": 2.1055765201159808e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 24.02",
+      "matrix_max_abs_error": 7.155066883424155e-08,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 7.155066883424155e-08,
+      "normalized_axis_vector_max_error": 1.3898454037800219e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 24.03",
+      "matrix_max_abs_error": 1.0646954989868007e-07,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0646954989868007e-07,
+      "normalized_axis_vector_max_error": 2.3821325808232528e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 24.04",
+      "matrix_max_abs_error": 1.0128824157185079e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0128824157185079e-07,
+      "normalized_axis_vector_max_error": 4.053158537690875e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 25.01",
+      "matrix_max_abs_error": 9.80379939452547e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.80379939452547e-08,
+      "normalized_axis_vector_max_error": 1.468530637068586e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 25.02",
+      "matrix_max_abs_error": 1.0416610440877605e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.0416610440877605e-07,
+      "normalized_axis_vector_max_error": 3.47164847813011e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 25.03",
+      "matrix_max_abs_error": 9.791465305220015e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 3.4543290006183724e-08,
+      "normalized_axis_vector_max_error": 2.9569276276219387e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 25.04",
+      "matrix_max_abs_error": 1.1881143713310394e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 1.1126793753035713e-07,
+      "normalized_axis_vector_max_error": 5.5020634702544806e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 26.01",
+      "matrix_max_abs_error": 6.276980701880319e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 1.1238465491558713e-08,
+      "normalized_axis_vector_max_error": 5.672331551825841e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 26.02",
+      "matrix_max_abs_error": 2.0196787942072802e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 1.5408580056330834e-07,
+      "normalized_axis_vector_max_error": 9.113654697348849e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 26.03",
+      "matrix_max_abs_error": 1.0088047119882759e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 5.496294488982478e-08,
+      "normalized_axis_vector_max_error": 4.118058569218953e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 26.04",
+      "matrix_max_abs_error": 7.198467877334025e-08,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 7.188703396139931e-08,
+      "normalized_axis_vector_max_error": 4.392114988755345e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 27.01",
+      "matrix_max_abs_error": 5.295163529872582e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 3.518771585220293e-08,
+      "normalized_axis_vector_max_error": 2.0490231601363572e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 27.02",
+      "matrix_max_abs_error": 2.3492150402759648e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.3492150402759648e-07,
+      "normalized_axis_vector_max_error": 2.013407802836331e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 27.03",
+      "matrix_max_abs_error": 1.3827394029775064e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 9.540623224779665e-08,
+      "normalized_axis_vector_max_error": 7.702863276874187e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 27.04",
+      "matrix_max_abs_error": 1.6580426120960112e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.6580426120960112e-07,
+      "normalized_axis_vector_max_error": 9.887066625045255e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 28.01",
+      "matrix_max_abs_error": 6.27555291066173e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 5.7234351480417445e-08,
+      "normalized_axis_vector_max_error": 5.80370565641424e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 28.02",
+      "matrix_max_abs_error": 5.154198612355998e-08,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 3.805986548144347e-08,
+      "normalized_axis_vector_max_error": 6.960401020944798e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 28.03",
+      "matrix_max_abs_error": 1.6977580896693212e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.6977580896693212e-07,
+      "normalized_axis_vector_max_error": 1.1059414337196722e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 28.04",
+      "matrix_max_abs_error": 1.5785571572113355e-07,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.0497965517025643e-07,
+      "normalized_axis_vector_max_error": 6.657211910699297e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 29.01",
+      "matrix_max_abs_error": 7.449102856771361e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 5.420368398567632e-08,
+      "normalized_axis_vector_max_error": 2.3291655966229717e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 29.02",
+      "matrix_max_abs_error": 1.2622589173894028e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.2622589173894028e-07,
+      "normalized_axis_vector_max_error": 1.8815647953137507e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 29.03",
+      "matrix_max_abs_error": 1.3296296952347575e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 4.3747703390439874e-08,
+      "normalized_axis_vector_max_error": 4.2843654063183614e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 29.04",
+      "matrix_max_abs_error": 8.676908380689241e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 8.567714249174685e-08,
+      "normalized_axis_vector_max_error": 7.813719650792625e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 30.01",
+      "matrix_max_abs_error": 7.021230841175452e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 7.021230841175452e-08,
+      "normalized_axis_vector_max_error": 3.73988654701195e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 30.02",
+      "matrix_max_abs_error": 5.472985464827218e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 4.1521818205936256e-08,
+      "normalized_axis_vector_max_error": 3.46951353142187e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 30.03",
+      "matrix_max_abs_error": 6.837454397112808e-08,
+      "worst_component": [
+        1,
+        3
+      ],
+      "head_max_abs_error_armature_units": 6.837454397112808e-08,
+      "normalized_axis_vector_max_error": 4.5435047275340455e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 30.04",
+      "matrix_max_abs_error": 9.228321329324274e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 5.645597650483225e-08,
+      "normalized_axis_vector_max_error": 4.4902756262222035e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 31.01",
+      "matrix_max_abs_error": 1.0961629259842454e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 2.1944330130807543e-08,
+      "normalized_axis_vector_max_error": 5.48225581487929e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 31.02",
+      "matrix_max_abs_error": 2.950126469780656e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.950126469780656e-07,
+      "normalized_axis_vector_max_error": 4.275322272010897e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 31.03",
+      "matrix_max_abs_error": 9.310006210405675e-08,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.310006210405675e-08,
+      "normalized_axis_vector_max_error": 5.6652694967928126e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 31.04",
+      "matrix_max_abs_error": 6.330636814766422e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 4.084822871619487e-08,
+      "normalized_axis_vector_max_error": 2.7589460028400695e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 32.01",
+      "matrix_max_abs_error": 6.875982605514253e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 6.486726000787257e-08,
+      "normalized_axis_vector_max_error": 1.827322055322888e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 32.02",
+      "matrix_max_abs_error": 9.883678686595232e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 1.547989267325356e-08,
+      "normalized_axis_vector_max_error": 2.781729053623377e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 32.03",
+      "matrix_max_abs_error": 1.5375257955696497e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.5375257955696497e-07,
+      "normalized_axis_vector_max_error": 4.8307009922262976e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hair Hair 32.04",
+      "matrix_max_abs_error": 1.1207461381168571e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 7.698362747277088e-08,
+      "normalized_axis_vector_max_error": 4.055170925413884e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Head",
+      "matrix_max_abs_error": 2.3032318696714071e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.3032318696714071e-07,
+      "normalized_axis_vector_max_error": 1.281643245111269e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Hips",
+      "matrix_max_abs_error": 3.132130732552696e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 3.132130732552696e-08,
+      "normalized_axis_vector_max_error": 2.8259350728532003e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "Neck",
+      "matrix_max_abs_error": 8.926849459633956e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 4.4268020360505034e-08,
+      "normalized_axis_vector_max_error": 2.008782817916972e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_01_01",
+      "matrix_max_abs_error": 1.557660007645012e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.557660007645012e-07,
+      "normalized_axis_vector_max_error": 2.344447814908659e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_01_02",
+      "matrix_max_abs_error": 4.0424064096100665e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 4.0424064096100665e-08,
+      "normalized_axis_vector_max_error": 1.728123729814423e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_01_03",
+      "matrix_max_abs_error": 1.60956428185699e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.60956428185699e-07,
+      "normalized_axis_vector_max_error": 2.1194040661468573e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_01_04",
+      "matrix_max_abs_error": 9.074760720650943e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.074760720650943e-08,
+      "normalized_axis_vector_max_error": 2.5517831629100776e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_02_01",
+      "matrix_max_abs_error": 5.6740078857586695e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 3.655671121371995e-08,
+      "normalized_axis_vector_max_error": 1.2809689631796623e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_02_02",
+      "matrix_max_abs_error": 1.1661407595120465e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1661407595120465e-07,
+      "normalized_axis_vector_max_error": 2.3202360665586817e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_02_03",
+      "matrix_max_abs_error": 8.476641633059501e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 8.476641633059501e-08,
+      "normalized_axis_vector_max_error": 2.0762783365189043e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_02_04",
+      "matrix_max_abs_error": 1.4951545768138175e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 9.074760720650943e-08,
+      "normalized_axis_vector_max_error": 1.7331383963070556e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_03_01",
+      "matrix_max_abs_error": 5.053186036274582e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 3.655671121371995e-08,
+      "normalized_axis_vector_max_error": 1.0095753419530661e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_03_02",
+      "matrix_max_abs_error": 1.1195595939206271e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1195595939206271e-07,
+      "normalized_axis_vector_max_error": 9.046800662810192e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_03_03",
+      "matrix_max_abs_error": 5.417701764987015e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 1.5460346974860428e-08,
+      "normalized_axis_vector_max_error": 3.4726611568289784e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_03_04",
+      "matrix_max_abs_error": 9.074760720650943e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.074760720650943e-08,
+      "normalized_axis_vector_max_error": 1.2003157140787352e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_04_01",
+      "matrix_max_abs_error": 3.655671121371995e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 3.655671121371995e-08,
+      "normalized_axis_vector_max_error": 1.856882345661463e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_04_02",
+      "matrix_max_abs_error": 1.4339207032865176e-07,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 1.1661407595120465e-07,
+      "normalized_axis_vector_max_error": 2.5709386295872605e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_04_03",
+      "matrix_max_abs_error": 1.3357942096892117e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.904081818604464e-08,
+      "normalized_axis_vector_max_error": 1.5534735987700984e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_04_04",
+      "matrix_max_abs_error": 9.729696648363984e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 3.9068610624415356e-08,
+      "normalized_axis_vector_max_error": 3.414402005268501e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_05_01",
+      "matrix_max_abs_error": 1.557660007645012e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.557660007645012e-07,
+      "normalized_axis_vector_max_error": 9.089841648884983e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_05_02",
+      "matrix_max_abs_error": 1.3745015237098812e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 4.0424064096100665e-08,
+      "normalized_axis_vector_max_error": 2.4259857874381253e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_05_03",
+      "matrix_max_abs_error": 1.4380361901267236e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.4380361901267236e-07,
+      "normalized_axis_vector_max_error": 5.627621285165038e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_05_04",
+      "matrix_max_abs_error": 1.872062533880836e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 4.4221744766037574e-08,
+      "normalized_axis_vector_max_error": 2.0439506428403388e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_06_01",
+      "matrix_max_abs_error": 1.557660007645012e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.557660007645012e-07,
+      "normalized_axis_vector_max_error": 3.70497808219751e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_06_02",
+      "matrix_max_abs_error": 6.52296178182965e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 3.5765947759003325e-08,
+      "normalized_axis_vector_max_error": 1.8621277630934686e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_06_03",
+      "matrix_max_abs_error": 8.694328723635181e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 8.476641633059501e-08,
+      "normalized_axis_vector_max_error": 3.282850457132096e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_06_04",
+      "matrix_max_abs_error": 9.16635285452827e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 6.163241650369855e-08,
+      "normalized_axis_vector_max_error": 2.6667921321806407e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_07_01",
+      "matrix_max_abs_error": 1.557660007645012e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.557660007645012e-07,
+      "normalized_axis_vector_max_error": 8.201869860555093e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_07_02",
+      "matrix_max_abs_error": 3.5765947759003325e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 3.5765947759003325e-08,
+      "normalized_axis_vector_max_error": 1.742147296869904e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_07_03",
+      "matrix_max_abs_error": 8.476641633059501e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 8.476641633059501e-08,
+      "normalized_axis_vector_max_error": 1.2921798470107377e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_07_04",
+      "matrix_max_abs_error": 1.1550949174932157e-07,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 6.163241650369855e-08,
+      "normalized_axis_vector_max_error": 8.15543376825184e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_08_01",
+      "matrix_max_abs_error": 1.557660007645012e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.557660007645012e-07,
+      "normalized_axis_vector_max_error": 1.4586261108708856e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_08_02",
+      "matrix_max_abs_error": 1.1661407595120465e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1661407595120465e-07,
+      "normalized_axis_vector_max_error": 3.3244356576607935e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_08_03",
+      "matrix_max_abs_error": 1.631033628157752e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 8.476641633059501e-08,
+      "normalized_axis_vector_max_error": 3.791834028591614e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_DEF_08_04",
+      "matrix_max_abs_error": 9.074760720650943e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.074760720650943e-08,
+      "normalized_axis_vector_max_error": 2.3598478424151438e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "SK_Dress_Waist",
+      "matrix_max_abs_error": 3.3170733937382124e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 4.161427882842794e-09,
+      "normalized_axis_vector_max_error": 5.894710839240173e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "UpperChest",
+      "matrix_max_abs_error": 3.627813116580114e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 3.627813116580114e-08,
+      "normalized_axis_vector_max_error": 1.5392842867427536e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "breast.L",
+      "matrix_max_abs_error": 1.3588995084745648e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.3588995084745648e-07,
+      "normalized_axis_vector_max_error": 2.113367355786546e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "breast.R",
+      "matrix_max_abs_error": 1.3588995084745648e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.3588995084745648e-07,
+      "normalized_axis_vector_max_error": 1.0958412280257343e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "eye.L",
+      "matrix_max_abs_error": 7.856150374685456e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 7.856150374685456e-08,
+      "normalized_axis_vector_max_error": 9.186472595304713e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "eye.R",
+      "matrix_max_abs_error": 7.856150374685456e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 7.856150374685456e-08,
+      "normalized_axis_vector_max_error": 4.2497185297359594e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_index.01.L",
+      "matrix_max_abs_error": 1.302712628881153e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.302712628881153e-07,
+      "normalized_axis_vector_max_error": 2.904458090375157e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_index.01.R",
+      "matrix_max_abs_error": 1.4092230504747505e-07,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.302712628881153e-07,
+      "normalized_axis_vector_max_error": 1.3571134903058012e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_index.02.L",
+      "matrix_max_abs_error": 1.5925566465568863e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.5925566465568863e-07,
+      "normalized_axis_vector_max_error": 4.265577845535453e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_index.02.R",
+      "matrix_max_abs_error": 9.704937586896278e-08,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.704937586896278e-08,
+      "normalized_axis_vector_max_error": 8.104159307921316e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_index.03.L",
+      "matrix_max_abs_error": 8.10265461392845e-08,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 8.10265461392845e-08,
+      "normalized_axis_vector_max_error": 8.151490308054945e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_index.03.R",
+      "matrix_max_abs_error": 1.3567389489654857e-07,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 1.045242115083056e-07,
+      "normalized_axis_vector_max_error": 1.7114998420178003e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_middle.01.L",
+      "matrix_max_abs_error": 1.1954505352296252e-07,
+      "worst_component": [
+        0,
+        2
+      ],
+      "head_max_abs_error_armature_units": 7.26887223745365e-08,
+      "normalized_axis_vector_max_error": 7.735516740734883e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_middle.01.R",
+      "matrix_max_abs_error": 1.4887873400759588e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.4887873400759588e-07,
+      "normalized_axis_vector_max_error": 6.908259057992891e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_middle.02.L",
+      "matrix_max_abs_error": 1.7595245649371094e-07,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 7.04201175150132e-08,
+      "normalized_axis_vector_max_error": 1.4986806493328312e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_middle.02.R",
+      "matrix_max_abs_error": 5.819739334889107e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 5.819739334889107e-08,
+      "normalized_axis_vector_max_error": 6.56285007565313e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_middle.03.L",
+      "matrix_max_abs_error": 1.1690580770107317e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1690580770107317e-07,
+      "normalized_axis_vector_max_error": 5.8035282445647585e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_middle.03.R",
+      "matrix_max_abs_error": 1.517151804186767e-07,
+      "worst_component": [
+        0,
+        1
+      ],
+      "head_max_abs_error_armature_units": 4.764662264733488e-08,
+      "normalized_axis_vector_max_error": 1.2936683761815087e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_pinky.01.L",
+      "matrix_max_abs_error": 1.2599632126519822e-07,
+      "worst_component": [
+        0,
+        2
+      ],
+      "head_max_abs_error_armature_units": 8.828369102431566e-08,
+      "normalized_axis_vector_max_error": 9.769306675939111e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_pinky.01.R",
+      "matrix_max_abs_error": 1.6447370265737504e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.6447370265737504e-07,
+      "normalized_axis_vector_max_error": 1.0194200977405187e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_pinky.02.L",
+      "matrix_max_abs_error": 6.387529949414272e-08,
+      "worst_component": [
+        0,
+        2
+      ],
+      "head_max_abs_error_armature_units": 3.9613827329532114e-08,
+      "normalized_axis_vector_max_error": 4.9986255365138176e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_pinky.02.R",
+      "matrix_max_abs_error": 9.735941808308723e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.735941808308723e-08,
+      "normalized_axis_vector_max_error": 7.73910638503771e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_pinky.03.L",
+      "matrix_max_abs_error": 1.1095542484795828e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1095542484795828e-07,
+      "normalized_axis_vector_max_error": 7.227258978633993e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_pinky.03.R",
+      "matrix_max_abs_error": 1.2075194355531949e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.2075194355531949e-07,
+      "normalized_axis_vector_max_error": 4.491701862153496e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_ring.01.L",
+      "matrix_max_abs_error": 1.2266683735440154e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.2266683735440154e-07,
+      "normalized_axis_vector_max_error": 1.1280204677322524e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_ring.01.R",
+      "matrix_max_abs_error": 1.9885684920950553e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.9885684920950553e-07,
+      "normalized_axis_vector_max_error": 8.247628209741654e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_ring.02.L",
+      "matrix_max_abs_error": 1.5314154155898763e-07,
+      "worst_component": [
+        0,
+        1
+      ],
+      "head_max_abs_error_armature_units": 3.682722615749867e-08,
+      "normalized_axis_vector_max_error": 1.0948849885293327e-07,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_ring.02.R",
+      "matrix_max_abs_error": 1.6631669896849388e-07,
+      "worst_component": [
+        0,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.3934975107154912e-07,
+      "normalized_axis_vector_max_error": 6.689903065744394e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_ring.03.L",
+      "matrix_max_abs_error": 1.507022936442226e-07,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.308943990974143e-07,
+      "normalized_axis_vector_max_error": 9.933038033960803e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "f_ring.03.R",
+      "matrix_max_abs_error": 9.759781705032111e-08,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.759781705032111e-08,
+      "normalized_axis_vector_max_error": 3.069838009710678e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "foot.L",
+      "matrix_max_abs_error": 9.66061107776639e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 6.88098528052461e-08,
+      "normalized_axis_vector_max_error": 3.7120830254917686e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "foot.R",
+      "matrix_max_abs_error": 6.360035231800509e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 5.222448578798278e-08,
+      "normalized_axis_vector_max_error": 6.452551824327754e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "forearm.L",
+      "matrix_max_abs_error": 1.1155412887875471e-07,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.1155412887875471e-07,
+      "normalized_axis_vector_max_error": 5.681149924439226e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "forearm.R",
+      "matrix_max_abs_error": 1.330637677821045e-07,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 1.330637677821045e-07,
+      "normalized_axis_vector_max_error": 2.196837069433829e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "hand.L",
+      "matrix_max_abs_error": 2.510114356368831e-07,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 2.510114356368831e-07,
+      "normalized_axis_vector_max_error": 1.193919138667524e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "hand.R",
+      "matrix_max_abs_error": 5.970862193560578e-08,
+      "worst_component": [
+        0,
+        2
+      ],
+      "head_max_abs_error_armature_units": 5.3748611561488246e-08,
+      "normalized_axis_vector_max_error": 3.209638798763442e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "shin.L",
+      "matrix_max_abs_error": 1.305665550122015e-07,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 5.700376370931792e-08,
+      "normalized_axis_vector_max_error": 3.544571596116019e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "shin.R",
+      "matrix_max_abs_error": 1.2854445075038967e-07,
+      "worst_component": [
+        0,
+        2
+      ],
+      "head_max_abs_error_armature_units": 5.2356982194190493e-08,
+      "normalized_axis_vector_max_error": 3.057156910882783e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "shoulder.L",
+      "matrix_max_abs_error": 7.77886872693756e-08,
+      "worst_component": [
+        2,
+        3
+      ],
+      "head_max_abs_error_armature_units": 7.77886872693756e-08,
+      "normalized_axis_vector_max_error": 1.3439731838223353e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "shoulder.R",
+      "matrix_max_abs_error": 9.272230039325535e-08,
+      "worst_component": [
+        2,
+        2
+      ],
+      "head_max_abs_error_armature_units": 7.77886872693756e-08,
+      "normalized_axis_vector_max_error": 2.419105884304796e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "spine",
+      "matrix_max_abs_error": 4.610985393505018e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 1.061881738095849e-08,
+      "normalized_axis_vector_max_error": 5.730397074562582e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thigh.L",
+      "matrix_max_abs_error": 4.364691874592097e-08,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 2.0722326521394052e-08,
+      "normalized_axis_vector_max_error": 6.35966839891202e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thigh.R",
+      "matrix_max_abs_error": 6.023228571461203e-08,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 2.0722326521394052e-08,
+      "normalized_axis_vector_max_error": 9.57182236842146e-09,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thumb.01.L",
+      "matrix_max_abs_error": 1.268767116924252e-07,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 9.509401022178565e-08,
+      "normalized_axis_vector_max_error": 7.127364083960196e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thumb.01.R",
+      "matrix_max_abs_error": 9.812518664276126e-08,
+      "worst_component": [
+        0,
+        3
+      ],
+      "head_max_abs_error_armature_units": 9.812518664276126e-08,
+      "normalized_axis_vector_max_error": 5.421909099132324e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thumb.02.L",
+      "matrix_max_abs_error": 9.840696379992409e-08,
+      "worst_component": [
+        1,
+        2
+      ],
+      "head_max_abs_error_armature_units": 8.686623065301546e-08,
+      "normalized_axis_vector_max_error": 8.745253732161053e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thumb.02.R",
+      "matrix_max_abs_error": 1.5775566231113203e-07,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 6.551379283514791e-08,
+      "normalized_axis_vector_max_error": 6.91701009676437e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thumb.03.L",
+      "matrix_max_abs_error": 9.914243304098846e-08,
+      "worst_component": [
+        2,
+        1
+      ],
+      "head_max_abs_error_armature_units": 5.5931658637931037e-08,
+      "normalized_axis_vector_max_error": 4.122344162358804e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "thumb.03.R",
+      "matrix_max_abs_error": 8.964124265098405e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 8.224953631629645e-08,
+      "normalized_axis_vector_max_error": 5.096095137391405e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "toe.L",
+      "matrix_max_abs_error": 3.6313880014127164e-08,
+      "worst_component": [
+        0,
+        0
+      ],
+      "head_max_abs_error_armature_units": 4.107877121795056e-09,
+      "normalized_axis_vector_max_error": 2.853590364390206e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "toe.R",
+      "matrix_max_abs_error": 1.5238002348816337e-07,
+      "worst_component": [
+        1,
+        1
+      ],
+      "head_max_abs_error_armature_units": 8.720113200966217e-09,
+      "normalized_axis_vector_max_error": 4.286192364666076e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "upper_arm.L",
+      "matrix_max_abs_error": 6.547978770310436e-08,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 3.580416696458144e-08,
+      "normalized_axis_vector_max_error": 4.902363211562517e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    },
+    {
+      "bone": "upper_arm.R",
+      "matrix_max_abs_error": 6.547978770310436e-08,
+      "worst_component": [
+        1,
+        0
+      ],
+      "head_max_abs_error_armature_units": 3.580416696458144e-08,
+      "normalized_axis_vector_max_error": 2.032575687997741e-08,
+      "cluster_pose_matrix_max_abs_error": 0.0
+    }
+  ],
+  "reproduction": {
+    "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+    "argv": [
+      "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\static_bind_diagnostic_20261006\\compare_existing_static_bind.py",
+      "--export-report",
+      "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\actual_export_51_20261006_043154_764\\result\\surface_export.json",
+      "--source-export-report",
+      "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\actual_export_51_20261006_035935_884\\result\\surface_export.json",
+      "--source-rest-report",
+      "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\actual_rest_51_20261006_042142_958\\static_rest_roundtrip.json",
+      "--parser-file",
+      "D:\\Blender5.1\\5.1\\scripts\\addons_core\\io_scene_fbx\\parse_fbx.py",
+      "--output",
+      "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\static_bind_diagnostic_20261006\\serialized_static_bind.json"
+    ]
+  }
+}

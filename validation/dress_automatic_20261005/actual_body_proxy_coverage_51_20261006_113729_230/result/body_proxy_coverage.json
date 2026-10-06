@@ -1,0 +1,2538 @@
+{
+  "prepared_only_source": true,
+  "native_collection_completed": true,
+  "production_effect_accepted": false,
+  "artist_saved": false,
+  "samples": [
+    {
+      "label": "initial",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_body_proxy_coverage_51_20261006_113729_230\\result\\initial_native.json",
+      "sha256": "7446e886be4993323d21f7c227c917104e9417f2e5799c6805c5f2d8da5bf86c",
+      "coverage_summary": {
+        "strict_crossing_pairs": 0,
+        "unique_crossing_body_triangles": 0,
+        "witness_triangles_retained": 0,
+        "witness_limit": 64,
+        "bounded_witness_inventory_complete": true,
+        "native_weight_identity_complete": true,
+        "outside_all_proxy_witness_triangles": 0,
+        "single_proxy_strict_core_triangles": 0,
+        "split_union_unknown_triangles": 0,
+        "unknown_triangles": 0,
+        "unresolved_crossing_categories": [],
+        "whole_body_coverage_accepted": false,
+        "body_inside_outside_proven": false,
+        "production_effect_accepted": false
+      },
+      "frame": 1,
+      "native_topology_sha256": {
+        "Body": "0c34f67d45df0707fecb5b93fff32abf1db83e12936aaaba554f6197b709eea1",
+        "O3040": "bdcecf40835ef3ecf87a6e8e52c681d62182c91d64ebdac6d27cf5b10a141b9e",
+        "CD Collider Pelvis · Dress": "7726a12b435d830e5f2c41c0241db57b1b25434898a8c899441b3c22f94c0367",
+        "CD Collider Thigh.L · Dress": "7726a12b435d830e5f2c41c0241db57b1b25434898a8c899441b3c22f94c0367",
+        "CD Collider Thigh.R · Dress": "7726a12b435d830e5f2c41c0241db57b1b25434898a8c899441b3c22f94c0367"
+      }
+    },
+    {
+      "label": "left_thigh_0_55_same_frame",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_body_proxy_coverage_51_20261006_113729_230\\result\\left_thigh_0_55_same_frame_native.json",
+      "sha256": "71fe39195c5f83b3f40cd12cc0b90adc987fb397129447e64df3357db67b8ecd",
+      "coverage_summary": {
+        "strict_crossing_pairs": 148,
+        "unique_crossing_body_triangles": 39,
+        "witness_triangles_retained": 39,
+        "witness_limit": 64,
+        "bounded_witness_inventory_complete": true,
+        "native_weight_identity_complete": true,
+        "outside_all_proxy_witness_triangles": 39,
+        "single_proxy_strict_core_triangles": 0,
+        "split_union_unknown_triangles": 0,
+        "unknown_triangles": 0,
+        "unresolved_crossing_categories": [],
+        "whole_body_coverage_accepted": false,
+        "body_inside_outside_proven": false,
+        "production_effect_accepted": false
+      },
+      "frame": 1,
+      "native_topology_sha256": {
+        "Body": "0c34f67d45df0707fecb5b93fff32abf1db83e12936aaaba554f6197b709eea1",
+        "O3040": "bdcecf40835ef3ecf87a6e8e52c681d62182c91d64ebdac6d27cf5b10a141b9e",
+        "CD Collider Pelvis · Dress": "7726a12b435d830e5f2c41c0241db57b1b25434898a8c899441b3c22f94c0367",
+        "CD Collider Thigh.L · Dress": "7726a12b435d830e5f2c41c0241db57b1b25434898a8c899441b3c22f94c0367",
+        "CD Collider Thigh.R · Dress": "7726a12b435d830e5f2c41c0241db57b1b25434898a8c899441b3c22f94c0367"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "sealed_install_input_and_explicit_runtime",
+      "passed": true,
+      "input_sha256": "7acb26009d56c4f066163055a3cb92b6b779772a3a51b289015b4133ebae788f",
+      "surface_sha256": "3905846f751659a6970cc80b70118201eaea068a657c69cd764b789e893b127b",
+      "worker_sha256": "069fb0f21b02e36a23dd02b1978d2a917c2873f290fc3331cdf0d55e877ce5bc",
+      "changed_modules": 1
+    }
+  ],
+  "pins": {
+    "verify_actual_surface_workflow.py": "2e8d82bbbde00604bf3f62bc17cbcb31244ed87290e083ebb17b25f4b9216140",
+    "verify_actual_same_frame_pose.py": "812841f31309bea8ee923dd8299c0240ec1576d2ed4842ba46793c854d1830ff",
+    "validate_real_dress.py": "613e9d32f3674f1e01d98725a99d1dd70911d22af1526f36a43f442c47649046",
+    "diagnose_skin_transfer.py": "9ad85213c41c62393b34cd5f5a45f0508bbef2ccfdf3a520f92dcf0e836f6a28",
+    "prototype_native_dress_overlay.py": "574c121fa2b7adf2892ceec032ab5629254b2f846818bdd677c6d94e2400c909",
+    "prototype_final_surface_clearance.py": "6280862bd2b7602dd1252a2c959202f394c9ce9498d41c2b9f47e4dc83e2767b"
+  },
+  "input_before": {
+    "bytes": 32429130,
+    "mtime_ns": 1791227536676237600,
+    "sha256": "7acb26009d56c4f066163055a3cb92b6b779772a3a51b289015b4133ebae788f"
+  },
+  "artist_before": {
+    "bytes": 32254503,
+    "mtime_ns": 1791219193945046100,
+    "sha256": "2b36fb936082cbe7a81dd29e1dba22b9f9fbefa935015bfb29cc37b5b496ca9a"
+  },
+  "source_manifest_before": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\diagnose_skin_transfer.py": {
+      "bytes": 47437,
+      "mtime_ns": 1791147999031463700,
+      "sha256": "9ad85213c41c62393b34cd5f5a45f0508bbef2ccfdf3a520f92dcf0e836f6a28"
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\validate_real_dress.py": {
+      "bytes": 70439,
+      "mtime_ns": 1791145201950305500,
+      "sha256": "613e9d32f3674f1e01d98725a99d1dd70911d22af1526f36a43f442c47649046"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py": {
+      "bytes": 354767,
+      "mtime_ns": 1791203608516646500,
+      "sha256": "f67a2febe180e03bc77e402ce44968540ac523983cde5546eff6c6b60b66d0ce"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation.py": {
+      "bytes": 37751,
+      "mtime_ns": 1791209758850152400,
+      "sha256": "5e6bb8c2a732094b9dbc1411a4fa207556c811e31e2ca24115fe7480d941bacf"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py": {
+      "bytes": 10793,
+      "mtime_ns": 1791225904394833100,
+      "sha256": "d1aa935284226793d8f66eaf9c097c1e5ab18b7a59c4f7bac9eca2128bde03ce"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py": {
+      "bytes": 27880,
+      "mtime_ns": 1791225846240391800,
+      "sha256": "d4cc236e0199a9799311e6258098ed58853cabb3ccd8054a8a34f3734c300a23"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py": {
+      "bytes": 18441,
+      "mtime_ns": 1790805836068686100,
+      "sha256": "e1249f17e14596fce6c977fdc460dc77d837418ff1a339c27f7710952145dc23"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py": {
+      "bytes": 11433,
+      "mtime_ns": 1791205005853298100,
+      "sha256": "51f7a7c7a21b8a1202dd27443bc251c0144427b845c3bc2e25f58ec77e2ac630"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_retarget.py": {
+      "bytes": 23160,
+      "mtime_ns": 1788855231575637600,
+      "sha256": "f98f84c2bcec2402586c5704fd531de23069465f7adf26524eb201c6811bd28c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_runtime.py": {
+      "bytes": 4912,
+      "mtime_ns": 1788854513957934000,
+      "sha256": "1a42593c14bb61e33de16c25b3dc107dcf9ef65ef1034b5ea248f4e35a28a59d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py": {
+      "bytes": 25291,
+      "mtime_ns": 1791207782325423000,
+      "sha256": "4350d5f1f01afa7e3fb032e34954ddf060a629367d8283c807d80842633ec93a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py": {
+      "bytes": 16191,
+      "mtime_ns": 1791226522754245400,
+      "sha256": "c2b0d0ae0c969bece33106ec481c862f175f1df29abc6434e749f7afbafebac6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_fingerprint.py": {
+      "bytes": 32212,
+      "mtime_ns": 1791207211079898300,
+      "sha256": "74a49632682def0ec598cb819018d67f217a032bd4253d8a88af50cbf7d63193"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_queue.py": {
+      "bytes": 8653,
+      "mtime_ns": 1791202092699619300,
+      "sha256": "12f936ac57ce6981d8988932cf4f05a2cdfdc8567b7d5842b92a79069187650b"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py": {
+      "bytes": 31100,
+      "mtime_ns": 1791210348219983900,
+      "sha256": "394e6e2442953fc109cac2654de0ad800a1e234a864e0bd0dfff89caad661fd8"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_workspace.py": {
+      "bytes": 7702,
+      "mtime_ns": 1790842487098136700,
+      "sha256": "7a8209ff276142668d3d94053a91c0ff4a45af36517e787c31d35c02f5a31b60"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ATTRIBUTION.md": {
+      "bytes": 1185,
+      "mtime_ns": 1788938984960950800,
+      "sha256": "97ec7c9849e1deb302527a172de5ff0c833b600f0099ea6d7ffd05133134cb3a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration.py": {
+      "bytes": 38907,
+      "mtime_ns": 1790960991379708300,
+      "sha256": "8310159a27ccd0d501161fbf4aa24dd0cf57f1fec3e761be6e13094f713552e0"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_display.py": {
+      "bytes": 9373,
+      "mtime_ns": 1790518412123486100,
+      "sha256": "bc96daee9eac162de5aa2912f94aa8b9393e80f8ffce10c24001d705c6c6be7c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_hands.py": {
+      "bytes": 7419,
+      "mtime_ns": 1790522728155587900,
+      "sha256": "cd2dd840a5b9944763efb84ed9e806909bd0b13abc93b2e1b02990368e121f2a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_math.py": {
+      "bytes": 6101,
+      "mtime_ns": 1790490291574295300,
+      "sha256": "6db2702e866ce955b3501a505e4525df3e74f8c00885c733b0d562bae627308e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_overlay.py": {
+      "bytes": 11337,
+      "mtime_ns": 1790520791366717400,
+      "sha256": "05b700219ad7f5ce17e4fdee386a9da78ef590f8439b038b4736b108a2957dac"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_ui.py": {
+      "bytes": 15886,
+      "mtime_ns": 1790524228024790900,
+      "sha256": "821cc624c90ae1a2db85835ec2c25473fda42abcbd777c7e92f50c61e7928613"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_controls_ui.py": {
+      "bytes": 18835,
+      "mtime_ns": 1790935700381779900,
+      "sha256": "4f7a8c3b5ff181be6b3828d5ad603de353b2313aff00245cce13ef7eb7bb0458"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_detail_visuals.py": {
+      "bytes": 25615,
+      "mtime_ns": 1791026096463051600,
+      "sha256": "ce2466388ca1d49c6fda435a600bc5513e296485b097b4c0675405110d35b87d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_original_mode.py": {
+      "bytes": 33689,
+      "mtime_ns": 1791078389442081300,
+      "sha256": "d2d8e122c77a56ef314893470a197107462235aff159a05254fa7146e1e8b661"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_rest_resync.py": {
+      "bytes": 24055,
+      "mtime_ns": 1791049997957730800,
+      "sha256": "41d048dbb8892d8d1baea2f90d3335a7dc29ebb3124e9b220be6048687301c03"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup.py": {
+      "bytes": 11106,
+      "mtime_ns": 1790960991381260400,
+      "sha256": "ed7f1b4ece2aadb6a07b0d99aa50dc03e44232ed38fe7ed1b072918283dcbfbb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_plan.py": {
+      "bytes": 19446,
+      "mtime_ns": 1791058342390631300,
+      "sha256": "85f29265e648ea047c060e7314d0bc307c8ad2aa7b279799f5f0e9b16e9c9916"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_removal.py": {
+      "bytes": 20642,
+      "mtime_ns": 1790492148806971000,
+      "sha256": "53d4c1485c8b70918cd887689c5762b7cd0e6563565dcd65e88c65b2a902da0d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_transaction.py": {
+      "bytes": 28073,
+      "mtime_ns": 1790524801134519600,
+      "sha256": "13d5b4c489d6ead3d9b40d8468d9019f8422ba37f35328917decc755a231f4a3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_ui.py": {
+      "bytes": 5717,
+      "mtime_ns": 1790528287089078000,
+      "sha256": "bc3bcd8ed76449063c2649801777bf5908228cf46e78b21540f008254582051f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py": {
+      "bytes": 46880,
+      "mtime_ns": 1791067369835849100,
+      "sha256": "aa92d856cbbd5df88f05fd700c7ba03c845d25b5941efcf5f23f46138d70a6c5"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_color_palette.py": {
+      "bytes": 38012,
+      "mtime_ns": 1791029630616898700,
+      "sha256": "c0fb02f35bd9f1eaaf75307bad71d537180c82ad7f1b52e43ca1d75359e0629d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_display.py": {
+      "bytes": 24898,
+      "mtime_ns": 1791066474871388900,
+      "sha256": "733adce1dd9d10cf41d0fb4916ed1b54337f83f8c0b1bf7cd8a000f6fcc9ab13"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_display_sync.py": {
+      "bytes": 2798,
+      "mtime_ns": 1790935667602810000,
+      "sha256": "79c2f3c09978944a3f1cd2d4b4303ff9f9abda75848248222f44cffa4487a3a9"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\character_setup.py": {
+      "bytes": 23817,
+      "mtime_ns": 1790881298381573800,
+      "sha256": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_colors.py": {
+      "bytes": 10653,
+      "mtime_ns": 1791025634383357400,
+      "sha256": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_pose_assets.py": {
+      "bytes": 27742,
+      "mtime_ns": 1791054332348239300,
+      "sha256": "6aa7071c4c1bdf6b80a2906cf88e58f41cf6320b927cc07467805f7592b6fb2f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_pose_mirror.py": {
+      "bytes": 4580,
+      "mtime_ns": 1790566752321384300,
+      "sha256": "f2cff99f0066872efe8c47018d3706c3ac62b76ebf06709258feb086a9e7bf41"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_weight_paint.py": {
+      "bytes": 11275,
+      "mtime_ns": 1790960750803193300,
+      "sha256": "339a5ade54c73892e7a5aa02da1a38e562b107610cfc1a8620edd1b00fcc1eda"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\curve_tools.py": {
+      "bytes": 5360,
+      "mtime_ns": 1790532177697958500,
+      "sha256": "ed25cb3c8b230c6a6cf1a0799f5875ee73dc711b5f32f818eae858f5e0c0335a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\delta_symmetry.py": {
+      "bytes": 72147,
+      "mtime_ns": 1790560761535310100,
+      "sha256": "73ec541ad3d727965d7585d9ba77b56b0e91be80f3197892b0b0740a8b5bb282"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py": {
+      "bytes": 12750,
+      "mtime_ns": 1791226915820904800,
+      "sha256": "fc6e5f39eef17e69e654a596e6642540d6ac0d21dc5258879e25b9175bcce0aa"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_controls.py": {
+      "bytes": 30061,
+      "mtime_ns": 1791045992486385800,
+      "sha256": "8be7a0247417b5e86b30e5ae49724863167e282b22bf1ebb899916076af61521"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_ui.py": {
+      "bytes": 5244,
+      "mtime_ns": 1789242100102083100,
+      "sha256": "346f3c4a6f7067844124ab5d5891bfe84493f6c5e91523648c8f5a904da13001"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bank.py": {
+      "bytes": 48222,
+      "mtime_ns": 1790036190526534300,
+      "sha256": "3f8e5e452c50bd87b61500ec337913c0d909d4168d2830d5defbdd2206774c92"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bank_ui.py": {
+      "bytes": 10106,
+      "mtime_ns": 1790039269504374900,
+      "sha256": "9f6033db46f68e8e214d9f9836c63773b36bdb56efeacb16088ea10a6f3fece2"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bone_mirror.py": {
+      "bytes": 8785,
+      "mtime_ns": 1790040236625006200,
+      "sha256": "3956599bac6762f5088d6a92dd7465ec65b63d938f414272c9e8a1458b314fc3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bone_tools.py": {
+      "bytes": 18684,
+      "mtime_ns": 1790039589520901300,
+      "sha256": "8f9a8d95511a4b8714b6e20645e07da49fba161be56ac574c35fc81dcb193b8a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bones.py": {
+      "bytes": 23389,
+      "mtime_ns": 1790490291575296400,
+      "sha256": "fd8f4e7e78364c789f2f8fbaf7fb72c2035e79f3f04ba9a7e152402f151a4613"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_chain.py": {
+      "bytes": 21663,
+      "mtime_ns": 1790035643593921100,
+      "sha256": "ffc27af7094d5c91f6be86ae365e52ec541587cd2e15dd81fc79367dc3228d6f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_definition.py": {
+      "bytes": 29863,
+      "mtime_ns": 1790036190529054500,
+      "sha256": "a0ab9878dbfda35bf4db22d2af422b07b6b4830c809c53b392f51e71974365f6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_definition_ui.py": {
+      "bytes": 22647,
+      "mtime_ns": 1790036190530578900,
+      "sha256": "627435ee5bbe804b7cae3261533c9c5b64647c2a1b2e78800c78291b27c0c4d7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_detect.py": {
+      "bytes": 8558,
+      "mtime_ns": 1789849943633812200,
+      "sha256": "a984c6524b4478ef1ac53247a58df81b452d338263c1d0d9b3a3208e1071171a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_flex.py": {
+      "bytes": 23192,
+      "mtime_ns": 1789867050006785900,
+      "sha256": "ec4fdc0016b98bcc2ccd909124ddfe1de68259df77f51191faa6896741d88371"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_internal.py": {
+      "bytes": 14050,
+      "mtime_ns": 1789870246823992200,
+      "sha256": "41d6ca40522608da8931153e65f511a0b25014901529e252126bdbca69e67b40"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_loop_marks.py": {
+      "bytes": 33653,
+      "mtime_ns": 1790126344444112500,
+      "sha256": "5b7938a05dd988da93f084284634716e41dc6cac486fc8f914c4cd763a8c851d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_loop_marks_ui.py": {
+      "bytes": 9091,
+      "mtime_ns": 1790035979958672200,
+      "sha256": "1c6af2c6c2eb60e953a5035fc7e2e5dfad2b8d3fc6f2194dfa86eb15c7f61f45"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_mirror_sync.py": {
+      "bytes": 8920,
+      "mtime_ns": 1790039373244565400,
+      "sha256": "296caca0ef8eb790a7929e6264ee35f54fbed0c7e15404521008f866450a71d3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_preview_cache.py": {
+      "bytes": 3261,
+      "mtime_ns": 1790034142147052900,
+      "sha256": "5a8646babddf10a7af64e8beb9ef07fe6af079dafd11b358ae3f6edfd3379d4f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_range.py": {
+      "bytes": 12119,
+      "mtime_ns": 1789988073063067700,
+      "sha256": "d00ab689a67c02d9bc2e186583f92f298ce0b7a3ce200a444d44a7910e7e0a5d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_root.py": {
+      "bytes": 26890,
+      "mtime_ns": 1789998635705059400,
+      "sha256": "1414ca6cb5424e1721220a62007bb3516af43fdeb77b1c27577ee589d786f83e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_symmetry.py": {
+      "bytes": 3448,
+      "mtime_ns": 1789828997540523000,
+      "sha256": "afdac9c0d905adf6d7d0e682dadbed8d1f4f75b4dabca87aa0a079c64cea834a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_targets.py": {
+      "bytes": 17502,
+      "mtime_ns": 1790039079513067700,
+      "sha256": "49d235e618bde9cac87231cd92e5b033391087d39e7938976bef503063582785"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\foot_controls.py": {
+      "bytes": 66640,
+      "mtime_ns": 1791045992482868600,
+      "sha256": "f949f24175ae70d537bfe74bb6be5c0ea3abe72f62c55b842cedb553b6eeb2c3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_original_inventory.py": {
+      "bytes": 4567,
+      "mtime_ns": 1791049112335664000,
+      "sha256": "28a86885c5cba5579cd054a41d27933787f33ec0d19cf452f4a858da4ca069ac"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py": {
+      "bytes": 92915,
+      "mtime_ns": 1791054212827831000,
+      "sha256": "fc2fbf6ff1b1bfa23b4dba5bd8e16e09e73ca33ab545735cddc929c11ebf85c6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_cache.py": {
+      "bytes": 3879,
+      "mtime_ns": 1790944194279600100,
+      "sha256": "963ba3c447ed691a2a76f9ca6249cedb3cb57b7276033109f286acefdc3288ce"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_edit.py": {
+      "bytes": 21056,
+      "mtime_ns": 1790521338003140300,
+      "sha256": "23b794256a6760c20747cc86cabb83a4db6abb20cba6842c6a09a383fde716e5"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py": {
+      "bytes": 10357,
+      "mtime_ns": 1788827548326242300,
+      "sha256": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_profile.py": {
+      "bytes": 10032,
+      "mtime_ns": 1790518554047572000,
+      "sha256": "71f9c61af778bb26bddbb23ef334a8dd1a39928a84c5e8fea3145ffc5d1ff947"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_symmetry.py": {
+      "bytes": 10021,
+      "mtime_ns": 1788827548329745400,
+      "sha256": "620c7b85ca2352caa5d0391162657ff1f5564d1d57ed0cd6ff34f8105703b6f3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_topology.py": {
+      "bytes": 20895,
+      "mtime_ns": 1790519328064288300,
+      "sha256": "01a7fb1a13451971b58ae49ffe1295a25c8344d9726fd3606825a063a2274f18"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\generated_names.py": {
+      "bytes": 14171,
+      "mtime_ns": 1791039187040307300,
+      "sha256": "a1c49790c61c31e915de15b1a4baa76c75be2b490a6d771eca179921fda4d931"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones.py": {
+      "bytes": 14180,
+      "mtime_ns": 1790567999246457400,
+      "sha256": "bb0c1e43ac592ac0e7b59df42411cf19ed4ed5f650851fdd7b6eef4f3fd60852"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_binding.py": {
+      "bytes": 41867,
+      "mtime_ns": 1791087333275842600,
+      "sha256": "758ecb71bc8503f435251f2f3cdc7a0e8f70d175ef4b1921d53bdc825b58cf84"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_groups.py": {
+      "bytes": 20773,
+      "mtime_ns": 1791087117322780900,
+      "sha256": "ab025f084ec6a95f2ec976981577f7f8c373d3c8b99e1252330cb43edeaf4109"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_mirror.py": {
+      "bytes": 8227,
+      "mtime_ns": 1788845991466022300,
+      "sha256": "6bc3dd91faeefb73f5d30608dab28a54f057596bf4b62607d4ae449c5cb473cc"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_rig.py": {
+      "bytes": 46823,
+      "mtime_ns": 1791087072077166100,
+      "sha256": "e0fed1d3c6fbdedb4cf8254f265f0f570323fbc74491ed8b90629147274564fe"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_topology.py": {
+      "bytes": 26954,
+      "mtime_ns": 1790565605093791200,
+      "sha256": "8973b7fbdd709641bc1272c49b750dbdce571141ba640ebf137a4f189520228a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_variants.py": {
+      "bytes": 24029,
+      "mtime_ns": 1788846742000887600,
+      "sha256": "aa985d12e5a5235a1f964b3ed1b74c55074acb4729443a339f15e62fb5b2921c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_export.py": {
+      "bytes": 28262,
+      "mtime_ns": 1791085163100516100,
+      "sha256": "c7d9396e5d3531c9ccc3bc79777a8183357c11125d8032cc3af43c35b3f91bcb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_lifecycle.py": {
+      "bytes": 13848,
+      "mtime_ns": 1791088088057009400,
+      "sha256": "efade4de4db2a3ea4c6568837f80b7f93d132eb3268c4dee4996a6a66914abc8"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_profiles.py": {
+      "bytes": 18664,
+      "mtime_ns": 1791087069397095300,
+      "sha256": "1aaa883693db6bfd53d9459b24f14f98d5afb9247ee0abd51e59af5bce83cc4d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_ui.py": {
+      "bytes": 20846,
+      "mtime_ns": 1791107478341119700,
+      "sha256": "4ea527ddcfb53f9f4c3cee187227f7403b28b1753f574a3e599bc7605a3daf16"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_strand_registry.py": {
+      "bytes": 37666,
+      "mtime_ns": 1791085545157138600,
+      "sha256": "a6c6a03e8f4eebeff9349bc44fb0474e4df2d3feb4d5c5a6e7fb4c609239fe2d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_wiggle_adapter.py": {
+      "bytes": 36489,
+      "mtime_ns": 1791084933614578600,
+      "sha256": "318f160c97495fa8d295d4f5c8dd1374da44de6571f1289234acc6570bab36fa"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\head_neck_visuals.py": {
+      "bytes": 21608,
+      "mtime_ns": 1791026096464653100,
+      "sha256": "443535a0d1e052b44cfbd53ffae49b628958b00c418ca8ead8ca2390a1c77caf"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_fk_visuals.py": {
+      "bytes": 25021,
+      "mtime_ns": 1791066474929713900,
+      "sha256": "228fbdcc2bd8226a9e2d871a25aff8d86df558098b2dcebba28c7a6ffbd405d6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py": {
+      "bytes": 448738,
+      "mtime_ns": 1791067800109605600,
+      "sha256": "4b98aed6d182bccb322c8166b81e406433d3648f7b5c6cfe79a7d1419aff2385"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py": {
+      "bytes": 47377,
+      "mtime_ns": 1791079212770841400,
+      "sha256": "d98c3cc57093b14156fc41eccd929d608aebca163945e88fbd61d7213c8578a2"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk_batch.py": {
+      "bytes": 18494,
+      "mtime_ns": 1791067369836847400,
+      "sha256": "4e55f888471ffeb13aa69fe6d444772e08fdbe36c04ca51d48e2ee7deb671669"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_copy.py": {
+      "bytes": 1781,
+      "mtime_ns": 1791185013298475800,
+      "sha256": "a43aabff39a1ed9525df53352b859943a5571edeb30405d34338a5bebf264150"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_mirror.py": {
+      "bytes": 38587,
+      "mtime_ns": 1790350360449871800,
+      "sha256": "8af288a9a72612a13a3e335397fd1e733173f5632dcc0788eaf384fdd3ef0977"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_mirror_match.py": {
+      "bytes": 8573,
+      "mtime_ns": 1789817627145069200,
+      "sha256": "36cdab15d711cb050a2f595b41419856fab6ac97fb3ba2e48b5de651481bcee5"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_mirror_ui.py": {
+      "bytes": 19133,
+      "mtime_ns": 1790858211306798100,
+      "sha256": "76c61eacc8823e2f5f0d26a7833dc17afc27cf0e13bb9fcfaabb11c89e1f1d49"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\native_symmetry_pairs.py": {
+      "bytes": 9026,
+      "mtime_ns": 1790931569411534000,
+      "sha256": "afcd0c270be48d24f9aef910720dce761d910f76ce2651176d633fd6614f98ec"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\quick_bind.py": {
+      "bytes": 28641,
+      "mtime_ns": 1790569107967328100,
+      "sha256": "6579f51d5f49612ecf28eef89b034f4f8bae22d4c61987edb2db4920d3ea976c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\quick_bind_parenting.py": {
+      "bytes": 10513,
+      "mtime_ns": 1790569193261125600,
+      "sha256": "8ee81ec458893cb7637d1179ee0f09855daf69f7f365c76e625a1a22b2f50708"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\README.md": {
+      "bytes": 170160,
+      "mtime_ns": 1791137730101793600,
+      "sha256": "3f8b2b006da7a60bf2f4199457e7d5feac7e571872b77a675eca2193be5a407d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\reference_views.py": {
+      "bytes": 58190,
+      "mtime_ns": 1790560761537557700,
+      "sha256": "abe79849f92e0a5ed86812bedc323aa2d71b830af4807a075c683322a86e94e8"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\refine_symmetry.py": {
+      "bytes": 20520,
+      "mtime_ns": 1790932758582778300,
+      "sha256": "46c6f90fd7d0e3c97924f9b4dc111dcf18d4c82799443d4873609fc3df397a7f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\refine_symmetry_ui.py": {
+      "bytes": 18255,
+      "mtime_ns": 1790932735926010000,
+      "sha256": "2cea4f60360e07c2f4c313e6234cd28075e224851df57cccf590e71d6f1cfd42"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\root_control.py": {
+      "bytes": 32384,
+      "mtime_ns": 1791045992487892600,
+      "sha256": "243b62967ee08c61657886ed5cab74ca257b75a13bd6b8dad794e9483560e6af"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\selected_bone_weights.py": {
+      "bytes": 54351,
+      "mtime_ns": 1790961249802580400,
+      "sha256": "0f9e3d1498a4414d00c49e9903a9d6b31707260ff1eaf23850dea915c028248a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\shape_key_tools.py": {
+      "bytes": 17705,
+      "mtime_ns": 1790560761532276700,
+      "sha256": "366a6de1fe55ea5f1d46c57e1227c4f6f250705214869dd64ac7a05639ba8811"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt.py": {
+      "bytes": 48027,
+      "mtime_ns": 1791225189643051100,
+      "sha256": "07f148f4db4791cce14091fb6d56f9a94b811a972595921213d3ea0986c69f46"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py": {
+      "bytes": 9342,
+      "mtime_ns": 1791176267300537100,
+      "sha256": "be77e6f1fdcd6819ee46a3490515a0791b644900f286f04e287b5704706390e1"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_tuning.py": {
+      "bytes": 17358,
+      "mtime_ns": 1791222488884900900,
+      "sha256": "d532a2ce125481d23982639b9ed6bcc7898bcd41ec9a9eb26e41ceb4e65910f7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_ui.py": {
+      "bytes": 13396,
+      "mtime_ns": 1791141556577516200,
+      "sha256": "315cab846aa6ce9741e63ffde68ae7cb4a78befa53bdba42890d1b3bcf4f487f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_name_records.py": {
+      "bytes": 18013,
+      "mtime_ns": 1791039631448501800,
+      "sha256": "5e88e396e8d6e3172d48fc344b92538ce4a6c69141a53034d37eff7546dbff9f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_names.py": {
+      "bytes": 9353,
+      "mtime_ns": 1791040649190466600,
+      "sha256": "c174c42b7a68f9e116e6c4c15d51ef310d3d9fb1f1cc5b0a9aea3b009bc3b3c7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_original_mode.py": {
+      "bytes": 24473,
+      "mtime_ns": 1791177861030054500,
+      "sha256": "209fe00aa8f90eb57e61d06d10bfe6cd90ab7cbf56ec451794c5012da3684e58"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_physics.py": {
+      "bytes": 44122,
+      "mtime_ns": 1791222488887937000,
+      "sha256": "410a5ec81c980f2d2d33e5c1f8634dc1edb189c3f8e5d9e507798b41bb991aae"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_rig.py": {
+      "bytes": 50441,
+      "mtime_ns": 1791178635509959600,
+      "sha256": "c3801dbbae6668f363e803bae102c52dc505c9d46be303ecef5bbc08c8fed0ff"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_shared_rig.py": {
+      "bytes": 43554,
+      "mtime_ns": 1791178635510969800,
+      "sha256": "d31f7c8840617ea598053177cfb03c9b8e28dcf156ed932b684789b5ba630a14"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py": {
+      "bytes": 83682,
+      "mtime_ns": 1791224455616734900,
+      "sha256": "3905846f751659a6970cc80b70118201eaea068a657c69cd764b789e893b127b"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_topology.py": {
+      "bytes": 16590,
+      "mtime_ns": 1788827548368518200,
+      "sha256": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py": {
+      "bytes": 36639,
+      "mtime_ns": 1791045992485384800,
+      "sha256": "ad2e82fc9200af280befed0c55c745bc0ce3990f0120c638a6e906ae9f0a264f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spline_ik_setup.py": {
+      "bytes": 166088,
+      "mtime_ns": 1788908713076349900,
+      "sha256": "92f463ef5fe0eccc768fc71b57f9ba3cbfde86c3a444866bb9e68361a0ad9695"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\symmetry_pairs.py": {
+      "bytes": 22832,
+      "mtime_ns": 1790926721364734700,
+      "sha256": "d3cdc6c6b333a3581ff8faafa41abcbd3778e1ff3c030d2e7b6e853a2d64967d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\topology_symmetry.py": {
+      "bytes": 69209,
+      "mtime_ns": 1790412673797793700,
+      "sha256": "b982af6d6f2bf840a6f25fb7b7f574ae0697abbde750e7c7806734b0b2988539"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_controls.py": {
+      "bytes": 22759,
+      "mtime_ns": 1791045992484378300,
+      "sha256": "37772c81e8142f5debd9674a6d4c424129a4579eeafbf9cedcef5f718f36b87a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_ui.py": {
+      "bytes": 9961,
+      "mtime_ns": 1791058093774240500,
+      "sha256": "5daf8f5fb65fb99aa94eaadd3487bbe4bd400908d9780bbcdfcf6897dc915835"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ui_constants.py": {
+      "bytes": 2281,
+      "mtime_ns": 1790845532348039800,
+      "sha256": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py": {
+      "bytes": 36447,
+      "mtime_ns": 1790857698191805300,
+      "sha256": "7296db378c8c892b179dbf67d5bb308f04a367e2ef41369fb5f224f07da42a36"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_controls.py": {
+      "bytes": 16452,
+      "mtime_ns": 1790778914137577800,
+      "sha256": "51547f25cec9061c338e6c731f0a6bd63b92f77157245922899371a44a0d034a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_diagnostics.py": {
+      "bytes": 2473,
+      "mtime_ns": 1789357681659316500,
+      "sha256": "ac74dbc156989067e0f6b6789fc76ab7894ce290678ef2ae3158d798625c689c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export.py": {
+      "bytes": 34085,
+      "mtime_ns": 1791225938450982700,
+      "sha256": "a3d6e87527b23f9e9214c1121bc408ed4ee661ccd6feeb6c3f0f8ab0439f9043"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_ui.py": {
+      "bytes": 36142,
+      "mtime_ns": 1791137988119229900,
+      "sha256": "8914fec48d3a55f61d042166f20e54c5124b98e74af787e69186c27af94b169d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": {
+      "bytes": 54352,
+      "mtime_ns": 1791231857178301400,
+      "sha256": "069fb0f21b02e36a23dd02b1978d2a917c2873f290fc3331cdf0d55e877ce5bc"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_forearm.py": {
+      "bytes": 10083,
+      "mtime_ns": 1789338868265165200,
+      "sha256": "3979192a00a93417ee077d6290c71a229b57d2de04ebf04c41efa65bc321c1bb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_materials.py": {
+      "bytes": 8476,
+      "mtime_ns": 1789358011941745900,
+      "sha256": "5f06562b3af5c5c34e41a6d9d4a4d49f203d9678396a1f28713e0811778c805b"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\ANIMATION.md": {
+      "bytes": 15893,
+      "mtime_ns": 1790810096549877700,
+      "sha256": "ac884c2cf7b21303aac9c82e5c849cd4b7ba199ebec2aa973b98ded43fd82790"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationPreviewRenderer.cs": {
+      "bytes": 5197,
+      "mtime_ns": 1790852773173659600,
+      "sha256": "d8f977100bf86824336fd3067d3a79698dbd7c223b4a0a420cc1b50ac9af0bf6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs": {
+      "bytes": 24505,
+      "mtime_ns": 1790809663732752600,
+      "sha256": "4b5ceb26d45e90b77af10d7bf80024190a3e0108c257b388e0e29421cda02285"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationTransfer.cs": {
+      "bytes": 31595,
+      "mtime_ns": 1790932902004233300,
+      "sha256": "aff73958b9da692d669c72458be504c9e9b9644b1591182c7f580eb21f6c8354"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationValidation.cs": {
+      "bytes": 10367,
+      "mtime_ns": 1789387278506336900,
+      "sha256": "43e7006c3885360275e786b3105916177c7842278ed44efabdc21ae1b19c1591"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWindow.cs": {
+      "bytes": 13699,
+      "mtime_ns": 1790864976854522200,
+      "sha256": "8a964524488ef712f2e11b5e92eedf491ec1db6f582e8c07e8a8deb0a7501ceb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterDesigner.Unity.Editor.asmdef": {
+      "bytes": 181,
+      "mtime_ns": 1789339301103590100,
+      "sha256": "0ca1b70d1736c7b307b554375ab95b89881a2b8eeb322323cba37bece2386eca"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionExportValidation.cs": {
+      "bytes": 12161,
+      "mtime_ns": 1789342037911094900,
+      "sha256": "648a8aed75f75ec80e23a68b0d00c466deaa2fe6244576c388e9b4506e5c0417"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionImporter.cs": {
+      "bytes": 32704,
+      "mtime_ns": 1789341487595236600,
+      "sha256": "52500fdcfa10644d2246610e56c5d04bccaad14f5075841e2eed37c076768950"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionImportValidation.cs": {
+      "bytes": 9531,
+      "mtime_ns": 1789341562800105700,
+      "sha256": "6913448ceb34c3282ed5e4aff9062b970050d9c87180220f6646e6b7ed3fef1e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionMathValidation.cs": {
+      "bytes": 8473,
+      "mtime_ns": 1789340983165189800,
+      "sha256": "41c8c5fb94de5486b4b93c956e79033a9dd21b99a4d016df0849829f42187801"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionRuntimeValidation.cs": {
+      "bytes": 15815,
+      "mtime_ns": 1789341671430089600,
+      "sha256": "e4bc5a9712124b67997e7d9e9d7bd58b006b3b046be3f2c7c122f189aef23fe4"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\README.md": {
+      "bytes": 5033,
+      "mtime_ns": 1789389269639802000,
+      "sha256": "3d7353fef26187d68d9ebe82da30866bc6b15e476015387dd6ee7fe9df0781eb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterDesigner.Unity.Runtime.asmdef": {
+      "bytes": 383,
+      "mtime_ns": 1789338228928657300,
+      "sha256": "795159ea1083023dd9bc7e207808aa9f1d049d2fdac89c165a158b87e5170a07"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrection.cs": {
+      "bytes": 37056,
+      "mtime_ns": 1790572508934830100,
+      "sha256": "caef1ec7531a80009f9bfa163528b2986059c234cedc6b9034eea7c366ea4117"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrectionData.cs": {
+      "bytes": 1835,
+      "mtime_ns": 1789338228927649600,
+      "sha256": "cde82ed8015ef42fc7124856add8531638ba0f689bb6e53271432807376003e7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrectionMath.cs": {
+      "bytes": 12281,
+      "mtime_ns": 1789337594790916300,
+      "sha256": "6b9f6aeee33765197e1ca193c24f9afcd7d5892fcf7bd4b2f03d42073996effb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Tests\\PlayMode\\CharacterDesigner.Unity.PlayModeTests.asmdef": {
+      "bytes": 480,
+      "mtime_ns": 1789339365368068400,
+      "sha256": "9dc640bd4e0a96b195eec03492e4b792d1c47bdcfb9e93b3a8a199a345b5965c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Tests\\PlayMode\\ForearmCorrectionPlayModeTests.cs": {
+      "bytes": 8165,
+      "mtime_ns": 1789339365369076200,
+      "sha256": "265d912ae88ace529dc2ec1f122b7805a583f46004d09e7d55b48d1ab65abff6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\weight_symmetry.py": {
+      "bytes": 62075,
+      "mtime_ns": 1789816808395554000,
+      "sha256": "06409a3fff8d7db9e0ad778299da5196f48a68ae107d92537c60c34db79e0e8c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\widget_collections.py": {
+      "bytes": 13252,
+      "mtime_ns": 1790893930279426900,
+      "sha256": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18"
+    }
+  },
+  "script_sha256": "a232ae99e26a998f911c38efd1b95fcc45fb4c76ebd5d3a2c87bd8686196a055",
+  "pure_checks": {
+    "pure_checks_passed": true,
+    "controls": 11,
+    "native_run": false,
+    "limits": "Synthetic polyhedra/control classification only; no Blender interface, actual Body coverage or projection acceptance."
+  },
+  "scope": "Two actual start-frame samples only. No projection/Hull/bake/replay/render or whole-Body coverage acceptance.",
+  "install_input": {
+    "report": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_install_51_20261006_031045_111\\result\\workflow_install.json",
+    "report_sha256": "a2157ba399bfe32cc28401847c2556f776761fd607eaa3ba7ea23b61aaec6a32",
+    "candidate_sha256": "7acb26009d56c4f066163055a3cb92b6b779772a3a51b289015b4133ebae788f",
+    "native_install_checks": 22,
+    "source": "Dress",
+    "rig": "CoshaRig",
+    "owner": "857c5aaad1ac4160953847b083deba20",
+    "runtime_differences": [
+      {
+        "path": "d:\\myrepository\\blender-addons-by-randy\\addons\\character_designer\\unity_export_worker.py",
+        "install_sha256": "1f3bbed83de4c44c86926208da1eceff8bd887941273e7c57e4564fa2e95d2a9",
+        "motion_sha256": "069fb0f21b02e36a23dd02b1978d2a917c2873f290fc3331cdf0d55e877ce5bc",
+        "scope": "This motion run is a new compatibility validation; the old install did not validate changed code"
+      }
+    ],
+    "scope": "This new run validates current-runtime compatibility; the old install did not validate changed code"
+  },
+  "saved_cache_preflight": {
+    "physics_present": true,
+    "allowed": true,
+    "policy": "Refuse any pre-existing sealed, disk, external or baking cache; no artist cache files are enumerated or touched",
+    "saved_baked_range": null,
+    "proxy_record_name": "CD Actual Dress Cloth · Dress",
+    "native": {
+      "pointer": 2403522233152,
+      "start": 1,
+      "end": 250,
+      "step": 1,
+      "is_baked": false,
+      "disk": false,
+      "external": false,
+      "name": "",
+      "is_baking": false,
+      "is_outdated": true,
+      "native_filepath": "",
+      "index": 0
+    },
+    "reason": "Only an unsealed native RAM cache is present; all later disk/cache operations use QA candidate paths"
+  },
+  "author_pose_sha256": "dfad636c7aede3a456412b1aa93d122f4aea0dab3637712c4eab931250b6206f",
+  "author_playback_sha256": "75a8c85cc44f73f7afd28f4851fd980ce88c1dde570731cf40c8bb9036fad79b",
+  "author_frame": [
+    39,
+    0.0
+  ],
+  "raw_protection_before": {
+    "raw_mesh_sha256": {
+      "CD Actual Dress Cloth · Dress": "a089d2473ec3a9fbda942b15bc7d472c23972f46a289ba9543414d66b26c2cf0",
+      "CD Body Collision · Dress": "68bb336b530cb053501eefe603a08e3550e37cbf0e3e8bd870fe97e9db771cff",
+      "CD Cloth Tracker · Dress": "c90759925afe9ebc169e484fe1ae4256f18719189c46ad8a60cca7b5f538659a",
+      "CD Collider Pelvis · Dress": "35d3fb74bef21a4a27660454744ee6d336491d9346e6baae6a9240e2b5b8ec86",
+      "CD Collider Thigh.L · Dress": "00c6d9af859ba07742acf2c3799987c404b628ab175933e9d1b4741c1443b485",
+      "CD Collider Thigh.R · Dress": "f19d90e67d50484bcc047aaf73b722a225fc405e19e8e5715faccc628a76306b",
+      "CD Neutral Dress Surface · Dress": "5e01fc47d559404db6af00050e816829faf88eaaef250e3a9458802a588085e7",
+      "Clothes": "e48dc4a1cc2db10a88d8b21d17b07eb3f81c6769cedeb8f53be6ad0fc406185a",
+      "Cosha": "68bb336b530cb053501eefe603a08e3550e37cbf0e3e8bd870fe97e9db771cff",
+      "Diamond.001": "6d263b510052b1c10602a03023e0e742536f2ffc8bae157f1ab53a2161c787ee",
+      "Dress": "5e01fc47d559404db6af00050e816829faf88eaaef250e3a9458802a588085e7",
+      "Dress_Backup": "e7e2114e43ee01478b9b0b3f357d6f3871f9cfd30696b7031a8de07026cc28ae",
+      "Ear.001": "16c1fe4b020e98243ba66a4fd20f9540353443355afbb9e55690842c860607ef",
+      "Embedded.001": "de7cbe818a0735e43acf0399719b365bd60ba31965a354976d9faf820bdccbaa",
+      "Hair": "818d1210d736a386ffb35e392b573c71e34a79e023e9314b30e7a22a9f46df22",
+      "Hair1": "5987904466aad39f7eabd4aeab620849a78cfea3cb4442f466a3603e327b5acc",
+      "Hair3": "b04c978450dc51e27bc293b8b1728491e2bbeb9dc796e486f58804fbb4e199b3",
+      "Jacket": "ab125d69657f710f3a8ac3f12922ff2f975b54e72bb1650785adc65414d4f9f7",
+      "ShoeBase": "47087b84922038aab6744b9b52f3e74a5a408ac3e4cc332eb57f3c9c253d0a4f",
+      "Shoes": "f2d2819590eb0e0f41e461661082b2bc6229ae42d06308a4781e3a3d55573497",
+      "Shoes_Primitive": "6ac87d261453c26ea39bec43f8202b30d405466de847e2ba98514e07b78b0b8d",
+      "ShoeUpper2.001": "e6e2e67313fb33c74f31ebadbbcf31c4e5cce67c4ba95d3a1d07cfb992d32b5e",
+      "ShoeUpper3.001": "9b694ce04b2ac81910c8813ad8f39abdb0a40b0af533b1e6e962844bc69b81c0",
+      "ShoeUpperBase": "8eefb9270816622cca7551e3856c05a34e248b96f575a88d6dedfe87b9bd08bd",
+      "SK_Dress_Hem_01_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Hem_02_Shape": "a9e70fb39dec96d24b57f7c4d24b5260de6261e12e71615631fcc12aedf386c6",
+      "SK_Dress_Hem_03_Shape": "4e88109958ac665c3c1235e5770e5d259adcc0b92c0454602ef55cf528c03961",
+      "SK_Dress_Hem_04_Shape": "a9e70fb39dec96d24b57f7c4d24b5260de6261e12e71615631fcc12aedf386c6",
+      "SK_Dress_Hem_05_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Hem_06_Shape": "e45e44b63025a4b3d26f6049990d3e2c072ef83d18ea3ebd7d798c4be7ece2ea",
+      "SK_Dress_Hem_07_Shape": "4e88109958ac665c3c1235e5770e5d259adcc0b92c0454602ef55cf528c03961",
+      "SK_Dress_Hem_08_Shape": "e45e44b63025a4b3d26f6049990d3e2c072ef83d18ea3ebd7d798c4be7ece2ea",
+      "SK_Dress_Mid_01_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Mid_02_Shape": "8b9f0bb0d382fa4b4fcba364ab8a91161f2971a73c7f1662881ebc85d88e329e",
+      "SK_Dress_Mid_03_Shape": "872dfe5de7c153bac6f3050cb121d3143ffdb5992ac1bf0baacf5b6feb40a1fb",
+      "SK_Dress_Mid_04_Shape": "0c0398f866402d464ce4d4312e94d4edd4f4db7cba7d347775a3292350fcdccb",
+      "SK_Dress_Mid_05_Shape": "48c2900cfeedbfb6233a43dbd0a870c4f76a7bf6b3e0d9613e2d2f43601d7800",
+      "SK_Dress_Mid_06_Shape": "0c0398f866402d464ce4d4312e94d4edd4f4db7cba7d347775a3292350fcdccb",
+      "SK_Dress_Mid_07_Shape": "b752ba011c2facf49ee7fe9f3df83a5ba44dc7255922daffdf50166ff18f26d2",
+      "SK_Dress_Mid_08_Shape": "8b9f0bb0d382fa4b4fcba364ab8a91161f2971a73c7f1662881ebc85d88e329e",
+      "SK_Dress_Shape_hem": "4dec72c2086b15a1278dadc510aa02a58867b0366edfe3589dd2ee3d5bdc7a9d",
+      "SK_Dress_Shape_mid": "80a03e4ec2a315f3fd3ea0b740fe384bf61765486f55ab6aedb8a402231a6aed",
+      "SK_Dress_Shape_waist": "e1be86ac0340635002355d5308cd28a951ef881f4fa91b4605abb8bae3fd258a",
+      "Stocking": "797a54d4d01b5d5c0036aea945e295efbf6bc121a56839fde4e998ad79619362",
+      "Strap.001": "0ec1a50605865d83cc791ff783dcf205044ab30caa56fd3aa8115e36d9ceae7c",
+      "Vamp.001": "e5b52164decdc744dbac272e61be84c423cacd3aba8d128c5b902d0e2d28c923",
+      "WGT-rig.001_breast.L": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_breast.L.001": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_breast.R": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_breast.R.001": "be6d825c1d5f42f0f36a36da34f3044831eb7c4ffb3d0f84f184f1272c2c2230",
+      "WGT-rig.001_brow.B.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.L.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.L.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.L.009": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.B.R.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.B.R.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.B.R.009": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.T.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.L.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.T.L.003": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.L.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.T.L.005": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.L.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.L.007": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.R.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_brow.T.R.003": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_brow.T.R.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_brow.T.R.005": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.R.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow.T.R.007": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_brow_end.T.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.B.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_cheek.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.B.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_cheek.T.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.T.L.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_cheek.T.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_cheek.T.R.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chest": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_chest.001": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_chin": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_chin.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_chin.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_chin.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chin.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_chin.L.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chin.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_chin.R.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_chin_end.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_chin_end.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.L.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.L.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.L.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.L.009": "1be4b43ec5d94218dbd7975678d07bd43179f22cbce1c74960de947978d24647",
+      "WGT-rig.001_ear.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_ear.R.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear.R.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.R.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_ear.R.009": "1be4b43ec5d94218dbd7975678d07bd43179f22cbce1c74960de947978d24647",
+      "WGT-rig.001_ear_end.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear_end.L.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear_end.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_ear_end.R.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_eye.L": "dac7ad83576e342256603e444404696ab9f8910f808ef15b89e489a217deea64",
+      "WGT-rig.001_eye.L.001": "aae04130de2d735ba0fb6f88d22db21b2e2d34dc411dfc431557cf17591d7497",
+      "WGT-rig.001_eye.R": "dac7ad83576e342256603e444404696ab9f8910f808ef15b89e489a217deea64",
+      "WGT-rig.001_eye.R.001": "aae04130de2d735ba0fb6f88d22db21b2e2d34dc411dfc431557cf17591d7497",
+      "WGT-rig.001_eye_common": "c6cbff53f4ab6dbff804cac99b2cf88f0b9ffdb55a0aa1c3cf8f6cb8850fc323",
+      "WGT-rig.001_eye_common.001": "0f5b1751f522bd20e8e5a63bad6a41bb181b378e15f13f5d08354c0afaaa62cc",
+      "WGT-rig.001_eye_master.L": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_eye_master.L.001": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_eye_master.R": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_eye_master.R.001": "11d9a56cd9ce676fb6750ade8341c2efbc825f2815b941a0aabe1dc1c0be58e8",
+      "WGT-rig.001_f_index.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_index.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_index.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_index.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_middle.01_ik.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_f_middle.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_middle.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_middle.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_pinky.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_pinky.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_pinky.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_f_ring.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_f_ring.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_f_ring.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_foot_fk.L": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_fk.L.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_fk.R": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_fk.R.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_foot_heel_ik.L": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_heel_ik.L.001": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_heel_ik.R": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_heel_ik.R.001": "0f0443dbff9f61a946d50d99f52203cb228d7f2638435123b94a4a494b4aa049",
+      "WGT-rig.001_foot_ik.L": "9dcf490b51c9492c395fd30206bc91986cb1c143cb61c6e39af13216ef6605d4",
+      "WGT-rig.001_foot_ik.L.001": "edbc23ccaeca2e90994a85a6b27f81efdb2dd272742f86b555cf52be482bdf48",
+      "WGT-rig.001_foot_ik.R": "9dcf490b51c9492c395fd30206bc91986cb1c143cb61c6e39af13216ef6605d4",
+      "WGT-rig.001_foot_ik.R.001": "edbc23ccaeca2e90994a85a6b27f81efdb2dd272742f86b555cf52be482bdf48",
+      "WGT-rig.001_foot_spin_ik.L": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_spin_ik.L.001": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_spin_ik.R": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_spin_ik.R.001": "5de6c5a0665588c1019a1e8d0ecd70a5fdeaaf88602c1dc77c60485189e0fc2c",
+      "WGT-rig.001_foot_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_foot_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_foot_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_foot_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_forearm_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forearm_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.L.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_forehead.R.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hair.L.028": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.029": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.030": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.031": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.032": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.033": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.034": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.035": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.036": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.037": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.038": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.039": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.040": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.041": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.042": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.043": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.044": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.045": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.046": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.047": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.048": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.049": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.050": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.051": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.052": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.053": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.054": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.L.055": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.028": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.029": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.030": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.031": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.032": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.033": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.034": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.035": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.036": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.037": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.038": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.039": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.040": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.041": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.042": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.043": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.044": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.045": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.046": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.047": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.048": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.049": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.050": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.051": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.052": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.053": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.054": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hair.R.055": "b8f801ee7d9c927cfa1b1425709c4d7155c465cdd3f7e898a8c1bc0405da0c31",
+      "WGT-rig.001_hand_fk.L": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_fk.L.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_fk.R": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_fk.R.001": "f9cffeb4ed4eb28f545db10f5ef930dfc3f32b70f69e4d9b897bc64735cabaad",
+      "WGT-rig.001_hand_ik.L": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_ik.L.001": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_ik.R": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_ik.R.001": "5c986427891ff26c9cc99c4c40d1cf52fd61cecbd1010d221269c6949106c225",
+      "WGT-rig.001_hand_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hand_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hand_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_hand_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_head": "2fcab9fba216df486f4913d252a3b2faeb57520ee3944fe03ed421df64185519",
+      "WGT-rig.001_head.001": "2fcab9fba216df486f4913d252a3b2faeb57520ee3944fe03ed421df64185519",
+      "WGT-rig.001_hips": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_hips.001": "a79a60c610adb97ec10bf52ca1aa701abf5048f4f0dfaf4ed6eb1f323c386cc3",
+      "WGT-rig.001_jaw": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.L.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.L.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_jaw.R.002": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw.R.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_jaw_master": "61be658ff77d18bb100f2ef67ca488cc71c47afe2fe9e57a4f7c0d96f4efbbfd",
+      "WGT-rig.001_jaw_master.001": "61be658ff77d18bb100f2ef67ca488cc71c47afe2fe9e57a4f7c0d96f4efbbfd",
+      "WGT-rig.001_jaw_master_mouth": "13eb23f3636d16aac467985c384797cba34b060e6a81db07ad15a39e510807d4",
+      "WGT-rig.001_jaw_master_mouth.001": "9afdebabeacd539b41fbb0cd9d720eccea5eda96d647876ca67f641eaee6e372",
+      "WGT-rig.001_lid.B.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.L.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.L.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.L.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.B.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.B.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.B.R.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.R.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.B.R.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.B.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.L": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.L.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.L.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.L.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.T.L.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.R": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lid.T.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lid.T.R.004": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.R.005": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lid.T.R.006": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lid.T.R.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_lip.B": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip.B.001": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.B.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.B.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.B.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.B.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.T": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip.T.001": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.T.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.T.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip.T.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_lip.T.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_lip_end.L.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip_end.L.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip_end.R.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_lip_end.R.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_neck": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_neck.001": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_nose": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.002": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.004": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.005": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_nose.006": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.007": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.008": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.009": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.L.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.L.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_nose.L.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose.R.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_nose.R.002": "07ee157926ffdd946952d946ec09d8291c1b1e3a98caabb3014613dbd7be0296",
+      "WGT-rig.001_nose.R.003": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_nose_end.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose_end.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose_end.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_nose_master": "51ed0c6cbdb32e96d59b7c307101c3c06e070160a628e0c35bdf9b1cd9683c1c",
+      "WGT-rig.001_nose_master.001": "512339307fe9706439635ce70723dfff33bb8f3597fe2923f89a2797ee1a5d92",
+      "WGT-rig.001_palm.L": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_palm.L.001": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_palm.R": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_palm.R.001": "ef91ed2a4bf9b69bc21cca3e616d2d200c764dbdade01ec9dff504ab80e04123",
+      "WGT-rig.001_root": "8359eba2ff3ddb01cd3b5e8db2a16d2627f07ce42b8822ed39dc01b15af27d34",
+      "WGT-rig.001_root.001": "8359eba2ff3ddb01cd3b5e8db2a16d2627f07ce42b8822ed39dc01b15af27d34",
+      "WGT-rig.001_shin_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_shin_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shin_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_shoulder.L": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_shoulder.L.001": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_shoulder.R": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_shoulder.R.001": "97a27ec67f00c6cc248e39c0470bd5c7b5a47e7db89389c82756b58ed1db3822",
+      "WGT-rig.001_spine_fk": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.001": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.002": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_spine_fk.003": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_spine_fk.004": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.005": "d1460c4c7f41d3dd5376d4c6600deb8a37159d14ab3665ed67d42303dfb9b839",
+      "WGT-rig.001_spine_fk.006": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_spine_fk.007": "19e1f0efb343c246fc40e6c14551c2dddc4237a7f575368c773aeccc69ccde2c",
+      "WGT-rig.001_teeth.B": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_teeth.B.001": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_teeth.T": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_teeth.T.001": "b461fd99d000a9f2d61fad96bdab17c9c47ac86638d95c435217bb4b5508d27c",
+      "WGT-rig.001_temple.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_temple.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_temple.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_temple.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_thigh_ik.L": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik.L.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik.R": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik.R.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_thigh_ik_target.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_ik_target.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_ik_target.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_ik_target.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_parent.L": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_parent.L.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_parent.R": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_parent.R.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_thigh_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thigh_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_thumb.01.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.L.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01.L.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.L.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.R.001": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01.R.002": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.01.R.003": "509d4e7ad92f29261779eebe2a120edae228132b4bf5951f348749d4a89d08c3",
+      "WGT-rig.001_thumb.01_master.L": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.01_master.L.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.01_master.R": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.01_master.R.001": "85af11499d6f63c1045ab414b877c4b1a8c0f74f9554f352ea2bf9820c2f26b2",
+      "WGT-rig.001_thumb.02.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.02.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.02.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.02.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.L": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.L.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.R": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_thumb.03.R.001": "12951017e235417c3ddd2b1c355399925f98317bbf7a26f9be6fec4be8f5ee7d",
+      "WGT-rig.001_toe_fk.L": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_fk.L.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_fk.R": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_fk.R.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.L": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.L.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.R": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_toe_ik.R.001": "e0aceacd686c61d46aca4b45fedac1bfde7412b79d4ed86280c08da5223a2945",
+      "WGT-rig.001_tongue": "61be658ff77d18bb100f2ef67ca488cc71c47afe2fe9e57a4f7c0d96f4efbbfd",
+      "WGT-rig.001_tongue.001": "34ae8cd27b773bd8c447e29578904a82398b8158c607068861a90da546f08d9a",
+      "WGT-rig.001_torso": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_torso.001": "9314309b2b4cf8b0a78bca4ccf00fafd54ad819e8bdb443bda80c4fab049f16b",
+      "WGT-rig.001_tweak_spine": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.006": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.007": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.008": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.009": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.010": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_spine.011": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.004": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.005": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.006": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_tweak_tongue.007": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_fk.L": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_fk.L.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_fk.R": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_fk.R.001": "17b36bbd07345f5031841ad506f31fc0b47ada90ec0e4da5fc650fd3b7e4ef67",
+      "WGT-rig.001_upper_arm_ik.L": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik.L.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik.R": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik.R.001": "04dc6b27750411de81b1f6e66d5e2461e311dbc21e36b622869e9142117dd502",
+      "WGT-rig.001_upper_arm_ik_target.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_ik_target.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_ik_target.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_ik_target.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_parent.L": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_parent.L.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_parent.R": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_parent.R.001": "e90da498c0c664274ab6f1669dfaf0d8359408d4607191f9099ed3790a256379",
+      "WGT-rig.001_upper_arm_tweak.L": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.L.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.L.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.L.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R.001": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R.002": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_upper_arm_tweak.R.003": "b42a543302f24ca228e990edca2e4d16a2f299d9e9e32ad23ec8e5a755866d18",
+      "WGT-rig.001_VIS_thigh_ik_pole.L": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_thigh_ik_pole.L.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_thigh_ik_pole.R": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_thigh_ik_pole.R.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.L": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.L.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.R": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT-rig.001_VIS_upper_arm_ik_pole.R.001": "2fb901bba7585d614a81ecbb13cdab194cabefd5dd8f6ed981e13c032c8d2a52",
+      "WGT_CoshaRig_Breast_L": "0c20ab1a7e2381a8c82235e10fb2285384ad8b0606324a3d3394d6d4cf7bd5bd",
+      "WGT_CoshaRig_Breast_R": "e81974134f74672353d9e31a32e2fe76f0e7a733ed80e89b5bf0ea373dac8487",
+      "WGT_CoshaRig_Eyes_Left": "481541004a1b4300399c9f11d1844510fdd3a6a4ef4a823d3f119d2b678f7936",
+      "WGT_CoshaRig_Eyes_Master": "7d325b50b02f8ace1440a9c91810e51004c768d6b1d612d1045d94020648248c",
+      "WGT_CoshaRig_Eyes_Right": "481541004a1b4300399c9f11d1844510fdd3a6a4ef4a823d3f119d2b678f7936",
+      "WGT_CoshaRig_FK_forearm.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_forearm.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_shin.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_shin.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_thigh.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_thigh.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_upper_arm.L": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_FK_upper_arm.R": "2a295f69849028841963f1cb97998fd5253e8f92652a260f4d412f4ab1c63f2c",
+      "WGT_CoshaRig_Foot_Roll.L": "af249b2d2b385a104d296a65727b1b8c8cc7e72f95e92337da1637f12b5dfdc2",
+      "WGT_CoshaRig_Foot_Roll.R": "af249b2d2b385a104d296a65727b1b8c8cc7e72f95e92337da1637f12b5dfdc2",
+      "WGT_CoshaRig_Head": "15c2e013afece5d6b567e9b90d0d114e0f53d3380706ad5e1b40a8b1a894e5f5",
+      "WGT_CoshaRig_Hips": "2886b194aa683a32127a7eeabd37af5fcba292163b666c82f72a5bfe7fe713c2",
+      "WGT_CoshaRig_Neck": "592be1ebf590541abbb0e46b00c9729e2402bf8e17c9edc852d35be70d2b8a6f",
+      "WGT_CoshaRig_Root": "b5d2359c81f5410efb6eefa432501ace08ad35423cbdb5cdde2b12c9124cabfb",
+      "WGT_CoshaRig_Toe_Bend.L": "301ed5861c8ab591a04caded8bebf75bed62d17e14e6e722b47c03cf3f142bc7",
+      "WGT_CoshaRig_Toe_Bend.R": "301ed5861c8ab591a04caded8bebf75bed62d17e14e6e722b47c03cf3f142bc7",
+      "WGT_CoshaRig_Torso_Bend": "32ffa5a2a17e1d099df73605a3d9337b7ccf30bf92fd1da0062c816d93e9f699",
+      "WGT_CoshaRig_Torso_FK_01": "fbc13deabfdc3adfa76b2bb50b85d4fb999793e8a8c88d3d2eef2937753f8e21",
+      "WGT_CoshaRig_Torso_FK_02": "fbc13deabfdc3adfa76b2bb50b85d4fb999793e8a8c88d3d2eef2937753f8e21",
+      "WGT_CoshaRig_Torso_FK_03": "fbc13deabfdc3adfa76b2bb50b85d4fb999793e8a8c88d3d2eef2937753f8e21",
+      "WGT_Randy_Finger": "301ed5861c8ab591a04caded8bebf75bed62d17e14e6e722b47c03cf3f142bc7",
+      "WGT_Randy_FootIK.L": "3a294b9201a569cda8386053b55d6c253601a738bd3d5fd38497b946be8abeff",
+      "WGT_Randy_FootIK.R": "61093d7ec360974c9865fb20786ff864e07deca6f729dd55dbac8354e3419ad6",
+      "WGT_Randy_HandIK": "9ba9e7b1d82d02416c6de37b14fa574ae2d3379a3e0224e730f298f233078a58",
+      "WGT_Randy_PoleArrow": "daaf128686fc460ffebd2f5fec385381f8fec37fff0057f1b561151bc346880c",
+      "WGT_Randy_Shoulder": "c9dbc18533419522e3e8da5ac05f2b6aacf50fad850372913e92b4bdd9596216",
+      "Wide Strap.001": "96f62243b0b66ee328188b2c8b9f79d357c3df33fe226b1c339359f3bf299d88"
+    },
+    "rest_sha256": {
+      "Anime Girl Base Mesh": "a7913f0ff7ec3cf01a6f3d5df69d538a87a1e9013f4be162d3947f3fab4b2cc3",
+      "Anime Girl Base Mesh.001": "45f5cfbcd445e60f9605a18deedb4ec01426fd5c23a27ac79c3d43ac62fb2a0a",
+      "CD Neutral Dress Rig · Dress": "6c8cc62e7088a8a2463eb84ac6887319173254d95173faf8f2401f02dae5fa76",
+      "CoshaRig": "7511de8262a7db5389f36c056850870c1db11ecd85b191ad6c975ee7880f95f5",
+      "Strap2.001": "84e2bc5ca2d3118d0a5bda2bcdce7f8336303cfda0fe72a4f661ea322034403e"
+    },
+    "author_action_sha256": {
+      " Attack 1 (1_24)": "8f78cbd2cf22baac3ec0b1c35e55cffa57fd4ea145ef164eb068ad9d44f10321",
+      "rig.001Action.002": "2681c554a1d2b416e1605e4e978355cb483577ec3cb2599ea0900440ca24edf2",
+      "ShoesAction": "8c363befab31d6ab2d3227ec9f61501136d3f0332c945cad84233cceca66fdc5"
+    },
+    "nla_assets_sha256": "eaf30df43f8354b30354e653476364030ed7d945abc927e216e455274dd7e3c3"
+  },
+  "animation_backup": [
+    {
+      "owner": [
+        "Object",
+        "Anime Girl Base Mesh",
+        null
+      ],
+      "action": null,
+      "slot": null,
+      "nla_track_flags": []
+    },
+    {
+      "owner": [
+        "Object",
+        "Anime Girl Base Mesh.001",
+        null
+      ],
+      "action": [
+        "Action",
+        "rig.001Action.002",
+        null
+      ],
+      "slot": "OBrig.001",
+      "nla_track_flags": []
+    },
+    {
+      "owner": [
+        "Object",
+        "CD Neutral Dress Rig · Dress",
+        null
+      ],
+      "action": null,
+      "slot": null,
+      "nla_track_flags": []
+    },
+    {
+      "owner": [
+        "Object",
+        "CoshaRig",
+        null
+      ],
+      "action": null,
+      "slot": null,
+      "nla_track_flags": []
+    },
+    {
+      "owner": [
+        "Object",
+        "Lava Golem Warrior-Rigged-Animated",
+        null
+      ],
+      "action": [
+        "Action",
+        " Attack 1 (1_24)",
+        null
+      ],
+      "slot": "OBStoneGolem Warrior-Rigged-Animated",
+      "nla_track_flags": []
+    },
+    {
+      "owner": [
+        "Object",
+        "Shoes",
+        null
+      ],
+      "action": [
+        "Action",
+        "ShoesAction",
+        null
+      ],
+      "slot": "OBShoes",
+      "nla_track_flags": []
+    },
+    {
+      "owner": [
+        "Object",
+        "Strap2.001",
+        null
+      ],
+      "action": null,
+      "slot": null,
+      "nla_track_flags": []
+    }
+  ],
+  "registered_body": {
+    "registered_pointer_only": true,
+    "measured": true,
+    "vertex_budget": 100000,
+    "object": "Cosha",
+    "conservative_subdivision_vertex_estimate": 14632,
+    "definition": "Actual evaluated registered Body, with Dress samples in native pelvis-to-knee projection interval"
+  },
+  "cache_ownership": {
+    "candidate": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_body_proxy_coverage_51_20261006_113729_230\\result\\scenes\\Cosha_Dress_QA_proxy_coverage.blend",
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_body_proxy_coverage_51_20261006_113729_230\\result\\native_cache",
+    "artist_or_input_cache_reset": false
+  },
+  "actual_leg_input": {
+    "thigh": "thigh.L",
+    "angle_rad": 0.55,
+    "bone_local_axis": [
+      -0.00020581901480909437,
+      0.003781681414693594,
+      0.999992847442627
+    ],
+    "definition": "Frozen QA actual native Rest inverse @ MainRig X; unkeyed FK channels, frame1 held",
+    "surfaces": {
+      "Body": {
+        "maximum_delta_m": 0.5563469417387635,
+        "rms_delta_m": 0.15762690258393444,
+        "vertices_above_geometry_guard": 1853
+      },
+      "O3040": {
+        "maximum_delta_m": 0.004640242393245262,
+        "rms_delta_m": 0.00047611846579675846,
+        "vertices_above_geometry_guard": 231
+      }
+    },
+    "knee_delta_m": {
+      "L": 0.23998863407894286,
+      "R": 0.0
+    },
+    "hem_handle_delta_m": 0.0,
+    "cache_metadata_equal": true,
+    "geometry_guard_m": 5e-05,
+    "confirmed": true
+  },
+  "native_identity_stable": {
+    "Body": true,
+    "O3040": true,
+    "CD Collider Pelvis · Dress": true,
+    "CD Collider Thigh.L · Dress": true,
+    "CD Collider Thigh.R · Dress": true
+  },
+  "native_triangulation_changes": {
+    "Body": {
+      "initial_sha256": "6477247d654682e80433493788e2e1e8934d9805a478fb0b6b398ce76d3ecdc3",
+      "posed_sha256": "6477247d654682e80433493788e2e1e8934d9805a478fb0b6b398ce76d3ecdc3",
+      "initial_count": 28624,
+      "posed_count": 28624,
+      "changed_corresponding_triangle_count": 0,
+      "first_changed_triangle_ids": [],
+      "changed": false,
+      "scope": "Per-sample actual triangles stay exact in that sample only; coordinate-dependent tessellation is not a source topology edit or cross-Pose triangle correspondence proof."
+    },
+    "O3040": {
+      "initial_sha256": "4628bcf766fc4417ab15363fb1fe8cfac1d7ca0a4a17fd5dbe61e97f90a61782",
+      "posed_sha256": "4628bcf766fc4417ab15363fb1fe8cfac1d7ca0a4a17fd5dbe61e97f90a61782",
+      "initial_count": 5760,
+      "posed_count": 5760,
+      "changed_corresponding_triangle_count": 0,
+      "first_changed_triangle_ids": [],
+      "changed": false,
+      "scope": "Per-sample actual triangles stay exact in that sample only; coordinate-dependent tessellation is not a source topology edit or cross-Pose triangle correspondence proof."
+    },
+    "CD Collider Pelvis · Dress": {
+      "initial_sha256": "84160a8f655e3b5020781010d34c89c4482b37573584450457315bf4b9452679",
+      "posed_sha256": "84160a8f655e3b5020781010d34c89c4482b37573584450457315bf4b9452679",
+      "initial_count": 168,
+      "posed_count": 168,
+      "changed_corresponding_triangle_count": 0,
+      "first_changed_triangle_ids": [],
+      "changed": false,
+      "scope": "Per-sample actual triangles stay exact in that sample only; coordinate-dependent tessellation is not a source topology edit or cross-Pose triangle correspondence proof."
+    },
+    "CD Collider Thigh.L · Dress": {
+      "initial_sha256": "84160a8f655e3b5020781010d34c89c4482b37573584450457315bf4b9452679",
+      "posed_sha256": "84160a8f655e3b5020781010d34c89c4482b37573584450457315bf4b9452679",
+      "initial_count": 168,
+      "posed_count": 168,
+      "changed_corresponding_triangle_count": 0,
+      "first_changed_triangle_ids": [],
+      "changed": false,
+      "scope": "Per-sample actual triangles stay exact in that sample only; coordinate-dependent tessellation is not a source topology edit or cross-Pose triangle correspondence proof."
+    },
+    "CD Collider Thigh.R · Dress": {
+      "initial_sha256": "84160a8f655e3b5020781010d34c89c4482b37573584450457315bf4b9452679",
+      "posed_sha256": "84160a8f655e3b5020781010d34c89c4482b37573584450457315bf4b9452679",
+      "initial_count": 168,
+      "posed_count": 168,
+      "changed_corresponding_triangle_count": 0,
+      "first_changed_triangle_ids": [],
+      "changed": false,
+      "scope": "Per-sample actual triangles stay exact in that sample only; coordinate-dependent tessellation is not a source topology edit or cross-Pose triangle correspondence proof."
+    }
+  },
+  "canonical_validation_after_samples": true,
+  "protected_raw_before_reload": {
+    "success": true,
+    "missing": [],
+    "changed": {
+      "meshes": [],
+      "rest": [],
+      "actions": [],
+      "nla_assets": []
+    }
+  },
+  "protected_raw_after_reload": {
+    "success": true,
+    "missing": [],
+    "changed": {
+      "meshes": [],
+      "rest": [],
+      "actions": [],
+      "nla_assets": []
+    }
+  },
+  "author_pose_restored": true,
+  "author_playback_restored": true,
+  "author_frame_restored": true,
+  "input_disk_exact": true,
+  "artist_disk_exact": true,
+  "source_manifest_after": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\diagnose_skin_transfer.py": {
+      "bytes": 47437,
+      "mtime_ns": 1791147999031463700,
+      "sha256": "9ad85213c41c62393b34cd5f5a45f0508bbef2ccfdf3a520f92dcf0e836f6a28"
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\validate_real_dress.py": {
+      "bytes": 70439,
+      "mtime_ns": 1791145201950305500,
+      "sha256": "613e9d32f3674f1e01d98725a99d1dd70911d22af1526f36a43f442c47649046"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py": {
+      "bytes": 354767,
+      "mtime_ns": 1791203608516646500,
+      "sha256": "f67a2febe180e03bc77e402ce44968540ac523983cde5546eff6c6b60b66d0ce"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation.py": {
+      "bytes": 37751,
+      "mtime_ns": 1791209758850152400,
+      "sha256": "5e6bb8c2a732094b9dbc1411a4fa207556c811e31e2ca24115fe7480d941bacf"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py": {
+      "bytes": 10793,
+      "mtime_ns": 1791225904394833100,
+      "sha256": "d1aa935284226793d8f66eaf9c097c1e5ab18b7a59c4f7bac9eca2128bde03ce"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py": {
+      "bytes": 27880,
+      "mtime_ns": 1791225846240391800,
+      "sha256": "d4cc236e0199a9799311e6258098ed58853cabb3ccd8054a8a34f3734c300a23"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py": {
+      "bytes": 18441,
+      "mtime_ns": 1790805836068686100,
+      "sha256": "e1249f17e14596fce6c977fdc460dc77d837418ff1a339c27f7710952145dc23"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py": {
+      "bytes": 11433,
+      "mtime_ns": 1791205005853298100,
+      "sha256": "51f7a7c7a21b8a1202dd27443bc251c0144427b845c3bc2e25f58ec77e2ac630"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_retarget.py": {
+      "bytes": 23160,
+      "mtime_ns": 1788855231575637600,
+      "sha256": "f98f84c2bcec2402586c5704fd531de23069465f7adf26524eb201c6811bd28c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_runtime.py": {
+      "bytes": 4912,
+      "mtime_ns": 1788854513957934000,
+      "sha256": "1a42593c14bb61e33de16c25b3dc107dcf9ef65ef1034b5ea248f4e35a28a59d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py": {
+      "bytes": 25291,
+      "mtime_ns": 1791207782325423000,
+      "sha256": "4350d5f1f01afa7e3fb032e34954ddf060a629367d8283c807d80842633ec93a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py": {
+      "bytes": 16191,
+      "mtime_ns": 1791226522754245400,
+      "sha256": "c2b0d0ae0c969bece33106ec481c862f175f1df29abc6434e749f7afbafebac6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_fingerprint.py": {
+      "bytes": 32212,
+      "mtime_ns": 1791207211079898300,
+      "sha256": "74a49632682def0ec598cb819018d67f217a032bd4253d8a88af50cbf7d63193"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_queue.py": {
+      "bytes": 8653,
+      "mtime_ns": 1791202092699619300,
+      "sha256": "12f936ac57ce6981d8988932cf4f05a2cdfdc8567b7d5842b92a79069187650b"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py": {
+      "bytes": 31100,
+      "mtime_ns": 1791210348219983900,
+      "sha256": "394e6e2442953fc109cac2654de0ad800a1e234a864e0bd0dfff89caad661fd8"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_workspace.py": {
+      "bytes": 7702,
+      "mtime_ns": 1790842487098136700,
+      "sha256": "7a8209ff276142668d3d94053a91c0ff4a45af36517e787c31d35c02f5a31b60"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ATTRIBUTION.md": {
+      "bytes": 1185,
+      "mtime_ns": 1788938984960950800,
+      "sha256": "97ec7c9849e1deb302527a172de5ff0c833b600f0099ea6d7ffd05133134cb3a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration.py": {
+      "bytes": 38907,
+      "mtime_ns": 1790960991379708300,
+      "sha256": "8310159a27ccd0d501161fbf4aa24dd0cf57f1fec3e761be6e13094f713552e0"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_display.py": {
+      "bytes": 9373,
+      "mtime_ns": 1790518412123486100,
+      "sha256": "bc96daee9eac162de5aa2912f94aa8b9393e80f8ffce10c24001d705c6c6be7c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_hands.py": {
+      "bytes": 7419,
+      "mtime_ns": 1790522728155587900,
+      "sha256": "cd2dd840a5b9944763efb84ed9e806909bd0b13abc93b2e1b02990368e121f2a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_math.py": {
+      "bytes": 6101,
+      "mtime_ns": 1790490291574295300,
+      "sha256": "6db2702e866ce955b3501a505e4525df3e74f8c00885c733b0d562bae627308e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_overlay.py": {
+      "bytes": 11337,
+      "mtime_ns": 1790520791366717400,
+      "sha256": "05b700219ad7f5ce17e4fdee386a9da78ef590f8439b038b4736b108a2957dac"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_calibration_ui.py": {
+      "bytes": 15886,
+      "mtime_ns": 1790524228024790900,
+      "sha256": "821cc624c90ae1a2db85835ec2c25473fda42abcbd777c7e92f50c61e7928613"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_controls_ui.py": {
+      "bytes": 18835,
+      "mtime_ns": 1790935700381779900,
+      "sha256": "4f7a8c3b5ff181be6b3828d5ad603de353b2313aff00245cce13ef7eb7bb0458"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_detail_visuals.py": {
+      "bytes": 25615,
+      "mtime_ns": 1791026096463051600,
+      "sha256": "ce2466388ca1d49c6fda435a600bc5513e296485b097b4c0675405110d35b87d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_original_mode.py": {
+      "bytes": 33689,
+      "mtime_ns": 1791078389442081300,
+      "sha256": "d2d8e122c77a56ef314893470a197107462235aff159a05254fa7146e1e8b661"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_rest_resync.py": {
+      "bytes": 24055,
+      "mtime_ns": 1791049997957730800,
+      "sha256": "41d048dbb8892d8d1baea2f90d3335a7dc29ebb3124e9b220be6048687301c03"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup.py": {
+      "bytes": 11106,
+      "mtime_ns": 1790960991381260400,
+      "sha256": "ed7f1b4ece2aadb6a07b0d99aa50dc03e44232ed38fe7ed1b072918283dcbfbb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_plan.py": {
+      "bytes": 19446,
+      "mtime_ns": 1791058342390631300,
+      "sha256": "85f29265e648ea047c060e7314d0bc307c8ad2aa7b279799f5f0e9b16e9c9916"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_removal.py": {
+      "bytes": 20642,
+      "mtime_ns": 1790492148806971000,
+      "sha256": "53d4c1485c8b70918cd887689c5762b7cd0e6563565dcd65e88c65b2a902da0d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_transaction.py": {
+      "bytes": 28073,
+      "mtime_ns": 1790524801134519600,
+      "sha256": "13d5b4c489d6ead3d9b40d8468d9019f8422ba37f35328917decc755a231f4a3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\body_setup_ui.py": {
+      "bytes": 5717,
+      "mtime_ns": 1790528287089078000,
+      "sha256": "bc3bcd8ed76449063c2649801777bf5908228cf46e78b21540f008254582051f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py": {
+      "bytes": 46880,
+      "mtime_ns": 1791067369835849100,
+      "sha256": "aa92d856cbbd5df88f05fd700c7ba03c845d25b5941efcf5f23f46138d70a6c5"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_color_palette.py": {
+      "bytes": 38012,
+      "mtime_ns": 1791029630616898700,
+      "sha256": "c0fb02f35bd9f1eaaf75307bad71d537180c82ad7f1b52e43ca1d75359e0629d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_display.py": {
+      "bytes": 24898,
+      "mtime_ns": 1791066474871388900,
+      "sha256": "733adce1dd9d10cf41d0fb4916ed1b54337f83f8c0b1bf7cd8a000f6fcc9ab13"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_display_sync.py": {
+      "bytes": 2798,
+      "mtime_ns": 1790935667602810000,
+      "sha256": "79c2f3c09978944a3f1cd2d4b4303ff9f9abda75848248222f44cffa4487a3a9"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\character_setup.py": {
+      "bytes": 23817,
+      "mtime_ns": 1790881298381573800,
+      "sha256": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_colors.py": {
+      "bytes": 10653,
+      "mtime_ns": 1791025634383357400,
+      "sha256": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_pose_assets.py": {
+      "bytes": 27742,
+      "mtime_ns": 1791054332348239300,
+      "sha256": "6aa7071c4c1bdf6b80a2906cf88e58f41cf6320b927cc07467805f7592b6fb2f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_pose_mirror.py": {
+      "bytes": 4580,
+      "mtime_ns": 1790566752321384300,
+      "sha256": "f2cff99f0066872efe8c47018d3706c3ac62b76ebf06709258feb086a9e7bf41"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_weight_paint.py": {
+      "bytes": 11275,
+      "mtime_ns": 1790960750803193300,
+      "sha256": "339a5ade54c73892e7a5aa02da1a38e562b107610cfc1a8620edd1b00fcc1eda"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\curve_tools.py": {
+      "bytes": 5360,
+      "mtime_ns": 1790532177697958500,
+      "sha256": "ed25cb3c8b230c6a6cf1a0799f5875ee73dc711b5f32f818eae858f5e0c0335a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\delta_symmetry.py": {
+      "bytes": 72147,
+      "mtime_ns": 1790560761535310100,
+      "sha256": "73ec541ad3d727965d7585d9ba77b56b0e91be80f3197892b0b0740a8b5bb282"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py": {
+      "bytes": 12750,
+      "mtime_ns": 1791226915820904800,
+      "sha256": "fc6e5f39eef17e69e654a596e6642540d6ac0d21dc5258879e25b9175bcce0aa"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_controls.py": {
+      "bytes": 30061,
+      "mtime_ns": 1791045992486385800,
+      "sha256": "8be7a0247417b5e86b30e5ae49724863167e282b22bf1ebb899916076af61521"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_ui.py": {
+      "bytes": 5244,
+      "mtime_ns": 1789242100102083100,
+      "sha256": "346f3c4a6f7067844124ab5d5891bfe84493f6c5e91523648c8f5a904da13001"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bank.py": {
+      "bytes": 48222,
+      "mtime_ns": 1790036190526534300,
+      "sha256": "3f8e5e452c50bd87b61500ec337913c0d909d4168d2830d5defbdd2206774c92"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bank_ui.py": {
+      "bytes": 10106,
+      "mtime_ns": 1790039269504374900,
+      "sha256": "9f6033db46f68e8e214d9f9836c63773b36bdb56efeacb16088ea10a6f3fece2"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bone_mirror.py": {
+      "bytes": 8785,
+      "mtime_ns": 1790040236625006200,
+      "sha256": "3956599bac6762f5088d6a92dd7465ec65b63d938f414272c9e8a1458b314fc3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bone_tools.py": {
+      "bytes": 18684,
+      "mtime_ns": 1790039589520901300,
+      "sha256": "8f9a8d95511a4b8714b6e20645e07da49fba161be56ac574c35fc81dcb193b8a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_bones.py": {
+      "bytes": 23389,
+      "mtime_ns": 1790490291575296400,
+      "sha256": "fd8f4e7e78364c789f2f8fbaf7fb72c2035e79f3f04ba9a7e152402f151a4613"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_chain.py": {
+      "bytes": 21663,
+      "mtime_ns": 1790035643593921100,
+      "sha256": "ffc27af7094d5c91f6be86ae365e52ec541587cd2e15dd81fc79367dc3228d6f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_definition.py": {
+      "bytes": 29863,
+      "mtime_ns": 1790036190529054500,
+      "sha256": "a0ab9878dbfda35bf4db22d2af422b07b6b4830c809c53b392f51e71974365f6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_definition_ui.py": {
+      "bytes": 22647,
+      "mtime_ns": 1790036190530578900,
+      "sha256": "627435ee5bbe804b7cae3261533c9c5b64647c2a1b2e78800c78291b27c0c4d7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_detect.py": {
+      "bytes": 8558,
+      "mtime_ns": 1789849943633812200,
+      "sha256": "a984c6524b4478ef1ac53247a58df81b452d338263c1d0d9b3a3208e1071171a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_flex.py": {
+      "bytes": 23192,
+      "mtime_ns": 1789867050006785900,
+      "sha256": "ec4fdc0016b98bcc2ccd909124ddfe1de68259df77f51191faa6896741d88371"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_internal.py": {
+      "bytes": 14050,
+      "mtime_ns": 1789870246823992200,
+      "sha256": "41d6ca40522608da8931153e65f511a0b25014901529e252126bdbca69e67b40"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_loop_marks.py": {
+      "bytes": 33653,
+      "mtime_ns": 1790126344444112500,
+      "sha256": "5b7938a05dd988da93f084284634716e41dc6cac486fc8f914c4cd763a8c851d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_loop_marks_ui.py": {
+      "bytes": 9091,
+      "mtime_ns": 1790035979958672200,
+      "sha256": "1c6af2c6c2eb60e953a5035fc7e2e5dfad2b8d3fc6f2194dfa86eb15c7f61f45"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_mirror_sync.py": {
+      "bytes": 8920,
+      "mtime_ns": 1790039373244565400,
+      "sha256": "296caca0ef8eb790a7929e6264ee35f54fbed0c7e15404521008f866450a71d3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_preview_cache.py": {
+      "bytes": 3261,
+      "mtime_ns": 1790034142147052900,
+      "sha256": "5a8646babddf10a7af64e8beb9ef07fe6af079dafd11b358ae3f6edfd3379d4f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_range.py": {
+      "bytes": 12119,
+      "mtime_ns": 1789988073063067700,
+      "sha256": "d00ab689a67c02d9bc2e186583f92f298ce0b7a3ce200a444d44a7910e7e0a5d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_root.py": {
+      "bytes": 26890,
+      "mtime_ns": 1789998635705059400,
+      "sha256": "1414ca6cb5424e1721220a62007bb3516af43fdeb77b1c27577ee589d786f83e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_symmetry.py": {
+      "bytes": 3448,
+      "mtime_ns": 1789828997540523000,
+      "sha256": "afdac9c0d905adf6d7d0e682dadbed8d1f4f75b4dabca87aa0a079c64cea834a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\finger_targets.py": {
+      "bytes": 17502,
+      "mtime_ns": 1790039079513067700,
+      "sha256": "49d235e618bde9cac87231cd92e5b033391087d39e7938976bef503063582785"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\foot_controls.py": {
+      "bytes": 66640,
+      "mtime_ns": 1791045992482868600,
+      "sha256": "f949f24175ae70d537bfe74bb6be5c0ea3abe72f62c55b842cedb553b6eeb2c3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_original_inventory.py": {
+      "bytes": 4567,
+      "mtime_ns": 1791049112335664000,
+      "sha256": "28a86885c5cba5579cd054a41d27933787f33ec0d19cf452f4a858da4ca069ac"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py": {
+      "bytes": 92915,
+      "mtime_ns": 1791054212827831000,
+      "sha256": "fc2fbf6ff1b1bfa23b4dba5bd8e16e09e73ca33ab545735cddc929c11ebf85c6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_cache.py": {
+      "bytes": 3879,
+      "mtime_ns": 1790944194279600100,
+      "sha256": "963ba3c447ed691a2a76f9ca6249cedb3cb57b7276033109f286acefdc3288ce"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_edit.py": {
+      "bytes": 21056,
+      "mtime_ns": 1790521338003140300,
+      "sha256": "23b794256a6760c20747cc86cabb83a4db6abb20cba6842c6a09a383fde716e5"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py": {
+      "bytes": 10357,
+      "mtime_ns": 1788827548326242300,
+      "sha256": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_profile.py": {
+      "bytes": 10032,
+      "mtime_ns": 1790518554047572000,
+      "sha256": "71f9c61af778bb26bddbb23ef334a8dd1a39928a84c5e8fea3145ffc5d1ff947"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_symmetry.py": {
+      "bytes": 10021,
+      "mtime_ns": 1788827548329745400,
+      "sha256": "620c7b85ca2352caa5d0391162657ff1f5564d1d57ed0cd6ff34f8105703b6f3"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_topology.py": {
+      "bytes": 20895,
+      "mtime_ns": 1790519328064288300,
+      "sha256": "01a7fb1a13451971b58ae49ffe1295a25c8344d9726fd3606825a063a2274f18"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\generated_names.py": {
+      "bytes": 14171,
+      "mtime_ns": 1791039187040307300,
+      "sha256": "a1c49790c61c31e915de15b1a4baa76c75be2b490a6d771eca179921fda4d931"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones.py": {
+      "bytes": 14180,
+      "mtime_ns": 1790567999246457400,
+      "sha256": "bb0c1e43ac592ac0e7b59df42411cf19ed4ed5f650851fdd7b6eef4f3fd60852"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_binding.py": {
+      "bytes": 41867,
+      "mtime_ns": 1791087333275842600,
+      "sha256": "758ecb71bc8503f435251f2f3cdc7a0e8f70d175ef4b1921d53bdc825b58cf84"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_groups.py": {
+      "bytes": 20773,
+      "mtime_ns": 1791087117322780900,
+      "sha256": "ab025f084ec6a95f2ec976981577f7f8c373d3c8b99e1252330cb43edeaf4109"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_mirror.py": {
+      "bytes": 8227,
+      "mtime_ns": 1788845991466022300,
+      "sha256": "6bc3dd91faeefb73f5d30608dab28a54f057596bf4b62607d4ae449c5cb473cc"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_rig.py": {
+      "bytes": 46823,
+      "mtime_ns": 1791087072077166100,
+      "sha256": "e0fed1d3c6fbdedb4cf8254f265f0f570323fbc74491ed8b90629147274564fe"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_topology.py": {
+      "bytes": 26954,
+      "mtime_ns": 1790565605093791200,
+      "sha256": "8973b7fbdd709641bc1272c49b750dbdce571141ba640ebf137a4f189520228a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_bones_variants.py": {
+      "bytes": 24029,
+      "mtime_ns": 1788846742000887600,
+      "sha256": "aa985d12e5a5235a1f964b3ed1b74c55074acb4729443a339f15e62fb5b2921c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_export.py": {
+      "bytes": 28262,
+      "mtime_ns": 1791085163100516100,
+      "sha256": "c7d9396e5d3531c9ccc3bc79777a8183357c11125d8032cc3af43c35b3f91bcb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_lifecycle.py": {
+      "bytes": 13848,
+      "mtime_ns": 1791088088057009400,
+      "sha256": "efade4de4db2a3ea4c6568837f80b7f93d132eb3268c4dee4996a6a66914abc8"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_profiles.py": {
+      "bytes": 18664,
+      "mtime_ns": 1791087069397095300,
+      "sha256": "1aaa883693db6bfd53d9459b24f14f98d5afb9247ee0abd51e59af5bce83cc4d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_motion_ui.py": {
+      "bytes": 20846,
+      "mtime_ns": 1791107478341119700,
+      "sha256": "4ea527ddcfb53f9f4c3cee187227f7403b28b1753f574a3e599bc7605a3daf16"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_strand_registry.py": {
+      "bytes": 37666,
+      "mtime_ns": 1791085545157138600,
+      "sha256": "a6c6a03e8f4eebeff9349bc44fb0474e4df2d3feb4d5c5a6e7fb4c609239fe2d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_wiggle_adapter.py": {
+      "bytes": 36489,
+      "mtime_ns": 1791084933614578600,
+      "sha256": "318f160c97495fa8d295d4f5c8dd1374da44de6571f1289234acc6570bab36fa"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\head_neck_visuals.py": {
+      "bytes": 21608,
+      "mtime_ns": 1791026096464653100,
+      "sha256": "443535a0d1e052b44cfbd53ffae49b628958b00c418ca8ead8ca2390a1c77caf"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_fk_visuals.py": {
+      "bytes": 25021,
+      "mtime_ns": 1791066474929713900,
+      "sha256": "228fbdcc2bd8226a9e2d871a25aff8d86df558098b2dcebba28c7a6ffbd405d6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py": {
+      "bytes": 448738,
+      "mtime_ns": 1791067800109605600,
+      "sha256": "4b98aed6d182bccb322c8166b81e406433d3648f7b5c6cfe79a7d1419aff2385"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py": {
+      "bytes": 47377,
+      "mtime_ns": 1791079212770841400,
+      "sha256": "d98c3cc57093b14156fc41eccd929d608aebca163945e88fbd61d7213c8578a2"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk_batch.py": {
+      "bytes": 18494,
+      "mtime_ns": 1791067369836847400,
+      "sha256": "4e55f888471ffeb13aa69fe6d444772e08fdbe36c04ca51d48e2ee7deb671669"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_copy.py": {
+      "bytes": 1781,
+      "mtime_ns": 1791185013298475800,
+      "sha256": "a43aabff39a1ed9525df53352b859943a5571edeb30405d34338a5bebf264150"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_mirror.py": {
+      "bytes": 38587,
+      "mtime_ns": 1790350360449871800,
+      "sha256": "8af288a9a72612a13a3e335397fd1e733173f5632dcc0788eaf384fdd3ef0977"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_mirror_match.py": {
+      "bytes": 8573,
+      "mtime_ns": 1789817627145069200,
+      "sha256": "36cdab15d711cb050a2f595b41419856fab6ac97fb3ba2e48b5de651481bcee5"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_mirror_ui.py": {
+      "bytes": 19133,
+      "mtime_ns": 1790858211306798100,
+      "sha256": "76c61eacc8823e2f5f0d26a7833dc17afc27cf0e13bb9fcfaabb11c89e1f1d49"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\native_symmetry_pairs.py": {
+      "bytes": 9026,
+      "mtime_ns": 1790931569411534000,
+      "sha256": "afcd0c270be48d24f9aef910720dce761d910f76ce2651176d633fd6614f98ec"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\quick_bind.py": {
+      "bytes": 28641,
+      "mtime_ns": 1790569107967328100,
+      "sha256": "6579f51d5f49612ecf28eef89b034f4f8bae22d4c61987edb2db4920d3ea976c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\quick_bind_parenting.py": {
+      "bytes": 10513,
+      "mtime_ns": 1790569193261125600,
+      "sha256": "8ee81ec458893cb7637d1179ee0f09855daf69f7f365c76e625a1a22b2f50708"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\README.md": {
+      "bytes": 170160,
+      "mtime_ns": 1791137730101793600,
+      "sha256": "3f8b2b006da7a60bf2f4199457e7d5feac7e571872b77a675eca2193be5a407d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\reference_views.py": {
+      "bytes": 58190,
+      "mtime_ns": 1790560761537557700,
+      "sha256": "abe79849f92e0a5ed86812bedc323aa2d71b830af4807a075c683322a86e94e8"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\refine_symmetry.py": {
+      "bytes": 20520,
+      "mtime_ns": 1790932758582778300,
+      "sha256": "46c6f90fd7d0e3c97924f9b4dc111dcf18d4c82799443d4873609fc3df397a7f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\refine_symmetry_ui.py": {
+      "bytes": 18255,
+      "mtime_ns": 1790932735926010000,
+      "sha256": "2cea4f60360e07c2f4c313e6234cd28075e224851df57cccf590e71d6f1cfd42"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\root_control.py": {
+      "bytes": 32384,
+      "mtime_ns": 1791045992487892600,
+      "sha256": "243b62967ee08c61657886ed5cab74ca257b75a13bd6b8dad794e9483560e6af"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\selected_bone_weights.py": {
+      "bytes": 54351,
+      "mtime_ns": 1790961249802580400,
+      "sha256": "0f9e3d1498a4414d00c49e9903a9d6b31707260ff1eaf23850dea915c028248a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\shape_key_tools.py": {
+      "bytes": 17705,
+      "mtime_ns": 1790560761532276700,
+      "sha256": "366a6de1fe55ea5f1d46c57e1227c4f6f250705214869dd64ac7a05639ba8811"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt.py": {
+      "bytes": 48027,
+      "mtime_ns": 1791225189643051100,
+      "sha256": "07f148f4db4791cce14091fb6d56f9a94b811a972595921213d3ea0986c69f46"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py": {
+      "bytes": 9342,
+      "mtime_ns": 1791176267300537100,
+      "sha256": "be77e6f1fdcd6819ee46a3490515a0791b644900f286f04e287b5704706390e1"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_tuning.py": {
+      "bytes": 17358,
+      "mtime_ns": 1791222488884900900,
+      "sha256": "d532a2ce125481d23982639b9ed6bcc7898bcd41ec9a9eb26e41ceb4e65910f7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_ui.py": {
+      "bytes": 13396,
+      "mtime_ns": 1791141556577516200,
+      "sha256": "315cab846aa6ce9741e63ffde68ae7cb4a78befa53bdba42890d1b3bcf4f487f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_name_records.py": {
+      "bytes": 18013,
+      "mtime_ns": 1791039631448501800,
+      "sha256": "5e88e396e8d6e3172d48fc344b92538ce4a6c69141a53034d37eff7546dbff9f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_names.py": {
+      "bytes": 9353,
+      "mtime_ns": 1791040649190466600,
+      "sha256": "c174c42b7a68f9e116e6c4c15d51ef310d3d9fb1f1cc5b0a9aea3b009bc3b3c7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_original_mode.py": {
+      "bytes": 24473,
+      "mtime_ns": 1791177861030054500,
+      "sha256": "209fe00aa8f90eb57e61d06d10bfe6cd90ab7cbf56ec451794c5012da3684e58"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_physics.py": {
+      "bytes": 44122,
+      "mtime_ns": 1791222488887937000,
+      "sha256": "410a5ec81c980f2d2d33e5c1f8634dc1edb189c3f8e5d9e507798b41bb991aae"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_rig.py": {
+      "bytes": 50441,
+      "mtime_ns": 1791178635509959600,
+      "sha256": "c3801dbbae6668f363e803bae102c52dc505c9d46be303ecef5bbc08c8fed0ff"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_shared_rig.py": {
+      "bytes": 43554,
+      "mtime_ns": 1791178635510969800,
+      "sha256": "d31f7c8840617ea598053177cfb03c9b8e28dcf156ed932b684789b5ba630a14"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py": {
+      "bytes": 83682,
+      "mtime_ns": 1791224455616734900,
+      "sha256": "3905846f751659a6970cc80b70118201eaea068a657c69cd764b789e893b127b"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_topology.py": {
+      "bytes": 16590,
+      "mtime_ns": 1788827548368518200,
+      "sha256": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py": {
+      "bytes": 36639,
+      "mtime_ns": 1791045992485384800,
+      "sha256": "ad2e82fc9200af280befed0c55c745bc0ce3990f0120c638a6e906ae9f0a264f"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spline_ik_setup.py": {
+      "bytes": 166088,
+      "mtime_ns": 1788908713076349900,
+      "sha256": "92f463ef5fe0eccc768fc71b57f9ba3cbfde86c3a444866bb9e68361a0ad9695"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\symmetry_pairs.py": {
+      "bytes": 22832,
+      "mtime_ns": 1790926721364734700,
+      "sha256": "d3cdc6c6b333a3581ff8faafa41abcbd3778e1ff3c030d2e7b6e853a2d64967d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\topology_symmetry.py": {
+      "bytes": 69209,
+      "mtime_ns": 1790412673797793700,
+      "sha256": "b982af6d6f2bf840a6f25fb7b7f574ae0697abbde750e7c7806734b0b2988539"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_controls.py": {
+      "bytes": 22759,
+      "mtime_ns": 1791045992484378300,
+      "sha256": "37772c81e8142f5debd9674a6d4c424129a4579eeafbf9cedcef5f718f36b87a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_ui.py": {
+      "bytes": 9961,
+      "mtime_ns": 1791058093774240500,
+      "sha256": "5daf8f5fb65fb99aa94eaadd3487bbe4bd400908d9780bbcdfcf6897dc915835"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ui_constants.py": {
+      "bytes": 2281,
+      "mtime_ns": 1790845532348039800,
+      "sha256": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py": {
+      "bytes": 36447,
+      "mtime_ns": 1790857698191805300,
+      "sha256": "7296db378c8c892b179dbf67d5bb308f04a367e2ef41369fb5f224f07da42a36"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_controls.py": {
+      "bytes": 16452,
+      "mtime_ns": 1790778914137577800,
+      "sha256": "51547f25cec9061c338e6c731f0a6bd63b92f77157245922899371a44a0d034a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_diagnostics.py": {
+      "bytes": 2473,
+      "mtime_ns": 1789357681659316500,
+      "sha256": "ac74dbc156989067e0f6b6789fc76ab7894ce290678ef2ae3158d798625c689c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export.py": {
+      "bytes": 34085,
+      "mtime_ns": 1791225938450982700,
+      "sha256": "a3d6e87527b23f9e9214c1121bc408ed4ee661ccd6feeb6c3f0f8ab0439f9043"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_ui.py": {
+      "bytes": 36142,
+      "mtime_ns": 1791137988119229900,
+      "sha256": "8914fec48d3a55f61d042166f20e54c5124b98e74af787e69186c27af94b169d"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": {
+      "bytes": 54352,
+      "mtime_ns": 1791231857178301400,
+      "sha256": "069fb0f21b02e36a23dd02b1978d2a917c2873f290fc3331cdf0d55e877ce5bc"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_forearm.py": {
+      "bytes": 10083,
+      "mtime_ns": 1789338868265165200,
+      "sha256": "3979192a00a93417ee077d6290c71a229b57d2de04ebf04c41efa65bc321c1bb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_materials.py": {
+      "bytes": 8476,
+      "mtime_ns": 1789358011941745900,
+      "sha256": "5f06562b3af5c5c34e41a6d9d4a4d49f203d9678396a1f28713e0811778c805b"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\ANIMATION.md": {
+      "bytes": 15893,
+      "mtime_ns": 1790810096549877700,
+      "sha256": "ac884c2cf7b21303aac9c82e5c849cd4b7ba199ebec2aa973b98ded43fd82790"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationPreviewRenderer.cs": {
+      "bytes": 5197,
+      "mtime_ns": 1790852773173659600,
+      "sha256": "d8f977100bf86824336fd3067d3a79698dbd7c223b4a0a420cc1b50ac9af0bf6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs": {
+      "bytes": 24505,
+      "mtime_ns": 1790809663732752600,
+      "sha256": "4b5ceb26d45e90b77af10d7bf80024190a3e0108c257b388e0e29421cda02285"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationTransfer.cs": {
+      "bytes": 31595,
+      "mtime_ns": 1790932902004233300,
+      "sha256": "aff73958b9da692d669c72458be504c9e9b9644b1591182c7f580eb21f6c8354"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationValidation.cs": {
+      "bytes": 10367,
+      "mtime_ns": 1789387278506336900,
+      "sha256": "43e7006c3885360275e786b3105916177c7842278ed44efabdc21ae1b19c1591"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWindow.cs": {
+      "bytes": 13699,
+      "mtime_ns": 1790864976854522200,
+      "sha256": "8a964524488ef712f2e11b5e92eedf491ec1db6f582e8c07e8a8deb0a7501ceb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterDesigner.Unity.Editor.asmdef": {
+      "bytes": 181,
+      "mtime_ns": 1789339301103590100,
+      "sha256": "0ca1b70d1736c7b307b554375ab95b89881a2b8eeb322323cba37bece2386eca"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionExportValidation.cs": {
+      "bytes": 12161,
+      "mtime_ns": 1789342037911094900,
+      "sha256": "648a8aed75f75ec80e23a68b0d00c466deaa2fe6244576c388e9b4506e5c0417"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionImporter.cs": {
+      "bytes": 32704,
+      "mtime_ns": 1789341487595236600,
+      "sha256": "52500fdcfa10644d2246610e56c5d04bccaad14f5075841e2eed37c076768950"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionImportValidation.cs": {
+      "bytes": 9531,
+      "mtime_ns": 1789341562800105700,
+      "sha256": "6913448ceb34c3282ed5e4aff9062b970050d9c87180220f6646e6b7ed3fef1e"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionMathValidation.cs": {
+      "bytes": 8473,
+      "mtime_ns": 1789340983165189800,
+      "sha256": "41c8c5fb94de5486b4b93c956e79033a9dd21b99a4d016df0849829f42187801"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\ForearmCorrectionRuntimeValidation.cs": {
+      "bytes": 15815,
+      "mtime_ns": 1789341671430089600,
+      "sha256": "e4bc5a9712124b67997e7d9e9d7bd58b006b3b046be3f2c7c122f189aef23fe4"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\README.md": {
+      "bytes": 5033,
+      "mtime_ns": 1789389269639802000,
+      "sha256": "3d7353fef26187d68d9ebe82da30866bc6b15e476015387dd6ee7fe9df0781eb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterDesigner.Unity.Runtime.asmdef": {
+      "bytes": 383,
+      "mtime_ns": 1789338228928657300,
+      "sha256": "795159ea1083023dd9bc7e207808aa9f1d049d2fdac89c165a158b87e5170a07"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrection.cs": {
+      "bytes": 37056,
+      "mtime_ns": 1790572508934830100,
+      "sha256": "caef1ec7531a80009f9bfa163528b2986059c234cedc6b9034eea7c366ea4117"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrectionData.cs": {
+      "bytes": 1835,
+      "mtime_ns": 1789338228927649600,
+      "sha256": "cde82ed8015ef42fc7124856add8531638ba0f689bb6e53271432807376003e7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrectionMath.cs": {
+      "bytes": 12281,
+      "mtime_ns": 1789337594790916300,
+      "sha256": "6b9f6aeee33765197e1ca193c24f9afcd7d5892fcf7bd4b2f03d42073996effb"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Tests\\PlayMode\\CharacterDesigner.Unity.PlayModeTests.asmdef": {
+      "bytes": 480,
+      "mtime_ns": 1789339365368068400,
+      "sha256": "9dc640bd4e0a96b195eec03492e4b792d1c47bdcfb9e93b3a8a199a345b5965c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Tests\\PlayMode\\ForearmCorrectionPlayModeTests.cs": {
+      "bytes": 8165,
+      "mtime_ns": 1789339365369076200,
+      "sha256": "265d912ae88ace529dc2ec1f122b7805a583f46004d09e7d55b48d1ab65abff6"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\weight_symmetry.py": {
+      "bytes": 62075,
+      "mtime_ns": 1789816808395554000,
+      "sha256": "06409a3fff8d7db9e0ad778299da5196f48a68ae107d92537c60c34db79e0e8c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\widget_collections.py": {
+      "bytes": 13252,
+      "mtime_ns": 1790893930279426900,
+      "sha256": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18"
+    }
+  },
+  "canonical_code_exact": true,
+  "dependency_code_exact": true,
+  "script_code_exact": true,
+  "elapsed_seconds": 47.14734209998278
+}

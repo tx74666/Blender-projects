@@ -1,1 +1,5 @@
 *.blend filter=lfs diff=lfs merge=lfs -text
+
+# Raw validation inputs are hash-pinned by replay scripts; keep their bytes intact.
+validation/**/native_endpoints.json filter=lfs diff=lfs merge=lfs -text
+validation/**/native_input800_endpoints.json filter=lfs diff=lfs merge=lfs -text

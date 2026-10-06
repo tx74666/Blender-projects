@@ -1,0 +1,2916 @@
+{
+  "tool": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\analyze_final_clearance_geometry.py",
+  "tool_sha256": "b6887f1bc17579024482b0a04ea05efe736159d07799654201024be20b72e229",
+  "points_directory": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_clearance_51_20261006_070654_487\\result\\actual_points",
+  "status": "measured",
+  "analysis_completed": true,
+  "cases": [
+    {
+      "case": "initial",
+      "status": "measured",
+      "analysis_completed": true,
+      "native_frame": 1,
+      "units_to_metres": 1.0,
+      "projection_change_observed": false,
+      "projection_observation": "no_projection_change_observed",
+      "final_vertices": 3040,
+      "native_edges": 5920,
+      "native_triangles": 5760,
+      "exact_native_topology_sha256": "bdcecf40835ef3ecf87a6e8e52c681d62182c91d64ebdac6d27cf5b10a141b9e",
+      "same_native_input_exact": true,
+      "non_Dress_input_maximum_deltas_m": {
+        "Body": 0.0,
+        "C800": 0.0,
+        "H0800": 0.0,
+        "knee.L": 0.0,
+        "knee.R": 0.0,
+        "hem": 0.0
+      },
+      "global": {
+        "vertex_displacement_m": {
+          "status": "measured",
+          "total_samples": 3040,
+          "measured_samples": 3040,
+          "unknown_indices": [],
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "median": 0.0,
+          "p95_nearest_rank": 0.0,
+          "worst_low": [
+            {
+              "index": 0,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 1,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 2,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 3,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 4,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 5,
+              "region": "mixed_waist_transition",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 6,
+              "region": "mixed_waist_transition",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 7,
+              "region": "mixed_waist_transition",
+              "displacement_m": 0.0
+            }
+          ],
+          "worst_high": [
+            {
+              "index": 0,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 1,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 2,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 3,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 4,
+              "region": "hard_fixed_waist",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 5,
+              "region": "mixed_waist_transition",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 6,
+              "region": "mixed_waist_transition",
+              "displacement_m": 0.0
+            },
+            {
+              "index": 7,
+              "region": "mixed_waist_transition",
+              "displacement_m": 0.0
+            }
+          ]
+        },
+        "edge_length_ratio_projected_over_baseline": {
+          "status": "measured",
+          "total_samples": 5920,
+          "measured_samples": 5920,
+          "unknown_indices": [],
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "median": 1.0,
+          "p95_nearest_rank": 1.0,
+          "worst_low": [
+            {
+              "index": 0,
+              "vertices": [
+                1,
+                800
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.0037675015869049924,
+              "projected_length_m": 0.0037675015869049924,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 1,
+              "vertices": [
+                800,
+                0
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003767502579852709,
+              "projected_length_m": 0.003767502579852709,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 2,
+              "vertices": [
+                2,
+                801
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003817102526863142,
+              "projected_length_m": 0.003817102526863142,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 3,
+              "vertices": [
+                801,
+                1
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.0038042275925421797,
+              "projected_length_m": 0.0038042275925421797,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 4,
+              "vertices": [
+                3,
+                802
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003853598530706425,
+              "projected_length_m": 0.003853598530706425,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 5,
+              "vertices": [
+                802,
+                2
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.00383954613737994,
+              "projected_length_m": 0.00383954613737994,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 6,
+              "vertices": [
+                4,
+                803
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003911909688980018,
+              "projected_length_m": 0.003911909688980018,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 7,
+              "vertices": [
+                803,
+                3
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.00391191847018348,
+              "projected_length_m": 0.00391191847018348,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            }
+          ],
+          "worst_high": [
+            {
+              "index": 0,
+              "vertices": [
+                1,
+                800
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.0037675015869049924,
+              "projected_length_m": 0.0037675015869049924,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 1,
+              "vertices": [
+                800,
+                0
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003767502579852709,
+              "projected_length_m": 0.003767502579852709,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 2,
+              "vertices": [
+                2,
+                801
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003817102526863142,
+              "projected_length_m": 0.003817102526863142,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 3,
+              "vertices": [
+                801,
+                1
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.0038042275925421797,
+              "projected_length_m": 0.0038042275925421797,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 4,
+              "vertices": [
+                3,
+                802
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003853598530706425,
+              "projected_length_m": 0.003853598530706425,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 5,
+              "vertices": [
+                802,
+                2
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.00383954613737994,
+              "projected_length_m": 0.00383954613737994,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 6,
+              "vertices": [
+                4,
+                803
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.003911909688980018,
+              "projected_length_m": 0.003911909688980018,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            },
+            {
+              "index": 7,
+              "vertices": [
+                803,
+                3
+              ],
+              "region": "hard_fixed_waist",
+              "baseline_length_m": 0.00391191847018348,
+              "projected_length_m": 0.00391191847018348,
+              "baseline_low_length": false,
+              "projected_low_length": false,
+              "length_ratio": 1.0
+            }
+          ]
+        },
+        "triangle_area_ratio_projected_over_baseline": {
+          "status": "measured",
+          "total_samples": 5760,
+          "measured_samples": 5760,
+          "unknown_indices": [],
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "median": 1.0,
+          "p95_nearest_rank": 1.0,
+          "worst_low": [
+            {
+              "index": 0,
+              "vertices": [
+                0,
+                808,
+                2320
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.022409986858851e-05,
+              "projected_area_m2": 2.022409986858851e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 1,
+              "vertices": [
+                0,
+                2320,
+                800
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 1.955635647482807e-05,
+              "projected_area_m2": 1.955635647482807e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999999
+            },
+            {
+              "index": 2,
+              "vertices": [
+                808,
+                5,
+                804
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.093840984699707e-05,
+              "projected_area_m2": 2.093840984699707e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999999
+            },
+            {
+              "index": 3,
+              "vertices": [
+                808,
+                804,
+                2320
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.073475963332902e-05,
+              "projected_area_m2": 2.073475963332902e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999998
+            },
+            {
+              "index": 4,
+              "vertices": [
+                2320,
+                804,
+                6
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0997182785059203e-05,
+              "projected_area_m2": 2.0997182785059203e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 5,
+              "vertices": [
+                2320,
+                6,
+                809
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.086483611256977e-05,
+              "projected_area_m2": 2.086483611256977e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999999
+            },
+            {
+              "index": 6,
+              "vertices": [
+                800,
+                2320,
+                809
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0254563732919537e-05,
+              "projected_area_m2": 2.0254563732919537e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 7,
+              "vertices": [
+                800,
+                809,
+                1
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 1.962479879168782e-05,
+              "projected_area_m2": 1.962479879168782e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            }
+          ],
+          "worst_high": [
+            {
+              "index": 0,
+              "vertices": [
+                0,
+                808,
+                2320
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.022409986858851e-05,
+              "projected_area_m2": 2.022409986858851e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 1,
+              "vertices": [
+                0,
+                2320,
+                800
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 1.955635647482807e-05,
+              "projected_area_m2": 1.955635647482807e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999999
+            },
+            {
+              "index": 2,
+              "vertices": [
+                808,
+                5,
+                804
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.093840984699707e-05,
+              "projected_area_m2": 2.093840984699707e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999999
+            },
+            {
+              "index": 3,
+              "vertices": [
+                808,
+                804,
+                2320
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.073475963332902e-05,
+              "projected_area_m2": 2.073475963332902e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999998
+            },
+            {
+              "index": 4,
+              "vertices": [
+                2320,
+                804,
+                6
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0997182785059203e-05,
+              "projected_area_m2": 2.0997182785059203e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 5,
+              "vertices": [
+                2320,
+                6,
+                809
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.086483611256977e-05,
+              "projected_area_m2": 2.086483611256977e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999999
+            },
+            {
+              "index": 6,
+              "vertices": [
+                800,
+                2320,
+                809
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0254563732919537e-05,
+              "projected_area_m2": 2.0254563732919537e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 7,
+              "vertices": [
+                800,
+                809,
+                1
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 1.962479879168782e-05,
+              "projected_area_m2": 1.962479879168782e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            }
+          ]
+        },
+        "nondegenerate_triangle_normal_dot": {
+          "status": "measured",
+          "total_samples": 5760,
+          "measured_samples": 5760,
+          "unknown_indices": [],
+          "minimum": 0.9999999999999997,
+          "maximum": 1.0,
+          "median": 1.0,
+          "p95_nearest_rank": 1.0,
+          "worst_low": [
+            {
+              "index": 86,
+              "vertices": [
+                816,
+                2330,
+                830
+              ],
+              "region": "free_skirt",
+              "baseline_area_m2": 3.055488804298036e-05,
+              "projected_area_m2": 3.055488804298036e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            },
+            {
+              "index": 640,
+              "vertices": [
+                58,
+                893,
+                2400
+              ],
+              "region": "free_skirt",
+              "baseline_area_m2": 6.143550617733687e-05,
+              "projected_area_m2": 6.143550617733687e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            },
+            {
+              "index": 688,
+              "vertices": [
+                83,
+                952,
+                2406
+              ],
+              "region": "free_skirt",
+              "baseline_area_m2": 7.076610341008087e-05,
+              "projected_area_m2": 7.076610341008087e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            },
+            {
+              "index": 926,
+              "vertices": [
+                1044,
+                2435,
+                1057
+              ],
+              "region": "free_skirt",
+              "baseline_area_m2": 7.312756737857554e-05,
+              "projected_area_m2": 7.312756737857554e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            },
+            {
+              "index": 1027,
+              "vertices": [
+                1026,
+                1087,
+                2448
+              ],
+              "region": "free_skirt",
+              "baseline_area_m2": 4.171432894680979e-05,
+              "projected_area_m2": 4.171432894680979e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            },
+            {
+              "index": 1154,
+              "vertices": [
+                1077,
+                153,
+                1114
+              ],
+              "region": "free_skirt",
+              "baseline_area_m2": 3.0755688898743795e-05,
+              "projected_area_m2": 3.0755688898743795e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            },
+            {
+              "index": 1460,
+              "vertices": [
+                2502,
+                1194,
+                215
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 3.49253423044544e-05,
+              "projected_area_m2": 3.49253423044544e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            },
+            {
+              "index": 1661,
+              "vertices": [
+                2527,
+                238,
+                1248
+              ],
+              "region": "free_skirt",
+              "baseline_area_m2": 6.184321714327841e-05,
+              "projected_area_m2": 6.184321714327841e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 0.9999999999999997
+            }
+          ],
+          "worst_high": [
+            {
+              "index": 0,
+              "vertices": [
+                0,
+                808,
+                2320
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.022409986858851e-05,
+              "projected_area_m2": 2.022409986858851e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 4,
+              "vertices": [
+                2320,
+                804,
+                6
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0997182785059203e-05,
+              "projected_area_m2": 2.0997182785059203e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 6,
+              "vertices": [
+                800,
+                2320,
+                809
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0254563732919537e-05,
+              "projected_area_m2": 2.0254563732919537e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 7,
+              "vertices": [
+                800,
+                809,
+                1
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 1.962479879168782e-05,
+              "projected_area_m2": 1.962479879168782e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 8,
+              "vertices": [
+                3,
+                810,
+                2321
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0697998754911357e-05,
+              "projected_area_m2": 2.0697998754911357e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 9,
+              "vertices": [
+                3,
+                2321,
+                803
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.090694341161969e-05,
+              "projected_area_m2": 2.090694341161969e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 10,
+              "vertices": [
+                810,
+                8,
+                807
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.0806912128844562e-05,
+              "projected_area_m2": 2.0806912128844562e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            },
+            {
+              "index": 11,
+              "vertices": [
+                810,
+                807,
+                2321
+              ],
+              "region": "mixed_waist_transition",
+              "baseline_area_m2": 2.1243263761209905e-05,
+              "projected_area_m2": 2.1243263761209905e-05,
+              "baseline_low_area": false,
+              "projected_low_area": false,
+              "area_ratio": 1.0,
+              "normal_dot": 1.0
+            }
+          ]
+        },
+        "baseline_low_area_triangle_indices": [],
+        "projected_low_area_triangle_indices": [],
+        "baseline_low_length_edge_indices": [],
+        "projected_low_length_edge_indices": [],
+        "opposed_normal_candidate_triangle_indices": [],
+        "opposed_normal_candidate_dot_cutoff": -0.5,
+        "true_flips_accepted": false
+      },
+      "regions": {
+        "hard_fixed_waist": {
+          "vertex_displacement_m": {
+            "status": "measured",
+            "total_samples": 160,
+            "measured_samples": 160,
+            "unknown_indices": [],
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "median": 0.0,
+            "p95_nearest_rank": 0.0,
+            "worst_low": [
+              {
+                "index": 0,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 1,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 2,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 3,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 4,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 50,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 60,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 61,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 0,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 1,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 2,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 3,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 4,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 50,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 60,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 61,
+                "region": "hard_fixed_waist",
+                "displacement_m": 0.0
+              }
+            ]
+          },
+          "edge_length_ratio_projected_over_baseline": {
+            "status": "measured",
+            "total_samples": 160,
+            "measured_samples": 160,
+            "unknown_indices": [],
+            "minimum": 1.0,
+            "maximum": 1.0,
+            "median": 1.0,
+            "p95_nearest_rank": 1.0,
+            "worst_low": [
+              {
+                "index": 0,
+                "vertices": [
+                  1,
+                  800
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.0037675015869049924,
+                "projected_length_m": 0.0037675015869049924,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 1,
+                "vertices": [
+                  800,
+                  0
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003767502579852709,
+                "projected_length_m": 0.003767502579852709,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 2,
+                "vertices": [
+                  2,
+                  801
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003817102526863142,
+                "projected_length_m": 0.003817102526863142,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 3,
+                "vertices": [
+                  801,
+                  1
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.0038042275925421797,
+                "projected_length_m": 0.0038042275925421797,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 4,
+                "vertices": [
+                  3,
+                  802
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003853598530706425,
+                "projected_length_m": 0.003853598530706425,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 5,
+                "vertices": [
+                  802,
+                  2
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.00383954613737994,
+                "projected_length_m": 0.00383954613737994,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 6,
+                "vertices": [
+                  4,
+                  803
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003911909688980018,
+                "projected_length_m": 0.003911909688980018,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 7,
+                "vertices": [
+                  803,
+                  3
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.00391191847018348,
+                "projected_length_m": 0.00391191847018348,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 0,
+                "vertices": [
+                  1,
+                  800
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.0037675015869049924,
+                "projected_length_m": 0.0037675015869049924,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 1,
+                "vertices": [
+                  800,
+                  0
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003767502579852709,
+                "projected_length_m": 0.003767502579852709,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 2,
+                "vertices": [
+                  2,
+                  801
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003817102526863142,
+                "projected_length_m": 0.003817102526863142,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 3,
+                "vertices": [
+                  801,
+                  1
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.0038042275925421797,
+                "projected_length_m": 0.0038042275925421797,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 4,
+                "vertices": [
+                  3,
+                  802
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003853598530706425,
+                "projected_length_m": 0.003853598530706425,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 5,
+                "vertices": [
+                  802,
+                  2
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.00383954613737994,
+                "projected_length_m": 0.00383954613737994,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 6,
+                "vertices": [
+                  4,
+                  803
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.003911909688980018,
+                "projected_length_m": 0.003911909688980018,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 7,
+                "vertices": [
+                  803,
+                  3
+                ],
+                "region": "hard_fixed_waist",
+                "baseline_length_m": 0.00391191847018348,
+                "projected_length_m": 0.00391191847018348,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              }
+            ]
+          },
+          "triangle_area_ratio_projected_over_baseline": {
+            "status": "no_samples",
+            "total_samples": 0,
+            "measured_samples": 0,
+            "unknown_indices": [],
+            "minimum": null,
+            "maximum": null,
+            "median": null,
+            "p95_nearest_rank": null,
+            "worst_low": [],
+            "worst_high": []
+          },
+          "nondegenerate_triangle_normal_dot": {
+            "status": "no_samples",
+            "total_samples": 0,
+            "measured_samples": 0,
+            "unknown_indices": [],
+            "minimum": null,
+            "maximum": null,
+            "median": null,
+            "p95_nearest_rank": null,
+            "worst_low": [],
+            "worst_high": []
+          },
+          "baseline_low_area_triangle_indices": [],
+          "projected_low_area_triangle_indices": [],
+          "baseline_low_length_edge_indices": [],
+          "projected_low_length_edge_indices": [],
+          "opposed_normal_candidate_triangle_indices": [],
+          "opposed_normal_candidate_dot_cutoff": -0.5,
+          "true_flips_accepted": false
+        },
+        "mixed_waist_transition": {
+          "vertex_displacement_m": {
+            "status": "measured",
+            "total_samples": 480,
+            "measured_samples": 480,
+            "unknown_indices": [],
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "median": 0.0,
+            "p95_nearest_rank": 0.0,
+            "worst_low": [
+              {
+                "index": 5,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 6,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 7,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 8,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 9,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 51,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 64,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 65,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 5,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 6,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 7,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 8,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 9,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 51,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 64,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 65,
+                "region": "mixed_waist_transition",
+                "displacement_m": 0.0
+              }
+            ]
+          },
+          "edge_length_ratio_projected_over_baseline": {
+            "status": "measured",
+            "total_samples": 1120,
+            "measured_samples": 1120,
+            "unknown_indices": [],
+            "minimum": 1.0,
+            "maximum": 1.0,
+            "median": 1.0,
+            "p95_nearest_rank": 1.0,
+            "worst_low": [
+              {
+                "index": 8,
+                "vertices": [
+                  6,
+                  804
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.003951741591181854,
+                "projected_length_m": 0.003951741591181854,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 9,
+                "vertices": [
+                  804,
+                  5
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.0039517437102795545,
+                "projected_length_m": 0.0039517437102795545,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 10,
+                "vertices": [
+                  7,
+                  805
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.005006963412217978,
+                "projected_length_m": 0.005006963412217978,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 11,
+                "vertices": [
+                  805,
+                  6
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.005058815248730124,
+                "projected_length_m": 0.005058815248730124,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 12,
+                "vertices": [
+                  8,
+                  806
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.004945274119425316,
+                "projected_length_m": 0.004945274119425316,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 13,
+                "vertices": [
+                  806,
+                  7
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.004955134517430921,
+                "projected_length_m": 0.004955134517430921,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 14,
+                "vertices": [
+                  9,
+                  807
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.003722236038564668,
+                "projected_length_m": 0.003722236038564668,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 15,
+                "vertices": [
+                  807,
+                  8
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.003722235981282343,
+                "projected_length_m": 0.003722235981282343,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 8,
+                "vertices": [
+                  6,
+                  804
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.003951741591181854,
+                "projected_length_m": 0.003951741591181854,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 9,
+                "vertices": [
+                  804,
+                  5
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.0039517437102795545,
+                "projected_length_m": 0.0039517437102795545,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 10,
+                "vertices": [
+                  7,
+                  805
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.005006963412217978,
+                "projected_length_m": 0.005006963412217978,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 11,
+                "vertices": [
+                  805,
+                  6
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.005058815248730124,
+                "projected_length_m": 0.005058815248730124,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 12,
+                "vertices": [
+                  8,
+                  806
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.004945274119425316,
+                "projected_length_m": 0.004945274119425316,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 13,
+                "vertices": [
+                  806,
+                  7
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.004955134517430921,
+                "projected_length_m": 0.004955134517430921,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 14,
+                "vertices": [
+                  9,
+                  807
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.003722236038564668,
+                "projected_length_m": 0.003722236038564668,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 15,
+                "vertices": [
+                  807,
+                  8
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_length_m": 0.003722235981282343,
+                "projected_length_m": 0.003722235981282343,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              }
+            ]
+          },
+          "triangle_area_ratio_projected_over_baseline": {
+            "status": "measured",
+            "total_samples": 1280,
+            "measured_samples": 1280,
+            "unknown_indices": [],
+            "minimum": 1.0,
+            "maximum": 1.0,
+            "median": 1.0,
+            "p95_nearest_rank": 1.0,
+            "worst_low": [
+              {
+                "index": 0,
+                "vertices": [
+                  0,
+                  808,
+                  2320
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.022409986858851e-05,
+                "projected_area_m2": 2.022409986858851e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 1,
+                "vertices": [
+                  0,
+                  2320,
+                  800
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 1.955635647482807e-05,
+                "projected_area_m2": 1.955635647482807e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 2,
+                "vertices": [
+                  808,
+                  5,
+                  804
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.093840984699707e-05,
+                "projected_area_m2": 2.093840984699707e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 3,
+                "vertices": [
+                  808,
+                  804,
+                  2320
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.073475963332902e-05,
+                "projected_area_m2": 2.073475963332902e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999998
+              },
+              {
+                "index": 4,
+                "vertices": [
+                  2320,
+                  804,
+                  6
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0997182785059203e-05,
+                "projected_area_m2": 2.0997182785059203e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 5,
+                "vertices": [
+                  2320,
+                  6,
+                  809
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.086483611256977e-05,
+                "projected_area_m2": 2.086483611256977e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 6,
+                "vertices": [
+                  800,
+                  2320,
+                  809
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0254563732919537e-05,
+                "projected_area_m2": 2.0254563732919537e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 7,
+                "vertices": [
+                  800,
+                  809,
+                  1
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 1.962479879168782e-05,
+                "projected_area_m2": 1.962479879168782e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 0,
+                "vertices": [
+                  0,
+                  808,
+                  2320
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.022409986858851e-05,
+                "projected_area_m2": 2.022409986858851e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 1,
+                "vertices": [
+                  0,
+                  2320,
+                  800
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 1.955635647482807e-05,
+                "projected_area_m2": 1.955635647482807e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 2,
+                "vertices": [
+                  808,
+                  5,
+                  804
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.093840984699707e-05,
+                "projected_area_m2": 2.093840984699707e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 3,
+                "vertices": [
+                  808,
+                  804,
+                  2320
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.073475963332902e-05,
+                "projected_area_m2": 2.073475963332902e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999998
+              },
+              {
+                "index": 4,
+                "vertices": [
+                  2320,
+                  804,
+                  6
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0997182785059203e-05,
+                "projected_area_m2": 2.0997182785059203e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 5,
+                "vertices": [
+                  2320,
+                  6,
+                  809
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.086483611256977e-05,
+                "projected_area_m2": 2.086483611256977e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 6,
+                "vertices": [
+                  800,
+                  2320,
+                  809
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0254563732919537e-05,
+                "projected_area_m2": 2.0254563732919537e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 7,
+                "vertices": [
+                  800,
+                  809,
+                  1
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 1.962479879168782e-05,
+                "projected_area_m2": 1.962479879168782e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              }
+            ]
+          },
+          "nondegenerate_triangle_normal_dot": {
+            "status": "measured",
+            "total_samples": 1280,
+            "measured_samples": 1280,
+            "unknown_indices": [],
+            "minimum": 0.9999999999999997,
+            "maximum": 1.0,
+            "median": 1.0,
+            "p95_nearest_rank": 1.0,
+            "worst_low": [
+              {
+                "index": 1460,
+                "vertices": [
+                  2502,
+                  1194,
+                  215
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 3.49253423044544e-05,
+                "projected_area_m2": 3.49253423044544e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 2450,
+                "vertices": [
+                  1389,
+                  317,
+                  1465
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.7955554741562324e-05,
+                "projected_area_m2": 2.7955554741562324e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 2558,
+                "vertices": [
+                  1478,
+                  2639,
+                  1490
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.3333698644034215e-05,
+                "projected_area_m2": 2.3333698644034215e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 3628,
+                "vertices": [
+                  2773,
+                  1765,
+                  516
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 3.471909583223884e-05,
+                "projected_area_m2": 3.471909583223884e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 4374,
+                "vertices": [
+                  1954,
+                  2866,
+                  1968
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 4.195915818766713e-05,
+                "projected_area_m2": 4.195915818766713e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 5698,
+                "vertices": [
+                  2252,
+                  771,
+                  2312
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 3.255508509983227e-05,
+                "projected_area_m2": 3.255508509983227e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 3,
+                "vertices": [
+                  808,
+                  804,
+                  2320
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.073475963332902e-05,
+                "projected_area_m2": 2.073475963332902e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999998
+              },
+              {
+                "index": 13,
+                "vertices": [
+                  2321,
+                  9,
+                  811
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.1112227034358917e-05,
+                "projected_area_m2": 2.1112227034358917e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999998
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 0,
+                "vertices": [
+                  0,
+                  808,
+                  2320
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.022409986858851e-05,
+                "projected_area_m2": 2.022409986858851e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 4,
+                "vertices": [
+                  2320,
+                  804,
+                  6
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0997182785059203e-05,
+                "projected_area_m2": 2.0997182785059203e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 6,
+                "vertices": [
+                  800,
+                  2320,
+                  809
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0254563732919537e-05,
+                "projected_area_m2": 2.0254563732919537e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 7,
+                "vertices": [
+                  800,
+                  809,
+                  1
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 1.962479879168782e-05,
+                "projected_area_m2": 1.962479879168782e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 8,
+                "vertices": [
+                  3,
+                  810,
+                  2321
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0697998754911357e-05,
+                "projected_area_m2": 2.0697998754911357e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 9,
+                "vertices": [
+                  3,
+                  2321,
+                  803
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.090694341161969e-05,
+                "projected_area_m2": 2.090694341161969e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 10,
+                "vertices": [
+                  810,
+                  8,
+                  807
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.0806912128844562e-05,
+                "projected_area_m2": 2.0806912128844562e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 11,
+                "vertices": [
+                  810,
+                  807,
+                  2321
+                ],
+                "region": "mixed_waist_transition",
+                "baseline_area_m2": 2.1243263761209905e-05,
+                "projected_area_m2": 2.1243263761209905e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              }
+            ]
+          },
+          "baseline_low_area_triangle_indices": [],
+          "projected_low_area_triangle_indices": [],
+          "baseline_low_length_edge_indices": [],
+          "projected_low_length_edge_indices": [],
+          "opposed_normal_candidate_triangle_indices": [],
+          "opposed_normal_candidate_dot_cutoff": -0.5,
+          "true_flips_accepted": false
+        },
+        "free_skirt": {
+          "vertex_displacement_m": {
+            "status": "measured",
+            "total_samples": 2400,
+            "measured_samples": 2400,
+            "unknown_indices": [],
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "median": 0.0,
+            "p95_nearest_rank": 0.0,
+            "worst_low": [
+              {
+                "index": 10,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 11,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 12,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 13,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 14,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 15,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 16,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 17,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 10,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 11,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 12,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 13,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 14,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 15,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 16,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              },
+              {
+                "index": 17,
+                "region": "free_skirt",
+                "displacement_m": 0.0
+              }
+            ]
+          },
+          "edge_length_ratio_projected_over_baseline": {
+            "status": "measured",
+            "total_samples": 4640,
+            "measured_samples": 4640,
+            "unknown_indices": [],
+            "minimum": 1.0,
+            "maximum": 1.0,
+            "median": 1.0,
+            "p95_nearest_rank": 1.0,
+            "worst_low": [
+              {
+                "index": 26,
+                "vertices": [
+                  11,
+                  813
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.0040027378670311605,
+                "projected_length_m": 0.0040027378670311605,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 27,
+                "vertices": [
+                  813,
+                  10
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.00400276090637628,
+                "projected_length_m": 0.00400276090637628,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 28,
+                "vertices": [
+                  12,
+                  814
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.006743153284207619,
+                "projected_length_m": 0.006743153284207619,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 29,
+                "vertices": [
+                  814,
+                  11
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.006721093115742565,
+                "projected_length_m": 0.006721093115742565,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 30,
+                "vertices": [
+                  13,
+                  815
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.0068295694751450324,
+                "projected_length_m": 0.0068295694751450324,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 31,
+                "vertices": [
+                  815,
+                  12
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.006792525609400665,
+                "projected_length_m": 0.006792525609400665,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 32,
+                "vertices": [
+                  14,
+                  816
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.004149311874824591,
+                "projected_length_m": 0.004149311874824591,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 33,
+                "vertices": [
+                  816,
+                  13
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.004149265787868874,
+                "projected_length_m": 0.004149265787868874,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 26,
+                "vertices": [
+                  11,
+                  813
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.0040027378670311605,
+                "projected_length_m": 0.0040027378670311605,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 27,
+                "vertices": [
+                  813,
+                  10
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.00400276090637628,
+                "projected_length_m": 0.00400276090637628,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 28,
+                "vertices": [
+                  12,
+                  814
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.006743153284207619,
+                "projected_length_m": 0.006743153284207619,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 29,
+                "vertices": [
+                  814,
+                  11
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.006721093115742565,
+                "projected_length_m": 0.006721093115742565,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 30,
+                "vertices": [
+                  13,
+                  815
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.0068295694751450324,
+                "projected_length_m": 0.0068295694751450324,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 31,
+                "vertices": [
+                  815,
+                  12
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.006792525609400665,
+                "projected_length_m": 0.006792525609400665,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 32,
+                "vertices": [
+                  14,
+                  816
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.004149311874824591,
+                "projected_length_m": 0.004149311874824591,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              },
+              {
+                "index": 33,
+                "vertices": [
+                  816,
+                  13
+                ],
+                "region": "free_skirt",
+                "baseline_length_m": 0.004149265787868874,
+                "projected_length_m": 0.004149265787868874,
+                "baseline_low_length": false,
+                "projected_low_length": false,
+                "length_ratio": 1.0
+              }
+            ]
+          },
+          "triangle_area_ratio_projected_over_baseline": {
+            "status": "measured",
+            "total_samples": 4480,
+            "measured_samples": 4480,
+            "unknown_indices": [],
+            "minimum": 1.0,
+            "maximum": 1.0,
+            "median": 1.0,
+            "p95_nearest_rank": 1.0,
+            "worst_low": [
+              {
+                "index": 64,
+                "vertices": [
+                  12,
+                  826,
+                  2328
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.554573213952626e-05,
+                "projected_area_m2": 4.554573213952626e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 65,
+                "vertices": [
+                  12,
+                  2328,
+                  815
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.0269198180564566e-05,
+                "projected_area_m2": 4.0269198180564566e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 66,
+                "vertices": [
+                  826,
+                  17,
+                  824
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 5.1923906506793306e-05,
+                "projected_area_m2": 5.1923906506793306e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 67,
+                "vertices": [
+                  826,
+                  824,
+                  2328
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.66654207613893e-05,
+                "projected_area_m2": 4.66654207613893e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 68,
+                "vertices": [
+                  2328,
+                  824,
+                  18
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 5.152807336556208e-05,
+                "projected_area_m2": 5.152807336556208e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 69,
+                "vertices": [
+                  2328,
+                  18,
+                  827
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.651299263595057e-05,
+                "projected_area_m2": 4.651299263595057e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 70,
+                "vertices": [
+                  815,
+                  2328,
+                  827
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.5619929042809756e-05,
+                "projected_area_m2": 4.5619929042809756e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 71,
+                "vertices": [
+                  815,
+                  827,
+                  13
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.05754770596438e-05,
+                "projected_area_m2": 4.05754770596438e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999998
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 64,
+                "vertices": [
+                  12,
+                  826,
+                  2328
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.554573213952626e-05,
+                "projected_area_m2": 4.554573213952626e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 65,
+                "vertices": [
+                  12,
+                  2328,
+                  815
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.0269198180564566e-05,
+                "projected_area_m2": 4.0269198180564566e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 66,
+                "vertices": [
+                  826,
+                  17,
+                  824
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 5.1923906506793306e-05,
+                "projected_area_m2": 5.1923906506793306e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999999
+              },
+              {
+                "index": 67,
+                "vertices": [
+                  826,
+                  824,
+                  2328
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.66654207613893e-05,
+                "projected_area_m2": 4.66654207613893e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 68,
+                "vertices": [
+                  2328,
+                  824,
+                  18
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 5.152807336556208e-05,
+                "projected_area_m2": 5.152807336556208e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 69,
+                "vertices": [
+                  2328,
+                  18,
+                  827
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.651299263595057e-05,
+                "projected_area_m2": 4.651299263595057e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 70,
+                "vertices": [
+                  815,
+                  2328,
+                  827
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.5619929042809756e-05,
+                "projected_area_m2": 4.5619929042809756e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 71,
+                "vertices": [
+                  815,
+                  827,
+                  13
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.05754770596438e-05,
+                "projected_area_m2": 4.05754770596438e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999998
+              }
+            ]
+          },
+          "nondegenerate_triangle_normal_dot": {
+            "status": "measured",
+            "total_samples": 4480,
+            "measured_samples": 4480,
+            "unknown_indices": [],
+            "minimum": 0.9999999999999997,
+            "maximum": 1.0,
+            "median": 1.0,
+            "p95_nearest_rank": 1.0,
+            "worst_low": [
+              {
+                "index": 86,
+                "vertices": [
+                  816,
+                  2330,
+                  830
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 3.055488804298036e-05,
+                "projected_area_m2": 3.055488804298036e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 640,
+                "vertices": [
+                  58,
+                  893,
+                  2400
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 6.143550617733687e-05,
+                "projected_area_m2": 6.143550617733687e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 688,
+                "vertices": [
+                  83,
+                  952,
+                  2406
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 7.076610341008087e-05,
+                "projected_area_m2": 7.076610341008087e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 926,
+                "vertices": [
+                  1044,
+                  2435,
+                  1057
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 7.312756737857554e-05,
+                "projected_area_m2": 7.312756737857554e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 1027,
+                "vertices": [
+                  1026,
+                  1087,
+                  2448
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.171432894680979e-05,
+                "projected_area_m2": 4.171432894680979e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 1154,
+                "vertices": [
+                  1077,
+                  153,
+                  1114
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 3.0755688898743795e-05,
+                "projected_area_m2": 3.0755688898743795e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 1661,
+                "vertices": [
+                  2527,
+                  238,
+                  1248
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 6.184321714327841e-05,
+                "projected_area_m2": 6.184321714327841e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              },
+              {
+                "index": 1941,
+                "vertices": [
+                  2562,
+                  282,
+                  1326
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 6.322701227555508e-05,
+                "projected_area_m2": 6.322701227555508e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 0.9999999999999997
+              }
+            ],
+            "worst_high": [
+              {
+                "index": 64,
+                "vertices": [
+                  12,
+                  826,
+                  2328
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.554573213952626e-05,
+                "projected_area_m2": 4.554573213952626e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 67,
+                "vertices": [
+                  826,
+                  824,
+                  2328
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.66654207613893e-05,
+                "projected_area_m2": 4.66654207613893e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 68,
+                "vertices": [
+                  2328,
+                  824,
+                  18
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 5.152807336556208e-05,
+                "projected_area_m2": 5.152807336556208e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 69,
+                "vertices": [
+                  2328,
+                  18,
+                  827
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.651299263595057e-05,
+                "projected_area_m2": 4.651299263595057e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 70,
+                "vertices": [
+                  815,
+                  2328,
+                  827
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 4.5619929042809756e-05,
+                "projected_area_m2": 4.5619929042809756e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 72,
+                "vertices": [
+                  10,
+                  828,
+                  2329
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 2.4913575653570283e-05,
+                "projected_area_m2": 2.4913575653570283e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 73,
+                "vertices": [
+                  10,
+                  2329,
+                  813
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 2.3678590225854627e-05,
+                "projected_area_m2": 2.3678590225854627e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              },
+              {
+                "index": 77,
+                "vertices": [
+                  2329,
+                  16,
+                  829
+                ],
+                "region": "free_skirt",
+                "baseline_area_m2": 2.5595347739230756e-05,
+                "projected_area_m2": 2.5595347739230756e-05,
+                "baseline_low_area": false,
+                "projected_low_area": false,
+                "area_ratio": 1.0,
+                "normal_dot": 1.0
+              }
+            ]
+          },
+          "baseline_low_area_triangle_indices": [],
+          "projected_low_area_triangle_indices": [],
+          "baseline_low_length_edge_indices": [],
+          "projected_low_length_edge_indices": [],
+          "opposed_normal_candidate_triangle_indices": [],
+          "opposed_normal_candidate_dot_cutoff": -0.5,
+          "true_flips_accepted": false
+        }
+      },
+      "all_global_ratio_and_normal_denominators_measured": true,
+      "geometry_quality_accepted": false,
+      "true_flips_accepted": false,
+      "input_files": {
+        "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_clearance_51_20261006_070654_487\\result\\actual_points\\initial_baseline.json": {
+          "bytes": 3141543,
+          "mtime_ns": 1791241642766419500,
+          "sha256": "b42419837a9515b0c74a8455aa076a6b8bc0731806481e28ac8f47c6d471126a"
+        },
+        "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_clearance_51_20261006_070654_487\\result\\actual_points\\initial_projected.json": {
+          "bytes": 3453495,
+          "mtime_ns": 1791241645245920800,
+          "sha256": "ac237e84e65ad90ad8cb81c76b0aa2580a938629bca82f7642c4e01f8d89f576"
+        }
+      },
+      "input_files_exact_after_analysis": true
+    }
+  ],
+  "geometry_quality_accepted": false,
+  "true_flips_accepted": false,
+  "numerical_denominator_floors": {
+    "edge_length_m": 1e-12,
+    "triangle_area_m2": 1e-18,
+    "meaning": "Arithmetic reliability only; no quality tolerance or pass guard"
+  },
+  "region_definition": {
+    "hard_fixed_waist": "All vertices native waist weight >=0.999",
+    "mixed_waist_transition": "Not wholly fixed and at least one positive waist weight",
+    "free_skirt": "Every vertex has zero waist weight"
+  },
+  "limitations": [
+    "Compares actual snapshot final3040 order only; no nearest-neighbour pairing or missing-data substitution",
+    "Same frame alone is insufficient; actual non-Dress surfaces, knees and Hem input must match exactly",
+    "Opposed nondegenerate normals are rotation candidates, not proof of a true local inversion or topology flip",
+    "No self-intersection, Body/collider separation, continuous-time, silhouette or artistic-quality acceptance",
+    "Missing pairs, empty samples and unreliable denominators remain Unproven; completion never means geometry Pass"
+  ]
+}

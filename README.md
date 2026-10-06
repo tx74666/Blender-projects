@@ -15,9 +15,16 @@ then review and commit the changes in GitHub Desktop and push. The sync reads th
 saved file only; it does not save or change the open Blender session. GitHub
 Desktop watches this repository's snapshot, not the source in the separate WIP folder.
 
-Use Git LFS when cloning or updating the two main scene files. Generated test
-scenes, local recovery backups, validation outputs, and old add-on ZIPs are excluded
-from new commits. Their local copies remain available. See
+Use Git LFS when cloning or updating the two main scene files and the raw validation
+inputs named `native_endpoints.json` and `native_input800_endpoints.json`. Replay
+scripts check the exact SHA256 of these inputs, so their contents must stay intact.
+Include `.gitattributes` in the same commit when first uploading these inputs;
+GitHub Desktop uses LFS to store them without the normal Git file-size limit.
+
+Validation scripts, source snapshots, and reports remain in Git. Generated test
+scenes, validation runtime temporary folders, cloth bake caches, local recovery
+backups, and old add-on ZIPs are excluded from new commits. Their local copies
+remain available; the ignore rules do not remove previously tracked cache files. See
 [`docs/BUILD_DEPENDENCIES.md`](docs/BUILD_DEPENDENCIES.md) for Build's external-file
 requirements and existing missing references.
 

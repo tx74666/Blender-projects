@@ -34,3 +34,9 @@ assets/
 *.zip
 *.log
 *~
+
+# Generated validation runtime and cloth bake caches remain available on disk.
+# Scripts, reports, and raw replay inputs are still eligible for upload.
+/validation/**/native_temp/
+/validation/**/native_cache/
+/validation/**/blendcache_*/

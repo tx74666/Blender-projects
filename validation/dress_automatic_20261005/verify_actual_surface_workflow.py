@@ -34,7 +34,7 @@ DEPENDENCIES = {
     "diagnose_skin_transfer.py": "9ad85213c41c62393b34cd5f5a45f0508bbef2ccfdf3a520f92dcf0e836f6a28",
     "prototype_native_dress_overlay.py": "574c121fa2b7adf2892ceec032ab5629254b2f846818bdd677c6d94e2400c909",
 }
-CASES = ("walk", "turn", "leg_raise", "squat", "abrupt_stop")
+CASES = ("walk", "run", "turn", "leg_raise", "squat", "abrupt_stop", "abrupt_stop_turn")
 ROLE_NAMES = frozenset({"CLOTH_PROXY", "BODY_ATTACHMENT", "NEUTRAL_RIG",
                         "NEUTRAL_WIRE", "NEUTRAL_SURFACE", "TRACKER"})
 NATIVE_WORLD_LIMIT = 5.e-6
@@ -63,6 +63,12 @@ def arguments():
     parser.add_argument("--cases", nargs="+", choices=CASES, default=["abrupt_stop"])
     parser.add_argument("--frames", type=int, default=60)
     parser.add_argument("--triangle-pair-limit", type=int, default=50000)
+    parser.add_argument("--max-penetration-mm", type=float, default=2.0,
+                        help="Existing bounded diagnostic limit from validate_real_dress.py; not whole-body/visual acceptance")
+    parser.add_argument("--max-stop-jitter-mm", type=float, default=1.0,
+                        help="Existing final hem last-ten-frame diagnostic limit; not long-run equilibrium acceptance")
+    parser.add_argument("--max-edge-ratio", type=float, default=3.0,
+                        help="Existing connectivity/stretch diagnostic limit; not an artistic quality threshold")
     parser.add_argument("--no-render", action="store_true", help="Numerical-only diagnostic; render coverage remains explicitly absent")
     args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else [])
     args.input, args.output = args.input.resolve(), args.output.resolve()
@@ -72,6 +78,8 @@ def arguments():
     require(1000 <= args.body_vertex_limit <= 100000, "Body budget must be between 1000 and 100000 vertices")
     require(30 <= args.frames <= 120 and 1000 <= args.triangle_pair_limit <= 100000, "Motion budgets are out of range")
     require(len(args.cases) == len(set(args.cases)), "Repeated motion cases are refused")
+    require(all(math.isfinite(value) and value > 0. for value in
+                (args.max_penetration_mm, args.max_stop_jitter_mm, args.max_edge_ratio)), "Diagnostic limits must be finite and positive")
     if args.install_report is None:
         args.install_report = args.input.parent.parent / "result/workflow_install.json"
     args.install_report = args.install_report.resolve()
@@ -786,7 +794,30 @@ def crossing_scalars(value):
                                    for item in value.get("crossing_pairs", [])[:8]]}
 
 
-def motion_collision_sample(source, rig, actual, body, record, frame, args, qa, diag, meters):
+def rigid_frame(matrix):
+    """Orthogonal native world axes: retain distance, remove only rigid motion.
+
+    A full inverse matrix would divide by the rig/bone scale. These normalized
+    axes keep each projected coordinate in the original world distance units.
+    """
+    linear = matrix.to_3x3()
+    require(all(math.isfinite(value) for row in matrix for value in row), "Nonfinite native frame")
+    require(linear.col[2].length > 1.e-12, "Degenerate native frame up axis")
+    up = linear.col[2].normalized()
+    right = linear.col[0] - up * linear.col[0].dot(up)
+    require(right.length > 1.e-12, "Degenerate native frame right axis")
+    right.normalize()
+    forward = up.cross(right).normalized()
+    axes = (right, forward, up)
+    rotation = Matrix(tuple(tuple(axis[row] for axis in axes) for row in range(3))).to_quaternion()
+    return {"origin": matrix.translation.copy(), "axes": axes, "rotation": rotation}
+
+
+def rigid_points(points, frame):
+    return [Vector(tuple((point-frame["origin"]).dot(axis) for axis in frame["axes"])) for point in points]
+
+
+def motion_collision_sample(source, rig, actual, body, record, frame, args, qa, diag, meters, baseline):
     graph = bpy.context.evaluated_depsgraph_get()
     physical = diag.mesh_snapshot(actual, graph)
     final = diag.mesh_snapshot(source, graph)
@@ -804,15 +835,63 @@ def motion_collision_sample(source, rig, actual, body, record, frame, args, qa, 
             "body_vertices": len(body_mesh["points"]), "actual_body_inside_outside_proven": False,
             "physical_body": crossing_scalars(diag.triangle_crossings(physical, body_mesh, bounds,
                                                args.triangle_pair_limit, epsilon)),
-            "final_body": crossing_scalars(diag.triangle_crossings(final, body_mesh, bounds,
-                                            args.triangle_pair_limit, epsilon)), "old3": []}
+            "final_weight_layer_complete": all(final["weights"]),
+            "body_weight_layer_complete": all(body_mesh["weights"]),
+            "final_free_vertices": len(final["free_indices"]), "old3": []}
+    # Keep fixed waist/transition contacts separate from independently moving
+    # free skirt/leg crossings. Exact native triangle IDs are stable in this
+    # saved fixture; a baseline contact alone is not a new dynamic crossing.
+    crossing = diag.triangle_crossings(final, body_mesh, bounds, args.triangle_pair_limit, epsilon)
+    item["final_body"] = crossing_scalars(crossing)
+    evaluated = rig.evaluated_get(graph)
+    waist_frame = rigid_frame(evaluated.matrix_world @ evaluated.pose.bones[record["controls"]["waist"]].matrix)
+    local = rigid_points(final["points"], waist_frame)
+    if not baseline:
+        baseline.update(frame=frame, local=local,
+                        complete=(crossing["status"] == "measured" and all(final["weights"]) and all(body_mesh["weights"])
+                                  and all(not crossing[name] for name in
+                                          ("coplanar_unresolved", "degenerate_unresolved", "boundary_unresolved"))),
+                        pairs={(entry["dress_triangle"], entry["body_triangle"]) for entry in crossing["crossing_pairs"]})
+    require(len(local) == len(baseline["local"]), "Final surface identity changed between collision samples")
+    legs, _axes, _height = qa.body_inputs(rig, record)
+    leg_names = {name for entry in legs.values() for name in entry["chain"]}
+    free = set(final["free_indices"])
+    categories = {name: [] for name in ("waist_transition_contacts", "baseline_unproven_free_contacts", "baseline_or_stationary_free_contacts",
+                                        "moving_free_leg_crossings", "moving_free_other_body_crossings")}
+    for entry in crossing["crossing_pairs"]:
+        pair = (entry["dress_triangle"], entry["body_triangle"])
+        indices = entry["dress_vertices"]
+        displacement = point_error([local[index] for index in indices],
+                                   [baseline["local"][index] for index in indices], meters)
+        body_leg = any(weight["name"] in leg_names and weight["weight"] > 0.
+                       for index in entry["body_vertices"] for weight in body_mesh["weights"][index])
+        if not all(index in free for index in indices):
+            category = "waist_transition_contacts"
+        elif not baseline["complete"]:
+            category = "baseline_unproven_free_contacts"
+        elif pair in baseline["pairs"] or displacement <= qa.geometry_guard(meters):
+            category = "baseline_or_stationary_free_contacts"
+        else:
+            category = "moving_free_leg_crossings" if body_leg else "moving_free_other_body_crossings"
+        categories[category].append({"dress_triangle": pair[0], "body_triangle": pair[1],
+                                     "waist_relative_vertex_motion_m": displacement, "body_leg_weight_present": body_leg})
+    item["final_body_contact_classification"] = {
+        "baseline_frame": baseline["frame"], "movement_guard_m": qa.geometry_guard(meters),
+        "baseline_coverage_complete": baseline["complete"],
+        "counts": {name: len(entries) for name, entries in categories.items()},
+        "first_pairs": {name: entries[:8] for name, entries in categories.items()},
+        "definition": "All-three-free triangles moving in normalized Waist axes, absent from frame1 exact pair set; leg region uses actual positive native Body leg weights",
+        "limitation": "Existing free contacts and waist-transition contacts remain reported, not cleared or silently treated as separation"}
     for name in record["physics"]["colliders"]:
         collider = bpy.data.objects[name]
         if collider == bpy.data.objects[record["physics"]["surface"]["roles"]["BODY_ATTACHMENT"][0]]:
             continue
         qa.physics._closed_collider(collider)  # The verifier raises; it returns no boolean.
         native = qa.ClosedCollider(collider, graph, epsilon)
+        binding = collider.vertex_groups[0].name
+        side = next((side for side, entry in legs.items() if binding == entry["chain"][0]), None)
         item["old3"].append({"object": name,
+            "binding_bone": binding, "role": "leg." + side if side else "pelvis_or_other",
             "physical_free_vertices": qa.collision_metrics(physical["points"], native, meters, physical["free_indices"]),
             "final_free_vertices": qa.collision_metrics(final["points"], native, meters, final["free_indices"]),
             "limitation": "Signed free-vertex samples on a verified closed owned collider; not whole-surface separation"})
@@ -1006,12 +1085,233 @@ def original_roundtrip(source, rig, actual, cloth, neutral, result, qa, surface,
                  scope="No-edit return plus a reverted QA edit; persistent author correction editing is not tested")
 
 
+def synthetic_run_values(phase, height):
+    """Explicit synthetic stress gait, not an imported/foot-planted run clip."""
+    cycle = math.tau * 4. * phase
+    move = Vector((0., height * .9 * phase, height * .012 * math.sin(cycle * 2.)))
+    angles = {}
+    for side, offset in (("L", 0.), ("R", math.pi)):
+        swing = math.sin(cycle + offset)
+        angles[side] = [math.radians(35.) * swing, -math.radians(50.) * max(swing, 0.),
+                        math.radians(10.) * swing]
+    return move, 0., angles
+
+
+def synthetic_stop_turn_values(phase, height, frozen_values):
+    """Frozen advance/gait stop at .55, then finite .55-.65 ninety-degree turn."""
+    move, _yaw, angles = frozen_values("abrupt_stop", phase, height)
+    progress = max(0., min(1., (phase - .55) / .10))
+    yaw = math.radians(90.) * progress * progress * (3. - 2. * progress)
+    return move, yaw, angles
+
+
+def author_motion_input(case, rig, legs, axes, channels, basis, height, frames, qa):
+    if case not in {"run", "abrupt_stop_turn"}:
+        return qa.author_case(case, rig, legs, axes, channels, basis, height, frames)
+    animation = rig.animation_data
+    require(animation is None or animation.action is None and all(track.mute for track in animation.nla_tracks),
+            "Detach author playback in the private candidate before creating synthetic stress input")
+    previous = qa.representative_values
+    original_actions = {action.as_pointer() for action in bpy.data.actions}
+    def values(which, phase, native_height):
+        if which == "run":
+            return synthetic_run_values(phase, native_height)
+        if which == "abrupt_stop_turn":
+            return synthetic_stop_turn_values(phase, native_height, previous)
+        return previous(which, phase, native_height)
+    try:
+        # Reuse the frozen native Action/slot/FCurve authoring and axis handling;
+        # this local callback override is restored even after a native failure.
+        # No frozen file, artist Action, runtime constraint or driver is edited.
+        qa.representative_values = values
+        action = qa.author_case(case, rig, legs, axes, channels, basis, height, frames)
+        require(action.as_pointer() not in original_actions and action.get("CD_QA_SyntheticInput") is True
+                and rig.animation_data.action == action, "Synthetic stress did not create its own marked native Action")
+        action["CD_QA_InputDescription"] = (
+            "Synthetic Run stress gait; not an imported, foot-planted or production clip" if case == "run" else
+            "Synthetic advance/alternating legs, stop at 55%, ninety-degree turn through 65%, then full hold; not a real imported clip")
+        return action
+    finally:
+        qa.representative_values = previous
+
+
+def native_input_summary(case, args, measurements, height, meters, result, qa):
+    """Independent evaluated bone/Body input proof, never inferred from Cloth."""
+    threshold = height * meters * .01  # Same meaning/value as old qa.summarize_motion.
+    knees = {side: max(item["native_knee_motion_without_root_m"][side] for item in measurements)
+             for side in ("L", "R")}
+    required_sides = () if case == "turn" else (("L",) if case == "leg_raise" else ("L", "R"))
+    body = max(item["native_body_rig_frame_motion_m"] for item in measurements)
+    root = max(item["native_rig_translation_m"] for item in measurements)
+    waist = max(item["native_waist_translation_m"] for item in measurements)
+    rotations = {name: max(item["native_" + name + "_rotation_rad"] for item in measurements)
+                 for name in ("rig", "waist")}
+    result["native_input_response"] = {"required_leg_sides": list(required_sides),
+        "evaluated_knee_max_motion_without_root_m": knees, "evaluated_body_max_rig_frame_motion_m": body,
+        "evaluated_root_max_translation_m": root, "evaluated_waist_max_translation_m": waist,
+        "evaluated_max_rotation_rad": rotations, "minimum_response_m": threshold,
+        "threshold_provenance": "validate_real_dress.py summarize_motion: 1% native Body Rest height times scene metres/unit",
+        "body_measurement": "Actual registered evaluated Body vertices in normalized rigid Rig axes; root translation/rotation removed, physical distance retained"}
+    if required_sides:
+        motion_check(result, qa, "representative_native_leg_inputs_reach_evaluated_bones",
+                     all(knees[side] > threshold for side in required_sides),
+                     required_sides=list(required_sides), maximum_knee_motion_m=knees, minimum_response_m=threshold)
+        motion_check(result, qa, "representative_native_leg_input_reaches_actual_body_skin", body > threshold,
+                     maximum_body_motion_without_root_m=body, minimum_response_m=threshold)
+    if case in {"walk", "run", "abrupt_stop", "abrupt_stop_turn", "squat"}:
+        motion_check(result, qa, "representative_root_translation_reaches_evaluated_rig_and_waist",
+                     root > threshold and waist > threshold,
+                     root_translation_m=root, waist_translation_m=waist, minimum_response_m=threshold)
+    if case in {"turn", "abrupt_stop_turn"}:
+        expected = abs(qa.representative_values(case, 1., height)[1]) if case == "turn" else math.radians(90.)
+        # Native angular roundoff uses the existing 5e-6 numerical guard. A
+        # Waist on the turn axis may have no translation at all.
+        motion_check(result, qa, "representative_turn_reaches_evaluated_rig_and_waist_rotation",
+                     expected > 0. and all(value >= expected-NATIVE_WORLD_LIMIT for value in rotations.values()),
+                     expected_authored_yaw_rad=expected, evaluated_max_rotation_rad=rotations,
+                     native_roundoff_guard_rad=NATIVE_WORLD_LIMIT, translation_response_required=case == "abrupt_stop_turn")
+
+
+def motion_quality_summary(case, args, measurements, samples, peak, result):
+    """Bounded final-surface diagnostics; separate from mechanism/visual acceptance."""
+    checks = []
+    def quality(name, passed, **facts):
+        require(passed is None or type(passed) is bool, "Quality evidence must distinguish pass/fail/unproven")
+        checks.append({"name": name, "passed": passed, **facts})
+
+    worst_edge = max(measurements, key=lambda item: item["final_max_edge_ratio_to_frame1"], default=None)
+    final_ratio = worst_edge["final_max_edge_ratio_to_frame1"] if worst_edge else None
+    connected = bool(measurements) and all(item["final_edge_connectivity_exact"] for item in measurements)
+    ratio_complete = connected and all(item["final_positive_reference_edges"] > 0 for item in measurements)
+    quality("final_surface_neighbor_continuity", final_ratio <= args.max_edge_ratio if ratio_complete else None,
+            maximum_ratio=final_ratio, worst_frame=worst_edge["frame"] if worst_edge else None,
+            diagnostic_limit=args.max_edge_ratio,
+            definition="Final evaluated3040 native edge connectivity and lengths relative to frame1; old diagnostic max_edge_ratio=3, not artistic contour acceptance")
+
+    hem_complete = bool(measurements) and all(item["final_hem_identity_complete"] for item in measurements)
+    result["final_waist_frame_motion"] = {
+        "frame_count": len(measurements), "hem_identity_complete": hem_complete,
+        "hem_vertices": measurements[0]["final_free_hem_vertices"] if measurements else None,
+        "maximum_hem_step_m": max((item["final_hem_waist_step_max_m"] for item in measurements
+                                    if item["final_hem_waist_step_max_m"] is not None), default=None),
+        "maximum_hem_displacement_from_frame1_m": max((item["final_hem_waist_from_frame1_max_m"] for item in measurements
+                                                        if item["final_hem_waist_from_frame1_max_m"] is not None), default=None),
+        "definition": "Actual final free hem in normalized orthogonal evaluated Waist world axes; no inverse scale, physical metres retained",
+        "dragging_acceptance": "UNPROVEN: displacement alone does not establish appropriate leg/skirt response; inspect real worst-frame views and trajectory"}
+    worst_tail = None
+    tail_rejected = False
+    if case in {"abrupt_stop", "abrupt_stop_turn"}:
+        tail = measurements[-10:]
+        complete = hem_complete and len(tail) == 10 and all(item["final_hem_waist_step_max_m"] is not None for item in tail)
+        jitter = max((item["final_hem_waist_step_max_m"] for item in tail
+                      if item["final_hem_waist_step_max_m"] is not None), default=None)
+        stopped = all(item["synthetic_input_stopped"] for item in tail)
+        worst_tail = max((item for item in tail if item["final_hem_waist_step_max_m"] is not None),
+                         key=lambda item: item["final_hem_waist_step_max_m"], default=None)
+        tail_rejected = bool(complete and stopped and jitter > args.max_stop_jitter_mm/1000.)
+        quality("final_free_hem_stop_tail_settling", jitter <= args.max_stop_jitter_mm/1000. if complete and stopped else None,
+                frames=[item["frame"] for item in tail], maximum_m_per_frame=jitter,
+                worst_step_frame=worst_tail["frame"] if worst_tail else None,
+                diagnostic_limit_m_per_frame=args.max_stop_jitter_mm/1000., native_free_hem_complete=complete,
+                authored_inputs_stopped=stopped, threshold_provenance="Existing validate_real_dress.py default 1mm/frame",
+                limitation="Last ten frames only; does not establish long-run equilibrium or visual acceptance")
+
+    colliders = {}
+    signed_complete = bool(samples)
+    worst = None
+    for sample in samples:
+        signed_complete = signed_complete and sample["final_weight_layer_complete"] and sample["final_free_vertices"] > 0
+        signed_complete = signed_complete and len(sample["old3"]) == 3
+        for entry in sample["old3"]:
+            metric = entry["final_free_vertices"]
+            value = metric["maximum_penetration_m"]
+            measured = (metric["sampled_vertices"] > 0 and math.isfinite(value)
+                        and math.isfinite(metric["minimum_signed_distance_m"]))
+            signed_complete = signed_complete and measured
+            summary = colliders.setdefault(entry["object"], {"role": entry["role"], "sampled_frames": [],
+                        "maximum_penetration_m": None, "worst_frame": None, "minimum_sampled_vertices": None})
+            summary["sampled_frames"].append(sample["frame"])
+            if measured:
+                if summary["maximum_penetration_m"] is None or value > summary["maximum_penetration_m"]:
+                    summary["maximum_penetration_m"], summary["worst_frame"] = value, sample["frame"]
+                summary["minimum_sampled_vertices"] = min(summary["minimum_sampled_vertices"] or metric["sampled_vertices"], metric["sampled_vertices"])
+                if worst is None or value > worst["penetration_m"]:
+                    worst = {"frame": sample["frame"], "object": entry["object"], "role": entry["role"], "penetration_m": value}
+    roles = {entry["role"] for entry in colliders.values()}
+    signed_complete = signed_complete and len(colliders) == 3 and {"leg.L", "leg.R"} <= roles
+    signed_complete = signed_complete and all(len(entry["sampled_frames"]) == len(samples) for entry in colliders.values())
+    limit = args.max_penetration_mm/1000.
+    rejected = worst is not None and worst["penetration_m"] > limit
+    signed_passed = False if rejected else (True if signed_complete else None)
+    quality("sampled_final_free_closed_collider_penetration", signed_passed,
+            diagnostic_limit_m=limit, threshold_provenance="Existing validate_real_dress.py default 2mm, converted mm/1000",
+            worst=worst, complete=signed_complete, frames=[entry["frame"] for entry in samples],
+            limitation="Final evaluated free vertices against three proved closed owned colliders at declared samples; not whole Body/triangle/time separation")
+    result["signed_final_collider_summary"] = {"passed": signed_passed, "colliders": colliders,
+                                             "worst": worst, "diagnostic_limit_m": limit, "complete": signed_complete}
+
+    moving = []
+    body_complete = bool(samples)
+    uncertain_contacts = 0
+    for sample in samples:
+        body = sample["final_body"]
+        counts = sample["final_body_contact_classification"]["counts"]
+        dynamic = counts["moving_free_leg_crossings"] + counts["moving_free_other_body_crossings"]
+        if dynamic:
+            moving.append({"frame": sample["frame"], "moving_free_strict_pairs": dynamic, "counts": counts})
+        uncertain_contacts += counts["baseline_or_stationary_free_contacts"] + counts["baseline_unproven_free_contacts"]
+        body_complete = body_complete and body.get("status") == "measured" and sample["body_weight_layer_complete"]
+        body_complete = body_complete and sample["final_body_contact_classification"]["baseline_coverage_complete"]
+        body_complete = body_complete and sample["final_weight_layer_complete"] and sample["final_free_vertices"] > 0
+        body_complete = body_complete and all(type(body.get(name + "_count")) is int and body[name + "_count"] == 0 for name in
+                                              ("coplanar_unresolved", "degenerate_unresolved", "boundary_unresolved"))
+    body_passed = False if moving else (True if body_complete and not uncertain_contacts else None)
+    quality("sampled_new_moving_free_body_triangle_crossings", body_passed,
+            moving_samples=moving, baseline_or_stationary_free_contacts=uncertain_contacts,
+            measured_without_unresolved_pairs=body_complete,
+            limitation="Fixed waist transition contacts classified separately; existing free contacts remain Unproven. Zero new strict crossings does not prove Body volume separation, especially an open Body")
+
+    if moving and (worst is None or worst["penetration_m"] <= limit):
+        render = {"frame": max(moving, key=lambda item: item["moving_free_strict_pairs"])["frame"],
+                  "reason": "worst_sampled_new_moving_free_body_strict_crossing_count"}
+    elif rejected:
+        render = {"frame": worst["frame"], "reason": "worst_sampled_final_free_signed_collider_penetration", **worst}
+    elif ratio_complete and final_ratio > args.max_edge_ratio:
+        render = {"frame": worst_edge["frame"], "reason": "worst_final_surface_neighbor_edge_ratio",
+                  "maximum_ratio": final_ratio}
+    elif tail_rejected:
+        render = {"frame": worst_tail["frame"], "reason": "worst_final_free_hem_stop_tail_step",
+                  "maximum_step_m": jitter,
+                  "limitation": "A single still frame locates the measured step; it cannot establish visual settling or jitter acceptance"}
+    elif worst is not None and worst["penetration_m"] > 0.:
+        render = {"frame": worst["frame"], "reason": "worst_sampled_final_free_signed_collider_penetration", **worst}
+    else:
+        render = {"frame": peak, "reason": "cloth_effect_peak_no_observed_positive_signed_or_new_moving_strict_crossing",
+                  "collision_coverage_complete": signed_complete and body_complete}
+    quality_status = "REJECTED_BY_BOUNDED_DIAGNOSTIC" if any(entry["passed"] is False for entry in checks) else (
+        "UNPROVEN" if any(entry["passed"] is None for entry in checks) else "BOUNDED_DIAGNOSTICS_PASS_VISUAL_REVIEW_REQUIRED")
+    result["effect_quality"] = {"status": quality_status, "checks": checks,
+        "bounded_diagnostics_passed": all(entry["passed"] is True for entry in checks),
+        "thresholds": {"sampled_signed_penetration_m": limit, "final_stop_hem_step_m": args.max_stop_jitter_mm/1000.,
+                       "final_edge_ratio": args.max_edge_ratio},
+        "visual_acceptance": "PENDING_HUMAN_REVIEW", "long_run_settling_acceptance": "UNPROVEN",
+        "whole_body_separation_acceptance": "UNPROVEN", "render_selection": render}
+    # This is whole-motion collision acceptance, not an optimistic label for a
+    # few collider samples. Known defects reject; incomplete volume/time proof
+    # remains explicit unknown even when bounded diagnostics all pass.
+    result["collision_acceptance"] = False if signed_passed is False or body_passed is False else None
+    result["collision_acceptance_scope"] = "Whole-body/whole-motion acceptance is Unproven; consult separate bounded final-surface diagnostics"
+    return render
+
+
 def motion_case(case, args, source_name, qa, diag, surface):
     from character_designer import skirt as skirt_ui
     output = args.output / "cases" / case
     output.mkdir(parents=True)
-    result = {"name": case, "success": False, "checks": [], "frames": args.frames,
-              "production_effect_accepted": False, "collision_acceptance": False,
+    result = {"name": case, "success": False, "mechanism_success": False,
+              "success_scope": "Native mechanics/input response only; effect_quality and actual visual review are separate gates",
+              "checks": [], "frames": args.frames,
+              "production_effect_accepted": False, "collision_acceptance": None,
               "sampled_frames_only": True, "body_inside_outside_proven": False}
     began = time.perf_counter()
     input_probe = None
@@ -1040,10 +1340,31 @@ def motion_case(case, args, source_name, qa, diag, surface):
         qa.public_switch(bpy.ops.character_designer.body_ik_fk_switch, mode="FK")
         legs, axes, height = qa.body_inputs(rig, record)
         channels, basis = qa.pose_channels(rig), rig.matrix_basis.copy()
-        action = qa.author_case(case, rig, legs, axes, channels, basis, height, args.frames)
+        action = author_motion_input(case, rig, legs, axes, channels, basis, height, args.frames, qa)
         action_name = action.name
         result["synthetic_action"] = {"name": action_name, "sha256": qa.digest(qa.action_content(action)),
-            "description": "Frozen representative stress input, not foot-planted or production animation"}
+            "description": "Synthetic representative stress input, not an imported, foot-planted or production animation",
+            "input_origin": "Owning X QA explicit synthetic formula with frozen native Action authoring" if case in {"run", "abrupt_stop_turn"} else "Frozen representative formula",
+            "real_imported_clip": False}
+        if case == "run":
+            result["synthetic_action"]["run_definition"] = {
+                "cycles_over_requested_frame_window": 4., "root_forward_body_height_multiple": .9,
+                "root_vertical_body_height_amplitude": .012, "thigh_swing_degrees": 35.,
+                "shin_positive_swing_bend_degrees": -50., "foot_swing_degrees": 10.,
+                "rotation_axis": "MainRig local X converted through frozen qa.body_inputs into each native source bone local space",
+                "fps_and_speed_claim": "Phase-normalized stress input only; a longer requested frame window lowers cycle frequency",
+                "limitation": "No foot contacts, flight-phase authenticity, imported gait fidelity or runtime/Unity acceptance"}
+        elif case == "abrupt_stop_turn":
+            result["synthetic_action"]["stop_turn_definition"] = {
+                "advance_and_alternating_legs": "Exact frozen abrupt_stop formula, including its smooth gait fade",
+                "translation_and_gait_stop_phase": .55, "root_local_z_turn_interval": [.55, .65],
+                "root_turn_degrees": 90., "all_authored_inputs_fully_stopped_phase": .65,
+                "first_fully_stopped_frame": math.ceil(.65 * (args.frames - 1)) + 1,
+                "last_ten_frames": list(range(args.frames - 9, args.frames + 1)),
+                "last_ten_after_full_stop": (args.frames - 10) / (args.frames - 1) > .65,
+                "limitation": "Synthetic stop/turn stress only; no planted feet, imported locomotion clip or long-run acceptance"}
+            require(result["synthetic_action"]["stop_turn_definition"]["last_ten_after_full_stop"],
+                    "The combined stop-turn window does not leave all last ten frames after full input stop")
         scene.frame_start, scene.frame_end = 1, args.frames
         cloth.point_cache.frame_start, cloth.point_cache.frame_end, cloth.point_cache.frame_step = 1, args.frames, 1
         bpy.context.window_manager.character_designer_skirt.source = source
@@ -1069,6 +1390,7 @@ def motion_case(case, args, source_name, qa, diag, surface):
                 and input_probe.modifiers[1].is_bound and input_probe.modifiers[1].target == actual.modifiers[1].target,
                 "The exact native Cloth input prefix was not preserved")
         meters = scene.unit_settings.scale_length
+        require(math.isfinite(meters) and meters > 0., "Scene metres/unit must be finite and positive")
         guard = qa.geometry_guard(meters)
         result["units_to_metres"] = meters
         reference = {}
@@ -1076,17 +1398,65 @@ def motion_case(case, args, source_name, qa, diag, surface):
         base_lengths = None
         base_edges = None
         previous_physical = None
+        final_base_edges = None
+        final_base_lengths = None
+        previous_final_hem = None
+        first_final_hem = None
+        first_hem_ids = None
+        native_baseline = None
+        body_vertex_count = None
         qa.public_switch(bpy.ops.character_designer.dress_motion_reset)
         motion_check(result, qa, "public_reset_start_unbaked", scene.frame_current == 1 and not cloth.point_cache.is_baked)
         for frame in range(1, args.frames + 1):
+            phase_began = time.perf_counter()
             scene.frame_set(frame)
+            frame_set_seconds = time.perf_counter() - phase_began
+            phase_began = time.perf_counter()
             graph = bpy.context.evaluated_depsgraph_get()
+            graph_acquisition_seconds = time.perf_counter() - phase_began
+            mesh_readback_seconds = {}
+            phase_began = time.perf_counter()
             physical = qa.world_mesh(actual, graph)
-            final = qa.world_mesh(source, graph)
+            mesh_readback_seconds["C800"] = time.perf_counter() - phase_began
+            phase_began = time.perf_counter()
+            final = qa.world_mesh(source, graph, record["controls"]["waist"],
+                                  [chain["def"][-1] for chain in record["chains"]])
+            mesh_readback_seconds["O3040"] = time.perf_counter() - phase_began
+            phase_began = time.perf_counter()
             prefix = qa.world_mesh(input_probe, graph)
+            mesh_readback_seconds["current_prefix800"] = time.perf_counter() - phase_began
+            phase_began = time.perf_counter()
+            body_mesh = qa.world_mesh(body, graph)
+            mesh_readback_seconds["Body"] = time.perf_counter() - phase_began
             require(len(physical["points"]) == len(prefix["points"]) == 800 and len(final["points"]) == 3040,
                     "Raw800/final3040 evaluated layout changed")
-            require(all(qa.finite(mesh["points"]) for mesh in (physical, final, prefix)), "Nonfinite evaluated motion geometry")
+            require(all(qa.finite(mesh["points"]) for mesh in (physical, final, prefix, body_mesh)), "Nonfinite evaluated motion geometry")
+            if body_vertex_count is None:
+                body_vertex_count = len(body_mesh["points"])
+            require(0 < len(body_mesh["points"]) == body_vertex_count <= args.body_vertex_limit,
+                    "Registered evaluated Body vertex layout/budget changed")
+            evaluated = rig.evaluated_get(graph)
+            root_frame = rigid_frame(evaluated.matrix_world)
+            waist_frame = rigid_frame(evaluated.matrix_world @ evaluated.pose.bones[record["controls"]["waist"]].matrix)
+            knee_heads = {side: evaluated.pose.bones[entry["chain"][1]].head.copy() for side, entry in legs.items()}
+            body_local = rigid_points(body_mesh["points"], root_frame)
+            if native_baseline is None:
+                native_baseline = {"root": root_frame, "waist": waist_frame, "knees": knee_heads, "body": body_local}
+            native = {
+                "native_knee_motion_without_root_m": {side: (evaluated.matrix_world.to_3x3() @
+                    (point-native_baseline["knees"][side])).length*meters for side, point in knee_heads.items()},
+                "native_body_rig_frame_motion_m": point_error(body_local, native_baseline["body"], meters),
+                "native_body_vertices": body_vertex_count,
+                "native_rig_translation_m": (root_frame["origin"]-native_baseline["root"]["origin"]).length*meters,
+                "native_waist_translation_m": (waist_frame["origin"]-native_baseline["waist"]["origin"]).length*meters,
+                "native_rig_rotation_rad": root_frame["rotation"].rotation_difference(native_baseline["root"]["rotation"]).angle,
+                "native_waist_rotation_rad": waist_frame["rotation"].rotation_difference(native_baseline["waist"]["rotation"]).angle,
+                "native_waist_world_origin": list(waist_frame["origin"]),
+                "native_waist_normalized_world_axes": [list(axis) for axis in waist_frame["axes"]]}
+            require(all(math.isfinite(value) for value in native["native_knee_motion_without_root_m"].values())
+                    and all(math.isfinite(native[name]) for name in ("native_body_rig_frame_motion_m",
+                        "native_rig_translation_m", "native_waist_translation_m", "native_rig_rotation_rad", "native_waist_rotation_rad")),
+                    "Nonfinite native evaluated input response")
             pin_error = point_error([physical["points"][index] for index in pin_ids],
                                     [prefix["points"][index] for index in pin_ids], meters)
             if base_edges is None:
@@ -1094,19 +1464,72 @@ def motion_case(case, args, source_name, qa, diag, surface):
                 base_lengths = qa.edge_lengths(physical["points"], base_edges)
             require(physical["edges"] == base_edges, "Cloth edge topology/order changed during playback")
             step = point_error(physical["points"], previous_physical, meters) if previous_physical is not None else 0.
+            if final_base_edges is None:
+                final_base_edges = final["edges"]
+                final_base_lengths = qa.edge_lengths(final["points"], final_base_edges)
+            final_connectivity = final["edges"] == final_base_edges
+            require(final_connectivity, "Final evaluated Dress edge connectivity/order changed during playback")
+            free_ids = set(final["free_indices"])
+            hem_ids = [index for index in final["hem_indices"] if index in free_ids]
+            if first_hem_ids is None:
+                first_hem_ids = hem_ids
+            hem_complete = bool(hem_ids) and final["weights_available"] and hem_ids == first_hem_ids
+            hem = rigid_points([final["points"][index] for index in hem_ids], waist_frame) if hem_complete else None
+            if first_final_hem is None and hem is not None:
+                first_final_hem = hem
+            hem_step = point_error(hem, previous_final_hem, meters) if hem is not None and previous_final_hem is not None else None
+            hem_rms = math.sqrt(sum((point-old).length_squared for point, old in zip(hem, previous_final_hem))/len(hem))*meters \
+                      if hem is not None and previous_final_hem is not None else None
+            hem_from_start = point_error(hem, first_final_hem, meters) if hem is not None and first_final_hem is not None else None
             reference[frame] = {"physical": qa.pack(physical["points"]), "final": qa.pack(final["points"])}
             measurements.append({"frame": frame, "waist_hard_pin_max_m": pin_error,
+                                 "native_timing_segments": {
+                                     "frame_set_seconds": frame_set_seconds,
+                                     "depsgraph_acquisition_seconds": graph_acquisition_seconds,
+                                     "world_mesh_readback_seconds_by_surface": mesh_readback_seconds,
+                                     "scope": "Direct phase timings in sequential playback; depsgraph acquisition excludes an explicit view-layer update. Readback includes realization/extraction/cleanup; not GUI FPS."},
+                                 **native,
                                  "physical_world_max_step_m": step,
                                  "physical_max_edge_ratio_to_frame1": qa.edge_ratio(physical["points"], base_edges, base_lengths),
+                                 "final_edge_connectivity_exact": final_connectivity,
+                                 "final_edges": len(final_base_edges),
+                                 "final_positive_reference_edges": sum(length > 1.e-10 for length in final_base_lengths),
+                                 "final_max_edge_ratio_to_frame1": qa.edge_ratio(final["points"], final_base_edges, final_base_lengths),
+                                 "final_free_vertices": len(free_ids), "final_free_hem_vertices": len(hem_ids),
+                                 "final_hem_identity_complete": hem_complete,
+                                 "final_hem_waist_step_max_m": hem_step, "final_hem_waist_step_rms_m": hem_rms,
+                                 "final_hem_waist_from_frame1_max_m": hem_from_start,
+                                 "synthetic_input_stopped": (case == "abrupt_stop" and (frame-1)/(args.frames-1) >= .55)
+                                     or (case == "abrupt_stop_turn" and (frame-1)/(args.frames-1) >= .65),
                                  "cloth_vs_current_native_prefix_max_m": point_error(physical["points"], prefix["points"], meters)})
             previous_physical = physical["points"]
+            previous_final_hem = hem
             if frame % 10 == 0 or frame == args.frames:
                 print(f"CD actual motion {case}: sequential {frame}/{args.frames}", flush=True)
         result["all_frame_measurements"] = measurements
-        if case == "abrupt_stop":
+        result["final_edge_reference"] = {"edges": len(final_base_edges), "connectivity_sha256": qa.digest(final_base_edges),
+                                          "positive_reference_edges": sum(length > 1.e-10 for length in final_base_lengths)}
+        native_input_summary(case, args, measurements, height, meters, result, qa)
+        if case in {"abrupt_stop", "abrupt_stop_turn"}:
             result["stop_last10_observation"] = {"frames": [item["frame"] for item in measurements[-10:]],
                 "maximum_physical_world_step_m": max(item["physical_world_max_step_m"] for item in measurements[-10:]),
                 "limitation": "World-coordinate vertex displacement in this ten-frame tail only; not long-run equilibrium or a jitter acceptance threshold"}
+            if case == "abrupt_stop_turn":
+                tail = measurements[-10:]
+                result["stop_last10_observation"].update({
+                    "all_authored_inputs_stopped": all(item["synthetic_input_stopped"] for item in tail),
+                    "evaluated_rotation_magnitude_from_frame1_range_rad": {name: [
+                        min(item["native_" + name + "_rotation_rad"] for item in tail),
+                        max(item["native_" + name + "_rotation_rad"] for item in tail)] for name in ("rig", "waist")},
+                    "evaluated_waist_position_span_m": max((Vector(item["native_waist_world_origin"])
+                        - Vector(tail[0]["native_waist_world_origin"])).length * meters for item in tail),
+                    "evaluated_waist_normalized_axis_span": max((Vector(axis) - Vector(old)).length
+                        for item in tail for axis, old in zip(item["native_waist_normalized_world_axes"],
+                                                           tail[0]["native_waist_normalized_world_axes"])),
+                    "scope": "Actual evaluated Rig/Waist rotation and Waist rigid frame during fully held synthetic input; final hem settling is separately bounded"})
+                motion_check(result, qa, "combined_stop_turn_last_ten_after_full_authored_input_stop",
+                             result["stop_last10_observation"]["all_authored_inputs_stopped"],
+                             frames=[item["frame"] for item in tail], all_input_stop_phase=.65)
         motion_check(result, qa, "all_frames_finite_counts_and_hard_pin", max(item["waist_hard_pin_max_m"] for item in measurements) <= guard,
                      frames=args.frames, physical_count=800, final_count=3040, hard_pin_count=len(pin_ids), guard_m=guard,
                      hard_pin_max_m=max(item["waist_hard_pin_max_m"] for item in measurements))
@@ -1114,6 +1537,13 @@ def motion_case(case, args, source_name, qa, diag, surface):
         motion_check(result, qa, "actual_cloth_has_nonzero_motion_effect", effect > 1.e-5, maximum_m=effect)
         peak = max(measurements, key=lambda item: item["cloth_vs_current_native_prefix_max_m"])["frame"]
         sample_frames = sorted({1, 7, 25, 30, peak, args.frames})
+        sample_frames = sorted(set(sample_frames) | {
+            max(measurements, key=lambda item: item["final_max_edge_ratio_to_frame1"])["frame"]})
+        if case in {"abrupt_stop", "abrupt_stop_turn"}:
+            tail_steps = [item for item in measurements[-10:] if item["final_hem_waist_step_max_m"] is not None]
+            if tail_steps:
+                sample_frames = sorted(set(sample_frames) | {
+                    max(tail_steps, key=lambda item: item["final_hem_waist_step_max_m"])["frame"]})
         result["critical_frames"] = sample_frames
         qa.public_switch(bpy.ops.character_designer.dress_motion_reset)
         maximum = {"physical": 0., "final": 0.}
@@ -1146,29 +1576,46 @@ def motion_case(case, args, source_name, qa, diag, surface):
         errors = seeks((("physical", actual), ("final", source)))
         motion_check(result, qa, "sealed_cache_random_seek", max(errors.values()) <= guard, order=order, maximum_error_m=errors, guard_m=guard)
         result["sampled_collisions"] = []
-        render_snapshots = None
+        collision_baseline = {}
         for frame in sample_frames:
             scene.frame_set(frame)
             item, final_mesh, body_mesh, bounds = motion_collision_sample(source, rig, actual, body,
-                       qa.skirt.read_record(source), frame, args, qa, diag, meters)
+                       qa.skirt.read_record(source), frame, args, qa, diag, meters, collision_baseline)
             result["sampled_collisions"].append(item)
-            if frame == 25:
-                render_snapshots = (final_mesh, body_mesh, bounds)
-        scene.frame_set(25)
+        render_selection = motion_quality_summary(case, args, measurements, result["sampled_collisions"], peak, result)
+        render_frame = render_selection["frame"]
+        require(render_frame in sample_frames, "Render selection is outside measured critical frames")
+        scene.frame_set(render_frame)
         if args.no_render:
             result["render"] = {"requested": False, "success": False, "status": "explicit_numerical_only"}
         else:
             require("--threads" in sys.argv and sys.argv[sys.argv.index("--threads") + 1] == "1",
                     "Motion render requires the root-owned child startup --threads 1")
-            require(render_snapshots is not None, "The exact sampled render frame was not retained")
-            final_mesh, body_mesh, bounds = render_snapshots
+            graph = bpy.context.evaluated_depsgraph_get()
+            final_mesh, body_mesh = diag.mesh_snapshot(source, graph), diag.mesh_snapshot(body, graph)
+            bounds = diag.framing(rig, qa.skirt.read_record(source), graph)
             render_dir = output / "render"
             render_dir.mkdir()
-            result["render"] = diag.native_render(SimpleNamespace(frame=25, output=render_dir), final_mesh, body_mesh, bounds)
+            result["render"] = diag.native_render(SimpleNamespace(frame=render_frame, output=render_dir), final_mesh, body_mesh, bounds)
             motion_check(result, qa, "actual_evaluated_critical_three_views", result["render"]["success"] is True
-                         and set(result["render"]["views"]) == {"front", "side", "back"})
+                         and result["render"]["frame"] == render_frame
+                         and set(result["render"]["views"]) == {"front", "side", "back"},
+                         selection=render_selection, actual_frame=render_frame,
+                         visual_quality_accepted=False)
+        result["visual_review"] = {"status": "NOT_GENERATED" if args.no_render else "PENDING_HUMAN_REVIEW",
+                                   "render_selection": render_selection,
+                                   "rendered_frames": [] if args.no_render else [render_frame],
+                                   "unrendered_critical_frames": [frame for frame in sample_frames if args.no_render or frame != render_frame],
+                                   "scope": "One actually evaluated critical frame in front/side/back; no whole-trajectory visual pass"}
         frozen_delta_tests(source, rig, actual, cloth, neutral, qa.skirt.read_record(source), args, result, qa, surface, meters)
         original_roundtrip(source, rig, actual, cloth, neutral, result, qa, surface, meters)
+        from verify_actual_original_refinement import verify_sealed_original_refinement
+        refinement = verify_sealed_original_refinement(source, rig, actual, cloth, neutral, body,
+                     result, qa, surface, sys.modules[__name__], meters)
+        motion_check(result, qa, "public_original_persistent_refinement_and_new_only_keys",
+                     refinement["success"] and refinement["cleanup_complete"],
+                     details=refinement,
+                     scope="One real weighted Dress DEF, public Original/edit/Controls and three frames over sealed private cache")
         remove_motion_probe(input_probe)
         input_probe = None
         expected_inventory = {key: values.copy() for key, values in initial_inventory.items()}
@@ -1221,8 +1668,9 @@ def motion_case(case, args, source_name, qa, diag, surface):
         motion_objects(source, qa, surface)
         motion_check(result, qa, "clean_save_reopen_no_QA_IDs_and_author_assets_exact",
                      inventory() == initial_inventory and protection.verify()["success"], details=protection.verify())
-        result["full_visual_coverage"] = not args.no_render
-        result["success"] = all(item["passed"] for item in result["checks"])
+        result["full_visual_coverage"] = not result["visual_review"]["unrendered_critical_frames"]
+        result["mechanism_success"] = all(item["passed"] for item in result["checks"])
+        result["success"] = result["mechanism_success"]
     except Exception as error:
         result["error"] = {"type": type(error).__name__, "message": str(error), "traceback": traceback.format_exc()}
     finally:
@@ -1241,6 +1689,7 @@ def motion_case(case, args, source_name, qa, diag, surface):
                     "Final installed input Protection failed")
         except Exception as error:
             result["success"] = False
+            result["mechanism_success"] = False
             result["final_reload_error"] = str(error)
         result["elapsed_seconds"] = time.perf_counter() - began
         path = output / "motion_case.json"
@@ -1255,10 +1704,24 @@ def motion_stage(args, report, qa, diag, surface, source_name):
     for case in args.cases:
         result = motion_case(case, args, source_name, qa, diag, surface)
         report["cases"].append({"name": case, "success": result["success"], "report_path": result["report_path"],
+                                "mechanism_success": result["mechanism_success"],
+                                "effect_quality_status": result.get("effect_quality", {}).get("status", "UNPROVEN"),
+                                "bounded_diagnostics_passed": result.get("effect_quality", {}).get("bounded_diagnostics_passed", False),
+                                "visual_review_status": result.get("visual_review", {}).get("status", "NOT_GENERATED"),
                                 "elapsed_seconds": result["elapsed_seconds"], "full_visual_coverage": result.get("full_visual_coverage", False)})
         motion_check(report, qa, "bounded_motion_" + case, result["success"], report_path=result["report_path"])
     qa.save_candidate(args.output / "scenes/Cosha_Dress_QA_motion_clean.blend", args.input)
-    report["full_visual_coverage"] = not args.no_render
+    report["mechanism_success"] = all(case["mechanism_success"] for case in report["cases"])
+    report["success_scope"] = "Native mechanics/input response only; effect diagnostics and actual visual review remain separate"
+    report["effect_quality_summary"] = {
+        "all_requested_bounded_diagnostics_passed": all(case["bounded_diagnostics_passed"] for case in report["cases"]),
+        "rejected_cases": [case["name"] for case in report["cases"] if case["effect_quality_status"] == "REJECTED_BY_BOUNDED_DIAGNOSTIC"],
+        "unproven_cases": [case["name"] for case in report["cases"] if case["effect_quality_status"] == "UNPROVEN"],
+        "requested_cases": list(args.cases), "unexercised_cases": [case for case in CASES if case not in args.cases],
+        "visual_acceptance": "PENDING_HUMAN_REVIEW" if not args.no_render else "NOT_GENERATED",
+        "production_effect_accepted": False, "whole_body_separation_acceptance": "UNPROVEN",
+        "long_run_settling_acceptance": "UNPROVEN"}
+    report["full_visual_coverage"] = all(case["full_visual_coverage"] for case in report["cases"])
 
 
 def main(args):
@@ -1283,14 +1746,21 @@ def main(args):
                          "Native cold Cloth may evaluate during binding or dependency graph reads",
                          "Static source export capture is not a Cloth animation/FBX/Unity acceptance"]}
     if args.stage == "motion":
+        report["mechanism_success"] = False
+        report["success_scope"] = "Native mechanics/input response only; inspect separate effect_quality_summary and actual views"
         report["limits"] = ["Exact saved installation QA only; no live artist/Unity/GUI inspection or save",
                             "Frozen synthetic representative inputs; no production animation acceptance",
-                            "Collision samples only at frames1/7/25/30, measured Cloth-effect peak and final frame",
+                            "Collision samples only at frames1/7/25/30, measured Cloth-effect/edge-ratio/stop-tail-step peaks and final frame",
                             "Open Body has no inside/outside proof; coplanar/boundary/degenerate intersections remain unresolved",
                             "Signed old3 free-vertex samples are not whole-surface separation",
-                            "Manual/Key delta and reverted Original edit are bounded mechanics checks, not exhaustive authoring/export acceptance",
+                            "2mm penetration, 1mm/frame final hem settling and edge-ratio3 are existing bounded diagnostics, not artistic/visual/long-run acceptance",
+                            "Three real views use a measured collision, edge-ratio or stop-step issue frame, otherwise Cloth-effect peak; other critical frames and temporal jitter remain unrendered",
+                            "Manual/Key delta, reverted Original edit and one public persistent Original correction with three new-only keyed frames are bounded mechanics checks, not exhaustive authoring/export acceptance",
                             "Native cold Cloth can evaluate during loading/Reset; no zero-evaluation claim"]
     report["source_manifest_before"][str(Path(__file__).resolve())] = qa.file_state(Path(__file__))
+    if args.stage == "motion":
+        report["source_manifest_before"][str(HERE / "verify_actual_original_refinement.py")] = qa.file_state(
+            HERE / "verify_actual_original_refinement.py")
     protection = None
     guards = {"upgrade": None}
     started = time.perf_counter()
@@ -1329,8 +1799,13 @@ def main(args):
         report["artist_disk_exact"] = report["artist_after"] == report["artist_before"]
         report["source_manifest_after"] = diag.source_manifest()
         report["source_manifest_after"][str(Path(__file__).resolve())] = qa.file_state(Path(__file__))
+        if args.stage == "motion":
+            report["source_manifest_after"][str(HERE / "verify_actual_original_refinement.py")] = qa.file_state(
+                HERE / "verify_actual_original_refinement.py")
         report["canonical_and_frozen_code_exact"] = report["source_manifest_after"] == report["source_manifest_before"]
         report["success"] = report["success"] and report["artist_disk_exact"] and report["canonical_and_frozen_code_exact"]
+        if args.stage == "motion":
+            report["mechanism_success"] = report["success"]
         report["elapsed_seconds"] = time.perf_counter() - started
         destination = args.output / ("result/workflow_install.json" if args.stage == "install" else "result/workflow_motion.json")
         destination.parent.mkdir(parents=True, exist_ok=True)
