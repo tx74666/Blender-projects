@@ -1,0 +1,359 @@
+{
+  "schema": 1,
+  "started_at": "2026-10-07T05:17:28.681414+08:00",
+  "pid": 53980,
+  "script": "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\actual_cosha.py",
+  "checkpoint": "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\X_before_pose_asset_sync.blend",
+  "artist_file": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "report": "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\actual_cosha_20261007_051728_681414.json",
+  "passed": true,
+  "steps": [
+    {
+      "name": "load_checkpoint",
+      "passed": true,
+      "runtime": "5.2.0 LTS",
+      "addon_version": [
+        0,
+        77,
+        0
+      ],
+      "approved_source": "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\approved_release\\addons\\character_designer\\__init__.py",
+      "native_bones": 184,
+      "all_bones": 346,
+      "source_sha256": {
+        "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\approved_release\\addons\\character_designer\\__init__.py": "1c1462dfd9ff3b8183cdef73580492a4b5ec0108c0d69bf82829ead590013b63",
+        "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\approved_release\\addons\\character_designer\\control_pose_capture.py": "35bace22f0a7f54a96413888c7028fd379dbdf0fbebd89a884faffe86022f5ce",
+        "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\approved_release\\addons\\character_designer\\control_pose_assets.py": "300a98ec10b329b1facd31095074494c25414cd57eaaf28943b08a395701c573",
+        "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\approved_release\\addons\\character_designer\\control_pose_mirror.py": "4348b964af86e677f258b46cb9523f6e59fa92ba7d0eeac59bcc1ce94d541d1d",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_control_pose_capture_blender.py": "055d33f13ad5d7ac7c5bc5be247084e596e954fe7d7a5f9df130ecc06f4522e1"
+      },
+      "loaded_file": "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\X_before_pose_asset_sync.blend",
+      "mode": "POSE",
+      "frame": [
+        39,
+        0.0
+      ],
+      "selected": [
+        "forearm.L",
+        "shoulder.L",
+        "upper_arm.L"
+      ],
+      "active_bone": "forearm.L",
+      "left_arm_mode": "FK",
+      "checkpoint_sha256": "4c96ff8ae0f75af5cb8610f75cf7e6733bb18fab64cc289c72fc0d3170c7c31c",
+      "seconds": 3.0529
+    },
+    {
+      "name": "capture_existing_selection",
+      "passed": true,
+      "action": "Cosha arm evidence (isolated)",
+      "captured_names": [
+        "forearm.L",
+        "hand.L",
+        "shoulder.L",
+        "upper_arm.L"
+      ],
+      "curve_count": 96,
+      "key_count": 96,
+      "control_modes": {
+        "BODY": {
+          "mode": "CONTROLS",
+          "value": null
+        },
+        "ARM/L": {
+          "mode": "FK",
+          "value": 0.0
+        },
+        "ARM/R": {
+          "mode": "FK",
+          "value": 0.0
+        },
+        "LEG/L": {
+          "mode": "FK",
+          "value": 0.0
+        },
+        "LEG/R": {
+          "mode": "FK",
+          "value": 0.0
+        },
+        "ROOT": {
+          "mode": "ROOT",
+          "value": 1.0
+        }
+      },
+      "before_state_sha256": "798c9a978fa8c70ebda18035fa58561fb504b521ba8c03c2b544b90800ae1acb",
+      "after_state_sha256": "798c9a978fa8c70ebda18035fa58561fb504b521ba8c03c2b544b90800ae1acb",
+      "state_unchanged": true,
+      "pose": {
+        "max_matrix_error": 0.0,
+        "worst_bone": "Hips",
+        "tolerance": 2e-06,
+        "largest_errors": {
+          "Hips": 0.0,
+          "spine": 0.0,
+          "Chest": 0.0,
+          "UpperChest": 0.0,
+          "Neck": 0.0,
+          "Head": 0.0,
+          "eye.L": 0.0,
+          "eye.R": 0.0
+        }
+      },
+      "seconds": 0.3734
+    },
+    {
+      "name": "native_action_oracle",
+      "passed": true,
+      "method": "Blender pose.apply_pose_from_action on an unconstrained armature copy",
+      "native_matrices_checked": 184,
+      "capture_oracle": {
+        "max_matrix_error": 3.5762786865234375e-07,
+        "worst_bone": "Hair Hair 12.01",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "Hair Hair 12.01": 3.5762786865234375e-07,
+          "Hair Hair 12.02": 3.5762786865234375e-07,
+          "Hair Hair 12.03": 3.5762786865234375e-07,
+          "Hair Hair 12.04": 3.5762786865234375e-07,
+          "shin.R": 2.980232238769531e-07,
+          "foot.R": 2.980232238769531e-07,
+          "toe.R": 2.980232238769531e-07,
+          "Hair Hair 02.01": 2.384185791015625e-07
+        }
+      },
+      "scratch_copy_removed": true,
+      "seconds": 6.7867
+    },
+    {
+      "name": "restore_in_fk",
+      "passed": true,
+      "switch": {
+        "mode": "FK",
+        "changed": false,
+        "keyed": false,
+        "errors": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "switch_no_jump": {
+        "max_matrix_error": 0.0,
+        "worst_bone": "Hips",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "Hips": 0.0,
+          "spine": 0.0,
+          "Chest": 0.0,
+          "UpperChest": 0.0,
+          "Neck": 0.0,
+          "Head": 0.0,
+          "eye.L": 0.0,
+          "eye.R": 0.0
+        }
+      },
+      "disturbance_max_error": 0.11989409103989601,
+      "apply": {
+        "bones": 4,
+        "modes": {
+          "ARM/L": "FK"
+        }
+      },
+      "mode_after": "FK",
+      "restored": {
+        "max_matrix_error": 4.76837158203125e-07,
+        "worst_bone": "f_middle.01.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "f_middle.01.L": 4.76837158203125e-07,
+          "f_pinky.01.L": 4.76837158203125e-07,
+          "f_pinky.03.L": 4.76837158203125e-07,
+          "f_index.01.L": 4.172325134277344e-07,
+          "f_index.02.L": 4.172325134277344e-07,
+          "f_index.03.L": 4.172325134277344e-07,
+          "thumb.03.L": 3.5762786865234375e-07,
+          "f_middle.02.L": 3.5762786865234375e-07
+        }
+      },
+      "seconds": 1.2607
+    },
+    {
+      "name": "restore_in_ik_and_continue",
+      "passed": true,
+      "switch": {
+        "mode": "IK",
+        "changed": true,
+        "keyed": false,
+        "errors": [
+          2.5796229889265336e-06,
+          3.142896018891787e-05,
+          4.042583693936627e-07
+        ]
+      },
+      "switch_no_jump": {
+        "max_matrix_error": 3.0018389225006104e-05,
+        "worst_bone": "upper_arm.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "upper_arm.L": 3.0018389225006104e-05,
+          "forearm.L": 2.9996037483215332e-05,
+          "thumb.01.L": 1.564621925354004e-06,
+          "thumb.02.L": 1.5497207641601562e-06,
+          "thumb.03.L": 1.5497207641601562e-06,
+          "f_index.01.L": 1.5273690223693848e-06,
+          "f_index.02.L": 1.5068799257278442e-06,
+          "f_index.03.L": 1.4957040548324585e-06
+        }
+      },
+      "target": "CTRL_hand_IK.L",
+      "disturbance_max_error": 0.04207530431449413,
+      "apply": {
+        "bones": 4,
+        "modes": {
+          "ARM/L": "IK"
+        }
+      },
+      "restored": {
+        "max_matrix_error": 3.190338611602783e-05,
+        "worst_bone": "upper_arm.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "upper_arm.L": 3.190338611602783e-05,
+          "forearm.L": 3.188103437423706e-05,
+          "hand.L": 1.3820827007293701e-06,
+          "f_middle.03.L": 1.0728836059570312e-06,
+          "f_index.01.L": 9.98377799987793e-07,
+          "f_index.02.L": 9.96515154838562e-07,
+          "f_middle.01.L": 9.96515154838562e-07,
+          "f_middle.02.L": 9.909272193908691e-07
+        }
+      },
+      "continued_target_delta_x": 0.002,
+      "continued_hand_distance": 0.0019986063800990187,
+      "restored_after_continue": {
+        "max_matrix_error": 3.196299076080322e-05,
+        "worst_bone": "upper_arm.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "upper_arm.L": 3.196299076080322e-05,
+          "forearm.L": 3.194063901901245e-05,
+          "thumb.03.L": 1.6689300537109375e-06,
+          "thumb.02.L": 1.564621925354004e-06,
+          "f_index.03.L": 1.5497207641601562e-06,
+          "f_middle.03.L": 1.5497207641601562e-06,
+          "f_ring.02.L": 1.5497207641601562e-06,
+          "thumb.01.L": 1.4901161193847656e-06
+        }
+      },
+      "seconds": 3.2715
+    },
+    {
+      "name": "apply_in_original_and_return",
+      "passed": true,
+      "enter": {
+        "bones": 56,
+        "constraints": 20
+      },
+      "enter_no_jump": {
+        "max_matrix_error": 3.203749656677246e-05,
+        "worst_bone": "upper_arm.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "upper_arm.L": 3.203749656677246e-05,
+          "forearm.L": 3.203004598617554e-05,
+          "thumb.03.L": 1.7434358596801758e-06,
+          "thumb.02.L": 1.7285346984863281e-06,
+          "f_index.03.L": 1.6093254089355469e-06,
+          "f_ring.03.L": 1.6093254089355469e-06,
+          "thumb.01.L": 1.430511474609375e-06,
+          "f_middle.03.L": 1.430511474609375e-06
+        }
+      },
+      "apply": {
+        "bones": 4,
+        "modes": {
+          "LEG/L": "FK",
+          "LEG/R": "FK",
+          "ARM/L": "IK",
+          "ARM/R": "FK"
+        }
+      },
+      "restored": {
+        "max_matrix_error": 2.8014183044433594e-06,
+        "worst_bone": "f_ring.03.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "f_ring.03.L": 2.8014183044433594e-06,
+          "thumb.03.L": 2.7865171432495117e-06,
+          "thumb.02.L": 2.637505531311035e-06,
+          "f_index.03.L": 2.5033950805664062e-06,
+          "f_ring.02.L": 2.5033950805664062e-06,
+          "f_middle.03.L": 2.1457672119140625e-06,
+          "thumb.01.L": 2.086162567138672e-06,
+          "f_index.02.L": 1.9222497940063477e-06
+        }
+      },
+      "preserved_session_fields": [
+        "version",
+        "rest",
+        "bones",
+        "names",
+        "constraints",
+        "locks",
+        "display",
+        "native_groups",
+        "extra_display",
+        "extra_bones",
+        "dress_edit"
+      ],
+      "leave": true,
+      "return_no_jump": {
+        "max_matrix_error": 1.8194317817687988e-05,
+        "worst_bone": "forearm.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "forearm.L": 1.8194317817687988e-05,
+          "upper_arm.L": 1.5834346413612366e-05,
+          "eye.R": 3.077089786529541e-06,
+          "eye.L": 3.0687078833580017e-06,
+          "hand.L": 1.6316771507263184e-06,
+          "f_ring.01.L": 1.0346993803977966e-06,
+          "f_middle.03.L": 1.0319054126739502e-06,
+          "f_middle.02.L": 1.0300427675247192e-06
+        }
+      },
+      "final_vs_captured": {
+        "max_matrix_error": 1.823343336582184e-05,
+        "worst_bone": "forearm.L",
+        "tolerance": 0.0004,
+        "largest_errors": {
+          "forearm.L": 1.823343336582184e-05,
+          "upper_arm.L": 1.574493944644928e-05,
+          "eye.R": 3.082677721977234e-06,
+          "eye.L": 3.0817463994026184e-06,
+          "thumb.03.L": 3.039836883544922e-06,
+          "thumb.02.L": 2.8461217880249023e-06,
+          "f_ring.02.L": 2.682209014892578e-06,
+          "f_ring.03.L": 2.682209014892578e-06
+        }
+      },
+      "seconds": 5.9121
+    }
+  ],
+  "limitations": [
+    "Disposable background copy; no live artist scene modification.",
+    "Local Action capture/application; Asset Browser GUI and library export are not tested.",
+    "Native Action oracle uses an unconstrained temporary armature copy, without the plugin matcher."
+  ],
+  "finished_at": "2026-10-07T05:17:49.346111+08:00",
+  "blend_save_performed": false,
+  "file_protection": {
+    "checkpoint_sha256_before": "4c96ff8ae0f75af5cb8610f75cf7e6733bb18fab64cc289c72fc0d3170c7c31c",
+    "checkpoint_sha256_after": "4c96ff8ae0f75af5cb8610f75cf7e6733bb18fab64cc289c72fc0d3170c7c31c",
+    "artist_sha256_before": "1e7bb077fed27af038fdd4d40f90a3a46c18b3ea4f2e8e5d231486904bf5b677",
+    "artist_sha256_after": "1e7bb077fed27af038fdd4d40f90a3a46c18b3ea4f2e8e5d231486904bf5b677",
+    "loaded_file_at_exit": "D:\\Blender\\Projects\\Character\\X\\validation\\pose_asset_sync_20261007\\X_before_pose_asset_sync.blend",
+    "checkpoint_unchanged": true,
+    "artist_unchanged_during_run": true
+  }
+}

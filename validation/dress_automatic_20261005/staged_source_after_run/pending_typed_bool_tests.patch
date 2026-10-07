@@ -1,0 +1,62 @@
+--- a/tests/test_dress_plain_native_skin.py
++++ b/tests/test_dress_plain_native_skin.py
+@@ -68,6 +68,50 @@
+                     self.assertNotEqual(node.module, "dress_plain_native_skin", path.name)
+                     self.assertFalse(any(alias.name == "dress_plain_native_skin" for alias in node.names), path.name)
+ 
++    def test_pending_true_complete_manual_capture_and_strip_preserves_state(self):
++        f = fixture()
++        raw = json.loads(f.source["direct-state"])
++        raw["pending"] = True
++        f.source["direct-state"] = json.dumps(raw)
++        state_before = f.source["direct-state"]
++        receipt = json.loads(json.dumps(f.module.capture(f.source), allow_nan=False))
++        self.assertIs(receipt["direct_proof"]["state"]["pending"], True)
++        f.module.validate(f.source, receipt)
++        with patch.dict(sys.modules, {"bpy": f.bpy}):
++            f.module.prepare(f.source, receipt)
++            self.assertEqual(f.events, [])
++            result = f.module.strip(f.source, receipt)
++        self.assertEqual(f.source["direct-state"], state_before)
++        self.assertEqual(list(f.source.modifiers), [f.arm, f.sub])
++        self.assertTrue(result["manual_original_preserved"])
++        self.assertFalse(result["simulation_baked"] or result["animation_supported"] or result["export_authorized"])
++
++    def test_pending_transition_or_unknown_typed_value_rejects_before_strip(self):
++        for start in (False, True):
++            f = fixture()
++            raw = json.loads(f.source["direct-state"])
++            raw["pending"] = start
++            f.source["direct-state"] = json.dumps(raw)
++            receipt = f.module.capture(f.source)
++            raw["pending"] = not start
++            f.source["direct-state"] = json.dumps(raw)
++            with patch.dict(sys.modules, {"bpy": f.bpy}), self.assertRaises(ValueError):
++                f.module.strip(f.source, receipt)
++            self.assertEqual(f.events, [])
++        for value in (0, 1, None, "false", [], {}):
++            f = fixture()
++            receipt = f.module.capture(f.source)
++            receipt["direct_proof"]["state"]["pending"] = value
++            with patch.dict(sys.modules, {"bpy": f.bpy}), self.assertRaises(ValueError):
++                f.module.strip(f.source, receipt)
++            self.assertEqual(f.events, [])
++            raw = json.loads(f.source["direct-state"])
++            raw["pending"] = value
++            f.source["direct-state"] = json.dumps(raw)
++            with self.assertRaises(ValueError):
++                f.module.capture(f.source)
++            self.assertEqual(f.events, [])
++
+     def test_real_hooks_json_roundtrip_model_only_strip_preserves_channels(self):
+         f = fixture()
+         receipt = f.module.capture(f.source)
+@@ -105,7 +149,7 @@
+     def test_actual_state_and_manual_physical_mutes_must_prove_preservation(self):
+         changes = (lambda f: f.source.__setitem__("direct-state", f.source["direct-state"].replace("MANUAL", "AUTOMATIC")),
+                    lambda f: f.source.__setitem__("direct-state", f.source["direct-state"].replace('"editing": false', '"editing": true')),
+-                   lambda f: f.source.__setitem__("direct-state", f.source["direct-state"].replace('"pending": false', '"pending": true')),
++                   lambda f: f.source.__setitem__("direct-state", f.source["direct-state"].replace('"pending": false', '"pending": 0')),
+                    lambda f: f.manual.values.update(mute=True), lambda f: f.rotation.values.update(mute=False))
+         for change in changes:
+             with self.subTest(change=change):

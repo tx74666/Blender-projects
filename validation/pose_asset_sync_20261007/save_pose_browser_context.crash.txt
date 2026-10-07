@@ -1,0 +1,936 @@
+# Blender 5.2.0, Commit date: 2026-07-13 15:20, Hash fbe6228777e7
+bpy.context.space_data.overlay.show_overlays = False  # Property
+bpy.ops.view3d.blenderkit_disclaimer_widget(message="Go to import settings to set default texture resolution.", url="https://github.com/BlenderKit/blenderkit/wiki/BlenderKit-add-on-documentation#import-settings", fadeout_time=8, tip=True)  # Operator
+bpy.context.space_data.overlay.show_overlays = True  # Property
+bpy.ops.transform.rotate(value=0.875745, orient_axis='Z', orient_type='VIEW', orient_matrix=((1, -0, -0), (-0, -1.34359e-07, 1), (0, -1, -1.34359e-07)), orient_matrix_type='VIEW', mirror=False, snap=False, snap_elements={'INCREMENT'}, use_snap_project=False, snap_target='CLOSEST', use_snap_self=True, use_snap_edit=True, use_snap_nonedit=True, use_snap_selectable=False)  # Operator
+bpy.context.area.ui_type = 'CONSOLE'  # Property
+Refreshing Character Designer...  # Info
+bpy.data.window_managers["WinMan"]. = "手臂平舉"  # Property
+
+# backtrace
+Exception Record:
+
+ExceptionCode         : EXCEPTION_ACCESS_VIOLATION (0xc0000005)
+Exception Address     : 0x00007FF6F6E94707
+Exception Module      : blender.exe
+Exception Flags       : 0x00000000
+Exception Parameters  : 0x2
+	Parameters[0] (action)  : 0x0000000000000001 (write)
+	Parameters[1] (address) : 0x0000000000000000
+
+
+Stack trace:
+blender.exe         :0x00007FF6F6E94700  blender::file_on_reload_callback_register
+blender.exe         :0x00007FF6F67106C0  blender::RNA_function_call
+blender.exe         :0x00007FF6F7095FA0  blender::pyrna_func_vectorcall
+python313.dll       :0x00007FFAE5CC3080  PyBytes_Repeat
+python313.dll       :0x00007FFAE5CC3B90  PyObject_Vectorcall
+python313.dll       :0x00007FFAE5E4C5A0  PyEval_EvalFrameDefault
+python313.dll       :0x00007FFAE5CC3D40  PyObject_CallOneArg
+python313.dll       :0x00007FFAE5CC3A30  PyVectorcall_Function
+python313.dll       :0x00007FFAE5CC3B90  PyObject_Vectorcall
+blender.exe         :0x00007FF6F70A0A60  blender::bpy_class_call
+blender.exe         :0x00007FF6F6A9B480  blender::rna_operator_exec_cb
+blender.exe         :0x00007FF6F66E90E0  blender::wm_operator_exec
+blender.exe         :0x00007FF6F70140E0  blender::ui::apply_but_funcs_after
+blender.exe         :0x00007FF6F700F0E0  blender::ui::popup_handler
+blender.exe         :0x00007FF6F66F27A0  blender::wm_handlers_do_intern
+blender.exe         :0x00007FF6F66EB800  blender::wm_handlers_do
+blender.exe         :0x00007FF6F66EA120  blender::wm_event_do_handlers
+blender.exe         :0x00007FF6F66E2280  blender::WM_main
+blender.exe         :0x00007FF6F62A1030  main
+blender.exe         :0x00007FF6FAE9C0A4  __scrt_common_main_seh
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Threads:
+Thread : 00008d60
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00001cd0
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00008efc
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000a4f0
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000495c
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000084a0
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000ab14
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00008504
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000abd8
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000aa9c
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000aa5c
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000a680
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000067d4
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000aae0
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000088f0
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00007534
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+IlmThread.dll       :0x00007FFB5C5C4920  IlmThread_3_4::Semaphore::wait
+IlmThread.dll       :0x00007FFB5C5C33C0  IlmThread_3_4::ThreadPool::setThreadProvider
+IlmThread.dll       :0x00007FFB5C5C1280  IlmThread_3_4::supportsThreads
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009458
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+blender.exe         :0x00007FF6F6309040  blender::delayed_close_thread_run
+blender.exe         :0x00007FF6F6317590  std::thread::_Invoke<std::tuple<void (__cdecl*)(void)>,0>
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000084a8
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+nvoglv64.dll        :0x00007FFA9C18F1A0  DrvValidateVersion
+nvoglv64.dll        :0x00007FFA9BF1F14A  Symbols not available
+
+
+Thread : 00001f1c
+ntdll.dll           :0x00007FFBBB921900  NtWaitForMultipleObjects
+KERNELBASE.dll      :0x00007FFBB8BD2650  WaitForMultipleObjectsEx
+KERNELBASE.dll      :0x00007FFBB8BD2630  WaitForMultipleObjects
+nvoglv64.dll        :0x00007FFA9C1C0C80  DrvPresentBuffers
+nvoglv64.dll        :0x00007FFA9C1C0C80  DrvPresentBuffers
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00008208
+win32u.dll          :0x00007FFBB926AED0  NtUserMsgWaitForMultipleObjectsEx
+nvoglv64.dll        :0x00007FFA9C18F1A0  DrvValidateVersion
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000088fc
+win32u.dll          :0x00007FFBB926AED0  NtUserMsgWaitForMultipleObjectsEx
+directmanipulation.dll:0x00007FFB7ED211A4  Symbols not available
+
+
+Thread : 0000abc8
+ntdll.dll           :0x00007FFBBB921900  NtWaitForMultipleObjects
+KERNELBASE.dll      :0x00007FFBB8BD2650  WaitForMultipleObjectsEx
+KERNELBASE.dll      :0x00007FFBB8BD2630  WaitForMultipleObjects
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6FA944300  sem_timedwait
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6F6632E80  blender::BLI_thread_queue_pop
+blender.exe         :0x00007FF6F7E80AE0  std::thread::_Invoke<std::tuple<`lambda at C:\Users\blender\git\blender-v520\blender.git\source\ble
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000091d4
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+nvoglv64.dll        :0x00007FFA9C18F1A0  DrvValidateVersion
+nvoglv64.dll        :0x00007FFA9BF1F14A  Symbols not available
+
+
+Thread : 00006030
+ntdll.dll           :0x00007FFBBB921900  NtWaitForMultipleObjects
+KERNELBASE.dll      :0x00007FFBB8BD2650  WaitForMultipleObjectsEx
+KERNELBASE.dll      :0x00007FFBB8BD2630  WaitForMultipleObjects
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6FA944300  sem_timedwait
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6F6632E80  blender::BLI_thread_queue_pop
+blender.exe         :0x00007FF6F7E80AE0  std::thread::_Invoke<std::tuple<`lambda at C:\Users\blender\git\blender-v520\blender.git\source\ble
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000095e8
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+nvoglv64.dll        :0x00007FFA9C18F1A0  DrvValidateVersion
+nvoglv64.dll        :0x00007FFA9BF1F14A  Symbols not available
+
+
+Thread : 00009e68
+ntdll.dll           :0x00007FFBBB921900  NtWaitForMultipleObjects
+KERNELBASE.dll      :0x00007FFBB8BD2650  WaitForMultipleObjectsEx
+KERNELBASE.dll      :0x00007FFBB8BD2630  WaitForMultipleObjects
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6FA944300  sem_timedwait
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6F6632E80  blender::BLI_thread_queue_pop
+blender.exe         :0x00007FF6F7E80AE0  std::thread::_Invoke<std::tuple<`lambda at C:\Users\blender\git\blender-v520\blender.git\source\ble
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009314
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+nvoglv64.dll        :0x00007FFA9C18F1A0  DrvValidateVersion
+nvoglv64.dll        :0x00007FFA9BF1F14A  Symbols not available
+
+
+Thread : 00006ef4
+ntdll.dll           :0x00007FFBBB921900  NtWaitForMultipleObjects
+KERNELBASE.dll      :0x00007FFBB8BD2650  WaitForMultipleObjectsEx
+KERNELBASE.dll      :0x00007FFBB8BD2630  WaitForMultipleObjects
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6FA944300  sem_timedwait
+blender.exe         :0x00007FF6FA945B80  _ptw32_mcs_flag_wait
+blender.exe         :0x00007FF6F6632E80  blender::BLI_thread_queue_pop
+blender.exe         :0x00007FF6F7E80AE0  std::thread::_Invoke<std::tuple<`lambda at C:\Users\blender\git\blender-v520\blender.git\source\ble
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00006734
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+nvoglv64.dll        :0x00007FFA9C18F1A0  DrvValidateVersion
+nvoglv64.dll        :0x00007FFA9BF1F14A  Symbols not available
+
+
+Thread : 00009b10
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00007d48
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000a218
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000090a4
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00001864
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009e3c
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00008960
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00000f84
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000811c
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00008fd8
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000098b0
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00008c34
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000949c
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000426c
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00006940
+ntdll.dll           :0x00007FFBBB920E30  NtWaitForSingleObject
+KERNELBASE.dll      :0x00007FFBB8BCBDF0  WaitForSingleObjectEx
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+tbb12.dll           :0x00007FFB87E95600  tbb::detail::r1::set_end_of_input
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00007270
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000092b8
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00008f08
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00005b4c
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000073c0
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00004950
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009758
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009c84
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000098e8
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009aa8
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000a190
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000a8a8
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00003cd0
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00001878
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009ca0
+ntdll.dll           :0x00007FFBBB924A00  ZwWaitForAlertByThreadId
+ntdll.dll           :0x00007FFBBB8627B0  RtlSleepConditionVariableSRW
+KERNELBASE.dll      :0x00007FFBB8BD2A20  SleepConditionVariableSRW
+MSVCP140.dll        :0x00007FFB878A2340  Cnd_wait
+OpenImageIO_Util.dll:0x00007FFB589D7BC0  OpenImageIO::v3_1::paropt::operator=
+OpenImageIO_Util.dll:0x00007FFB589D3B00  OpenImageIO::v3_1::Sysutil::usleep
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00009d48
+ntdll.dll           :0x00007FFBBB920ED0  ZwRemoveIoCompletion
+mswsock.dll         :0x00007FFBB7D86980  Tcpip6_WSHGetSockaddrType
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00006720
+win32u.dll          :0x00007FFBB9261350  NtUserMessageCall
+USER32.dll          :0x00007FFBBB5E49F0  SendMessageTimeoutW
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67FF0BC0  WindowPattern_WaitForInputIdle
+uiautomationcore.dll:0x00007FFB67FB6CD0  UiaNodeFromProvider
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67FB3E50  UiaIAccessibleFromProvider
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 00004d74
+win32u.dll          :0x00007FFBB926AED0  NtUserMsgWaitForMultipleObjectsEx
+uiautomationcore.dll:0x00007FFB67E63010  UiaRaiseAutomationPropertyChangedEvent
+uiautomationcore.dll:0x00007FFB67FF0BC0  WindowPattern_WaitForInputIdle
+ucrtbase.dll        :0x00007FFBB8A7CBE0  wcsrchr
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 000079c8
+ntdll.dll           :0x00007FFBBB924A60  ZwWaitForWorkViaWorkerFactory
+ntdll.dll           :0x00007FFBBB7D8C50  TpCallbackMayRunLong
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000cf8c
+ntdll.dll           :0x00007FFBBB924A60  ZwWaitForWorkViaWorkerFactory
+ntdll.dll           :0x00007FFBBB7D8C50  TpCallbackMayRunLong
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Thread : 0000cd34
+ntdll.dll           :0x00007FFBBB924A60  ZwWaitForWorkViaWorkerFactory
+ntdll.dll           :0x00007FFBBB7D8C50  TpCallbackMayRunLong
+KERNEL32.DLL        :0x00007FFBBA2BCD70  BaseThreadInitThunk
+ntdll.dll           :0x00007FFBBB86CAC0  RtlUserThreadStart
+
+
+Loaded Modules :
+0x00007FF6F62A0000 5.2.0.0              blender.exe D:\Blender5.2\blender.pdb [unmatched]
+0x00007FFBBB7C0000 10.0.26100.9444      ntdll.dll  
+0x00007FFBBA290000 10.0.26100.9444      KERNEL32.DLL  
+0x00007FFBB8BB0000 10.0.26100.9444      KERNELBASE.dll  
+0x00007FFBB9870000 10.0.26100.9278      SHELL32.dll  
+0x00007FFBAF940000                      blender_cpu_check.dll  
+0x00007FFBB8FC0000 10.0.26100.9444      msvcp_win.dll  
+0x00007FFB884D0000 2022.3.0.0           tbbmalloc.dll  
+0x00007FFBB8A50000 10.0.26100.9444      ucrtbase.dll  
+0x00007FFBBB5A0000 10.0.26100.9444      USER32.dll  
+0x00007FFBB9260000 10.0.26100.9444      win32u.dll  
+0x00007FFBBA530000 10.0.26100.8328      GDI32.dll  
+0x00007FFBB9070000 10.0.26100.9444      gdi32full.dll  
+0x00007FFBBA9C0000 10.0.26100.9444      ole32.dll  
+0x00007FFB87890000 14.44.35211.0        MSVCP140.dll  
+0x00007FFB03300000 14.44.35211.0        VCRUNTIME140.dll  
+0x00007FFB62CB0000 14.44.35211.0        VCRUNTIME140_1.dll  
+0x00007FFBBB010000 10.0.26100.9444      combase.dll  
+0x00007FFBBA010000 10.0.26100.9444      RPCRT4.dll  
+0x00007FFBBA560000 10.0.26100.9444      SHLWAPI.dll  
+0x00007FFB5B710000                      gmp-10.dll  
+0x00007FFBA31B0000 2022.3.0.0           tbbmalloc_proxy.dll  
+0x00007FFBBA460000 10.0.26100.9278      ADVAPI32.dll  
+0x00007FFBBB4F0000 7.0.26100.9444       msvcrt.dll  
+0x00007FFBBB440000 10.0.26100.9444      sechost.dll  
+0x00007FFB58970000 3.1.13.0             OpenImageIO_Util.dll  
+0x00007FFB87E80000 2022.3.0.0           tbb12.dll  
+0x00007FFBBA140000 10.0.26100.9444      shcore.dll  
+0x00007FFBBA5D0000 10.0.26100.9278      OLEAUT32.dll  
+0x00007FFBB9650000 10.0.26100.9278      IMM32.dll  
+0x00007FFB58A80000 13.0.0.0             openvdb.dll  
+0x00007FFB9D8D0000 6.10.26100.9278      COMCTL32.dll  
+0x00007FFBB5D50000 10.0.26100.9444      dbghelp.dll  
+0x00007FFBAB9D0000 10.0.26100.1150      VERSION.dll  
+0x00007FFBB6250000 10.0.26100.9444      dxgi.dll  
+0x00007FFB5D260000                      epoxy-0.dll  
+0x00007FFB58780000 60.26.100.0          avutil-60.dll  
+0x00007FFB58390000 62.12.100.0          avformat-62.dll  
+0x00007FFBB9350000 10.0.26100.9278      CRYPT32.dll  
+0x00007FFBB94E0000 10.0.26100.9444      WS2_32.dll  
+0x00007FFAC7E50000 62.28.100.0          avcodec-62.dll  
+0x00007FFAE5B80000 3.13.13150.1013      python313.dll  
+0x00007FFB88A30000 62.3.100.0           avdevice-62.dll  
+0x00007FFB5A5A0000 1.39.4.0             MaterialXCore.dll  
+0x00007FFB251E0000                      OpenColorIO_2_5.dll  
+0x00007FFB884A0000 1.39.4.0             MaterialXFormat.dll  
+0x00007FFB25DE0000 1.4.341.0            vulkan-1.dll  
+0x00007FFAF4930000                      shaderc_shared.dll  
+0x00007FFB36FC0000 9.5.100.0            swscale-9.dll  
+0x00007FFAB6260000                      usd_ms.dll  
+0x00007FFB1C250000                      OpenEXR.dll  
+0x00007FFB36DE0000                      Iex.dll  
+0x00007FFB2F3A0000                      Imath.dll  
+0x00007FFAF41A0000 1.23.1.0             OpenAL32.dll  
+0x00007FFB36F40000 2.5.0.0              OpenImageDenoise.dll  
+0x00007FFBB4880000 10.0.26100.9278      dwmapi.dll  
+0x00007FFAE5350000 3.1.13.0             OpenImageIO.dll  
+0x00007FFB93DF0000 10.0.26100.7019      MPR.dll  
+0x00007FFAC4F10000                      oslexec.dll  
+0x00007FFACE3E0000                      oslcomp.dll  
+0x00007FFB1C220000                      oslquery.dll  
+0x00007FFAE9410000 1.2.2.0              sndfile.dll  
+0x00007FFACDF10000                      ceres.dll  
+0x00007FFBB8640000 10.0.26100.9278      CFGMGR32.dll  
+0x00007FFAD7090000                      hiprt0200564.dll  
+0x00007FFAC3510000 4.4.1.0              embree4.dll  
+0x00007FFAC0F40000                      cycles_kernel_oneapi_aot.dll  
+0x00007FFACDBC0000 8.0.0.0              sycl8.dll  
+0x00007FFB03460000 14.44.35211.0        MSVCP140_2.dll  
+0x00007FFBB7870000 10.0.26100.3912      powrprof.dll  
+0x00007FFBB88B0000 10.0.26100.9444      bcrypt.dll  
+0x00007FFBB4620000 10.0.26100.7705      Secur32.dll  
+0x00007FFBB82A0000 10.0.26100.9444      ncrypt.dll  
+0x00007FFB01FE0000 6.3.100.0            swresample-6.dll  
+0x00007FFAC0570000                      aom.dll  
+0x00007FFB01420000 10.0.26100.1150      AVICAP32.dll  
+0x00007FFAC0150000 11.14.100.0          avfilter-11.dll  
+0x00007FFBA8D10000 10.0.26100.9278      OPENGL32.dll  
+0x00007FFB881E0000 1.39.4.0             MaterialXRender.dll  
+0x00007FFB88170000 1.39.4.0             MaterialXGenGlsl.dll  
+0x00007FFAEE1F0000 1.39.4.0             MaterialXGenMsl.dll  
+0x00007FFAD6E90000 1.39.4.0             MaterialXGenShader.dll  
+0x00007FFB5C5C0000                      IlmThread.dll  
+0x00007FFAE4DF0000                      OpenEXRCore.dll  
+0x00007FFBA7890000 10.0.26100.9278      WINMM.dll  
+0x00007FFABD480000 2.5.0.0              OpenImageDenoise_core.dll  
+0x00007FFB887A0000                      openjph.0.25.dll  
+0x00007FFB01400000 14.44.35211.0        MSVCP140_ATOMIC_WAIT.dll  
+0x00007FFB5B700000                      oslnoise.dll  
+0x00007FFBAF980000 8.8.0.0              ur_win_proxy_loader.dll  
+0x00007FFAEF3E0000 10.0.26100.1150      MSVFW32.dll  
+0x00007FFBA9E00000 10.0.26100.1150      GLU32.dll  
+0x00007FFBB7A70000 10.0.26100.9278      SSPICLI.DLL  
+0x00007FFBB52C0000 10.0.26100.9278      dxcore.dll  
+0x00007FFBB7850000 10.0.26100.8972      UMPDC.dll  
+0x00007FFBB8250000 10.0.26100.1882      NTASN1.dll  
+0x00007FFACDAB0000 0.12.0.0             ur_loader.dll  
+0x00007FFAD6E20000 1.8.1.0              ze_loader.dll  
+0x00007FFBB7700000 10.0.26100.9278      kernel.appcore.dll  
+0x00007FFBB63F0000 10.0.26100.9444      windows.storage.dll  
+0x00007FFBB88E0000 10.0.26100.9444      profapi.dll  
+0x00007FFBB8080000 10.0.26100.9444      CRYPTBASE.DLL  
+0x00007FFBB91A0000 10.0.26100.9444      bcryptPrimitives.dll  
+0x00007FFBB9570000 2001.12.10941.16384  clbcatq.dll  
+0x00007FFBAB270000 10.0.26100.9444      MMDevApi.dll  
+0x00007FFBB8600000 10.0.26100.9278      DEVOBJ.dll  
+0x00007FFBB46A0000 10.0.26100.9444      uxtheme.dll  
+0x00007FFBAA110000 10.0.26100.9444      AUDIOSES.DLL  
+0x00007FFBB4E60000 10.0.26100.8115      resourcepolicyclient.dll  
+0x00007FFBB9710000 10.0.26100.9278      MSCTF.dll  
+0x00007FFBB3090000 7.0.26100.9278       PROPSYS.dll  
+0x00007FFBA4940000 10.0.26100.9444      windows.staterepositorycore.dll  
+0x00007FFA9B760000 32.0.16.1060         nvoglv64.dll  
+0x00007FFBBAB60000 10.0.26100.9444      SETUPAPI.dll  
+0x00007FFBB4640000 10.0.26100.9278      WTSAPI32.dll  
+0x00007FFBB81B0000 10.0.26100.9444      msasn1.dll  
+0x00007FFBAB040000 10.0.26100.9278      cryptnet.dll  
+0x00007FFBB8140000 10.0.26100.9444      wldp.dll  
+0x00007FFBAAEC0000 10.0.26100.9444      drvstore.dll  
+0x00007FFBB78E0000 10.0.26100.7019      ntmarta.dll  
+0x00007FFBB89C0000 10.0.26100.9444      WINTRUST.dll  
+0x00007FFBBA980000 10.0.26100.4202      imagehlp.dll  
+0x00007FFBB8060000 10.0.26100.9444      CRYPTSP.dll  
+0x00007FFBB7660000 10.0.26100.7705      rsaenh.dll  
+0x00007FFB80860000 32.0.16.1060         nvgpucomp64.dll  
+0x00007FFBB73A0000 10.0.26100.9278      WINSTA.dll  
+0x00007FFB65B00000 10.0.26100.9278      dataexchange.dll  
+0x00007FFBAC1B0000 10.0.26100.9444      twinapi.appcore.dll  
+0x00007FFB8E150000 10.0.26100.9444      ApplicationTargetedFeatureDatabase.dll  
+0x00007FFBAE040000 10.0.26100.9444      WinTypes.dll  
+0x00007FFB8E000000 10.0.26100.9278      textinputframework.dll  
+0x00007FFBB4170000 10.0.26100.9444      CoreMessaging.dll  
+0x00007FFBA41D0000 10.0.26100.9278      CoreUIComponents.dll  
+0x00007FFB87E50000 16.0.0.10            Wintab32.dll  
+0x00007FFB5D930000 10.0.26100.9278      explorerframe.dll  
+0x00007FFB7ECE0000 10.0.26100.9278      directmanipulation.dll  
+0x00007FFB93E20000 11.0.26100.9444      urlmon.dll  
+0x00007FFB93B20000 11.0.26100.9444      iertutil.dll  
+0x00007FFB979E0000 10.0.26100.1150      srvcli.dll  
+0x00007FFBB6F60000 10.0.26100.1882      netutils.dll  
+0x00007FFBAA820000 10.0.26100.9278      virtdisk.dll  
+0x00007FFBB3340000 10.0.26100.9278      policymanager.dll  
+0x00007FFBBA710000 10.0.26100.9444      coml2.dll  
+0x00007FFB5A2B0000 10.0.26100.1         LINKINFO.dll  
+0x00007FFB7FEF0000 10.0.26100.9444      Windows.System.Launcher.dll  
+0x00007FFBA98B0000 10.0.26100.9444      Windows.StateRepositoryPS.dll  
+0x00007FFB906A0000 10.0.26100.9444      windows.staterepositoryclient.dll  
+0x00007FFB65040000 10.0.26100.9278      Windows.FileExplorer.Common.dll  
+0x00000256E81D0000 3.13.13150.1013      python3.DLL  
+0x00007FFBAF950000 3.13.13150.1013      _wmi.pyd  
+0x00007FFBA31C0000 3.13.13150.1013      _socket.pyd  
+0x00007FFBB70E0000 10.0.26100.9278      IPHLPAPI.DLL  
+0x00007FFBA31A0000 3.13.13150.1013      select.pyd  
+0x00007FFB9D500000 10.0.26100.9278      wbemprox.dll  
+0x00007FFB9D410000 10.0.26100.7920      wbemcomn.dll  
+0x00007FFB939C0000 10.0.26100.9278      wbemsvc.dll  
+0x00007FFB92C30000 10.0.26100.9444      fastprox.dll  
+0x00007FFB94A50000 10.0.26100.7309      amsi.dll  
+0x00007FFBB7E20000 10.0.26100.9278      USERENV.dll  
+0x00007FFB949A0000 4.18.26080.4         MpOav.dll  
+0x00007FFB87E30000 3.13.13150.1013      _hashlib.pyd  
+0x00007FFAF21A0000 3.5.6.0              libcrypto-3.dll  
+0x00007FFB87D00000 3.13.13150.1013      _bz2.pyd  
+0x00007FFB87CD0000 3.13.13150.1013      _lzma.pyd  
+0x00007FFB87830000 3.13.13150.1013      _ssl.pyd  
+0x00007FFB25F20000 3.5.6.0              libssl-3.dll  
+0x00007FFB256E0000                      _multiarray_umath.cp313-win_amd64.pyd  
+0x00007FFB78090000 3.13.13150.1013      _ctypes.pyd  
+0x00007FFB88A80000                      libffi-8.dll  
+0x00007FFB236D0000                      _umath_linalg.cp313-win_amd64.pyd  
+0x00007FFB719F0000                      _bounded_integers.cp313-win_amd64.pyd  
+0x00007FFB5D5B0000                      bit_generator.cp313-win_amd64.pyd  
+0x00007FFB5D230000                      _common.cp313-win_amd64.pyd  
+0x00007FFB586C0000                      _generator.cp313-win_amd64.pyd  
+0x00007FFBAF960000                      _pcg64.cp313-win_amd64.pyd  
+0x00007FFB97830000                      _mt19937.cp313-win_amd64.pyd  
+0x00007FFB88780000                      _philox.cp313-win_amd64.pyd  
+0x00007FFB88760000                      _sfc64.cp313-win_amd64.pyd  
+0x00007FFB5D5E0000                      mtrand.cp313-win_amd64.pyd  
+0x00007FFB5C600000 3.13.13150.1013      pyexpat.pyd  
+0x00007FFBB7D70000 10.0.26100.9278      mswsock.dll  
+0x00007FFB25D50000                      backend_c.cp313-win_amd64.pyd  
+0x00007FFB97820000 3.13.13150.1013      _queue.pyd  
+0x00007FFB25130000 3.13.13150.1013      unicodedata.pyd  
+0x00007FFB88A20000 3.13.13150.1013      _uuid.pyd  
+0x00007FFBB71C0000 10.0.26100.9444      DNSAPI.dll  
+0x00007FFBB7B50000 10.0.26100.1         DSPARSE.dll  
+0x00007FFBBA9B0000 10.0.26100.9444      NSI.dll  
+0x00007FFBADE00000 10.0.26100.9444      fwpuclnt.dll  
+0x00007FFBAC170000 10.0.26100.7920      rasadhlp.dll  
+0x00007FFB58660000 3.13.13150.1013      _decimal.pyd  
+0x00007FFB88750000 3.13.13150.1013      _multiprocessing.pyd  
+0x00007FFBAD520000 10.0.26100.9278      mscms.dll  
+0x00007FFBA8A20000 10.0.26100.9168      icm32.dll  
+0x00007FFB67E50000 7.2.26100.9278       uiautomationcore.dll  
+0x00007FFBA0E20000 10.0.26100.8246      threadpoolwinrt.dll  
+0x00007FFB88810000                      wtdccm.dll  
+0x00007FFB86B20000 7.2.26100.9278       OLEACC.dll  
+0x00007FFB629E0000 10.0.26100.9444      TextShaping.dll  
+
+# Python backtrace
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\character_designer\control_pose_capture.py", line 285 in _show_current_file
+  File "C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\scripts\addons\character_designer\control_pose_capture.py", line 336 in execute

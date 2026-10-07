@@ -1,0 +1,131 @@
+{
+  "scope": "PRIVATE_MANUAL_BONE_ACTION_FBX_COMPONENT_ONLY",
+  "errors": [
+    {
+      "error": "KeyError('bpy_prop_collection[key]: key \"WGT-rig.001_VIS_thigh_ik_pole.L\" not found')",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\verify_private_manual_action_fbx_component52.py\", line 329, in main\n    immutable_state(bpy, q, rig, names) == original_immutable\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\verify_private_manual_action_fbx_component52.py\", line 117, in immutable_state\n    return {'raw_named_weights_UV_Keys': {name: q.digest(q.raw_mesh_content(bpy.data.objects[name]))\n                                                                            ~~~~~~~~~~~~~~~~^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"WGT-rig.001_VIS_thigh_ik_pole.L\" not found'\n"
+    }
+  ],
+  "native_component_verified": false,
+  "FBX_roundtrip_verified": false,
+  "input_author_restored": true,
+  "snapshot_raw_named_weights_Rest_Body12_assets_exact": false,
+  "sampled_source_protected": false,
+  "owned_native_cleanup": true,
+  "private_scene_disposed": true,
+  "pinned_files_unchanged": true,
+  "public_admission_verified": false,
+  "public_export_verified": false,
+  "production_model_binding_verified": false,
+  "Unity_verified": false,
+  "Magica_verified": false,
+  "simulation_baked": false,
+  "vertex_Cloth_carried_by_bones": false,
+  "final_surface_equivalent": false,
+  "export_accepted": false,
+  "material_texture_roundtrip_verified": false,
+  "current_X_loaded": false,
+  "asset_protection_scope": "Original Action name/fake-user/layered flag, slot handle/identifier/target ID type, curve paths/keys/handles and modifier type/mute; Body12 eval_time and named key values; original material/node-tree references and image file identity/size/colorspace metadata. No complete material-node/image-pixel fidelity audit; frozen input file bytes stay exact.",
+  "matrix_threshold_scope": "Inherited animation component gates: static/reference native matrix component <2e-4, playable FBX component <4e-4; unchanged worker FK/TRS gates. This does not replace the separate REST model same-index mesh 0.05 mm gate.",
+  "phase": "reopen_Action_and_complete_Direct_preflight",
+  "phases": [
+    {
+      "name": "fixed_input_and_sources",
+      "seconds": 0.012507100007496774
+    },
+    {
+      "name": "three_frame_QA_and_derived_Action_snapshot",
+      "seconds": 23.725816200007102
+    },
+    {
+      "name": "reopen_Action_and_complete_Direct_preflight",
+      "seconds": 63.64557020000939
+    }
+  ],
+  "pins": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\report.json": "803b8ec6297eb51f23e4a664e76e21ff354d3d1a97748a826ec41da3bfd67aa9",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": "1716ff49a231cee8c0663fd17949583eabbfb7ce79791a459682930f40744dcb",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_plain_native_skin_fbx_component52_v3.py": "33a3b0911f4fcd8dda63075fe4f40e173d8eada6e5ae23767962f7e48e78e003",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_direct_save_reopen_snapshot52.py": "4f107e6e47f7a81fbb17adff83940aa4ac61562363815dbd919267caeabf4741",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_direct_cold_install52_v4.py": "4bb8e79fbad87950c75c1999e27d97657733ea42695df8e0f2b3a2ae4f58c536",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\validate_real_dress.py": "613e9d32f3674f1e01d98725a99d1dd70911d22af1526f36a43f442c47649046",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\__init__.py": "b7a2c06c11267ff9baaeb30ebc6add17b044d27f754340f17345dc78d74db336",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\export_fbx_bin.py": "8fd324e4ee0d25cc89cd53507b0f93c057b17b699601ac90f81085d5be09e44a",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\fbx_utils.py": "66a15d79d5eaf490176b439f22fb01963efcd46e06702eff224a84135e636fb3",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\import_fbx.py": "e4e55c2e344959b75d840e20c4d45d079ec8fd4f4bc375491cea76e55cce8013",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_plain_rest_skin_fbx_component52.py": "9b93aab9edde5cbf6065e2e8ab9bf81ef27d07a79cd7cb9b792451f466e8564f",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_export_blender.py": "5d2fc6c7ddeadb8800b5f643ce83f194dd4068f2278ce5144d191e91594687c0",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_private_manual_action_fbx_component52.py": "25e6e3789f44abebdfb2c73c013f912d3833349330abf7a8bcf98322d4037f3a",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py": "87a4f850fd31583a55e7f610a46b6d3d35696d7f604986a0db371d3a088fe266",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py": "aa92d856cbbd5df88f05fd700c7ba03c845d25b5941efcf5f23f46138d70a6c5",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_colors.py": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_guard.py": "4655c3a1de51cfd8560d8d084ab70f697bfde8cf8b3e6d5f434b323e314c8193",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py": "a9949be8e5ad42c97fba3bd85c67e4fbb014188c29afe49bc538d2fc8ddd33e2",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_controls.py": "8be7a0247417b5e86b30e5ae49724863167e282b22bf1ebb899916076af61521",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\foot_controls.py": "f949f24175ae70d537bfe74bb6be5c0ea3abe72f62c55b842cedb553b6eeb2c3",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\generated_names.py": "a1c49790c61c31e915de15b1a4baa76c75be2b490a6d771eca179921fda4d931",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_fk_visuals.py": "228fbdcc2bd8226a9e2d871a25aff8d86df558098b2dcebba28c7a6ffbd405d6",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py": "5692ba78ed296ece885be5d519eb0f59152f4915784624c686880eee49d4dbf3",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\root_control.py": "243b62967ee08c61657886ed5cab74ca257b75a13bd6b8dad794e9483560e6af",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py": "be77e6f1fdcd6819ee46a3490515a0791b644900f286f04e287b5704706390e1",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_original_mode.py": "8708cadca4d40f6c8f18c98e626019c2a47079a1f36443edebc666ff24da5ae7",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_physics.py": "2d388f7de87ea4bb02e98f7fd28560003c3212a646682057cfe3ebfa0a3413e2",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_rig.py": "0d56bc969f272cd884d1955a21a1c66a0afbeba2424e68b6b41802c71cf5de4c",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py": "a58d0e542bca195cd1d8e767e23e76809602bfe95b698668a8cc4b4289855c12",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface_direct.py": "e07634927c790323ffa70c19e52320ce0068fbd65e0447770ff515bea3fdd9c3",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_topology.py": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py": "ad2e82fc9200af280befed0c55c745bc0ce3990f0120c638a6e906ae9f0a264f",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_controls.py": "37772c81e8142f5debd9674a6d4c424129a4579eeafbf9cedcef5f718f36b87a",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ui_constants.py": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e"
+  },
+  "runtime_closure": [
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_colors.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_controls.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\foot_controls.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\generated_names.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_fk_visuals.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\root_control.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_original_mode.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_physics.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_rig.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface_direct.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_topology.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_controls.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ui_constants.py"
+  ],
+  "public_admission_refusal": "Dress: Direct Dress export validation is pending; preserve its editable source and vertex physics.",
+  "derived_Action_snapshot": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\actual_private_manual_action_fbx_component_52_20261007_215111_796_2cf4430baf5b476e8030298b8306d2f1\\result\\cdesigner-action-manual-qa\\animation.blend",
+    "sha256": "ccd152153e0411c30ebfffce035f5a1b8ba91888a1c831ae4ac52f6e5d5e3691",
+    "parent_PNS_sha256": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71",
+    "roots_include_recorded_home": true,
+    "selected_Action_only": true,
+    "public_admission_receipt_fabricated": false
+  },
+  "cleanup": {
+    "success": true,
+    "failures": [],
+    "remaining_owned_ids": {
+      "scenes": [],
+      "objects": [],
+      "collections": [],
+      "meshes": [],
+      "armatures": [],
+      "materials": [],
+      "worlds": [],
+      "node_groups": [],
+      "images": [],
+      "actions": []
+    }
+  },
+  "elapsed_seconds": 73.57369689999905
+}

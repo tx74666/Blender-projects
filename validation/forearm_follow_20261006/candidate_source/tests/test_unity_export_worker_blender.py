@@ -1,0 +1,559 @@
+"""Real FBX export/reimport checks, run with Blender --factory-startup -b."""
+import importlib.util
+import json
+import math
+from pathlib import Path
+import tempfile
+from array import array
+from unittest.mock import patch
+
+import bpy
+from mathutils import Matrix, Vector
+
+ROOT = Path(__file__).resolve().parents[1]
+spec = importlib.util.spec_from_file_location('unity_export_worker', ROOT / 'addons/character_designer/unity_export_worker.py')
+worker = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(worker)
+
+
+def fixture():
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    arm = bpy.data.armatures.new('NativeSkeleton')
+    rig = bpy.data.objects.new('CharacterRig', arm)
+    bpy.context.scene.collection.objects.link(rig)
+    bpy.context.view_layer.objects.active = rig
+    rig.select_set(True)
+    bpy.ops.object.mode_set(mode='EDIT')
+    root = arm.edit_bones.new('CTRL_master')
+    root.head, root.tail = (0, 0, 0), (0, 0, 0.2)
+    root.use_deform = False
+    hip = arm.edit_bones.new('Hips')
+    hip.head, hip.tail, hip.parent = (0, 0, 0), (0, 0, 1), root
+    hand = arm.edit_bones.new('Hand')
+    hand.head, hand.tail, hand.parent = (0, 0, 1), (0, 0, 2), hip
+    helper = arm.edit_bones.new('CTRL_hand')
+    helper.head, helper.tail = (0, 0, 1), (0, 0.2, 1)
+    helper.use_deform = False
+    bpy.ops.object.mode_set(mode='OBJECT')
+    for name in ('CTRL_master', 'CTRL_hand'):
+        arm.bones[name]['character_designer_owner'] = 'limb_ik'
+    rig.location = (3, -2, 1)
+    rig.pose.bones['Hand'].rotation_mode = 'XYZ'
+    rig.pose.bones['Hand'].rotation_euler.y = 0.6
+    data = bpy.data.meshes.new('BodyData')
+    data.from_pydata([(0.1, -0.2, 0), (0.5, -0.2, 0), (0.5, 0.2, 1), (0.1, 0.2, 1)], [], [(0, 1, 2, 3)])
+    data.update()
+    mesh = bpy.data.objects.new('Body', data)
+    bpy.context.scene.collection.objects.link(mesh)
+    mesh.parent = rig
+    mesh.matrix_parent_inverse = Matrix.Identity(4)
+    group = mesh.vertex_groups.new(name='Hand')
+    group.add([0, 1, 2, 3], 1.0, 'REPLACE')
+    mask = mesh.vertex_groups.new(name='Smile Mask')
+    mask.add([0, 1], 0.25, 'REPLACE')
+    mask.add([2, 3], 0.75, 'REPLACE')
+    mirror = mesh.modifiers.new('Mirror', 'MIRROR')
+    mirror.use_mirror_merge = False
+    subdiv = mesh.modifiers.new('Subsurf', 'SUBSURF')
+    subdiv.subdivision_type = 'SIMPLE'
+    subdiv.levels = 1
+    skin = mesh.modifiers.new('Rig', 'ARMATURE')
+    skin.object = rig
+    basis = mesh.shape_key_add(name='Basis')
+    smile = mesh.shape_key_add(name='Smile')
+    for point in smile.data:
+        point.co.y += 0.2
+    smile.vertex_group = mask.name
+    smile.value = 0.35
+    extra = mesh.shape_key_add(name='Extra')
+    extra.relative_key = smile
+    for index, point in enumerate(extra.data):
+        point.co = smile.data[index].co + Vector((0, 0, 0.1))
+    owned = mesh.shape_key_add(name='CD Forearm Twist.L')
+    for point in owned.data:
+        point.co.x += 0.3
+    owned.value = 1.0
+    image = bpy.data.images.new('Test Texture', width=2, height=2)
+    image.generated_color = (0.1, 0.2, 0.3, 1)
+    material = bpy.data.materials.new('Body Material')
+    material.use_nodes = True
+    texture = material.node_tree.nodes.new('ShaderNodeTexImage')
+    texture.image = image
+    shader = material.node_tree.nodes.get('Principled BSDF')
+    material.node_tree.links.new(texture.outputs['Color'], shader.inputs['Base Color'])
+    mesh.data.materials.append(material)
+    bpy.context.view_layer.update()
+    return rig, mesh
+
+
+def test_export_import():
+    rig, mesh = fixture()
+    folder = Path(tempfile.mkdtemp(prefix='cdesigner_worker_test_'))
+    result = worker.export_job({'objects': [rig.name, mesh.name], 'rig': rig.name,
+                               'filename': 'Character.fbx', 'stage': str(folder), 'unit_scale': 1.0,
+                               'owned_keys': {mesh.name: ['CD Forearm Twist.L']}})
+    assert result['ok']
+    assert result['rigs']['CharacterRig'] == ['Hand', 'Hips'], result
+    assert result['shape_keys']['Body'] == ['Smile', 'Extra']
+    assert result['meshes']['Body']['vertices'] == 18, result['meshes']
+    assert result['meshes']['Body']['modifiers_baked'] == ['MIRROR', 'SUBSURF']
+    assert result['meshes']['Body']['unweighted_vertices'] == 0
+    assert len(result['files']) == 2 and (folder / result['files'][1]).is_file(), result
+    expected = {key.name: worker._coordinates(key.data) for key in mesh.data.shape_keys.key_blocks}
+    expected_basis = expected['Basis']
+    # Chained relative keys retain their own delta, not their relative parent's.
+    assert abs((expected['Extra'][2] - expected_basis[2]) - 0.1) < 2e-6
+    for vertex in mesh.data.vertices:
+        assert any(group.group == mesh.vertex_groups['Hand'].index and abs(group.weight - 1) < 1e-6
+                   for group in vertex.groups)
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    bpy.ops.preferences.addon_enable(module='io_scene_fbx')
+    bpy.ops.import_scene.fbx(filepath=str(folder / 'Character.fbx'), use_anim=False)
+    imported_mesh = next(obj for obj in bpy.context.scene.objects if obj.type == 'MESH')
+    imported_rig = next(obj for obj in bpy.context.scene.objects if obj.type == 'ARMATURE')
+    assert set(imported_rig.data.bones.keys()) == {'Hand', 'Hips'}
+    assert imported_rig.data.bones['Hips'].parent is None
+    assert set(imported_mesh.data.shape_keys.key_blocks.keys()) == {'Basis', 'Smile', 'Extra'}
+    assert len(imported_mesh.data.vertices) == 18
+    for name, coords in expected.items():
+        imported = worker._coordinates(imported_mesh.data.shape_keys.key_blocks[name].data)
+        assert max(abs(a - b) for a, b in zip(imported, coords)) < 3e-6, name
+    assert len(imported_mesh.modifiers) == 1 and imported_mesh.modifiers[0].type == 'ARMATURE'
+    assert max(abs(value) for value in imported_rig.matrix_world.translation) < 1e-6
+    assert all(not bone.constraints for bone in imported_rig.pose.bones)
+    print('PASS real FBX export/reimport with mirrors, subdiv, masked/chained artist shapes, skin weights and texture')
+
+
+def test_owned_dependency_refused():
+    rig, mesh = fixture()
+    mesh.data.shape_keys.key_blocks['Extra'].relative_key = mesh.data.shape_keys.key_blocks['CD Forearm Twist.L']
+    try:
+        worker._shape_inputs(mesh, ['CD Forearm Twist.L'])
+    except worker.ExportError as error:
+        assert 'depends' in str(error)
+    else:
+        raise AssertionError('Artist dependency on owned key was not rejected.')
+    print('PASS owned calibration dependency is rejected')
+
+
+def test_topology_mismatch_refused():
+    rig, mesh = fixture()
+    mirror = mesh.modifiers['Mirror']
+    mirror.use_mirror_merge = True
+    mirror.merge_threshold = 0.02
+    shape = mesh.data.shape_keys.key_blocks['Smile']
+    shape.vertex_group = ''
+    for point in shape.data:
+        point.co.x = 0
+    try:
+        worker._bake_mesh(bpy.context, mesh, ['CD Forearm Twist.L'], [])
+    except worker.ExportError as error:
+        assert 'topology' in str(error), error
+    else:
+        raise AssertionError('Shape-dependent mirror topology was not rejected.')
+    print('PASS changing modifier topology is rejected')
+
+
+def test_evaluation_copy_early_failure_cleanup():
+    def inventory():
+        return {name: sorted((block.name, block.as_pointer()) for block in getattr(bpy.data, name))
+                for name in ('objects', 'meshes', 'shape_keys', 'actions')}
+
+    def artist_state(mesh):
+        data, keys = mesh.data, mesh.data.shape_keys
+        action = keys.animation_data.action
+        return {'data': data.as_pointer(), 'keys': keys.as_pointer(),
+                'vertices': list(worker._coordinates(data.vertices)),
+                'shapes': [(key.name, key.value, key.mute, key.relative_key.name,
+                            list(worker._coordinates(key.data))) for key in keys.key_blocks],
+                'action': action.as_pointer(), 'action_users': action.users,
+                'modifiers': [(mod.name, mod.type, mod.show_viewport) for mod in mesh.modifiers]}
+
+    original_spec = worker.importlib.util.spec_from_file_location
+    for failure in ('helper_import', 'before_clear', 'after_detach', 'after_clear'):
+        _rig, mesh = fixture()
+        mesh.data.shape_keys.key_blocks['Smile'].keyframe_insert(data_path='value', frame=1)
+        before_inventory, before_artist = inventory(), artist_state(mesh)
+
+        def failing_spec(*args, **kwargs):
+            if args[0] != 'cdesigner_mesh_copy':
+                return original_spec(*args, **kwargs)
+            if failure == 'helper_import':
+                raise ImportError('Injected evaluation preparation failure')
+            spec = original_spec(*args, **kwargs)
+            load = spec.loader.exec_module
+
+            def install_failure(module):
+                load(module)
+                clear = module.clear_copied_shape_keys
+
+                def failing_clear(source, duplicate):
+                    if failure == 'after_detach':
+                        duplicate.shape_key_clear()
+                    elif failure == 'after_clear':
+                        clear(source, duplicate)
+                    raise RuntimeError('Injected evaluation preparation failure')
+
+                module.clear_copied_shape_keys = failing_clear
+
+            spec.loader.exec_module = install_failure
+            return spec
+
+        with patch.object(worker.importlib.util, 'spec_from_file_location', side_effect=failing_spec):
+            try:
+                worker._bake_mesh(bpy.context, mesh, ['CD Forearm Twist.L'], [])
+            except (ImportError, RuntimeError) as error:
+                assert 'Injected evaluation preparation failure' in str(error), (failure, error)
+            else:
+                raise AssertionError('The injected early evaluation failure was not raised: ' + failure)
+        assert inventory() == before_inventory, (failure, before_inventory, inventory())
+        assert artist_state(mesh) == before_artist, failure
+    print('PASS early evaluation import/Key-clear failures clean exact copied IDs and preserve artist Keys/Action')
+
+
+def test_skirt_attachment_and_solidify():
+    main, body = fixture()
+    data = bpy.data.armatures.new('SkirtData')
+    rig = bpy.data.objects.new('SkirtRig', data)
+    bpy.context.scene.collection.objects.link(rig)
+    rig['character_designer_skirt_owner'] = 'fixture-skirt'
+    bpy.ops.object.select_all(action='DESELECT')
+    rig.select_set(True)
+    bpy.context.view_layer.objects.active = rig
+    bpy.ops.object.mode_set(mode='EDIT')
+    waist = data.edit_bones.new('Skirt_Waist')
+    waist.head, waist.tail = (0, 0, 0), (0, 0, 0.2)
+    deform = data.edit_bones.new('Skirt_DEF_01')
+    deform.head, deform.tail, deform.parent = (0, 0, 0), (0, 0, -0.5), waist
+    for name in ('Skirt_Mid', 'Skirt_MCH_01', 'Skirt_PHYS_01'):
+        bone = data.edit_bones.new(name)
+        bone.head, bone.tail, bone.parent = (0, 0, 0), (0, 0, -0.5), waist
+        bone.use_deform = False
+    bpy.ops.object.mode_set(mode='OBJECT')
+    rig.parent, rig.parent_type, rig.parent_bone = main, 'BONE', 'Hips'
+    rig.matrix_parent_inverse = Matrix.Identity(4)
+    rig.location = (0.2, 0.3, 0.4)
+    mesh_data = bpy.data.meshes.new('SkirtMeshData')
+    mesh_data.from_pydata([(-0.2, 0, 0), (0.2, 0, 0), (0.2, 0, -0.5), (-0.2, 0, -0.5)], [], [(0, 1, 2, 3)])
+    mesh = bpy.data.objects.new('SkirtMesh', mesh_data)
+    bpy.context.scene.collection.objects.link(mesh)
+    mesh.parent = rig
+    mesh.vertex_groups.new(name='Skirt_DEF_01').add([0, 1, 2, 3], 1, 'REPLACE')
+    mesh.modifiers.new('Rig', 'ARMATURE').object = rig
+    mesh.modifiers.new('Thickness', 'SOLIDIFY').thickness = 0.05
+    mesh.shape_key_add(name='Basis')
+    key = mesh.shape_key_add(name='Skirt Width')
+    for point in key.data:
+        point.co.x *= 1.2
+    bpy.context.view_layer.update()
+    relative = main.matrix_world.inverted() @ rig.matrix_world
+    folder = Path(tempfile.mkdtemp(prefix='cdesigner_worker_skirt_'))
+    result = worker.export_job({'objects': [main.name, body.name, rig.name, mesh.name], 'rig': main.name,
+                               'filename': 'Character.fbx', 'stage': str(folder), 'unit_scale': 0.01,
+                               'owned_keys': {body.name: ['CD Forearm Twist.L']}})
+    assert result['source_rigs']['SkirtRig'] == ['Skirt_DEF_01', 'Skirt_Waist']
+    assert result['rigs']['CharacterRig'] == ['Hand', 'Hips', 'Skirt_DEF_01', 'Skirt_Waist']
+    assert result['meshes']['SkirtMesh']['vertices'] == 8
+    actual_relative = main.matrix_world.inverted() @ rig.matrix_world
+    assert max(abs(relative[row][col] - actual_relative[row][col]) for row in range(4) for col in range(4)) < 2e-6
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    bpy.ops.preferences.addon_enable(module='io_scene_fbx')
+    bpy.ops.import_scene.fbx(filepath=str(folder / 'Character.fbx'), use_anim=False)
+    imported = bpy.data.objects['CharacterRig']
+    assert imported.data.bones['Skirt_Waist'].parent == imported.data.bones['Hips']
+    assert 'SkirtRig' not in bpy.data.objects
+    assert len(bpy.data.objects['SkirtMesh'].data.vertices) == 8
+    assert set(bpy.data.objects['SkirtMesh'].data.shape_keys.key_blocks.keys()) == {'Basis', 'Skirt Width'}
+    print('PASS source skirt skeleton flattened only for export, Hips attachment, Solidify shapes and non-default units')
+
+
+def test_normal_nodes_and_disabled_skinning():
+    rig, mesh = fixture()
+    mesh.modifiers['Rig'].show_viewport = False
+    tree = bpy.data.node_groups.new('Normal Attributes', 'GeometryNodeTree')
+    tree.interface.new_socket(name='Geometry', in_out='INPUT', socket_type='NodeSocketGeometry')
+    tree.interface.new_socket(name='Geometry', in_out='OUTPUT', socket_type='NodeSocketGeometry')
+    entry = tree.nodes.new('NodeGroupInput')
+    exit_node = tree.nodes.new('NodeGroupOutput')
+    smooth = tree.nodes.new('GeometryNodeSetShadeSmooth')
+    tree.links.new(entry.outputs['Geometry'], smooth.inputs['Geometry'])
+    tree.links.new(smooth.outputs['Geometry'], exit_node.inputs['Geometry'])
+    modifier = mesh.modifiers.new('Not Name Whitelisted', 'NODES')
+    modifier.node_group = tree
+    warnings = []
+    result = worker._bake_mesh(bpy.context, mesh, ['CD Forearm Twist.L'], warnings)
+    assert result['skinned'] is False and result['disabled_skinning'] == ['Rig']
+    assert not mesh.modifiers
+    assert result['modifiers_baked'] == ['MIRROR', 'SUBSURF', 'NODES']
+    assert any('disabled Armature' in warning for warning in warnings)
+    # A nodes graph that changes actual vertex positions is refused regardless
+    # of a reassuring modifier name.
+    rig, mesh = fixture()
+    tree = bpy.data.node_groups.new('Geometry Change', 'GeometryNodeTree')
+    tree.interface.new_socket(name='Geometry', in_out='INPUT', socket_type='NodeSocketGeometry')
+    tree.interface.new_socket(name='Geometry', in_out='OUTPUT', socket_type='NodeSocketGeometry')
+    entry = tree.nodes.new('NodeGroupInput')
+    exit_node = tree.nodes.new('NodeGroupOutput')
+    deform = tree.nodes.new('GeometryNodeSetPosition')
+    deform.inputs['Offset'].default_value = (0, 0, 0.2)
+    tree.links.new(entry.outputs['Geometry'], deform.inputs['Geometry'])
+    tree.links.new(deform.outputs['Geometry'], exit_node.inputs['Geometry'])
+    mesh.modifiers.new('Smooth by Angle', 'NODES').node_group = tree
+    try:
+        worker._bake_mesh(bpy.context, mesh, ['CD Forearm Twist.L'], [])
+    except worker.ExportError as error:
+        assert 'changes geometry or skin weights' in str(error)
+    else:
+        raise AssertionError('A misleadingly named Geometry Nodes deformation was accepted.')
+    print('PASS normal-only Geometry Nodes, geometry-change rejection and disabled skinning remains disabled')
+
+
+def test_unsaved_image_buffer():
+    rig, mesh = fixture()
+    folder = Path(tempfile.mkdtemp(prefix='cdesigner_worker_painted_'))
+    image = bpy.data.images['Test Texture']
+    pixels = array('f', [0.07, 0.21, 0.82, 1.0] * 4)
+    raw = folder / 'painted_pixels.f32'
+    raw.write_bytes(pixels.tobytes())
+    # The .blend snapshot's generated_color is intentionally unrelated. The
+    # coordinator's captured pixel buffer must win over that stale backing.
+    image.generated_color = (1, 0, 0, 1)
+    result = worker.export_job({'objects': [rig.name, mesh.name], 'rig': rig.name,
+                               'filename': 'Character.fbx', 'stage': str(folder),
+                               'owned_keys': {mesh.name: ['CD Forearm Twist.L']},
+                               'image_buffers': {'Test Texture': {'path': str(raw), 'width': 2, 'height': 2, 'count': 16}}})
+    texture = next(folder / name for name in result['files'] if name.endswith('.png'))
+    imported = bpy.data.images.load(str(texture), check_existing=False)
+    actual = list(imported.pixels[:4])
+    # Eight-bit sRGB PNG has the same small quantization as Blender Image.save.
+    assert max(abs(a - b) for a, b in zip(actual, pixels[:4])) < 0.008, actual
+    print('PASS unsaved painted pixel buffer survives export instead of reverting to generated/file backing')
+
+
+def missing_texture(folder):
+    path = folder / 'Offline Authoring Texture.png'
+    image = bpy.data.images.new('Temporary Texture', width=2, height=2)
+    image.filepath_raw, image.file_format = str(path), 'PNG'
+    image.save()
+    bpy.data.images.remove(image)
+    image = bpy.data.images.load(str(path), check_existing=False)
+    path.unlink()
+    assert image.source == 'FILE' and not image.is_dirty
+    return image
+
+
+def test_unused_texture_export_and_required_missing_texture():
+    rig, mesh = fixture()
+    folder = Path(tempfile.mkdtemp(prefix='cdesigner_worker_unused_texture_'))
+    material = mesh.data.materials[0]
+    unused = material.node_tree.nodes.new('ShaderNodeTexImage')
+    unused.image = missing_texture(folder)
+    spare = material.node_tree.nodes.new('ShaderNodeTexImage')
+    spare.image = bpy.data.images.new('Unused Painted Texture', width=16, height=16)
+    spare.image.pixels[0:4] = (0.7, 0.3, 0.1, 1.0)
+    assert worker._material_images(material) == {bpy.data.images['Test Texture']}
+    result = worker.export_job({'objects': [rig.name, mesh.name], 'rig': rig.name,
+                               'filename': 'Character.fbx', 'stage': str(folder / 'unused'),
+                               'owned_keys': {mesh.name: ['CD Forearm Twist.L']}})
+    assert result['ok'] and len(result['files']) == 2, result['files']
+    assert len(list((folder / 'unused' / 'Textures').iterdir())) == 1
+    # The same missing image must still stop publication when the artist uses it.
+    shader = material.node_tree.nodes.get('Principled BSDF')
+    material.node_tree.links.new(unused.outputs['Color'], shader.inputs['Base Color'])
+    try:
+        worker.export_job({'objects': [rig.name, mesh.name], 'rig': rig.name,
+                           'filename': 'Character.fbx', 'stage': str(folder / 'required')})
+    except worker.ExportError as error:
+        assert 'missing' in str(error) and unused.image.name in str(error), error
+    else:
+        raise AssertionError('A connected missing texture was silently omitted.')
+    assert not (folder / 'required' / 'Character.fbx').exists()
+    print('PASS unused missing/painted textures are skipped; connected missing texture still blocks export')
+
+
+def test_texture_group_output_reachability():
+    _rig, mesh = fixture()
+    folder = Path(tempfile.mkdtemp(prefix='cdesigner_worker_texture_groups_'))
+    material = mesh.data.materials[0]
+    tree = material.node_tree
+    offline = missing_texture(folder)
+    inner = bpy.data.node_groups.new('Texture Routing', 'ShaderNodeTree')
+    inner.interface.new_socket(name='Color', in_out='INPUT', socket_type='NodeSocketColor')
+    inner.interface.new_socket(name='Used', in_out='OUTPUT', socket_type='NodeSocketColor')
+    inner.interface.new_socket(name='Unused', in_out='OUTPUT', socket_type='NodeSocketColor')
+    entry, output = inner.nodes.new('NodeGroupInput'), inner.nodes.new('NodeGroupOutput')
+    unused = inner.nodes.new('ShaderNodeTexImage')
+    unused.image = offline
+    inner.links.new(entry.outputs['Color'], output.inputs['Used'])
+    inner.links.new(unused.outputs['Color'], output.inputs['Unused'])
+    outer = bpy.data.node_groups.new('Nested Routing', 'ShaderNodeTree')
+    for item in inner.interface.items_tree:
+        outer.interface.new_socket(name=item.name, in_out=item.in_out, socket_type='NodeSocketColor')
+    entry, output = outer.nodes.new('NodeGroupInput'), outer.nodes.new('NodeGroupOutput')
+    nested = outer.nodes.new('ShaderNodeGroup')
+    nested.node_tree = inner
+    outer.links.new(entry.outputs['Color'], nested.inputs['Color'])
+    for name in ('Used', 'Unused'):
+        outer.links.new(nested.outputs[name], output.inputs[name])
+    original = next(node for node in tree.nodes if node.type == 'TEX_IMAGE')
+    second = tree.nodes.new('ShaderNodeTexImage')
+    second.image = bpy.data.images.new('Second Active Texture', width=2, height=2)
+    mix = tree.nodes.new('ShaderNodeMixRGB')
+    instances = []
+    for index, texture in enumerate((original, second)):
+        instance = tree.nodes.new('ShaderNodeGroup')
+        instance.node_tree = outer
+        tree.links.new(texture.outputs['Color'], instance.inputs['Color'])
+        tree.links.new(instance.outputs['Used'], mix.inputs[index + 1])
+        instances.append(instance)
+    tree.links.new(mix.outputs['Color'], tree.nodes['Principled BSDF'].inputs['Base Color'])
+    # A disconnected duplicate group and an inactive material output must not
+    # reintroduce the offline image through their independent shader branches.
+    disconnected = tree.nodes.new('ShaderNodeGroup')
+    disconnected.node_tree = inner
+    inactive = tree.nodes.new('ShaderNodeOutputMaterial')
+    inactive.is_active_output = False
+    emission = tree.nodes.new('ShaderNodeEmission')
+    tree.links.new(disconnected.outputs['Unused'], emission.inputs['Color'])
+    tree.links.new(emission.outputs[0], inactive.inputs['Surface'])
+    assert worker._material_images(material) == {original.image, second.image}
+    _materials, files = worker._export_textures([mesh], folder / 'reachable', [])
+    assert len(files) == 2, files
+    tree.links.new(instances[0].outputs['Unused'], tree.nodes['Principled BSDF'].inputs['Roughness'])
+    assert offline in worker._material_images(material)
+    try:
+        worker._export_textures([mesh], folder / 'required', [])
+    except worker.ExportError as error:
+        assert 'missing' in str(error) and offline.name in str(error), error
+    else:
+        raise AssertionError('A connected missing texture inside nested groups was omitted.')
+    print('PASS nested group outputs, repeated group inputs, inactive outputs and required grouped images')
+
+
+def test_unweighted_vertices_diagnostic():
+    rig, mesh = fixture()
+    mesh.vertex_groups['Hand'].remove([0])
+    folder = Path(tempfile.mkdtemp(prefix='cdesigner_worker_unweighted_'))
+    result = worker.export_job({'objects': [rig.name, mesh.name], 'rig': rig.name,
+                               'filename': 'Character.fbx', 'stage': str(folder),
+                               'owned_keys': {mesh.name: ['CD Forearm Twist.L']}})
+    # Mirror duplicates the unweighted original corner; subdivision does not
+    # give either corner a new weight. Diagnostics must not invent skinning.
+    assert result['meshes']['Body']['unweighted_vertices'] == 2, result['meshes']
+    assert any('2 exported vertices have no weight' in warning for warning in result['warnings'])
+    assert worker._unweighted_vertices(mesh) == 2
+    print('PASS unweighted skin vertices are reported without changing weights')
+
+
+def test_removed_forearm_emits_removal_marker():
+    rig, mesh = fixture()
+    mesh.shape_key_remove(mesh.data.shape_keys.key_blocks['CD Forearm Twist.L'])
+    folder = Path(tempfile.mkdtemp(prefix='cdesigner_worker_removed_forearm_'))
+    result = worker.export_job({'objects': [rig.name, mesh.name], 'rig': rig.name,
+                               'filename': 'Character.fbx', 'stage': str(folder),
+                               'owned_keys': {}, 'forearm': {}, 'had_forearm': True})
+    assert result['ok']
+    assert 'Character.forearm.json' in result['files']
+    marker = json.loads((folder / 'Character.forearm.json').read_text(encoding='utf8'))
+    assert marker['schema'] == 'cdesigner.forearm/1'
+    assert marker['fbx'] == 'Character.fbx'
+    assert marker['meshes'] == [], marker
+    import hashlib
+    assert marker['fbxSha256'] == hashlib.sha256((folder / 'Character.fbx').read_bytes()).hexdigest()
+    assert result['forearm_correction']['meshes'] == []
+    assert 'removed' in result['forearm_correction']['status'].lower()
+    assert result['shape_keys']['Body'] == ['Smile', 'Extra']
+    assert not any('correction' in warning.lower() for warning in result['warnings'])
+    print('PASS removed forearm emits an empty matching-FBX sidecar to clear prior runtime correction')
+
+
+def test_clean_skeleton_preserves_native_cosha_roll():
+    # These actual Cosha geometries expose the native near-pi roll flip caused
+    # by rewriting EditBone.matrix even when filtering has not moved the bone.
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    arm = bpy.data.armatures.new('Cosha Rest Regression Data')
+    rig = bpy.data.objects.new('Cosha Rest Regression', arm)
+    bpy.context.scene.collection.objects.link(rig)
+    bpy.context.view_layer.objects.active = rig
+    rig.select_set(True)
+    bpy.ops.object.mode_set(mode='EDIT')
+    root = arm.edit_bones.new('CTRL_master')
+    root.head, root.tail = (0, 0, 0), (0, 0, 0.2)
+    root.use_deform = False
+    hips = arm.edit_bones.new('Hips')
+    hips.head, hips.tail, hips.parent = (0, 0, 0.2), (0, 0, 0.4), root
+    hips.use_deform = True
+    bridge = arm.edit_bones.new('CTRL_bridge')
+    bridge.head, bridge.tail, bridge.parent = (0, 0, 0.4), (0, 0.1, 0.4), hips
+    bridge.use_deform = False
+    geometries = {
+        'shin.R': ((-0.09694115072488785, 0.06386806070804596, 0.6524592041969299),
+                   (-0.09949608147144318, 0.060485754162073135, -0.021930769085884094),
+                   1.574584722518921),
+        'thigh.L': ((0.09480436891317368, 0.09454359859228134, 1.2164766788482666),
+                    (0.09694115072488785, 0.06386806070804596, 0.6524592041969299),
+                    1.5670078992843628),
+        'hand.R': ((-0.5040974020957947, 0.06748819351196289, 1.2489454746246338),
+                   (-0.5401939749717712, 0.06766103953123093, 1.2075296640396118),
+                   -0.940944492816925),
+    }
+    native_rolls = {}
+    for name, (head, tail, roll) in geometries.items():
+        bone = arm.edit_bones.new(name)
+        bone.head, bone.tail, bone.roll, bone.parent = head, tail, roll, bridge
+        bone.use_deform = True
+        native_rolls[name] = float(bone.roll)
+    bpy.ops.object.mode_set(mode='OBJECT')
+    for name in ('CTRL_master', 'CTRL_bridge'):
+        arm.bones[name]['character_designer_owner'] = 'limb_ik'
+
+    def native_rest():
+        result = {}
+        for bone in arm.bones:
+            axis = (bone.tail_local - bone.head_local).normalized()
+            _axis, roll = bpy.types.Bone.AxisRollFromMatrix(bone.matrix_local.to_3x3(), axis=axis)
+            result[bone.name] = {
+                'matrix': tuple(tuple(float(value) for value in row) for row in bone.matrix_local),
+                'head': tuple(float(value) for value in bone.head_local),
+                'tail': tuple(float(value) for value in bone.tail_local),
+                'roll': float(roll),
+            }
+        return result
+
+    before = native_rest()  # Actual Bone.matrix_local before _clean_skeleton.
+    expected = {'Hips', *geometries}
+    assert set(bone.name for bone in arm.bones if bone.use_deform) == expected
+    retained = worker._clean_skeleton(bpy.context, rig, objects=[rig])
+    assert retained == sorted(expected), retained
+    assert set(arm.bones.keys()) == expected
+    assert set(bone.name for bone in arm.bones if bone.use_deform) == expected
+    assert arm.bones['Hips'].parent is None
+    assert all(arm.bones[name].parent == arm.bones['Hips'] for name in geometries)
+    after = native_rest()
+    for name in sorted(expected):
+        original, cleaned = before[name], after[name]
+        matrix_error = max(abs(original['matrix'][row][col] - cleaned['matrix'][row][col])
+                           for row in range(4) for col in range(4))
+        assert matrix_error <= 3e-6, (name, 'native Rest matrix changed', matrix_error)
+        assert max(abs(a - b) for a, b in zip(original['head'], cleaned['head'])) <= 3e-6, (name, 'head')
+        assert max(abs(a - b) for a, b in zip(original['tail'], cleaned['tail'])) <= 3e-6, (name, 'tail')
+        roll_error = abs((cleaned['roll'] - original['roll'] + math.pi) % math.tau - math.pi)
+        assert roll_error <= 3e-6, (name, 'native roll changed', roll_error)
+        if name in native_rolls:
+            assert abs((cleaned['roll'] - native_rolls[name] + math.pi) % math.tau - math.pi) <= 3e-6, name
+    print('PASS actual Cosha shin/hand/thigh Rest and roll survive native control filtering and nearest retained parenting')
+
+
+test_export_import()
+test_owned_dependency_refused()
+test_topology_mismatch_refused()
+test_evaluation_copy_early_failure_cleanup()
+test_skirt_attachment_and_solidify()
+test_normal_nodes_and_disabled_skinning()
+test_unsaved_image_buffer()
+test_unused_texture_export_and_required_missing_texture()
+test_texture_group_output_reachability()
+test_unweighted_vertices_diagnostic()
+test_removed_forearm_emits_removal_marker()
+test_clean_skeleton_preserves_native_cosha_roll()
+print('UNITY_WORKER_TESTS_OK')

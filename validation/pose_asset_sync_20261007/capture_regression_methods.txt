@@ -1,0 +1,234 @@
+# Draft only. Paste these methods inside the existing CaptureWorkflows class.
+# Uses the imports/helpers already in test_control_pose_capture_blender.py.
+# No Blender run was performed while preparing this draft.
+
+    def _managed_active_action_pair(self):
+        """A real active managed source plus a different saved destination pose."""
+        self.pose_ik()
+        source = self.save('Managed active source')
+        self.disturb('FK')
+        expected = evaluated(self.rig)
+        destination = self.save('Different managed destination')
+        # Complete quaternion channels need a matching native rotation mode
+        # when the source is deliberately assigned as an animation Action.
+        for name in json.loads(source[capture.METADATA])['names']:
+            self.rig.pose.bones[name].rotation_mode = 'QUATERNION'
+        animation = self.rig.animation_data_create()
+        animation.action = source
+        animation.action_slot = source.slots[0]
+        bpy.context.scene.frame_set(8)
+        update(self.rig)
+        return source, destination, expected
+
+    def test_autokey_managed_active_source_becomes_plain_animation_without_asset_metadata(self):
+        source, destination, expected = self._managed_active_action_pair()
+        source_metadata = source[capture.METADATA]
+        source_curves = curve_state(source, self.rig)
+        destination_metadata = destination[capture.METADATA]
+        destination_curves = curve_state(destination, self.rig)
+        source_fake = source.use_fake_user
+        bpy.context.scene.tool_settings.use_keyframe_insert_auto = True
+        existing_actions = set(bpy.data.actions.keys())
+
+        poses.apply(bpy.context, self.rig, destination)
+
+        staged = self.rig.animation_data.action
+        self.assertIsNot(staged, source)
+        self.assertIsNot(staged, destination)
+        self.assertEqual(set(bpy.data.actions.keys()) - existing_actions, {staged.name})
+        self.assertIsNone(staged.asset_data)
+        self.assertNotIn(capture.METADATA, staged)
+        self.assertEqual(source_metadata, source[capture.METADATA])
+        self.assertEqual(source_curves, curve_state(source, self.rig))
+        self.assertEqual(source_fake, source.use_fake_user)
+        self.assertIsNotNone(source.asset_data)
+        self.assertEqual(destination_metadata, destination[capture.METADATA])
+        self.assertEqual(destination_curves, curve_state(destination, self.rig))
+        frames = {float(point.co.x) for curve in poses._curves(staged, self.rig)
+                  for point in curve.keyframe_points}
+        self.assertIn(1., frames)
+        self.assertIn(8., frames)
+        self.assertEqual(limb_ik_fk.mode_for_rig(self.rig, self.arm()), 'FK')
+        self.assertPose(expected)
+        # Subsequent ordinary animation evaluation must retain the result.
+        bpy.context.scene.frame_set(9)
+        self.assertPose(expected)
+
+    def test_managed_autokey_two_real_key_insertions_then_failure_restore_everything(self):
+        source, destination, _expected = self._managed_active_action_pair()
+        bpy.context.scene.tool_settings.use_keyframe_insert_auto = True
+        before = workspace(self.rig)
+        before_pose = evaluated(self.rig)
+        before_display = bone_display._snapshot(self.rig)
+        actions = set(bpy.data.actions.keys())
+        source_metadata = source[capture.METADATA]
+        source_curves = curve_state(source, self.rig)
+        destination_metadata = destination[capture.METADATA]
+        destination_curves = curve_state(destination, self.rig)
+        insert = poses._insert_key
+        inserted = []
+
+        def fail_after_real_insert(pb, path, frame):
+            insert(pb, path, frame)
+            inserted.append((pb.name, path, frame))
+            if len(inserted) == 2:
+                raise ValueError('injected after two real managed animation keys')
+
+        with patch.object(poses, '_insert_key', side_effect=fail_after_real_insert):
+            with self.assertRaisesRegex(ValueError, 'two real managed animation keys'):
+                poses.apply(bpy.context, self.rig, destination)
+
+        self.assertEqual(len(inserted), 2)
+        self.assertEqual(actions, set(bpy.data.actions.keys()))
+        self.assertEqual(before, workspace(self.rig))
+        self.assertEqual(before_display, bone_display._snapshot(self.rig))
+        self.assertPose(before_pose, tolerance=2e-6)
+        self.assertEqual(source_metadata, source[capture.METADATA])
+        self.assertEqual(source_curves, curve_state(source, self.rig))
+        self.assertEqual(destination_metadata, destination[capture.METADATA])
+        self.assertEqual(destination_curves, curve_state(destination, self.rig))
+
+    def test_managed_apply_failure_after_real_ik_to_fk_stage_restores_native_display(self):
+        self.pose_ik()
+        action = self.save('Managed pose for failed IK handoff')
+        self.disturb('IK')
+        before = workspace(self.rig)
+        before_pose = evaluated(self.rig)
+        before_display = bone_display._snapshot(self.rig)
+        actions = set(bpy.data.actions.keys())
+        metadata = action[capture.METADATA]
+        curves = curve_state(action, self.rig)
+        switch = limb_ik_fk.switch_limb
+        completed_fk = []
+
+        def fail_after_fk_handoff(*args, **kwargs):
+            result = switch(*args, **kwargs)
+            requested_mode = kwargs.get('mode', args[3] if len(args) > 3 else None)
+            if requested_mode == 'FK':
+                completed_fk.append(result)
+                self.assertEqual(limb_ik_fk.mode_for_rig(self.rig, self.arm()), 'FK')
+                raise ValueError('injected after real IK to FK display handoff')
+            return result
+
+        with patch.object(limb_ik_fk, 'switch_limb', side_effect=fail_after_fk_handoff):
+            with self.assertRaisesRegex(ValueError, 'real IK to FK display handoff'):
+                poses.apply(bpy.context, self.rig, action)
+
+        self.assertEqual(len(completed_fk), 1)
+        self.assertEqual(limb_ik_fk.mode_for_rig(self.rig, self.arm()), 'IK')
+        self.assertEqual(before, workspace(self.rig))
+        self.assertEqual(before_display, bone_display._snapshot(self.rig))
+        self.assertEqual(actions, set(bpy.data.actions.keys()))
+        self.assertPose(before_pose, tolerance=2e-6)
+        self.assertEqual(metadata, action[capture.METADATA])
+        self.assertEqual(curves, curve_state(action, self.rig))
+
+    def test_failure_after_original_checkpoint_publication_restores_exact_session(self):
+        self.pose_ik()
+        action = self.save('Managed target before Original')
+        # Original enters a different FK pose, so successful checkpoint
+        # publication is observably different from its preceding raw text.
+        self.disturb('FK')
+        original.enter(bpy.context, self.rig)
+        pb = self.rig.pose.bones['forearm.L']
+        pb.rotation_mode = 'XYZ'
+        pb.rotation_euler.x += .04
+        update(self.rig)
+        session = self.rig[original.SESSION]
+        before = workspace(self.rig)
+        before_pose = evaluated(self.rig)
+        before_display = bone_display._snapshot(self.rig)
+        actions = set(bpy.data.actions.keys())
+        metadata = action[capture.METADATA]
+        curves = curve_state(action, self.rig)
+        observed_publication = []
+
+        def fail_after_publication(*_args, **_kwargs):
+            self.assertTrue(original.active(self.rig))
+            self.assertNotEqual(session, self.rig[original.SESSION])
+            observed_publication.append(self.rig[original.SESSION])
+            raise ValueError('injected after Original checkpoint publication')
+
+        with patch.object(poses, '_auto_key', side_effect=fail_after_publication):
+            with self.assertRaisesRegex(ValueError, 'Original checkpoint publication'):
+                poses.apply(bpy.context, self.rig, action)
+
+        self.assertEqual(len(observed_publication), 1)
+        self.assertTrue(original.active(self.rig))
+        self.assertEqual(session, self.rig[original.SESSION])
+        self.assertEqual(before, workspace(self.rig))
+        self.assertEqual(before_display, bone_display._snapshot(self.rig))
+        self.assertEqual(actions, set(bpy.data.actions.keys()))
+        self.assertPose(before_pose, tolerance=2e-6)
+        self.assertEqual(metadata, action[capture.METADATA])
+        self.assertEqual(curves, curve_state(action, self.rig))
+        # The recovered return checkpoint must remain operational.
+        original.leave(bpy.context, self.rig)
+        self.assertPose(before_pose)
+
+    def _assert_user_switch_failure_keeps_workspace(self, before):
+        """Matrix assignment may round-trip floats; every channel is checked."""
+        after = workspace(self.rig)
+        for key in before:
+            if key != 'channels':
+                self.assertEqual(before[key], after[key], key)
+        self.assertEqual(set(before['channels']), set(after['channels']))
+        for name, expected in before['channels'].items():
+            actual = after['channels'][name]
+            self.assertEqual(expected[0], actual[0], (name, 'rotation_mode'))
+            for index in range(1, 6):
+                self.assertEqual(len(expected[index]), len(actual[index]))
+                for wanted, got in zip(expected[index], actual[index]):
+                    self.assertLessEqual(abs(wanted - got), 2e-6, (name, index, wanted, got))
+            self.assertEqual(expected[6], actual[6], (name, 'ik_fk'))
+
+    def test_default_user_switch_rejects_missing_managed_body_without_repair(self):
+        self.pose_ik()
+        body = bone_collections.body_collection(self.rig)
+        self.assertIsNotNone(body)
+        self.rig.data.collections.remove(body)
+        update(self.rig)
+        before = workspace(self.rig)
+        before_pose = evaluated(self.rig)
+        before_display = bone_display._snapshot(self.rig)
+        before_layout = bone_collections.snapshot_layout(self.rig)
+        actions = set(bpy.data.actions.keys())
+
+        # No construction-only display-deferral argument is passed.
+        with self.assertRaisesRegex(ValueError, 'managed Body collection is missing'):
+            limb_ik_fk.switch_limb(bpy.context, self.rig, ('ARM', 'L'), 'FK', keyframe=False)
+
+        self.assertIsNone(bone_collections.body_collection(self.rig))
+        self._assert_user_switch_failure_keeps_workspace(before)
+        self.assertEqual(before_display, bone_display._snapshot(self.rig))
+        self.assertEqual(before_layout, bone_collections.snapshot_layout(self.rig))
+        self.assertEqual(actions, set(bpy.data.actions.keys()))
+        self.assertPose(before_pose, tolerance=2e-6)
+
+    def test_default_user_switch_rejects_repurposed_body_membership_without_repair(self):
+        self.pose_ik()
+        body = bone_collections.body_collection(self.rig)
+        self.assertIsNotNone(body)
+        members = set(body.bones.keys())
+        self.assertTrue(members)
+        removed = sorted(members)[0]
+        body.unassign(self.rig.data.bones[removed])
+        repurposed_members = members - {removed}
+        self.assertEqual(set(body.bones.keys()), repurposed_members)
+        update(self.rig)
+        before = workspace(self.rig)
+        before_pose = evaluated(self.rig)
+        before_display = bone_display._snapshot(self.rig)
+        before_layout = bone_collections.snapshot_layout(self.rig)
+        actions = set(bpy.data.actions.keys())
+
+        # Interactive switching must retain the existing strict layout guard.
+        with self.assertRaisesRegex(ValueError, 'managed Body collection was repurposed'):
+            limb_ik_fk.switch_limb(bpy.context, self.rig, ('ARM', 'L'), 'FK', keyframe=False)
+
+        self.assertEqual(set(body.bones.keys()), repurposed_members)
+        self._assert_user_switch_failure_keeps_workspace(before)
+        self.assertEqual(before_display, bone_display._snapshot(self.rig))
+        self.assertEqual(before_layout, bone_collections.snapshot_layout(self.rig))
+        self.assertEqual(actions, set(bpy.data.actions.keys()))
+        self.assertPose(before_pose, tolerance=2e-6)

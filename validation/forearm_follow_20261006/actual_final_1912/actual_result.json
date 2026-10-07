@@ -1,0 +1,26 @@
+{
+  "status": "FAILED",
+  "stage": "preflight",
+  "version": "5.2.0 LTS",
+  "pid": 15064,
+  "snapshot": "D:\\Blender\\Projects\\Character\\X\\validation\\forearm_follow_20261006\\artist_disk_20261006_185029_821.blend",
+  "tests": [],
+  "topology": {},
+  "tracebacks": [
+    "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\forearm_follow_20261006\\validate_actual.py\", line 525, in main\n    pose, selection = pose_state(rig), selection_state()\n                                       ~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\forearm_follow_20261006\\validate_actual.py\", line 110, in selection_state\n    'selected': {b.name: (b.select, b.select_head, b.select_tail)\n                          ^^^^^^^^\nAttributeError: 'Bone' object has no attribute 'select'\n"
+  ],
+  "saved_output": null,
+  "snapshot_sha256": "070562f905ecbd8111e2e622213f05738b68b12186d5c16bd1c62226581df5e0",
+  "addon_path": "D:\\Blender\\Projects\\Character\\X\\validation\\forearm_follow_20261006\\candidate_source\\addons\\character_designer\\__init__.py",
+  "addon_version": [
+    0,
+    76,
+    3
+  ],
+  "source_sha256": {
+    "forearm_twist.py": "4f159b83a2bac2aebbc9e23f03ce958da75a10728d0f21010f1178b476d66bf3",
+    "forearm_twist_math.py": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421",
+    "unity_forearm.py": "3979192a00a93417ee077d6290c71a229b57d2de04ebf04c41efa65bc321c1bb"
+  },
+  "runtime_errors_final": {}
+}

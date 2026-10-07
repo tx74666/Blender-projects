@@ -1,0 +1,307 @@
+{
+  "source": "D:\\Blender\\Projects\\Character\\X\\validation\\fist_mirror_20261007\\current_diagnostic.json",
+  "source_sha256": "a5ea79f270ca70edfc68b787a86a495f05554ec06a578e9f0dc36c907de6985b",
+  "analysis": "JSON-only arithmetic; no Blender process, GUI, source edits, or artist/model writes.",
+  "method": "Rotation measured after Gram-Schmidt orthonormalization of matrix columns; X reflection uses F*M*F. This symmetry convention is diagnostic, not a requirement that every opposite bone use identical local axes.",
+  "runtime_version": [
+    0,
+    77,
+    2
+  ],
+  "blender_version": "5.2.0 LTS",
+  "mode": "POSE",
+  "frame": [
+    39,
+    0.0
+  ],
+  "active_bone": "f_index.01.L",
+  "selected": [],
+  "auto_key": false,
+  "assigned_action": null,
+  "right_finger_count": 15,
+  "right_finger_constraints": {
+    "f_index.01.R": [],
+    "f_index.02.R": [],
+    "f_index.03.R": [],
+    "f_middle.01.R": [],
+    "f_middle.02.R": [],
+    "f_middle.03.R": [],
+    "f_pinky.01.R": [],
+    "f_pinky.02.R": [],
+    "f_pinky.03.R": [],
+    "f_ring.01.R": [],
+    "f_ring.02.R": [],
+    "f_ring.03.R": [],
+    "thumb.01.R": [],
+    "thumb.02.R": [],
+    "thumb.03.R": []
+  },
+  "pose_baseline_present": false,
+  "original_session_keys": [],
+  "measurements": {
+    "shoulder": {
+      "left_rest_to_evaluated_rotation_degrees": 6.156649318399953e-06,
+      "right_rest_to_evaluated_rotation_degrees": 6.037091348628668e-06,
+      "right_rest_to_evaluated_axis_angles_XYZ_degrees": [
+        4.90455619685548e-06,
+        4.182619578303747e-06,
+        5.663293681020318e-06
+      ],
+      "right_vs_X_mirrored_left_rest_rotation_degrees": 3.818191820832846e-06,
+      "right_vs_X_mirrored_left_rest_max_matrix_difference": 4.470348358154297e-08,
+      "right_vs_X_mirrored_left_evaluated_rotation_degrees": 3.4150945850063763e-06,
+      "right_rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_constraints": []
+    },
+    "upper_arm": {
+      "left_rest_to_evaluated_rotation_degrees": 0.0657963719375614,
+      "right_rest_to_evaluated_rotation_degrees": 179.97373436078468,
+      "right_rest_to_evaluated_axis_angles_XYZ_degrees": [
+        179.40828377108508,
+        0.5943423241306988,
+        179.93295960042855
+      ],
+      "right_vs_X_mirrored_left_rest_rotation_degrees": 7.636383641665695e-06,
+      "right_vs_X_mirrored_left_rest_max_matrix_difference": 2.384185791015625e-07,
+      "right_vs_X_mirrored_left_evaluated_rotation_degrees": 179.99989510043466,
+      "right_rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_constraints": []
+    },
+    "forearm": {
+      "left_rest_to_evaluated_rotation_degrees": 0.07521597282172235,
+      "right_rest_to_evaluated_rotation_degrees": 179.97373461063899,
+      "right_rest_to_evaluated_axis_angles_XYZ_degrees": [
+        179.30947927134127,
+        0.6938122645022574,
+        179.92295317617283
+      ],
+      "right_vs_X_mirrored_left_rest_rotation_degrees": 179.99998860923884,
+      "right_vs_X_mirrored_left_rest_max_matrix_difference": 1.9923664927482605,
+      "right_vs_X_mirrored_left_evaluated_rotation_degrees": 0.6232983529518832,
+      "right_rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_constraints": [
+        {
+          "name": "CDLimbIK_IK_9c08616fb2024757952dbd433048e839",
+          "type": "IK",
+          "mute": false,
+          "enabled": true,
+          "influence": 1.0,
+          "subtarget": "CTRL_hand_IK.R",
+          "pole_subtarget": "CTRL_elbow_pole.R",
+          "pole_angle": 2.5185136109939776e-06,
+          "chain_count": 2
+        }
+      ]
+    },
+    "hand": {
+      "left_rest_to_evaluated_rotation_degrees": 0.07521139444509886,
+      "right_rest_to_evaluated_rotation_degrees": 179.97373756841415,
+      "right_rest_to_evaluated_axis_angles_XYZ_degrees": [
+        179.9724730141025,
+        6.3737496986754305,
+        173.62620143076853
+      ],
+      "right_vs_X_mirrored_left_rest_rotation_degrees": 179.9999965849054,
+      "right_vs_X_mirrored_left_rest_max_matrix_difference": 1.9924212098121643,
+      "right_vs_X_mirrored_left_evaluated_rotation_degrees": 6.3666551006353,
+      "right_rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_constraints": [
+        {
+          "name": "CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839",
+          "type": "COPY_ROTATION",
+          "mute": true,
+          "enabled": false,
+          "influence": 1.0,
+          "subtarget": "CTRL_hand_IK.R"
+        },
+        {
+          "name": "CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839",
+          "type": "COPY_ROTATION",
+          "mute": false,
+          "enabled": true,
+          "influence": 1.0,
+          "subtarget": "MCH_hand_rotation.R"
+        }
+      ]
+    },
+    "CTRL_hand_IK": {
+      "left_rest_to_evaluated_rotation_degrees": 0.0,
+      "right_rest_to_evaluated_rotation_degrees": 1.2074182697257333e-06,
+      "right_rest_to_evaluated_axis_angles_XYZ_degrees": [
+        0.0,
+        1.2074182697257333e-06,
+        8.537736462515939e-07
+      ],
+      "right_vs_X_mirrored_left_rest_rotation_degrees": 179.99997246662724,
+      "right_vs_X_mirrored_left_rest_max_matrix_difference": 1.992366075515747,
+      "right_vs_X_mirrored_left_evaluated_rotation_degrees": 179.9999727594022,
+      "right_rotation_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_constraints": []
+    },
+    "CTRL_elbow_pole": {
+      "left_rest_to_evaluated_rotation_degrees": 0.0,
+      "right_rest_to_evaluated_rotation_degrees": 2.9575586669421963e-06,
+      "right_rest_to_evaluated_axis_angles_XYZ_degrees": [
+        3.078324659199975e-06,
+        3.1945284701301985e-06,
+        0.0
+      ],
+      "right_vs_X_mirrored_left_rest_rotation_degrees": 0.0006053044414308902,
+      "right_vs_X_mirrored_left_rest_max_matrix_difference": 8.001923561096191e-06,
+      "right_vs_X_mirrored_left_evaluated_rotation_degrees": 0.0006029673242963443,
+      "right_rotation_quaternion": [
+        1.0,
+        -9.313234627938982e-10,
+        -4.947653398090779e-10,
+        -2.7035664373897816e-08
+      ],
+      "right_constraints": []
+    }
+  },
+  "limb_geometry": {
+    "L": {
+      "ik_fk": 1.0,
+      "ik_constraint": [
+        {
+          "name": "CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77",
+          "type": "IK",
+          "mute": false,
+          "enabled": true,
+          "influence": 1.0,
+          "subtarget": "CTRL_hand_IK.L",
+          "pole_subtarget": "CTRL_elbow_pole.L",
+          "pole_angle": 8.511919077136554e-06,
+          "chain_count": 2
+        }
+      ],
+      "joint_radial_distance": 0.001563574483680902,
+      "joint_radial_over_endpoint_length": 0.002819495175372165,
+      "joint_radial_dot_pole_radial_normalized": 0.994559531123641,
+      "hand_origin_to_target_origin_distance": 1.744136200952474e-07,
+      "target_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pole_location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "R": {
+      "ik_fk": 1.0,
+      "ik_constraint": [
+        {
+          "name": "CDLimbIK_IK_9c08616fb2024757952dbd433048e839",
+          "type": "IK",
+          "mute": false,
+          "enabled": true,
+          "influence": 1.0,
+          "subtarget": "CTRL_hand_IK.R",
+          "pole_subtarget": "CTRL_elbow_pole.R",
+          "pole_angle": 2.5185136109939776e-06,
+          "chain_count": 2
+        }
+      ],
+      "joint_radial_distance": 0.0012201238326209995,
+      "joint_radial_over_endpoint_length": 0.002200166686241956,
+      "joint_radial_dot_pole_radial_normalized": -0.9945639780585056,
+      "hand_origin_to_target_origin_distance": 1.7896908744371404e-07,
+      "target_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "target_quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pole_location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "rest_history": [
+    {
+      "accepted_utc": "2026-10-03T19:13:51.966624+00:00",
+      "schema": 5,
+      "changed": [
+        "upper_arm.L",
+        "upper_arm.R"
+      ],
+      "pose_assets_retargeted": false,
+      "body_calibration_reconfirmed": false,
+      "prior_direct_entries_arm_rolls": {
+        "L": {
+          "forearm.L": -2.2548675537109375,
+          "upper_arm.L": -2.256021022796631
+        },
+        "R": {
+          "forearm.R": -0.8867254257202148,
+          "upper_arm.R": -0.8855717778205872
+        }
+      },
+      "accepted_direct_entries_arm_rolls": {
+        "L": {
+          "upper_arm.L": -2.2574539184570312,
+          "forearm.L": -2.2548675537109375
+        },
+        "R": {
+          "upper_arm.R": 2.2574539184570312,
+          "forearm.R": -0.8867254257202148
+        }
+      },
+      "accepted_native_rest_matches_current": {
+        "upper_arm.L": 0.0,
+        "upper_arm.R": 0.0
+      }
+    }
+  ],
+  "findings": [
+    "All 15 right finger destinations have no constraints. Legacy native mirror routing therefore needs no IK/FK matching or Rest baseline.",
+    "Both hands are in IK. Right upper-arm raw quaternion is identity while evaluated orientation differs from current Rest by approximately 180 degrees, with longitudinal Y direction nearly retained.",
+    "The active forearm.R IK has a two-bone chain, so it affects upper_arm.R even though upper_arm.R has no constraints itself.",
+    "Current upper-arm Rest exactly matches the previously accepted Rest in recorded 2026-10-03 UTC resync history. That event changed right upper-arm roll by approximately 180 degrees and marked calibration reconfirmation false."
+  ],
+  "limits": [
+    "This is a single post-reset snapshot. It cannot establish whether Shift-double-click created, revealed, or had no effect on the upper-arm twist.",
+    "A stale Pole Angle after accepted Rest edits is supported as a diagnostic candidate but is not proven until an isolated solve is compared.",
+    "No conclusions about finger topology or weights are established by these bone matrix measurements."
+  ]
+}

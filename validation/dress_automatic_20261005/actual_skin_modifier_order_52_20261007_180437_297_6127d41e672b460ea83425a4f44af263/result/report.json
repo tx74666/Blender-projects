@@ -1,0 +1,120 @@
+{
+  "stage": "SOURCE_ONLY_NATIVE_SKIN_MODIFIER_ORDER52",
+  "status": "failed",
+  "cases": {},
+  "errors": [
+    {
+      "exception": "AttributeError(\"'StringProperty' object has no attribute 'is_array'\")",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52.py\", line 359, in main\n    before = author_guard(originals, meshes, rig)\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52.py\", line 97, in author_guard\n    'original_source_modifiers': [rna(m) for m in bpy.data.objects['Dress'].modifiers]}\n                                  ~~~^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52.py\", line 59, in rna\n    elif prop.is_array:\n         ^^^^^^^^^^^^^\nAttributeError: 'StringProperty' object has no attribute 'is_array'\n"
+    }
+  ],
+  "accepted": false,
+  "FBX_verified": false,
+  "Unity_verified": false,
+  "animation_verified": false,
+  "artist_loaded": false,
+  "artist_saved": false,
+  "deployed": false,
+  "simulation_baked": false,
+  "timeline_seek_by_QA": false,
+  "threshold_m": 5e-05,
+  "prior_PrivateFBXv3_maximum_m": 0.0004713791436785606,
+  "prior_failure_disposition": "Historical PrivateFBXv3 failure remains unaccepted; this probe never writes or upgrades that result. Its file is not reread.",
+  "scope": "Fixed completed QA snapshot; numerical mechanism probe only.",
+  "unknown": [
+    "FBX/Unity/DQ-to-LBS transport",
+    "other poses/animation",
+    "Body attachment/Cloth final surface",
+    "a safe production repair"
+  ],
+  "guard_scope": "All loaded raw mesh coordinates/ordered topology/UV/material slots/raw key coordinates/channels; full named object weights; original rig Rest/native pose. No complete Action/material/image audit.",
+  "checks": {
+    "background52": {
+      "evaluated": true,
+      "passed": true,
+      "detail": [
+        5,
+        2,
+        0
+      ]
+    },
+    "CD_not_imported": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "pin:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "pin:D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "pin:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "positive_metric_unit_scale": {
+      "evaluated": true,
+      "passed": true,
+      "detail": 1.0
+    },
+    "no_active_Cloth_in_snapshot_depsgraph": {
+      "evaluated": true,
+      "passed": true,
+      "detail": []
+    },
+    "no_animated_Cloth_modifier_controls": {
+      "evaluated": true,
+      "passed": true,
+      "detail": []
+    },
+    "CD_not_imported_after": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "source_preserved:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "source_preserved:D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "source_preserved:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    }
+  },
+  "runtime": {
+    "version": "5.2.0 LTS",
+    "binary": "D:\\Blender5.2\\blender.exe",
+    "actual_model": "unrecorded",
+    "reasoning_effort": "unrecorded"
+  },
+  "source_before": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": "1716ff49a231cee8c0663fd17949583eabbfb7ce79791a459682930f40744dcb",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52.py": "53a854d27ba15300c0f40c470da50272857bb874380ab1da5b3f6a809a9c95f2"
+  },
+  "source_after": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": "1716ff49a231cee8c0663fd17949583eabbfb7ce79791a459682930f40744dcb",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52.py": "53a854d27ba15300c0f40c470da50272857bb874380ab1da5b3f6a809a9c95f2"
+  },
+  "factory_disposal_predicates": {
+    "native_FINISHED": true,
+    "loaded_filepath_empty": true,
+    "QA_source_absent": true,
+    "QA_rig_absent": true
+  },
+  "factory_disposed": true
+}

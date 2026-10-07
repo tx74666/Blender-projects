@@ -1,0 +1,31 @@
+--- a/addons/character_designer/skirt_surface_direct.py
++++ b/addons/character_designer/skirt_surface_direct.py
+@@ -857,11 +857,9 @@
+     if mode == "MANUAL":
+         cache = _object(source, record, "CLOTH_PROXY").modifiers[-1].point_cache
+         _require(type(cache.is_baked) is bool, "Restore the native Direct Cloth bake state.")
+-        if cache.is_baked:
+-            # Manual edits change the input, not sealed Cloth positions. Keep
+-            # the cache intact and require an explicit reset before using it
+-            # again; there is no proven collision-safe post-cache refinement.
+-            state["pending"] = True
++        # Manual preview can change the input while a RAM cache remains.
++        # Do not free or seek here; require explicit Reset before Auto.
++        state["pending"] = True
+     state["mode"] = mode
+     _write_state(source, state)
+     _sync(source, record, state)
+--- a/addons/character_designer/skirt.py
++++ b/addons/character_designer/skirt.py
+@@ -31,8 +31,10 @@
+         return physics.add_physics(context, source)
+     setup = _setup().settings(context)
+     body = setup.body if setup is not None else None
++    if body is None or body.type != "MESH":
++        raise ValueError("Choose the actual Body mesh in Character Setup before adding Direct Dress physics.")
+     return physics.add_physics(context, source,
+-                               backend=physics.ACTUAL_SURFACE_BACKEND, body=body, capability=capability)
++                               backend=physics.DIRECT_SURFACE_BACKEND, body=body, capability=capability)
+ 
+ 
+ def _setup():

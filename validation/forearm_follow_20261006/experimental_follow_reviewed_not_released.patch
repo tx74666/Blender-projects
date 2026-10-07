@@ -1,0 +1,299 @@
+diff --git a/addons/character_designer/forearm_twist.py b/addons/character_designer/forearm_twist.py
+index 5549141..d037936 100644
+--- a/addons/character_designer/forearm_twist.py
++++ b/addons/character_designer/forearm_twist.py
+@@ -34,6 +34,7 @@ PREVIEW_KEY = "character_designer_forearm_twist_preview_v1"
+ LOCK_KEY = "character_designer_twist_render_lock"
+ KEY_PREFIX = "CD Forearm Twist."
+ MAX_ANGLE = math.radians(120.0)
++FOLLOW_MODE = 'FOREARM_FOLLOW'
+ _SESSION = None
+ _BUSY = False
+ _UI_BUSY = False
+@@ -225,19 +226,21 @@ def _resolve_rig(obj, side, *, _inventory=None):
+         return armature, {"chain": chain, "target": hand.bone, "fk_source": True}
+     if inventory["target_rotation_version"] != limb_ik.TARGET_ROTATION_VERSION:
+         raise ForearmTwistError("Rebuild Rig once to enable aligned Hand Target rotation.")
+-    from . import body_original_mode
+-    if body_original_mode.active(armature):
+-        # Original drives the native hand directly while the generated
+-        # constraints stay muted; a hidden Hand Target cannot pose this hand.
++    from . import body_original_mode, limb_ik_fk
++    original = body_original_mode.active(armature)
++    if original or limb_ik_fk.mode_for_rig(armature, rig) == 'FK':
++        # Both Original and native FK drive the hand directly. The generated
++        # target is hidden/inactive and cannot pose this hand for calibration.
+         hand = armature.pose.bones[rig['chain'][2]]
+         if any(not constraint.mute and constraint.influence > 0 for constraint in hand.constraints):
+-            raise ForearmTwistError('The Original hand is driven by another constraint; preserve that dependency before calibrating.')
+-        return armature, {**rig, 'target': hand.bone, 'fk_source': True, 'original_source': True}
++            raise ForearmTwistError('The native hand is driven by another constraint; preserve that dependency before calibrating.')
++        return armature, {**rig, 'target': hand.bone, 'fk_source': True,
++                          'native_source': True, 'original_source': original}
+     return armature, rig
+ 
+ 
+ def _preview_pose_locked(armature, target, rig):
+-    if not rig.get('original_source'):
++    if not (rig.get('native_source') or rig.get('original_source')):
+         return (limb_ik._target_transform_has_driver(armature, target.name) or
+                 limb_ik._target_transform_has_keyed_animation(armature, target.name))
+     # The validated Original view suspends the owned hand constraints. Their
+@@ -453,7 +456,12 @@ def _calculate_records(obj, depsgraph):
+         axis = (lower_bone.tail_local - lower_bone.head_local).normalized()
+         pivot = armature.data.bones[hand].head_local
+         angle = twist_angle(transforms[lower], transforms[hand], axis)
+-        if record.get("enabled", True) and abs(angle) > MAX_ANGLE + 1.0e-5:
++        mode = record.get('twist_mode', 'WRIST_ONLY')
++        if mode not in {'WRIST_ONLY', FOLLOW_MODE}:
++            raise ForearmTwistError('The saved forearm rotation mode is unsupported.')
++        lower_angle = (twist_angle(transforms[record['chain'][0]], transforms[lower], axis)
++                       if mode == FOLLOW_MODE else 0.0)
++        if max(abs(angle), abs(lower_angle), abs(angle + lower_angle)) > MAX_ANGLE + 1.0e-5:
+             raise ForearmTwistError("Forearm twist is outside the prototype's -120 to +120 degree range.")
+         knots = list(profile.profile_knots(record["rings"]))
+         bounded = "range_start" in record
+@@ -477,7 +485,17 @@ def _calculate_records(obj, depsgraph):
+             if influence == 0.0:
+                 continue
+             point = to_arm @ base[i]
+-            corrected = corrected_vertex(point, transforms, weights[i], lower, hand, axis, pivot, ratio, angle=angle)
++            follow_angle = lower_angle
++            if lower_angle and record.get('distribution') == 'WRIST_CONTINUOUS':
++                # Keep the first captured boundary continuous with the untouched
++                # elbow side. Blend the new lower-bone correction over the first
++                # quad strip; existing wrist-only profiles remain unchanged.
++                start = record['rings'][first]['position']
++                end = record['rings'][first + 1]['position']
++                blend = max(0.0, min(1.0, (position - start) / (end - start)))
++                follow_angle *= blend * blend * (3.0 - 2.0 * blend)
++            corrected = corrected_vertex(point, transforms, weights[i], lower, hand, axis, pivot, ratio,
++                                         angle=angle, lower_twist=follow_angle)
+             output.append((i, keys.reference_key.data[i].co + influence * (from_arm @ corrected - base[i])))
+         outputs.append((key, record.get("enabled", True), output))
+     # Commit only after every side has passed, so a failed inverse never leaves
+@@ -841,6 +859,8 @@ class CharacterDesignerForearmTwistState(PropertyGroup):
+     side: EnumProperty(name="Arm", items=(("L", "Left Arm", ""), ("R", "Right Arm", "")), options={"SKIP_SAVE"})
+     symmetry: BoolProperty(name="Mirror Calibration", default=True,
+                            description="On Confirm, copy loop shares to the other arm; each hand keeps its own pose")
++    follow_forearm: BoolProperty(name="Follow Forearm", default=False,
++                                description="Include the forearm's own axial rotation when capturing a new profile")
+     ring_index: IntProperty(name="Loop", default=1, min=1, update=_ring_changed, options={"SKIP_SAVE"})
+     ratio: FloatProperty(name="Twist Share", default=0.5, min=0.0, max=1.0, subtype="FACTOR", update=_ratio_changed, options={"SKIP_SAVE"})
+     test_angle: FloatProperty(name="Test Angle", default=0, min=-MAX_ANGLE, max=MAX_ANGLE,
+@@ -858,7 +878,8 @@ class CharacterDesignerForearmTwistState(PropertyGroup):
+                               subtype="FACTOR", update=_transition_changed)
+ 
+ 
+-def _capture_record(obj, arm, rig, side, records, *, owned_record=None, rings_override=None, continuous=False):
++def _capture_record(obj, arm, rig, side, records, *, owned_record=None, rings_override=None, continuous=False,
++                    follow_forearm=None):
+     """Capture this side from its own topology and weights, without writes."""
+     rings = (copy.deepcopy(rings_override) if rings_override is not None else
+              detect_rings(obj, arm, rig["chain"][1], rig["chain"][2]))
+@@ -918,6 +939,10 @@ def _capture_record(obj, arm, rig, side, records, *, owned_record=None, rings_ov
+               "key": key_name, "enabled": True, "created_basis": obj.data.shape_keys is None}
+     if continuous:
+         record['distribution'] = 'WRIST_CONTINUOUS'
++    if follow_forearm is None:
++        follow_forearm = bool(owned_record and owned_record.get('twist_mode') == FOLLOW_MODE)
++    if follow_forearm:
++        record['twist_mode'] = FOLLOW_MODE
+     return editor.bounded_record(record)
+ 
+ 
+@@ -1006,7 +1031,8 @@ def _prepare_mirror(obj, source_side, source_record=None, *, records=None, compl
+         _managed_key(obj, target_side, target)
+     else:
+         target = _capture_record(obj, arm, target_rig, target_side, {**records, source_side: source},
+-                                 continuous=source.get('distribution') == 'WRIST_CONTINUOUS')
++                                 continuous=source.get('distribution') == 'WRIST_CONTINUOUS',
++                                 follow_forearm=source.get('twist_mode') == FOLLOW_MODE)
+         # The source calibration owns a Basis if one was needed.
+         target["created_basis"] = False
+     if complete_missing:
+@@ -1054,6 +1080,10 @@ def _prepare_mirror(obj, source_side, source_record=None, *, records=None, compl
+     source["target"] = source_rig["target"].name
+     target["target"] = target_rig["target"].name
+     target["enabled"] = source.get("enabled", True)
++    if source.get('twist_mode') == FOLLOW_MODE:
++        target['twist_mode'] = FOLLOW_MODE
++    else:
++        target.pop('twist_mode', None)
+     for record in (source, target):
+         record["paired"] = True
+         record["profile_source"] = source_side
+@@ -1206,7 +1236,9 @@ def start_paired_test(context, *, recapture=False, seed=False):
+         context.view_layer.update()
+         record = start_test(context, obj, side, symmetry=settings.symmetry,
+                             recapture=recapture, rings_override=rings_override,
+-                            start_vertices=start_vertices, continuous=True)
++                            start_vertices=start_vertices, continuous=True,
++                            follow_forearm=(getattr(settings, 'follow_forearm', False)
++                                            if not _records(obj) else None))
+         _SESSION["selection"] = selection
+         _SESSION["notices"] = notices
+         marker = json.loads(obj[PREVIEW_KEY])
+@@ -1287,7 +1319,7 @@ def remove_paired_calibration(context, obj):
+ 
+ 
+ def start_test(context, obj, side="L", *, symmetry=False, recapture=False, rings_override=None,
+-               initial_angle=None, start_vertices=None, continuous=False):
++               initial_angle=None, start_vertices=None, continuous=False, follow_forearm=None):
+     global _SESSION, _UI_BUSY, _BUSY
+     if _SESSION is not None:
+         raise ForearmTwistError("Confirm or cancel the current twist test first.")
+@@ -1310,7 +1342,8 @@ def start_test(context, obj, side="L", *, symmetry=False, recapture=False, rings
+     old_records = copy.deepcopy(records)
+     if recapture:
+         source = _capture_record(obj, arm, rig, side, {}, owned_record=old_records.get(side),
+-                                 rings_override=rings_override, continuous=continuous)
++                                 rings_override=rings_override, continuous=continuous,
++                                 follow_forearm=follow_forearm)
+         previous = old_records.get(side)
+         if previous:
+             saved_rings = {frozenset(ring["vertices"]): ring for ring in previous["rings"]}
+@@ -1340,13 +1373,20 @@ def start_test(context, obj, side="L", *, symmetry=False, recapture=False, rings
+             opposite_rings = editor.mirrored_capture(obj, arm, other_rig["chain"][1], source["rings"])
+             records[other_side] = _capture_record(obj, arm, other_rig, other_side, {side: source},
+                                                  owned_record=old_records.get(other_side), rings_override=opposite_rings,
+-                                                 continuous=continuous)
++                                                 continuous=continuous,
++                                                 follow_forearm=follow_forearm)
+             records[other_side]["created_basis"] = old_records.get(other_side, {}).get("created_basis", False)
+     elif side in records:
+         records[side] = _current_record(obj, arm, rig, side, records[side], records)
+     else:
+         records[side] = _capture_record(obj, arm, rig, side, records,
+-                                       rings_override=rings_override, continuous=continuous)
++                                       rings_override=rings_override, continuous=continuous,
++                                       follow_forearm=follow_forearm)
++    if follow_forearm is not None:
++        if follow_forearm:
++            records[side]['twist_mode'] = FOLLOW_MODE
++        else:
++            records[side].pop('twist_mode', None)
+     if start_vertices is not None:
+         source = records[side]
+         start = next((i for i, ring in enumerate(source['rings'])
+@@ -1815,6 +1855,8 @@ class CHARACTERDESIGNER_PT_forearm_twist(Panel):
+             record = records.get("L") or records.get("R")
+             layout.operator("character_designer.forearm_twist_start", text="Edit Calibration" if record else "Capture & Preview", icon="DRIVER_ROTATIONAL_DIFFERENCE")
+             if record:
++                if record.get('twist_mode') == FOLLOW_MODE:
++                    layout.label(text='Hand + Forearm Follow', icon='DRIVER_ROTATIONAL_DIFFERENCE')
+                 enabled = all(item.get("enabled", True) for item in records.values())
+                 paused = obj.name in _ERRORS and any(item.get("enabled", True) for item in records.values())
+                 row = layout.row(align=True)
+@@ -1827,6 +1869,8 @@ class CHARACTERDESIGNER_PT_forearm_twist(Panel):
+                 box = layout.box()
+                 box.prop(settings, "side")
+                 box.prop(settings, "symmetry")
++                if not record:
++                    box.prop(settings, "follow_forearm")
+                 op = box.operator("character_designer.forearm_twist_start", text="Recapture Loops (Preview)")
+                 op.recapture = True
+                 op = box.operator("character_designer.forearm_twist_start", text="Use Selected Loop as Seed")
+diff --git a/addons/character_designer/forearm_twist_math.py b/addons/character_designer/forearm_twist_math.py
+index 06d55e3..bf24ae7 100644
+--- a/addons/character_designer/forearm_twist_math.py
++++ b/addons/character_designer/forearm_twist_math.py
+@@ -122,14 +122,22 @@ def rotate_about_axis(point, axis, pivot, angle):
+ 
+ 
+ def desired_vertex(point, transforms, weights, lower_name, hand_name,
+-                   axis, pivot, ratio, *, angle=None):
++                   axis, pivot, ratio, *, angle=None, upper_name=None,
++                   lower_twist=None):
+     """Return the desired post-Armature position before inverse skinning.
+ 
+-    Replace only the lower/hand contribution.  Lower receives ``ratio * angle``
+-    in rest space.  Hand receives ``(ratio - 1) * angle`` before its existing
+-    transform, removing its existing axial twist and adding the requested twist
+-    exactly once.  Its swing, translation and the other bones' contributions
+-    remain in the skinning expression.
++    Replace only the lower/hand contribution.  ``angle`` always denotes the
++    hand's axial twist relative to the lower bone, preserving the original
++    calling convention.  With neither new keyword supplied, lower receives
++    ``ratio * angle`` and hand receives ``(ratio - 1) * angle`` in rest space.
++
++    A follow distribution additionally includes the lower bone's axial twist
++    relative to upper.  Supply ``upper_name`` to measure it from the deformation
++    matrices, or ``lower_twist`` to reuse a measurement across vertices; these
++    alternatives are mutually exclusive.  For lower twist alpha and hand twist
++    beta, total is alpha + beta.  Lower then receives ``ratio * total - alpha``
++    and hand receives ``(ratio - 1) * total`` before its existing transform.
++    Bone inputs, swing, translation and other bones' contributions are kept.
+ 
+     For pure axial rotation with lower/hand weights summing to one, both terms
+     land on the identical circular-arc point, regardless of their weight split.
+@@ -150,24 +158,39 @@ def desired_vertex(point, transforms, weights, lower_name, hand_name,
+         return actual
+     if lower_name not in transforms or hand_name not in transforms:
+         raise TwistMathError("Both forearm and hand deformation matrices are required")
++    if upper_name is not None and lower_twist is not None:
++        raise TwistMathError("Supply an upper bone or a measured lower twist, not both")
++    if upper_name is not None:
++        if upper_name not in transforms:
++            raise TwistMathError(f"Missing deformation matrix for upper bone '{upper_name}'")
++        lower_twist = twist_angle(transforms[upper_name], transforms[lower_name], axis)
++    elif lower_twist is None:
++        lower_twist = 0.0
++    if not math.isfinite(lower_twist):
++        raise TwistMathError("Lower twist angle must be finite")
+     if angle is None:
+         angle = twist_angle(transforms[lower_name], transforms[hand_name], axis)
+     if not math.isfinite(angle):
+         raise TwistMathError("Twist angle must be finite")
+-    if abs(angle) < 1.0e-8:
++    if abs(angle) < 1.0e-8 and abs(lower_twist) < 1.0e-8:
+         return actual
++    total = lower_twist + angle
++    if not math.isfinite(total):
++        raise TwistMathError("Total twist angle must be finite")
+     desired = actual.copy()
+-    for name, weight, fraction in ((lower_name, lower_weight, ratio),
+-                                    (hand_name, hand_weight, ratio - 1.0)):
+-        if weight == 0.0 or fraction == 0.0:
++    for name, weight, correction_angle in (
++            (lower_name, lower_weight, ratio * total - lower_twist),
++            (hand_name, hand_weight, (ratio - 1.0) * total)):
++        if weight == 0.0 or correction_angle == 0.0:
+             continue
+-        rotated = rotate_about_axis(point, axis, pivot, fraction * angle)
++        rotated = rotate_about_axis(point, axis, pivot, correction_angle)
+         desired += weight * (transforms[name] @ rotated - transforms[name] @ point)
+     return desired
+ 
+ 
+ def corrected_vertex(point, transforms, weights, lower_name, hand_name,
+-                     axis, pivot, ratio, *, angle=None, max_condition=1.0e5):
++                     axis, pivot, ratio, *, angle=None, upper_name=None,
++                     lower_twist=None, max_condition=1.0e5):
+     """Return an absolute pre-Armature point producing ``desired_vertex``.
+ 
+     Inverse LBS cannot repair a singular transform (the familiar 50/50 blend at
+@@ -176,7 +199,8 @@ def corrected_vertex(point, transforms, weights, lower_name, hand_name,
+     """
+     point = _point(point)
+     desired = desired_vertex(point, transforms, weights, lower_name, hand_name,
+-                             axis, pivot, ratio, angle=angle)
++                             axis, pivot, ratio, angle=angle,
++                             upper_name=upper_name, lower_twist=lower_twist)
+     actual = blended_matrix(transforms, weights)
+     delta = desired - actual @ point
+     if delta.length_squared < 1.0e-18:
+diff --git a/addons/character_designer/unity_forearm.py b/addons/character_designer/unity_forearm.py
+index 81d7e3d..2b22a71 100644
+--- a/addons/character_designer/unity_forearm.py
++++ b/addons/character_designer/unity_forearm.py
+@@ -29,6 +29,9 @@ def capture(obj):
+     keys = obj.data.shape_keys
+     owned = []
+     for side, record in records.items():
++        if record.get('enabled', True) and record.get('twist_mode') == twist.FOLLOW_MODE:
++            raise ValueError(f"{obj.name}: Hand + Forearm Follow is not supported by the current Unity forearm runtime. "
++                             "Keep this Blender calibration intact; update the Unity correction before exporting it.")
+         key = twist._managed_key(obj, side, record, repair_name=False)
+         if record["topology"] != topology or record["armature"] != rig.name:
+             raise ValueError(f"{obj.name}: recapture forearm loops after the topology/binding change.")

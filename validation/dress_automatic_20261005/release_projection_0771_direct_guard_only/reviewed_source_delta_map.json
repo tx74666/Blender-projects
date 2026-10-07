@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "scope": "DIRECT_ONLY_EXPORT_REFUSAL; no Delta capture/prepare/strip changes",
+  "status": "FROZEN_SOURCE_PENDING_INDEPENDENT_REVIEW",
+  "canonical_root": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer",
+  "changed_files": {
+    "unity_export.py": {
+      "before_sha256": "a162669f3afdae01070ebcd65e8aa10235d5466cbb6e767f1e6345b59e362c97",
+      "after_sha256": "e428670b8f7ad1215af227dc876bcbcff8194d1dcb9c80413710714a58581498",
+      "before_backup": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\direct_export_admission_delta_20261007\\before\\unity_export.py",
+      "before_bytes": 34350,
+      "after_bytes": 34667,
+      "non_guard_ast_unchanged": true,
+      "baseline_sha256": "8fb200ad8ea4153db3d9b3e7beb9fca9bca728370fc71eda8841f0b58c406bd0"
+    },
+    "unity_export_worker.py": {
+      "before_sha256": "e49e5fac94a3eb49922de0fec5473ab658117297b6122495364885d796e0baa8",
+      "after_sha256": "1716ff49a231cee8c0663fd17949583eabbfb7ce79791a459682930f40744dcb",
+      "before_backup": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\direct_export_admission_delta_20261007\\before\\unity_export_worker.py",
+      "before_bytes": 54594,
+      "after_bytes": 55224,
+      "non_guard_ast_unchanged": true,
+      "baseline_sha256": "4ba05c02f3f9f6c3361b7bf1e4fe800196cd6a556af69f6b3eddb4150f100a44"
+    },
+    "animation_export.py": {
+      "before_sha256": "d1aa935284226793d8f66eaf9c097c1e5ab18b7a59c4f7bac9eca2128bde03ce",
+      "after_sha256": "9c8e638cfd8408fe729103efe232ed23c334b2a879e9c226376057b22d5b28cf",
+      "before_backup": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\direct_export_admission_delta_20261007\\before\\animation_export.py",
+      "before_bytes": 10793,
+      "after_bytes": 11191,
+      "non_guard_ast_unchanged": true,
+      "baseline_sha256": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4"
+    },
+    "animation_export_worker.py": {
+      "before_sha256": "d4cc236e0199a9799311e6258098ed58853cabb3ccd8054a8a34f3734c300a23",
+      "after_sha256": "87a4f850fd31583a55e7f610a46b6d3d35696d7f604986a0db371d3a088fe266",
+      "before_backup": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\direct_export_admission_delta_20261007\\before\\animation_export_worker.py",
+      "before_bytes": 27880,
+      "after_bytes": 28660,
+      "non_guard_ast_unchanged": true,
+      "baseline_sha256": "b2668e204e4e75e71af165e3427eed8a3e2387c2dd2635cbd757d27d748a97be"
+    },
+    "dress_export_guard.py": {
+      "before_sha256": null,
+      "after_sha256": "4655c3a1de51cfd8560d8d084ab70f697bfde8cf8b3e6d5f434b323e314c8193",
+      "after_bytes": 10625,
+      "new_file": true
+    },
+    "animation_worklist_collection.py": {
+      "before_sha256": "c2b0d0ae0c969bece33106ec481c862f175f1df29abc6434e749f7afbafebac6",
+      "after_sha256": "9c72acff2104d049abc834403268f4d25e5b1f828a6921bede14b0af259c9ceb",
+      "before_backup": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\direct_export_admission_delta_20261007\\before\\animation_worklist_collection.py",
+      "before_bytes": 16191,
+      "after_bytes": 16216,
+      "non_guard_ast_unchanged": true,
+      "baseline_sha256": "25c8e6d6bb38e70b12430dc12575ccefe2cf1d9ef7d515df28dcb97c84756f90",
+      "only_change": "Append dress_export_guard.py to export_implementation fingerprint file tuple."
+    }
+  },
+  "entrypoint_additions": [
+    {
+      "file": "unity_export.py",
+      "function": "begin_export",
+      "new_statements": [
+        {
+          "line": 464,
+          "end_line": 464,
+          "ast": "from . import dress_export_guard",
+          "exact_source": "from . import dress_export_guard"
+        },
+        {
+          "line": 465,
+          "end_line": 468,
+          "ast": "try:\n    dress_export_guard.reject_model_sources(collect_character(context, rig, config)['objects'])\nexcept (ValueError, TypeError) as error:\n    raise ExportError(str(error)) from error",
+          "exact_source": "try:\n        dress_export_guard.reject_model_sources(collect_character(context, rig, config)['objects'])\n    except (ValueError, TypeError) as error:\n        raise ExportError(str(error)) from error"
+        }
+      ],
+      "module_loaders": []
+    },
+    {
+      "file": "unity_export_worker.py",
+      "function": "export_job",
+      "new_statements": [
+        {
+          "line": 888,
+          "end_line": 891,
+          "ast": "try:\n    _direct_export_guard().reject_model_snapshot(job, bpy.data.objects)\nexcept (ValueError, TypeError) as error:\n    raise ExportError(str(error)) from error",
+          "exact_source": "try:\n        _direct_export_guard().reject_model_snapshot(job, bpy.data.objects)\n    except (ValueError, TypeError) as error:\n        raise ExportError(str(error)) from error"
+        }
+      ],
+      "module_loaders": [
+        {
+          "line": 41,
+          "end_line": 48,
+          "ast": "def _direct_export_guard():\n    name = '_cdesigner_direct_export_guard_v1'\n    if name not in sys.modules:\n        spec = importlib.util.spec_from_file_location(name, Path(__file__).with_name('dress_export_guard.py'))\n        module = importlib.util.module_from_spec(spec)\n        spec.loader.exec_module(module)\n        sys.modules[name] = module\n    return sys.modules[name]",
+          "exact_source": "def _direct_export_guard():\n    name = '_cdesigner_direct_export_guard_v1'\n    if name not in sys.modules:\n        spec = importlib.util.spec_from_file_location(name, Path(__file__).with_name('dress_export_guard.py'))\n        module = importlib.util.module_from_spec(spec)\n        spec.loader.exec_module(module)\n        sys.modules[name] = module\n    return sys.modules[name]"
+        }
+      ]
+    },
+    {
+      "file": "animation_export.py",
+      "function": "begin_export",
+      "new_statements": [
+        {
+          "line": 49,
+          "end_line": 49,
+          "ast": "from . import dress_export_guard",
+          "exact_source": "from . import dress_export_guard"
+        },
+        {
+          "line": 50,
+          "end_line": 54,
+          "ast": "try:\n    direct_admission = dress_export_guard.animation_host_admission(bpy.data.objects, rig, action, _slot(rig, action))\nexcept (ValueError, TypeError) as error:\n    raise AnimationExportError(str(error)) from error",
+          "exact_source": "try:\n        direct_admission = dress_export_guard.animation_host_admission(\n            bpy.data.objects, rig, action, _slot(rig, action))\n    except (ValueError, TypeError) as error:\n        raise AnimationExportError(str(error)) from error"
+        },
+        {
+          "line": 119,
+          "end_line": 119,
+          "ast": "spec[dress_export_guard.JOB_KEY] = dress_export_guard.bind_animation_snapshot(direct_admission, snapshot)",
+          "exact_source": "spec[dress_export_guard.JOB_KEY] = dress_export_guard.bind_animation_snapshot(direct_admission, snapshot)"
+        }
+      ],
+      "module_loaders": []
+    },
+    {
+      "file": "animation_export_worker.py",
+      "function": "export_job",
+      "new_statements": [
+        {
+          "line": 248,
+          "end_line": 253,
+          "ast": "try:\n    _direct_export_guard().verify_animation_snapshot(job, bpy.data.objects, bpy.data.objects.get(job.get('rig', '')), bpy.data.actions.get(job.get('action', '')), bpy.data.filepath)\nexcept (ValueError, TypeError) as error:\n    raise AnimationExportError(str(error)) from error",
+          "exact_source": "try:\n        _direct_export_guard().verify_animation_snapshot(\n            job, bpy.data.objects, bpy.data.objects.get(job.get('rig', '')),\n            bpy.data.actions.get(job.get('action', '')), bpy.data.filepath)\n    except (ValueError, TypeError) as error:\n        raise AnimationExportError(str(error)) from error"
+        }
+      ],
+      "module_loaders": [
+        {
+          "line": 39,
+          "end_line": 46,
+          "ast": "def _direct_export_guard():\n    name = '_cdesigner_direct_export_guard_v1'\n    if name not in sys.modules:\n        spec = importlib.util.spec_from_file_location(name, Path(__file__).with_name('dress_export_guard.py'))\n        module = importlib.util.module_from_spec(spec)\n        spec.loader.exec_module(module)\n        sys.modules[name] = module\n    return sys.modules[name]",
+          "exact_source": "def _direct_export_guard():\n    name = '_cdesigner_direct_export_guard_v1'\n    if name not in sys.modules:\n        spec = importlib.util.spec_from_file_location(name, Path(__file__).with_name('dress_export_guard.py'))\n        module = importlib.util.module_from_spec(spec)\n        spec.loader.exec_module(module)\n        sys.modules[name] = module\n    return sys.modules[name]"
+        }
+      ]
+    },
+    {
+      "file": "animation_worklist_collection.py",
+      "function": "export_implementation",
+      "new_tuple_constant": {
+        "value": "dress_export_guard.py",
+        "line": 28
+      },
+      "before_ast": "def export_implementation():\n    \"\"\"Explicit scan/launch IO only; receipts also bind the export semantics.\"\"\"\n    root = Path(__file__).resolve().parent\n    return {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in ('animation_export.py', 'animation_export_worker.py', 'unity_export_worker.py', 'animation_worklist_fingerprint.py', 'dress_export_snapshot.py')}",
+      "after_ast": "def export_implementation():\n    \"\"\"Explicit scan/launch IO only; receipts also bind the export semantics.\"\"\"\n    root = Path(__file__).resolve().parent\n    return {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in ('animation_export.py', 'animation_export_worker.py', 'unity_export_worker.py', 'animation_worklist_fingerprint.py', 'dress_export_snapshot.py', 'dress_export_guard.py')}",
+      "before_tuple": [
+        "animation_export.py",
+        "animation_export_worker.py",
+        "unity_export_worker.py",
+        "animation_worklist_fingerprint.py",
+        "dress_export_snapshot.py"
+      ],
+      "after_tuple": [
+        "animation_export.py",
+        "animation_export_worker.py",
+        "unity_export_worker.py",
+        "animation_worklist_fingerprint.py",
+        "dress_export_snapshot.py",
+        "dress_export_guard.py"
+      ],
+      "approved0771_tuple": [
+        "animation_export.py",
+        "animation_export_worker.py",
+        "unity_export_worker.py",
+        "animation_worklist_fingerprint.py"
+      ],
+      "approved0771_adapter": "Append only dress_export_guard.py to the existing approved tuple; do NOT copy current pending dress_export_snapshot.py or any other worklist changes."
+    }
+  ],
+  "test": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_dress_export_guard.py",
+    "sha256": "2ba6b565a368806da7616e96a9eb990043d115aa7e9a592897b34502b3953c24",
+    "command": "python -B D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_dress_export_guard.py",
+    "tests_passed": 13,
+    "native": false,
+    "latest_seconds": 0.139
+  },
+  "old_pose_baseline_adaptation": [
+    {
+      "file": "unity_export.py",
+      "function": "begin_export",
+      "position": "After context mode check; before hair_wiggle_adapter import/stop.",
+      "copy": "Only new relative guard import and read-only try; keep original collect/snapshot/export flow."
+    },
+    {
+      "file": "unity_export_worker.py",
+      "function": "export_job",
+      "position": "Function start, before stage.mkdir.",
+      "copy": "New loader + first try; ensure import importlib.util (canonical already had it, approved0771 did not). Path/sys exist."
+    },
+    {
+      "file": "animation_export.py",
+      "function": "begin_export",
+      "position": "Guard after local Action validation; receipt binding immediately after libraries.write.",
+      "copy": "New relative import + early try + spec[JOB_KEY] binding only. Baseline spec/snapshot/_slot exist; do not copy dress_scene_roots or capture imports."
+    },
+    {
+      "file": "animation_export_worker.py",
+      "function": "export_job",
+      "position": "Function start, before Wiggle loops.",
+      "copy": "New loader + first try only; baseline has importlib.util/Path/sys/bpy. Do not copy pending prepare_animation_snapshot."
+    }
+  ],
+  "receipt_scope": "Host global reverse inventory + native retained markers + exact snapshot transfer. Empty snapshot alone never proves no Direct; missing old receipt rejected. Native ID pointer retention and full export execution remain untested.",
+  "unchanged_public_route_and_version": true,
+  "candidate_projection_updated": false,
+  "native_run": false,
+  "build": false,
+  "deployment": false,
+  "physics_export_authorized": false,
+  "prior_initial_map": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\direct_export_admission_delta_20261007\\source_delta_map_initial.json",
+    "sha256": "9df0da109915f4fdd0de948a14a53cc7645fe5ef31eccd2fbf31e88c4a67341f"
+  },
+  "worklist_test": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_collection.py",
+    "before_sha256": "56631cf6fb2c8538eef3ee9afe128dfee2fd05ccc8aea37d4ca4cda2212a801f",
+    "sha256": "291bc58f684abeddc11ce97666107390c32cf84cb8cece5b31d4f857c37816b6",
+    "tests_passed": 28,
+    "new_test": "Actual production IO function on private byte copies; helper bytes change alters only its fingerprint, _receipt rejects saved receipt, scan becomes UNKNOWN; no republish or native evaluation.",
+    "latest_seconds": 0.741
+  }
+}

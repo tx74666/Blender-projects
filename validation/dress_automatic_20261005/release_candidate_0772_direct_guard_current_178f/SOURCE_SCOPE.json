@@ -1,0 +1,17 @@
+{
+  "schema": "DRESS_SOURCE_SCOPE_V1",
+  "scope": "Source-only Direct Dress candidate; no publication, deployment, scene migration or artist save performed.",
+  "version": "0.77.1",
+  "directory_name_is_not_release_version": true,
+  "sources": {"approved_pose_projection_sha256":"96cb0675d2fe72377fbfa4ca4e717bf47663640ba32e79624f306755f55c9f80","reviewed_guard_projection_sha256":"606e44f317f2f8c745effcd3beb0a57e18bd469ec665a4d1025595e380d00188","canonical_full159_manifest_sha256":"178f0c9c2a43bedf3e9b1c10b06fbac64d4ddbf60be307450011f40b8916e690","canonical_runtime157_note":"Complete159 includes two frozen QA observers outside addon; only11 named runtime files copied."},
+  "candidate": {"runtime_files":155,"changed_vs_approved_pose":17,"overrides_from_guard149":11,"content_manifest_sha256":"36014d121602e594f091561f3cbc2b223b48522b518245159aa515fe0e897dd8","projection_sha256":"40546e6f65fac37d0cc35f8fc1922dc6c171be06d20495cb6fa72cc2c0af115b"},
+  "included_direct_runtime": ["skirt.py","skirt_motion_profiles.py","skirt_motion_tuning.py","skirt_motion_ui.py","skirt_original_mode.py","skirt_physics.py","skirt_rig.py","skirt_shared_rig.py","skirt_surface.py","skirt_surface_direct.py","mesh_copy.py"],
+  "excluded_pending_helpers": ["dress_export_snapshot.py","dress_plain_native_skin.py"],
+  "four_public_gates": {"model_host":"RejectDirect","model_worker":"RejectDirect","animation_host":"RejectDirectWithCompleteReverseInventory","animation_worker":"RejectDirectAndMissingOrUnknownBoundReceipt"},
+  "public_route": {"panel_actual_surface":"DIRECT_MAIN_CLOTH_V1","legacy_scripted_calls":"LEGACY_CAGE remains default","changed_vs_approved_pose":true,"changed_vs_frozen_canonical":false},
+  "migration": {"automatic_direct_migration":false,"registration_and_load_hooks":"Approved baseline unchanged; existing name cleanup retained.","existing_delta_to_direct":"Explicitly rejected","formal_X_installation_or_data_equivalence":"Unmeasured; candidate creation never loads artist scene"},
+  "editing_limit": {"manual":"Pre-Cloth input preview; entering marks pending even without editing.","automatic":"Explicit Reset plus sequential replay or rebake required after Manual/Original.","same_frame_static_recalculation":"Unsupported","final_visible_surface":"Must be assessed separately; source collection and sparse component evidence do not grant artist acceptance."},
+  "remaining_boundaries": ["Current Dress Shape Keys rejected before allocation.","Direct collider refit unsupported.","Public static model/skeletal export remains rejected; plain Skin capability excluded here.","General export snapshot transport and artist final-surface naturalness/GUI acceptance are not proved by this projection."],
+  "unchanged": ["__init__.py version/registration","README.md","Forearm/Pose/animation/limb runtime except six reviewed guard-only export deltas"],
+  "performed": {"file_hash_checks":true,"python_ast_parse":true,"relative_module_presence":true,"native":false,"build":false,"deploy":false,"publish":false,"artist_save":false,"central_record":false}
+}

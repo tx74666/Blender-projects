@@ -1,0 +1,15 @@
+--- a/addons/character_designer/dress_plain_native_skin.py
++++ b/addons/character_designer/dress_plain_native_skin.py
+@@ -102,10 +102,10 @@
+              "the authoritative omission semantics are unknown or different.")
+     state = proof.get("state")
+     _require(type(state) is dict and state.get("mode") == "MANUAL"
+-             and state.get("editing") is False and state.get("pending") is False
++             and state.get("editing") is False and type(state.get("pending")) is bool
+              and proof.get("mode_value") is False
+              and _json(proof.get("cloth_flags")) == "[false,false]",
+-             "only complete Manual input state is supported; finish Original and pending/Automatic previews.")
++             "only Manual input with finished Original editing and paused Cloth is supported.")
+     rows = proof.get("deform_contract")
+     _require(type(rows) is list and rows
+              and all(type(row) is dict and type(row.get("bone")) is str and row["bone"]

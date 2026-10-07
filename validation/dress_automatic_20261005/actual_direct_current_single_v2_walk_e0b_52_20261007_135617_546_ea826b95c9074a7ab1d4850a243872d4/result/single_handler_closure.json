@@ -1,0 +1,201 @@
+{
+  "before": {
+    "_extension_repos_files_clear": [
+      {
+        "module": "bl_pkg",
+        "qualname": "extension_repos_files_clear",
+        "id": 2928944694912
+      }
+    ],
+    "_extension_repos_sync": [
+      {
+        "module": "bl_pkg",
+        "qualname": "extension_repos_sync",
+        "id": 2928944694752
+      }
+    ],
+    "_extension_repos_update_post": [
+      {
+        "module": "bl_pkg",
+        "qualname": "monkeypatch_extensions_repos_update_post",
+        "id": 2928944695552
+      }
+    ],
+    "_extension_repos_update_pre": [
+      {
+        "module": "bl_pkg",
+        "qualname": "monkeypatch_extensions_repos_update_pre",
+        "id": 2928944695392
+      }
+    ],
+    "animation_playback_post": [],
+    "animation_playback_pre": [],
+    "annotation_post": [],
+    "annotation_pre": [],
+    "blend_import_post": [],
+    "blend_import_pre": [],
+    "composite_cancel": [],
+    "composite_post": [],
+    "composite_pre": [],
+    "depsgraph_update_post": [],
+    "depsgraph_update_pre": [],
+    "exit_pre": [],
+    "frame_change_post": [],
+    "frame_change_pre": [],
+    "load_factory_preferences_post": [],
+    "load_factory_startup_post": [],
+    "load_post": [
+      {
+        "module": "bl_operators.copy_global_transform",
+        "qualname": "_on_blendfile_load_post",
+        "id": 2928915140256
+      },
+      {
+        "module": "pose_library.gui",
+        "qualname": "_on_blendfile_load_post",
+        "id": 2928942322752
+      }
+    ],
+    "load_post_fail": [],
+    "load_pre": [
+      {
+        "module": "pose_library.gui",
+        "qualname": "_on_blendfile_load_pre",
+        "id": 2928942322592
+      }
+    ],
+    "object_bake_cancel": [],
+    "object_bake_complete": [],
+    "object_bake_pre": [],
+    "redo_post": [],
+    "redo_pre": [],
+    "render_cancel": [],
+    "render_complete": [],
+    "render_init": [],
+    "render_post": [],
+    "render_pre": [],
+    "render_stats": [],
+    "render_write": [],
+    "save_post": [],
+    "save_post_fail": [],
+    "save_pre": [],
+    "translation_update_post": [
+      {
+        "module": "bl_ui",
+        "qualname": "translation_update",
+        "id": 2928938022560
+      }
+    ],
+    "undo_post": [],
+    "undo_pre": [],
+    "version_update": [
+      {
+        "module": "cycles.version_update",
+        "qualname": "do_versions",
+        "id": 2928940343168
+      }
+    ],
+    "xr_session_start_pre": []
+  },
+  "after": {
+    "_extension_repos_files_clear": [
+      {
+        "module": "bl_pkg",
+        "qualname": "extension_repos_files_clear",
+        "id": 2928944694912
+      }
+    ],
+    "_extension_repos_sync": [
+      {
+        "module": "bl_pkg",
+        "qualname": "extension_repos_sync",
+        "id": 2928944694752
+      }
+    ],
+    "_extension_repos_update_post": [
+      {
+        "module": "bl_pkg",
+        "qualname": "monkeypatch_extensions_repos_update_post",
+        "id": 2928944695552
+      }
+    ],
+    "_extension_repos_update_pre": [
+      {
+        "module": "bl_pkg",
+        "qualname": "monkeypatch_extensions_repos_update_pre",
+        "id": 2928944695392
+      }
+    ],
+    "animation_playback_post": [],
+    "animation_playback_pre": [],
+    "annotation_post": [],
+    "annotation_pre": [],
+    "blend_import_post": [],
+    "blend_import_pre": [],
+    "composite_cancel": [],
+    "composite_post": [],
+    "composite_pre": [],
+    "depsgraph_update_post": [],
+    "depsgraph_update_pre": [],
+    "exit_pre": [],
+    "frame_change_post": [],
+    "frame_change_pre": [],
+    "load_factory_preferences_post": [],
+    "load_factory_startup_post": [],
+    "load_post": [
+      {
+        "module": "bl_operators.copy_global_transform",
+        "qualname": "_on_blendfile_load_post",
+        "id": 2928915140256
+      },
+      {
+        "module": "pose_library.gui",
+        "qualname": "_on_blendfile_load_post",
+        "id": 2928942322752
+      }
+    ],
+    "load_post_fail": [],
+    "load_pre": [
+      {
+        "module": "pose_library.gui",
+        "qualname": "_on_blendfile_load_pre",
+        "id": 2928942322592
+      }
+    ],
+    "object_bake_cancel": [],
+    "object_bake_complete": [],
+    "object_bake_pre": [],
+    "redo_post": [],
+    "redo_pre": [],
+    "render_cancel": [],
+    "render_complete": [],
+    "render_init": [],
+    "render_post": [],
+    "render_pre": [],
+    "render_stats": [],
+    "render_write": [],
+    "save_post": [],
+    "save_post_fail": [],
+    "save_pre": [],
+    "translation_update_post": [
+      {
+        "module": "bl_ui",
+        "qualname": "translation_update",
+        "id": 2928938022560
+      }
+    ],
+    "undo_post": [],
+    "undo_pre": [],
+    "version_update": [
+      {
+        "module": "cycles.version_update",
+        "qualname": "do_versions",
+        "id": 2928940343168
+      }
+    ],
+    "xr_session_start_pre": []
+  },
+  "handler_exact": true,
+  "RNA_clear": true,
+  "accepted": false
+}

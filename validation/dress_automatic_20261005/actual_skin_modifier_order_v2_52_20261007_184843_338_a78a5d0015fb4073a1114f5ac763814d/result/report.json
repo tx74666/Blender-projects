@@ -1,0 +1,1674 @@
+{
+  "stage": "SOURCE_ONLY_NATIVE_SKIN_MODIFIER_ORDER52_V2",
+  "status": "failed",
+  "cases": {
+    "Manual_DQ": {
+      "status": "failed",
+      "pose_position": "POSE",
+      "preserve_volume": true,
+      "home_source_world": [
+        [
+          0.7299652099609375,
+          7.701183745887578e-15,
+          1.0429209206582347e-14,
+          -4.263256414560601e-14
+        ],
+        [
+          1.7347375367237315e-14,
+          0.7299649715423584,
+          6.534190077900348e-08,
+          0.10510388016700745
+        ],
+        [
+          -1.0435306149736683e-14,
+          7.621921582767754e-08,
+          0.7299649715423584,
+          1.1820251941680908
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "comparisons": {},
+      "errors": [
+        {
+          "exception": "RuntimeError('raw800_current_source_world_exact')",
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py\", line 298, in run_case\n    observations['raw800'] = evaluate(native, {'ARMATURE': False, 'SUBSURF': False}, row, 'raw800')\n                             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py\", line 160, in evaluate\n    check(row, label + '_current_source_world_exact',\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n          all(math.isfinite(v) for v in components) and max(components) <= NUMERIC_M,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n          {'maximum_native_matrix_component': max(components)}, required=True)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py\", line 105, in check\n    raise RuntimeError(label)\nRuntimeError: raw800_current_source_world_exact\n"
+        }
+      ],
+      "checks": {
+        "independent_rig_data": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_rig_after_graph_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "copy_current_evaluated_pose_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_current_evaluated_pose_exact": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "maximum_native_matrix_component": 0.0,
+            "all_bones": 346
+          }
+        },
+        "copy_rig_evaluated_world_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_rig_evaluated_world_exact": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "maximum_native_matrix_component": 0.0
+          }
+        },
+        "plain_ARM_then_SUBSURF": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "raw800_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "raw800_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "raw800_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "raw800_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "POSE"
+          ]
+        },
+        "raw800_current_source_world_exact": {
+          "evaluated": true,
+          "passed": false,
+          "detail": {
+            "maximum_native_matrix_component": 1.006402313709259
+          }
+        }
+      },
+      "driver_validity": {
+        "copy_rig_after_graph": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "raw800": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        }
+      },
+      "owned_scene_disposed": true
+    },
+    "REST_DQ": {
+      "status": "measured",
+      "pose_position": "REST",
+      "preserve_volume": true,
+      "home_source_world": [
+        [
+          0.7299652099609375,
+          7.701183745887578e-15,
+          1.0429209206582347e-14,
+          -4.263256414560601e-14
+        ],
+        [
+          1.7347375367237315e-14,
+          0.7299649715423584,
+          6.534190077900348e-08,
+          0.10510388016700745
+        ],
+        [
+          -1.0435306149736683e-14,
+          7.621921582767754e-08,
+          0.7299649715423584,
+          1.1820251941680908
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "comparisons": {
+        "native_vs_worker": {
+          "evaluated": true,
+          "correspondence_evaluated": true,
+          "same_index_count": true,
+          "ordered_topology": {
+            "edges": true,
+            "faces": true,
+            "loops": true
+          },
+          "skin_exact": true,
+          "full_named_weights_exact": true,
+          "UV_exact": true,
+          "material_indices_exact": true,
+          "material_slots_exact": true,
+          "maximum_m": 6.006850114687196e-08,
+          "rms_m": 1.4446542389928507e-08,
+          "worst_index": 2018,
+          "within_0_05mm": true,
+          "within_numeric_0_00001mm": false
+        },
+        "native_vs_manual": {
+          "evaluated": true,
+          "correspondence_evaluated": true,
+          "same_index_count": true,
+          "ordered_topology": {
+            "edges": true,
+            "faces": true,
+            "loops": true
+          },
+          "skin_exact": true,
+          "full_named_weights_exact": true,
+          "UV_exact": true,
+          "material_indices_exact": true,
+          "material_slots_exact": true,
+          "maximum_m": 6.006850114687196e-08,
+          "rms_m": 1.4446542389928507e-08,
+          "worst_index": 2018,
+          "within_0_05mm": true,
+          "within_numeric_0_00001mm": false
+        },
+        "native_vs_reordered": {
+          "evaluated": true,
+          "correspondence_evaluated": true,
+          "same_index_count": true,
+          "ordered_topology": {
+            "edges": true,
+            "faces": true,
+            "loops": true
+          },
+          "skin_exact": true,
+          "full_named_weights_exact": true,
+          "UV_exact": true,
+          "material_indices_exact": true,
+          "material_slots_exact": true,
+          "maximum_m": 6.006850114687196e-08,
+          "rms_m": 1.4446542389928507e-08,
+          "worst_index": 2018,
+          "within_0_05mm": true,
+          "within_numeric_0_00001mm": false
+        },
+        "worker_vs_manual_bake_raw": {
+          "evaluated": true,
+          "correspondence_evaluated": true,
+          "same_index_count": true,
+          "ordered_topology": {
+            "edges": true,
+            "faces": true,
+            "loops": true
+          },
+          "skin_exact": true,
+          "full_named_weights_exact": true,
+          "UV_exact": true,
+          "material_indices_exact": true,
+          "material_slots_exact": true,
+          "maximum_m": 0.0,
+          "rms_m": 0.0,
+          "worst_index": 0,
+          "within_0_05mm": true,
+          "within_numeric_0_00001mm": true
+        },
+        "worker_vs_manual_surface": {
+          "evaluated": true,
+          "correspondence_evaluated": true,
+          "same_index_count": true,
+          "ordered_topology": {
+            "edges": true,
+            "faces": true,
+            "loops": true
+          },
+          "skin_exact": true,
+          "full_named_weights_exact": true,
+          "UV_exact": true,
+          "material_indices_exact": true,
+          "material_slots_exact": true,
+          "maximum_m": 0.0,
+          "rms_m": 0.0,
+          "worst_index": 0,
+          "within_0_05mm": true,
+          "within_numeric_0_00001mm": true
+        },
+        "worker_vs_reordered": {
+          "evaluated": true,
+          "correspondence_evaluated": true,
+          "same_index_count": true,
+          "ordered_topology": {
+            "edges": true,
+            "faces": true,
+            "loops": true
+          },
+          "skin_exact": true,
+          "full_named_weights_exact": true,
+          "UV_exact": true,
+          "material_indices_exact": true,
+          "material_slots_exact": true,
+          "maximum_m": 0.0,
+          "rms_m": 0.0,
+          "worst_index": 0,
+          "within_0_05mm": true,
+          "within_numeric_0_00001mm": true
+        }
+      },
+      "errors": [],
+      "checks": {
+        "independent_rig_data": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_rig_after_graph_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "copy_current_evaluated_pose_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_current_evaluated_pose_exact": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "maximum_native_matrix_component": 0.0,
+            "all_bones": 346
+          }
+        },
+        "copy_rig_evaluated_world_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_rig_evaluated_world_exact": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "maximum_native_matrix_component": 0.0
+          }
+        },
+        "plain_ARM_then_SUBSURF": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "raw800_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "raw800_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "raw800_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "raw800_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "raw800_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "native800_skin_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "native800_skin_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "native800_skin_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "native800_skin_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "native800_skin_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "native800_skin_then_Subsurf_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "native800_skin_then_Subsurf_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              true,
+              null
+            ]
+          ]
+        },
+        "native800_skin_then_Subsurf_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              true,
+              null
+            ]
+          ]
+        },
+        "native800_skin_then_Subsurf_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "native800_skin_then_Subsurf_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "actual_native_counts": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "worker_retains_only_ARM": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "worker_bakedSubsurf_no_ARM_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "worker_bakedSubsurf_no_ARM_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ]
+          ]
+        },
+        "worker_bakedSubsurf_no_ARM_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ]
+          ]
+        },
+        "worker_bakedSubsurf_no_ARM_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "worker_bakedSubsurf_no_ARM_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "worker_bakedSubsurf_then_ARM_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "worker_bakedSubsurf_then_ARM_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ]
+          ]
+        },
+        "worker_bakedSubsurf_then_ARM_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ]
+          ]
+        },
+        "worker_bakedSubsurf_then_ARM_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "worker_bakedSubsurf_then_ARM_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "manual_bakedSubsurf_no_ARM_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "manual_bakedSubsurf_no_ARM_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ]
+          ]
+        },
+        "manual_bakedSubsurf_no_ARM_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              true
+            ]
+          ]
+        },
+        "manual_bakedSubsurf_no_ARM_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "manual_bakedSubsurf_no_ARM_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "manual_bakedSubsurf_then_ARM_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "manual_bakedSubsurf_then_ARM_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ]
+          ]
+        },
+        "manual_bakedSubsurf_then_ARM_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ]
+          ]
+        },
+        "manual_bakedSubsurf_then_ARM_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "manual_bakedSubsurf_then_ARM_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "reorder_copy_only": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "native_ObjectModifiers_move_available": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "reorder_full_modifier_RNA_preserved": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "explicit_Subsurf_then_ARM_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "explicit_Subsurf_then_ARM_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "Subdivision",
+              "SUBSURF",
+              true,
+              null
+            ],
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ]
+          ]
+        },
+        "explicit_Subsurf_then_ARM_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "Subdivision",
+              "SUBSURF",
+              true,
+              null
+            ],
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true,
+              true
+            ]
+          ]
+        },
+        "explicit_Subsurf_then_ARM_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "REST"
+          ]
+        },
+        "explicit_Subsurf_then_ARM_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        }
+      },
+      "driver_validity": {
+        "copy_rig_after_graph": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "raw800": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "native800_skin": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "native800_skin_then_Subsurf": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "worker_bakedSubsurf_no_ARM": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "worker_bakedSubsurf_then_ARM": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "manual_bakedSubsurf_no_ARM": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "manual_bakedSubsurf_then_ARM": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "explicit_Subsurf_then_ARM": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        }
+      },
+      "samples": {
+        "raw800": {
+          "vertices": 800,
+          "modifiers": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false
+            ]
+          ],
+          "skin_SHA": "43ec12c2a9c5073ad0a940259f7e16db8c4cbe4be42a82314ece04923066b1a7"
+        },
+        "native800_skin": {
+          "vertices": 800,
+          "modifiers": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false
+            ]
+          ],
+          "skin_SHA": "43ec12c2a9c5073ad0a940259f7e16db8c4cbe4be42a82314ece04923066b1a7"
+        },
+        "native800_skin_then_Subsurf": {
+          "vertices": 3040,
+          "modifiers": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              true
+            ]
+          ],
+          "skin_SHA": "eb0e21572e228f345475b12829320e8b1681c801ff5c8a24230d9329d9186351"
+        },
+        "worker_bakedSubsurf_no_ARM": {
+          "vertices": 3040,
+          "modifiers": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false
+            ]
+          ],
+          "skin_SHA": "eb0e21572e228f345475b12829320e8b1681c801ff5c8a24230d9329d9186351"
+        },
+        "worker_bakedSubsurf_then_ARM": {
+          "vertices": 3040,
+          "modifiers": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true
+            ]
+          ],
+          "skin_SHA": "eb0e21572e228f345475b12829320e8b1681c801ff5c8a24230d9329d9186351"
+        },
+        "manual_bakedSubsurf_no_ARM": {
+          "vertices": 3040,
+          "modifiers": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false
+            ]
+          ],
+          "skin_SHA": "eb0e21572e228f345475b12829320e8b1681c801ff5c8a24230d9329d9186351"
+        },
+        "manual_bakedSubsurf_then_ARM": {
+          "vertices": 3040,
+          "modifiers": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true
+            ]
+          ],
+          "skin_SHA": "eb0e21572e228f345475b12829320e8b1681c801ff5c8a24230d9329d9186351"
+        },
+        "explicit_Subsurf_then_ARM": {
+          "vertices": 3040,
+          "modifiers": [
+            [
+              "Subdivision",
+              "SUBSURF",
+              true
+            ],
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              true
+            ]
+          ],
+          "skin_SHA": "eb0e21572e228f345475b12829320e8b1681c801ff5c8a24230d9329d9186351"
+        }
+      },
+      "worker_receipt": {
+        "vertices": 3040,
+        "polygons": 2880,
+        "shape_keys": [],
+        "modifiers_baked": [
+          "SUBSURF"
+        ],
+        "skinned": true,
+        "disabled_skinning": []
+      },
+      "worker_warnings": [
+        "QA worker baked order: Blender Preserve Volume skinning is exported as standard FBX skin weights; review joint deformation in Unity."
+      ],
+      "reorder_native_return": null,
+      "owned_scene_disposed": true
+    },
+    "Manual_LBS": {
+      "status": "failed",
+      "pose_position": "POSE",
+      "preserve_volume": false,
+      "home_source_world": [
+        [
+          0.7299652099609375,
+          7.701183745887578e-15,
+          1.0429209206582347e-14,
+          -4.263256414560601e-14
+        ],
+        [
+          1.7347375367237315e-14,
+          0.7299649715423584,
+          6.534190077900348e-08,
+          0.10510388016700745
+        ],
+        [
+          -1.0435306149736683e-14,
+          7.621921582767754e-08,
+          0.7299649715423584,
+          1.1820251941680908
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "comparisons": {},
+      "errors": [
+        {
+          "exception": "RuntimeError('raw800_current_source_world_exact')",
+          "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py\", line 298, in run_case\n    observations['raw800'] = evaluate(native, {'ARMATURE': False, 'SUBSURF': False}, row, 'raw800')\n                             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py\", line 160, in evaluate\n    check(row, label + '_current_source_world_exact',\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n          all(math.isfinite(v) for v in components) and max(components) <= NUMERIC_M,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n          {'maximum_native_matrix_component': max(components)}, required=True)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py\", line 105, in check\n    raise RuntimeError(label)\nRuntimeError: raw800_current_source_world_exact\n"
+        }
+      ],
+      "checks": {
+        "independent_rig_data": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_rig_after_graph_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "copy_current_evaluated_pose_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_current_evaluated_pose_exact": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "maximum_native_matrix_component": 0.0,
+            "all_bones": 346
+          }
+        },
+        "copy_rig_evaluated_world_finite": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "copy_rig_evaluated_world_exact": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "maximum_native_matrix_component": 0.0
+          }
+        },
+        "plain_ARM_then_SUBSURF": {
+          "evaluated": true,
+          "passed": true,
+          "detail": null
+        },
+        "raw800_no_invalid_drivers": {
+          "evaluated": true,
+          "passed": true,
+          "detail": {
+            "invalid_count": 0
+          }
+        },
+        "raw800_effective_modifier_flags": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              false
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "raw800_effective_PreserveVolume": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            [
+              "SK_Dress_857c5a_Skin",
+              "ARMATURE",
+              false,
+              false
+            ],
+            [
+              "Subdivision",
+              "SUBSURF",
+              false,
+              null
+            ]
+          ]
+        },
+        "raw800_effective_rig_pose_position": {
+          "evaluated": true,
+          "passed": true,
+          "detail": [
+            "POSE"
+          ]
+        },
+        "raw800_current_source_world_exact": {
+          "evaluated": true,
+          "passed": false,
+          "detail": {
+            "maximum_native_matrix_component": 1.006402313709259
+          }
+        }
+      },
+      "driver_validity": {
+        "copy_rig_after_graph": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        },
+        "raw800": {
+          "evaluated": true,
+          "drivers_read": 59,
+          "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+          "invalid": [],
+          "pose_status": "Native validity flags passed"
+        }
+      },
+      "owned_scene_disposed": true
+    }
+  },
+  "errors": [],
+  "accepted": false,
+  "FBX_verified": false,
+  "Unity_verified": false,
+  "animation_verified": false,
+  "artist_loaded": false,
+  "artist_saved": false,
+  "deployed": false,
+  "simulation_baked": false,
+  "timeline_seek_by_QA": false,
+  "threshold_m": 5e-05,
+  "prior_PrivateFBXv3_maximum_m": 0.0004713791436785606,
+  "prior_failure_disposition": "Historical PrivateFBXv3 failure remains unaccepted; this probe never writes or upgrades that result. Its file is not reread.",
+  "scope": "Fixed completed QA snapshot; numerical mechanism probe only.",
+  "unknown": [
+    "FBX/Unity/DQ-to-LBS transport",
+    "other poses/animation",
+    "Body attachment/Cloth final surface",
+    "a safe production repair"
+  ],
+  "guard_scope": "All loaded raw mesh coordinates/ordered topology/UV/material slots/raw key coordinates/channels; full named object weights; original rig Rest/native pose. No complete Action/material/image audit.",
+  "checks": {
+    "background52": {
+      "evaluated": true,
+      "passed": true,
+      "detail": [
+        5,
+        2,
+        0
+      ]
+    },
+    "CD_not_imported": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "pin:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "pin:D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "pin:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "recorded_home_scene_membership": {
+      "evaluated": true,
+      "passed": true,
+      "detail": {
+        "Dress": true,
+        "CoshaRig": true,
+        "Cosha": true,
+        "CD Dress Input · Dress": true,
+        "CD Dress Cloth · Dress": true,
+        "CD Body Relay · Dress": true,
+        "CD Direct Collider Pelvis · Dress": true,
+        "CD Direct Collider Thigh.L · Dress": true,
+        "CD Direct Collider Thigh.R · Dress": true
+      }
+    },
+    "recorded_home_scene_activated": {
+      "evaluated": true,
+      "passed": true,
+      "detail": "Scene"
+    },
+    "positive_metric_unit_scale": {
+      "evaluated": true,
+      "passed": true,
+      "detail": 1.0
+    },
+    "no_active_Cloth_in_snapshot_depsgraph": {
+      "evaluated": true,
+      "passed": true,
+      "detail": []
+    },
+    "no_animated_Cloth_modifier_controls": {
+      "evaluated": true,
+      "passed": true,
+      "detail": []
+    },
+    "fixed_local_no_key_source": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "native_source_mods_exact": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "plain_ARM_SUBSURF_only": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "actual_rig": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "Direct_backend": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "owned_absolute_output": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "single_native_Direct_output": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "Manual_paused": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "actual_POSE_PreserveVolume": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "original_home_after_graph_no_invalid_drivers": {
+      "evaluated": true,
+      "passed": true,
+      "detail": {
+        "invalid_count": 0
+      }
+    },
+    "CD_not_imported_after": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:RawMeshes_UV_Keys": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:FullNamedWeights": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:boneRest": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:nativePose": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:pose_position": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:home_frame": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:home_unit_scale_length": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "author_preserved:original_source_modifiers": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "source_preserved:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "source_preserved:D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    },
+    "source_preserved:D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py": {
+      "evaluated": true,
+      "passed": true,
+      "detail": null
+    }
+  },
+  "runtime": {
+    "version": "5.2.0 LTS",
+    "binary": "D:\\Blender5.2\\blender.exe",
+    "actual_model": "unrecorded",
+    "reasoning_effort": "unrecorded"
+  },
+  "source_before": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": "1716ff49a231cee8c0663fd17949583eabbfb7ce79791a459682930f40744dcb",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py": "3d49bd09147537dc99e4d860d080d6ca49a5c393d8dcc885c28d13281ea9ce74"
+  },
+  "snapshot_scene": {
+    "context_after_open": "Scene",
+    "recorded_home": "Scene",
+    "scene_names": [
+      "Scene"
+    ],
+    "original_membership": {
+      "Dress": true,
+      "CoshaRig": true,
+      "Cosha": true,
+      "CD Dress Input · Dress": true,
+      "CD Dress Cloth · Dress": true,
+      "CD Body Relay · Dress": true,
+      "CD Direct Collider Pelvis · Dress": true,
+      "CD Direct Collider Thigh.L · Dress": true,
+      "CD Direct Collider Thigh.R · Dress": true
+    },
+    "scene_guessed": false,
+    "scene_created_for_activation": false
+  },
+  "author_before": {
+    "RawMeshes_UV_Keys": "b1e2d90f069d79aaf2ca817ec526f3d11066f9fe4da6bac64c443588a833c7aa",
+    "FullNamedWeights": "f577a4c228c6e2c0c5d2cea20ccd788d43d75038c5dd51f23ccc9f035841f57f",
+    "boneRest": "0e82399a32be7484dff753af084f82716b3252b2b45604779c23461125923f11",
+    "nativePose": "0fc42c9ad55c6e2d56851daccb3cb6523fa0ca7a6803720b2848277df58dd7c8",
+    "pose_position": "POSE",
+    "home_frame": [
+      39,
+      0.0
+    ],
+    "home_unit_scale_length": 1.0,
+    "original_source_modifiers": [
+      {
+        "name": "SK_Dress_857c5a_Skin",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": false,
+        "show_on_cage": false,
+        "show_expanded": true,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "object": {
+          "type": "Object",
+          "name": "CoshaRig"
+        },
+        "use_bone_envelopes": false,
+        "use_vertex_groups": true,
+        "use_deform_preserve_volume": true,
+        "use_multi_modifier": false,
+        "vertex_group": "",
+        "invert_vertex_group": false
+      },
+      {
+        "name": "Dress Direct Output",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": true,
+        "show_on_cage": false,
+        "show_expanded": true,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "node_group": {
+          "type": "GeometryNodeTree",
+          "name": "Dress Direct Output · Dress"
+        },
+        "bake_directory": "",
+        "bake_target": "PACKED",
+        "show_group_selector": true,
+        "show_manage_panel": true,
+        "open_output_attributes_panel": false,
+        "open_manage_panel": false,
+        "open_bake_panel": false,
+        "open_named_attributes_panel": false,
+        "open_bake_data_blocks_panel": false,
+        "open_warnings_panel": true
+      },
+      {
+        "name": "Subdivision",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": true,
+        "show_on_cage": true,
+        "show_expanded": false,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "uv_smooth": "PRESERVE_BOUNDARIES",
+        "quality": 3,
+        "boundary_smooth": "ALL",
+        "subdivision_type": "CATMULL_CLARK",
+        "levels": 1,
+        "render_levels": 2,
+        "show_only_control_edges": true,
+        "use_creases": true,
+        "use_custom_normals": false,
+        "use_limit_surface": true,
+        "use_adaptive_subdivision": false,
+        "adaptive_space": "PIXEL",
+        "adaptive_pixel_size": 1.0,
+        "adaptive_object_edge_length": 0.009999999776482582,
+        "open_adaptive_subdivision_panel": false,
+        "open_advanced_panel": false
+      }
+    ]
+  },
+  "Direct_evidence": {
+    "overlay": "Dress Direct Output",
+    "group": "Dress Direct Output · Dress",
+    "native_source_mods": [
+      {
+        "name": "SK_Dress_857c5a_Skin",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": false,
+        "show_on_cage": false,
+        "show_expanded": true,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "object": {
+          "type": "Object",
+          "name": "CoshaRig"
+        },
+        "use_bone_envelopes": false,
+        "use_vertex_groups": true,
+        "use_deform_preserve_volume": true,
+        "use_multi_modifier": false,
+        "vertex_group": "",
+        "invert_vertex_group": false
+      },
+      {
+        "name": "Subdivision",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": true,
+        "show_on_cage": true,
+        "show_expanded": false,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "uv_smooth": "PRESERVE_BOUNDARIES",
+        "quality": 3,
+        "boundary_smooth": "ALL",
+        "subdivision_type": "CATMULL_CLARK",
+        "levels": 1,
+        "render_levels": 2,
+        "show_only_control_edges": true,
+        "use_creases": true,
+        "use_custom_normals": false,
+        "use_limit_surface": true,
+        "use_adaptive_subdivision": false,
+        "adaptive_space": "PIXEL",
+        "adaptive_pixel_size": 1.0,
+        "adaptive_object_edge_length": 0.009999999776482582,
+        "open_adaptive_subdivision_panel": false,
+        "open_advanced_panel": false
+      }
+    ],
+    "saved_source_mods": [
+      {
+        "name": "SK_Dress_857c5a_Skin",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": false,
+        "show_on_cage": false,
+        "show_expanded": true,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "object": {
+          "type": "Object",
+          "name": "CoshaRig"
+        },
+        "use_bone_envelopes": false,
+        "use_vertex_groups": true,
+        "use_deform_preserve_volume": true,
+        "use_multi_modifier": false,
+        "vertex_group": "",
+        "invert_vertex_group": false
+      },
+      {
+        "name": "Subdivision",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": true,
+        "show_on_cage": true,
+        "show_expanded": false,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "uv_smooth": "PRESERVE_BOUNDARIES",
+        "quality": 3,
+        "boundary_smooth": "ALL",
+        "subdivision_type": "CATMULL_CLARK",
+        "levels": 1,
+        "render_levels": 2,
+        "show_only_control_edges": true,
+        "use_creases": true,
+        "use_custom_normals": false,
+        "use_limit_surface": true,
+        "use_adaptive_subdivision": false,
+        "adaptive_space": "PIXEL",
+        "adaptive_pixel_size": 1.0,
+        "adaptive_object_edge_length": 0.009999999776482582,
+        "open_adaptive_subdivision_panel": false,
+        "open_advanced_panel": false
+      }
+    ],
+    "original_modifier_types": [
+      "ARMATURE",
+      "NODES",
+      "SUBSURF"
+    ]
+  },
+  "driver_validity": {
+    "original_home_after_graph": {
+      "evaluated": true,
+      "drivers_read": 75,
+      "scope": "Scene/Object/data/Key driver validity only; no Actions or keys scanned.",
+      "invalid": [],
+      "pose_status": "Native validity flags passed"
+    }
+  },
+  "driver_namespace_CD_keys": [],
+  "home_evaluated_rig_baseline_SHA": "7e031ddd71ed20b7de63d523c92d3b1f96030bf76e249abdc1f8e474ee149616",
+  "cross_case": {
+    "native_DQ_vs_LBS": {
+      "evaluated": false,
+      "passed": null,
+      "reason": "A prerequisite native sample was not measured."
+    },
+    "worker_DQ_vs_LBS": {
+      "evaluated": false,
+      "passed": null,
+      "reason": "A prerequisite native sample was not measured."
+    }
+  },
+  "historical_maximum_reproduced": {
+    "evaluated": false,
+    "passed": null,
+    "current_maximum_m": null,
+    "historical_maximum_m": 0.0004713791436785606,
+    "comparison_tolerance_m": 1e-08
+  },
+  "interpretation_rules": {
+    "order_reproduced": "Requires same-index topology, full named weights and UV/material fields exact. Manual native-vs-reordered difference with worker-vs-reordered and worker-vs-manual within numeric tolerance isolates the stack-order mechanism from a worker-only discrepancy.",
+    "REST_control": "REST equality removes pose deformation in this snapshot; it alone does not distinguish DQ nonlinearity from spatially varying LBS weights/transforms.",
+    "LBS_control": "A residual Manual_LBS order difference proves DQ is not necessary. A changed residual magnitude only shows Preserve Volume changes this pose; it cannot independently attribute a DQ contribution. Zero here is not an all-pose commutation proof.",
+    "DQ_vs_LBS": "Cross-case differences measure Preserve Volume effect on each path. Subtracting scalar maxima is not a separable DQ error decomposition."
+  },
+  "author_after": {
+    "RawMeshes_UV_Keys": "b1e2d90f069d79aaf2ca817ec526f3d11066f9fe4da6bac64c443588a833c7aa",
+    "FullNamedWeights": "f577a4c228c6e2c0c5d2cea20ccd788d43d75038c5dd51f23ccc9f035841f57f",
+    "boneRest": "0e82399a32be7484dff753af084f82716b3252b2b45604779c23461125923f11",
+    "nativePose": "0fc42c9ad55c6e2d56851daccb3cb6523fa0ca7a6803720b2848277df58dd7c8",
+    "pose_position": "POSE",
+    "home_frame": [
+      39,
+      0.0
+    ],
+    "home_unit_scale_length": 1.0,
+    "original_source_modifiers": [
+      {
+        "name": "SK_Dress_857c5a_Skin",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": false,
+        "show_on_cage": false,
+        "show_expanded": true,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "object": {
+          "type": "Object",
+          "name": "CoshaRig"
+        },
+        "use_bone_envelopes": false,
+        "use_vertex_groups": true,
+        "use_deform_preserve_volume": true,
+        "use_multi_modifier": false,
+        "vertex_group": "",
+        "invert_vertex_group": false
+      },
+      {
+        "name": "Dress Direct Output",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": true,
+        "show_on_cage": false,
+        "show_expanded": true,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "node_group": {
+          "type": "GeometryNodeTree",
+          "name": "Dress Direct Output · Dress"
+        },
+        "bake_directory": "",
+        "bake_target": "PACKED",
+        "show_group_selector": true,
+        "show_manage_panel": true,
+        "open_output_attributes_panel": false,
+        "open_manage_panel": false,
+        "open_bake_panel": false,
+        "open_named_attributes_panel": false,
+        "open_bake_data_blocks_panel": false,
+        "open_warnings_panel": true
+      },
+      {
+        "name": "Subdivision",
+        "show_viewport": true,
+        "show_render": true,
+        "show_in_editmode": true,
+        "show_on_cage": true,
+        "show_expanded": false,
+        "use_pin_to_last": false,
+        "use_apply_on_spline": false,
+        "uv_smooth": "PRESERVE_BOUNDARIES",
+        "quality": 3,
+        "boundary_smooth": "ALL",
+        "subdivision_type": "CATMULL_CLARK",
+        "levels": 1,
+        "render_levels": 2,
+        "show_only_control_edges": true,
+        "use_creases": true,
+        "use_custom_normals": false,
+        "use_limit_surface": true,
+        "use_adaptive_subdivision": false,
+        "adaptive_space": "PIXEL",
+        "adaptive_pixel_size": 1.0,
+        "adaptive_object_edge_length": 0.009999999776482582,
+        "open_adaptive_subdivision_panel": false,
+        "open_advanced_panel": false
+      }
+    ]
+  },
+  "source_after": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": "1716ff49a231cee8c0663fd17949583eabbfb7ce79791a459682930f40744dcb",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\probe_skin_modifier_order52_v2.py": "3d49bd09147537dc99e4d860d080d6ca49a5c393d8dcc885c28d13281ea9ce74"
+  },
+  "factory_disposal_predicates": {
+    "native_FINISHED": true,
+    "loaded_filepath_empty": true,
+    "QA_source_absent": true,
+    "QA_rig_absent": true
+  },
+  "factory_disposed": true
+}

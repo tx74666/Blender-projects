@@ -1,0 +1,1262 @@
+{
+  "before": {
+    "_extension_repos_files_clear": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305600,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "extension_repos_files_clear",
+          "id": 2528212603168
+        }
+      ]
+    },
+    "_extension_repos_sync": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305536,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "extension_repos_sync",
+          "id": 2528212603008
+        }
+      ]
+    },
+    "_extension_repos_update_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305472,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "monkeypatch_extensions_repos_update_post",
+          "id": 2528212603808
+        }
+      ]
+    },
+    "_extension_repos_update_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305408,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "monkeypatch_extensions_repos_update_pre",
+          "id": 2528212603648
+        }
+      ]
+    },
+    "animation_playback_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305216,
+      "handlers": []
+    },
+    "animation_playback_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305152,
+      "handlers": []
+    },
+    "annotation_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304704,
+      "handlers": []
+    },
+    "annotation_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304640,
+      "handlers": []
+    },
+    "blend_import_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305728,
+      "handlers": []
+    },
+    "blend_import_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305664,
+      "handlers": []
+    },
+    "composite_cancel": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305088,
+      "handlers": []
+    },
+    "composite_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305024,
+      "handlers": []
+    },
+    "composite_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304960,
+      "handlers": []
+    },
+    "depsgraph_update_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304320,
+      "handlers": []
+    },
+    "depsgraph_update_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304256,
+      "handlers": []
+    },
+    "exit_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305792,
+      "handlers": []
+    },
+    "frame_change_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528179104704,
+      "handlers": []
+    },
+    "frame_change_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528178958912,
+      "handlers": []
+    },
+    "load_factory_preferences_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304448,
+      "handlers": []
+    },
+    "load_factory_startup_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304512,
+      "handlers": []
+    },
+    "load_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303680,
+      "handlers": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "qualname": "_on_blendfile_load_post",
+          "id": 2528182881952
+        },
+        {
+          "module": "pose_library.gui",
+          "qualname": "_on_blendfile_load_post",
+          "id": 2528210064448
+        }
+      ]
+    },
+    "load_post_fail": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303744,
+      "handlers": []
+    },
+    "load_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303616,
+      "handlers": [
+        {
+          "module": "pose_library.gui",
+          "qualname": "_on_blendfile_load_pre",
+          "id": 2528210064288
+        }
+      ]
+    },
+    "object_bake_cancel": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304896,
+      "handlers": []
+    },
+    "object_bake_complete": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304832,
+      "handlers": []
+    },
+    "object_bake_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304768,
+      "handlers": []
+    },
+    "redo_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304192,
+      "handlers": []
+    },
+    "redo_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304128,
+      "handlers": []
+    },
+    "render_cancel": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303552,
+      "handlers": []
+    },
+    "render_complete": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303488,
+      "handlers": []
+    },
+    "render_init": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303424,
+      "handlers": []
+    },
+    "render_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181033664,
+      "handlers": []
+    },
+    "render_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528179107968,
+      "handlers": []
+    },
+    "render_stats": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303360,
+      "handlers": []
+    },
+    "render_write": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303296,
+      "handlers": []
+    },
+    "save_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303872,
+      "handlers": []
+    },
+    "save_post_fail": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303936,
+      "handlers": []
+    },
+    "save_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303808,
+      "handlers": []
+    },
+    "translation_update_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305280,
+      "handlers": [
+        {
+          "module": "bl_ui",
+          "qualname": "translation_update",
+          "id": 2528205764256
+        }
+      ]
+    },
+    "undo_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304064,
+      "handlers": []
+    },
+    "undo_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304000,
+      "handlers": []
+    },
+    "version_update": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304384,
+      "handlers": [
+        {
+          "module": "cycles.version_update",
+          "qualname": "do_versions",
+          "id": 2528208084864
+        }
+      ]
+    },
+    "xr_session_start_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304576,
+      "handlers": []
+    }
+  },
+  "CPU_before": {
+    "idle": 7142010781250,
+    "kernel": 9222585156250,
+    "user": 1699421562500,
+    "process_seconds": 1.625,
+    "wall_seconds": 68263.1724168
+  },
+  "A_CPU_load": "Unrecorded",
+  "whole_component_completed": false,
+  "accepted": false,
+  "CPU_after": {
+    "idle": 7153211250000,
+    "kernel": 9234864843750,
+    "user": 1701844531250,
+    "process_seconds": 92.765625,
+    "wall_seconds": 68355.0644218
+  },
+  "after": {
+    "_extension_repos_files_clear": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305600,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "extension_repos_files_clear",
+          "id": 2528212603168
+        }
+      ]
+    },
+    "_extension_repos_sync": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305536,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "extension_repos_sync",
+          "id": 2528212603008
+        }
+      ]
+    },
+    "_extension_repos_update_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305472,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "monkeypatch_extensions_repos_update_post",
+          "id": 2528212603808
+        }
+      ]
+    },
+    "_extension_repos_update_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305408,
+      "handlers": [
+        {
+          "module": "bl_pkg",
+          "qualname": "monkeypatch_extensions_repos_update_pre",
+          "id": 2528212603648
+        }
+      ]
+    },
+    "animation_playback_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305216,
+      "handlers": []
+    },
+    "animation_playback_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305152,
+      "handlers": []
+    },
+    "annotation_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304704,
+      "handlers": []
+    },
+    "annotation_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304640,
+      "handlers": []
+    },
+    "blend_import_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305728,
+      "handlers": []
+    },
+    "blend_import_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305664,
+      "handlers": []
+    },
+    "composite_cancel": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305088,
+      "handlers": []
+    },
+    "composite_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305024,
+      "handlers": []
+    },
+    "composite_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304960,
+      "handlers": []
+    },
+    "depsgraph_update_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304320,
+      "handlers": []
+    },
+    "depsgraph_update_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304256,
+      "handlers": []
+    },
+    "exit_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305792,
+      "handlers": []
+    },
+    "frame_change_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528179104704,
+      "handlers": []
+    },
+    "frame_change_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528178958912,
+      "handlers": []
+    },
+    "load_factory_preferences_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304448,
+      "handlers": []
+    },
+    "load_factory_startup_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304512,
+      "handlers": []
+    },
+    "load_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303680,
+      "handlers": [
+        {
+          "module": "bl_operators.copy_global_transform",
+          "qualname": "_on_blendfile_load_post",
+          "id": 2528182881952
+        },
+        {
+          "module": "pose_library.gui",
+          "qualname": "_on_blendfile_load_post",
+          "id": 2528210064448
+        },
+        {
+          "module": "pose_library.gui",
+          "qualname": "_on_blendfile_load_post",
+          "id": 2528210064448
+        }
+      ]
+    },
+    "load_post_fail": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303744,
+      "handlers": []
+    },
+    "load_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303616,
+      "handlers": [
+        {
+          "module": "pose_library.gui",
+          "qualname": "_on_blendfile_load_pre",
+          "id": 2528210064288
+        },
+        {
+          "module": "pose_library.gui",
+          "qualname": "_on_blendfile_load_pre",
+          "id": 2528210064288
+        }
+      ]
+    },
+    "object_bake_cancel": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304896,
+      "handlers": []
+    },
+    "object_bake_complete": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304832,
+      "handlers": []
+    },
+    "object_bake_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304768,
+      "handlers": []
+    },
+    "redo_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304192,
+      "handlers": []
+    },
+    "redo_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304128,
+      "handlers": []
+    },
+    "render_cancel": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303552,
+      "handlers": []
+    },
+    "render_complete": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303488,
+      "handlers": []
+    },
+    "render_init": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303424,
+      "handlers": []
+    },
+    "render_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181033664,
+      "handlers": []
+    },
+    "render_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528179107968,
+      "handlers": []
+    },
+    "render_stats": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303360,
+      "handlers": []
+    },
+    "render_write": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303296,
+      "handlers": []
+    },
+    "save_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303872,
+      "handlers": []
+    },
+    "save_post_fail": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303936,
+      "handlers": []
+    },
+    "save_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181303808,
+      "handlers": []
+    },
+    "translation_update_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181305280,
+      "handlers": [
+        {
+          "module": "bl_ui",
+          "qualname": "translation_update",
+          "id": 2528205764256
+        }
+      ]
+    },
+    "undo_post": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304064,
+      "handlers": []
+    },
+    "undo_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304000,
+      "handlers": []
+    },
+    "version_update": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304384,
+      "handlers": [
+        {
+          "module": "cycles.version_update",
+          "qualname": "do_versions",
+          "id": 2528208084864
+        }
+      ]
+    },
+    "xr_session_start_pre": {
+      "list_type": "builtins.list",
+      "list_id": 2528181304576,
+      "handlers": []
+    }
+  },
+  "handler_exact": false,
+  "RNA_clear": true,
+  "comparison": {
+    "quality_only_parameters_and_native_input_exact": true,
+    "timing_A": {
+      "frame_set_seconds": {
+        "count": 60,
+        "median_ms": 332.0472500054166,
+        "nearest_rank_p95_ms": 378.45309999829624,
+        "maximum_ms": 412.6313000015216
+      },
+      "bulk_three_position_extraction_seconds": {
+        "count": 60,
+        "median_ms": 11.891099995409604,
+        "nearest_rank_p95_ms": 16.105000002426095,
+        "maximum_ms": 18.798599994624965
+      }
+    },
+    "timing_B": {
+      "frame_set_seconds": {
+        "count": 60,
+        "median_ms": 268.0781500021112,
+        "nearest_rank_p95_ms": 297.4202999903355,
+        "maximum_ms": 322.92880000022706
+      },
+      "bulk_three_position_extraction_seconds": {
+        "count": 60,
+        "median_ms": 10.98315000126604,
+        "nearest_rank_p95_ms": 14.380000007804483,
+        "maximum_ms": 37.96929999953136
+      }
+    },
+    "geometry": [
+      {
+        "index": 1,
+        "status": "measured",
+        "native_indices_exact": true,
+        "A": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.0,
+            5919,
+            [
+              2318,
+              3039
+            ],
+            0.0
+          ],
+          "minimum_edge_ratio": [
+            1.0,
+            0,
+            [
+              1,
+              800
+            ],
+            0.0
+          ],
+          "maximum_quad_area_ratio": [
+            1.0,
+            2879,
+            [
+              2318,
+              3039,
+              884,
+              40
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            1.0,
+            0,
+            [
+              0,
+              808,
+              2320,
+              800
+            ]
+          ],
+          "unresolved": []
+        },
+        "B": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.0,
+            5919,
+            [
+              2318,
+              3039
+            ],
+            0.0
+          ],
+          "minimum_edge_ratio": [
+            1.0,
+            0,
+            [
+              1,
+              800
+            ],
+            0.0
+          ],
+          "maximum_quad_area_ratio": [
+            1.0,
+            2879,
+            [
+              2318,
+              3039,
+              884,
+              40
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            1.0,
+            0,
+            [
+              0,
+              808,
+              2320,
+              800
+            ]
+          ],
+          "unresolved": []
+        },
+        "triangles_A": {
+          "status": "measured",
+          "maximum_edge_ratio": {
+            "edge": 0,
+            "vertices": [
+              1,
+              800
+            ],
+            "ratio": 1.0
+          },
+          "minimum_area_ratio": {
+            "triangle": 0,
+            "ratio": 1.0
+          },
+          "normal_rotation_over90_candidates": 0,
+          "first_rotation_candidates": [],
+          "unresolved_count": 0,
+          "first_unresolved": [],
+          "same_native_triangulation": true,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "triangles_B": {
+          "status": "measured",
+          "maximum_edge_ratio": {
+            "edge": 0,
+            "vertices": [
+              1,
+              800
+            ],
+            "ratio": 1.0
+          },
+          "minimum_area_ratio": {
+            "triangle": 0,
+            "ratio": 1.0
+          },
+          "normal_rotation_over90_candidates": 0,
+          "first_rotation_candidates": [],
+          "unresolved_count": 0,
+          "first_unresolved": [],
+          "same_native_triangulation": true,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "accepted": false
+      },
+      {
+        "index": 6,
+        "status": "measured",
+        "native_indices_exact": true,
+        "A": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.0992282011539996,
+            4500,
+            [
+              1586,
+              2685
+            ],
+            0.00032239632344241865
+          ],
+          "minimum_edge_ratio": [
+            0.5025690348659098,
+            5596,
+            [
+              2122,
+              2959
+            ],
+            -0.0019616779502143445
+          ],
+          "maximum_quad_area_ratio": [
+            1.0701613031329893,
+            922,
+            [
+              2550,
+              1299,
+              271,
+              1302
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            0.335847719350171,
+            2556,
+            [
+              702,
+              2122,
+              2959,
+              2151
+            ]
+          ],
+          "unresolved": []
+        },
+        "B": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.1244569259678114,
+            3010,
+            [
+              799,
+              2305
+            ],
+            0.001429006721282624
+          ],
+          "minimum_edge_ratio": [
+            0.49783064324870213,
+            5778,
+            [
+              2260,
+              3004
+            ],
+            -0.0018715708770780273
+          ],
+          "maximum_quad_area_ratio": [
+            1.1157439591778944,
+            1102,
+            [
+              2595,
+              1394,
+              321,
+              1397
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            0.27866670149224354,
+            2465,
+            [
+              2032,
+              658,
+              2104,
+              2936
+            ]
+          ],
+          "unresolved": []
+        },
+        "triangles_A": {
+          "status": "measured",
+          "maximum_edge_ratio": {
+            "edge": 4500,
+            "vertices": [
+              1586,
+              2685
+            ],
+            "ratio": 1.0992282086687908
+          },
+          "minimum_area_ratio": {
+            "triangle": 5118,
+            "ratio": 0.22522131203606643
+          },
+          "normal_rotation_over90_candidates": 406,
+          "first_rotation_candidates": [
+            {
+              "triangle": 234,
+              "dot": -0.005438608583062887
+            },
+            {
+              "triangle": 264,
+              "dot": -0.052669805474579334
+            },
+            {
+              "triangle": 265,
+              "dot": -0.001355562824755907
+            },
+            {
+              "triangle": 266,
+              "dot": -0.05287954770028591
+            },
+            {
+              "triangle": 267,
+              "dot": -0.04701075574848801
+            },
+            {
+              "triangle": 581,
+              "dot": -0.005891142413020134
+            },
+            {
+              "triangle": 610,
+              "dot": -0.0482678497210145
+            },
+            {
+              "triangle": 612,
+              "dot": -0.0757401343435049
+            }
+          ],
+          "unresolved_count": 0,
+          "first_unresolved": [],
+          "same_native_triangulation": true,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "triangles_B": {
+          "status": "measured",
+          "maximum_edge_ratio": {
+            "edge": 3010,
+            "vertices": [
+              799,
+              2305
+            ],
+            "ratio": 1.1244569474526638
+          },
+          "minimum_area_ratio": {
+            "triangle": 4930,
+            "ratio": 0.27791177836323133
+          },
+          "normal_rotation_over90_candidates": 471,
+          "first_rotation_candidates": [
+            {
+              "triangle": 234,
+              "dot": -0.046514919493347406
+            },
+            {
+              "triangle": 264,
+              "dot": -0.1703154630959034
+            },
+            {
+              "triangle": 265,
+              "dot": -0.05103409755975008
+            },
+            {
+              "triangle": 266,
+              "dot": -0.2414299137890339
+            },
+            {
+              "triangle": 267,
+              "dot": -0.18147331266663969
+            },
+            {
+              "triangle": 268,
+              "dot": -0.2049721758812666
+            },
+            {
+              "triangle": 269,
+              "dot": -0.06338390638120472
+            },
+            {
+              "triangle": 270,
+              "dot": -0.06544582959031686
+            }
+          ],
+          "unresolved_count": 0,
+          "first_unresolved": [],
+          "same_native_triangulation": true,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "accepted": false
+      },
+      {
+        "index": 55,
+        "status": "measured",
+        "native_indices_exact": true,
+        "A": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.0770502343550652,
+            4856,
+            [
+              1741,
+              2774
+            ],
+            0.0002962449979586647
+          ],
+          "minimum_edge_ratio": [
+            0.2588597942682954,
+            5678,
+            [
+              2205,
+              2979
+            ],
+            -0.007431485057033407
+          ],
+          "maximum_quad_area_ratio": [
+            1.0827924860597824,
+            1817,
+            [
+              1741,
+              502,
+              1771,
+              2774
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            0.12110692517656745,
+            220,
+            [
+              70,
+              929,
+              2375,
+              919
+            ]
+          ],
+          "unresolved": []
+        },
+        "B": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.080919417284623,
+            4500,
+            [
+              1586,
+              2685
+            ],
+            0.000262912387093289
+          ],
+          "minimum_edge_ratio": [
+            0.2865947256035892,
+            3260,
+            [
+              929,
+              2375
+            ],
+            -0.0035563033279162326
+          ],
+          "maximum_quad_area_ratio": [
+            1.0746995536468926,
+            1817,
+            [
+              1741,
+              502,
+              1771,
+              2774
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            0.04558685321393642,
+            135,
+            [
+              868,
+              2353,
+              882,
+              42
+            ]
+          ],
+          "unresolved": []
+        },
+        "triangles_A": {
+          "status": "Unknown",
+          "maximum_edge_ratio": {
+            "edge": 4856,
+            "vertices": [
+              1741,
+              2774
+            ],
+            "ratio": 1.077050230329722
+          },
+          "minimum_area_ratio": null,
+          "normal_rotation_over90_candidates": 0,
+          "first_rotation_candidates": [],
+          "unresolved_count": 1,
+          "first_unresolved": [
+            {
+              "reason": "native geometry-derived triangulation differs; face/edge topology still exact"
+            }
+          ],
+          "same_native_triangulation": false,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "triangles_B": {
+          "status": "Unknown",
+          "maximum_edge_ratio": {
+            "edge": 4500,
+            "vertices": [
+              1586,
+              2685
+            ],
+            "ratio": 1.0809194198331427
+          },
+          "minimum_area_ratio": null,
+          "normal_rotation_over90_candidates": 0,
+          "first_rotation_candidates": [],
+          "unresolved_count": 1,
+          "first_unresolved": [
+            {
+              "reason": "native geometry-derived triangulation differs; face/edge topology still exact"
+            }
+          ],
+          "same_native_triangulation": false,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "accepted": false
+      },
+      {
+        "index": 60,
+        "status": "measured",
+        "native_indices_exact": true,
+        "A": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.090331040352926,
+            3960,
+            [
+              1301,
+              2550
+            ],
+            0.0003275248498066192
+          ],
+          "minimum_edge_ratio": [
+            0.2153607244663984,
+            5678,
+            [
+              2205,
+              2979
+            ],
+            -0.007867740106257537
+          ],
+          "maximum_quad_area_ratio": [
+            1.0939669224505948,
+            923,
+            [
+              1291,
+              2550,
+              1302,
+              267
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            0.09946007634780715,
+            2843,
+            [
+              2294,
+              3030,
+              2309,
+              792
+            ]
+          ],
+          "unresolved": []
+        },
+        "B": {
+          "status": "measured",
+          "accepted": false,
+          "triangle_quality_replaced": false,
+          "limitation": "Fixed-index edge/Newell quad diagnostics; not self-intersection, real flip or appearance acceptance.",
+          "native_vertices": 3040,
+          "native_edges": 5920,
+          "native_polygons": 2880,
+          "maximum_edge_ratio": [
+            1.0815526046912536,
+            4502,
+            [
+              1587,
+              2685
+            ],
+            0.00026494878294271986
+          ],
+          "minimum_edge_ratio": [
+            0.28637586920089875,
+            5866,
+            [
+              2301,
+              3026
+            ],
+            -0.007525875190218084
+          ],
+          "maximum_quad_area_ratio": [
+            1.074427329495407,
+            1817,
+            [
+              1741,
+              502,
+              1771,
+              2774
+            ]
+          ],
+          "minimum_quad_area_ratio": [
+            0.038571696768165346,
+            2843,
+            [
+              2294,
+              3030,
+              2309,
+              792
+            ]
+          ],
+          "unresolved": []
+        },
+        "triangles_A": {
+          "status": "Unknown",
+          "maximum_edge_ratio": {
+            "edge": 3960,
+            "vertices": [
+              1301,
+              2550
+            ],
+            "ratio": 1.0903310208095671
+          },
+          "minimum_area_ratio": null,
+          "normal_rotation_over90_candidates": 0,
+          "first_rotation_candidates": [],
+          "unresolved_count": 1,
+          "first_unresolved": [
+            {
+              "reason": "native geometry-derived triangulation differs; face/edge topology still exact"
+            }
+          ],
+          "same_native_triangulation": false,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "triangles_B": {
+          "status": "Unknown",
+          "maximum_edge_ratio": {
+            "edge": 4502,
+            "vertices": [
+              1587,
+              2685
+            ],
+            "ratio": 1.0815526088266827
+          },
+          "minimum_area_ratio": null,
+          "normal_rotation_over90_candidates": 0,
+          "first_rotation_candidates": [],
+          "unresolved_count": 1,
+          "first_unresolved": [
+            {
+              "reason": "native geometry-derived triangulation differs; face/edge topology still exact"
+            }
+          ],
+          "same_native_triangulation": false,
+          "limitation": "Same-frame requested-vs-final geometry only. Normal rotation is not independent proof of flipped topology; no self-intersection or aesthetic acceptance.",
+          "accepted": false
+        },
+        "accepted": false
+      }
+    ],
+    "causal_speedup_accepted": false,
+    "GUI_FPS_accepted": false,
+    "ART_accepted": false,
+    "scope": "Separate-process A8/B6 observations; load/thermal/warm-up confounders remain; A8 outer cleanup failure unchanged"
+  }
+}

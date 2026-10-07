@@ -1,0 +1,128 @@
+{
+  "diagnostics_only": true,
+  "candidate": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_direct_main_manual_input52_node_ui.py",
+    "sha256": "fe61357686cdb6ab43fd801c722e6b5eb60967cad23b22fd4e72d45579b681af"
+  },
+  "prior_failure": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_direct_main_ui6_52_20261006_203002_652\\result\\input800_reproduction.json",
+    "sha256": "e258f1e9d35b9a057216761c09116e6acd0106061f7a65a557d27f7d49adeac6"
+  },
+  "wrapper": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\diagnose_direct_main_cache_transition52.py",
+    "sha256": "bf567fc87f6249ffbc2f99a23fd393b1119d5689a44bf3ac4e91cdd968028e84"
+  },
+  "same_native_read_results_observed": true,
+  "original_guard_modified": false,
+  "accepted": false,
+  "cache_content_measured": false,
+  "official": {
+    "readonly_cache_status_and_info": "https://raw.githubusercontent.com/blender/blender/v5.2.0/source/blender/makesrna/intern/rna_object_force.cc",
+    "info_recalculation_and_depsgraph_reset": "https://raw.githubusercontent.com/blender/blender/v5.2.0/source/blender/blenkernel/intern/pointcache.cc"
+  },
+  "observations": [
+    {
+      "phase": "frozen_before_first_seek",
+      "frame": [
+        39,
+        0.0
+      ],
+      "cloth_flags": {
+        "show_viewport": false,
+        "show_render": false
+      },
+      "current": {
+        "status": "Measured",
+        "typed_14_fields_complete": true,
+        "value": {
+          "pointer": 2351664992768,
+          "start": 1,
+          "end": 250,
+          "step": 1,
+          "is_baked": false,
+          "disk": false,
+          "external": false,
+          "name": "",
+          "is_baking": false,
+          "is_outdated": true,
+          "info": "1 frames in memory (28 KiB), cache is outdated!",
+          "filepath": "",
+          "library_path": true,
+          "index": 0
+        },
+        "reason": null
+      },
+      "metadata_only": true,
+      "cache_content_measured": false,
+      "accepted": false
+    },
+    {
+      "phase": "sample",
+      "frame": [
+        1,
+        0.0
+      ],
+      "cloth_flags": {
+        "show_viewport": false,
+        "show_render": false
+      },
+      "current": {
+        "status": "Measured",
+        "typed_14_fields_complete": true,
+        "value": {
+          "pointer": 2351664992768,
+          "start": 1,
+          "end": 250,
+          "step": 1,
+          "is_baked": false,
+          "disk": false,
+          "external": false,
+          "name": "",
+          "is_baking": false,
+          "is_outdated": true,
+          "info": "0 frames in memory (0 B), cache is outdated!",
+          "filepath": "",
+          "library_path": true,
+          "index": 0
+        },
+        "reason": null
+      },
+      "metadata_only": true,
+      "cache_content_measured": false,
+      "accepted": false,
+      "label": "action_1_sequential",
+      "frozen": {
+        "status": "Measured",
+        "typed_14_fields_complete": true,
+        "value": {
+          "pointer": 2351664992768,
+          "start": 1,
+          "end": 250,
+          "step": 1,
+          "is_baked": false,
+          "disk": false,
+          "external": false,
+          "name": "",
+          "is_baking": false,
+          "is_outdated": true,
+          "info": "1 frames in memory (28 KiB), cache is outdated!",
+          "filepath": "",
+          "library_path": true,
+          "index": 0
+        },
+        "reason": null
+      },
+      "comparison": {
+        "status": "Measured",
+        "differences": [
+          {
+            "field": "info",
+            "frozen": "1 frames in memory (28 KiB), cache is outdated!",
+            "current": "0 frames in memory (0 B), cache is outdated!"
+          }
+        ]
+      },
+      "exact_boolean_used_by_original_guard": false
+    }
+  ]
+}
