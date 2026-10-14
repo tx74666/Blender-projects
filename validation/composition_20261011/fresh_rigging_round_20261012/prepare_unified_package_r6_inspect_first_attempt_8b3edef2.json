@@ -1,0 +1,17 @@
+{
+  "schema": "x.validation.r6-preparer-first-inspection-diagnostic/1",
+  "actual_run": true,
+  "initial_producer_sha256": "8b3edef2b0927f4326c87d3d898f1d0d67a43028f5295687d65b006380ab4ddd",
+  "initial_producer_bytes": 35178,
+  "exit_code": 1,
+  "duration_seconds": 1.010953699995298,
+  "stdout": "",
+  "exception_type": "KeyError",
+  "exception_key": "__init__.py",
+  "failure_site": "prepare_unified_package_r6.py inputs line264, by_name __init__.py lookup",
+  "source": "Preserved from the actual first tool stdout; not a product/native failure. Initial preparer was not frozen.",
+  "cause": "R5 source_pins has19 named feature Source/test pins; __init__.py is only in the complete188 shipped manifest, not this19-pin subset.",
+  "fix": "Remove the nonexistent subset lookup; keep d66 init SHA exact in the complete shipped-map admission below.",
+  "product_edits": 0,
+  "capture_build_native_operations": 0
+}

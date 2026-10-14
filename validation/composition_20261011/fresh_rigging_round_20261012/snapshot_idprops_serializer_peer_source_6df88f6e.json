@@ -1,0 +1,121 @@
+{
+  "schema": "x.validation.original-snapshot-idproperties-source-peer/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "snapshot_latest_original_artist.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/snapshot_latest_original_artist.py",
+      "sha256": "6df88f6e605a2a4e96eb1d3f261ed456dbe150c3e54a0d1e68f0f5aa962ff971",
+      "bytes": 16039
+    },
+    "run_latest_original_snapshot.ps1": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/run_latest_original_snapshot.ps1",
+      "sha256": "c1c1ae1b6b2c4e51791bdd28661824f8b2aac24eb56edbb20ecebacfbf734cac",
+      "bytes": 8638
+    },
+    "original_cosha_control_round.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_cosha_control_round.py",
+      "sha256": "ab995e14bbfe4e9d276a0dfb2029ade3c83ec72beaa32d93bc6a3baa9b8adf91",
+      "bytes": 42187
+    },
+    "refresh_original_artist_runtime_07725.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07725.py",
+      "sha256": "96fb812e1ab8fbee9dac76c68268294bc031871080e09473fe668b35df094f26",
+      "bytes": 28179
+    }
+  },
+  "review_method": "Read-only Node filesystem and exact string inverse/byte comparisons; no Python/PowerShell executor, AST, imports of target scripts, tests, SDK or native call.",
+  "exact_inverse_results": [
+    {
+      "file": "snapshot_latest_original_artist.py",
+      "inverse_bytes_exact": true,
+      "inverse_sha256": "ffd7dec0a8428072e9cf2da4cbe3c0a69534db0d545052c0f70b3d6ee9c76302",
+      "old_sha256": "ffd7dec0a8428072e9cf2da4cbe3c0a69534db0d545052c0f70b3d6ee9c76302",
+      "current_sha256": "6df88f6e605a2a4e96eb1d3f261ed456dbe150c3e54a0d1e68f0f5aa962ff971",
+      "current_bytes": 16039
+    },
+    {
+      "file": "run_latest_original_snapshot.ps1",
+      "inverse_bytes_exact": true,
+      "inverse_sha256": "7f8f20af98a853595fe197d2b9f2d71be9a4d9be4771c70d2440131f89d051eb",
+      "old_sha256": "7f8f20af98a853595fe197d2b9f2d71be9a4d9be4771c70d2440131f89d051eb",
+      "current_sha256": "c1c1ae1b6b2c4e51791bdd28661824f8b2aac24eb56edbb20ecebacfbf734cac",
+      "current_bytes": 8638
+    },
+    {
+      "file": "original_cosha_control_round.py",
+      "inverse_bytes_exact": true,
+      "inverse_sha256": "3571357309fe9e987c47b56b8bdd25f7b2b206256dc11603a66e0f788b452d6d",
+      "old_sha256": "3571357309fe9e987c47b56b8bdd25f7b2b206256dc11603a66e0f788b452d6d",
+      "current_sha256": "ab995e14bbfe4e9d276a0dfb2029ade3c83ec72beaa32d93bc6a3baa9b8adf91",
+      "current_bytes": 42187
+    },
+    {
+      "file": "refresh_original_artist_runtime_07725.py",
+      "inverse_bytes_exact": true,
+      "inverse_sha256": "0565a462c0f8bf99612bd36d003625fb7a870d494fec80d95193ea52bee8d670",
+      "old_sha256": "0565a462c0f8bf99612bd36d003625fb7a870d494fec80d95193ea52bee8d670",
+      "current_sha256": "96fb812e1ab8fbee9dac76c68268294bc031871080e09473fe668b35df094f26",
+      "current_bytes": 28179
+    }
+  ],
+  "declared_delta": {
+    "snapshot_latest_original_artist_py": {
+      "lines": [
+        73,
+        101
+      ],
+      "plain": "Only callable items may be invoked.",
+      "rna": "Read callable keys; exact unsupported-IDProperties TypeError marker only; item reads and plain conversion remain outside that exception catch."
+    },
+    "caller": {
+      "lines": [
+        22,
+        48
+      ],
+      "snapshot_pin_replacements": 2
+    },
+    "control": {
+      "lines": [
+        24
+      ],
+      "snapshot_pin_replacements": 1
+    },
+    "refresh": {
+      "lines": [
+        22,
+        26
+      ],
+      "snapshot_pin_replacements": 1,
+      "control_pin_replacements": 1
+    }
+  },
+  "strictness": {
+    "RNA_traversal_and_all_other_bytes_unchanged": true,
+    "strict_Worklist_Known_gate_unchanged": true,
+    "other_TypeErrors_propagate_to_Unknown": true,
+    "supported_custom_properties_retained": true,
+    "unsupported_marker_explicit": true,
+    "snapshot_extension_files_untouched_by_reviewer": true
+  },
+  "counts": {
+    "python_processes": 0,
+    "powershell_processes": 0,
+    "AST_or_compile": 0,
+    "target_imports": 0,
+    "tests": 0,
+    "SDK": 0,
+    "native": 0,
+    "product_changes": 0
+  },
+  "local_precedent": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/skirt_surface.py",
+    "line": 1205,
+    "note": "Callable items plus only exact items capability error; unexpected TypeError still raises. Worklist UI337 declares items CollectionProperty, causing the old method-shadow failure."
+  },
+  "limitations": [
+    "Source correction only; no repeat snapshot or native serializer result is claimed.",
+    "The earlier actual snapshot completed backup-only with metadata Unknown; this peer does not relabel that artifact."
+  ]
+}

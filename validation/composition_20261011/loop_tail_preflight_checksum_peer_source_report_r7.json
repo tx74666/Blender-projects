@@ -1,0 +1,82 @@
+{
+  "schema": "x.validation.character-composition-loop-tail-preflight-checksum-peer/1",
+  "utc": "2026-10-11T08:10:11.985215+00:00",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "full_preflight_or_launcher_invoked": false,
+  "addon_import_performed": false,
+  "resource_queries_performed": false,
+  "fixture_or_grant_generated": false,
+  "gate_inverse_exact": true,
+  "launcher_inverse_exact": true,
+  "attempt_unchanged": "n13",
+  "reviewed_sources": {
+    "old_gate": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_loop_tail_granted_r6.py",
+      "sha256": "edcf7e636b39faa06d696464cdd0d27d59b98c4e13c6ade10870f9a4e85df45c",
+      "bytes": 32832
+    },
+    "gate": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_loop_tail_granted_r7.py",
+      "sha256": "66e96c9bfc336ca4c23891be7ea0dc9a87acf03005dff17a05e978ce1e685380",
+      "bytes": 32852
+    },
+    "old_launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_loop_tail_granted_r7.ps1",
+      "sha256": "849f944cb7214d1cd6f82eb05a3314fa57a8ed43e911d456a734b9754786026f",
+      "bytes": 10602
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_loop_tail_granted_r8.ps1",
+      "sha256": "f23c46f3dcfb35cc07b7294ba1fa47338361744a4729c158e0e3b678b750abcc",
+      "bytes": 10602
+    }
+  },
+  "owner_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\loop_tail_preflight_checksum_owner_source_report_r7.json",
+    "sha256": "a4b40aec7d8ea6187a9f0530a81bebf4cf9e816bd378dddc2da547795027d966",
+    "bytes": 7295
+  },
+  "actual_rejection": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_preflight_rejection_20261011_edcf7e63.json",
+    "sha256": "fd17b3fa1551f16412814252a99b2f2166e11e6d13c2f47b78df55d962e19f88",
+    "bytes": 330911
+  },
+  "pure_checks": [
+    {
+      "case": "948e797b-8d70-44c4-9530-a820349e8968_actual_five_publication_fields",
+      "all_five_passed": true,
+      "original_hash_raw_equal": false,
+      "original_hash_digest_equal": true
+    },
+    {
+      "case": "948e797b-8d70-44c4-9530-a820349e8968_changed_valid_nibble",
+      "rejected": true
+    },
+    {
+      "case": "8f6f7a33-56ff-4ca1-8295-1d726437117c_actual_five_publication_fields",
+      "all_five_passed": true,
+      "original_hash_raw_equal": false,
+      "original_hash_digest_equal": true
+    },
+    {
+      "case": "8f6f7a33-56ff-4ca1-8295-1d726437117c_changed_valid_nibble",
+      "rejected": true
+    },
+    {
+      "case": "malformed_str_64",
+      "rejected": true
+    },
+    {
+      "case": "malformed_str_63",
+      "rejected": true
+    },
+    {
+      "case": "malformed_int_12",
+      "rejected": true
+    }
+  ],
+  "pure_check_count": 7,
+  "semantics": "Validate both full64-hex digests and compare their common lowercase representation. Genuine digest changes and malformed inputs still reject. Current rev1 manifest content/hash, FBX/meta/packet, paths, identities and all remaining assertions are byte-unchanged."
+}

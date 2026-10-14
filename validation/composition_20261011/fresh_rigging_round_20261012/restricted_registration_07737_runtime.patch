@@ -1,0 +1,67 @@
+--- frozen_07736/__init__.py
++++ candidate_07737/__init__.py
+@@ -1,7 +1,7 @@
+ bl_info = {
+     "name": "Character Designer",
+     "author": "Randy & Codex",
+-    "version": (0, 77, 36),
++    "version": (0, 77, 37),
+     "blender": (4, 0, 0),
+     "location": "View3D > Sidebar > Character Designer",
+     "description": "Personal modeling, rig-setup, and generic reference-view tools.",
+--- frozen_07736/unity_animation_rigging.py
++++ candidate_07737/unity_animation_rigging.py
+@@ -1979,7 +1979,18 @@
+             _REACQUIRE_TIMER = None
+ 
+ 
++def _registration_reacquire(generation):
++    """Admit fresh IDs once Blender leaves its restricted add-on registration."""
++    global _REACQUIRE_TIMER
++    if generation != _REACQUIRE_GENERATION:
++        return None
++    _REACQUIRE_TIMER = None
++    _reacquire()
++    return None
++
++
+ def register():
++    global _REACQUIRE_TIMER
+     # In-place reload replaces function objects. Remove only this module's old
+     # registrations before admitting fresh IDs or installing its new callbacks.
+     for collection, callback in ((bpy.app.handlers.load_post, _reacquire),
+@@ -1992,7 +2003,19 @@
+     for collection in (bpy.app.handlers.load_post, bpy.app.handlers.undo_post, bpy.app.handlers.redo_post):
+         if _reacquire not in collection:
+             collection.append(_reacquire)
+-    _reacquire()
++    if hasattr(bpy.data, 'objects'):
++        _reacquire()
++    else:
++        # addon_utils.enable temporarily replaces bpy.data with _RestrictData.
++        # Retain only a generation number; unregister/reload cancels this timer.
++        _cancel_reacquire()
++        generation = _REACQUIRE_GENERATION
++        _REACQUIRE_TIMER = lambda generation=generation: _registration_reacquire(generation)
++        try:
++            bpy.app.timers.register(_REACQUIRE_TIMER, first_interval=0., persistent=False)
++        except Exception:
++            _REACQUIRE_TIMER = None
++            raise
+ 
+ 
+ def unregister():
+--- frozen_07736/skirt_wiggle.py
++++ candidate_07737/skirt_wiggle.py
+@@ -853,7 +853,10 @@
+ 
+ def unregister():
+     global _REGISTERED, _SAVE_RESUME
+-    suspend(reason='Character Designer stopped automatic Dress motion; the current shape is kept.')
++    # Failed initialization may clean up under Blender's restricted context.
++    # An adapter that never started owns no saved Automatic state to suspend.
++    if _REGISTERED or _SESSIONS:
++        suspend(reason='Character Designer stopped automatic Dress motion; the current shape is kept.')
+     for name, function in (('frame_change_pre', _frame_pre), ('save_pre', _save_pre), ('save_post', _save_post),
+                            ('load_pre', _lifecycle_pre), ('load_post', _load_post), ('undo_pre', _lifecycle_pre),
+                            ('redo_pre', _lifecycle_pre), ('undo_post', _undo_post), ('redo_post', _undo_post),

@@ -1,0 +1,116 @@
+{
+  "scope": "Owned saved-copy filesystem metadata only; no Native Scene ownership/FK/cache proof",
+  "createdUtc": "2026-10-08T10:28:00.819Z",
+  "inputPath": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\private_saved_input_20261008_181852_135_49beaefcb07040dda907599d2118b163\\X.saved-input.blend",
+  "inputSha256": "377140234b0354966d8e3ac4776aa936fd0921aacc53be630cac3b040727ff8d",
+  "inputLength": 32393300,
+  "inputReceiptPath": "D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\private_saved_input_20261008_181852_135_49beaefcb07040dda907599d2118b163\\input-receipt.json",
+  "inputReceiptSha256": "fb1ed14128515864c991626303a4f6b92fb506448ca6598b3f169e9aa7e2a39f",
+  "header": {
+    "raw": "BLENDER17-01v0502",
+    "headerBytes": 17,
+    "fileFormatVersion": 1,
+    "pointerBytes": 8,
+    "littleEndian": true,
+    "blenderVersion": 502,
+    "blockHeaderBytes": 32
+  },
+  "sceneRecords": [
+    {
+      "code": "SC",
+      "blockOffset": 2815649,
+      "payloadOffset": 2815681,
+      "length": 6928,
+      "sdnaIndex": 767,
+      "count": 1,
+      "oldPointer": "3421705132671723216",
+      "sceneName": "Scene",
+      "idNameRaw": "SCScene",
+      "idNamePayloadOffset": 40
+    }
+  ],
+  "sdna": {
+    "dnaBlock": {
+      "code": "DNA1",
+      "blockOffset": 210635503,
+      "payloadOffset": 210635535,
+      "length": 134616,
+      "sdnaIndex": 0,
+      "count": 1,
+      "oldPointer": "5654773673358384896"
+    },
+    "dnaPayloadSha256": "88748d8c86267a0d88f4586363b93e6fa9f65ef773500e6c43920db5ca95d760",
+    "nameCount": 5273,
+    "typeCount": 1137,
+    "structCount": 993,
+    "Scene": {
+      "sdnaIndex": 767,
+      "typeIndex": 244,
+      "tlen": 6928,
+      "computedLayoutBytes": 6928,
+      "alignment": 8,
+      "id": {
+        "typeIndex": 26,
+        "type": "ID",
+        "nameIndex": 78,
+        "name": "id",
+        "offset": 0,
+        "byteLength": 408,
+        "pointer": false,
+        "arrays": []
+      }
+    },
+    "ID": {
+      "sdnaIndex": 14,
+      "typeIndex": 26,
+      "tlen": 408,
+      "computedLayoutBytes": 408,
+      "alignment": 8,
+      "name": {
+        "typeIndex": 0,
+        "type": "char",
+        "nameIndex": 63,
+        "name": "name[258]",
+        "offset": 40,
+        "byteLength": 258,
+        "pointer": false,
+        "arrays": [
+          258
+        ]
+      }
+    }
+  },
+  "parser": {
+    "method": "Streaming each indexed Zstd frame with Node builtin decoder; validate standard seek-table, dispatch Blend header/BHead, derive current SDNA C layouts",
+    "runtime": "v24.19.0",
+    "inputChunkLimitBytes": 65536,
+    "decompressedChunkLimitBytes": 65536,
+    "maxDecompressedChunkBytes": 16384,
+    "maxCarryBytes": 16415,
+    "keptPayloads": "Only Scene, DNA1 and 969-byte seek-table; all other decoded blocks discarded",
+    "blockCount": 1162276,
+    "decompressedBytes": 210770183,
+    "zstdFrameCount": 120,
+    "seekTableAllCompressedDecodedLengthsExact": true,
+    "wholeFileBuffered": false,
+    "officialHeaderSourcePath": "D:/Blender5.2/5.2/scripts/modules/_blendfile_header.py",
+    "officialHeaderSourceSha256": "6b1b5837ae859afcbb9bee82347e4411d6c6d86d660ea10bab5d79258b6feadc",
+    "primaryPythonCompressionZstdAvailable": false,
+    "installedPackages": false,
+    "peakRssKiB": 83104
+  },
+  "verification": {
+    "inputBeforeAfterStatExact": true,
+    "inputStreamedHashExact": true,
+    "inputReceiptExact": true,
+    "sdnaDerivedFromThisFile": true,
+    "completeStreamENDB": true,
+    "controlsOnlyNativeVerified": false,
+    "BodyFKNativeVerified": false,
+    "noStoredExternalCacheNativeVerified": false,
+    "liveUnsavedArtistIncluded": false,
+    "artistSaved": false,
+    "deployed": false,
+    "nativeExecuted": false
+  }
+}

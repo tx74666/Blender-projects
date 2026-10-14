@@ -1,0 +1,55 @@
+{
+  "schema": "x.validation.original20-source-scope/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "f45309023033f762ab10735ac958e14391b2807510acd92410413577aac901d9",
+      "bytes": 37102
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "0e27de995a95b6dc32285dc90f908166d71af6d5ccaa97d9455c11c4720c8e81",
+      "bytes": 104771
+    },
+    "forearm_twist.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist.py",
+      "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+      "bytes": 97739
+    },
+    "animation_original_inputs_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_original_inputs_ui.py",
+      "sha256": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+      "bytes": 15250
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_ui.py",
+      "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+      "bytes": 43636
+    }
+  },
+  "review_facts": [
+    "Package agent read the complete backend diff against frozen .31: eight file pins moved to _validate_pair_files; current() reuses native.current live validation and performs file-pin verification once.",
+    "Native0E27, Forearm54C3, GunUI38A3 and Worklist24BA remain physically identical to frozen R13; prior reviews remain historical, not rerun.",
+    "Actual affected tests original_contract8/view_body7/current10 =25 PASS, plus ten-file syntax; simulated admission boundaries remain explicitly described in the tests.",
+    "Physical map190/158 changes only original_inputs and version init, with188 other payloads exact."
+  ],
+  "comparison_baseline": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_c70d56ee/python_projection.json",
+    "sha256": "7eec129891ef106428435b6496594e54a3d4f497c5e9fbf78349caeec2691986",
+    "bytes": 21060
+  },
+  "historical_owner": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r13_current_source_owner.json",
+    "sha256": "7af80042be93ea6af7787ba27f3743b80e74dcc615b852123d19a9e0f4fc245d",
+    "bytes": 3149
+  },
+  "targeted_pure": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r14_01/receipt.json",
+    "sha256": "2b9ab5d9f2e9741e64f319df011b7e4a8fa130b8520de14b1d9424c4047ac572",
+    "bytes": 1883
+  },
+  "native_acceptance": false
+}

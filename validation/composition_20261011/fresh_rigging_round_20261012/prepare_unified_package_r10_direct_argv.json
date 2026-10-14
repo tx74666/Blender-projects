@@ -1,0 +1,90 @@
+{
+  "schema": "x.validation.unified-r10-source-direct-argv/1",
+  "status": "SOURCE_READY_ACTUAL_FINAL_INPUTS_BOUND",
+  "source_only": true,
+  "native_execution_performed": false,
+  "producer": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r10.py",
+    "sha256": "831dfde9121b762e815821fd94c43b66c79f45980d3d7ccf2ca9e46d1e5674d1",
+    "bytes": 31490
+  },
+  "executable": "C:/Users/Randy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "cwd": "D:/MyRepository/Blender-addons-by-Randy",
+  "serial_steps": [
+    {
+      "mode": "--inspect-only",
+      "argv": [
+        "-B",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r10.py",
+        "--inspect-only",
+        "--final-admission",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unified_r10_final_source_admission_d685_bae80eb8.json",
+        "--final-admission-sha256",
+        "fd4bc46572e1bf2fa79e5922884e7be78a5a32d60cc37dd67537444a990b2f91"
+      ]
+    },
+    {
+      "mode": "--capture",
+      "argv": [
+        "-B",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r10.py",
+        "--capture",
+        "--final-admission",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unified_r10_final_source_admission_d685_bae80eb8.json",
+        "--final-admission-sha256",
+        "fd4bc46572e1bf2fa79e5922884e7be78a5a32d60cc37dd67537444a990b2f91"
+      ]
+    },
+    {
+      "mode": "--build-and-verify",
+      "argv": [
+        "-B",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r10.py",
+        "--build-and-verify",
+        "--final-admission",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unified_r10_final_source_admission_d685_bae80eb8.json",
+        "--final-admission-sha256",
+        "fd4bc46572e1bf2fa79e5922884e7be78a5a32d60cc37dd67537444a990b2f91"
+      ]
+    }
+  ],
+  "candidate": {
+    "version": "0.77.28",
+    "shipped_files": 190,
+    "Python_files": 158,
+    "added": [],
+    "replaced": [
+      "unity_animation_rigging.py",
+      "__init__.py"
+    ],
+    "other188_exact": true,
+    "file_map": "bae80eb8dced31a3b891c99d9181b835a634367fa6589c6e941e977d1b49bd8c",
+    "source_bytes": 5649659
+  },
+  "proposed_package": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_bae80eb8",
+  "proposed_freeze": "D:/Blender/Projects/Character/X/validation/composition_20261011/x_rigging_source_freeze_r10_d6851b82.json",
+  "official_dist": "D:/MyRepository/Blender-addons-by-Randy/dist/character_designer-0.77.28.zip",
+  "execution_counts": {
+    "AST": 0,
+    "Python": 0,
+    "tests": 0,
+    "capture": 0,
+    "build": 0,
+    "native": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "deployment": 0,
+    "artist_writes": 0
+  },
+  "resource_scope": "Execute serially only after Root actual START/fresh RAM>=200MiB, using existing Parent fullprovider static scope. No new approval layer.",
+  "final_admission": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unified_r10_final_source_admission_d685_bae80eb8.json",
+    "sha256": "fd4bc46572e1bf2fa79e5922884e7be78a5a32d60cc37dd67537444a990b2f91",
+    "bytes": 8223
+  },
+  "START": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_start_X_R10_STATIC_BUILD_202610121257Z.json",
+    "sha256": "07f68023eb2142e77a8f8bcb07851552c5a52499d92e103077abfebd0d807e9b",
+    "bytes": 846
+  }
+}

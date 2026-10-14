@@ -1,0 +1,448 @@
+{
+  "schema": "x.validation.character-composition-source-review/1",
+  "date": "2026-10-11",
+  "reviewer": "/root/export_scale_review",
+  "status": "READY",
+  "source_only": true,
+  "native_execution_performed": false,
+  "tests_repeated": false,
+  "artist_mutated": false,
+  "publication_performed": false,
+  "launch_authorized_by_review": false,
+  "config_sha256": "7f0326c84de70eaa4cd83bfdcb288f445f19d9ada4b3fb5a0a0dd96d727f9c74",
+  "entry_sha256": "6b3a894b307ab27030143b63d2b99d00bb74796785db887c0cb75e52b6c94486",
+  "checks": [
+    {
+      "label": "config",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\first_stage_config.json",
+      "expected_sha256": "7f0326c84de70eaa4cd83bfdcb288f445f19d9ada4b3fb5a0a0dd96d727f9c74",
+      "actual_sha256": "7f0326c84de70eaa4cd83bfdcb288f445f19d9ada4b3fb5a0a0dd96d727f9c74",
+      "matched": true
+    },
+    {
+      "label": "entry",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\source_entry_receipt.json",
+      "expected_sha256": "6b3a894b307ab27030143b63d2b99d00bb74796785db887c0cb75e52b6c94486",
+      "actual_sha256": "6b3a894b307ab27030143b63d2b99d00bb74796785db887c0cb75e52b6c94486",
+      "matched": true
+    },
+    {
+      "label": "config.nativeFixture",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\native_fixture.json",
+      "expected_sha256": "a5d8a92e3d6214e6d7101349a65d69964411a5f11308fc28ba955a272ff3702a",
+      "actual_sha256": "a5d8a92e3d6214e6d7101349a65d69964411a5f11308fc28ba955a272ff3702a",
+      "matched": true
+    },
+    {
+      "label": "config.physicalFixture",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\physical_fixture.json",
+      "expected_sha256": "5bb9b1eee52462004a5fd682f3c08b00b6564ec5505efae2f811214764cfa234",
+      "actual_sha256": "5bb9b1eee52462004a5fd682f3c08b00b6564ec5505efae2f811214764cfa234",
+      "matched": true
+    },
+    {
+      "label": "config.loopAuthorFixture",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\loop_author_fixture.json",
+      "expected_sha256": "928accebbc10c38f2efe71b013a42892a0d4117dea3d7276575b82b001c3ff19",
+      "actual_sha256": "928accebbc10c38f2efe71b013a42892a0d4117dea3d7276575b82b001c3ff19",
+      "matched": true
+    },
+    {
+      "label": "config.tools.verify_character_composition_native",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\verify_character_composition_native.py",
+      "expected_sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "actual_sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "matched": true
+    },
+    {
+      "label": "config.tools.composition_sync_acceptance",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\composition_sync_acceptance.py",
+      "expected_sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "actual_sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "matched": true
+    },
+    {
+      "label": "config.tools.composition_timing_acceptance",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\composition_timing_acceptance.py",
+      "expected_sha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+      "actual_sha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+      "matched": true
+    },
+    {
+      "label": "config.tools.composition_session_acceptance",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\composition_session_acceptance.py",
+      "expected_sha256": "faf1521991f8985f76e02a2584f32d2ac136379d8b028303370c4e26c92e91e2",
+      "actual_sha256": "faf1521991f8985f76e02a2584f32d2ac136379d8b028303370c4e26c92e91e2",
+      "matched": true
+    },
+    {
+      "label": "config.tools.release_projection",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\release_projection.py",
+      "expected_sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "actual_sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "matched": true
+    },
+    {
+      "label": "entry.handoff",
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\native-r12\\prepared-x-handoff.json",
+      "expected_sha256": "f1540baa9d5801733abd5ca3cf37015c04fe83dc4ab479be726f5eff392e4cc7",
+      "actual_sha256": "f1540baa9d5801733abd5ca3cf37015c04fe83dc4ab479be726f5eff392e4cc7",
+      "matched": true
+    },
+    {
+      "label": "entry.prior_grant",
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\native-r12\\x-first-window-grant.json",
+      "expected_sha256": "fd9da149e5318a4cc3ac9319afd0a371b0ccd5d9647d50edcb6d114722760267",
+      "actual_sha256": "fd9da149e5318a4cc3ac9319afd0a371b0ccd5d9647d50edcb6d114722760267",
+      "matched": true
+    },
+    {
+      "label": "entry.config",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\first_stage_config.json",
+      "expected_sha256": "7f0326c84de70eaa4cd83bfdcb288f445f19d9ada4b3fb5a0a0dd96d727f9c74",
+      "actual_sha256": "7f0326c84de70eaa4cd83bfdcb288f445f19d9ada4b3fb5a0a0dd96d727f9c74",
+      "matched": true
+    },
+    {
+      "label": "entry.runtime_projection",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\python_projection.json",
+      "expected_sha256": "036ab7628c9173583e479d18aa400590a317d007cb349bf755efdcec1a48e191",
+      "actual_sha256": "036ab7628c9173583e479d18aa400590a317d007cb349bf755efdcec1a48e191",
+      "matched": true
+    },
+    {
+      "label": "entry.prior_failed_native",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n5\\natural_exit_receipt.json",
+      "expected_sha256": "d2f26ff3c7a5c8e41bb648d62652a59cba074b91eec24dfa1a262ef39a7ae642",
+      "actual_sha256": "d2f26ff3c7a5c8e41bb648d62652a59cba074b91eec24dfa1a262ef39a7ae642",
+      "matched": true
+    },
+    {
+      "label": "entry.prior_unexecuted_source_invalidated",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\reference_cache_fix_06_07_source_invalidated.json",
+      "expected_sha256": "a521f39df92cbac638883572e9d8656346e8b330dbdd804d1fa11af6b9d242ff",
+      "actual_sha256": "a521f39df92cbac638883572e9d8656346e8b330dbdd804d1fa11af6b9d242ff",
+      "matched": true
+    },
+    {
+      "label": "entry.prior_unexecuted_native_candidate",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n6\\source_only_invalidated.json",
+      "expected_sha256": "cfe10cf7558feadb7a3824888d1aea7e1a81aa2047418b2d59a59707c75b641e",
+      "actual_sha256": "cfe10cf7558feadb7a3824888d1aea7e1a81aa2047418b2d59a59707c75b641e",
+      "matched": true
+    },
+    {
+      "label": "entry.native_source_report",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_helper_source_report_20261011_ce4be885.json",
+      "expected_sha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "actual_sha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "matched": true
+    },
+    {
+      "label": "entry.tools.run_character_composition_first_stage",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\run_character_composition_first_stage.py",
+      "expected_sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "actual_sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "matched": true
+    },
+    {
+      "label": "entry.tools.verify_character_composition_native",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\verify_character_composition_native.py",
+      "expected_sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "actual_sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "matched": true
+    },
+    {
+      "label": "entry.tools.composition_sync_acceptance",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\composition_sync_acceptance.py",
+      "expected_sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "actual_sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "matched": true
+    },
+    {
+      "label": "entry.tools.composition_timing_acceptance",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\composition_timing_acceptance.py",
+      "expected_sha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+      "actual_sha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+      "matched": true
+    },
+    {
+      "label": "entry.tools.composition_session_acceptance",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\composition_session_acceptance.py",
+      "expected_sha256": "faf1521991f8985f76e02a2584f32d2ac136379d8b028303370c4e26c92e91e2",
+      "actual_sha256": "faf1521991f8985f76e02a2584f32d2ac136379d8b028303370c4e26c92e91e2",
+      "matched": true
+    },
+    {
+      "label": "entry.tools.release_projection",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\tools\\release_projection.py",
+      "expected_sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "actual_sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "matched": true
+    },
+    {
+      "label": "native.specFiles[0]",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\actual_spec_a1.json",
+      "expected_sha256": "1c527d852d6c0320196af460d529d5b85f5e091bfedeadbb4db34b759b53a007",
+      "actual_sha256": "1c527d852d6c0320196af460d529d5b85f5e091bfedeadbb4db34b759b53a007",
+      "matched": true
+    },
+    {
+      "label": "native.specFiles[1]",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\actual_spec_a2.json",
+      "expected_sha256": "331d8a42feaad2701054cbc53df99f7a1d8b7f6a57af7eeb90da61d873ee3dc3",
+      "actual_sha256": "331d8a42feaad2701054cbc53df99f7a1d8b7f6a57af7eeb90da61d873ee3dc3",
+      "matched": true
+    },
+    {
+      "label": "native.preservationHelper",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\validation_preservation.py",
+      "expected_sha256": "260b2bc581df220ea861d18f6b369d104561d5a3d119e21e5e52e9e230219a5d",
+      "actual_sha256": "260b2bc581df220ea861d18f6b369d104561d5a3d119e21e5e52e9e230219a5d",
+      "matched": true
+    },
+    {
+      "label": "native.inputBlend",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\artist_final_validation.blend",
+      "expected_sha256": "e8d3013ef14e02ed76160a838e7d255490fd1b6ece340e7c3f9e33dc57a3377f",
+      "actual_sha256": "e8d3013ef14e02ed76160a838e7d255490fd1b6ece340e7c3f9e33dc57a3377f",
+      "matched": true
+    },
+    {
+      "label": "native.runtimeManifest",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\python_projection.json",
+      "expected_sha256": "036ab7628c9173583e479d18aa400590a317d007cb349bf755efdcec1a48e191",
+      "actual_sha256": "036ab7628c9173583e479d18aa400590a317d007cb349bf755efdcec1a48e191",
+      "matched": true
+    },
+    {
+      "label": "native.compositionWorkspace",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [4925d3edceb9]\\character_animation_workspace.json",
+      "expected_sha256": "8ec5adb1609a9cc48d0da54c50b0d7c4a4e8b8632d77662b1302b57a477b122e",
+      "actual_sha256": "8ec5adb1609a9cc48d0da54c50b0d7c4a4e8b8632d77662b1302b57a477b122e",
+      "matched": true
+    },
+    {
+      "label": "physical.items.0",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002603-6b96f45335e1\\character_animation_link.json",
+      "expected_sha256": "14c17d9d118b50686bc5ac0d53715be2d24c47971f00cf8cf7d3a9f2b2f0a6b5",
+      "actual_sha256": "14c17d9d118b50686bc5ac0d53715be2d24c47971f00cf8cf7d3a9f2b2f0a6b5",
+      "matched": true
+    },
+    {
+      "label": "physical.items.1",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002637-051fa3de7e45\\character_animation_link.json",
+      "expected_sha256": "c361b28c234fa60bf9715eb079845e17b281aaaa8a33b04fea6f2c8fc9dcba39",
+      "actual_sha256": "c361b28c234fa60bf9715eb079845e17b281aaaa8a33b04fea6f2c8fc9dcba39",
+      "matched": true
+    },
+    {
+      "label": "handoff.report",
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\composition-qa\\e16685fce2c84c33840bfdefd4748954\\prepare-report.json",
+      "expected_sha256": "af6dbdc079a579e861221abebbf5c0ec392aa62c416e98951f540f353ad6a8aa",
+      "actual_sha256": "af6dbdc079a579e861221abebbf5c0ec392aa62c416e98951f540f353ad6a8aa",
+      "matched": true
+    },
+    {
+      "label": "handoff.records",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\records.json",
+      "expected_sha256": "ec44de686dd678a64ba72e5ddac030343a7c14e88b2b6d0145df5d51e7e7057d",
+      "actual_sha256": "ec44de686dd678a64ba72e5ddac030343a7c14e88b2b6d0145df5d51e7e7057d",
+      "matched": true
+    },
+    {
+      "label": "handoff.workspace",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [4925d3edceb9]\\character_animation_workspace.json",
+      "expected_sha256": "8ec5adb1609a9cc48d0da54c50b0d7c4a4e8b8632d77662b1302b57a477b122e",
+      "actual_sha256": "8ec5adb1609a9cc48d0da54c50b0d7c4a4e8b8632d77662b1302b57a477b122e",
+      "matched": true
+    },
+    {
+      "label": "current character model",
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Art\\Character\\Cosha\\Cosha.fbx",
+      "expected_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+      "actual_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+      "matched": true
+    },
+    {
+      "label": "r12.B.Link.0",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002603-6b96f45335e1\\character_animation_link.json",
+      "expected_sha256": "14c17d9d118b50686bc5ac0d53715be2d24c47971f00cf8cf7d3a9f2b2f0a6b5",
+      "actual_sha256": "14c17d9d118b50686bc5ac0d53715be2d24c47971f00cf8cf7d3a9f2b2f0a6b5",
+      "matched": true
+    },
+    {
+      "label": "r12.B.packet.0",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002603-6b96f45335e1\\Cosha_Hold.cdanim.json",
+      "expected_sha256": "b2ef89bd3000ae687536a7f3ef225bcae5ff87a8e3fa2b4242926567cdf91eee",
+      "actual_sha256": "b2ef89bd3000ae687536a7f3ef225bcae5ff87a8e3fa2b4242926567cdf91eee",
+      "matched": true
+    },
+    {
+      "label": "r12.A.packet.0",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002554-d47e0c53d234\\Cosha_Walk_N.cdanim.json",
+      "expected_sha256": "0218ac01616b01ceee90f84b8f0be8bcd2db25e8bdd9022f745240827162c6ae",
+      "actual_sha256": "0218ac01616b01ceee90f84b8f0be8bcd2db25e8bdd9022f745240827162c6ae",
+      "matched": true
+    },
+    {
+      "label": "r12.A.Link.0",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002554-d47e0c53d234\\character_animation_link.json",
+      "expected_sha256": "9d773ca9cf2b067c8dc82c1ffd972b88a0bdaf9ed699afa04a9f16d792beb47b",
+      "actual_sha256": "9d773ca9cf2b067c8dc82c1ffd972b88a0bdaf9ed699afa04a9f16d792beb47b",
+      "matched": true
+    },
+    {
+      "label": "r12.weapon.context.0",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002554-d47e0c53d234\\weapon-contexts\\d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77\\weapon_context.json",
+      "expected_sha256": "d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77",
+      "actual_sha256": "d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77",
+      "matched": true
+    },
+    {
+      "label": "r12.weapon.model.0",
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Plugins\\FPSOfficialImported\\FPS\\Art\\Models\\Mesh_Weapon_Primary.fbx",
+      "expected_sha256": "6c69c6320106df97fd8f5903359ee346f999d563871e173c7525ada55c295b43",
+      "actual_sha256": "6c69c6320106df97fd8f5903359ee346f999d563871e173c7525ada55c295b43",
+      "matched": true
+    },
+    {
+      "label": "r12.B.Link.1",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002637-051fa3de7e45\\character_animation_link.json",
+      "expected_sha256": "c361b28c234fa60bf9715eb079845e17b281aaaa8a33b04fea6f2c8fc9dcba39",
+      "actual_sha256": "c361b28c234fa60bf9715eb079845e17b281aaaa8a33b04fea6f2c8fc9dcba39",
+      "matched": true
+    },
+    {
+      "label": "r12.B.packet.1",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002637-051fa3de7e45\\Cosha_Hold.cdanim.json",
+      "expected_sha256": "f0cfb4a25e936e669338cd846f456d01d72485e7aba51424f6e738944d3bbbc7",
+      "actual_sha256": "f0cfb4a25e936e669338cd846f456d01d72485e7aba51424f6e738944d3bbbc7",
+      "matched": true
+    },
+    {
+      "label": "r12.A.packet.1",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002632-00b1735eda67\\Cosha_Walk_N_Land.cdanim.json",
+      "expected_sha256": "3c1bb51ce53ae7ce067f6045b3694e9f52d5a6712cff383cc599fa2b4cc3631e",
+      "actual_sha256": "3c1bb51ce53ae7ce067f6045b3694e9f52d5a6712cff383cc599fa2b4cc3631e",
+      "matched": true
+    },
+    {
+      "label": "r12.A.Link.1",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002632-00b1735eda67\\character_animation_link.json",
+      "expected_sha256": "cd2f9c3044903df4dcdde54d191dd23750f4bc43b9b3dd959a83e9cde2e90cb3",
+      "actual_sha256": "cd2f9c3044903df4dcdde54d191dd23750f4bc43b9b3dd959a83e9cde2e90cb3",
+      "matched": true
+    },
+    {
+      "label": "r12.weapon.context.1",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002632-00b1735eda67\\weapon-contexts\\d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77\\weapon_context.json",
+      "expected_sha256": "d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77",
+      "actual_sha256": "d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77",
+      "matched": true
+    },
+    {
+      "label": "r12.weapon.model.1",
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Plugins\\FPSOfficialImported\\FPS\\Art\\Models\\Mesh_Weapon_Primary.fbx",
+      "expected_sha256": "6c69c6320106df97fd8f5903359ee346f999d563871e173c7525ada55c295b43",
+      "actual_sha256": "6c69c6320106df97fd8f5903359ee346f999d563871e173c7525ada55c295b43",
+      "matched": true
+    },
+    {
+      "label": "r12.B.Link.2",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002722-5b0501ebaaab\\character_animation_link.json",
+      "expected_sha256": "de77ceb8dd97e86fb4b64a507b1309c80217605658e4d7e816499f7adfd58741",
+      "actual_sha256": "de77ceb8dd97e86fb4b64a507b1309c80217605658e4d7e816499f7adfd58741",
+      "matched": true
+    },
+    {
+      "label": "r12.B.packet.2",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002722-5b0501ebaaab\\Cosha_Hold.cdanim.json",
+      "expected_sha256": "bbdb1e2bc6b81f97ba440c4034f44c81be64e2569c498e59a582f81c8cccaf29",
+      "actual_sha256": "bbdb1e2bc6b81f97ba440c4034f44c81be64e2569c498e59a582f81c8cccaf29",
+      "matched": true
+    },
+    {
+      "label": "r12.A.packet.2",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002716-d393353eccb1\\Cosha_Walk_N.cdanim.json",
+      "expected_sha256": "3977be4ba7e257828aca8fb0008e5c2455721fc613eea286fa0b87427aa8f24b",
+      "actual_sha256": "3977be4ba7e257828aca8fb0008e5c2455721fc613eea286fa0b87427aa8f24b",
+      "matched": true
+    },
+    {
+      "label": "r12.A.Link.2",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002716-d393353eccb1\\character_animation_link.json",
+      "expected_sha256": "a31ae499724ee2ecf3adebf4db2cf6e7e5c612bc40f1154229568a82d7387108",
+      "actual_sha256": "a31ae499724ee2ecf3adebf4db2cf6e7e5c612bc40f1154229568a82d7387108",
+      "matched": true
+    },
+    {
+      "label": "r12.weapon.context.2",
+      "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002716-d393353eccb1\\weapon-contexts\\d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77\\weapon_context.json",
+      "expected_sha256": "d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77",
+      "actual_sha256": "d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77",
+      "matched": true
+    },
+    {
+      "label": "r12.weapon.model.2",
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Plugins\\FPSOfficialImported\\FPS\\Art\\Models\\Mesh_Weapon_Primary.fbx",
+      "expected_sha256": "6c69c6320106df97fd8f5903359ee346f999d563871e173c7525ada55c295b43",
+      "actual_sha256": "6c69c6320106df97fd8f5903359ee346f999d563871e173c7525ada55c295b43",
+      "matched": true
+    }
+  ],
+  "pin_checks": 54,
+  "pin_mismatches": 0,
+  "runtime": {
+    "manifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\python_projection.json",
+    "manifest_sha256": "036ab7628c9173583e479d18aa400590a317d007cb349bf755efdcec1a48e191",
+    "file_count": 167,
+    "missing_files": [],
+    "extra_files": [],
+    "hash_mismatches": [],
+    "composition_sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2"
+  },
+  "tools_count": 6,
+  "fixture_count": 3,
+  "actual_r12_rows": [
+    {
+      "work_item_id": "2d07bb27-7943-4668-8e6e-a42de0798c43",
+      "link_manifest": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002603-6b96f45335e1\\character_animation_link.json",
+      "link_manifest_sha256": "14c17d9d118b50686bc5ac0d53715be2d24c47971f00cf8cf7d3a9f2b2f0a6b5",
+      "revision": 0,
+      "time_mode": "HoldPose",
+      "allowed_native_paths": 41,
+      "source_parent_utf16_units": 89,
+      "source_parent_maximum": 147
+    },
+    {
+      "work_item_id": "0f4890fc-64a5-404f-a0be-2800ac0c839a",
+      "link_manifest": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002637-051fa3de7e45\\character_animation_link.json",
+      "link_manifest_sha256": "c361b28c234fa60bf9715eb079845e17b281aaaa8a33b04fea6f2c8fc9dcba39",
+      "revision": 0,
+      "time_mode": "HoldPose",
+      "allowed_native_paths": 41,
+      "source_parent_utf16_units": 89,
+      "source_parent_maximum": 147
+    },
+    {
+      "work_item_id": "84c23153-f818-4c36-8933-c6c6ae79f015",
+      "link_manifest": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002722-5b0501ebaaab\\character_animation_link.json",
+      "link_manifest_sha256": "de77ceb8dd97e86fb4b64a507b1309c80217605658e4d7e816499f7adfd58741",
+      "revision": 0,
+      "time_mode": "HoldLoop",
+      "allowed_native_paths": 41,
+      "source_parent_utf16_units": 89,
+      "source_parent_maximum": 147
+    }
+  ],
+  "bg_session_checks": null,
+  "unused_session_sha256": "faf1521991f8985f76e02a2584f32d2ac136379d8b028303370c4e26c92e91e2",
+  "native_anchor_sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+  "source_review": "Frozen ce4 bytes immediately capture original full row/spec/route/native Custom ID/slot/known fingerprint at each genuine Add, before the next Add. Later current unique native row and actual official association compare that original proof. No empty current identity fallback; full217 native guard retained. Old009b/n6 invalidated and unexecuted; old50de/n5 failed evidence preserved.",
+  "workspace_sha256": "8ec5adb1609a9cc48d0da54c50b0d7c4a4e8b8632d77662b1302b57a477b122e",
+  "workspace_parent_utf16_units": 127,
+  "datafiles_utf16_units": 76,
+  "limitations": "Source/file bytes and admission only. New native grant, actual Blender mapping/evaluation/restoration, serial worker publication, QA seed and headful pixels remain root-owned pending execution.",
+  "errors": []
+}

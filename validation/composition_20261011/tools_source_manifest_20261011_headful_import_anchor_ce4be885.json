@@ -1,0 +1,159 @@
+{
+  "schema": "x.validation.character-composition-tools-source/1",
+  "date": "2026-10-11",
+  "source_only": true,
+  "native_pending": true,
+  "native_pending_scope": "New matching background/headful snapshots require actual root-owned execution. Original import anchors and Create A collection lifetime are source validated; actual pixels/timers/Undo/reopen/natural exit remain pending.",
+  "native_execution_performed": false,
+  "artist_mutated": false,
+  "build_deploy_sync_performed": false,
+  "projection_change_performed": false,
+  "tools": {
+    "run_character_composition_first_stage": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+      "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "bytes": 9852
+    },
+    "verify_character_composition_native": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692
+    },
+    "composition_sync_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "bytes": 21115
+    },
+    "composition_timing_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+      "bytes": 40590
+    },
+    "composition_session_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "fb6fa59eef2930a784061e417eb03608a7e5882e5bc320b71e642cfcac82d07d",
+      "bytes": 48648
+    },
+    "composition_raise_authoring": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+      "sha256": "491c0dbd4eb813d717d298b03abb99be44087b19a6c5dbf4f5f18ac6fa903533",
+      "bytes": 18183
+    },
+    "run_character_composition_raise_stage": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "bytes": 20129
+    },
+    "run_character_composition_ui_fixture": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773
+    },
+    "composition_ui_checkpoints": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "bytes": 20498
+    },
+    "release_projection": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529
+    }
+  },
+  "api_audit": {
+    "headful": "start(context, iterator, options, evidence, *, finished, pin_guard, state_reader); unchanged public API. Real SDK screenshots, fresh native identity/playing/paused-frame guards and explicit acknowledgement.",
+    "startup_rollback": "One transaction spans recorded class registration, global controller, initial report, exact owned persistent timer. Failure preserves original exception; cleans every recorded class/owned timer, closes iterator, clears controller, verifies protected inputs and retains failure report without completion callback.",
+    "normal_quit": "UI fixture optional top-level quitOnCompletion bool defaults false and true requires headful checkpoints. After completed acceptance/saves/reopens/guards/durable report, schedule_completion_quit waits 3 seconds, reruns protection guard and calls only bpy.ops.wm.quit_blender. Failed checkpoints/guards/timers stay open. Report records request; root independently verifies actual process exit.",
+    "session": "Synchronous/headful session APIs unchanged. visual_guard now uses runtime reference_receipt(rig, full_sha), explicitly rejects None and propagates malformed identity errors; exact readonly Action motion hash, cache-file SHA and native linked-library path guards remain. No direct raw64-SHA IDProperty indexing or fallback.",
+    "physical": "Current canonical physical helper retains exact public manifest IDs and complete foreground_one native/provenance/effective proof. Current native helper pin is read directly, replacing earlier a6e source manifest only for new tool snapshots.",
+    "required_runtime_reference_accessor": {
+      "names": [
+        "reference_receipt_key",
+        "reference_receipt"
+      ],
+      "lookup_sha": "Complete64hex SHA passed unchanged to official accessor; lossless encoded59-byte key under runtime ownership.",
+      "missing_receipt": "Reject; accessor returns None only for missing encoded key.",
+      "malformed_or_wrong_sha": "Strict runtime ValueError propagates; no tool fallback."
+    },
+    "native_import_anchor": "Each genuine Add immediately captures original native/public IDs, full row/spec/route, exact Custom Action pointer+slot and known complete fingerprint before another mutation. Every lookup after growth, activation, isolated evaluation and Exit compares that original anchor. Official current workspace/route/baseline/_association_record/get_link and full217 strict mapping remain mandatory; coherent same-ID Action/content rebind cannot reset the baseline.",
+    "native_proof_signature": "fresh_association_proof(context,rig,item_id,links,worklist,expected_model_sha256,*,anchor,fingerprint); capture_import_anchor(context,rig,item_id,worklist,fingerprint); reacquire_work_item(context,rig,item_id,worklist,*,anchor=None,fingerprint=None). UI anchors before activate and uses mandatory keywords; no legacy fallback.",
+    "session_collection_lifetime": "Before Create A Work Copy, retain original B Custom+Source identities/slots, exact full row/spec and motion hash. Reacquire unique plain A/B IDs after growth and verify original B before baseline or editing. _current rejects zero/duplicate rows; Undo/reopen paths reacquire native IDs.",
+    "raise_author_lifetime": "Peer-owned Raise author491c anchors registered template/native inputs before row creation and validates original Action/content across register; peer reports ten focused tests+compile PASS and independent source review."
+  },
+  "ordered_prerequisites": [
+    "Root freezes NEW matching ce4 native/fb6 session/729 runner/491c Raise snapshot; old50de/009b and tools_headful_01/02 remain immutable.",
+    "Use an actually successful granted background stage and exact numeric/three SOURCE physical/QA seed/historical-restore receipts. Failedn5 or invalidatedn6 cannot seed UI; no config generated here.",
+    "First headful is a separate owned QA process before Parent Collect/Prepare mutates its pinned workspace; UI-edited Holds are never collected Hold/Raise input.",
+    "Actual NEW Raise headful is separately admitted/refrozen by owner against these shared pins."
+  ],
+  "pure_validation": {
+    "passed": true,
+    "current_owner_focused_tests_passed": 9,
+    "native_anchor_tests_passed": 4,
+    "ui_lifetime_caller_tests_passed": 5,
+    "previous_ui_tests_passed": 47,
+    "previous_ui_tests_repeated": false,
+    "full_current_suite_rerun": false,
+    "peer_raise_focused_tests_passed": 10,
+    "peer_raise_tests_rerun_by_manifest_owner": false,
+    "tests_pins": {
+      "test_character_composition_ui_checkpoints": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_checkpoints.py",
+        "sha256": "4cbe5c713c77597ef5d6b914b62ed1618e55212dfad91c7b1a2e53d55d52506c",
+        "bytes": 17110
+      },
+      "test_character_composition_ui_fixture": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_fixture.py",
+        "sha256": "eece84ad6d152542af0aa95f091189cde10456c8c8573ba63d4b0d434daa2351",
+        "bytes": 26964
+      },
+      "test_character_composition_native_fixture": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_native_fixture.py",
+        "sha256": "74a740960813c0df841d0dc2affea22c1aeeebae1d4b61930352a95310c21e97",
+        "bytes": 18159
+      },
+      "test_composition_raise_authoring": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_raise_authoring.py",
+        "sha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+        "bytes": 15159
+      }
+    },
+    "py_compile": true,
+    "compiled_in_this_change": [
+      "verify_character_composition_native.py",
+      "test_character_composition_native_fixture.py",
+      "composition_session_acceptance.py",
+      "run_character_composition_ui_fixture.py",
+      "test_character_composition_ui_fixture.py"
+    ],
+    "native_boundaries_not_executed": true,
+    "coverage": "Actual official _item/_association_record boundaries; unique lifetime, empty/forged routes reject; coherent same-ID Action or in-place content rebind rejects original Add anchor. Actual session generator reacquires A/B after growth and verifies original B. Actual UI runner requires anchored new proof API before post-activation row read."
+  },
+  "handoff": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_ui_fixture_handoff_20261011.md",
+    "sha256": "7234ba0004249dca8b7f86135bce44bca7dd677e2d80fe72c0d65b9610e7891c",
+    "bytes": 13273
+  },
+  "remaining": "Root owns matching snapshots, actual successful receipts, config generation and explicit native grant. No native/UI/config/runtime/build/deploy/Sync by this source update.",
+  "excluded": "Mutable artist inputs/model/prepared manifests/packets/saved scenes and runtime/projection sources are not hashed into this immutable tools-only source manifest.",
+  "supersedes": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_headful_reference_ebdf46d1.json",
+    "sha256": "f1a2d7168e527791cac4b3aa670dcd1c590a44761eb84165d5915a2b21fe22a4",
+    "bytes": 8206,
+    "preserved": true
+  },
+  "runtime_or_projection_changed_by_this_tool_update": false,
+  "source_reports": {
+    "native_helper": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_helper_source_report_20261011_ce4be885.json",
+      "sha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "bytes": 3482
+    }
+  },
+  "independent_review": {
+    "reviewer": "/root/export_scale_review",
+    "status": "READY_FOR_FROZEN_SOURCE_PAIRS",
+    "scope": "Exact nativece4/test74 and sessionfb6/runner729/testee rehash/readback; peerRaise491c independently reviewed. Manifest readback requested separately.",
+    "tests_rerun_by_reviewer": false
+  }
+}

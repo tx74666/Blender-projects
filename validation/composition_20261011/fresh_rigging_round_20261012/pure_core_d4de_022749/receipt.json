@@ -1,0 +1,159 @@
+{
+  "schema": "x.validation.r7-actual-serial-pure/1",
+  "phase": "core",
+  "passed": false,
+  "completed": false,
+  "source_only": true,
+  "native_execution_performed": false,
+  "sdk_calls": 0,
+  "worker_launches": 0,
+  "blender_launches": 0,
+  "builds": 0,
+  "deployments": 0,
+  "artist_disk_writes": 0,
+  "actual_run": true,
+  "execution_mode": "SERIAL_PYTHON_B",
+  "runner": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\run_original_attach_serial_pure.py",
+    "sha256": "65cc9d292ebf18802850a99d168daa8e70d66bc1c67d6d772cda62ebc4ad03db",
+    "bytes": 19443
+  },
+  "resource_start": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\generic-rigging-design\\source-peer-r7\\X_ORIGINAL_RIG_PURE_20261012022749Z.json",
+    "sha256": "fee15eb93cb5b75918b19f6c06314c5e243700b39ae0bbc2efa8ac0b1845060c",
+    "bytes": 2573
+  },
+  "scope_owner_token": "X_ORIGINAL_RIG_PURE_20261012022749Z",
+  "source_files": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+      "bytes": 43229
+    },
+    "test_animation_worklist_rigging_attach.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "sha256": "be52410c4c954d5ec9b80424b1deb350355230d3db2f3daf19510a2700c95b8f",
+      "bytes": 30907
+    },
+    "test_animation_worklist_rigging_editing_data.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_editing_data.py",
+      "sha256": "f53bcee59ca3845a0567e414cd024b010d18ba10996777d86e1103033de26f68",
+      "bytes": 14112
+    },
+    "test_animation_worklist_rigging_attach_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach_ui.py",
+      "sha256": "d7f6444b640f8d057aa8657f32a50653832b092a0223bb2ba4e4a690151fabd9",
+      "bytes": 16155
+    },
+    "test_animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist.py",
+      "sha256": "9242405a9c48f6dbec061670e9dc4b0cbd11f6ddc9b83746c9958e309aeded55",
+      "bytes": 17877
+    },
+    "test_animation_worklist_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_ui.py",
+      "sha256": "c30dbe9ef756c85444f2a80cc8cccfde33a9af1fde73ce5862d542269ca2df1c",
+      "bytes": 66049
+    }
+  },
+  "source_pins_unchanged_after_run": false,
+  "started_utc": "2026-10-12T02:28:51.088598Z",
+  "helper_pid": 42984,
+  "suites": [
+    {
+      "file": "test_animation_worklist_rigging_attach.py",
+      "test_file": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+        "sha256": "be52410c4c954d5ec9b80424b1deb350355230d3db2f3daf19510a2700c95b8f",
+        "bytes": 30907
+      },
+      "expected_total": 19,
+      "unique_new_cases": 19,
+      "actual_executions": 1,
+      "pid": 75500,
+      "started_utc": "2026-10-12T02:28:51.113918Z",
+      "exited_utc": "2026-10-12T02:28:52.569115Z",
+      "exit_code": 1,
+      "total": 19,
+      "passed": 0,
+      "failed": 19,
+      "raw_log": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_d4de_022749\\test_animation_worklist_rigging_attach.py.combined.raw.log",
+        "sha256": "c512e6f201eb15a1502cbf36910bb30dd9579bdc097e5b2c6a3e5b282f4d2637",
+        "bytes": 34113
+      },
+      "natural_exit": true,
+      "forced_termination": false,
+      "argv": [
+        "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-c",
+        "\nimport os, pathlib, sys, unittest\nrepo = pathlib.Path(sys.argv[1]).resolve()\nproduct_init = (repo / 'addons/character_designer/__init__.py').resolve()\ndef audit(event, args):\n    if event in ('subprocess.Popen', 'os.system', 'os.posix_spawn', 'os.exec',\n                 'os.spawn', 'os.startfile', 'os.startfile/2', 'socket.connect'):\n        raise RuntimeError('Pure suite forbids application/process launch: ' + event)\n    if event == 'import' and args[0] in ('bpy', 'mathutils') and args[0] not in sys.modules:\n        raise RuntimeError('Pure suite forbids real native import: ' + args[0])\n    if event == 'exec':\n        name = args[0].co_filename\n        if name and not name.startswith('<'):\n            path = pathlib.Path(name).resolve()\n            if path == product_init or path.name == '__init__.py' and path.parent.name == 'character_designer':\n                raise RuntimeError('Pure suite forbids add-on __init__/registration')\n            if 'character_designer' in path.parts and not path.is_relative_to(repo / 'addons/character_designer'):\n                raise RuntimeError('Pure suite forbids another candidate source import')\nsys.addaudithook(audit)\nsys.argv = ['unittest', '-v', sys.argv[2]]\nunittest.main(module=None)\n",
+        "D:\\MyRepository\\Blender-addons-by-Randy",
+        "test_animation_worklist_rigging_attach"
+      ],
+      "duration_seconds": 1.4686600000131875,
+      "skipped": 0,
+      "complete_ok": false,
+      "unittest_duration_seconds": 1.14,
+      "stdout_raw": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_d4de_022749\\test_animation_worklist_rigging_attach.py.stdout.raw",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr_raw": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_d4de_022749\\test_animation_worklist_rigging_attach.py.stderr.raw",
+        "sha256": "c512e6f201eb15a1502cbf36910bb30dd9579bdc097e5b2c6a3e5b282f4d2637",
+        "bytes": 34113
+      },
+      "raw_log_stream_order": "stdout bytes then stderr bytes; raw separate streams retained; no cross-stream chronological claim"
+    }
+  ],
+  "resource_reads": [
+    {
+      "phase": "before phase claim",
+      "reads": [
+        {
+          "utc": "2026-10-12T02:28:51.089633Z",
+          "available_mib": 1614.01953125,
+          "used_percent": 90.01148757857219,
+          "total_bytes": 16943685632
+        }
+      ],
+      "serial": true
+    },
+    {
+      "phase": "before test_animation_worklist_rigging_attach.py",
+      "reads": [
+        {
+          "utc": "2026-10-12T02:28:51.099752Z",
+          "available_mib": 1613.59375,
+          "used_percent": 90.01412256608138,
+          "total_bytes": 16943685632
+        }
+      ],
+      "serial": true
+    }
+  ],
+  "process_test_total": 19,
+  "process_exit_code": 1,
+  "process_raw_log": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_d4de_022749\\all_suite_process_output.raw.log",
+    "sha256": "c512e6f201eb15a1502cbf36910bb30dd9579bdc097e5b2c6a3e5b282f4d2637",
+    "bytes": 34113
+  },
+  "natural_owned_children_gone": true,
+  "forced_termination_performed": false,
+  "no_descendant_launch_audit_enforced": true,
+  "aggregate_semantics": "One helper phase launches one fresh Python per suite serially; process_test_total is the sum of completed child unittest Ran counts, not one combined unittest invocation.",
+  "window_expired_while_waiting": false,
+  "error": "RuntimeError: First actual suite failure/count mismatch/skip: test_animation_worklist_rigging_attach.py",
+  "handles_retained_until_natural_exit": true,
+  "finished_utc": "2026-10-12T02:28:52.615129Z",
+  "duration_seconds": 1.5218380999867804
+}

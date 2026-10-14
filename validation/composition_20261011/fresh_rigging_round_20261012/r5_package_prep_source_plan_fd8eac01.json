@@ -1,0 +1,129 @@
+{
+  "schema": "x.validation.unified-r5-package-prep-source-plan/1",
+  "passed": true,
+  "status": "SOURCE_TEMPLATE_FINAL_NATIVE_REFERENCE_INPUTS_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "prepare_unified_package_r5.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r5.py",
+      "sha256": "fd8eac015cc1808e0a1f3fd6907a269995887e97ca68d74704ca66955573c6b9",
+      "bytes": 23805
+    }
+  },
+  "syntax": {
+    "AST": "PASS",
+    "in_memory_compile": "PASS",
+    "asserts": 0,
+    "target_imports": 0
+  },
+  "execution": {
+    "inputs_called": false,
+    "capture_called": false,
+    "archive_move_performed": false,
+    "official_build_performed": false,
+    "new_package_directory_created": false,
+    "new_source_freeze_created": false,
+    "tests_run": 0,
+    "GUI_SDK_worker_deploy": 0
+  },
+  "cli": {
+    "mode": [
+      "--capture",
+      "--build-and-verify"
+    ],
+    "required_final_flags": [
+      "--native-sha256",
+      "--reference-test-sha256",
+      "--reference-owner",
+      "--reference-owner-sha256"
+    ],
+    "future_native_hash_or_reference_count_invented": false,
+    "reference_owner_schema": "x.validation.rigging-preview-reference-source-owner/1",
+    "reference_owner_required_fields": [
+      "source_only",
+      "native_execution_performed",
+      "source_files (exact native plus test three-pins)",
+      "prior_native_pin.sha256",
+      "apply_unchanged",
+      "test_result.total/new_added/pass/fail/log_pin (log optional)"
+    ]
+  },
+  "directory_plan": {
+    "freeze": "ROOT/x_rigging_source_freeze_r5_<actual_native_sha256_first8>.json",
+    "package": "ROUND/package_<complete_file_map_sha256_first8>",
+    "source": "package/source/character_designer",
+    "manifest": "package/python_projection.json",
+    "new_archive_copy": "package/character_designer-0.77.25.zip",
+    "receipt": "package/unified_package_receipt.json",
+    "actual_builder_log": "package/official_build_log.json",
+    "old_dist_archive": "D:\\MyRepository\\Blender-addons-by-Randy\\dist\\archived_candidates\\character_designer-0.77.25-source-f9e41c12-f7abc518.zip"
+  },
+  "scope": {
+    "prior_R4_immutable": true,
+    "version": "0.77.25",
+    "local_source_no_bump": true,
+    "prior_source_pins": 15,
+    "new_source_pins": 19,
+    "old_pins_changed": [
+      "animation_link_source.py",
+      "unity_animation_rigging.py",
+      "test_animation_rigging_recovery.py"
+    ],
+    "old_pins_unchanged": 12,
+    "new_source_pins_names": [
+      "animation_rigging_setup.py",
+      "test_animation_rigging_setup.py",
+      "test_animation_link_source_rigging_setup.py",
+      "test_animation_rigging_reference.py"
+    ],
+    "shipped_payload": 188,
+    "python_payload_AST_compile": 156,
+    "runtime_replaced": [
+      "animation_link_source.py",
+      "unity_animation_rigging.py"
+    ],
+    "runtime_added": [
+      "animation_rigging_setup.py"
+    ],
+    "other185_payload_files_exact_R4": true,
+    "init_d66_and_all_CSharp_exact_R4": true,
+    "native_apply_and_binding_plan_fullAST_equal_to_R4": true,
+    "Unknown_remains_Unknown": true,
+    "manualsync_policy_unchanged": true
+  },
+  "pure_provenance": {
+    "unique_formula": "222 + setup8 + newRouting7 + previewNew5 + finalReferenceNewAdded",
+    "image6_rerun_unique_added": 0,
+    "contract32_and_root21_recheck_unique_added": 0,
+    "b459_preview12_is_historical_not_current_native_execution": true,
+    "final_current_recovery12_receipt_shape_pending_Root": true,
+    "reference_serialized_audit_e09e_counts_added": 0
+  },
+  "immutable_build_checks": {
+    "manifest_source_freeze_three_pin_exact_before_build": true,
+    "manifest_producer_three_pin_exact_current_script": true,
+    "Source19_and_full188_bytes_exact": true,
+    "old_dist_and_old_R4_frozen_ZIP_full_byte_equal": true,
+    "resolved_move_targets_within_REPO_dist_no_reparse_nooverwrite": true,
+    "normal_rename_only_no_delete_oldzip": true,
+    "actual_official_builder_subprocess_B_exit_and_output_recorded": true,
+    "newZIP_testzip_188_unique_nondirectory_entries_exact_payload": true
+  },
+  "known_evidence_pins": {
+    "r4_freeze": "71fd41971f2e7c889dcb1ff7a427ddb7cd58b6560015b658c960c067c869ed89",
+    "r4_manifest": "ac12952c816f17ae86ac732ab18f4dcb5dc37dfa68aa39be600b27ef1d6b362f",
+    "r4_ZIP": "f7abc518fe519ed0318202fb98f84f96fbec4ab8a4c7a95bf733005318d980cb",
+    "setup_owner": "0c3b86c6e8c3d074bd735c12513a2168fd4dc910a44cd7e6ec3839de18978197",
+    "setup_peer": "251b54e06c4ae42f8ed0179ae1e006a4968cec0307c0038f143c6e79cc1d6380",
+    "routing": "bb371718ab881bbefb5ac8aabbd178e8534febaefe24e04a211dd61077d926e2",
+    "historical_preview_semantics": "141d5e27d9c1b70bd29e85736a70cfc83d21882fb271f84569cfee1ebbaf8bbe",
+    "actual22e_input_readonly": "e553362d8c8193167a5ebf5a49e162d979d3f87281256ab00605277bdc1d5a65",
+    "readonly_reference_audit": "e09e5c040edfa4b3315f64bf4ca0d97d3430cb58c8961aa314836c4704acbef3"
+  },
+  "pending": [
+    "Final current-native/reference source hashes and exact completed pure receipt must arrive from Root before any invocation.",
+    "If final receipt carries a separate current-native recovery12 rerun, its real shape/pin will be bound in a narrow Source follow-up without adding unique tests.",
+    "This Source template does not establish original-X, fresh-model/native solver, physical return or Unity Apply acceptance."
+  ]
+}

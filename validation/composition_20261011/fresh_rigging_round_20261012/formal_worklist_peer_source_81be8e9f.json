@@ -1,0 +1,31 @@
+{
+  "schema": "x.validation.formal-worklist-source-peer/1",
+  "scope": "Read-only Source only",
+  "passed": true,
+  "native_execution_performed": false,
+  "reviewer": "u4_receipt_review",
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\formal_worklist_round.py",
+    "sha256": "81be8e9f33ecae8171b585ae3c06cbe4c592f5057413d4d5e363fa0e8ed096fa",
+    "bytes": 22001
+  },
+  "reported_exact_snapshot_read_before_and_after": true,
+  "findings": [
+    "Canonical public API signatures and row-key function match scripted calls.",
+    "Original adoption/workspace/rowcount authentication precedes actual Prepare row/Link/model/packet validation.",
+    "New and old workspace mismatch stops with failure evidence; no clear/adopt/repair fallback.",
+    "Full package and runtime module paths/hashes, isolated clone/profile and out-of-override load boundary reviewed.",
+    "Readiness leaves completed/formal_add/physical_return/artist_saved false; Add/Activate requires explicit stage flag.",
+    "Durable failure uses actual exception/traceback and saved row/identity readback."
+  ],
+  "boundaries": {
+    "target_imports": 0,
+    "script_execution": 0,
+    "native": 0,
+    "sdk": 0,
+    "gui": 0,
+    "worker": 0,
+    "deployment": 0,
+    "artist_writes": 0
+  }
+}

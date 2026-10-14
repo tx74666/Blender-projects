@@ -1,0 +1,1022 @@
+{
+  "schema": "x.validation.character-composition-paired-tools-source-review/1",
+  "createdUtc": "2026-10-11T02:57:52.761649+00:00",
+  "reviewer": "/root/export_scale_review",
+  "status": "READY_SOURCE_ONLY",
+  "source_only": true,
+  "manifestPins": {
+    "shared": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_pose_selection_783b296d.json",
+      "sha256": "bd40214088cffe8c17e8ec237ddcb29ebdc8ca0e6ccbfaad30d92ea663f02960",
+      "bytes": 15423
+    },
+    "ownerSourceReport": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_report_20261011_pose_selection_783b296d.json",
+      "sha256": "4d96fc9ad4f217d5070042df4698836ba24ee5d56aecfd4343f2b18ebbf2bf82",
+      "bytes": 13892
+    },
+    "raise": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_pose_selection_783b296d.json",
+      "sha256": "303f8131a37ae06871680c0e4d1ab746ba3bbeae3ba9054a5d9f327472e04c06",
+      "bytes": 15447
+    }
+  },
+  "sharedDirectPinChecks": [
+    {
+      "field": "shared/tools/run_character_composition_first_stage",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+      "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "bytes": 9852,
+      "declaredSha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "declaredBytes": 9852,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/verify_character_composition_native",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692,
+      "declaredSha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "declaredBytes": 52692,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/composition_sync_acceptance",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "bytes": 21115,
+      "declaredSha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "declaredBytes": 21115,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/composition_timing_acceptance",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "bytes": 40700,
+      "declaredSha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "declaredBytes": 40700,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/composition_session_acceptance",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+      "bytes": 49355,
+      "declaredSha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+      "declaredBytes": 49355,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/composition_raise_authoring",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+      "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+      "bytes": 18339,
+      "declaredSha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+      "declaredBytes": 18339,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/run_character_composition_raise_stage",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "bytes": 20129,
+      "declaredSha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "declaredBytes": 20129,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/run_character_composition_ui_fixture",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773,
+      "declaredSha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "declaredBytes": 24773,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/composition_ui_checkpoints",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "bytes": 20498,
+      "declaredSha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "declaredBytes": 20498,
+      "equal": true
+    },
+    {
+      "field": "shared/tools/release_projection",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529,
+      "declaredSha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "declaredBytes": 7529,
+      "equal": true
+    },
+    {
+      "field": "shared/pure_validation/tests_pins/test_character_composition_ui_checkpoints",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_checkpoints.py",
+      "sha256": "4cbe5c713c77597ef5d6b914b62ed1618e55212dfad91c7b1a2e53d55d52506c",
+      "bytes": 17110,
+      "declaredSha256": "4cbe5c713c77597ef5d6b914b62ed1618e55212dfad91c7b1a2e53d55d52506c",
+      "declaredBytes": 17110,
+      "equal": true
+    },
+    {
+      "field": "shared/pure_validation/tests_pins/test_character_composition_ui_fixture",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_fixture.py",
+      "sha256": "eece84ad6d152542af0aa95f091189cde10456c8c8573ba63d4b0d434daa2351",
+      "bytes": 26964,
+      "declaredSha256": "eece84ad6d152542af0aa95f091189cde10456c8c8573ba63d4b0d434daa2351",
+      "declaredBytes": 26964,
+      "equal": true
+    },
+    {
+      "field": "shared/pure_validation/tests_pins/test_character_composition_native_fixture",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_native_fixture.py",
+      "sha256": "74a740960813c0df841d0dc2affea22c1aeeebae1d4b61930352a95310c21e97",
+      "bytes": 18159,
+      "declaredSha256": "74a740960813c0df841d0dc2affea22c1aeeebae1d4b61930352a95310c21e97",
+      "declaredBytes": 18159,
+      "equal": true
+    },
+    {
+      "field": "shared/pure_validation/tests_pins/test_composition_raise_authoring",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_raise_authoring.py",
+      "sha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+      "bytes": 15159,
+      "declaredSha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+      "declaredBytes": 15159,
+      "equal": true
+    },
+    {
+      "field": "shared/pure_validation/tests_pins/test_character_composition_selection",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_selection.py",
+      "sha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+      "bytes": 13199,
+      "declaredSha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+      "declaredBytes": 13199,
+      "equal": true
+    },
+    {
+      "field": "shared/pure_validation/tests_pins/test_composition_tool_pose_selection",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_tool_pose_selection.py",
+      "sha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+      "bytes": 8630,
+      "declaredSha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+      "declaredBytes": 8630,
+      "equal": true
+    },
+    {
+      "field": "shared/handoff",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_ui_fixture_handoff_20261011.md",
+      "sha256": "0a1c3027563606cce99a0ff1e211933ebe56434484b1744fd6ef2f3e2dc00632",
+      "bytes": 14668,
+      "declaredSha256": "0a1c3027563606cce99a0ff1e211933ebe56434484b1744fd6ef2f3e2dc00632",
+      "declaredBytes": 14668,
+      "equal": true
+    },
+    {
+      "field": "shared/supersedes",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_headful_import_anchor_ce4be885.json",
+      "sha256": "427a20e66f19425644d89c401e2eab1e798b7a2d5555c83d0fd4c53caf7c91cb",
+      "bytes": 11021,
+      "declaredSha256": "427a20e66f19425644d89c401e2eab1e798b7a2d5555c83d0fd4c53caf7c91cb",
+      "declaredBytes": 11021,
+      "equal": true
+    },
+    {
+      "field": "shared/source_reports/native_helper",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_helper_source_report_20261011_ce4be885.json",
+      "sha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "bytes": 3482,
+      "declaredSha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "declaredBytes": 3482,
+      "equal": true
+    },
+    {
+      "field": "shared/independent_review/product_review",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005,
+      "declaredSha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "declaredBytes": 29005,
+      "equal": true
+    },
+    {
+      "field": "shared/product_source",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "bytes": 96417,
+      "declaredSha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "declaredBytes": 96417,
+      "equal": true
+    },
+    {
+      "field": "shared/historical_product_source",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\character_designer\\animation_composition.py",
+      "sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "bytes": 95834,
+      "declaredSha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "declaredBytes": 95834,
+      "equal": true
+    },
+    {
+      "field": "shared/product_handoff",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_pose_selection_compatibility_20261011.md",
+      "sha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+      "bytes": 2139,
+      "declaredSha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+      "declaredBytes": 2139,
+      "equal": true
+    },
+    {
+      "field": "shared/root_owned_candidate_projection_pins/python_projection",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\python_projection.json",
+      "sha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "bytes": 23988,
+      "declaredSha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "declaredBytes": 23988,
+      "equal": true
+    },
+    {
+      "field": "shared/root_owned_candidate_projection_pins/complete_candidate",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_09\\candidate_projection.json",
+      "sha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "bytes": 23581,
+      "declaredSha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "declaredBytes": 23581,
+      "equal": true
+    },
+    {
+      "field": "shared/root_owned_candidate_projection_pins/projection_receipt",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\pose_selection_projection_receipt_08_09.json",
+      "sha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "bytes": 2055,
+      "declaredSha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "declaredBytes": 2055,
+      "equal": true
+    },
+    {
+      "field": "shared/product_independent_source_review",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005,
+      "declaredSha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "declaredBytes": 29005,
+      "equal": true
+    }
+  ],
+  "sharedDirectPinCount": 27,
+  "raiseDirectPinChecks": [
+    {
+      "field": "raise/owned_raise_ui_files/0",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_ui.py",
+      "sha256": "c80dae0b3f4d33301859d790ba7f4d684c717d71a64ee9a2d43e9bc671727515",
+      "bytes": 25464,
+      "declaredSha256": "c80dae0b3f4d33301859d790ba7f4d684c717d71a64ee9a2d43e9bc671727515",
+      "declaredBytes": 25464,
+      "equal": true
+    },
+    {
+      "field": "raise/owned_raise_ui_files/1",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_ui_acceptance.py",
+      "sha256": "d052331d4687d995e4d6b0f0706727758a1cce61926ddec4affb4e28e4df6d6d",
+      "bytes": 22436,
+      "declaredSha256": "d052331d4687d995e4d6b0f0706727758a1cce61926ddec4affb4e28e4df6d6d",
+      "declaredBytes": 22436,
+      "equal": true
+    },
+    {
+      "field": "raise/owned_raise_ui_files/2",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_raise_ui.py",
+      "sha256": "ef39dc2b7e776de209a8e313b0eb4f71ef15a97907a638e7cd5bdfee69735a60",
+      "bytes": 21257,
+      "declaredSha256": "ef39dc2b7e776de209a8e313b0eb4f71ef15a97907a638e7cd5bdfee69735a60",
+      "declaredBytes": 21257,
+      "equal": true
+    },
+    {
+      "field": "raise/owned_raise_ui_files/3",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_handoff_20261011.md",
+      "sha256": "259030ba2b819362733908fce0fac449a18477b84177d2ee07154301ebbf2b12",
+      "bytes": 7847,
+      "declaredSha256": "259030ba2b819362733908fce0fac449a18477b84177d2ee07154301ebbf2b12",
+      "declaredBytes": 7847,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/run_character_composition_first_stage",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+      "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "bytes": 9852,
+      "declaredSha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "declaredBytes": 9852,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/verify_character_composition_native",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692,
+      "declaredSha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "declaredBytes": 52692,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/composition_sync_acceptance",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "bytes": 21115,
+      "declaredSha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "declaredBytes": 21115,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/composition_timing_acceptance",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "bytes": 40700,
+      "declaredSha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "declaredBytes": 40700,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/composition_session_acceptance",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+      "bytes": 49355,
+      "declaredSha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+      "declaredBytes": 49355,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/composition_raise_authoring",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+      "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+      "bytes": 18339,
+      "declaredSha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+      "declaredBytes": 18339,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/run_character_composition_raise_stage",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "bytes": 20129,
+      "declaredSha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "declaredBytes": 20129,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/run_character_composition_ui_fixture",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773,
+      "declaredSha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "declaredBytes": 24773,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/composition_ui_checkpoints",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "bytes": 20498,
+      "declaredSha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "declaredBytes": 20498,
+      "equal": true
+    },
+    {
+      "field": "raise/current_shared_tools/release_projection",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529,
+      "declaredSha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "declaredBytes": 7529,
+      "equal": true
+    },
+    {
+      "field": "raise/current_product",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "bytes": 96417,
+      "declaredSha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "declaredBytes": 96417,
+      "equal": true
+    },
+    {
+      "field": "raise/current_product_tests",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_selection.py",
+      "sha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+      "bytes": 13199,
+      "declaredSha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+      "declaredBytes": 13199,
+      "equal": true
+    },
+    {
+      "field": "raise/current_product_documentation",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_pose_selection_compatibility_20261011.md",
+      "sha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+      "bytes": 2139,
+      "declaredSha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+      "declaredBytes": 2139,
+      "equal": true
+    },
+    {
+      "field": "raise/current_tool_tests",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_tool_pose_selection.py",
+      "sha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+      "bytes": 8630,
+      "declaredSha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+      "declaredBytes": 8630,
+      "equal": true
+    },
+    {
+      "field": "raise/shared_headful_refresh",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_pose_selection_783b296d.json",
+      "sha256": "bd40214088cffe8c17e8ec237ddcb29ebdc8ca0e6ccbfaad30d92ea663f02960",
+      "bytes": 15423,
+      "declaredSha256": "bd40214088cffe8c17e8ec237ddcb29ebdc8ca0e6ccbfaad30d92ea663f02960",
+      "declaredBytes": 15423,
+      "equal": true
+    },
+    {
+      "field": "raise/shared_source_owner_report",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_report_20261011_pose_selection_783b296d.json",
+      "sha256": "4d96fc9ad4f217d5070042df4698836ba24ee5d56aecfd4343f2b18ebbf2bf82",
+      "bytes": 13892,
+      "declaredSha256": "4d96fc9ad4f217d5070042df4698836ba24ee5d56aecfd4343f2b18ebbf2bf82",
+      "declaredBytes": 13892,
+      "equal": true
+    },
+    {
+      "field": "raise/independent_product_source_review",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005,
+      "declaredSha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "declaredBytes": 29005,
+      "equal": true
+    },
+    {
+      "field": "raise/independent_tool_source_review",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_tool_pose_selection_source_review_20261011_58325c8b.json",
+      "sha256": "2724a0d4c53d7d4b532831aa3dcae266ba65a6d432f283512ea3a6a43afe88c5",
+      "bytes": 38602,
+      "declaredSha256": "2724a0d4c53d7d4b532831aa3dcae266ba65a6d432f283512ea3a6a43afe88c5",
+      "declaredBytes": 38602,
+      "equal": true
+    },
+    {
+      "field": "raise/actual_root_candidate_projection_pins/python_projection",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\python_projection.json",
+      "sha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "bytes": 23988,
+      "declaredSha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "declaredBytes": 23988,
+      "equal": true
+    },
+    {
+      "field": "raise/actual_root_candidate_projection_pins/complete_candidate",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_09\\candidate_projection.json",
+      "sha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "bytes": 23581,
+      "declaredSha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "declaredBytes": 23581,
+      "equal": true
+    },
+    {
+      "field": "raise/actual_root_candidate_projection_pins/projection_receipt",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\pose_selection_projection_receipt_08_09.json",
+      "sha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "bytes": 2055,
+      "declaredSha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "declaredBytes": 2055,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/raise_ui/source_checkpoint",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_receipt_transaction_3f317b20.json",
+      "sha256": "2f7b66b75028ab06a02b49046c8a00922a2763e9fe4e1e99407fb0653735db64",
+      "bytes": 7647,
+      "declaredSha256": "2f7b66b75028ab06a02b49046c8a00922a2763e9fe4e1e99407fb0653735db64",
+      "declaredBytes": null,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/raise_ui/unchanged_raise_ui_tests",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_raise_ui.py",
+      "sha256": "ef39dc2b7e776de209a8e313b0eb4f71ef15a97907a638e7cd5bdfee69735a60",
+      "bytes": 21257,
+      "declaredSha256": "ef39dc2b7e776de209a8e313b0eb4f71ef15a97907a638e7cd5bdfee69735a60",
+      "declaredBytes": 21257,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/raise_original_anchors/source_checkpoint",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_import_anchors_ce4be885.json",
+      "sha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "bytes": 10227,
+      "declaredSha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "declaredBytes": 10227,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/raise_original_anchors/original_source",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_raise_authoring.py",
+      "sha256": "491c0dbd4eb813d717d298b03abb99be44087b19a6c5dbf4f5f18ac6fa903533",
+      "bytes": 18183,
+      "declaredSha256": "491c0dbd4eb813d717d298b03abb99be44087b19a6c5dbf4f5f18ac6fa903533",
+      "declaredBytes": 18183,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/raise_original_anchors/tests",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_raise_authoring.py",
+      "sha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+      "bytes": 15159,
+      "declaredSha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+      "declaredBytes": 15159,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/native_original_anchors/original_source",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692,
+      "declaredSha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "declaredBytes": 52692,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/native_original_anchors/source_checkpoint",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_import_anchors_ce4be885.json",
+      "sha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "bytes": 10227,
+      "declaredSha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "declaredBytes": 10227,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/session_and_runner_original_anchors/original_sources/composition_session_acceptance",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_session_acceptance.py",
+      "sha256": "fb6fa59eef2930a784061e417eb03608a7e5882e5bc320b71e642cfcac82d07d",
+      "bytes": 48648,
+      "declaredSha256": "fb6fa59eef2930a784061e417eb03608a7e5882e5bc320b71e642cfcac82d07d",
+      "declaredBytes": 48648,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/session_and_runner_original_anchors/original_sources/run_character_composition_ui_fixture",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773,
+      "declaredSha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "declaredBytes": 24773,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/session_and_runner_original_anchors/source_checkpoint",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_import_anchors_ce4be885.json",
+      "sha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "bytes": 10227,
+      "declaredSha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "declaredBytes": 10227,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/reference_receipt_transaction/original_product",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\character_designer\\animation_composition.py",
+      "sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "bytes": 95834,
+      "declaredSha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "declaredBytes": 95834,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/reference_receipt_transaction/tests",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_reference_receipts.py",
+      "sha256": "7f04828b04ef765e9d9bc16b8745947eaddf9241595ce39a2beb98d7ae80a9f8",
+      "bytes": 21249,
+      "declaredSha256": "7f04828b04ef765e9d9bc16b8745947eaddf9241595ce39a2beb98d7ae80a9f8",
+      "declaredBytes": null,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/reference_receipt_transaction/source_checkpoint",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_receipt_transaction_3f317b20.json",
+      "sha256": "2f7b66b75028ab06a02b49046c8a00922a2763e9fe4e1e99407fb0653735db64",
+      "bytes": 7647,
+      "declaredSha256": "2f7b66b75028ab06a02b49046c8a00922a2763e9fe4e1e99407fb0653735db64",
+      "declaredBytes": null,
+      "equal": true
+    },
+    {
+      "field": "raise/historical_validations/original_timing_dependency",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_timing_acceptance.py",
+      "sha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+      "bytes": 40590,
+      "declaredSha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+      "declaredBytes": 40590,
+      "equal": true
+    },
+    {
+      "field": "raise/supersedes",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_import_anchors_ce4be885.json",
+      "sha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "bytes": 10227,
+      "declaredSha256": "ea313c2d4088f3c2457a1e4c0744169f19a9fe592708db3cbc52db8b17a40240",
+      "declaredBytes": 10227,
+      "equal": true
+    },
+    {
+      "field": "raise/immutable_history/0",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_receipt_transaction_3f317b20.json",
+      "sha256": "2f7b66b75028ab06a02b49046c8a00922a2763e9fe4e1e99407fb0653735db64",
+      "bytes": 7647,
+      "declaredSha256": "2f7b66b75028ab06a02b49046c8a00922a2763e9fe4e1e99407fb0653735db64",
+      "declaredBytes": null,
+      "equal": true
+    },
+    {
+      "field": "raise/immutable_history/1",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011_reference_ebdf46d1.json",
+      "sha256": "bbcfcd6374ade13873ad86ae9996ca7bf7572aeab9d15af6addfe20f3ab68694",
+      "bytes": 5801,
+      "declaredSha256": "bbcfcd6374ade13873ad86ae9996ca7bf7572aeab9d15af6addfe20f3ab68694",
+      "declaredBytes": null,
+      "equal": true
+    },
+    {
+      "field": "raise/immutable_history/2",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_raise_ui_source_manifest_20261011.json",
+      "sha256": "e040632521537b4c4e8ee413f5c83770de1da5a48b985d95781cbaabe7ebf838",
+      "bytes": 3374,
+      "declaredSha256": "e040632521537b4c4e8ee413f5c83770de1da5a48b985d95781cbaabe7ebf838",
+      "declaredBytes": null,
+      "equal": true
+    }
+  ],
+  "raiseDirectPinCount": 43,
+  "totalDirectManifestPinCount": 70,
+  "ownerReportNestedPinChecks": [
+    {
+      "field": "owner/manifest",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_pose_selection_783b296d.json",
+      "sha256": "bd40214088cffe8c17e8ec237ddcb29ebdc8ca0e6ccbfaad30d92ea663f02960",
+      "bytes": 15423,
+      "declaredSha256": "bd40214088cffe8c17e8ec237ddcb29ebdc8ca0e6ccbfaad30d92ea663f02960",
+      "declaredBytes": 15423,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/0",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+      "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "bytes": 9852,
+      "declaredSha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "declaredBytes": 9852,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/1",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692,
+      "declaredSha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "declaredBytes": 52692,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/2",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "bytes": 21115,
+      "declaredSha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "declaredBytes": 21115,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/3",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "bytes": 40700,
+      "declaredSha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "declaredBytes": 40700,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/4",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+      "bytes": 49355,
+      "declaredSha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+      "declaredBytes": 49355,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/5",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+      "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+      "bytes": 18339,
+      "declaredSha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+      "declaredBytes": 18339,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/6",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "bytes": 20129,
+      "declaredSha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "declaredBytes": 20129,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/7",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773,
+      "declaredSha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "declaredBytes": 24773,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/8",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "bytes": 20498,
+      "declaredSha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "declaredBytes": 20498,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/9",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529,
+      "declaredSha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "declaredBytes": 7529,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/10",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_checkpoints.py",
+      "sha256": "4cbe5c713c77597ef5d6b914b62ed1618e55212dfad91c7b1a2e53d55d52506c",
+      "bytes": 17110,
+      "declaredSha256": "4cbe5c713c77597ef5d6b914b62ed1618e55212dfad91c7b1a2e53d55d52506c",
+      "declaredBytes": 17110,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/11",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_fixture.py",
+      "sha256": "eece84ad6d152542af0aa95f091189cde10456c8c8573ba63d4b0d434daa2351",
+      "bytes": 26964,
+      "declaredSha256": "eece84ad6d152542af0aa95f091189cde10456c8c8573ba63d4b0d434daa2351",
+      "declaredBytes": 26964,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/12",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_native_fixture.py",
+      "sha256": "74a740960813c0df841d0dc2affea22c1aeeebae1d4b61930352a95310c21e97",
+      "bytes": 18159,
+      "declaredSha256": "74a740960813c0df841d0dc2affea22c1aeeebae1d4b61930352a95310c21e97",
+      "declaredBytes": 18159,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/13",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_raise_authoring.py",
+      "sha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+      "bytes": 15159,
+      "declaredSha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+      "declaredBytes": 15159,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/14",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_selection.py",
+      "sha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+      "bytes": 13199,
+      "declaredSha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+      "declaredBytes": 13199,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/15",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_tool_pose_selection.py",
+      "sha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+      "bytes": 8630,
+      "declaredSha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+      "declaredBytes": 8630,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/16",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_ui_fixture_handoff_20261011.md",
+      "sha256": "0a1c3027563606cce99a0ff1e211933ebe56434484b1744fd6ef2f3e2dc00632",
+      "bytes": 14668,
+      "declaredSha256": "0a1c3027563606cce99a0ff1e211933ebe56434484b1744fd6ef2f3e2dc00632",
+      "declaredBytes": 14668,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/17",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_headful_import_anchor_ce4be885.json",
+      "sha256": "427a20e66f19425644d89c401e2eab1e798b7a2d5555c83d0fd4c53caf7c91cb",
+      "bytes": 11021,
+      "declaredSha256": "427a20e66f19425644d89c401e2eab1e798b7a2d5555c83d0fd4c53caf7c91cb",
+      "declaredBytes": 11021,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/18",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_helper_source_report_20261011_ce4be885.json",
+      "sha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "bytes": 3482,
+      "declaredSha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "declaredBytes": 3482,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/19",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005,
+      "declaredSha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "declaredBytes": 29005,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/20",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "bytes": 96417,
+      "declaredSha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "declaredBytes": 96417,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/21",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\character_designer\\animation_composition.py",
+      "sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "bytes": 95834,
+      "declaredSha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "declaredBytes": 95834,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/22",
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_pose_selection_compatibility_20261011.md",
+      "sha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+      "bytes": 2139,
+      "declaredSha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+      "declaredBytes": 2139,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/23",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\python_projection.json",
+      "sha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "bytes": 23988,
+      "declaredSha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "declaredBytes": 23988,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/24",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_09\\candidate_projection.json",
+      "sha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "bytes": 23581,
+      "declaredSha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "declaredBytes": 23581,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/25",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\pose_selection_projection_receipt_08_09.json",
+      "sha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "bytes": 2055,
+      "declaredSha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "declaredBytes": 2055,
+      "equal": true
+    },
+    {
+      "field": "owner/manifest_direct_pin_checks/26",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005,
+      "declaredSha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "declaredBytes": 29005,
+      "equal": true
+    },
+    {
+      "field": "owner/independent_tool_source_review",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_tool_pose_selection_source_review_20261011_58325c8b.json",
+      "sha256": "2724a0d4c53d7d4b532831aa3dcae266ba65a6d432f283512ea3a6a43afe88c5",
+      "bytes": 38602,
+      "declaredSha256": "2724a0d4c53d7d4b532831aa3dcae266ba65a6d432f283512ea3a6a43afe88c5",
+      "declaredBytes": 38602,
+      "equal": true
+    },
+    {
+      "field": "owner/actual_root_projection_pins/python_projection",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\python_projection.json",
+      "sha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "bytes": 23988,
+      "declaredSha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "declaredBytes": 23988,
+      "equal": true
+    },
+    {
+      "field": "owner/actual_root_projection_pins/complete_candidate",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_09\\candidate_projection.json",
+      "sha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "bytes": 23581,
+      "declaredSha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "declaredBytes": 23581,
+      "equal": true
+    },
+    {
+      "field": "owner/actual_root_projection_pins/projection_receipt",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\pose_selection_projection_receipt_08_09.json",
+      "sha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "bytes": 2055,
+      "declaredSha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "declaredBytes": 2055,
+      "equal": true
+    }
+  ],
+  "ownerReportNestedPinCount": 32,
+  "mismatchCount": 0,
+  "sourceReviewLinks": {
+    "product": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005
+    },
+    "tools": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_tool_pose_selection_source_review_20261011_58325c8b.json",
+      "sha256": "2724a0d4c53d7d4b532831aa3dcae266ba65a6d432f283512ea3a6a43afe88c5",
+      "bytes": 38602
+    },
+    "runtime08Full09Actual340ByteClosure": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\source_byte_closure_08_09.json",
+      "sha256": "67f292f57e19c03017ca27a136c1cb8c8f5b49df0510b512b27160e50a399680",
+      "bytes": 177953
+    }
+  },
+  "matchingDependency": {
+    "productSha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+    "timingSha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+    "requiredSessionSha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+    "raiseAuthorSha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+    "newSessionRequiredEvenWhenBackgroundSessionChecksNone": true
+  },
+  "validationAttribution": {
+    "currentProductOwner": "/root/rig_controls_review",
+    "currentProductOwnerFocusedTestsReportedPass": 8,
+    "currentToolOwner": "/root/worklist_review",
+    "currentToolOwnerFocusedTestsReportedPass": 9,
+    "currentToolOwnerCompileFilesReportedPass": 4,
+    "reviewerTestsRun": 0,
+    "reviewerCompileRuns": 0,
+    "reviewerNativeRuns": 0,
+    "reviewerWorkersRun": 0,
+    "historicalNativeAnchorTestsNotRerun": 4,
+    "historicalUIAnchorTestsNotRerun": 5,
+    "historicalRaiseAnchorTestsNotRerun": 10,
+    "historicalRaiseUITestsNotRerun": 18,
+    "historicalProofClassification": "New owner/Raise manifests explicitly distinguish current focused9/8 from prior4/5/10/18 checks. Old491c/fb6/46bf source records point to immutable03 copies; they are not mislabeled current e8cb/140b/58325 byte proofs."
+  },
+  "preservedOldToolsReceipts": {
+    "1": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_01\\frozen_tools_receipt.json",
+      "sha256": "bd297368b805339c531db342666203407a86320c0ba55eeab688f7f01054336b",
+      "bytes": 4277
+    },
+    "2": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_02\\frozen_tools_receipt.json",
+      "sha256": "811db4a2f62d59019111ee301ca91f8d1e2fd1a6a896570d0a15cc81ca2913b9",
+      "bytes": 4287
+    },
+    "3": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\frozen_tools_receipt.json",
+      "sha256": "0552ee957d58f594580600b187daeef210d8f5d761835c16b05bab0161d57f57",
+      "bytes": 4575
+    }
+  },
+  "snapshotStatusExplanation": "Shared manifest REQUESTED tool-review status is an immutable snapshot from before the later independent READY receipt. Its paired owner report and this readback pin the actual subsequent independent source review. No source manifest was edited to rewrite that history.",
+  "actionsNotPerformed": {
+    "nativeOrUnityExecution": true,
+    "testsOrCompilation": true,
+    "workersOrPublication": true,
+    "runtimeOrToolEdits": true,
+    "fixtureGeneration": true,
+    "projectionBuild": true,
+    "deployment": true,
+    "artistEditOrSave": true
+  },
+  "limits": "Only source/hash/byte and manifest attribution closure. No new native, headful pixels, Undo/save/reopen, physical export, NEW Raise artifact admission, release or deployment pass is claimed. Root-owned explicit launch and successful receipts remain required."
+}

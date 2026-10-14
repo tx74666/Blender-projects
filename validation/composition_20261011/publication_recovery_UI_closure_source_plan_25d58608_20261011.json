@@ -1,0 +1,382 @@
+{
+  "schema": "x.validation.character-composition-publication-recovery-UI-closure-source-plan/1",
+  "utc": "2026-10-11T11:11:02.969095+00:00",
+  "source_only": true,
+  "plan_source_review_completed": true,
+  "native_execution_performed": false,
+  "candidate_or_helper_imports_performed": false,
+  "tests_executed": 0,
+  "UI_fixture_generation_performed": false,
+  "source_edits_performed": false,
+  "inputs": {
+    "first_UI_builder": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_first_ui_fixture.py",
+      "sha256": "25d5860875ea4f18b45f8206243ddc6940e576aa3e98a00c49aa11ad5be76a4b",
+      "bytes": 78886
+    },
+    "old_completion_auditor": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_loop_tail_completed_r8.py",
+      "sha256": "90aec0e63e023909ffb47e6a3e1e04e64dfaa8e13be1c0be5a8641ce56db44a7",
+      "bytes": 61172
+    },
+    "old_completion_writer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_loop_tail_completion_r9.py",
+      "sha256": "1e13f577d8c40266b0801feb3995fb02bdd9c3fc33e45e26832493a662298677",
+      "bytes": 8590
+    },
+    "standalone_UI_runner": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773
+    },
+    "recovery_source_plan": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_published_loop_recovery_source_plan_compact_e1598ff1.json",
+      "sha256": "b27c8e1c7cf09ec885b983d48688669aacb22d21fe1fda11697d0f46cd7b18cd",
+      "bytes": 27165
+    }
+  },
+  "function_locations": {
+    "first_UI_builder": {
+      "require": {
+        "start": 43,
+        "end": 45
+      },
+      "sha": {
+        "start": 48,
+        "end": 53
+      },
+      "read": {
+        "start": 56,
+        "end": 60
+      },
+      "pin": {
+        "start": 63,
+        "end": 72
+      },
+      "identifier": {
+        "start": 75,
+        "end": 79
+      },
+      "load": {
+        "start": 82,
+        "end": 86
+      },
+      "frozen_api": {
+        "start": 89,
+        "end": 137
+      },
+      "require_loop_operator_proof": {
+        "start": 140,
+        "end": 187
+      },
+      "require_range_fix_reuse": {
+        "start": 190,
+        "end": 225
+      },
+      "require_physical_tail_reuse": {
+        "start": 228,
+        "end": 375
+      },
+      "require_loop_receipt": {
+        "start": 378,
+        "end": 410
+      },
+      "numeric_payload": {
+        "start": 413,
+        "end": 449
+      },
+      "require_numeric_cases": {
+        "start": 452,
+        "end": 483
+      },
+      "require_completion_closure": {
+        "start": 486,
+        "end": 544
+      },
+      "require_completed_stage": {
+        "start": 547,
+        "end": 557
+      },
+      "require_numeric_reuse": {
+        "start": 560,
+        "end": 663
+      },
+      "require_ui_rotation_control": {
+        "start": 666,
+        "end": 690
+      },
+      "first_hold": {
+        "start": 693,
+        "end": 702
+      },
+      "empty_evidence": {
+        "start": 705,
+        "end": 713
+      },
+      "published_sources": {
+        "start": 716,
+        "end": 750
+      },
+      "build": {
+        "start": 753,
+        "end": 966
+      },
+      "main": {
+        "start": 969,
+        "end": 988
+      }
+    },
+    "old_completion_auditor": {
+      "require": {
+        "start": 26,
+        "end": 28
+      },
+      "sha": {
+        "start": 31,
+        "end": 38
+      },
+      "load": {
+        "start": 41,
+        "end": 47
+      },
+      "pin": {
+        "start": 50,
+        "end": 53
+      },
+      "uid": {
+        "start": 56,
+        "end": 57
+      },
+      "passed": {
+        "start": 60,
+        "end": 65
+      },
+      "numeric_payload": {
+        "start": 68,
+        "end": 104
+      },
+      "pid_absent": {
+        "start": 107,
+        "end": 134
+      },
+      "range_fix_reuse": {
+        "start": 137,
+        "end": 166
+      },
+      "physical_tail_reuse": {
+        "start": 169,
+        "end": 310
+      },
+      "loop_operator_proof": {
+        "start": 313,
+        "end": 360
+      },
+      "numeric_reuse": {
+        "start": 363,
+        "end": 465
+      },
+      "audit": {
+        "start": 468,
+        "end": 719
+      },
+      "main": {
+        "start": 722,
+        "end": 738
+      }
+    },
+    "old_completion_writer": {
+      "require": {
+        "start": 21,
+        "end": 23
+      },
+      "sha": {
+        "start": 26,
+        "end": 31
+      },
+      "proof": {
+        "start": 34,
+        "end": 39
+      },
+      "record": {
+        "start": 42,
+        "end": 133
+      },
+      "main": {
+        "start": 136,
+        "end": 143
+      }
+    },
+    "standalone_UI_runner": {
+      "_checkpoint_api": {
+        "start": 35,
+        "end": 40
+      },
+      "require": {
+        "start": 43,
+        "end": 45
+      },
+      "_sha": {
+        "start": 48,
+        "end": 49
+      },
+      "_absolute": {
+        "start": 52,
+        "end": 53
+      },
+      "_id": {
+        "start": 56,
+        "end": 63
+      },
+      "validate_fixture": {
+        "start": 66,
+        "end": 116
+      },
+      "validate_reports": {
+        "start": 119,
+        "end": 175
+      },
+      "claim_evidence": {
+        "start": 178,
+        "end": 192
+      },
+      "select_native_row": {
+        "start": 195,
+        "end": 200
+      },
+      "_pin_model": {
+        "start": 203,
+        "end": 207
+      },
+      "_activate_selected": {
+        "start": 210,
+        "end": 219
+      },
+      "run": {
+        "start": 222,
+        "end": 365
+      },
+      "main": {
+        "start": 368,
+        "end": 389
+      }
+    }
+  },
+  "concrete_old_admission_mismatches": [
+    {
+      "file": "first_UI_builder",
+      "functions": [
+        "require_physical_tail_reuse",
+        "require_completion_closure",
+        "build"
+      ],
+      "old_requirement": "Two physical SOURCE publications inherited and one newly exported",
+      "recovery_truth": "Three physical SOURCE publications inherited; zero worker exports; one fresh official collection acknowledgement"
+    },
+    {
+      "file": "first_UI_builder",
+      "functions": [
+        "require_loop_receipt",
+        "require_completed_stage",
+        "published_sources"
+      ],
+      "old_requirement": "Completed Loop Sync row with a new accepted receipt and foreground equality",
+      "recovery_truth": "Original n15 Sync row remains completedFalse. Validate published revision1/artifact/job/result/sidecar/old complete author proof plus a separately completed fresh acknowledgement report."
+    },
+    {
+      "file": "old_completion_auditor",
+      "functions": [
+        "physical_tail_reuse",
+        "audit"
+      ],
+      "old_requirement": "Actual n15 successful attempt, new author/worker fields and fixed source/config/runtime12/full13 pins",
+      "recovery_truth": "Actual separately granted recovery attempt, current sidecar-budget projection provenance and no author/sampling/export in this attempt; n15 failure remains immutable ancestor."
+    },
+    {
+      "file": "old_completion_writer",
+      "functions": [
+        "record"
+      ],
+      "old_requirement": "Fixed n15 directory, audit schema/1 and two-inherited/one-executed counts",
+      "recovery_truth": "New explicit recovery completed-file audit and closure with three-inherited/zero-executed publication counts, natural0/all-owned-gone and fresh outer proof."
+    },
+    {
+      "file": "first_UI_builder",
+      "functions": [
+        "frozen_api",
+        "build"
+      ],
+      "old_requirement": "Frozen tools receipt origin_source_entry equals successful current first-stage entry",
+      "recovery_truth": "Preserve frozen09 origin as n15 historical SOURCE ancestor. Independently pin current recovery SOURCE config/entry, same unchanged headful helper bytes, new complete runtime/full manifests and reviewed sidecar receiver delta."
+    }
+  ],
+  "minimal_proposed_adaptation": {
+    "separate_recovery_auditor_and_closure": {
+      "schemas_are_proposals_not_existing_evidence": [
+        "x.validation.character-composition-publication-recovery-completed-file-audit/1",
+        "x.validation.character-composition-publication-recovery-completion-closure/1"
+      ],
+      "must_pin": [
+        "actual recovery config/Source entry/grant/launch/natural process exit",
+        "old n15 failed reports and protection without modifying success fields",
+        "archive Action snapshot/job/result/source DTO/old complete author numeric/operator evidence",
+        "all three current revision1 Link/FBX/sidecar hashes and public/native SOURCE identities",
+        "fresh exact archived-scoped and full Custom native curve/content proofs plus complete canonical scope equality",
+        "new collector acknowledgement report/last_synced_receipt/proof/implementation",
+        "current UI2 packet/rest217/native Action association anchors/seed receipt",
+        "fresh original Scene/native data/Action/asset/full historical outer assertions",
+        "sidecar receiver projection receipt and immutable range/serializer/timebase chain"
+      ],
+      "count_fields": {
+        "numeric_cases_reused": 12,
+        "numeric_cases_reexecuted": 0,
+        "fresh_isolated_variants_inherited": 2,
+        "fresh_isolated_variants_executed": 0,
+        "physical_source_publications_inherited": 3,
+        "physical_source_publications_executed": 0,
+        "native_authoring_executed": 0,
+        "numeric_resamples_executed": 0,
+        "worker_exports_executed": 0,
+        "current_receipt_acceptances": 1,
+        "current_UI_associations": 2
+      },
+      "operator_proof": "Validate the complete actual n15 author/operator proof with unchanged old function; label it inherited with its path/SHA. Do not claim a current native rotate/key or reauthor operation.",
+      "numeric_proof": "Keep actual 410 channels x298 samples inherited from n15 author/job/result/sidecar; prepared frameCount297 and Action end297 are separate. Full canonical scope, native scoped curves and full Custom equality authenticate reuse, not resampling."
+    },
+    "bounded_recovery_UI_builder": {
+      "retain_unchanged_when_actual_inputs_match": [
+        "numeric_payload",
+        "require_numeric_cases",
+        "require_loop_operator_proof",
+        "first_hold",
+        "require_ui_rotation_control",
+        "empty_evidence",
+        "ordinary exact public SOURCE/model/packet/weapon/A companion checks",
+        "profile path budget/exclusive output creation/pin rehash/headful grant separation"
+      ],
+      "new_or_adapted_guards": [
+        "recovery completion closure schema/count truth",
+        "recovery SOURCE entry/helper ancestry/current runtime pairing",
+        "three inherited published artifacts with fresh Loop acknowledgement instead of completed n15 Sync fiction",
+        "existing numeric reuse history plus current restoration/UI2/seed/sidecar-budget proof"
+      ],
+      "old_two_Source_validation": "Existing published_sources can validate the untouched completed n12 two-A report. A dedicated acknowledgement validator must handle Loop; do not fabricate a Sync-shaped row with current worker/foreground claims.",
+      "UI_output_payload": "Retain standalone runner schema/sessionConfig/CreateAWorkCopy/EditA C witness/headful checkpoint fields. Derive actual IDs only from current fresh seed and packet proofs. Bind visible Loop-selected rotation control only with exact current scope/Rest/path provenance and existing runtime revalidation."
+    }
+  },
+  "unchanged_standalone_runner_compatibility": {
+    "validate_reports_current_signature": "validate_reports(config,numeric,physical,original_fixture)",
+    "numeric_report_required": "Fresh actual native1eb report completedTrue with protected prior Actions/assets, exact historical cleanup, current UI2 proofs and a new QA seed. Inherited numeric12 truth is explicit; do not relabel the old n15 report.",
+    "physical_report_required": "Actual completed n12 two-A physical report remains seed.physicalReport; its first two SOURCE identities/model/artifact hashes remain exact. Loop recovery ack is separately audited and pinned by builder/closure.",
+    "fixture_required": "The fresh recovery native fixture must pin current real runtime/complete package and saved artist validation copy; UI config uses these actual fixture paths/hashes.",
+    "no_runner_change_needed_under_these_conditions": true,
+    "caveat": "This is SOURCE interface compatibility only. No completed recovery report, seed, native acceptance or GUI authorization exists yet."
+  },
+  "prohibited_shortcuts": [
+    "Setting old n15 Sync or first-stage completed True",
+    "Changing old publication counts to hide the failed collector boundary",
+    "Re-export/reauthoring/revision reset or upgrade",
+    "Reconstructing missing old private launch fingerprint as if persisted",
+    "Replacing archived native curves with sampled matrices or rounded frame clocks",
+    "Passing failed n15 to old25 builder or generating u1 before fresh recovery completes"
+  ]
+}

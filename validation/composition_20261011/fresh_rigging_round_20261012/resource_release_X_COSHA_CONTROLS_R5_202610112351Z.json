@@ -1,0 +1,54 @@
+{
+  "schema": "x.validation.failed-native-closure-and-resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "resource_token": "X_COSHA_CONTROLS_R5_202610112351Z",
+  "release_utc": "2026-10-12T00:28:16.8917022Z",
+  "actual_native_result": "FAIL",
+  "failure_phase": "add_activate",
+  "no_retry_or_publication": true,
+  "retained_handle_natural_exit": true,
+  "native_exit_code": 0,
+  "native_exited_utc": "2026-10-12T08:27:12.868178+08:00",
+  "owned_pid": 55952,
+  "owned_native_gone": true,
+  "worker_calls": 0,
+  "SDK_calls": 0,
+  "artist_writes": 0,
+  "deployments": 0,
+  "process_termination_performed": false,
+  "failure_snapshot": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01\\failure_scene.blend",
+    "sha256": "cdaf6a5b16b05cd745388607e0478f6369a19037b220acf25f04850edf2a370a",
+    "bytes": 103291,
+    "Blender_saved_notification_observed": true
+  },
+  "launch_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01_launcher\\launch_receipt.json",
+    "sha256": "6dc3e895e3e31eaa294c66603deb5e18db27f5e6a25761e37b396e7199ec48d7",
+    "bytes": 7753
+  },
+  "control_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01\\new_official_cosha_report.json",
+    "sha256": "46aae9142e5c7cd1bfbdc04315386aaa3ef4ffc442949866e7542840ab18a37a",
+    "bytes": 112390
+  },
+  "original_artist": {
+    "pid": 27676,
+    "title": "* X [D:\\Blender\\Projects\\Character\\X\\X.blend] - Blender 5.2.0 LTS",
+    "disk_sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "process_filetime": 134359355330496074,
+    "still_has_unsaved_content": true
+  },
+  "protected_workspace": {
+    "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+    "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+    "bytes": 35156
+  },
+  "fresh_memory": {
+    "free_MiB": 1993.5,
+    "total_MiB": 16158.8,
+    "used_percent": 87.66
+  },
+  "cleanup_method": "Observed SaveAs to unique failure_scene.blend, observed Blender Saved notification and clean title, observed owned window close button; launcher retained handle natural exit. Minimized user-input guard resolved by user restoring window.",
+  "final_destination": "Existing original X.blend Scene/CoshaRig with modifiers/design/colors/groups/controllers preserved; independent scenes are isolated validation only."
+}

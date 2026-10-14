@@ -1,0 +1,123 @@
+{
+  "schema": "x.validation.original-rigging-input-ui-source-owner/1",
+  "status": "SOURCE_IMPLEMENTED_SYNTAX_AND_NATIVE_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "source_scope_verified": true,
+  "source_files": {
+    "animation_original_inputs_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_original_inputs_ui.py",
+      "sha256": "b3f75a09b85792f56668ed4efd2f907a1876d6981756bb9221cf36574b2d17ca",
+      "bytes": 12439
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_ui.py",
+      "sha256": "f37b152e38c793638986d4cbe76a6eb832c03304e0eb14403ca9787d5934b646",
+      "bytes": 43492
+    }
+  },
+  "prior_worklist_ui": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/animation_worklist_ui_e57c2f51_before_original_inputs.py",
+    "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+    "bytes": 43229
+  },
+  "owner_scope": "Only new canonical animation_original_inputs_ui.py and four narrow integration sites in animation_worklist_ui.py. No init/core/C5/native/protocol/runtime/workspace/artist edits.",
+  "new_operators": [
+    "character_designer.original_inputs_attach",
+    "character_designer.original_inputs_edit",
+    "character_designer.original_inputs_save",
+    "character_designer.original_inputs_body_view",
+    "character_designer.original_inputs_publish",
+    "character_designer.original_inputs_close"
+  ],
+  "integration_changes": [
+    {
+      "file": "animation_worklist_ui.py",
+      "site": "module import",
+      "purpose": "Import only new UI classes/draw/cheap tag helper; no new native module is imported at UI load."
+    },
+    {
+      "file": "animation_worklist_ui.py",
+      "site": "_draw_rigging",
+      "purpose": "Return for the explicit Original inputs pair so Source20 is never mislabeled as ordinary Body Base."
+    },
+    {
+      "file": "animation_worklist_ui.py",
+      "site": "draw_worklist",
+      "purpose": "Draw independent Original inputs block before the old row-dependent Worklist; no selected-row/header/status writes."
+    },
+    {
+      "file": "animation_worklist_ui.py",
+      "site": "WORKLIST_CLASSES",
+      "purpose": "Expand six Original operators through the existing registration tuple; __init__ unchanged by this writer."
+    }
+  ],
+  "full_raw_inverse_equal_e57": true,
+  "all_old_operator_code_and_guards_byte_unchanged": true,
+  "backend_api_agreed": {
+    "module": "unity_animation_original_inputs",
+    "literal_pair_key": "character_designer_original_inputs_pair_v1",
+    "import_inputs": "(context, rig, prepared_report_file, prepared_report_sha256, clock_certificate_file, clock_certificate_sha256); Body/Source IDs and slots authenticated internally from original record",
+    "current": "(rig) authenticating execution entry",
+    "display_state": "(rig) cached only; None before cached reacquisition",
+    "display_fields": [
+      "rig",
+      "scene",
+      "base_action",
+      "base_slot",
+      "input_action",
+      "input_slot",
+      "enabled",
+      "tweak_enabled",
+      "edit_role",
+      "legacy_side"
+    ],
+    "edit_controls": "(context, rig)",
+    "key_current": "(context, rig)",
+    "view_body": "(context, rig, side=SOURCE|CUSTOM); readonly Body",
+    "publish_inputs": "(context, rig, filepath) -> exact return/publication three-field file pins",
+    "close_owned": "(context, rig)"
+  },
+  "source_contract_checks": {
+    "rig_from_current_scene_setup_only": true,
+    "local_rig_and_data_and_existing_main_record_required": true,
+    "no_rig_workspace_or_row_fallback": true,
+    "cheap_poll_and_cached_draw_only": true,
+    "lazy_native_import_requires_pair_for_draw": true,
+    "attach_requires_two_actual_existing_jsons": true,
+    "attach_file_sha_read_only_on_execute": true,
+    "source20_display_readonly_real_action_name_and_slot": true,
+    "custom_input_edit_save_only": true,
+    "no_edit_body_base_button": true,
+    "legacy_source_and_custom_body_views_explicit": true,
+    "publish_filepath_to_atomic_backend_only": true,
+    "publish_feedback_uses_actual_file_pins": true,
+    "no_old_backend_run_or_validate_row_calls": true,
+    "no_old_worklist_status_header_items_writes": true,
+    "normal_add_2ae_f10_guard_not_changed": true,
+    "no_new_scene_workspace_or_actor": true
+  },
+  "execution_counts": {
+    "AST": 0,
+    "compile": 0,
+    "target_imports": 0,
+    "tests": 0,
+    "python_processes": 0,
+    "Blender": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "workers": 0,
+    "builds": 0,
+    "deploy": 0,
+    "workspace_reads_or_writes": 0,
+    "artist_reads_or_writes": 0
+  },
+  "limitations": [
+    "Source implementation only; no syntax/AST/native/UI execution or behavioral test has been performed.",
+    "New backend Source is owned by rig_controls_review and still in flight; this owner records the agreed API, not acceptance of a final native backend pin.",
+    "No ordinary Add bypass, model equivalence, Body reimport, old-row promotion, source revision rewrite or publication result is claimed.",
+    "No clock certificate or preparation is generated/guessed by UI; absent or malformed actual inputs fail the explicit backend admission.",
+    "Root owns init/runtime lifecycle registration and any required core interlocks; all old ordinary operators/guards were deliberately kept byte exact."
+  ]
+}

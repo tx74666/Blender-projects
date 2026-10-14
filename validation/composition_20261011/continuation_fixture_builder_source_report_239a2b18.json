@@ -1,0 +1,170 @@
+{
+  "schema": "x.validation.character-composition-continuation-fixture-builder-source/1",
+  "utc": "2026-10-11T07:00:52.446638+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "fixture_generation_performed": false,
+  "passed": true,
+  "independent_review_status": "pending cache-only readback",
+  "source_file": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_continuation_fixture.py",
+    "sha256": "239a2b187106dc5592da74fc2bae12c5e37df87356ffc233cd50f4646ecef339",
+    "bytes": 16391
+  },
+  "source_checks": {
+    "in_memory_ast_syntax": "PASS",
+    "lines": 223,
+    "bare_assert_count": 0,
+    "producer_imports_or_invocations": 0,
+    "tests_executed": 0,
+    "Blender_or_Unity_or_SDK_or_CIM_calls": 0,
+    "independent_normalized_native_inverse_equal": true,
+    "old_native_raw_CRLF_count": 811,
+    "new_native_raw_CRLF_count": 813,
+    "config_pin_callable_not_shadowed_AST": true
+  },
+  "actual_inputs": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\first_stage_config.json",
+      "sha256": "68830ac302d6951cd65844a0941b9792f7a4fe55214558caf1c82f1bf1dc16f7",
+      "bytes": 2356
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\source_entry_receipt.json",
+      "sha256": "4a916f5d407b6ccfd2442f2408d6248bd0392995958c8c63610822f54dcb687e",
+      "bytes": 90895
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_natural_failure_readback_c5d1170c.json",
+      "sha256": "2291e1e7360b8431eafb0d2fd86b12eafe486d96a2760b58051867468a0a6189",
+      "bytes": 42810
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_projection_receipt_11_12.json",
+      "sha256": "cbf7528f2c014389ba3b4d29adc359e7dd89ec25e460b5cf51674f34ef8145cb",
+      "bytes": 4375
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_11\\python_projection.json",
+      "sha256": "5c1f5da5b46bf4f888f8ab226a86295775dae9020bd2af8d07f78e9336c1ae69",
+      "bytes": 33747
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_12\\candidate_projection.json",
+      "sha256": "4dd0fb1d45ba03b7723a899a7e3614a023120c8dd8e813e9678932e910194c94",
+      "bytes": 30574
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_continuation_source_report_20261011_0da00723.json",
+      "sha256": "d1e953f6a5f15f8d9c4a710a74077ec3839e71bd1dd66c803545dada885949b6",
+      "bytes": 6070
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_continuation_peer_source_review_20261011_0da00723.json",
+      "sha256": "fb442180f48c65304ffa019e0ef7502d9dbcbcbfd0784ad8e3b464d3a9bd66a1",
+      "bytes": 10306
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_runtime10_observed_bytecode_provenance_116.json",
+      "sha256": "0a09c09f9e965b530fa34270548989301e29f3b20792ea6307f8ddc71eda1234",
+      "bytes": 59952
+    }
+  ],
+  "output_contract": {
+    "fresh_directory": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12",
+    "exclusive_no_overwrite": true,
+    "source_entry_schema": "x.validation.character-composition-source-entry/1",
+    "frozen_file_count": 7,
+    "config_tool_count": 5,
+    "config_PIN_FIELDS": [
+      "path",
+      "sha256"
+    ],
+    "driver_original_sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+    "tools_source_manifest_tool_count": 11,
+    "continuation_keys": [
+      "entry",
+      "admission"
+    ],
+    "reuse_admission_exact_fields": [
+      "schema",
+      "numeric_report",
+      "failure_readback",
+      "owner_review",
+      "peer_review",
+      "projection_receipt"
+    ],
+    "owner_peer_projection_pins_exact_three_field_copy": true,
+    "existing_empty_profiles": [
+      "CONFIG",
+      "DATAFILES"
+    ],
+    "source_entry_config_runtime_full_PIN_FIELDS": [
+      "path",
+      "sha256"
+    ]
+  },
+  "prewrite_admission": [
+    "Exact immutable n11 config, entry, numeric failure readback and all failed report/job/snapshot/log/result files",
+    "Actual 28 unchanged source/model/artist/Link pins agree with original entry; full acceptance remains false",
+    "Old/new 167 and 173 inventories are exact; only serializer exporter changed, all leaf bytes rehashed",
+    "Actual serializer owner/peer/test and unchanged embedded-r6 pins",
+    "Exact continuation owner and peer; entry0da/native1ebf/test pins checked",
+    "Independently reverse explicit cases_runner seam and require source text exactly original nativece4",
+    "Current eleven canonical helper pins and seven frozen buffers",
+    "Every original source_inputs pin checked, with old canonical-native reference superseded by newnative while original frozen ce4 remains independently admitted",
+    "Final input rehash before first exclusive creation; finite JSON serialized entirely before creation",
+    "Hardpinned observed116 old runtime10 bytecode paths/file hashes/source-leaf associations; other extras reject and old167 source hashes remain mandatory."
+  ],
+  "preservation_scope": "All source identities, specs, A/B/model, native217/seek/object cases, physical SOURCE authorization and original moving Loop configuration remain exact. Only runtime association, disposable output paths and reviewed native helper change. Original spec files remain pinned readonly n11 inputs.",
+  "native_report_bridge": {
+    "schema": "x.validation.character-composition-native-continuation-bridge/1",
+    "source_only": true,
+    "native_execution_performed": false,
+    "passed": true,
+    "native_pending": true,
+    "owner_peer_reports": "Exact d1e/fb current SOURCE report pins",
+    "proof": "Owner+peer native_seam facts and independent exact inverse source text comparison",
+    "historical_clock_receipt": "Existing native_timebase_projection_receipt remains pinned historical clock proof; current runtime/full binding is snapshot_serializer_projection_receipt cbf."
+  },
+  "self_review_correction": "Draft plan() three-key pins were narrowed to exact two-key config pins after reading actual driver701.pinned. No builder invocation or output preceded the correction. Peer found CRLF versus LF literal mismatch before invocation; only inverse-comparison reads changed to explicit UTF8 read_text with universal-newline normalization. Raw SHA checks remain byte exact. Root required legacy exact two-field source_entry config/runtime/full pins; three fields now explicitly narrowed. The resulting config record is named stage_pin so it does not shadow the pin-shape helper. Source AST confirms no config_pin assignment. No producer invocation occurred. Actual Root SOURCE --write342 stopped prewrite on old runtime10 inventory because prior native116pycs existed; no n12 was created. Current source admits only the exact116 old runtime10 cache paths/hashes from a hardpinned SOURCE provenance receipt. No generic cache ignore and no old/new source leaf bypass.",
+  "limitations": [
+    "SOURCE review only, no producer import/CLI/help or fixture generation",
+    "Eleven acceptance tests are authored and compiled by tool owner, not executed in this review",
+    "No launch grant, native PASS, physical publication, Loop completion or QA seed implied; prior n11 stays failed",
+    "Independent peer and Root must approve source before producer invocation"
+  ],
+  "historical_draft": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_continuation_fixture_ad02ae8c_before_newline_fix.py",
+    "sha256": "ad02ae8c4b4f8eef14ea85e040997d26099c96ce082106c50a9ed4173b0a6ad7",
+    "bytes": 14642,
+    "status": "SOURCE-only draft invalidated before any producer import/invocation"
+  },
+  "historical_pre_shape_draft": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_continuation_fixture_78e83edf_before_entry_pin_shape.py",
+    "sha256": "78e83edfedec73e1c54c3a836c2d7cc38d6f5c6176511d5eaddd6638caa45390",
+    "bytes": 14640,
+    "status": "SOURCE-only predecessor; no producer invocation"
+  },
+  "old_runtime_bytecode_provenance": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_runtime10_observed_bytecode_provenance_116.json",
+    "sha256": "0a09c09f9e965b530fa34270548989301e29f3b20792ea6307f8ddc71eda1234",
+    "bytes": 59952
+  },
+  "observed_bytecode_summary": {
+    "cache_count": 116,
+    "cache_bytes": 5533150,
+    "cache_suffix": ".cpython-313.pyc",
+    "source_file_count": 167,
+    "scope": "OLD runtime_draft_10 only; old full11, new runtime11/full12 raw exact",
+    "cache_import_unmarshal_execution_delete": false,
+    "source_association": "Every approved cache basename maps to a pinned old .py source leaf; sourceSHA and raw cacheSHA checked before writes and final input rehash",
+    "limitation": "This source receipt observes raw bytecode and names, not semantic bytecode equivalence or native execution."
+  },
+  "historical_pre_cache_draft": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_continuation_fixture_342da270_before_old_cache_admission.py",
+    "sha256": "342da270dcadb2d386544af7e48c84a39179b8e03b65d73e1418664de489be5b",
+    "bytes": 14673,
+    "status": "Root once SOURCE --write stopped prewrite, no destination created; caches preserved"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "x.validation.composition-nla-track-identity-native-api/1",
+  "completed": true,
+  "artist_model_sdk_deployment_export_or_save_performed": false,
+  "blender": "5.2.0 LTS",
+  "source_pins": {
+    "old": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_09\\character_designer\\animation_composition.py",
+      "sha256": "c6b5c2f564239b002cfa5ff1be07bb3707e1cedcec4987bccad245710dc055f1",
+      "functions": {
+        "_nla_context": "d9af1d1b7524dec4b32716e3ec754fe4bfc9c595fbf470165edcf919564a6938",
+        "_tweak": "8bcf1abf95f81accf9ef9f993648fb003274c90b9c76f4bbc4094677c8ee5d8e"
+      }
+    },
+    "new": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+      "functions": {
+        "_nla_context": "d9af1d1b7524dec4b32716e3ec754fe4bfc9c595fbf470165edcf919564a6938",
+        "_tweak": "8677b7ed5d008e887551fee6294ffcbb086800ecdb200cbce97e266b737d8399"
+      }
+    }
+  },
+  "modes": [
+    {
+      "mode": "OBJECT",
+      "distinct_python_wrapper": true,
+      "native_equal": true,
+      "track_pointer": 1782116084848,
+      "old_exact_failure": "Error: No active strip(s) to enter tweak mode on\n",
+      "new_b_full_stack": [
+        2.0,
+        3.0,
+        0.0
+      ],
+      "switch_a_full_stack": [
+        2.0,
+        3.0,
+        0.0
+      ],
+      "return_b_full_stack_equal": true,
+      "protected_actions_exact": true,
+      "native_tweak_exited": true
+    },
+    {
+      "mode": "POSE",
+      "distinct_python_wrapper": true,
+      "native_equal": true,
+      "track_pointer": 1782116084848,
+      "old_exact_failure": "Error: No active strip(s) to enter tweak mode on\n",
+      "new_b_full_stack": [
+        2.0,
+        3.0,
+        0.0
+      ],
+      "switch_a_full_stack": [
+        2.0,
+        3.0,
+        0.0
+      ],
+      "return_b_full_stack_equal": true,
+      "protected_actions_exact": true,
+      "native_tweak_exited": true
+    }
+  ],
+  "negative_cases": [
+    {
+      "case": "foreign_track",
+      "rejected_before_selection": true
+    },
+    {
+      "case": "multiple_strips",
+      "rejected_before_selection": true
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "resource_owner": "X",
+  "resource_token": "X_ORIGINAL_REGISTRATION_RECOVERY_07738_03",
+  "written_utc": "2026-10-12T21:32:23.669Z",
+  "calls": {
+    "run": {
+      "start": {
+        "schema": "x.validation.process-start/1",
+        "stage": "Refresh",
+        "pid": 29192,
+        "process_filetime": "134363137722293672",
+        "started_utc": "2026-10-12T21:22:52.1872359Z",
+        "resource_token": "X_ORIGINAL_REGISTRATION_RECOVERY_07738_03",
+        "free_mib": 1224.3,
+        "request_sha256": "80eab2b8263f288f949004bc51a07982205250d32dcd305e803d312617eb839c",
+        "argv": [
+          "-B",
+          "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\call_original20_artist_sdk_long.py",
+          "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_03_calls\\run_request.py",
+          "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_03_calls\\run_caller",
+          "9877",
+          "80eab2b8263f288f949004bc51a07982205250d32dcd305e803d312617eb839c"
+        ],
+        "retained_handle": true
+      },
+      "end": {
+        "schema": "x.validation.process-end/1",
+        "stage": "Refresh",
+        "pid": 29192,
+        "process_filetime": "134363137722293672",
+        "retained_handle_natural_exit": true,
+        "exit_code": 0,
+        "ended_utc": "2026-10-12T21:23:37.6037343Z",
+        "elapsed_seconds": 45.4047634,
+        "owned_process_gone": true,
+        "process_termination_performed": false,
+        "operation_success_inferred": false
+      }
+    },
+    "verify": {
+      "start": {
+        "schema": "x.validation.process-start/1",
+        "stage": "Refresh",
+        "pid": 22120,
+        "process_filetime": "134363138327850258",
+        "started_utc": "2026-10-12T21:23:52.7527719Z",
+        "resource_token": "X_ORIGINAL_REGISTRATION_RECOVERY_07738_03_VERIFY",
+        "free_mib": 1688.1,
+        "request_sha256": "f1741c0a7a18e36db78be6f06046046e8d40005757ed845c534ce00149108d97",
+        "argv": [
+          "-B",
+          "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\call_original20_artist_sdk_long.py",
+          "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_03_calls\\verify_request.py",
+          "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_03_calls\\verify_caller",
+          "9877",
+          "f1741c0a7a18e36db78be6f06046046e8d40005757ed845c534ce00149108d97"
+        ],
+        "retained_handle": true
+      },
+      "end": {
+        "schema": "x.validation.process-end/1",
+        "stage": "Refresh",
+        "pid": 22120,
+        "process_filetime": "134363138327850258",
+        "retained_handle_natural_exit": true,
+        "exit_code": 1,
+        "ended_utc": "2026-10-12T21:24:31.8898170Z",
+        "elapsed_seconds": 39.1279548,
+        "owned_process_gone": true,
+        "process_termination_performed": false,
+        "operation_success_inferred": false
+      }
+    }
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_recovery_07738_03/recovery_report.json",
+    "sha256": "4869aee60d85c80da77716b4fbbe0d79b9972521701a7fa113e8abcea312586e",
+    "bytes": 22343
+  },
+  "strict_verification_completed": false,
+  "actual_standard_enable_completed": true,
+  "strict_failure": "RuntimeError: Original protected assets changed during refresh.",
+  "qualification_pending": true,
+  "actual_difference_evidence": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_recovery_07738_03/difference_analysis.json",
+    "sha256": "58b640b12bd46b11ac53b70c1b723ae8b85943a3e661cc643eb7a8f6191c0a9d",
+    "bytes": 2455
+  },
+  "owned_callers_natural_end": true,
+  "owned_callers_gone": true,
+  "artist_window_closed": false,
+  "artist_saved": false,
+  "resource_returned_to_parent": false,
+  "next": "Read-only narrow lifecycle qualification, then original integration/save/independent readback."
+}

@@ -1,0 +1,202 @@
+{
+  "schema": "x.validation.character-composition-ui-freezer-owner-source-review/1",
+  "utc": "2026-10-11T10:07:50.780557+00:00",
+  "reviewer": "/root",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\freeze_character_composition_continuation_ui_tools.py",
+    "sha256": "a59fc4ff29733929b293eb45d2e3088c15786a33bedb939b55f34524c582a31c",
+    "bytes": 9053
+  },
+  "preserved_donor_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\freeze_character_composition_continuation_ui_tools_9788f53a_before_headful09.py",
+    "sha256": "9788f53ae86d60856a91a412c6fcbc397fecfd6b462b07bc76b763530542d02e",
+    "bytes": 8990
+  },
+  "independent_source_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\continuation_ui_freezer_peer_source_review_headful09_a59fc4ff_r2.json",
+    "sha256": "9e5bf9df2930f90909b2f19c15acfa5a145d528123e627a1ae4573c2e20a3cad",
+    "bytes": 24968
+  },
+  "origin_frozen08_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\frozen_tools_receipt.json",
+    "sha256": "1b0d106c99302ff66e0f262b695b868604127c507509760ab24de1b8455f0832",
+    "bytes": 7873
+  },
+  "n15_source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\tools_source_manifest.json",
+    "sha256": "4f12871b17cf042618d96e23cfb340939ebcf4764ff10e1843c16f0e4f5c82d7",
+    "bytes": 4669
+  },
+  "n15_source_entry": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\source_entry_receipt.json",
+    "sha256": "111f933867cfd675b2204d250544518a21b507b106a1ec69020e85b1388bd534",
+    "bytes": 317100
+  },
+  "delta": {
+    "changed_tools": [
+      "run_character_composition_first_stage_continuation"
+    ],
+    "unchanged_count": 10
+  },
+  "ast_review": {
+    "changed_functions": [
+      "build"
+    ],
+    "unchanged_functions": [
+      "require",
+      "main"
+    ],
+    "nested_pin_load_unchanged": true,
+    "imports_unchanged": true,
+    "in_memory_syntax_compile_passed": true
+  },
+  "actual_helper_readback": [
+    {
+      "name": "run_character_composition_first_stage",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+        "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+        "bytes": 9852
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\run_character_composition_first_stage.py",
+        "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+        "bytes": 9852
+      }
+    },
+    {
+      "name": "verify_character_composition_native",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+        "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+        "bytes": 52884
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\verify_character_composition_native.py",
+        "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+        "bytes": 52884
+      }
+    },
+    {
+      "name": "composition_sync_acceptance",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+        "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+        "bytes": 21115
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\composition_sync_acceptance.py",
+        "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+        "bytes": 21115
+      }
+    },
+    {
+      "name": "composition_timing_acceptance",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+        "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+        "bytes": 50843
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\composition_timing_acceptance.py",
+        "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+        "bytes": 50843
+      }
+    },
+    {
+      "name": "composition_session_acceptance",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+        "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+        "bytes": 57217
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\composition_session_acceptance.py",
+        "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+        "bytes": 57217
+      }
+    },
+    {
+      "name": "composition_raise_authoring",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+        "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+        "bytes": 18339
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\composition_raise_authoring.py",
+        "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+        "bytes": 18339
+      }
+    },
+    {
+      "name": "run_character_composition_raise_stage",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+        "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+        "bytes": 20129
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\run_character_composition_raise_stage.py",
+        "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+        "bytes": 20129
+      }
+    },
+    {
+      "name": "run_character_composition_ui_fixture",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+        "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+        "bytes": 24773
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\run_character_composition_ui_fixture.py",
+        "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+        "bytes": 24773
+      }
+    },
+    {
+      "name": "composition_ui_checkpoints",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+        "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+        "bytes": 20498
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\composition_ui_checkpoints.py",
+        "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+        "bytes": 20498
+      }
+    },
+    {
+      "name": "release_projection",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+        "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+        "bytes": 7529
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\release_projection.py",
+        "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+        "bytes": 7529
+      }
+    },
+    {
+      "name": "run_character_composition_first_stage_continuation",
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+        "sha256": "23cda6830ce26421798df44b69b1c680b63536c393c9f22f16631f52818b411c",
+        "bytes": 66510
+      },
+      "prior": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_08\\run_character_composition_first_stage_continuation.py",
+        "sha256": "af08e593e350646a0055cb689641631c08e111015a61219b713a45a14d441435",
+        "bytes": 57213
+      }
+    }
+  ],
+  "scope": "Reviewed SOURCE bindings and exclusive-copy producer only; no helper execution or native/UI acceptance."
+}

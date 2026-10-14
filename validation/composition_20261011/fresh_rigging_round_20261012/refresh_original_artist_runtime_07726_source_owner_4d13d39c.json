@@ -1,0 +1,159 @@
+{
+  "schema": "x.validation.original-artist-runtime-refresh-source-owner/1",
+  "status": "SOURCE_READY_NATIVE_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "refresh_original_artist_runtime_07726.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726.py",
+      "sha256": "4d13d39c1106d72b39443d23622a21d3746e7e895ff8c134f1ffd6ecaf61b474",
+      "bytes": 32183
+    }
+  },
+  "readme": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726_README.md",
+    "sha256": "b4d9354cfcada9f864672800e83b7b9728469c926d20bc29a92c7d620ce172c5",
+    "bytes": 3734
+  },
+  "previous_frozen_source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726_3fa3bd1b_before_full_schema_defaults.py",
+    "sha256": "3fa3bd1b7ae52b262c0e44a5945616c00a2fcd293743045f52efdbff4642f1de",
+    "bytes": 31800
+  },
+  "previous_owner": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726_source_owner_3fa3bd1b.json",
+    "sha256": "3a7dbcf66a8c0641485ca1a6994cf8fecd119a2f541f0f9a08e09cf16c89f1b5",
+    "bytes": 3493
+  },
+  "full_inverse_A933_exact": true,
+  "full_inverse_target": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726_a933a4f5_before_composition_root_defaults.py",
+    "sha256": "a933a4f502208fe60f1453b7d125321698ccd02bfd1da20c0530bc6e69601b61",
+    "bytes": 31283
+  },
+  "complete_old_new_annotation_diff": {
+    "CharacterDesignerAnimationWorklistItem": {
+      "old_field_count": 26,
+      "new_field_count": 36,
+      "added": {
+        "workspace_path": {
+          "type": "StringProperty",
+          "source": "workspace_path: StringProperty(subtype='FILE_PATH', options={'HIDDEN'})"
+        },
+        "workspace_identity": {
+          "type": "StringProperty",
+          "source": "workspace_identity: StringProperty(options={'HIDDEN'})"
+        },
+        "composition_json": {
+          "type": "StringProperty",
+          "source": "composition_json: StringProperty(options={'HIDDEN'})"
+        },
+        "composition_sha256": {
+          "type": "StringProperty",
+          "source": "composition_sha256: StringProperty(options={'HIDDEN'})"
+        },
+        "application_role": {
+          "type": "StringProperty",
+          "source": "application_role: StringProperty(options={'HIDDEN'})"
+        },
+        "edit_scope": {
+          "type": "StringProperty",
+          "source": "edit_scope: StringProperty(options={'HIDDEN'})"
+        },
+        "b_edited": {
+          "type": "BoolProperty",
+          "source": "b_edited: BoolProperty(default=False, options={'SKIP_SAVE'})"
+        },
+        "composition_changed": {
+          "type": "BoolProperty",
+          "source": "composition_changed: BoolProperty(default=False, options={'SKIP_SAVE'})"
+        },
+        "effective_inputs_changed": {
+          "type": "BoolProperty",
+          "source": "effective_inputs_changed: BoolProperty(default=False, options={'SKIP_SAVE'})"
+        },
+        "export_needed": {
+          "type": "BoolProperty",
+          "source": "export_needed: BoolProperty(default=False, options={'SKIP_SAVE'})"
+        }
+      },
+      "removed": []
+    },
+    "CharacterDesignerAnimationWorklistState": {
+      "old_field_count": 22,
+      "new_field_count": 27,
+      "added": {
+        "composition_workspace_path": {
+          "type": "StringProperty",
+          "source": "composition_workspace_path: StringProperty(name='Composition Library', subtype='FILE_PATH')"
+        },
+        "composition_workspace_identity": {
+          "type": "StringProperty",
+          "source": "composition_workspace_identity: StringProperty(options={'HIDDEN'})"
+        },
+        "composition_catalog": {
+          "type": "CollectionProperty",
+          "source": "composition_catalog: CollectionProperty(type=CharacterDesignerAnimationWorklistCatalog)"
+        },
+        "composition_catalog_index": {
+          "type": "IntProperty",
+          "source": "composition_catalog_index: IntProperty(default=-1, min=-1)"
+        },
+        "composition_base_item_id": {
+          "type": "StringProperty",
+          "source": "composition_base_item_id: StringProperty(name='A Work Copy', options={'HIDDEN'})"
+        }
+      },
+      "removed": []
+    }
+  },
+  "old_UI": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\animation_worklist_ui.py",
+    "sha256": "4464c030dec7a41cdfa2acd0ce4b608c546fe64079763132632bbd19b89d3939",
+    "bytes": 33492
+  },
+  "new_UI": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_ui.py",
+    "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+    "bytes": 43636
+  },
+  "admission_scope": "Only existing project_old new-field default branch and docstring. Actual values are compared; no Scene data is changed.",
+  "root_defaults": {
+    "composition_workspace_path": "",
+    "composition_workspace_identity": "",
+    "composition_base_item_id": "",
+    "composition_catalog": {
+      "kind": "COLLECTION",
+      "items": []
+    },
+    "composition_catalog_index": -1
+  },
+  "row_defaults": {
+    "workspace_path": "",
+    "workspace_identity": "",
+    "composition_json": "",
+    "composition_sha256": "",
+    "application_role": "",
+    "edit_scope": "",
+    "b_edited": false,
+    "composition_changed": false,
+    "effective_inputs_changed": false,
+    "export_needed": false
+  },
+  "old_keys_recursive_exact": true,
+  "unknown_nondefault_wrong_path_fail": true,
+  "acceptance_rollback_all_other_Source_bytes_unchanged": true,
+  "execution_counts": {
+    "AST": 0,
+    "processes": 0,
+    "tests": 0,
+    "SDK": 0,
+    "Blender": 0,
+    "GUI": 0,
+    "deployment": 0,
+    "artist_save": 0
+  },
+  "created_utc": "2026-10-12T11:35:32.105Z"
+}

@@ -1,0 +1,165 @@
+{
+  "schema": "x.validation.character-composition-short-loop-tail-source/1",
+  "utc": "2026-10-11T08:48:01.140378+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "source_files": {
+    "continuation": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "af08e593e350646a0055cb689641631c08e111015a61219b713a45a14d441435",
+      "bytes": 57213
+    },
+    "prior_continuation": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_first_stage_continuation_5317df7f_before_inherited_fresh_tail.py",
+      "sha256": "5317df7fab6932a22565997720320984192352cb2a9c98965d58a921cbd0384a",
+      "bytes": 38541
+    },
+    "native": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    "driver": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+      "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "bytes": 9852
+    },
+    "timing_current": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+      "bytes": 50843
+    },
+    "persisted_fresh_numeric": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\composition_native_report.json",
+      "sha256": "32d5178e73f2900d21add8518ec6fd45fc4df40c41586f11a4abb00257d06eb9",
+      "bytes": 1545407
+    },
+    "persisted_first_stage": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\composition_first_stage_report.json",
+      "sha256": "916860cd83d4c2eafbc346017659855d96ba42f1f3bcaeea2fb182e365c4467d",
+      "bytes": 2192247
+    },
+    "persisted_physical_two": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\physical\\composition_sync_report.json",
+      "sha256": "d1624f1b737b90c162a0fb1d0436102c59b20d20acf46b675fe9c675f179d5af",
+      "bytes": 530658
+    },
+    "latest_crash_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_native_crash_protection_readback_64160.json",
+      "sha256": "496c1945714b87f380cdbe1eef125922fbdcfeba0bdaa1db4424bb033e5b4f68",
+      "bytes": 334778
+    },
+    "latest_exit": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\process_exit.json",
+      "sha256": "86225dbffdb3867c17ad6e66d32ea94bca9758cd5f62bec1bb5f1a2604818268",
+      "bytes": 572
+    },
+    "latest_source_entry": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\source_entry_receipt.json",
+      "sha256": "c16ae8f065288e033db6c02b0fd75aa2c54176b9b33d44405b9bf624aabf9a72",
+      "bytes": 207270
+    }
+  },
+  "source_checks": {
+    "in_memory_syntax_passed": true,
+    "changed_existing_functions": [
+      "physical_tail",
+      "run"
+    ],
+    "added_functions": [],
+    "unchanged_existing_functions": [
+      "require",
+      "sha",
+      "pin",
+      "load",
+      "digest",
+      "functions",
+      "validate_delta",
+      "validate_numeric",
+      "admit",
+      "main"
+    ],
+    "before_worker_ast_unchanged": true,
+    "unchanged_native_and_driver_raw_pins": true,
+    "target_module_imports_performed": 0,
+    "reviewer_tests_executed": 0
+  },
+  "admission_contract": {
+    "schema": "x.validation.character-composition-physical-tail-reuse/2",
+    "exact_fields": [
+      "schema",
+      "first_stage_report",
+      "native_report",
+      "physical_report",
+      "loop_failure",
+      "failure_readback",
+      "source_entry",
+      "owner_review",
+      "peer_review",
+      "latest_failure_readback",
+      "latest_exit",
+      "latest_source_entry"
+    ],
+    "latest_failure_pins": {
+      "latest_crash_readback": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_native_crash_protection_readback_64160.json",
+        "sha256": "496c1945714b87f380cdbe1eef125922fbdcfeba0bdaa1db4424bb033e5b4f68",
+        "bytes": 334778
+      },
+      "latest_exit": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\process_exit.json",
+        "sha256": "86225dbffdb3867c17ad6e66d32ea94bca9758cd5f62bec1bb5f1a2604818268",
+        "bytes": 572
+      },
+      "latest_source_entry": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\source_entry_receipt.json",
+        "sha256": "c16ae8f065288e033db6c02b0fd75aa2c54176b9b33d44405b9bf624aabf9a72",
+        "bytes": 207270
+      }
+    },
+    "source_replacements": "Exactly three owner/peer-reviewed canonical tools; original n12 903-input and latest n13 939-input baselines are checked separately. Only two known completed SOURCE Link post-publication hashes are admitted; all six published files are rehashed.",
+    "history": "n11/n12 reports remain completed false; n13 has no numeric, Loop, or seed report. No successful result is inferred from n13."
+  },
+  "execution_contract": {
+    "numeric_cases_inherited": 12,
+    "numeric_cases_executed": 0,
+    "fresh_isolated_variants_inherited": 2,
+    "fresh_isolated_variants_executed": 0,
+    "first_two_physical_source_publications_inherited": 2,
+    "physical_source_publications_to_execute": 1,
+    "before_loop": "Only exact Loop native217/Rest/scope/bones and shared41-domain admission, actual Loop Add, and unchanged native.run common FK/outer scope. No Pose row Add or numeric execution.",
+    "actual_loop": "Existing timing.author_hold_loop and physical.run_one execute genuine Loop control/key/foreground-worker/export/reimport/meta/hash/duration checks. No transform or FINISHED requirement is bypassed.",
+    "after_loop": "Only after the distinct third SOURCE Loop completed true, import the two genuine Pose rows for UI seed, capture/reacquire native anchors, compare actual packet/model/native217/Rest/current association and cheap B fingerprint against persisted n12/n11 evidence.",
+    "currentImportedForUI_fields": [
+      "item_id",
+      "packet_rest_proof",
+      "association",
+      "b_fingerprint",
+      "numeric_resampled",
+      "isolated_sync_executed",
+      "source_export_executed"
+    ],
+    "currentImportedForUI_false_fields": [
+      "numeric_resampled",
+      "isolated_sync_executed",
+      "source_export_executed"
+    ],
+    "seed": "Unchanged official native.save_qa_seed resolves actual current UI rows; fresh_packet_proofs_source explicitly pins the persisted n12 numeric report. No fabricated native row or Action handle.",
+    "phases": [
+      "actual_loop_import",
+      "actual_loop_authoring",
+      "actual_loop_physical",
+      "current_ui_pose_import_a1",
+      "current_ui_pose_import_a2",
+      "save_current_ui_seed"
+    ],
+    "recovery": "Original protected Actions/assets/workspace/association/session comparisons and unchanged native.run outer recovery/final checks remain required."
+  },
+  "limitations": [
+    "This is source syntax/AST and pinned admission review, not n14 native acceptance.",
+    "No continuation, timing, native helper, or producer was imported or invoked by this report writer.",
+    "No native, UI, SDK, CIM, or worker operation was performed.",
+    "The companion timing source is pinned here only for composition closure; its owner/peer source review is separate."
+  ]
+}

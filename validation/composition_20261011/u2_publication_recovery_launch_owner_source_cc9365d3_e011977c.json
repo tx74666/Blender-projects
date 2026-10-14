@@ -1,0 +1,176 @@
+{
+  "schema": "x.validation.character-composition-recovery-ui-launch-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "preflight_invoked": false,
+  "launcher_invoked": false,
+  "CIM_or_resource_query_performed": false,
+  "GUI_or_SDK_performed": false,
+  "fixture_or_profile_generated_by_this_review": false,
+  "source_files": {
+    "preflight_u2_publication_recovery.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u2_publication_recovery.py",
+      "sha256": "cc9365d3b4d4d9edda3df18163b9d5ce074e142b3283cd7dbc14545d31f88469",
+      "bytes": 29803
+    },
+    "launch_u2_publication_recovery_granted.ps1": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_u2_publication_recovery_granted.ps1",
+      "sha256": "e011977cfc77d7df69b08e1611de5706e8d7e39ceacbc8c8512fe6bc653aa719",
+      "bytes": 10112
+    }
+  },
+  "preserved_u1_donors": {
+    "preflight": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u1_publication_recovery.py",
+      "sha256": "44ac290ac5235ce2ea625fceb08e340bcb50f2f36b793525b489c7d57eb37026",
+      "bytes": 24052
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_u1_publication_recovery_granted.ps1",
+      "sha256": "61c589510f399a5542ef5ea8f1586b9cd21ad9a7399c2d072b78899b70fc97ed",
+      "bytes": 9457
+    },
+    "owner": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_publication_recovery_launch_owner_source_44ac290a_61c58951.json",
+      "sha256": "64cbfb69782c20fe15cab0a42cc17782ffe470e0210aa7d616f80be33be16248",
+      "bytes": 9365
+    },
+    "peer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_publication_recovery_launch_peer_source_44ac290a_61c58951.json",
+      "sha256": "f8edfe20c117eb04a2fddac5b340e4464276544859c7e3bed2cb39eae83955de",
+      "bytes": 8855
+    }
+  },
+  "reviewed_runner_claim_contract": {
+    "source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773
+    },
+    "function": "claim_evidence",
+    "lines": "178-191",
+    "requirement": "Before runner claim, EVIDENCE may contain only directories related to owned CONFIG/DATAFILES, never OS/control/log/report files. No runner guard changed.",
+    "prelaunch_write_targets": [
+      "ROOT/u2_launch_claim.json",
+      "ROOT/u2_stdout.log (Start-Process redirect)",
+      "ROOT/u2_stderr.log (Start-Process redirect)"
+    ],
+    "race_safe_launch_receipt_target": "ROOT/u2_launch_receipt.json",
+    "other_OS_control_receipts": [
+      "ROOT/u2_process_exit.json",
+      "ROOT/u2_natural_exit_receipt.json",
+      "ROOT/u2_spawn_failure.json",
+      "ROOT/u2_exit_audit_failure.json"
+    ],
+    "UI_helper_outputs_only": "EVIDENCE/u2 after runner owns claim; launcher never writes inside EVIDENCE."
+  },
+  "changes": {
+    "changed_Python_functions": [
+      "preflight",
+      "verify_completed_ui",
+      "main"
+    ],
+    "unchanged_Python_function_count": 5,
+    "added_Python_functions": 0,
+    "scope": "u1-to-u2 attempt/path/module-local names; five actual prior-failure provenance fields; ten CLI pairs; two explicit fresh-grant provenance SHA fields; OS outputs outside UI evidence. Other resource/runtime/helper/Source/numeric/PNG/normal-exit guards retained.",
+    "default_native_and_UI_helpers_changed": false,
+    "canonical_or_n16_or_u1_inputs_changed": false
+  },
+  "Parent_contract": {
+    "grant_schema": "randomrealm.character-composition-native-window/1",
+    "binding_schema": "randomrealm.character-composition-native-proof-binding/1",
+    "review_schema": "randomrealm.character-composition-recovery-ui-source-review/1",
+    "readback_schema": "randomrealm.character-composition-recovery-ui-input-readback/1",
+    "attempt": "u2",
+    "new_grant_fields": [
+      "previousUiFailureProtectionSha256",
+      "sourceProducerSha256"
+    ],
+    "previous_grant_reusable": false,
+    "headfulAllowed": true,
+    "backgroundAllowed": false,
+    "sourceDeploymentAllowed": false,
+    "artistMutationAllowed": false,
+    "readback_pins": "Prior u1 protection8ead, producer272c, parent7c7/8cec and six immutable failure artifacts mandatory in addition to existing critical UI pins; actual future grant/binding use external SHA pins without cyclic readback self-pins."
+  },
+  "explicit_cli_pairs": [
+    "grant",
+    "proof-binding",
+    "fixture",
+    "source-receipt",
+    "tools-receipt",
+    "completion-closure",
+    "audit-source",
+    "adapter-source",
+    "failed-attempt-closure",
+    "source-producer"
+  ],
+  "new_PowerShell_parameter_pairs": [
+    "FailedAttemptClosurePath/FailedAttemptClosureSha256",
+    "SourceProducerPath/SourceProducerSha256"
+  ],
+  "actual_Source_bindings": {
+    "failed_ui_protection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_natural_failure_protection_closure.json",
+      "sha256": "8ead12fe3dd254a503b89864df3013eac884e98b1475d4dd7b4b43fecc231f1a",
+      "bytes": 772943
+    },
+    "source_producer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_u2_publication_recovery_source.py",
+      "sha256": "272cdb88cc9a07e6f69d93aaac07adf54614ca46a653374d4f4b81a0ffb5e163",
+      "bytes": 10664
+    },
+    "fixture": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture.json",
+      "sha256": "d9f6beae5425d2dbea55a1ab51e216f24ad367cf7019c35571e6f8254c5fcf30",
+      "bytes": 2335
+    },
+    "UI_source_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture_source_receipt.json",
+      "sha256": "17159e00f7cd3b06ba9319ee220826b9378b2b4c2e6c1f7123b5bfd6510e73ea",
+      "bytes": 777475
+    },
+    "frozen10": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\frozen_tools_receipt.json",
+      "sha256": "a594751f08f7266c17396a9bc104e451b2b627c7bd63e16f856347559dbd365f",
+      "bytes": 25074
+    }
+  },
+  "prior_ui_failure_semantics": {
+    "attempt": "u1",
+    "pid": 32468,
+    "completed": false,
+    "natural_exit_code": 1,
+    "failure_boundary": "claim_evidence",
+    "session_started": false,
+    "seed_loading_started": false,
+    "authorization_reusable": false,
+    "immutable_pin_count": 1888,
+    "failure_file_count": 6
+  },
+  "actual_limited_Source_readback": {
+    "only_fixture_field_changed": "evidenceDirectory",
+    "extensions": [
+      "previous_ui_failure_protection",
+      "source_producer",
+      "parent_source_receipt",
+      "parent_fixture",
+      "previous_ui_attempt"
+    ],
+    "admitted_input_count": 1897,
+    "CONFIG_empty": true,
+    "DATAFILES_empty": true,
+    "all1897_raw_files_rehashed_by_this_review": false,
+    "gate_functions_called": false
+  },
+  "syntax": {
+    "Python_AST_in_memory_compile": 1,
+    "PowerShell_parser_only": 1,
+    "assert_statements": 0,
+    "target_modules_imported": 0,
+    "tests_run": 0,
+    "bytecode_written": false
+  },
+  "future_prerequisite": "New exact Parent u2 headful once-grant/proof/readback and actual fresh RAM/OS admission; this Source report neither issues nor consumes permission."
+}

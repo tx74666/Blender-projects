@@ -1,0 +1,105 @@
+{
+  "schema": "x.validation.original20-readonly-Body-metadata-source-owner/1",
+  "status": "SOURCE_READY_PURE_TESTS_AND_NATIVE_PENDING",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "a7fc96e0ad2e12ee8ddf425198fa3edd89006facd3abc906905b50223d7e5adf",
+      "bytes": 35730
+    },
+    "test_original_inputs_contract.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_original_inputs_contract.py",
+      "sha256": "d98d78d7d01fb5bd233479bd1e583f61af95d8e6f0f0013484ce39f724602b50",
+      "bytes": 15200
+    }
+  },
+  "prior_sources": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unity_animation_original_inputs_e85aa5ea_before_readonly_Body_digest.py",
+      "sha256": "e85aa5eac255d2fb1d244dabedb378f541a294c218031f94793bd0f7e42a1f56",
+      "bytes": 34657
+    },
+    "test_original_inputs_contract.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/test_original_inputs_contract_0c775a25_before_readonly_Body_digest.py",
+      "sha256": "0c775a25c3ba66879de2c7540934447fff6dc729be0f5262f314a550603337ba",
+      "bytes": 11301
+    }
+  },
+  "problem": {
+    "reported_by": "Root/Parent actual Native03 diagnosis",
+    "boundary": "E85 _properties_digest called composition._encode on existing Body properties containing historical Armature ID.",
+    "diagnostic_scope": "Read-only digest must not use the owner recovery encoder. This receipt does not fabricate a Native03 report pin or claim runtime acceptance."
+  },
+  "implementation": {
+    "only_changed_product_function": "_properties_digest",
+    "nested_readonly_helper_only": true,
+    "ID_headers_reuse_existing_reference_headers": [
+      "type",
+      "name",
+      "library"
+    ],
+    "ID_headers_are_detached_readonly": true,
+    "pointer_not_used_for_save_reopen_stability": true,
+    "tagged_mapping_sequence_prevent_plain_dict_ID_alias": true,
+    "primitive_fields_preserved": [
+      "None",
+      "str",
+      "bool",
+      "int",
+      "finite float"
+    ],
+    "IDPropertyGroup_items_and_Array_to_list_supported": true,
+    "bounds": {
+      "max_depth": 24,
+      "max_mapping_or_sequence_items": 10000
+    },
+    "unknown_or_nonfinite_rejected": true,
+    "no_persistent_reference_or_ID_write": true,
+    "Body_properties_create_and_validate_same_digest": true,
+    "Body_Action_curve_metadata_UUID_refs_unmodified": true
+  },
+  "source_checks": {
+    "full_product_raw_inverse_equal_E85": true,
+    "all_other_product_function_and_top_level_text_unchanged": true,
+    "existing_five_test_methods_unchanged": true,
+    "old_recovery_encoder_source_unchanged": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_composition.py",
+      "sha256": "4a4081287e70050e93a65a138726fdd586d72ab32a90bbfa0e32d7b0cb1a4055",
+      "bytes": 103447
+    },
+    "original_Armature_ownership_rejection_retained": true,
+    "AST_performed": false,
+    "syntax_compile_performed": false,
+    "target_imports": 0,
+    "tests_executed": 0,
+    "subprocesses_started": 0,
+    "Blender_SDK_GUI_calls": 0,
+    "build_or_deployment": false,
+    "artist_or_workspace_reads_or_writes": false
+  },
+  "pure_test_source": {
+    "existing_cases": 5,
+    "new_cases": 2,
+    "planned_total": 7,
+    "execution_status": "not executed; Root will run serially",
+    "new_cases_names": [
+      "test_body_digest_reads_existing_armature_reference_without_ownership_or_ID_writes",
+      "test_body_digest_changes_for_values_and_ID_headers_and_rejects_unknown_values"
+    ],
+    "meaningful_boundaries": [
+      "Actual product digest accepts an existing readonly Armature ID nested inside IDProperty-shaped Group/Array without invoking recovery encoder or writing ID.",
+      "Actual unchanged composition._encode separately rejects Armature ownership and leaves refs empty.",
+      "Values, native ID name/library, and dictionary impersonation change digest; nonfinite or unsupported values reject."
+    ]
+  },
+  "unchanged_artifacts": [
+    "Validation harness",
+    "Original refresh Source",
+    "Original integration Source",
+    "Old .77.26 frozen package and native failure reports"
+  ],
+  "next_step": "Root light pure checks then a separately approved .77.27 candidate; no current native acceptance claim."
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "x.validation.original20-linear-redo-qualification-pure/1",
+  "completed": true,
+  "native_execution_performed": false,
+  "tests_run": 15,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "unittest_elapsed_seconds": 3.522,
+  "tool_wall_seconds": 4.4493276999999996,
+  "command": "python.exe -B -m unittest test_original20_linear_redo_qualification -v",
+  "runtime": "C:/Users/Randy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_linear_redo_qualification.py",
+    "sha256": "d1a25ad902d579205e88a11c7bdb1e4c55ea2746c47fd2fad69856ff9c7aadc3",
+    "bytes": 6317
+  },
+  "tests": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/test_original20_linear_redo_qualification.py",
+    "sha256": "03047fa0ddf500fa594f29ed9be474ec7b2336b519e540c1d44325e372b4b2a3",
+    "bytes": 4105
+  },
+  "diagnostic_before": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/action_undo_diagnostic_07734_01/before_curve_undo_full20_payload.json",
+    "sha256": "9036b0dc5405c9626afea4428e95e2b3c5f6fcfc876cbf74ec9b41212edd8a13",
+    "bytes": 1064702
+  },
+  "diagnostic_after": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/action_undo_diagnostic_07734_01/after_curve_redo_full20_payload.json",
+    "sha256": "e2a531dc6b6210663e8b493e1cf0ade010f10c179d673d5f0632fca43d4f4e44",
+    "bytes": 1064742
+  },
+  "accepted_cases": [
+    "exact complete payload",
+    "exact200 observed positive f32 handle-X transitions"
+  ],
+  "rejected_cases": [
+    "non-LINEAR including equal payload",
+    "non-CONSTANT or muted curve domain",
+    "2ULP",
+    "handleY",
+    "keyco",
+    "unknown position",
+    "curve order",
+    "key setting",
+    "Action setting",
+    "199 transitions",
+    "reversed transition",
+    "type change",
+    "signed zero change"
+  ]
+}

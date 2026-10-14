@@ -1,0 +1,145 @@
+{
+  "schema": "cdesigner.x-source-bridge-receipt/1",
+  "created_utc": "2026-10-11T20:35:38.791969+00:00",
+  "scope": "Source phase; latest relevant runs replace earlier runs, not repeated-count totals",
+  "files": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "659c6e8e6ddfd5f0e5179e8a3dcaf77c7714369daa1d432a99bd9bf22f32e9be",
+      "bytes": 15476,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "364307151184fc9a3b934f03cc4269609365491a7fabeb06c36ccd87e6455aaa",
+      "bytes": 21500,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_export.py",
+      "sha256": "d236f82007007297b768cde2d0428afdd63c3a6b36aa3d19e5fcf4635470846d",
+      "bytes": 13090,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_collection.py",
+      "sha256": "a30e2db2fa865be8d94dd5e8150203f4918da9aa8eeb80c5b564d499c8cc73d2",
+      "bytes": 53268,
+      "syntax": "PASS"
+    }
+  ],
+  "behavior": [
+    "Freeze complete-packet, WorkID, draft, independent Action and both slot identities before any worker launch.",
+    "Export only pre-Rigging base Action with the captured native clock; reject changed range/rate/loop.",
+    "Hide only owned forward references during synchronous skeletal snapshot and restore them in finally.",
+    "Publish the immutable separate Target/Hint DTO with the FBX sidecar; main actionSlot equals returned sourceActionSlot.",
+    "Keep existing linked source/read-only ownership guards and ordinary export path."
+  ],
+  "source_tests": [
+    {
+      "file": "test_animation_rigging_contract.py",
+      "tests": 27,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_rigging_export.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_link.py",
+      "tests": 16,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist.py",
+      "tests": 15,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_link_source_images.py",
+      "tests": 6,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist_target.py",
+      "tests": 45,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist_rigging_collection.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist_collection.py",
+      "tests": 48,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_rigging_weapon.py",
+      "tests": 10,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_character_composition_weapon_sources.py",
+      "tests": 8,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_character_composition_weapon_ownership.py",
+      "tests": 13,
+      "result": "PASS",
+      "native": false
+    }
+  ],
+  "source_tests_total": 210,
+  "test_fixture_repairs": [
+    "Collection AST harness now includes actual _rigging_module dispatcher.",
+    "Old weapon units test no longer assumes an FBX importer; verifies actual captured-display before-geometry guard and preserves artist IDs."
+  ],
+  "wire": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\generic-rigging-design\\WIRE_FIXTURE_R3.json",
+    "sha256": "edc33c5d581a9fd79faaf4b49c69e81bd729b2adf983dd328e7a045933d46517",
+    "validation": "validate_capture + validate_export + build_export PASS",
+    "capture_fields": 22,
+    "weapon_preview_fields": 10,
+    "return_fields": 14,
+    "base_slot": 4,
+    "input_slot": 7,
+    "binding_sha256": "f92703dbdb8e10779e08434134fc7cca69d39d633dfccb48746a4aa087b92e73",
+    "capture_sha256": "6305c933c6e6cfe2de66347eaa3bcbecefd101061153ef47484684db45bd1af8",
+    "illustrative_placeholder": true,
+    "native_acceptance": false
+  },
+  "boundaries": {
+    "blender_native_calls": 0,
+    "sdk_calls": 0,
+    "gui_calls": 0,
+    "export_workers": 0,
+    "deployment_operations": 0,
+    "artist_scene_writes": 0,
+    "unity_csharp_writes": 0,
+    "git_commit_push_pr_release_operations": 0
+  },
+  "pending": [
+    "Native recovery pure checks and final owner pins.",
+    "Coordinated release/deployment and fresh isolated Blender/Unity validation.",
+    "Save verified artist scene in the original Rig and clean task test scenes after native acceptance."
+  ],
+  "limitations": [
+    "Source tests do not prove solver equivalence, actual native ID users, handler order, save/reopen or physical Unity return.",
+    "Old weapon remove_context external-reference guard is retained; previous u7 failure is not claimed repaired by this Source phase.",
+    "No Include Fingers behavior change was made."
+  ]
+}

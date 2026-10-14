@@ -1,0 +1,139 @@
+{
+  "schema": "x.validation.character-composition-publication-recovery-completion-ui-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "gui_execution_performed": false,
+  "fixture_generation_performed": false,
+  "completion_audit_invoked": false,
+  "tools_freezer_invoked": false,
+  "blender_sdk_or_cim_invoked": false,
+  "source_files": {
+    "audit_character_composition_publication_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    },
+    "build_character_composition_publication_recovery_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "3c41c9c93d3d864dec5745a5d72a9120adb533092890749e7eb569a9067cda8d",
+      "bytes": 24472
+    }
+  },
+  "source_functions": {
+    "audit_character_composition_publication_recovery.py": [
+      "require",
+      "checksum",
+      "sha",
+      "pin",
+      "record",
+      "read",
+      "module",
+      "same_pin",
+      "identifier",
+      "true_fields",
+      "validate_ack",
+      "validate_current_rows",
+      "audit",
+      "write_closure",
+      "exclusive_json",
+      "main"
+    ],
+    "build_character_composition_publication_recovery_ui_fixture.py": [
+      "require",
+      "api",
+      "freeze",
+      "frozen_api",
+      "build",
+      "main"
+    ]
+  },
+  "syntax_and_ast": {
+    "in_memory_compile_count": 2,
+    "assert_statement_count": 0,
+    "modules_imported": 0,
+    "runtime_tests_performed": 0,
+    "bytecode_written": false
+  },
+  "actual_readonly_source_bindings": {
+    "n16/recovery_config.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\recovery_config.json",
+      "sha256": "5fe6262c1a32fafb9866912241d76f5f6d6b60258e3299123c5b130d4952a4c6",
+      "bytes": 4077
+    },
+    "n16/source_entry_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\source_entry_receipt.json",
+      "sha256": "d0ca62b6822f4926399f180f18ebeadd659c8c92d7daa1dcede3251bf877046a",
+      "bytes": 392237
+    },
+    "n16/native_fixture.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\native_fixture.json",
+      "sha256": "292e5659669becff3ffcde4b3f9469b42f626e0a57fd3ba11c6cc4a12521c013",
+      "bytes": 2601
+    },
+    "n16/independent_source_readback_d0ca62b6.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\independent_source_readback_d0ca62b6.json",
+      "sha256": "95740d1e9711dd72dc4d6b26191e4c3e895e83ec62344decb2baab8f7b771418",
+      "bytes": 9208
+    },
+    "publication_recovery_UI_closure_source_plan_25d58608_20261011.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_UI_closure_source_plan_25d58608_20261011.json",
+      "sha256": "ca6b5359fd3976184d710200806efb88b1088bea98d654673b18d15e43bf07c4",
+      "bytes": 13282
+    },
+    "tools_headful_09/frozen_tools_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_09\\frozen_tools_receipt.json",
+      "sha256": "f25ac72e961bbb5bc2bdd2c86432d7b807850ae4e03d948004745864bf513b1f",
+      "bytes": 8140
+    },
+    "composition_animation_sidecar_budget_projection_receipt_13_14.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_animation_sidecar_budget_projection_receipt_13_14.json",
+      "sha256": "fbeb346ac463ef18983fec699684d612a01a94af0265003b8881c1e6dbba9d09",
+      "bytes": 62305
+    },
+    "legacy_pure_helpers": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_first_ui_fixture.py",
+      "sha256": "25d5860875ea4f18b45f8206243ddc6940e576aa3e98a00c49aa11ad5be76a4b",
+      "bytes": 78886
+    }
+  },
+  "schemas": {
+    "audit": "x.validation.character-composition-publication-recovery-completed-file-audit/1",
+    "closure": "x.validation.character-composition-publication-recovery-completion-closure/1",
+    "headful_tools": "x.validation.character-composition-publication-recovery-headful-tools/1",
+    "ui_adapter": "x.validation.character-composition-publication-recovery-ui-builder/1",
+    "UI_fixture_unchanged": "x.validation.character-composition-ui-fixture/1"
+  },
+  "truthful_counts": {
+    "numeric_cases_inherited": 12,
+    "numeric_cases_reexecuted": 0,
+    "fresh_isolated_variants_inherited": 2,
+    "fresh_isolated_variants_executed": 0,
+    "physical_source_publications_inherited": 3,
+    "physical_source_publications_executed": 0,
+    "current_receipt_acceptances": 1,
+    "current_loop_imports": 1,
+    "current_UI_imports_executed": 2,
+    "native_authoring_executed": 0,
+    "numeric_resamples_executed": 0,
+    "worker_exports_executed": 0
+  },
+  "source_scope": [
+    "Two new canonical tools only; old25d builder, recoveryA21, n16 inputs, runtime/full projections and all three rev1 publications unchanged.",
+    "Pure completed-file audit independently checks archived worker/result/405 curves/410x298 sidecar data plus fresh fullCustom before8f4a/after294d, full217 workerScope, current acknowledgement, UI2/seed and fresh inner/outer protection report flags. No curve/matrix reconstruction, authoring, sampling or worker launch.",
+    "Current n16 completed native report must retain inherited n11cases and n12fresh2 while proving currentUI2 independently. Old n15 reports remain failed and Loop authoring remains inherited.",
+    "Root-captured actual launch/grant/exit pins required; natural0/all-owned-workers-gone and sole artist27676 exact inventory. No new OS query is claimed by the audit/writer.",
+    "Completion closure is a separate exclusive file; seed provisional until actual completed audit + Root natural exit closure.",
+    "Freeze10 exact old09 eleven helpers, sole Sync131-to-db4 override from actual fbeb receipt, plus recoveryA21 as twelfth source ancestry. Independent new audit/adapter owner+peer source binding is mandatory before freeze writes.",
+    "UI fixture uses unchanged729 schema/validation,47cd EditA witness,7eaaa checkpoints/CreateA/.137/.537/tolerance.0002/settle2s/timeout1200/quitTrue. Source checks use first true HoldPose public UUID and current readonly A companion.",
+    "UI fixture requires actual completed n16 Root closure, current workspace/model/packets/weapon pins unchanged before Parent Collect/Prepare, fresh owned empty profiles and Windows path budget. Separate new GUI grant still required.",
+    "Original audit immutable_inputs rechecked just before UI writes; repeated ledger admissions cannot redefine their initial SHA/size.",
+    "All outputs exclusive; no fallback to old failed closure or old stage API."
+  ],
+  "provisional_corrections_closed": [
+    "Removed unconditional in-flight andFalse placeholder before declaration.",
+    "Explicit Source entry comparison now prewrite in build; no post-write rejection.",
+    "Removed ledger baseline-redefinition seam and repeated original audit pins before writes."
+  ],
+  "native_acceptance": "pending fresh Parent grant, completed recovery, natural exit0, actual Root closure, freezer source write and separately authorized headful UI. Source readiness is not native success."
+}

@@ -1,0 +1,163 @@
+{
+  "schema": "x.validation.character-composition-native-hud-source-review/1",
+  "created_utc": "2026-10-11T08:30:02.395570+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "tests_executed_by_reviewer": 0,
+  "sdk_gui_or_process_inventory_performed": false,
+  "passed": true,
+  "scope": "Independent exact-installed-commit source mechanism review; not actual Loop/native acceptance.",
+  "inputs": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "bytes": 49161
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+      "bytes": 57217
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Local\\Temp\\artist_final_validation.crash.txt",
+      "sha256": "54d9aa9749a5d5d7cef67f7051e0aa9169ba757f4aee70c6553c1968e9f56205",
+      "bytes": 26191
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_native_hud_context_source_diagnosis_dd7ab1c9.json",
+      "sha256": "cbef8f937c68b6c7b9c25a0795fac4eddbcc1d3a9596579ebb7a2595ba2b1196",
+      "bytes": 6673
+    }
+  ],
+  "blender_commit_from_actual_crash": "fbe6228777e7",
+  "crash": {
+    "exception": "EXCEPTION_ACCESS_VIOLATION",
+    "read_address": "0x0000000000000100",
+    "native_stack": [
+      "BKE_regiontype_from_id",
+      "ED_area_type_hud_ensure",
+      "wm_operator_finished",
+      "wm_operator_invoke",
+      "wm_operator_call_internal",
+      "WM_operator_call_py",
+      "bpy_op_fn_call"
+    ],
+    "python_backtrace_present": false
+  },
+  "primary_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/python/intern/bpy_operator_function.cc",
+      "lines": [
+        [
+          107,
+          139
+        ],
+        [
+          294,
+          303
+        ],
+        [
+          357,
+          400
+        ]
+      ],
+      "finding": "The second positional boolean is parsed as C_undo and forwarded as is_undo. Native operator dispatch and post-FINISHED view-layer update remain active."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/windowmanager/intern/wm_event_system.cc",
+      "lines": [
+        [
+          1174,
+          1179
+        ],
+        [
+          1185,
+          1267
+        ],
+        [
+          1521,
+          1610
+        ],
+        [
+          1850,
+          1868
+        ]
+      ],
+      "finding": "Python is_undo=False raises undo depth around the same internal operator execution. Rotate still calls its native exec. Nested depth prevents finished-operator registration, undo push and SET-HUD creation. True at top level permits registration and HUD ensure. Finish has no background guard."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/editors/transform/transform_ops.cc",
+      "lines": [
+        [
+          481,
+          501
+        ],
+        [
+          893,
+          905
+        ]
+      ],
+      "finding": "Rotate uses REGISTER and UNDO flags and native transform_exec. It initializes transform data, applies/ends the transform and returns FINISHED; init failure returns CANCELLED."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/editors/interface/regions/interface_region_hud.cc",
+      "lines": [
+        [
+          336,
+          350
+        ]
+      ],
+      "finding": "HUD ensure calls BKE_regiontype_from_id(area->type, HUD) before later hidden-by-user and redo poll checks."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/blenkernel/intern/screen.cc",
+      "lines": [
+        [
+          325,
+          333
+        ]
+      ],
+      "finding": "BKE_regiontype_from_id dereferences st->regiontypes without a null guard."
+    }
+  ],
+  "source_local_context": {
+    "view3d_lines": [
+      265,
+      305
+    ],
+    "view3d_policy": "Uses actual native window/area/WINDOW override and Pose rig; RNA area.type is checked, native ScrArea.type runtime pointer is not exposed by this helper.",
+    "timing_lines": [
+      377,
+      393
+    ],
+    "actual_source_call": "bpy.ops.transform.rotate('EXEC_DEFAULT', True, value=.073, orient_axis='X', orient_type='LOCAL')",
+    "existing_acceptance_guards": [
+      "exact owned Scope FK candidate",
+      "current native selected_pose_bones identity",
+      "native Tweak Action and slot",
+      "poll True",
+      "result FINISHED",
+      "finite before and after rotation",
+      "positive quaternion angle > 1e-7",
+      "real keyframe insertion",
+      "commit and Source protection"
+    ]
+  },
+  "conclusion": {
+    "proven": "The actual crash traverses finished-operator HUD lookup. The installed source shows positional False bypasses this finish-only registration/HUD path while executing the same native transform in the same context.",
+    "inference": "A null or invalid ScrArea.type runtime pointer is consistent with the read address and source dereference; the crash has no pointer locals and cannot prove its value. The crash stack does not identify the exact operator id.",
+    "minimal_candidate": "Use bpy.ops.transform.rotate('EXEC_DEFAULT', not bpy.app.background, ...) in this disposable QA path; retain headful True and every existing native selection/FINISHED/delta/key/commit guard.",
+    "native_pending": true,
+    "no_observed_claim": [
+      "No Python FINISHED result was persisted for the crashed transform.",
+      "No actual post-transform angle, third SOURCE publication or QA seed is established.",
+      "Source mechanism confidence does not authorize another native attempt."
+    ]
+  },
+  "suggested_regression": [
+    "Verify background invocation forwards exactly False and headful forwards True with unchanged native execution context/kwargs.",
+    "Verify CANCELLED, invalid/nonfinite state and zero delta remain rejecting, and no manual pose/curve fallback exists.",
+    "Persist plain pre-operation context/Action/slot/selection/poll/undo diagnostic through the existing atomic report writer before the native call.",
+    "Future separately authorized native Loop tail must prove actual FINISHED, positive finite native delta, correct keys/commit and output hashes."
+  ]
+}

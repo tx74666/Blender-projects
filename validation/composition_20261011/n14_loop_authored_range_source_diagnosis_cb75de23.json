@@ -1,0 +1,189 @@
+{
+  "schema": "x.validation.character-composition-loop-authored-range-source-diagnosis/1",
+  "utc": "2026-10-11T09:20:48.411517+00:00",
+  "source_only": true,
+  "native_execution_performed_by_reviewer": false,
+  "source_analysis_completed": true,
+  "native_acceptance_passed": false,
+  "pins": {
+    "author": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14\\loop_author\\composition_HoldLoop_authoring_report.json",
+      "sha256": "cb75de23ff3e614e6227f7986e6cdef61aaf092ff8867d010169c958423cfe0e",
+      "bytes": 41351
+    },
+    "native": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14\\composition_native_report.json",
+      "sha256": "ec6c6a09450954d7ab9ab8295a361299db1d5110448555b42f0d682d750ca373",
+      "bytes": 1546912
+    },
+    "first_stage": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14\\composition_first_stage_report.json",
+      "sha256": "43b9cf86bcc22ea370b5a8a991ceebabb575109f7e01ed824b5401efb2e4546e",
+      "bytes": 2197741
+    },
+    "timing": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14\\tools\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+      "bytes": 50843
+    },
+    "physical_helper": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14\\tools\\composition_sync_acceptance.py",
+      "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "bytes": 21115
+    },
+    "product_composition": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_11\\character_designer\\animation_composition.py",
+      "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+      "bytes": 99028
+    },
+    "product_export": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_11\\character_designer\\animation_composition_export.py",
+      "sha256": "2dd2173ec604918328b25945f22916d96ce8039a322c7ed034ee65f686b69984",
+      "bytes": 47158
+    },
+    "product_import": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_11\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    "packet": {
+      "path": "D:\\Codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\Cosha_Hold.cdanim.json",
+      "sha256": "9a8f629bb4c2194775508719d38abbeb790ab71900db5440b1772eeef870791a",
+      "bytes": 11191031
+    }
+  },
+  "actual_proven": {
+    "author_complete": false,
+    "failure_phase": "measure_genuine_foreground_B_for_physical_Sync",
+    "failure": "Moving B sample bounds exceed its prepared duration or authored selected-slot FK range.",
+    "control": "f_index.01.L",
+    "native_rotate_call_count": 1,
+    "native_rotate_result": [
+      "FINISHED"
+    ],
+    "finite_positive_rotation_delta_radians": 0.0729999509638654,
+    "key_insertions": [
+      {
+        "phase": 0.0,
+        "B_frame": 1.0,
+        "C_frame": -43.992000579833984
+      },
+      {
+        "phase": 0.5,
+        "B_frame": 149.00000200000002,
+        "C_frame": 74.40800476074219
+      },
+      {
+        "phase": 1.0,
+        "B_frame": 297.00000400000005,
+        "C_frame": 192.80799865722656
+      }
+    ],
+    "selection_readbacks": 4,
+    "pendingNativeOperator": false,
+    "actualundo_requested": false,
+    "b_hash_before": "8f4aa620fc3c35afc47627cd82de14773ff1398a74484dba53076d94c063a11e",
+    "b_hash_after": "294db6aa173971d8ca472e9ffb498d521ee7f408395cf9ef68588ddcfa25f0c9",
+    "packet_DTO_Source_A_unchanged": true,
+    "packet_sample_rate": 60.0,
+    "packet_duration": 4.9333334,
+    "spec_fps": 60.0,
+    "spec_sampleStart": 0.0,
+    "spec_sampleEnd": 4.9333334,
+    "packet_frames": 297,
+    "packet_first_time": 0.0,
+    "packet_last_time": 4.9333334
+  },
+  "source_chain": {
+    "author_open": "activate CUSTOM, enter actual sealed spec, author draft in native Tweak; exit(writeback=False) restores prior binding after explicit commit.",
+    "author_keys": "_frame_range uses packet-aligned spec.fps60; native nla_tweak_strip_time_to_scene maps each requested B frame into C; keyframe_insert(C_frame) lets Blender map back into local selected-slot keys.",
+    "commit": "_curve_payload reads native key vectors; _write_curve writes same vectors into selected Custom slot; no interval resampling or duration override.",
+    "foreground": "_numeric_proof -> foreground_one -> _export_session -> isolate_export -> effective_fingerprint -> validate_action_scope -> _validate_action_timing. Exception occurs before isolated rig sampling/worker.",
+    "guard": "finite native timing rate==spec.fps, start1, positive duration; moving requested range must fit selected FK key union within fixed1e-6 frame tolerance."
+  },
+  "source_functions": [
+    {
+      "name": "_author_loop",
+      "line": 317,
+      "end_line": 427,
+      "normalized_ast_sha256": "c671d778b86d2dd261bace7abc24685447f678495b8ed1f62aa5fb324b83012e"
+    },
+    {
+      "name": "_numeric_proof",
+      "line": 627,
+      "end_line": 634,
+      "normalized_ast_sha256": "20f88f55cd96ce01f9a79f70e1973e3f3b95978cd63170665aee016edcd03df3"
+    },
+    {
+      "name": "foreground_one",
+      "line": 131,
+      "end_line": 172,
+      "normalized_ast_sha256": "ef1b55684c9d6768f0bb67144424ed9ebe0e52a07d685aa0ac020ec702fffbdd"
+    },
+    {
+      "name": "_frame_range",
+      "line": 793,
+      "end_line": 795,
+      "normalized_ast_sha256": "869721abce83f7534d0e5656868478243e6fdc9ccf13eb9e732351c9d824f385"
+    },
+    {
+      "name": "commit",
+      "line": 1295,
+      "end_line": 1333,
+      "normalized_ast_sha256": "fe814f22aca6a725ba3401b9cc338d21604946e8d68d4d6ca063a6057c5596ad"
+    },
+    {
+      "name": "_write_curve",
+      "line": 757,
+      "end_line": 769,
+      "normalized_ast_sha256": "90899a185638a49ab0615db1b79183b8879d368f9791de995a5a765a857fbb5b"
+    },
+    {
+      "name": "_validate_action_timing",
+      "line": 113,
+      "end_line": 135,
+      "normalized_ast_sha256": "d3cbc7b0f21442e346dbbe346f4e23e2105d9bc93960ad16cf6dadcd3d3307ab"
+    },
+    {
+      "name": "effective_fingerprint",
+      "line": 171,
+      "end_line": 199,
+      "normalized_ast_sha256": "8992c76e42142e8ae3a5902fa2f8dac91cb44791f643ee1a1cefecf81b7eb55a"
+    },
+    {
+      "name": "_import_sample_frames",
+      "line": 479,
+      "end_line": 491,
+      "normalized_ast_sha256": "afa49ce60766cff6b093c4693c563fcfdccacbbd521369be9e2782772d47eb9f"
+    }
+  ],
+  "measured_plain_math": {
+    "requested_B_start": 1.0,
+    "requested_B_end": 297.00000400000005,
+    "float32_requested_B_start": 1.0,
+    "float32_requested_B_end": 297.0,
+    "requested_end_minus_float32_end_frames": 4.00000004674439e-06,
+    "fixed_guard_tolerance_frames": 1e-06,
+    "gap_exceeds_guard": true,
+    "duration_clause_exactly_satisfied": true,
+    "rate_metadata_equals_spec": true,
+    "actual_recorded_C_key_targets": [
+      -43.992000579833984,
+      74.40800476074219,
+      192.80799865722656
+    ],
+    "float32_endpoint_model_B_keys": [
+      1.0,
+      149.0,
+      297.0
+    ]
+  },
+  "conclusion": "Actual native authoring completed one mid rotation and three key insertions/commit; the later read-only range admission rejected. Prepared end297.000004 quantizes to297.0, with4e-6 gap greater than1e-6 admission tolerance. This is a concrete representation-boundary counterexample and leading diagnosis; actual selected Custom first/last key floats were not persisted, so the rejecting min/max clause and native endpoint require direct readback before asserting the exact observed endpoint.",
+  "next_step": "Keep sealed interval, rate and duration unchanged. Record actual selected Custom key union first/last plus request/duration at admission; evaluate a narrowly authenticated native representability boundary rule, rather than shortening prepared duration, resampling or arbitrary tolerance.",
+  "limitations": [
+    "No Blender/SDK/CIM/resource/process/test/code mutation by reviewer.",
+    "No third SOURCE physical export or new seed is claimed; author and enclosing reports remain false.",
+    "The report stores requested key times and successful key insertions, not native selected FCurve endpoint values.",
+    "Scene preview fps does not enter this product admission expression; no wrong Scene-clock import is inferred."
+  ]
+}

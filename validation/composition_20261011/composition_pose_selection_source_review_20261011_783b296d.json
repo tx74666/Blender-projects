@@ -1,0 +1,732 @@
+{
+  "schema": "x.validation.character-composition-pose-selection-source-review/1",
+  "createdUtc": "2026-10-11T02:47:47.595120+00:00",
+  "reviewer": "/root/export_scale_review",
+  "status": "READY_SOURCE_ONLY",
+  "scope": "Independent source/hash/AST/read-only review of the narrow modern PoseBone and legacy Bone selection repair; no native acceptance claim.",
+  "pins": {
+    "baseline_runtime": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\character_designer\\animation_composition.py",
+      "sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "bytes": 95834
+    },
+    "baseline_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\python_projection.json",
+      "sha256": "036ab7628c9173583e479d18aa400590a317d007cb349bf755efdcec1a48e191",
+      "bytes": 22831
+    },
+    "canonical_runtime": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "bytes": 96417
+    },
+    "focused_tests": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_selection.py",
+      "sha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+      "bytes": 13199
+    },
+    "repair_document": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_pose_selection_compatibility_20261011.md",
+      "sha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+      "bytes": 2139
+    },
+    "existing_compatibility_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_pose_assets.py",
+      "sha256": "19b51c76bc9998fe94a47f035b14f43ffb4ea5869d4efc5a82b9742150cba3d6",
+      "bytes": 46494
+    },
+    "actual_n7_failure": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\composition_first_stage_report.json",
+      "sha256": "4914a5fc85cbe95d23544d6a20e4be1f809350640ce15f3a68f4ff722e9a4439",
+      "bytes": 900082
+    }
+  },
+  "actualFailure": {
+    "attempt": "n7",
+    "completed": false,
+    "errorType": "AttributeError",
+    "error": "'Bone' object has no attribute 'select'",
+    "limitation": "Failed n7 preserved. Its failure receipts do not validate this new source; no completion checker or UI builder was run."
+  },
+  "diff": {
+    "addedFunctions": [
+      "_pose_selection_owner"
+    ],
+    "removedFunctions": [],
+    "changedFunctions": [
+      "_prior",
+      "_restore_prior",
+      "_restrict_selection"
+    ],
+    "unchangedFunctions": [
+      "_assert_hold_constant",
+      "_bag",
+      "_channel_rows",
+      "_commit_base",
+      "_constant_curve",
+      "_curve_payload",
+      "_curves",
+      "_decode",
+      "_editing_action",
+      "_encode",
+      "_export_session",
+      "_following_hold",
+      "_frame_range",
+      "_host",
+      "_layout",
+      "_library_state",
+      "_load",
+      "_motion_hash",
+      "_nla_context",
+      "_owned_tracks",
+      "_packet_for_item",
+      "_plain",
+      "_poll_sync",
+      "_prepared_reference_entry",
+      "_service",
+      "_slot",
+      "_store",
+      "_track",
+      "_tweak",
+      "_write_curve",
+      "active",
+      "add_work_item",
+      "begin_sync",
+      "bind_item",
+      "cancel_sync",
+      "capture_hold_pose",
+      "commit",
+      "composition_metadata",
+      "connect_library",
+      "create_reference_work_copy",
+      "enter",
+      "exit",
+      "find_reference",
+      "isolated_sync",
+      "item_fingerprint",
+      "item_spec",
+      "load_weapon",
+      "prepare_reference",
+      "reference_receipt",
+      "reference_receipt_key",
+      "refresh_configuration",
+      "register_b",
+      "register_runtime",
+      "remove_weapon",
+      "resume",
+      "set_edit_target",
+      "set_solo",
+      "unregister_runtime",
+      "validate"
+    ],
+    "unchangedFunctionCount": 59,
+    "nonFunctionTopLevelAstUnchanged": true,
+    "nonFunctionTopLevelNodeCount": 22,
+    "unifiedDiff": "--- D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\character_designer\\animation_composition.py\n+++ D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py\n@@ -853,6 +853,15 @@\n             for strip in track.strips]} for track in ad.nla_tracks]\n \n \n+def _pose_selection_owner(pb):\n+    \"\"\"Use per-object Pose selection, or the supported legacy Bone API.\"\"\"\n+    owner = pb if hasattr(pb, 'select') else pb.bone\n+    # An unknown API must fail before a write, rather than manufacture a\n+    # Python attribute that Blender would never use for native selection.\n+    owner.select\n+    return owner\n+\n+\n def _prior(context, rig):\n     ua, links = _host('unity_animation'), _host('animation_link')\n     ad = rig.animation_data\n@@ -860,7 +869,7 @@\n         'nla': _layout(rig), 'active_track': ad.nla_tracks.active.name if ad and ad.nla_tracks.active else '',\n         'active': context.view_layer.objects.active, 'selected': list(context.selected_objects),\n         'active_bone': rig.data.bones.active.name if rig.data.bones.active else '',\n-        'selected_bones': [b.name for b in rig.data.bones if b.select],\n+        'selected_bones': [pb.name for pb in rig.pose.bones if _pose_selection_owner(pb).select],\n         'locks': {pb.name: {'location': list(pb.lock_location), 'rotation': list(pb.lock_rotation),\n             'scale': list(pb.lock_scale), 'rotation_w': pb.lock_rotation_w,\n             'rotation_4d': pb.lock_rotations_4d, 'select': pb.bone.hide_select} for pb in rig.pose.bones},\n@@ -1194,7 +1203,7 @@\n         permitted = any(path.startswith(pb.path_from_id()) for path, _index in channels)\n         if enabled and not permitted:\n             pb.bone.hide_select = True\n-            pb.bone.select = False\n+            _pose_selection_owner(pb).select = False\n         elif enabled:\n             pb.bone.hide_select = session['prior']['locks'][pb.name]['select']\n \n@@ -1217,10 +1226,8 @@\n         pb.lock_location, pb.lock_rotation, pb.lock_scale = row['location'], row['rotation'], row['scale']\n         pb.lock_rotation_w, pb.lock_rotations_4d = row['rotation_w'], row['rotation_4d']\n         pb.bone.hide_select = row['select']\n-        pb.bone.select = pb.name in prior['selected_bones']\n         for key, value in prior['pb_properties'][pb.name].items():\n             pb[key] = value\n-    rig.data.bones.active = rig.data.bones.get(prior['active_bone']) if prior['active_bone'] else None\n     for key in (links.LINK_KEY, links.ACTION_KEY):\n         if key in prior['metadata']:\n             rig[key] = prior['metadata'][key]\n@@ -1238,6 +1245,11 @@\n         if context.view_layer.objects.get(obj.name) is obj:\n             obj.select_set(True)\n     context.view_layer.objects.active = prior['active']\n+    # Active assignment and mode recovery can select a bone. Restore the\n+    # exact per-object flags last, including an active but deselected bone.\n+    rig.data.bones.active = rig.data.bones.get(prior['active_bone']) if prior['active_bone'] else None\n+    for pb in rig.pose.bones:\n+        _pose_selection_owner(pb).select = pb.name in prior['selected_bones']\n     context.view_layer.update()\n \n \n"
+  },
+  "unchangedFunctionAstProofs": {
+    "_assert_hold_constant": {
+      "baseline_sha256": "fa00ff2f5f368fb9b3aed3ef9d59255ec52e9c459684d9c7992ebe0f2b392a95",
+      "canonical_sha256": "fa00ff2f5f368fb9b3aed3ef9d59255ec52e9c459684d9c7992ebe0f2b392a95",
+      "equal": true,
+      "canonical_lines": [
+        800,
+        809
+      ]
+    },
+    "_bag": {
+      "baseline_sha256": "d18aa5039da0263d0777e7b95a7a4d31359d5c1582c3204af74479628f316940",
+      "canonical_sha256": "d18aa5039da0263d0777e7b95a7a4d31359d5c1582c3204af74479628f316940",
+      "equal": true,
+      "canonical_lines": [
+        696,
+        707
+      ]
+    },
+    "_channel_rows": {
+      "baseline_sha256": "e0079596e464e28a5949b6dc81d0a89ac49e146bffb16b3c97204f34d5fffaf4",
+      "canonical_sha256": "e0079596e464e28a5949b6dc81d0a89ac49e146bffb16b3c97204f34d5fffaf4",
+      "equal": true,
+      "canonical_lines": [
+        761,
+        766
+      ]
+    },
+    "_commit_base": {
+      "baseline_sha256": "315f238d97a0da1b90b835a51ca877d02cd0043d431330d460f6959dbc31c79e",
+      "canonical_sha256": "315f238d97a0da1b90b835a51ca877d02cd0043d431330d460f6959dbc31c79e",
+      "equal": true,
+      "canonical_lines": [
+        1297,
+        1325
+      ]
+    },
+    "_constant_curve": {
+      "baseline_sha256": "29964aadfc37214e2c9f9700d5b1a2c88348e707fda2b5875def783126d7d0b4",
+      "canonical_sha256": "29964aadfc37214e2c9f9700d5b1a2c88348e707fda2b5875def783126d7d0b4",
+      "equal": true,
+      "canonical_lines": [
+        748,
+        758
+      ]
+    },
+    "_curve_payload": {
+      "baseline_sha256": "a16a7944e52c0dcf35b22632f43c61344bc5f26f4da855c30e1d0a847e0318fe",
+      "canonical_sha256": "a16a7944e52c0dcf35b22632f43c61344bc5f26f4da855c30e1d0a847e0318fe",
+      "equal": true,
+      "canonical_lines": [
+        721,
+        730
+      ]
+    },
+    "_curves": {
+      "baseline_sha256": "3242009ddd3b42518e334cc70c0cc244b0f0b0879e2a5db4213698d582139ff9",
+      "canonical_sha256": "3242009ddd3b42518e334cc70c0cc244b0f0b0879e2a5db4213698d582139ff9",
+      "equal": true,
+      "canonical_lines": [
+        710,
+        711
+      ]
+    },
+    "_decode": {
+      "baseline_sha256": "a569596d5ddce7987a970b415e13289034ef6dfbbcfce3cbbadba0080ec2c482",
+      "canonical_sha256": "a569596d5ddce7987a970b415e13289034ef6dfbbcfce3cbbadba0080ec2c482",
+      "equal": true,
+      "canonical_lines": [
+        637,
+        649
+      ]
+    },
+    "_editing_action": {
+      "baseline_sha256": "63961c719a9b2909127a0974223e7ec5ba1afd0ccfc88fb9e968773ade17210c",
+      "canonical_sha256": "63961c719a9b2909127a0974223e7ec5ba1afd0ccfc88fb9e968773ade17210c",
+      "equal": true,
+      "canonical_lines": [
+        812,
+        842
+      ]
+    },
+    "_encode": {
+      "baseline_sha256": "ae725cda2888c0aa0379ea8f95fd6ff773dcdd96b42838cd68bd15d229fc8dc0",
+      "canonical_sha256": "ae725cda2888c0aa0379ea8f95fd6ff773dcdd96b42838cd68bd15d229fc8dc0",
+      "equal": true,
+      "canonical_lines": [
+        618,
+        634
+      ]
+    },
+    "_export_session": {
+      "baseline_sha256": "f2b243a7e0ee564a76534f10e1d748808951f4bb69b30a82c32e5064a723c15f",
+      "canonical_sha256": "f2b243a7e0ee564a76534f10e1d748808951f4bb69b30a82c32e5064a723c15f",
+      "equal": true,
+      "canonical_lines": [
+        1559,
+        1573
+      ]
+    },
+    "_following_hold": {
+      "baseline_sha256": "5b197a2ef567193b631582d56b7d30e6fe1f9de58e49112f0d7626d17c732818",
+      "canonical_sha256": "5b197a2ef567193b631582d56b7d30e6fe1f9de58e49112f0d7626d17c732818",
+      "equal": true,
+      "canonical_lines": [
+        774,
+        797
+      ]
+    },
+    "_frame_range": {
+      "baseline_sha256": "869721abce83f7534d0e5656868478243e6fdc9ccf13eb9e732351c9d824f385",
+      "canonical_sha256": "869721abce83f7534d0e5656868478243e6fdc9ccf13eb9e732351c9d824f385",
+      "equal": true,
+      "canonical_lines": [
+        769,
+        771
+      ]
+    },
+    "_host": {
+      "baseline_sha256": "78e18ffebbb20f23f2ed5da62b1cb8e6c7a264635e5d37e9006c6303612e7cb8",
+      "canonical_sha256": "78e18ffebbb20f23f2ed5da62b1cb8e6c7a264635e5d37e9006c6303612e7cb8",
+      "equal": true,
+      "canonical_lines": [
+        39,
+        40
+      ]
+    },
+    "_layout": {
+      "baseline_sha256": "eb0591085d91a47494d69f7e9646cf36949955f832ce321b41e3bd7a25e25989",
+      "canonical_sha256": "eb0591085d91a47494d69f7e9646cf36949955f832ce321b41e3bd7a25e25989",
+      "equal": true,
+      "canonical_lines": [
+        845,
+        853
+      ]
+    },
+    "_library_state": {
+      "baseline_sha256": "ea238c3bc95b31de6000b26289f7d37795c0e8ace2ba12f3b04b043c84d1e94d",
+      "canonical_sha256": "ea238c3bc95b31de6000b26289f7d37795c0e8ace2ba12f3b04b043c84d1e94d",
+      "equal": true,
+      "canonical_lines": [
+        136,
+        148
+      ]
+    },
+    "_load": {
+      "baseline_sha256": "a9cf74a0be689668b986dcc853214813f89c6cf5291ef0497d58c70569916982",
+      "canonical_sha256": "a9cf74a0be689668b986dcc853214813f89c6cf5291ef0497d58c70569916982",
+      "equal": true,
+      "canonical_lines": [
+        673,
+        689
+      ]
+    },
+    "_motion_hash": {
+      "baseline_sha256": "282a950f7ca1ab75fe68b630959f3021f3b9c3e568c4f0d2d501943259d227b2",
+      "canonical_sha256": "282a950f7ca1ab75fe68b630959f3021f3b9c3e568c4f0d2d501943259d227b2",
+      "equal": true,
+      "canonical_lines": [
+        714,
+        718
+      ]
+    },
+    "_nla_context": {
+      "baseline_sha256": "35806c5c3b32ed2c3524b4f74f077f341fb1a672396714c584a334eb8a781724",
+      "canonical_sha256": "35806c5c3b32ed2c3524b4f74f077f341fb1a672396714c584a334eb8a781724",
+      "equal": true,
+      "canonical_lines": [
+        882,
+        916
+      ]
+    },
+    "_owned_tracks": {
+      "baseline_sha256": "3e5147e738910a17cd3b3ef1167f24c1c96b3a05a66123cb14e2f10715210b67",
+      "canonical_sha256": "3e5147e738910a17cd3b3ef1167f24c1c96b3a05a66123cb14e2f10715210b67",
+      "equal": true,
+      "canonical_lines": [
+        960,
+        988
+      ]
+    },
+    "_packet_for_item": {
+      "baseline_sha256": "9a04b347d41a4d08890c6337e821ee0acd4b8bf68f83dd8df941f4da114150bd",
+      "canonical_sha256": "9a04b347d41a4d08890c6337e821ee0acd4b8bf68f83dd8df941f4da114150bd",
+      "equal": true,
+      "canonical_lines": [
+        83,
+        92
+      ]
+    },
+    "_plain": {
+      "baseline_sha256": "54650c41f2d223af10c52afbc3a64e2ade04880ac8279f548b29caec41c94d0b",
+      "canonical_sha256": "54650c41f2d223af10c52afbc3a64e2ade04880ac8279f548b29caec41c94d0b",
+      "equal": true,
+      "canonical_lines": [
+        612,
+        615
+      ]
+    },
+    "_poll_sync": {
+      "baseline_sha256": "2b174d7466331b8c438615b9d3a5e827148e2c6849be7e77fff8c01eecdef442",
+      "canonical_sha256": "2b174d7466331b8c438615b9d3a5e827148e2c6849be7e77fff8c01eecdef442",
+      "equal": true,
+      "canonical_lines": [
+        1670,
+        1688
+      ]
+    },
+    "_prepared_reference_entry": {
+      "baseline_sha256": "a9af12640a350ba34b757474729d1366e64ee9190f41ed10bb940dea05672ed2",
+      "canonical_sha256": "a9af12640a350ba34b757474729d1366e64ee9190f41ed10bb940dea05672ed2",
+      "equal": true,
+      "canonical_lines": [
+        331,
+        383
+      ]
+    },
+    "_service": {
+      "baseline_sha256": "41675d4f1a3fce02fdf712f1b894343049ad16f5c8b419897957eb1ba3b42a58",
+      "canonical_sha256": "41675d4f1a3fce02fdf712f1b894343049ad16f5c8b419897957eb1ba3b42a58",
+      "equal": true,
+      "canonical_lines": [
+        43,
+        44
+      ]
+    },
+    "_slot": {
+      "baseline_sha256": "e335a4efc40bb574e97180e57602d94ee9290472f1fef0e0dcc70a9af9fc49f0",
+      "canonical_sha256": "e335a4efc40bb574e97180e57602d94ee9290472f1fef0e0dcc70a9af9fc49f0",
+      "equal": true,
+      "canonical_lines": [
+        692,
+        693
+      ]
+    },
+    "_store": {
+      "baseline_sha256": "ac8d86cec921061b2904e1d13f76b81e120b4f75dbb140bb1a20839ef64ea034",
+      "canonical_sha256": "ac8d86cec921061b2904e1d13f76b81e120b4f75dbb140bb1a20839ef64ea034",
+      "equal": true,
+      "canonical_lines": [
+        652,
+        670
+      ]
+    },
+    "_track": {
+      "baseline_sha256": "c7671a34a4cedab0e4e527affc480cf2fce285db2e90b19ce7a05684e4e4375c",
+      "canonical_sha256": "c7671a34a4cedab0e4e527affc480cf2fce285db2e90b19ce7a05684e4e4375c",
+      "equal": true,
+      "canonical_lines": [
+        943,
+        957
+      ]
+    },
+    "_tweak": {
+      "baseline_sha256": "4bc76f720f064659676d5310e42cb89506d94f65537e72673a3fc58eeda55fd1",
+      "canonical_sha256": "4bc76f720f064659676d5310e42cb89506d94f65537e72673a3fc58eeda55fd1",
+      "equal": true,
+      "canonical_lines": [
+        919,
+        940
+      ]
+    },
+    "_write_curve": {
+      "baseline_sha256": "90899a185638a49ab0615db1b79183b8879d368f9791de995a5a765a857fbb5b",
+      "canonical_sha256": "90899a185638a49ab0615db1b79183b8879d368f9791de995a5a765a857fbb5b",
+      "equal": true,
+      "canonical_lines": [
+        733,
+        745
+      ]
+    },
+    "active": {
+      "baseline_sha256": "7e437ce927c74c11c1b5f8dc814b5ccc1c898f3db29fb454323a8aa98a5162d3",
+      "canonical_sha256": "7e437ce927c74c11c1b5f8dc814b5ccc1c898f3db29fb454323a8aa98a5162d3",
+      "equal": true,
+      "canonical_lines": [
+        47,
+        48
+      ]
+    },
+    "add_work_item": {
+      "baseline_sha256": "670801321d0beb80cffec5f51648d4b8cbced7e66136b8257414d02c8c1f2628",
+      "canonical_sha256": "670801321d0beb80cffec5f51648d4b8cbced7e66136b8257414d02c8c1f2628",
+      "equal": true,
+      "canonical_lines": [
+        221,
+        328
+      ]
+    },
+    "begin_sync": {
+      "baseline_sha256": "b507f9a5da74008d5ac6febbbe3329c887367655fd872988055ed4006acf2074",
+      "canonical_sha256": "b507f9a5da74008d5ac6febbbe3329c887367655fd872988055ed4006acf2074",
+      "equal": true,
+      "canonical_lines": [
+        1576,
+        1667
+      ]
+    },
+    "bind_item": {
+      "baseline_sha256": "1c126aed3d3b2c6e3d1d231c77d1267ea7b63ba6d4840601376333dc7cc94a8d",
+      "canonical_sha256": "1c126aed3d3b2c6e3d1d231c77d1267ea7b63ba6d4840601376333dc7cc94a8d",
+      "equal": true,
+      "canonical_lines": [
+        69,
+        80
+      ]
+    },
+    "cancel_sync": {
+      "baseline_sha256": "fa3ac05bd9ce3ce21fe839a326ab10afa093af474e061c21f9513a97ac0160cb",
+      "canonical_sha256": "fa3ac05bd9ce3ce21fe839a326ab10afa093af474e061c21f9513a97ac0160cb",
+      "equal": true,
+      "canonical_lines": [
+        1691,
+        1697
+      ]
+    },
+    "capture_hold_pose": {
+      "baseline_sha256": "981053917b85d4d7cf84737cc16f96caa7b36e8052634740a069db473263c614",
+      "canonical_sha256": "981053917b85d4d7cf84737cc16f96caa7b36e8052634740a069db473263c614",
+      "equal": true,
+      "canonical_lines": [
+        1407,
+        1436
+      ]
+    },
+    "commit": {
+      "baseline_sha256": "fe814f22aca6a725ba3401b9cc338d21604946e8d68d4d6ca063a6057c5596ad",
+      "canonical_sha256": "fe814f22aca6a725ba3401b9cc338d21604946e8d68d4d6ca063a6057c5596ad",
+      "equal": true,
+      "canonical_lines": [
+        1256,
+        1294
+      ]
+    },
+    "composition_metadata": {
+      "baseline_sha256": "ed5fe812296724f72356548bcd769966319520bd0a613510c8f8ac31c604dfd7",
+      "canonical_sha256": "ed5fe812296724f72356548bcd769966319520bd0a613510c8f8ac31c604dfd7",
+      "equal": true,
+      "canonical_lines": [
+        119,
+        133
+      ]
+    },
+    "connect_library": {
+      "baseline_sha256": "0135009b9ce337c3432850506217eef52bde509efeee1aa9d91966ccf5bed070",
+      "canonical_sha256": "0135009b9ce337c3432850506217eef52bde509efeee1aa9d91966ccf5bed070",
+      "equal": true,
+      "canonical_lines": [
+        151,
+        184
+      ]
+    },
+    "create_reference_work_copy": {
+      "baseline_sha256": "bde0601351f04ecf419dfaf45ca7afb12605b42a112d890b272a4096c0a54e5a",
+      "canonical_sha256": "bde0601351f04ecf419dfaf45ca7afb12605b42a112d890b272a4096c0a54e5a",
+      "equal": true,
+      "canonical_lines": [
+        386,
+        445
+      ]
+    },
+    "enter": {
+      "baseline_sha256": "0daa774ba4e246ca991dcc17a4a3c571d960ba44baeb6644927b9f8de8ecbb45",
+      "canonical_sha256": "0daa774ba4e246ca991dcc17a4a3c571d960ba44baeb6644927b9f8de8ecbb45",
+      "equal": true,
+      "canonical_lines": [
+        1049,
+        1193
+      ]
+    },
+    "exit": {
+      "baseline_sha256": "4173f25b0f99b6b661769437e7a26cf2c6af77befc64b7344ed3ab481b2315b7",
+      "canonical_sha256": "4173f25b0f99b6b661769437e7a26cf2c6af77befc64b7344ed3ab481b2315b7",
+      "equal": true,
+      "canonical_lines": [
+        1461,
+        1530
+      ]
+    },
+    "find_reference": {
+      "baseline_sha256": "213730625a031761ef3f85f11dff04c426faee07831fde24e975238b56b23fd5",
+      "canonical_sha256": "213730625a031761ef3f85f11dff04c426faee07831fde24e975238b56b23fd5",
+      "equal": true,
+      "canonical_lines": [
+        481,
+        508
+      ]
+    },
+    "isolated_sync": {
+      "baseline_sha256": "0bc43554bb6722818477fbf40e0fade2310d547bad2ce266cd1a571eb98327eb",
+      "canonical_sha256": "0bc43554bb6722818477fbf40e0fade2310d547bad2ce266cd1a571eb98327eb",
+      "equal": true,
+      "canonical_lines": [
+        1534,
+        1556
+      ]
+    },
+    "item_fingerprint": {
+      "baseline_sha256": "aed655ef35b17c34b8af7f08f5ca2bb37db7246a0852e41cd2846ad6235ae158",
+      "canonical_sha256": "aed655ef35b17c34b8af7f08f5ca2bb37db7246a0852e41cd2846ad6235ae158",
+      "equal": true,
+      "canonical_lines": [
+        95,
+        116
+      ]
+    },
+    "item_spec": {
+      "baseline_sha256": "8307bb11e6261c9c632589f37189245d6f335b32fc0440d1e552e4ced57e6930",
+      "canonical_sha256": "8307bb11e6261c9c632589f37189245d6f335b32fc0440d1e552e4ced57e6930",
+      "equal": true,
+      "canonical_lines": [
+        51,
+        66
+      ]
+    },
+    "load_weapon": {
+      "baseline_sha256": "4f7865fc101a7e2dab7b17c26c4f97504e6e7cc93b9e3e8ece491e3d33d66e21",
+      "canonical_sha256": "4f7865fc101a7e2dab7b17c26c4f97504e6e7cc93b9e3e8ece491e3d33d66e21",
+      "equal": true,
+      "canonical_lines": [
+        1700,
+        1705
+      ]
+    },
+    "prepare_reference": {
+      "baseline_sha256": "8fa39b8f5ba012439182ad645061b5ddfa9706fc033152bb011d41ddb8d402ad",
+      "canonical_sha256": "8fa39b8f5ba012439182ad645061b5ddfa9706fc033152bb011d41ddb8d402ad",
+      "equal": true,
+      "canonical_lines": [
+        511,
+        609
+      ]
+    },
+    "reference_receipt": {
+      "baseline_sha256": "2a3826ee4a0dcfdf66364fd3f7ef745a11696648b4e6fb31345d5fd12c029d76",
+      "canonical_sha256": "2a3826ee4a0dcfdf66364fd3f7ef745a11696648b4e6fb31345d5fd12c029d76",
+      "equal": true,
+      "canonical_lines": [
+        457,
+        478
+      ]
+    },
+    "reference_receipt_key": {
+      "baseline_sha256": "51ba5880e85d74503fac16f9f1772ad8f78340c976d0c94226e9bf1e8129aeee",
+      "canonical_sha256": "51ba5880e85d74503fac16f9f1772ad8f78340c976d0c94226e9bf1e8129aeee",
+      "equal": true,
+      "canonical_lines": [
+        448,
+        454
+      ]
+    },
+    "refresh_configuration": {
+      "baseline_sha256": "3d5754d0a31ee651e823bb91be8548b8a123509a0f23a05fcc54515e7d41dccb",
+      "canonical_sha256": "3d5754d0a31ee651e823bb91be8548b8a123509a0f23a05fcc54515e7d41dccb",
+      "equal": true,
+      "canonical_lines": [
+        187,
+        218
+      ]
+    },
+    "register_b": {
+      "baseline_sha256": "ef34d07ef26410f4fd535d89c17e35f2e1174aeb41036045c9f8e486c8ea54dc",
+      "canonical_sha256": "ef34d07ef26410f4fd535d89c17e35f2e1174aeb41036045c9f8e486c8ea54dc",
+      "equal": true,
+      "canonical_lines": [
+        1715,
+        1731
+      ]
+    },
+    "register_runtime": {
+      "baseline_sha256": "f476ab5fbe13edcfa9d4c51759b4f0987faad587dc85e28171f08a56195beb30",
+      "canonical_sha256": "f476ab5fbe13edcfa9d4c51759b4f0987faad587dc85e28171f08a56195beb30",
+      "equal": true,
+      "canonical_lines": [
+        1734,
+        1737
+      ]
+    },
+    "remove_weapon": {
+      "baseline_sha256": "51d30a1450b9e21f31de49db8d1ccc93bf2e8bae87729742ff2c88ccc72729b8",
+      "canonical_sha256": "51d30a1450b9e21f31de49db8d1ccc93bf2e8bae87729742ff2c88ccc72729b8",
+      "equal": true,
+      "canonical_lines": [
+        1708,
+        1712
+      ]
+    },
+    "resume": {
+      "baseline_sha256": "c710dc544a73a1e0e6c438051a2948a8396ba96074ef705d39f694c9cb0cf16e",
+      "canonical_sha256": "c710dc544a73a1e0e6c438051a2948a8396ba96074ef705d39f694c9cb0cf16e",
+      "equal": true,
+      "canonical_lines": [
+        1451,
+        1458
+      ]
+    },
+    "set_edit_target": {
+      "baseline_sha256": "3b34a155f1451732c6796c9ef997df8ad2ff489738366ee132459f105e93d7b1",
+      "canonical_sha256": "3b34a155f1451732c6796c9ef997df8ad2ff489738366ee132459f105e93d7b1",
+      "equal": true,
+      "canonical_lines": [
+        1328,
+        1404
+      ]
+    },
+    "set_solo": {
+      "baseline_sha256": "5b0a71d6047942c593184baccf32343fde2c1c2454e5f7a45c5c0734a67f223e",
+      "canonical_sha256": "5b0a71d6047942c593184baccf32343fde2c1c2454e5f7a45c5c0734a67f223e",
+      "equal": true,
+      "canonical_lines": [
+        1439,
+        1448
+      ]
+    },
+    "unregister_runtime": {
+      "baseline_sha256": "6271e42eb9e67a6c07752df536a8933bcdc48559edd33d021998d233ea2f93de",
+      "canonical_sha256": "6271e42eb9e67a6c07752df536a8933bcdc48559edd33d021998d233ea2f93de",
+      "equal": true,
+      "canonical_lines": [
+        1740,
+        1745
+      ]
+    },
+    "validate": {
+      "baseline_sha256": "5b9b0141650b59579b2243dc716a3c02728097a5d7a797d0b4ed515bfdf561f2",
+      "canonical_sha256": "5b9b0141650b59579b2243dc716a3c02728097a5d7a797d0b4ed515bfdf561f2",
+      "equal": true,
+      "canonical_lines": [
+        991,
+        1046
+      ]
+    }
+  },
+  "reviewFindings": [
+    {
+      "result": "PASS",
+      "subject": "Modern per-object selection",
+      "evidence": "_pose_selection_owner returns PoseBone when its actual select property exists, even if a supported legacy Bone property also exists; _prior captures that owner for every PoseBone."
+    },
+    {
+      "result": "PASS",
+      "subject": "Legacy and unsupported API",
+      "evidence": "Fallback returns the native Bone only after owner.select is successfully read. Missing APIs raise before a synthetic select attribute is assigned; no default false state is fabricated."
+    },
+    {
+      "result": "PASS",
+      "subject": "Selection writes",
+      "evidence": "Restriction and restoration assign directly to the selected owner. No fallback/retry/caught write exception can conceal a failed PoseBone selection write."
+    },
+    {
+      "result": "PASS",
+      "subject": "Exact prior restoration",
+      "evidence": "Original snapshot/mode/object selection and active object are restored first; active bone assignment then precedes exact final per-owner flags. This preserves active-but-deselected and empty selections even when mode/active assignment changes flags."
+    },
+    {
+      "result": "PASS",
+      "subject": "Native authentication and receipt transaction",
+      "evidence": "reference_receipt_key, reference_receipt, find_reference, prepare_reference, _encode/_decode/_store/_load, _packet_for_item, _motion_hash, enter and all other unchanged functions have equal baseline/current AST hashes; complete receipt inventory, attempted-write rollback, native matching and strict association code remain unchanged."
+    },
+    {
+      "result": "PASS",
+      "subject": "Actual public Enter failure test boundary",
+      "evidence": "One initially reversed test call was corrected by the owner. Final test passes enter(context, spec, item_id) and asserts exact validate_item spec/item plus _item saved/item ID identities; actual rollback body remains exercised."
+    },
+    {
+      "result": "PASS",
+      "subject": "Existing canonical compatibility precedent",
+      "evidence": "control_pose_assets._apply_native already chooses PoseBone.select before legacy Bone.select at current lines747-748; source file is separately pinned."
+    }
+  ],
+  "validation": {
+    "ownerReported": {
+      "focusedTestCount": 8,
+      "focusedTestNames": [
+        "test_actual_prior_captures_per_object_pose_selection_without_Bone_select",
+        "test_actual_prior_preserves_supported_legacy_Bone_selection",
+        "test_actual_restore_preserves_mode_locks_properties_and_active_deselected_bone",
+        "test_actual_restore_preserves_no_active_bone_and_empty_selection",
+        "test_actual_restriction_deselects_only_outside_scope_on_both_APIs",
+        "test_failed_enter_uses_actual_restore_to_recover_original_selection",
+        "test_modern_selection_has_priority_when_legacy_field_also_exists",
+        "test_unknown_API_fails_instead_of_defaulting_or_manufacturing_selection"
+      ],
+      "result": "PASS",
+      "command": "python -m unittest discover -s tests -p test_character_composition_selection.py -v",
+      "syntaxCompilation": "PASS",
+      "attribution": "Reported by /root/rig_controls_review after correcting the public API-order test seam; not rerun by this reviewer."
+    },
+    "reviewerPerformed": {
+      "hashReadback": true,
+      "astComparison": true,
+      "sourceReview": true,
+      "testExecutions": 0,
+      "syntaxCompilationExecutions": 0,
+      "nativeExecutions": 0,
+      "workerExecutions": 0,
+      "sdkProbes": 0,
+      "unityOperations": 0,
+      "runtimeMutations": 0,
+      "projectionBuilds": 0,
+      "deployments": 0,
+      "artistOperations": 0
+    },
+    "remaining": "New pinned runtime/candidate and root-owned native acceptance are required. This review does not prove Blender execution, selection persistence after native save/reopen, UI pixels, physical export or deployment."
+  }
+}

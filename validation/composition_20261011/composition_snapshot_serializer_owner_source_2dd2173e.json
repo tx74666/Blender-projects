@@ -1,0 +1,143 @@
+{
+  "schema": "x.validation.composition-snapshot-serializer-source-owner/1",
+  "utc": "2026-10-11T06:29:30.821224+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "changed_runtime_sources": {
+    "animation_composition_export.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+      "sha256": "2dd2173ec604918328b25945f22916d96ce8039a322c7ed034ee65f686b69984",
+      "bytes": 47158
+    }
+  },
+  "numeric_reuse_delta": {
+    "old_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\python_projection.json",
+      "sha256": "a7c660d546bcc6f2b0720750eb03279b62a24f968967a385746c6f13effeb150"
+    },
+    "changed_functions": {
+      "animation_composition_export.py": [
+        "begin_isolated_export"
+      ]
+    },
+    "added_functions": {
+      "animation_composition_export.py": [
+        "_snapshot_editor_state",
+        "_prepare_snapshot_editor"
+      ]
+    },
+    "serialization_only": true
+  },
+  "before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_composition_export.py",
+    "sha256": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67",
+    "bytes": 44171
+  },
+  "unchanged_existing_functions": [
+    "_sha256",
+    "baseline_worker",
+    "_curves",
+    "_action_hash",
+    "_simple_action",
+    "_validate_curve",
+    "assert_constant_curve",
+    "_validate_action_timing",
+    "validate_action_scope",
+    "_pose_path",
+    "effective_fingerprint",
+    "effective_values_proof",
+    "_frame_range",
+    "export_timing",
+    "_source_wires",
+    "_check_closed_dependencies",
+    "_strip_id_refs",
+    "_copy_selected_action",
+    "_sample_effective",
+    "_artist_state",
+    "_raise_destination",
+    "isolate_export",
+    "_worker_scope",
+    "validate_export_receipt",
+    "poll_isolated_export",
+    "cancel_isolated_export"
+  ],
+  "checks": {
+    "one_standalone_boundary_call_immediately_before_snapshot_write": true,
+    "complete_normalized_module_ast_identical_to_frozen_numeric_runtime": true,
+    "all_other_existing_functions_ast_and_source_bytes_identical": true,
+    "worker_bytes_and_global_inventory_guards_unchanged": true,
+    "only_proven_export_panel_system_property_unset": true,
+    "distinct_native_object_and_armature_pointers_required": true,
+    "direct_target_and_self_driver_uses_fail_closed_even_when_muted": true,
+    "original_full_export_preferences_and_native_pointer_state_guarded": true,
+    "unset_pointer_preferences_not_materialized_by_readback": true,
+    "no_shared_isolation_scope_sampling_curve_matrix_rest_or_clock_changes": true
+  },
+  "evidence": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export_worker.py",
+      "sha256": "e98cd3202ad18f47a2f53e1e9d6999dd023089a11d73ab6950229516c33c5741",
+      "bytes": 7242
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_snapshot_id_links_source_r3_11d94f69.json",
+      "sha256": "b6fd99e828a6421092889cbd81dac267ef091d8dfdc43215ba16ff21e548969f",
+      "bytes": 101434
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_snapshot_system_property_source_diagnosis_20261011_b6fd99e8.json",
+      "sha256": "1c962b309f3a5e5e85de8208a9198c0118380f24fbf48ea976099ec9fc7e0785",
+      "bytes": 14927
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_scope_peer_notes_20261011_82298a4a.json",
+      "sha256": "7fb6103780a73a0ac149e326275030bc121ca6e6e19886cbd7a35609e23dba7f",
+      "bytes": 8428
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_natural_failure_readback_c5d1170c.json",
+      "sha256": "2291e1e7360b8431eafb0d2fd86b12eafe486d96a2760b58051867468a0a6189",
+      "bytes": 42810
+    }
+  ],
+  "pure_test_results": {
+    "test_count": 43,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0,
+    "batches": [
+      {
+        "file": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_snapshot_editor_state.py",
+          "sha256": "2bf2c7717f5d41a16ce0f83589c8b65bf6b442c661267de362b8c12a84f1aeb3",
+          "bytes": 6053
+        },
+        "test_count": 8,
+        "exit_code": 0,
+        "seconds": 0.002
+      },
+      {
+        "file": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_composition_controls_export.py",
+          "sha256": "60ce4ca50f66427cef9c00250740a0f4085e91631e5dfc42b51b43e6ea380720",
+          "bytes": 26909
+        },
+        "test_count": 35,
+        "exit_code": 0,
+        "seconds": 0.045
+      }
+    ],
+    "runtime": "Python -B unittest discover; no bpy/native process, SDK, deployment or artist writes"
+  },
+  "native_inventory_pending": true,
+  "physical_publication_pending": true,
+  "limitations": [
+    "The native writer must still serialize the exact9Objects/1Action and pass unchanged worker/value guards.",
+    "Original12case proof remains its immutable actual historical numeric result; this Source audit is not a new native execution."
+  ],
+  "primary_blender52_source": [
+    "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/makesrna/intern/rna_ID.cc#L605-L615",
+    "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/makesrna/intern/rna_access.cc#L6593-L6598"
+  ]
+}

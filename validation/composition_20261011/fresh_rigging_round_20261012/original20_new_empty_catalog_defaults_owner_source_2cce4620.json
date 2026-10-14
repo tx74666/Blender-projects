@@ -1,0 +1,50 @@
+{
+  "schema": "x.validation.original20-new-empty-catalog-defaults-source-owner/1",
+  "status": "SourceReady_native_pending",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "validate_original20_controls.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls.py",
+      "sha256": "2cce4620c90d21b10c71c569449069b3cecddd5bcc9b46c7ed042f7e6a7a389b",
+      "bytes": 32337
+    }
+  },
+  "before": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls_3931ee99_before_composition_catalog_defaults.py",
+    "sha256": "3931ee99bb7f1cf0ac0791688f4960eaa0f7d53f4aaae5819879ad6e408ec5ff",
+    "bytes": 30824
+  },
+  "whole_byte_inverse_to_3931_exact": true,
+  "source_delta": {
+    "protection": "Derive only missing composition_catalog=[]/index=-1 in copied full_worklist value after checking both absent in old RNA record and custom_properties and actual candidate defaults.",
+    "guard": "Require current candidate composition_catalog_index==-1; original old_state/guard_old calls unchanged."
+  },
+  "original_snapshot": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z/artist_latest_snapshot_receipt.json",
+    "sha256": "99b08426346d77908dbed93e518bc0e2370701a0e8ee906df7d36cb072bb2949",
+    "bytes": 6210450,
+    "changed": false
+  },
+  "evidence_read": {
+    "old_full_worklist_known": true,
+    "both_fields_absent_from_record_and_custom_properties": true,
+    "new_actual_RNA_definition": "CollectionProperty composition_catalog and IntProperty composition_catalog_index default=-1",
+    "native02_Root_reported_failure": "7098 check_loaded_snapshot KeyError composition_catalog before public20; no native performed by owner"
+  },
+  "preservation": {
+    "original_7098_source_unchanged": true,
+    "old_headers_rows_catalog_Body_slots_rawRest_assets_guards_retained": true,
+    "qualified_saved10_and_unsaved_Pose_limits_retained": true,
+    "new_default_not_misrepresented_as_old_saved_value": true
+  },
+  "execution": {
+    "AST": 0,
+    "compile": 0,
+    "tests": 0,
+    "target_imports": 0,
+    "processes": 0,
+    "native_SDK_GUI": 0
+  },
+  "limits": "Actual candidate defaults and all subsequent public20/native guards must pass on the next owned clone; Source adaptation is not native acceptance."
+}

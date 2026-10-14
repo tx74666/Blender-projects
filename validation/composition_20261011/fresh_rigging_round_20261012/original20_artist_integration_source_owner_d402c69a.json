@@ -1,0 +1,173 @@
+{
+  "schema": "x.validation.original20-artist-integration-source-owner/1",
+  "status": "SOURCE_READY_NATIVE_PENDING",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "integrate_original20_artist.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/integrate_original20_artist.py",
+      "sha256": "d402c69a252252535a72991884e4ac2b3b6076c00a9a5f53ab2f7c345af5b5e5",
+      "bytes": 29171
+    }
+  },
+  "reviewed_dependencies": {
+    "refresh_source": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726.py",
+      "sha256": "a933a4f502208fe60f1453b7d125321698ccd02bfd1da20c0530bc6e69601b61",
+      "bytes": 31283
+    },
+    "clone_source": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls.py",
+      "sha256": "3931ee99bb7f1cf0ac0791688f4960eaa0f7d53f4aaae5819879ad6e408ec5ff",
+      "bytes": 30824
+    },
+    "backend": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "e85aa5eac255d2fb1d244dabedb378f541a294c218031f94793bd0f7e42a1f56",
+      "bytes": 34657
+    },
+    "protection": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_cosha_control_round.py",
+      "sha256": "7098c3b20a5a115423913ce91268cc4fd9a57adab9973c9c6c2000e2afd2d468",
+      "bytes": 42400
+    },
+    "inherited_protection": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/new_official_cosha_round.py",
+      "sha256": "cfaa6dc580d69dbdc7c752078752f2a3cbe89f33ec02a60c5186a196fba4cdcb",
+      "bytes": 45017
+    },
+    "light": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/snapshot_latest_original_artist.py",
+      "sha256": "6df88f6e605a2a4e96eb1d3f261ed456dbe150c3e54a0d1e68f0f5aa962ff971",
+      "bytes": 16039
+    },
+    "oracle": {
+      "path": "D:/Blender/Projects/Character/X/validation/direct_original_rig_return_20261011/validation_preservation.py",
+      "sha256": "260b2bc581df220ea861d18f6b369d104561d5a3d119e21e5e52e9e230219a5d",
+      "bytes": 24274
+    },
+    "verifier": {
+      "path": "D:/Blender/Projects/Character/X/validation/direct_original_rig_return_20261011/verify_addon_refresh_isolated.py",
+      "sha256": "f220d2f398e16a190715fd28a9c161207bcbeaf05946ff9d516038408ba2bf32",
+      "bytes": 14318
+    },
+    "pose_writer": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/preserve_original_pose_action.py",
+      "sha256": "702aa1b69291cba7e8bc722d3324507f8d412043a6b15503d97a4b9fb9cc5458",
+      "bytes": 7540
+    },
+    "pose_write_receipt": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/Pose-preservation_01/Pose_library_write_report.json",
+      "sha256": "6ac66dc320e88238075a243586cdb92b535da14cc4decf912886dedb912296d4",
+      "bytes": 496343
+    },
+    "pose_readback_receipt": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/Pose-preservation_02_readback/Pose_library_readback_report.json",
+      "sha256": "26123aaff8dd5a83e00611ae52ca1aa1e4bb30db69294b99dfb1f5a9d6391aa2",
+      "bytes": 495682
+    }
+  },
+  "review": {
+    "mode": "text and byte readback only",
+    "syntax_compile_performed": false,
+    "AST_performed": false,
+    "target_imports": 0,
+    "tests_executed": 0,
+    "subprocesses_started": 0,
+    "Blender_SDK_GUI_calls": 0,
+    "deployment_performed": false,
+    "artist_or_shared_workspace_read_or_write_performed": false,
+    "source_draft_snapshots_preserved": [
+      "integrate_original20_artist_2b83c696_source_draft.py",
+      "integrate_original20_artist_fe9881c5_before_lazy_admission.py"
+    ],
+    "copied_Pose_curves_and_pose_content_functions_verbatim": true,
+    "Pose_writer_module_not_imported": true,
+    "automatic_entrypoint": false,
+    "run_functions": 1
+  },
+  "admission": {
+    "clone_schema": "x.validation.original20-controls-clone/1",
+    "clone_source_sha256": "3931ee99bb7f1cf0ac0791688f4960eaa0f7d53f4aaae5819879ad6e408ec5ff",
+    "actual_completed_clone_required": true,
+    "actual_edit_and_two_public_saves_restored_BF59_required": true,
+    "actual_final_Return14_twenty_scalar_publication_required": true,
+    "clone_save_reopen_required": true,
+    "retained_END_schema": "x.validation.resource-release/1",
+    "matching_natural_exit_0_and_owned_closed_required": true,
+    "refresh_schema": "x.validation.original-artist-runtime-refresh/1",
+    "same_original_PID_FILETIME_and_proof_chain_required": true,
+    "actual_completed_refresh_07726_190_required": true,
+    "actual_future_pins_parameterized_not_fabricated": true,
+    "current_original_must_equal_refresh_after_light_and_dirty": true
+  },
+  "protection": {
+    "baseline": "Actual current original memory, all11 Actions including Pose; never saved10 qualification.",
+    "reuse": "Only7098 read-only methods bound without Round constructor, plus6DF light/refresh full selected-slot Action content/260B asset oracle/F220 context and pose.",
+    "Unknown_action_content_rejected": true,
+    "original_action_pointer_and_slot_inventory_preserved": true,
+    "full_original_action_contents_properties_motion_refs_preserved": true,
+    "old_rows_header_catalog_derived_feedback_and_files_preserved": true,
+    "original_native_IDs_preserved": true,
+    "only_new_IDs_allowed": "Exact new readonly Controls Source Action and editable Controls Custom Action; two native pointers.",
+    "only_new_Rig_property_allowed": "E85 PAIR_KEY pointing to exact new Controls Source Action",
+    "raw_original_Rest_data_properties_bone_properties_pose_properties_NLA_clock_preserved": true,
+    "observed_mesh_material_weights_ShapeKeys_color_groups_widget_modifiers_preserved": true,
+    "original_context_and_live_pose_restored_after_close": true,
+    "world_geometry_equivalence_claimed": false
+  },
+  "sequence": [
+    "Admit actual clone/END/refresh/runtime/protection/Pose backup input chains before mutation.",
+    "Capture live all11 Actions/full contents/nativeID inventory/light/rows/assets/context/pose/fake-user flags.",
+    "Normal qualified import of pinned E85 lazy backend in authorized run only; no registration.",
+    "Public Original20 import, exact initial20 native curve coordinates, Return14 values/clock/WorkID/bindings equal restored clone excluding process-native Action name/slot fields.",
+    "Public close; persistent PAIR retained, original all11/rows/Body/native state/assets guards must pass.",
+    "Existing Pose ACDD content equals sealed C956/26123 backup/readback; only Pose.use_fake_user False→True is allowed.",
+    "Recheck all immutable inputs and190 installed Source leaves before saving.",
+    "Original save_mainfile must FINISHED, same original filepath, dirtyFalse; then guard/read actual saved SHA and report."
+  ],
+  "failure_behavior": {
+    "no_save_before_all_pre_save_guards": true,
+    "no_auto_retry": true,
+    "public_close_only_for_owned_active_preview": true,
+    "no_private_Body_or_curve_reconstruction": true,
+    "Pose_flag_restored_on_pre_save_failure": true,
+    "failed_original_content_not_saved_by_script": true,
+    "post_save_failure_reports_actual_save_result_and_saved_flag": true,
+    "native_acceptance_pending": true
+  },
+  "run_keyword_parameters": [
+    "expected_pid",
+    "external_process_filetime",
+    "authorization_token",
+    "external_authorization_confirmed",
+    "script_sha256",
+    "output_root",
+    "protected_artist_sha256",
+    "clone_report",
+    "clone_report_sha256",
+    "clone_exit_receipt",
+    "clone_exit_receipt_sha256",
+    "refresh_receipt",
+    "refresh_receipt_sha256",
+    "package_manifest",
+    "package_manifest_sha256"
+  ],
+  "output_schema": "x.validation.original20-artist-integration/1",
+  "output_filename": "original20_artist_integration_report.json",
+  "output_root_policy": "New existing empty ROUND child; exclusive initial report.",
+  "explicit_boundaries": {
+    "ordinary_Attach": false,
+    "Body_or_model_import": false,
+    "new_Rig": false,
+    "repair": false,
+    "QA_target_edit": false,
+    "public_keys_or_Undo": false,
+    "original_control_publication": false,
+    "worker_or_Unity_Collect_Apply": false,
+    "original_reopen": false,
+    "process_close": false,
+    "Root_final_readonly_saved_original_reopen_pending": true
+  }
+}

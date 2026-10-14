@@ -1,0 +1,56 @@
+{
+  "schema": "x.validation.native-rigging-preview-weight-source-semantics/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "unchanged_native_runtime": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+    "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+    "bytes": 78327
+  },
+  "test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+    "sha256": "3b9a05733b1b4dd01591a60a03a7f44f7dce272851e61c15de361501812682d9",
+    "bytes": 28692
+  },
+  "prior_test_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\test_animation_rigging_recovery_8b647487_before_preview_semantics.py",
+    "sha256": "8b647487087bdc5dc0e87133a3e2cdd5fc7faa271421f49d1c660550841e9b6d",
+    "bytes": 19678
+  },
+  "product_patch_needed": false,
+  "runtime_bytes_unchanged": true,
+  "prior_recovery_function_class_AST_unchanged": true,
+  "actual_source_findings": [
+    "_apply never multiplies stored rigWeight; enabled preview uses constraintWeight for each arm.",
+    "_frame gates on session.enabled and skips owned _BUSY/_SUSPENDED, including nested base_only.",
+    "activate parameter enabled is transient Tweak editing; global session.enabled follows authenticated capture.previewEnabled.",
+    "Stored rigWeight0/weights/capture/Return remain immutable; explicit view is conceptually effective global1."
+  ],
+  "pure_test_results": {
+    "test_count": 12,
+    "new_preview_cases": 5,
+    "unchanged_recovery_cases": 7,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 1.023,
+    "command": "C:/Program Files/Python312/python.exe -B -m unittest discover -s tests -p test_animation_rigging_recovery.py -v",
+    "summary": "Ran 12 tests in 1.023s; OK"
+  },
+  "new_tests_actual_AST": [
+    "raw0+enabled _frame→_apply invokes both arm IK without saved-weight edits",
+    "disabled session _frame makes no input/solver writes",
+    "actual nested base_only + exception suspends preview callbacks, restores prior state, no weight rewrite",
+    "constraint/position/rotation/hint masks remain independent and honored",
+    "actual activate enabledFalse means no transient Tweak while authenticated preview stays enabled"
+  ],
+  "real_bpy_or_numpy_imports": 0,
+  "addon_registration": 0,
+  "native_operations": 0,
+  "limits": [
+    "Fake API tests prove source routing and masking only; actual native deform/HUD/operator behavior remains pending.",
+    "No weight data or fingerprint/Return schema change.",
+    "No disk/artist/workspace change or old package/freeze overwrite."
+  ]
+}

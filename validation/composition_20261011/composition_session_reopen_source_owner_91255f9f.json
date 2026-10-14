@@ -1,0 +1,185 @@
+{
+  "schema": "x.validation.character-composition-session-reopen-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "owner": "/root/worklist_review",
+  "source_files": {
+    "composition_session_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "91255f9fe392a284fac332d8135e3deaa82b560b57b5a72a7e4f4eceb9dd604e",
+      "bytes": 58352
+    }
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_session_acceptance_47cd966e_before_headful_reopen_seams.py",
+    "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+    "bytes": 57217
+  },
+  "source_delta": {
+    "changed_existing_functions": [
+      "run_steps"
+    ],
+    "unchanged_existing_function_count": 24,
+    "unchanged_existing_functions_AST_and_text": [
+      "_sha",
+      "_require",
+      "_write",
+      "_evidence",
+      "_modules",
+      "_current",
+      "_pose",
+      "_error",
+      "_a_only",
+      "_full_stack",
+      "_c_native_domains",
+      "_edit_a_c_witness",
+      "_view3d",
+      "_work_copy",
+      "_drain",
+      "_checkpoint",
+      "visual_guard",
+      "checkpoint_state",
+      "_pose_hidden",
+      "_show_control",
+      "_weapon_acceptance_steps",
+      "_weapon_acceptance",
+      "_positive_a_edit",
+      "run"
+    ],
+    "added_functions": [],
+    "top_level_AST_unchanged": true,
+    "normalized_full_module_inverse_AST_equal": true,
+    "inverse_exact_edits": [
+      "Replace each headful reopen branch with its original one-statement BG open branch.",
+      "Rename only run_steps Pose selection loop selection_owner back to historical owner."
+    ],
+    "BG_original_open_statements_preserved": true,
+    "failure_handlers_and_final_preference_restore_AST_exact": true,
+    "Scope_bones_A_readonly_UndoRedo_SaveResume_Close_positiveA_and_existing_guards_unchanged": true
+  },
+  "internal_reopen_seam": {
+    "schema": "x.validation.character-composition-ui-reopen-boundary/1",
+    "exact_fields": [
+      "path",
+      "phase",
+      "sceneName",
+      "schema",
+      "sha256"
+    ],
+    "phases": [
+      "active_save_reopen",
+      "commit_close_and_closed_reopen"
+    ],
+    "seams": [
+      {
+        "path_key": "active",
+        "sha_variable": "active_sha",
+        "deleted_native_locals": [
+          "context",
+          "saved",
+          "item",
+          "a_item",
+          "session",
+          "_item",
+          "scope",
+          "_scope",
+          "_tracks",
+          "base",
+          "_base_slot",
+          "prior_b_action",
+          "prior_b_source",
+          "prior_action",
+          "ui_context",
+          "selections",
+          "pb",
+          "selection_owner"
+        ],
+        "field_set": [
+          "path",
+          "phase",
+          "sceneName",
+          "schema",
+          "sha256"
+        ]
+      },
+      {
+        "path_key": "closed",
+        "sha_variable": "closed_sha",
+        "deleted_native_locals": [
+          "context",
+          "saved",
+          "item",
+          "a_item",
+          "session",
+          "_item",
+          "scope",
+          "_scope",
+          "_tracks"
+        ],
+        "field_set": [
+          "path",
+          "phase",
+          "sceneName",
+          "schema",
+          "sha256"
+        ]
+      }
+    ],
+    "payload_plain_values_only": true,
+    "headful_open_delegated_to_controller_outside_old_override": true,
+    "no_new_override_or_visual_checkpoint": true,
+    "first_statement_after_each_seam_is_fresh_current": true,
+    "controller_next_tick_required": true,
+    "sceneName_source": "str(context.scene.name) detached after successful own QA save; no guessed Scene identity."
+  },
+  "owner_shadow_fix": {
+    "original_session_owner_preserved_as_plain_string": true,
+    "old_problem": "run_steps Pose loop reused owner and replaced the session owner with selection RNA.",
+    "new_loop_variable": "selection_owner",
+    "root_explicit_authorization": true,
+    "guard_semantics_unchanged": true
+  },
+  "protected_plain_evidence_retained": [
+    "item_id",
+    "a_item_id",
+    "owner",
+    "spec",
+    "prior_snapshot",
+    "prior_mode",
+    "prior_action_name",
+    "prior_global_undo",
+    "prior_b_row",
+    "b_custom_before",
+    "a_custom_before",
+    "a_source_hash",
+    "before_edit",
+    "captured",
+    "committed",
+    "active_sha",
+    "closed_sha",
+    "view_proof",
+    "c_witness",
+    "report",
+    "paths",
+    "seconds",
+    "tolerance"
+  ],
+  "validation": {
+    "stdlib_compile_source_only": 1,
+    "AST_readback_only": true,
+    "tests_run": 0,
+    "target_imports": 0,
+    "helper_invocations": 0,
+    "native_calls": 0,
+    "shared_workspace_reads": 0,
+    "OS_queries": 0
+  },
+  "scope": {
+    "only_canonical_session_file_changed": true,
+    "runner_controller_context_helper_changed_by_this_owner": false,
+    "frozen_helpers_seeds_failed_attempts_changed": false,
+    "runtime_collectors_exports_or_safety_settings_changed": false
+  },
+  "limits": "SOURCE READY only. This headful generator requires the separately reviewed Controller/owned_scene_context implementation to consume its five-field reopen seams outside overrides, reopen with autoexec disabled and reacquire native IDs on the next tick. Existing BG behavior retained. Actual GUI/native/Undo/reopen acceptance pending a fresh exact grant."
+}

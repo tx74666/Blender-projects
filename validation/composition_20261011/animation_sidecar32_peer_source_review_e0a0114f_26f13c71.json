@@ -1,0 +1,334 @@
+{
+  "schema": "x.validation.character-composition-animation-sidecar-bound-peer-source-review/1",
+  "utc": "2026-10-11T10:45:05.568661+00:00",
+  "reviewer": "/root/export_scale_review",
+  "source_only": true,
+  "passed": true,
+  "status": "SOURCE_READY",
+  "native_execution_performed": false,
+  "candidate_or_acceptance_module_imports_performed": false,
+  "tests_rerun_by_reviewer": 0,
+  "SDK_GUI_CIM_resource_calls": 0,
+  "product_source_edits_performed": false,
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_sidecar32_owner_source_e0a0114f.json",
+    "sha256": "e68a079e01172e756ebddf4e81d10d6e0c0d8890da784187a5eae565d23d2b8e",
+    "bytes": 10871
+  },
+  "CSharp_owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\character_animation_return_metadata_32mib_source_owner_26f13c71.json",
+    "sha256": "95811734cf126a5f80be56772298a58c9d2c93c559172915bd916701d7a573f8",
+    "bytes": 1779
+  },
+  "changed_runtime_sources": {
+    "animation_link.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "05a981398b7c4edca7e43de1ac8e7ae8fbabb803dda2e05bed877803bab6f83c",
+      "bytes": 19796
+    },
+    "animation_worklist_collection.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+      "sha256": "e0a0114f9c990bbc9687f982a445e384bf23fd35abc77c24ee7787456638a324",
+      "bytes": 36939
+    },
+    "animation_worklist_new.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_new.py",
+      "sha256": "fa0396f50879f8312442502438286494200986760ec82119fee8deb9b286bbc1",
+      "bytes": 46722
+    }
+  },
+  "changed_tool_sources": {
+    "composition_sync_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "db4d61e9deaa6833137507b49957178bc833bd5b83512fff1f809181ad49ab96",
+      "bytes": 21223
+    }
+  },
+  "changed_embedded_sources": {
+    "unity_runtime/Editor/CharacterAnimationReturn.cs": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "26f13c7191756eacfc189ed728eebbc7c580fb0ec1b4cbab23115c73bf1f143b",
+      "bytes": 46320
+    }
+  },
+  "Python_independent_source_proofs": [
+    {
+      "file": "animation_link.py",
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+        "sha256": "05a981398b7c4edca7e43de1ac8e7ae8fbabb803dda2e05bed877803bab6f83c",
+        "bytes": 19796
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_link_aabd94b5_before_sidecar32.py",
+        "sha256": "aabd94b5ce0b2cac63ed88d1f24fab35636e0eb14aacd07de105d7e84ef3fccb",
+        "bytes": 19666
+      },
+      "changed_functions": [],
+      "added_functions": [],
+      "removed_functions": [],
+      "unchanged_existing_function_count": 17,
+      "whole_normalized_source_inverse_exact": true,
+      "whole_module_inverse_AST_exact": true
+    },
+    {
+      "file": "animation_worklist_collection.py",
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+        "sha256": "e0a0114f9c990bbc9687f982a445e384bf23fd35abc77c24ee7787456638a324",
+        "bytes": 36939
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_collection_7e306c7a_before_sidecar32.py",
+        "sha256": "7e306c7af9e3b55aacd84ca5b16a44d3980b459ca905a07111c99132b6b9968f",
+        "bytes": 36915
+      },
+      "changed_functions": [
+        "_published_composition"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "unchanged_existing_function_count": 31,
+      "whole_normalized_source_inverse_exact": true,
+      "whole_module_inverse_AST_exact": true
+    },
+    {
+      "file": "animation_worklist_new.py",
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_new.py",
+        "sha256": "fa0396f50879f8312442502438286494200986760ec82119fee8deb9b286bbc1",
+        "bytes": 46722
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_new_b332692c_before_sidecar32.py",
+        "sha256": "b332692c2119c369916a126ec689b5dbdf68c63c7534f54a07e12bab142a7c9d",
+        "bytes": 46698
+      },
+      "changed_functions": [
+        "publish"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "unchanged_existing_function_count": 17,
+      "whole_normalized_source_inverse_exact": true,
+      "whole_module_inverse_AST_exact": true
+    },
+    {
+      "file": "composition_sync_acceptance.py",
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+        "sha256": "db4d61e9deaa6833137507b49957178bc833bd5b83512fff1f809181ad49ab96",
+        "bytes": 21223
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_sync_acceptance_13184953_before_sidecar32.py",
+        "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+        "bytes": 21115
+      },
+      "changed_functions": [
+        "run_one"
+      ],
+      "added_functions": [],
+      "removed_functions": [],
+      "unchanged_existing_function_count": 11,
+      "whole_normalized_source_inverse_exact": true,
+      "whole_module_inverse_AST_exact": true
+    }
+  ],
+  "CSharp_independent_source_proof": {
+    "canonical_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "26f13c7191756eacfc189ed728eebbc7c580fb0ec1b4cbab23115c73bf1f143b",
+      "bytes": 46320
+    },
+    "Parent_current_source": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\CharacterDesigner\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "26f13c7191756eacfc189ed728eebbc7c580fb0ec1b4cbab23115c73bf1f143b",
+      "bytes": 46320
+    },
+    "preserved_before_source": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\metadata-size-r19\\CharacterAnimationReturn.cs.before",
+      "sha256": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5",
+      "bytes": 46156
+    },
+    "previous_full13_source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_13\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5",
+      "bytes": 46156
+    },
+    "canonical_Parent_byte_exact": true,
+    "whole_source_inverse_byte_exact": true,
+    "inverse_parts_count": 3,
+    "changed_method": "ReadMetadata",
+    "new_constant": "MaxMetadataBytes = 32 * 1024 * 1024",
+    "pre_read_and_post_read_same_byte_array_size_guards_present": true,
+    "strict_UTF8_BOM_same_original_byte_SHA_FBX_SHA_Dress_composition_proof_rules_unchanged": true
+  },
+  "current_Parent_project_metadata_routing": {
+    "source": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Scripts\\Editor\\CharacterTuningAnimationLink.cs",
+      "sha256": "a61d4b1eacd54ca93bdc17c9cc0cba8af5bb53e2e8ea956a5bc910d7e699f48d",
+      "bytes": 230617
+    },
+    "ReadSmallFile_remains_manifest_1MiB": true,
+    "three_metadata_call_sites_use_ReadAnimationMetadata": true,
+    "ReadAnimationMetadata_uses_shared_CharacterAnimationReturn_32MiB_constant": true,
+    "pre_read_and_post_read_same_byte_array_bounds_present": true,
+    "Parent_owns_Unity_validation": true
+  },
+  "budget_contract": {
+    "animation_metadata_bytes": 33554432,
+    "Link_and_NEW_manifest_bytes": 1048576,
+    "collection_and_NEW_use_shared_animation_link_constant": true,
+    "resource_bound_retained": true,
+    "no_frame_channel_scope_duration_timing_or_sampling_change": true,
+    "all_other_SHA_DTO_packet_model_Action_slot_reference_and_publication_rules_unchanged": true
+  },
+  "diagnostic_contract": {
+    "missing_result_distinct_before_collector_call": true,
+    "exact_collector_return_string_saved_as_collection_receipt_error": true,
+    "nonempty_return_fails_closed": true,
+    "existing_exception_report_persistence_unchanged": true,
+    "actual_failed_n15_report_and_three_published_SOURCE_pairs_not_modified": true
+  },
+  "focused_test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_sidecar_bounds.py",
+    "sha256": "8f205703c3d6afd3a1666c2f6255e7f9572ddf721b93698916fc7b0682259adc",
+    "bytes": 15101
+  },
+  "owner_reported_tests": {
+    "count": 10,
+    "passed": 10,
+    "exit_code": 0,
+    "unittest_seconds": 6.949,
+    "test_names": [
+      "test_source_full_410_by_298_numeric_payload_above_1mib_is_accepted",
+      "test_new_full_payload_above_1mib_publishes_actual_manifest_revision",
+      "test_both_sidecar_readers_reject_above_32mib_before_json_parse",
+      "test_source_sha_tamper_rejects_before_json_parse",
+      "test_source_sealed_dto_or_isolation_proof_tamper_rejects_even_with_new_sha",
+      "test_expected_channel_action_slot_or_reference_proof_tamper_rejects",
+      "test_new_fbx_dto_or_export_proof_tamper_retains_revision_zero",
+      "test_shared_sidecar_bound_does_not_enlarge_link_or_new_manifest_1mib",
+      "test_exact_collector_error_is_persisted_not_replaced_by_umbrella",
+      "test_missing_export_result_remains_distinct_and_does_not_call_collector"
+    ],
+    "reviewer_rerun_count": 0,
+    "limits": "Owner actual focused pure fake/stub fixtures; reviewer Source read only. Root C# receipt makes no SDK or Unity test claim."
+  },
+  "protected_failure_before_edit": {
+    "receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_natural_failure_readback_5a2e5dd7.json",
+      "sha256": "17125fc4cf1f1a4e23549b028f1c0c59155d9d7b8764dca2738fed76895422e1",
+      "bytes": 589022
+    },
+    "actual_exit": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\process_exit.json",
+      "sha256": "a7bf0d54cc83cf2bac30c9ad116d69e2cdaf678474d23392cf00c09e4d58d39f",
+      "bytes": 571
+    },
+    "natural_exit_code": 1,
+    "all_QA_workers_gone_as_recorded": true,
+    "artist_unchanged_as_recorded": true,
+    "no_fresh_process_or_artist_query_by_reviewer": true
+  },
+  "readback_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "05a981398b7c4edca7e43de1ac8e7ae8fbabb803dda2e05bed877803bab6f83c",
+      "bytes": 19796
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_link_aabd94b5_before_sidecar32.py",
+      "sha256": "aabd94b5ce0b2cac63ed88d1f24fab35636e0eb14aacd07de105d7e84ef3fccb",
+      "bytes": 19666
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+      "sha256": "e0a0114f9c990bbc9687f982a445e384bf23fd35abc77c24ee7787456638a324",
+      "bytes": 36939
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_collection_7e306c7a_before_sidecar32.py",
+      "sha256": "7e306c7af9e3b55aacd84ca5b16a44d3980b459ca905a07111c99132b6b9968f",
+      "bytes": 36915
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_new.py",
+      "sha256": "fa0396f50879f8312442502438286494200986760ec82119fee8deb9b286bbc1",
+      "bytes": 46722
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_new_b332692c_before_sidecar32.py",
+      "sha256": "b332692c2119c369916a126ec689b5dbdf68c63c7534f54a07e12bab142a7c9d",
+      "bytes": 46698
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "db4d61e9deaa6833137507b49957178bc833bd5b83512fff1f809181ad49ab96",
+      "bytes": 21223
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_sync_acceptance_13184953_before_sidecar32.py",
+      "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "bytes": 21115
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "26f13c7191756eacfc189ed728eebbc7c580fb0ec1b4cbab23115c73bf1f143b",
+      "bytes": 46320
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\CharacterDesigner\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "26f13c7191756eacfc189ed728eebbc7c580fb0ec1b4cbab23115c73bf1f143b",
+      "bytes": 46320
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\metadata-size-r19\\CharacterAnimationReturn.cs.before",
+      "sha256": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5",
+      "bytes": 46156
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_13\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5",
+      "bytes": 46156
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_sidecar_bounds.py",
+      "sha256": "8f205703c3d6afd3a1666c2f6255e7f9572ddf721b93698916fc7b0682259adc",
+      "bytes": 15101
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_natural_failure_readback_5a2e5dd7.json",
+      "sha256": "17125fc4cf1f1a4e23549b028f1c0c59155d9d7b8764dca2738fed76895422e1",
+      "bytes": 589022
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\process_exit.json",
+      "sha256": "a7bf0d54cc83cf2bac30c9ad116d69e2cdaf678474d23392cf00c09e4d58d39f",
+      "bytes": 571
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+      "bytes": 11624
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+      "sha256": "562565879a9c4c05356f82c3b0ec45bd567d1311ef58cbde8a20607452079520",
+      "bytes": 47713
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Scripts\\Editor\\CharacterTuningAnimationLink.cs",
+      "sha256": "a61d4b1eacd54ca93bdc17c9cc0cba8af5bb53e2e8ea956a5bc910d7e699f48d",
+      "bytes": 230617
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "SOURCE readiness is a bounded code/contract verdict, not real-model, Unity, GUI, completion or package acceptance.",
+    "Old runtime12/full13/n15 failure and frozen helpers remain historical and unchanged. Actual Loop revision1 is preserved; no re-export or reset or scene operation performed.",
+    "Parent owns Unity compilation/testing and future candidate preparation. Current C# Source equality is not a final-bundle approval.",
+    "Future existing-publication receipt recovery is a separate guarded native action; no recovery was invoked here."
+  ]
+}

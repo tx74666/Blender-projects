@@ -1,0 +1,48 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "resource_owner": "X",
+  "resource_token": "X_ORIGINAL_REGISTRATION_07738_QUALIFIED_01",
+  "written_utc": "2026-10-12T21:35:09.839Z",
+  "start": {
+    "schema": "x.validation.process-start/1",
+    "stage": "Refresh",
+    "pid": 33004,
+    "process_filetime": "134363144772805841",
+    "started_utc": "2026-10-12T21:34:37.2375824Z",
+    "resource_token": "X_ORIGINAL_REGISTRATION_07738_QUALIFIED_01",
+    "free_mib": 875.5,
+    "request_sha256": "e22cf0e61a6c0a254ba566f8fedb9266fa7a2dc679ee059b03bcfec57da08967",
+    "argv": [
+      "-B",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\call_original20_artist_sdk_long.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_qualified_01_calls\\run_request.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_qualified_01_calls\\run_caller",
+      "9877",
+      "e22cf0e61a6c0a254ba566f8fedb9266fa7a2dc679ee059b03bcfec57da08967"
+    ],
+    "retained_handle": true
+  },
+  "end": {
+    "schema": "x.validation.process-end/1",
+    "stage": "Refresh",
+    "pid": 33004,
+    "process_filetime": "134363144772805841",
+    "retained_handle_natural_exit": true,
+    "exit_code": 0,
+    "ended_utc": "2026-10-12T21:34:46.0482146Z",
+    "elapsed_seconds": 8.7976157,
+    "owned_process_gone": true,
+    "process_termination_performed": false,
+    "operation_success_inferred": false
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_recovery_07738_qualified_01/qualified_recovery_report.json",
+    "sha256": "be4c6a331a02fdaa88c7584732e2416e34a8b52779beeece75fae9210af8ecc6",
+    "bytes": 12945
+  },
+  "qualification_completed": true,
+  "strict_recovery_remains_failed": true,
+  "scene_save_performed": false,
+  "resource_returned_to_parent": false,
+  "next": "Original integration/save followed by independent saved-file reader."
+}

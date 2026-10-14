@@ -1,0 +1,44 @@
+{
+  "schema": "x.validation.unified-r13-source-direct-argv/1",
+  "status": "SOURCE_DRAFT_ACTUAL_FINAL_INPUTS_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "producer": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r13.py",
+    "sha256": "7a8cf4202c34d43ad6bd4555afa0d7944a8dbff35205c42e5d087c2ffcb4f023",
+    "bytes": 33605
+  },
+  "executable": "C:/Users/Randy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "cwd": "D:/MyRepository/Blender-addons-by-Randy",
+  "required_variables": {
+    "FINAL_ADMISSION_PATH": "Actual completed R13 admission. Do not execute with the pending template.",
+    "FINAL_ADMISSION_SHA256": "Actual finalized admission SHA256."
+  },
+  "serial_steps": [
+    {
+      "mode": "--capture-and-build",
+      "argv": [
+        "-B",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r13.py",
+        "--capture-and-build",
+        "--final-admission",
+        "${FINAL_ADMISSION_PATH}",
+        "--final-admission-sha256",
+        "${FINAL_ADMISSION_SHA256}"
+      ]
+    }
+  ],
+  "candidate": {
+    "version": "0.77.31",
+    "shipped_files": 190,
+    "Python_files": 158,
+    "added": [],
+    "replaced": [
+      "__init__.py",
+      "unity_animation_original_inputs.py",
+      "unity_animation_rigging.py"
+    ],
+    "other187_exact": true
+  },
+  "resource_scope": "Root dispatch only; no Blender/SDK/deployment from this producer."
+}

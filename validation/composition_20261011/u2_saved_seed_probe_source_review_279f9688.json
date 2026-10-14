@@ -1,0 +1,124 @@
+{
+  "schema": "x.validation.character-composition-saved-seed-probe-source-review/1",
+  "utc": "2026-10-11T12:49:39.519833+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "probe_u2_saved_qa_seed_inventory.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\probe_u2_saved_qa_seed_inventory.py",
+      "sha256": "279f9688be559f7a653c0ca5dde2404b3a00f31e65659a6b414b389591b553b5",
+      "bytes": 10890
+    }
+  },
+  "actual_inputs_read": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture.json",
+      "sha256": "d9f6beae5425d2dbea55a1ab51e216f24ad367cf7019c35571e6f8254c5fcf30",
+      "bytes": 2335
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2\\composition_ui_run_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2\\composition_ui_run_report.json",
+      "sha256": "3a453f7ba7058a893f112df866ad72ea5f247644576beb869b801af6870932a7",
+      "bytes": 2233
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\publication_recovery_native_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\publication_recovery_native_report.json",
+      "sha256": "be09e217d29ae49c11720bea568afe6fa1454e52d6110a877a2104b649541347",
+      "bytes": 1590520
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\run_character_composition_ui_fixture.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\verify_character_composition_native.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    }
+  },
+  "actual_facts": {
+    "runtime_projection_completed_before_guard": 167,
+    "seed_open_FINISHED_precondition_passed": true,
+    "failure_line": 259,
+    "failed_compound_guard_subconditions_not_recorded": true,
+    "five_subconditions": [
+      "scene exists",
+      "Rig exists",
+      "Rig name in Scene.objects",
+      "Rig.users_scene sorted equals pinned receipt",
+      "bpy.context.window not None"
+    ],
+    "config_scene_name_codepoints": [
+      67,
+      111,
+      109,
+      112,
+      111,
+      115,
+      105,
+      116,
+      105,
+      111,
+      110,
+      32,
+      81,
+      65,
+      32,
+      183,
+      32,
+      70,
+      114,
+      101,
+      115,
+      104,
+      32,
+      87,
+      111,
+      114,
+      107,
+      115,
+      112,
+      97,
+      99,
+      101
+    ],
+    "config_seed_scene_name_exactly_equal": true,
+    "expected_rig_scene_names": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "native_report_completed": true,
+    "current_seed_has_actual_native_217_import_proofs": true
+  },
+  "probe_contract": {
+    "fresh_Parent_grant_required": true,
+    "only_pinned_QA_seed_C3A_loaded": true,
+    "official_pinned_runtime13_registration_same_as_runner": true,
+    "no_model_import_Save_Repair_Seek_Sampling_Session_ActionActivation_worker": true,
+    "all_CoshaRig_name_name_full_matches_enumerated": true,
+    "five_guard_booleans_captured_separately": true,
+    "Scene_global_lookup_setup_rig_native_pointer_comparison": true,
+    "worklist_rows_adoption_context_refs_readonly": true,
+    "only_context_window_scene_switch_and_view_layer_update": true,
+    "null_context_unique_window_scoped_override_test": true,
+    "outside_override_after_capture": true,
+    "all_direct_inputs_rehashed_before_exclusive_report": true,
+    "report_output": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_seed_probe\\seed_inventory.json",
+    "owned_profiles": [
+      "CONFIG",
+      "DATAFILES"
+    ],
+    "normal_owned_quit_only": true
+  },
+  "validation": {
+    "AST_parse_and_in_memory_compile": true,
+    "candidate_imports": 0,
+    "probe_invocations": 0,
+    "tests": 0,
+    "native_calls": 0,
+    "OS_queries": 0
+  },
+  "limits": "Source analysis cannot distinguish failed predicate or prove missing Scene/Rig membership, linked-name collision or stale cache. Native inventory remains unexecuted and needs a fresh independent Parent grant."
+}

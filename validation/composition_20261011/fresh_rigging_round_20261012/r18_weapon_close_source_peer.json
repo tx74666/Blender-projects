@@ -1,0 +1,35 @@
+{
+  "schema": "x.validation.original20-source-scope-peer/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "animation_composition_weapon.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+      "bytes": 41160
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b3348175c63cf1d0d29ffb184bd7eb5123c2e4ca274eb5b39893f94658a5019f",
+      "bytes": 109020
+    }
+  },
+  "review_scope": "Actual independent package-agent read-only review of narrow Close/removal preflight implementation; Root also independently reviewed AB8E and approved.",
+  "review_facts": [
+    "Package agent independently read native.restore_owned and weapon.validate_removal/remove_context plus caller ownership paths and affected test cases. Exact Scene Base multiplicity allows only legitimate owning-Scene references; extra or foreign references still reject. Normal Close preflight runs before native Tweak or state changes; exact pending-owner token keeps established detach path.",
+    "Root independently reviewed AB8E runtime diff and approved B334/881D narrow scope. Parent additional peer was still in progress at admission creation and is not claimed."
+  ],
+  "review_attribution": {
+    "implementation_owner": "/root/gun_ui_apply",
+    "independent_source_reviewer": "/root/package_prepare",
+    "accepted_by": "/root",
+    "formal_external_review_file_provided": false
+  },
+  "targeted_pure": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_portable_contracts_receipt.json",
+    "sha256": "5acfb1faeeb089f154f0a18acc3e751ae356fe0b6e43f2bc0dc2e556f53dce86",
+    "bytes": 8411
+  },
+  "native_acceptance": false
+}

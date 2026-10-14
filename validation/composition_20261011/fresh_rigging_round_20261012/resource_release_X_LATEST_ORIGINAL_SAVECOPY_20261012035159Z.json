@@ -1,0 +1,66 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "scope": "latest-original-artist-savecopy",
+  "token": "X_LATEST_ORIGINAL_SAVECOPY_20261012035159Z",
+  "status": "ACTUAL_RELEASE",
+  "owner": "Root",
+  "owner_thread": "01a12751-d08f-7630-b790-18db26fe3186",
+  "parent_thread": "01a12305-aada-7273-b72c-54a41aad77e4",
+  "actual_release_utc": "2026-10-12T03:56:23.2237141Z",
+  "passed": false,
+  "outcome": "KNOWN_GUARD_FAIL_BEFORE_SAVE",
+  "error": "Use the real original setup Rig in its own Scene/ViewLayer; no selection/adoption fallback.",
+  "SDK_requests": 1,
+  "SDK_transport_status": "success",
+  "caller_direct_exec_exit": 1,
+  "caller_naturally_completed": true,
+  "backup_generated": false,
+  "save_operator_reached": false,
+  "artist_original_saved": false,
+  "original_pid": 27676,
+  "original_creation_filetime": 134359355330496074,
+  "original_retained_identity_live": true,
+  "original_disk_sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+  "original_disk_unchanged": true,
+  "source_snapshot_sha256": "803088d42e1b239b7cc5c6753120ae9707e0a8d3b5e003f474bdbd3a0df28862",
+  "source_caller_sha256": "1c046a73e463bc158f6deee6fbe71a9e94218725f946f0c58d65b0cbee9229e8",
+  "runtime_version": [
+    0,
+    77,
+    24
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012035159Z\\artist_latest_snapshot_receipt.json",
+      "sha256": "5e960264d5b27388627864aebc576e0c66b73cb515ed5b5bf31d6ca7bb810506",
+      "bytes": 2639
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012035159Z_caller\\caller_after.json",
+      "sha256": "f383a8346ddbad68679095534094176425ac90064e16d001b31605f47433a710",
+      "bytes": 1004
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012035159Z_caller\\sdk_response.json",
+      "sha256": "4b6cc961ae7cb0c790ae28a05cf38d5337c806675439ed9c3f1feb7ff8f470cd",
+      "bytes": 703
+    }
+  ],
+  "workers": 0,
+  "new_Blender_calls": 0,
+  "GUI_calls": 0,
+  "install_deploy": 0,
+  "frame_pose_edits": 0,
+  "forced_termination_performed": false,
+  "second_SDK_requests": 0,
+  "memory": {
+    "availableMiB": 1384.3,
+    "usedPercent": 91.43
+  },
+  "limits": [
+    "Context guard failed before signature/save. No full asset before-after preservation has been proven by this failed attempt.",
+    "Potential setup mismatch or RNA wrapper identity issue requires a fresh single read-only native request; no fallback or retry in this scope.",
+    "Original process remains user-owned and open. No process stop or close occurred.",
+    "Source runtime.24 identity actual, no candidate import/registration. NativeControl/Sync/UnityApply not performed."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "resource_token": "X_ORIGINAL_CLOCK_202610120847Z",
+  "owned_pid": 78444,
+  "owned_process_filetime": "134362684438919707",
+  "retained_handle_natural_exit": true,
+  "native_exit_code": 1,
+  "native_exited_utc": "2026-10-12T08:47:32.1452479+00:00",
+  "owned_native_gone": true,
+  "process_termination_performed": false,
+  "GUI": false,
+  "actual_started_utc": "2026-10-12T08:47:23.9135606+00:00",
+  "release_utc": "2026-10-12T08:49:52.741Z",
+  "clock_source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012\\certify_original_legacy_base_clock.py",
+    "sha256": "7d183f8eaad413fd30e151cb2fbac9ec339cd619d14b6b58db3ce2f503c518a1",
+    "bytes": 24856
+  },
+  "clock_report": null,
+  "clock_report_created": false,
+  "caller_observations": {
+    "launch_observation.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_02_caller\\launch_observation.json",
+      "sha256": "3f89d2f80919fffdc6c798d5256da39d4b00f50cc8202b594c93b7b26e6c4b24",
+      "bytes": 355
+    },
+    "native_end_observation.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_02_caller\\native_end_observation.json",
+      "sha256": "13cb43fa0d66c26fb71456ae5f7af09fa2148a37bdb5a88d928ac9a256c326cd",
+      "bytes": 352
+    },
+    "stdout.log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_02_caller\\stdout.log",
+      "sha256": "62aa68d052234759fcf2f662c9277a117896bb0a66d46f104de825c9b1ad1ecc",
+      "bytes": 78
+    },
+    "stderr.log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_02_caller\\stderr.log",
+      "sha256": "6460cac1567cc9a06fc1a1a8bc18f9198390072cf12e98129971d17f61104553",
+      "bytes": 1245
+    }
+  },
+  "passed": false,
+  "clock_known": false,
+  "failure_stage": "pre_scene_output_directory_precondition",
+  "failure_cause": "Owned launcher omitted mkdir for new empty output and CONFIG/DATAFILES profile before native startup.",
+  "Source_and_Custom_schedules_created": false,
+  "clock30_or60_observed": false,
+  "seed_scene_opened": false,
+  "frame_sampling_or_new_action_edits_performed": false,
+  "clone_restoration_verified": false,
+  "qualification": "Native failed at output.is_dir() precondition before opening the seed scene and before report initialization. No clock certificate or in-memory restoration PASS exists.",
+  "all_owned_activity_closed": true,
+  "original_retained_filetime": "134359355330496074",
+  "original_disk_sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+  "original_disk_unchanged": true,
+  "post_input_files_verified": 10,
+  "post_inputs": {
+    "snapshot_receipt": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z/artist_latest_snapshot_receipt.json",
+      "sha256": "99b08426346d77908dbed93e518bc0e2370701a0e8ee906df7d36cb072bb2949",
+      "bytes": 6210450
+    },
+    "seed": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z\\artist_latest_before_rigging.blend",
+      "sha256": "1c1984156b3d7637596382ff12359f3460f51b4b6216cd088f9dd97c1cd4bf41",
+      "bytes": 34688918
+    },
+    "packet": {
+      "path": "D:\\Blender\\Projects\\Character\\Animation\\UnityExports\\CharacterTuning\\20261009-233830-d8fa2427ba96\\Cosha_Walk_N.cdanim.json",
+      "sha256": "e54537cb65ab6b0365b42af0236f645cc0f009e1c10b056d66a13b87e7669c02",
+      "bytes": 3558408
+    },
+    "package_manifest": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_4a5a35bb/python_projection.json",
+      "sha256": "c15737192050944b27d88e9c65119331fbba8cd0de18d629b07365fbc0d83cb4",
+      "bytes": 20891
+    },
+    "oracle": {
+      "path": "D:/Blender/Projects/Character/X/validation/direct_original_rig_return_20261011/validation_preservation.py",
+      "sha256": "260b2bc581df220ea861d18f6b369d104561d5a3d119e21e5e52e9e230219a5d",
+      "bytes": 24274
+    },
+    "protected_artist": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+      "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+      "bytes": 34682050
+    },
+    "source_cache": {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\datafiles\\character_designer\\animation_sources\\d3444e049cfd4afebb343e61e518c768\\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\\5f771ad1e0644d199cba30b6afd1ad0a.blend",
+      "sha256": "52050a25787598e6592a45150e49cffd3f29e4164fd356fe4f14e90266d3aa49",
+      "bytes": 1015877
+    },
+    "clock_source": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012\\certify_original_legacy_base_clock.py",
+      "sha256": "7d183f8eaad413fd30e151cb2fbac9ec339cd619d14b6b58db3ce2f503c518a1",
+      "bytes": 24856
+    },
+    "owner": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012\\original_legacy_base_clock_source_owner_7d183f8e.json",
+      "sha256": "b429982bc6dfd888d4244bcf4aab111f38d124bd442aa3c68df4316119771b61",
+      "bytes": 11401
+    },
+    "peer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_legacy_base_clock_source_peer_7d183f8e.json",
+      "sha256": "de0dc5020b80b49fd5c65269b7c34872e564554479d3d30ad1969f5c867d2d8a",
+      "bytes": 3540
+    }
+  },
+  "SDK_calls": 0,
+  "Unity_calls": 0,
+  "worker_calls": 0,
+  "addon_registered": false,
+  "original_artist_saved": false,
+  "deployed": false,
+  "fresh_memory": {
+    "utc": "2026-10-12T08:48:54.6344146Z",
+    "free_MiB": 1197.7,
+    "used_percent": 92.59
+  }
+}

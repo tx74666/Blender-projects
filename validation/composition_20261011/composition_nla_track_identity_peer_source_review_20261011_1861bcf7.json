@@ -1,0 +1,192 @@
+{
+  "schema": "x.validation.composition-nla-track-identity-peer-source/1",
+  "date": "2026-10-11",
+  "reviewed_at_utc": "2026-10-11T05:04:39.508320+00:00",
+  "reviewer": "/root/export_scale_review",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer_tests_executed": 0,
+  "sdk_gui_build_projection_deploy_artist_mutation_performed": false,
+  "changed_runtime_sources": {
+    "unity_animation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "9aaa032749a86ec808523697c8a85679dce0134e60dfb640331bd41f53859998",
+      "bytes": 12785
+    },
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+      "bytes": 99028
+    },
+    "animation_export.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+      "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+      "bytes": 10708,
+      "canonical_path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "canonical_sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2"
+    }
+  },
+  "minimal_export_projection": {
+    "preserved_frozen_parent_sha256": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+    "projected_source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+      "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+      "bytes": 10708
+    },
+    "canonical_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+      "bytes": 11624
+    },
+    "unchanged_other_functions": true,
+    "new_clock_helper_ast_equal": true,
+    "only_clock_statements_added": true,
+    "default_scene_clock_preserved": true,
+    "unrelated_canonical_changes_preserved": true,
+    "canonical_before_clock_sha256": "9c8e638cfd8408fe729103efe232ed23c334b2a879e9c226376057b22d5b28cf",
+    "frozen_parent_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_export.py",
+    "unchanged_other_function_count": 7,
+    "strict_reverse_ast_verified": "Remove the new frame_fps assignment and restore exactly fps expression plus two job dictionary values; begin_export becomes AST-identical to frozen9c7ef.",
+    "excluded_unrelated_work": "Existing canonical Dress admission/snapshot imports and code were not copied into the approved minimal projected exporter."
+  },
+  "owner_report": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_native_import_timebase_source_report_20261011_nla_track_identity_1861bcf7.json",
+    "sha256": "c90821e26da37cb379020e207fbbf1fd128644ac55101fa8dbed0cdb12aa4acb",
+    "bytes": 10977
+  },
+  "prior_owner_report": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_native_import_timebase_source_report_20261011_projected_db426188_freeze.json",
+    "sha256": "678f6dfc15dede3953cccd0e8a6d396a8966485478c1b31e6a6f241671328506",
+    "bytes": 12764
+  },
+  "test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_native_import_timebase.py",
+    "sha256": "94ed66bcca11e29d33dc6c3ed3285b0952a4a372badbd360c4173eaee9be6081",
+    "bytes": 28501
+  },
+  "nla_focused_test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_nla_tweak_selection.py",
+    "sha256": "ad1032f874ccdb0e97d0e9119620709ac7e127bd4fbcd36f51177fd527722261",
+    "bytes": 9319
+  },
+  "owner_reported_validation": {
+    "nla_focused_tests": {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_nla_tweak_selection.py",
+        "sha256": "ad1032f874ccdb0e97d0e9119620709ac7e127bd4fbcd36f51177fd527722261",
+        "bytes": 9319
+      },
+      "command": "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -B -m unittest discover -s tests -p test_composition_nla_tweak_selection.py -v",
+      "test_count": 10,
+      "exit_code": 0,
+      "failures": 0,
+      "errors": 0,
+      "unittest_elapsed_seconds": 0.515,
+      "coverage": [
+        "fresh distinct but native-equal track/strip RNA wrappers on every iteration; exact Action+slot Full Stack entry",
+        "same-name foreign track, ambiguous same-native membership, missing/multiple/Actionless strip rejection before selection/operator",
+        "track/strip/active-track write readback rejection before operator",
+        "operator CANCELLED/exception context cleanup and wrong Action/slot result rejection",
+        "already-active Tweak rejection and unchanged exit/no-op paths"
+      ]
+    },
+    "clock_tests": {
+      "test_count": 26,
+      "run_count": 2,
+      "total_test_executions": 52,
+      "exit_code": 0,
+      "failures": 0,
+      "errors": 0
+    },
+    "syntax_checks": {
+      "count": 7,
+      "passed": true,
+      "method": "ast.parse and compile in memory; no runtime imports"
+    },
+    "total_pure_test_executions": 62,
+    "reviewer_rerun": false
+  },
+  "independent_ast_closure": {
+    "baseline": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_09\\character_designer\\animation_composition.py",
+      "sha256": "c6b5c2f564239b002cfa5ff1be07bb3707e1cedcec4987bccad245710dc055f1",
+      "bytes": 98130
+    },
+    "current": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+      "bytes": 99028
+    },
+    "changed_existing_functions": [
+      "_tweak"
+    ],
+    "new_or_removed_functions": [],
+    "unchanged_existing_function_count": 63,
+    "all_other_top_level_nodes_ast_equal": true,
+    "disabled_exit_branch_ast_equal": true,
+    "guard_scope": "Receipt lookup/publication/rollback, numeric and HoldPose admission, Rest/control mapping, four clock guards, context override, track creation, enter/rollback and exit logic are AST-equal outside _tweak."
+  },
+  "source_review": {
+    "defect": "Python identity of iterated NlaTrack wrappers is not native RNA identity. Existing is predicates could deselect the owned track and strip even while assigning that native track active.",
+    "selection_gate": "Exactly one native-equal current track, exactly one Action-bearing strip; all track/strip select values and the native-equal active collection pointer are read back before the operator.",
+    "operator_gate": "Existing EXEC_DEFAULT official entry retains isolate_action=False and use_upper_stack_evaluation=True. Success additionally requires use_tweak_mode and exact resulting Action and action_slot_handle.",
+    "readonly_active": "No strip.active or track.active boolean assignment is introduced.",
+    "full_stack": "Upper-stack evaluation remains enabled; the tweaked track is replaced by the active Action while tracks above stay evaluated. No Solo fallback is added.",
+    "context": "Operator poll requires NLA editor and a Scene not already in Tweak. It has no Object-only mode gate. Existing selected rig/filter/window override is unchanged; actual background context remains a native acceptance requirement."
+  },
+  "official_primary_sources": [
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/blenkernel/intern/nla.cc#L2135-L2204",
+      "lines": "2135-2204",
+      "proof": "The active native track is chosen first. When it has no active strip, its selected strip is accepted; one Action strip satisfies finder admission."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/makesrna/intern/rna_animation.cc#L852-L863",
+      "lines": "852-863,1412-1416",
+      "proof": "NlaTracks.active getter and setter use BKE_nlatrack_find_active/set_active; collection active pointer is writable."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/makesrna/intern/rna_nla.cc#L1023-L1032",
+      "lines": "1023-1032,1094-1158",
+      "proof": "NlaStrip.active is readonly, select writable. NlaTrack registration does not provide Python instance caching."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/python/intern/bpy_rna.cc#L898-L925",
+      "lines": "898-925,7661-7690,8059-8153",
+      "proof": "RNA equality compares native data and type. Collection iteration wraps native pointers; wrapper reuse is conditional on supported instance caching."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/makesrna/intern/rna_access.cc#L1031-L1042",
+      "lines": "1031-1042",
+      "proof": "RNA_struct_instance returns no cache when this type/base has no instance callback."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/editors/space_nla/nla_ops.cc#L27-L44",
+      "lines": "27-44",
+      "proof": "Tweak entry poll requires NLA editor and Scene Tweak flag off, with no Object/Pose restriction."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/editors/space_nla/nla_edit.cc#L98-L168",
+      "lines": "98-168,188-208",
+      "proof": "Visible AnimData is filtered, upper-stack and isolation properties applied, then BKE entry called. The observed No active strip error follows a nonempty AnimData list with no successful kernel entry."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/blenkernel/intern/nla.cc#L2229-L2281",
+      "lines": "2229-2281",
+      "proof": "The current track is disabled against duplicate evaluation; upper tracks remain when upper-stack flag is set. Kernel assigns strip Action and slot and records tweak state."
+    }
+  ],
+  "limitations": [
+    "Source uses the official blender-v5.2-release branch, not an installed binary commit pin.",
+    "Fresh-wrapper pure tests exercise actual extracted Python logic; they do not execute Blender native operator/context. Owner test results are reported, not independently rerun.",
+    "n10 remains a real failed native attempt. No rerun or successful numeric/physical/seed result is inferred from this repair.",
+    "A separately authorized tiny native context/Action-slot/Full-Stack enter/exit microtest can cheaply close installed API uncertainty; a future complete native fixture is still needed.",
+    "No historical report, frozen projection, candidate, packet, model or artist file was modified."
+  ]
+}

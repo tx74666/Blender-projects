@@ -21,6 +21,14 @@ model repair or choosing a repair direction for the artist.
 # Performance history and ownership
 
 X owns Character Designer scene integration and its optimization records.
+For follow-up Original20 return/integration work, begin with
+`validation/composition_20261011/fresh_rigging_round_20261012/current_return_summary.json`.
+It indexes accepted evidence. The older `current_return_checkpoint.json` contains
+historical intermediate versions, processes and pending states; do not treat
+those as current work. Observe the live artist identity again before new scene
+operations. External file pins can be checked without Blender using the shared
+repository's `tools/verify_file_pin.py`; file identity alone is not scene-operation
+authorization.
 Before another performance investigation, read
 `D:\Codex\資料庫\电脑与工作环境\Blender性能優化台帳.md` and follow its
 evidence links; target new symptoms or changed code rather than repeating all

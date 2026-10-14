@@ -1,0 +1,50 @@
+{
+  "schema": "x.validation.character-composition-hold-source-producer-failure/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "completed": false,
+  "proof_created": false,
+  "numeric_report_created": false,
+  "utc": "2026-10-11T03:55:17.398287+00:00",
+  "producer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\measure_character_composition_hold_sources.py",
+    "sha256": "c9509296b579f08524e2748d74d6c22fdc47117300ebb7635bcf025dd1652fed",
+    "bytes": 23446
+  },
+  "handoff": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\native-r14\\prepared-x-handoff.json",
+    "sha256": "1e1c288bd66c059c53aa4a56357efe7656f96a80a6f63e3577f658c5e72210b1"
+  },
+  "prepare_report": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\composition-qa\\7d9e502525924ca2840eca8551985077\\prepare-report.json",
+    "sha256": "b2904bf2519cc7783f79afedb760ba42bbbd37501d33420769fffd6f6bb4d679"
+  },
+  "actual_exit_code": 1,
+  "error": {
+    "type": "ValueError",
+    "message": "Unexpected packet content after frames",
+    "source_function": "packet_frames",
+    "source_line": 147,
+    "call_sequence": [
+      "main:379",
+      "run:320",
+      "measure_packet:189",
+      "packet_frames:147",
+      "require:32"
+    ]
+  },
+  "actual_bounded_tail_shape": "frames array followed by root meshes empty array: ],\"meshes\":[]}",
+  "finding": "Original reader incorrectly required frames to be the last root field. No numeric conclusion is available from this failed invocation.",
+  "output_paths": [
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\r14_hold_source_constancy_proof.json",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\r14_hold_source_numeric_report.json"
+  ],
+  "actual_outputs_absent_at_recording": true,
+  "original_producer_preserved": true,
+  "new_r2_producer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\measure_character_composition_hold_sources_r2.py",
+    "sha256": "1d07c294db68d750ac5d8299292b269846246f90a3bc590c6d87bd4cf197fb1d",
+    "bytes": 23857
+  },
+  "r2_execution_performed": false
+}

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\forearm_twist_fix_20261009\validate_fresh_actual.py", line 434, in <module>
+    main()
+    ~~~~^^
+  File "D:\Blender\Projects\Character\X\validation\forearm_twist_fix_20261009\validate_fresh_actual.py", line 376, in main
+    verify_angles(obj, arm, record, report['preview']['L'], direct_y=True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\forearm_twist_fix_20261009\validate_fresh_actual.py", line 257, in verify_angles
+    assert swing.rotation_difference(before_swing).angle < 5e-4, 'Trial changed original wrist swing.'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Trial changed original wrist swing.

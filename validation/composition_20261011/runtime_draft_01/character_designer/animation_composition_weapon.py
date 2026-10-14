@@ -1,0 +1,474 @@
+"""Actual FBX weapon context, measured against captured Unity mesh geometry.
+
+Only this module's owned display objects are added/removed. No hand solver,
+global weapon asset, artist Rest, source Action or grip calibration is changed.
+"""
+import hashlib
+import json
+import math
+from pathlib import Path
+import re
+import uuid
+
+from . import animation_composition_contract as contract
+from .animation_composition_controls import _host, _require
+from .animation_composition_weapon_geometry import fit_import_geometry, compare_surface_points
+
+SCHEMA = 'cdesigner.weapon-context/1'
+RECORD = 'character_designer_composition_weapon_v1'
+OWNER = 'character_designer_composition_weapon_owner'
+
+
+def _sha(path):
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _vector(value):
+    _require(isinstance(value, dict) and set(value) == {'x', 'y', 'z'}, 'Invalid captured weapon vertex.')
+    result = tuple(value[key] for key in ('x', 'y', 'z'))
+    _require(all(type(v) in (int, float) and math.isfinite(v) for v in result),
+             'Non-finite captured weapon geometry.')
+    return result
+
+
+def _matrix(values):
+    from mathutils import Matrix
+    _require(isinstance(values, list) and len(values) == 16 and all(
+        type(v) in (int, float) and math.isfinite(v) for v in values), 'Invalid weapon context matrix.')
+    result = Matrix([values[index:index + 4] for index in range(0, 16, 4)])
+    _require(max(abs(result[3][i]) for i in range(3)) <= 2e-5 and abs(result[3][3] - 1) <= 2e-5
+             and abs(result.determinant()) > 1e-12, 'Weapon context transform is not affine and nonsingular.')
+    return result
+
+
+def _project_source(document, asset_path):
+    model = Path(document['modelFile']).resolve()
+    suffix = Path(document['modelAssetPath'])
+    _require(not suffix.is_absolute() and suffix.parts and suffix.parts[0] == 'Assets'
+             and '..' not in suffix.parts, 'Weapon source model is outside the captured Unity project.')
+    root = model.parents[len(suffix.parts) - 1]
+    _require((root / suffix).resolve() == model, 'Captured model path is inconsistent.')
+    relative = Path(asset_path)
+    _require(not relative.is_absolute() and relative.parts and relative.parts[0] == 'Assets'
+             and '..' not in relative.parts, 'Invalid captured weapon asset path.')
+    candidate = (root / relative).resolve()
+    _require(candidate.is_relative_to(root / 'Assets'), 'Captured weapon asset escapes Unity Assets.')
+    return candidate
+
+
+def _source_dependencies(document):
+    sources, excluded = document.get('sourceDependencies'), document.get('excludedDependencies')
+    _require(isinstance(sources, list) and sources and isinstance(excluded, list)
+             and len(sources) + len(excluded) <= 4096, 'Captured weapon source dependency evidence is incomplete.')
+    records, names = {}, []
+    for entry in sources:
+        _require(isinstance(entry, dict) and set(entry) == {'assetPath', 'file', 'guid', 'fileSha256', 'metaSha256'},
+                 'Invalid captured weapon dependency record.')
+        asset = entry['assetPath']
+        _require(isinstance(asset, str) and asset.startswith(('Assets/', 'Packages/'))
+                 and '\\' not in asset and all(part not in {'', '.', '..'} for part in asset.split('/')),
+                 'Invalid captured weapon dependency asset path.')
+        file = Path(entry['file'])
+        _require(file.is_absolute() and file.is_file(), 'Captured weapon dependency file is missing.')
+        file = file.resolve()
+        if asset.startswith('Assets/'):
+            _require(file == _project_source(document, asset), 'Captured weapon dependency belongs to another Unity project.')
+        meta = Path(str(file) + '.meta')
+        _require(isinstance(entry['guid'], str) and re.fullmatch('[0-9a-fA-F]{32}', entry['guid'])
+                 and meta.is_file() and _sha(file) == entry['fileSha256'] and _sha(meta) == entry['metaSha256'],
+                 'A captured weapon source dependency or importer changed; prepare its context again.')
+        guids = re.findall(r'^guid:\s*([0-9a-fA-F]{32})\s*$', meta.read_text(encoding='utf-8-sig'), re.MULTILINE)
+        _require(guids == [entry['guid']], 'Captured weapon dependency GUID changed.')
+        _require(asset not in records, 'Captured weapon source dependency is duplicated.')
+        records[asset], names = entry, names + [asset]
+    _require(names == sorted(names, key=lambda value: value.encode('utf-16-be')),
+             'Captured weapon source dependency order differs from the Unity ordinal inventory.')
+    ignored = []
+    for entry in excluded:
+        _require(isinstance(entry, dict) and set(entry) == {'assetPath', 'guid', 'reason'},
+                 'Invalid declared Unity dependency exclusion.')
+        asset, reason = entry['assetPath'], entry['reason']
+        _require(isinstance(asset, str) and asset not in records and asset not in ignored
+                 and ((reason == 'package-no-physical-file' and asset.startswith('Packages/'))
+                      or (reason == 'unity-builtin-no-physical-file' and asset in {
+                          'Resources/unity_builtin_extra', 'Library/unity default resources',
+                          'Resources/unity default resources'})), 'An actual source file cannot be silently excluded.')
+        ignored.append(asset)
+    _require(ignored == sorted(ignored, key=lambda value: value.encode('utf-16-be')),
+             'Declared Unity dependency exclusions changed order.')
+    for prefix in ('model', 'prefab'):
+        entry = records.get(document[prefix + 'AssetPath'])
+        file_hash = document['modelSha256'] if prefix == 'model' else document['prefabFileSha256']
+        _require(entry is not None and entry['guid'] == document[prefix + 'Guid']
+                 and entry['fileSha256'] == file_hash and entry['metaSha256'] == document[prefix + 'MetaSha256'],
+                 'Both actual weapon source roots must belong to the captured dependency inventory.')
+    return len(sources), len(excluded)
+
+
+def validate_context(spec):
+    spec = contract.validate(spec)
+    path = Path(spec['weaponContextFile']).resolve()
+    _require(path.is_file() and path.stat().st_size <= 128 * 1024 * 1024
+             and _sha(path) == spec['weaponContextSha256'], 'Capture the current actual Unity weapon context first.')
+    document = json.loads(path.read_text(encoding='utf-8-sig'))
+    _require(isinstance(document, dict) and document.get('schema') == SCHEMA
+             and document.get('units') == 'metres' and document.get('coordinate') == 'unity-lh-y-up'
+             and document.get('matrixLayout') == 'row-major'
+             and document.get('geometrySpace') == 'prefab-local; prefab root TRS excluded',
+             'Unsupported captured weapon coordinate space.')
+    _require(document.get('prefabGuid') == spec['weaponPrefabGuid']
+             and document.get('modelGuid') == spec['weaponGuid']
+             and document.get('modelSha256') == spec['weaponModelSha256']
+             and Path(document['modelFile']).resolve() == Path(spec['weaponModelFile']).resolve(),
+             'Weapon context belongs to another actual prefab/model revision.')
+    model = Path(document['modelFile']).resolve()
+    prefab = _project_source(document, document['prefabAssetPath'])
+    _require(model.suffix.lower() == '.fbx' and model.is_file() and prefab.is_file()
+             and _sha(model) == document['modelSha256'] and _sha(prefab) == document['prefabFileSha256'],
+             'Captured weapon source changed; prepare its context again.')
+    for source, field in ((model, 'modelMetaSha256'), (prefab, 'prefabMetaSha256')):
+        meta = Path(str(source) + '.meta')
+        _require(meta.is_file() and isinstance(document.get(field), str)
+                 and _sha(meta) == document[field], 'Captured weapon importer/GUID metadata changed or lacks a proof.')
+    _source_dependencies(document)
+    prefab_matrix = _matrix(document['spawnedPrefabRootMatrix'])
+    expected = _matrix(spec['weaponPrefabLocalMatrix'])
+    _require(max(abs(prefab_matrix[r][c] - expected[r][c]) for r in range(4) for c in range(4)) <= 2e-5,
+             'Captured weapon prefab scale differs from the composition.')
+    for key in ('modelRoot', 'prefabRoot'):
+        _require(isinstance(document.get(key), dict), 'Captured weapon root transform is missing.')
+        _matrix(document[key]['matrix'])
+    importer = document.get('importer')
+    _require(isinstance(importer, dict) and all(type(importer.get(key)) in (int, float)
+        and math.isfinite(importer[key]) and importer[key] > 0 for key in ('globalScale', 'fileScale'))
+        and all(type(importer.get(key)) is bool for key in ('useFileScale', 'bakeAxisConversion')),
+        'Actual captured ModelImporter units/axis settings are incomplete.')
+    meshes = document.get('meshes')
+    _require(isinstance(meshes, list) and meshes, 'Captured weapon has no actual mesh geometry.')
+    points, identities = [], set()
+    from mathutils import Vector
+    for mesh in meshes:
+        _require(isinstance(mesh, dict) and type(mesh.get('enabled')) is bool
+                 and type(mesh.get('activeInPrefab')) is bool, 'Invalid captured weapon renderer.')
+        identity = (mesh.get('rendererPath'), mesh.get('rendererType'))
+        _require(identity not in identities, 'Captured weapon renderer identity is ambiguous.')
+        identities.add(identity)
+        _require(mesh.get('meshGuid') == document['modelGuid']
+                 and mesh.get('meshAssetPath') == document['modelAssetPath']
+                 and isinstance(mesh.get('modelRendererPaths'), list) and mesh['modelRendererPaths'],
+                 'An external weapon mesh has no captured source proof; prepare an FBX-backed display context.')
+        count = mesh.get('vertexCount')
+        vertices, triangles = mesh.get('renderedVertices'), mesh.get('triangles')
+        _require(type(count) is int and 0 < count <= 250000 and isinstance(vertices, list)
+                 and len(vertices) == count and isinstance(triangles, list) and triangles
+                 and len(triangles) % 3 == 0 and all(type(i) is int and 0 <= i < count for i in triangles),
+                 'Captured weapon renderer has incomplete actual geometry.')
+        converted = [_vector(v) for v in vertices]
+        matrix = _matrix(mesh['rendererLocalToPrefab'])
+        if mesh['enabled'] and mesh['activeInPrefab']:
+            points.extend(tuple(matrix @ Vector(converted[index])) for index in sorted(set(triangles)))
+    _require(4 <= len(points) <= 250000, 'Captured weapon surface exceeds the supported geometry proof.')
+    _require(_sha(path) == spec['weaponContextSha256'], 'Weapon context changed during validation.')
+    return document, points
+
+
+def _context_capture(context):
+    scene = context.scene
+    return {'scene': scene, 'view_layer': context.view_layer, 'active': context.view_layer.objects.active,
+        'selected': tuple(context.selected_objects), 'mode': context.object.mode if context.object else 'OBJECT',
+        'frame': scene.frame_current, 'subframe': scene.frame_subframe,
+        'start': scene.frame_start, 'end': scene.frame_end,
+        'fps': scene.render.fps, 'fps_base': scene.render.fps_base,
+        'auto_key': scene.tool_settings.use_keyframe_insert_auto}
+
+
+def _restore_context(context, saved):
+    import bpy
+    if context.object and context.object.mode != 'OBJECT':
+        bpy.ops.object.mode_set(mode='OBJECT')
+    context.window.scene = saved['scene']
+    context.window.view_layer = saved['view_layer']
+    for obj in context.selected_objects:
+        obj.select_set(False)
+    for obj in saved['selected']:
+        if obj.name in context.scene.objects:
+            obj.select_set(True)
+    context.view_layer.objects.active = saved['active']
+    if saved['active'] and saved['mode'] != 'OBJECT':
+        bpy.ops.object.mode_set(mode=saved['mode'])
+    scene = saved['scene']
+    scene.frame_start, scene.frame_end = saved['start'], saved['end']
+    scene.render.fps, scene.render.fps_base = saved['fps'], saved['fps_base']
+    scene.tool_settings.use_keyframe_insert_auto = saved['auto_key']
+    scene.frame_set(saved['frame'], subframe=saved['subframe'])
+    context.view_layer.update()
+
+
+def _raw_surface(context, objects):
+    points = []
+    from mathutils import Vector
+    depsgraph = context.evaluated_depsgraph_get()
+    for obj in objects:
+        if obj.type != 'MESH':
+            continue
+        evaluated = obj.evaluated_get(depsgraph)
+        mesh = evaluated.to_mesh()
+        try:
+            mesh.calc_loop_triangles()
+            indices = sorted({index for triangle in mesh.loop_triangles for index in triangle.vertices})
+            points.extend(tuple(evaluated.matrix_world @ Vector(mesh.vertices[index].co)) for index in indices)
+        finally:
+            evaluated.to_mesh_clear()
+    _require(4 <= len(points) <= 250000, 'Raw weapon FBX has no supported actual surface geometry.')
+    return points
+
+
+def _weapon_identity(spec):
+    return contract.digest({key: spec[key] for key in ('weaponContextSha256', 'weaponModelSha256',
+        'weaponPrefabGuid', 'weaponRigBonePath', 'weaponLocalMatrix', 'weaponPrefabLocalMatrix',
+        'sourceRestSha256', 'gripTargets')})
+
+
+def _rig_actions(rig):
+    from .animation_composition_export import _action_hash
+    ad = rig.animation_data
+    pairs = [(ad.action, ad.action_slot)] if ad.action else []
+    for track in ad.nla_tracks:
+        for strip in track.strips:
+            if strip.type == 'CLIP' and strip.action:
+                pairs.append((strip.action, strip.action_slot))
+    return [(action, slot.handle if slot is not None else 0,
+             _action_hash(action, slot.handle if slot is not None else 0)) for action, slot in pairs]
+
+
+_ASSET_TABLES = ('meshes', 'armatures', 'curves', 'cameras', 'lights', 'materials',
+                 'node_groups', 'textures', 'images', 'actions')
+
+
+def _asset_snapshot():
+    import bpy
+    return {key: set(getattr(bpy.data, key)) for key in _ASSET_TABLES}
+
+
+def _new_assets(previous):
+    import bpy
+    return {key: tuple(block for block in getattr(bpy.data, key) if block not in previous[key])
+            for key in _ASSET_TABLES}
+
+
+def _remove_unused_assets(assets):
+    import bpy
+    # Object-owned geometry releases materials, which in turn release images.
+    # Repeated passes also handle a newly imported node-group dependency chain.
+    remaining = [(key, block) for key in _ASSET_TABLES for block in assets.get(key, ())]
+    while remaining:
+        retained, removed = [], False
+        for key, block in remaining:
+            if block.users == 0:
+                getattr(bpy.data, key).remove(block)
+                removed = True
+            else:
+                retained.append((key, block))
+        if not removed:
+            return
+        remaining = retained
+
+
+def _attachment_basis(scope, packet, native, index):
+    unity_rest = _host('unity_animation')._matrix(packet['bones'][index]['rest'], native)
+    return scope.mapping.rest_world[native].inverted() @ scope.mapping.conversion @ unity_rest
+
+
+def _bone_anchor(collection, created, owner, rig, native, label):
+    import bpy
+    anchor = bpy.data.objects.new(label, None)
+    anchor[OWNER] = owner
+    collection.objects.link(anchor)
+    created.append(anchor)
+    constraint = anchor.constraints.new('COPY_TRANSFORMS')
+    constraint.name = 'Actual Authored Bone Mount'
+    constraint.target, constraint.subtarget = rig, native
+    constraint.target_space, constraint.owner_space = 'WORLD', 'WORLD'
+    return anchor
+
+
+def validate_owned(rig):
+    import bpy
+    record = rig.get(RECORD)
+    _require(record is not None and record.get('schema') == SCHEMA, 'No owned actual weapon context is attached.')
+    owner, collection = record.get('owner'), record.get('collection')
+    _require(isinstance(collection, bpy.types.Collection) and collection.get(OWNER) == owner,
+             'Weapon display collection ownership changed.')
+    scene, root = record.get('scene'), record.get('scene_root')
+    _require(isinstance(scene, bpy.types.Scene) and root is scene.collection,
+             'Weapon display Scene ownership changed.')
+    parents = {parent for parent in (*bpy.data.collections, *(s.collection for s in bpy.data.scenes))
+               if collection in tuple(parent.children)}
+    _require(parents == {root}, 'Weapon display collection moved or gained an external Scene link.')
+    objects = tuple(record['objects'].values())
+    _require(objects and set(collection.objects) == set(objects) and all(isinstance(obj, bpy.types.Object)
+        and obj.get(OWNER) == owner and set(obj.users_collection) == {collection} for obj in objects),
+        'Weapon display objects gained an unowned link.')
+    for key in _ASSET_TABLES:
+        table = getattr(bpy.data, key)
+        for block in record.get('assets', {}).get(key, {}).values():
+            _require(isinstance(block, bpy.types.ID) and table.get(block.name) is block
+                     and block.get(OWNER) == owner, 'Weapon display asset ownership changed.')
+    return record, objects
+
+
+def remove_context(context, rig):
+    import bpy
+    record, objects = validate_owned(rig)
+    collection = record['collection']
+    assets = {key: tuple(record.get('assets', {}).get(key, {}).values()) for key in _ASSET_TABLES}
+    allowed = {rig, collection, *objects}
+    users = bpy.data.user_map()
+    for obj in objects:
+        _require(all(owner in allowed for owner in users.get(obj, set())),
+                 'An external object uses this weapon context; preserve it for inspection.')
+    _require(collection.users == 2 and all(owner in {rig, record['scene'], record['scene_root']}
+        for owner in users.get(collection, set())), 'Weapon context collection gained an external user.')
+    del rig[RECORD]
+    for obj in objects:
+        bpy.data.objects.remove(obj, do_unlink=True)
+    bpy.data.collections.remove(collection)
+    _remove_unused_assets(assets)
+
+
+def add_context(context, rig, spec, packet, scope):
+    """Import a real display context; do not automatically bind hand IK to it."""
+    import bpy
+    from mathutils import Matrix, Vector
+    from .animation_composition_controls import validate_scope
+    from .animation_composition_export import _artist_state, _action_hash
+    spec = contract.validate(spec)
+    validate_scope(context, rig, spec, packet, scope)
+    document, expected = validate_context(spec)
+    identity = _weapon_identity(spec)
+    if rig.get(RECORD):
+        record, _ = validate_owned(rig)
+        _require(record.get('identity') == identity, 'Remove the previous owned weapon context before changing its source or mount.')
+        return json.loads(record['proof_json'])
+    indices = {bone['path']: index for index, bone in enumerate(packet['bones'])}
+    bone_index = indices.get(spec['weaponRigBonePath'])
+    _require(bone_index is not None, 'Actual weapon mount has no exact packet bone path.')
+    native = next((name for name, index in scope.mapping.indices.items() if index == bone_index), None)
+    _require(native is not None and native in rig.pose.bones, 'Actual weapon mount is unmapped on the original Rig.')
+    saved = _context_capture(context)
+    _require(saved['mode'] != 'EDIT', 'Leave Edit Mode before importing the actual weapon context.')
+    rest_before = contract.digest(_host('unity_animation')._rest_state(rig.data))
+    artist_before, actions_before = _artist_state(rig, context.scene), _rig_actions(rig)
+    action, slot = rig.animation_data.action, rig.animation_data.action_slot
+    old_objects = set(bpy.data.objects)
+    old_assets = _asset_snapshot()
+    collection, created = None, []
+    try:
+        if context.object and context.object.mode != 'OBJECT':
+            bpy.ops.object.mode_set(mode='OBJECT')
+        try:
+            result = bpy.ops.import_scene.fbx(filepath=document['modelFile'], use_anim=False, use_custom_props=False)
+        finally:
+            imported = tuple(obj for obj in bpy.data.objects if obj not in old_objects)
+            created.extend(obj for obj in imported if not any(
+                str(key).startswith('character_designer') for key in obj.keys()))
+        _require('FINISHED' in result, 'Raw weapon FBX import did not finish.')
+        _require(imported and all(not any(str(key).startswith('character_designer') for key in obj.keys())
+            for obj in imported), 'Unexpected artist-generated data appeared during weapon import.')
+        owner = str(uuid.uuid4())
+        collection = bpy.data.collections.new('Weapon Context')
+        collection[OWNER] = owner
+        context.scene.collection.children.link(collection)
+        for obj in imported:
+            obj[OWNER] = owner
+            for linked in tuple(obj.users_collection):
+                linked.objects.unlink(obj)
+            collection.objects.link(obj)
+        context.view_layer.update()
+        raw = _raw_surface(context, imported)
+        proof = fit_import_geometry(raw, expected)
+        # The packet bone's authored basis can differ from the artist bone axis.
+        # Solve the local attachment once from their authenticated Rest frames.
+        ua = _host('unity_animation')
+        basis = _attachment_basis(scope, packet, native, bone_index)
+        authored_local = basis @ _matrix(spec['weaponLocalMatrix']) @ _matrix(spec['weaponPrefabLocalMatrix'])
+        local = authored_local @ Matrix(proof['matrix'])
+        anchor = _bone_anchor(collection, created, owner, rig, native, 'Weapon Mount')
+        geometry = bpy.data.objects.new('Weapon Geometry', None)
+        geometry[OWNER] = owner
+        collection.objects.link(geometry)
+        created.append(geometry)
+        geometry.parent = anchor
+        geometry.matrix_parent_inverse = Matrix.Identity(4)
+        geometry.matrix_basis = local
+        for obj in imported:
+            if obj.parent not in imported:
+                raw_world = obj.matrix_world.copy()
+                obj.parent = geometry
+                obj.matrix_parent_inverse = Matrix.Identity(4)
+                obj.matrix_basis = raw_world
+        # These are actual captured targets relative to their declared parent
+        # bone. Displaying them does not install an IK or hand correction.
+        by_index = {index: name for name, index in scope.mapping.indices.items()}
+        for grip in spec['gripTargets']:
+            index = indices[grip['rigBonePath']]
+            parent_native = by_index[index]
+            grip_anchor = _bone_anchor(collection, created, owner, rig, parent_native,
+                                       'Grip Parent · ' + grip['id'])
+            target = bpy.data.objects.new('Grip · ' + grip['id'], None)
+            target[OWNER], target['authored_grip_id'] = owner, grip['id']
+            target['authored_control_id'] = grip['controlId']
+            target.empty_display_type, target.empty_display_size = 'ARROWS', .03
+            collection.objects.link(target)
+            created.append(target)
+            target.parent = grip_anchor
+            target.matrix_parent_inverse = Matrix.Identity(4)
+            target.matrix_basis = _attachment_basis(scope, packet, parent_native, index) @ _matrix(grip['localMatrix'])
+        context.view_layer.update()
+        evaluated = rig.evaluated_get(context.evaluated_depsgraph_get())
+        expected_world = evaluated.matrix_world @ evaluated.pose.bones[native].matrix @ authored_local
+        unit_scale = float(context.scene.unit_settings.scale_length)
+        _require(math.isfinite(unit_scale) and unit_scale > 0, 'Invalid artist Scene unit scale.')
+        placed_expected = [tuple((expected_world @ Vector(point)) * unit_scale) for point in expected]
+        placed_actual = [tuple(Vector(point) * unit_scale) for point in _raw_surface(context, imported)]
+        proof.update(compare_surface_points(placed_actual, placed_expected))
+        validate_context(spec)
+        _restore_context(context, saved)
+        _require(contract.digest(ua._rest_state(rig.data)) == rest_before
+                 and rig.animation_data.action is action and rig.animation_data.action_slot is slot
+                 and _artist_state(rig, context.scene) == artist_before
+                 and all(_action_hash(a, s) == fingerprint for a, s, fingerprint in actions_before),
+                 'Importing weapon context changed the original Rest, pose, time or Action content/slot.')
+        proof.update({'schema': SCHEMA, 'context_sha256': spec['weaponContextSha256'],
+            'source_sha256': spec['weaponModelSha256'], 'native_mount': native,
+            'prefab_scale_applied_once': True, 'actual_fbx_import': True,
+            'authored_grip_count': len(spec['gripTargets']), 'automatic_hand_ik': False,
+            'grip_limitation': ('Authored grip targets are displayed; supported FK controls remain the edit inputs.'
+                if spec['gripTargets'] else 'No authored named grip targets; edit supported FK controls against the actual weapon.')})
+        imported_assets = _new_assets(old_assets)
+        for blocks in imported_assets.values():
+            for block in blocks:
+                block[OWNER] = owner
+        rig[RECORD] = {'schema': SCHEMA, 'owner': owner, 'identity': identity, 'collection': collection,
+            'scene': saved['scene'], 'scene_root': saved['scene'].collection,
+            'assets': {key: {str(i): block for i, block in enumerate(blocks)}
+                       for key, blocks in imported_assets.items()},
+            'anchor': anchor, 'geometry_root': geometry, 'objects': {str(i): obj for i, obj in enumerate(created)},
+            'proof_json': json.dumps(proof, allow_nan=False, separators=(',', ':'))}
+        validate_owned(rig)
+        return proof
+    except Exception:
+        if RECORD in rig:
+            del rig[RECORD]
+        for obj in reversed(created):
+            bpy.data.objects.remove(obj, do_unlink=True)
+        if collection:
+            bpy.data.collections.remove(collection)
+        _remove_unused_assets(_new_assets(old_assets))
+        raise
+    finally:
+        _restore_context(context, saved)

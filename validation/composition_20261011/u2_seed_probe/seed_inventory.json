@@ -1,0 +1,1679 @@
+{
+  "schema": "x.validation.character-composition-saved-seed-inventory/1",
+  "completed": true,
+  "scope": "Owned QA seed inventory only; no model import, save, repair, frame seek, sampling, action activation, Session or worker.",
+  "gui_or_session_permission_inferred": false,
+  "native_execution_performed_by_source_author": false,
+  "inputs": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\probe_u2_saved_qa_seed_inventory.py",
+      "sha256": "8faa98b002081914ff7d57423553d8fbf1bd78ee838bca4e18b632ee59ebedc4",
+      "bytes": 13738
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture.json",
+      "sha256": "d9f6beae5425d2dbea55a1ab51e216f24ad367cf7019c35571e6f8254c5fcf30",
+      "bytes": 2335
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend",
+      "sha256": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0",
+      "bytes": 39960623
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\python_projection.json",
+      "sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+      "bytes": 44600
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\publication_recovery_native_report.json",
+      "sha256": "be09e217d29ae49c11720bea568afe6fa1454e52d6110a877a2104b649541347",
+      "bytes": 1590520
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529
+    }
+  ],
+  "seed_receipt": {
+    "schema": "x.validation.character-composition-qa-seed/1",
+    "seedBlend": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend",
+    "sceneName": "Composition QA · Fresh Workspace",
+    "rigName": "CoshaRig",
+    "rigSceneNames": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "targetGuid": "697cd144dee805449a9dbe39352aa229",
+    "modelSha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+    "workspacePath": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+    "workspaceSha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+    "workItemIds": [
+      "948e797b8d7044c49530a820349e8968",
+      "8f6f7a3356ff4ca182951d726437117c"
+    ],
+    "itemIds": [
+      "6ce5c78566c9499496ec4c6dab8e4160",
+      "d96388be7e1c4db7a2a2f9ebc65bb946"
+    ],
+    "physicalReport": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\physical\\composition_sync_report.json",
+    "physicalReportSha256": "d1624f1b737b90c162a0fb1d0436102c59b20d20acf46b675fe9c675f179d5af",
+    "seedBlendSha256": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0"
+  },
+  "blender_background": false,
+  "blender_version": [
+    5,
+    2,
+    0
+  ],
+  "runtime_registration_matches_UI_runner": true,
+  "runtime": {
+    "package": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer",
+    "manifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\python_projection.json",
+    "manifest_sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+    "files": 167
+  },
+  "seed_open_result": [
+    "FINISHED"
+  ],
+  "immediately_after_open": {
+    "scene_names": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "scenes": [
+      {
+        "scene": {
+          "name": "Composition QA · Fresh Workspace",
+          "name_full": "Composition QA · Fresh Workspace",
+          "rna_type": "Scene",
+          "native_pointer": 2500249583680,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078535200,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "697cd144dee805449a9dbe39352aa229",
+          "model_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+          "items": [
+            {
+              "item_id": "0a4b0b854eb643528ee0851cbdeb8bdb",
+              "work_item_id": "1753d84253a948e8951cc28f5dd2fa36",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Hold",
+                "name_full": "Source · Hold [0a4b0b854eb643528ee0851cbdeb8bdb.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247006608,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\0a4b0b854eb643528ee0851cbdeb8bdb.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · Hold · Custom",
+                "name_full": "Cosha.Player · Hold · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500247000528,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "6ce5c78566c9499496ec4c6dab8e4160",
+              "work_item_id": "948e797b8d7044c49530a820349e8968",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [6ce5c78566c9499496ec4c6dab8e4160.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247010864,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\6ce5c78566c9499496ec4c6dab8e4160.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom",
+                "name_full": "Cosha.Player · HoldPose · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500246999920,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "d96388be7e1c4db7a2a2f9ebc65bb946",
+              "work_item_id": "8f6f7a3356ff4ca182951d726437117c",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [d96388be7e1c4db7a2a2f9ebc65bb946.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012688,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\d96388be7e1c4db7a2a2f9ebc65bb946.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom.001",
+                "name_full": "Cosha.Player · HoldPose · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247005392,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      },
+      {
+        "scene": {
+          "name": "Scene",
+          "name_full": "Scene",
+          "rna_type": "Scene",
+          "native_pointer": 2500250685552,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078534608,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\Blender\\Projects\\Character\\Animation\\UnityExports\\CharacterTuning\\Workspaces\\16c8d53b-f513-46c0-9778-4789d512ea56\\3207a6768cff4594fb4b180b85f70a37\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"d3444e049cfd4afebb343e61e518c768\",\"3207a6768cff4594fb4b180b85f70a37\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "3207a6768cff4594fb4b180b85f70a37",
+          "model_sha256": "2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5",
+          "items": [
+            {
+              "item_id": "5f771ad1e0644d199cba30b6afd1ad0a",
+              "work_item_id": "430266588d394b5b8d3cadc34216a965",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Walk_N",
+                "name_full": "Source · Walk_N [5f771ad1e0644d199cba30b6afd1ad0a.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012080,
+                "library": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\datafiles\\character_designer\\animation_sources\\d3444e049cfd4afebb343e61e518c768\\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\\5f771ad1e0644d199cba30b6afd1ad0a.blend"
+              },
+              "custom_action": {
+                "name": "Cosha · Walk_N · Custom.001",
+                "name_full": "Cosha · Walk_N · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247003568,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      }
+    ],
+    "selected_scene": {
+      "name": "Composition QA · Fresh Workspace",
+      "name_full": "Composition QA · Fresh Workspace",
+      "rna_type": "Scene",
+      "native_pointer": 2500249583680,
+      "library": null
+    },
+    "selected_rig": {
+      "name": "CoshaRig",
+      "name_full": "CoshaRig",
+      "rna_type": "Object",
+      "native_pointer": 2500255289536,
+      "library": null
+    },
+    "selected_rig_data": {
+      "name": "metarig",
+      "name_full": "metarig",
+      "rna_type": "Armature",
+      "native_pointer": 2500292889088,
+      "library": null
+    },
+    "selected_rig_users_collection": [
+      {
+        "name": "Main",
+        "name_full": "Main",
+        "rna_type": "Collection",
+        "native_pointer": 2500078551184,
+        "library": null
+      }
+    ],
+    "all_name_matching_objects": [
+      {
+        "object": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "type": "ARMATURE",
+        "users_scene": [
+          "Composition QA · Fresh Workspace",
+          "Scene"
+        ]
+      }
+    ],
+    "rig_bone_count": 346,
+    "rig_users_scene": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "adoption": {
+      "decoded": true,
+      "rig": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": "ViewLayer",
+      "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+      "packet_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\Cosha_HoldPose.cdanim.json",
+      "packet_sha256": "5b8ebb91890fc66e5f9ecd5c0df0e67ab93534bc9b4c07799f92c1d31664bf1a",
+      "mapped_count": 217
+    },
+    "context": {
+      "window": null,
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": {
+        "name": "ViewLayer",
+        "name_full": "",
+        "rna_type": "ViewLayer",
+        "native_pointer": 2498805305712
+      },
+      "mode": "OBJECT",
+      "active_object": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "window_manager": {
+        "name": "WinMan",
+        "name_full": "WinMan",
+        "rna_type": "WindowManager",
+        "native_pointer": 2498780289376,
+        "library": null
+      },
+      "windows": [
+        {
+          "window": {
+            "name": "",
+            "name_full": "",
+            "rna_type": "Window",
+            "native_pointer": 2498777232672
+          },
+          "scene": {
+            "name": "Composition QA · Fresh Workspace",
+            "name_full": "Composition QA · Fresh Workspace",
+            "rna_type": "Scene",
+            "native_pointer": 2500249583680,
+            "library": null
+          },
+          "view_layer": {
+            "name": "ViewLayer",
+            "name_full": "",
+            "rna_type": "ViewLayer",
+            "native_pointer": 2498805305712
+          },
+          "screen": {
+            "name": "Layout",
+            "name_full": "Layout",
+            "rna_type": "Screen",
+            "native_pointer": 2498778742976,
+            "library": null
+          },
+          "field_errors": {}
+        }
+      ],
+      "field_errors": {}
+    },
+    "runner_gate_clauses": {
+      "scene_exists": true,
+      "rig_exists": true,
+      "rig_name_in_selected_scene": true,
+      "users_scene_exact": true,
+      "context_window_exists": false
+    },
+    "runner_gate_clause_errors": {}
+  },
+  "context_switch": {
+    "executed": true,
+    "window": {
+      "name": "",
+      "name_full": "",
+      "rna_type": "Window",
+      "native_pointer": 2498777232672
+    },
+    "original_context_window_was_null": true,
+    "field_errors": {},
+    "scene_switch_accepted": true,
+    "view_layer_after_switch_present": true,
+    "view_layer_update_attempted": true,
+    "view_layer_update_accepted": true
+  },
+  "inside_window_override_before_switch": {
+    "scene_names": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "scenes": [
+      {
+        "scene": {
+          "name": "Composition QA · Fresh Workspace",
+          "name_full": "Composition QA · Fresh Workspace",
+          "rna_type": "Scene",
+          "native_pointer": 2500249583680,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078535200,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "697cd144dee805449a9dbe39352aa229",
+          "model_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+          "items": [
+            {
+              "item_id": "0a4b0b854eb643528ee0851cbdeb8bdb",
+              "work_item_id": "1753d84253a948e8951cc28f5dd2fa36",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Hold",
+                "name_full": "Source · Hold [0a4b0b854eb643528ee0851cbdeb8bdb.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247006608,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\0a4b0b854eb643528ee0851cbdeb8bdb.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · Hold · Custom",
+                "name_full": "Cosha.Player · Hold · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500247000528,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "6ce5c78566c9499496ec4c6dab8e4160",
+              "work_item_id": "948e797b8d7044c49530a820349e8968",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [6ce5c78566c9499496ec4c6dab8e4160.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247010864,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\6ce5c78566c9499496ec4c6dab8e4160.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom",
+                "name_full": "Cosha.Player · HoldPose · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500246999920,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "d96388be7e1c4db7a2a2f9ebc65bb946",
+              "work_item_id": "8f6f7a3356ff4ca182951d726437117c",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [d96388be7e1c4db7a2a2f9ebc65bb946.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012688,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\d96388be7e1c4db7a2a2f9ebc65bb946.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom.001",
+                "name_full": "Cosha.Player · HoldPose · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247005392,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      },
+      {
+        "scene": {
+          "name": "Scene",
+          "name_full": "Scene",
+          "rna_type": "Scene",
+          "native_pointer": 2500250685552,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078534608,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\Blender\\Projects\\Character\\Animation\\UnityExports\\CharacterTuning\\Workspaces\\16c8d53b-f513-46c0-9778-4789d512ea56\\3207a6768cff4594fb4b180b85f70a37\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"d3444e049cfd4afebb343e61e518c768\",\"3207a6768cff4594fb4b180b85f70a37\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "3207a6768cff4594fb4b180b85f70a37",
+          "model_sha256": "2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5",
+          "items": [
+            {
+              "item_id": "5f771ad1e0644d199cba30b6afd1ad0a",
+              "work_item_id": "430266588d394b5b8d3cadc34216a965",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Walk_N",
+                "name_full": "Source · Walk_N [5f771ad1e0644d199cba30b6afd1ad0a.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012080,
+                "library": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\datafiles\\character_designer\\animation_sources\\d3444e049cfd4afebb343e61e518c768\\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\\5f771ad1e0644d199cba30b6afd1ad0a.blend"
+              },
+              "custom_action": {
+                "name": "Cosha · Walk_N · Custom.001",
+                "name_full": "Cosha · Walk_N · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247003568,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      }
+    ],
+    "selected_scene": {
+      "name": "Composition QA · Fresh Workspace",
+      "name_full": "Composition QA · Fresh Workspace",
+      "rna_type": "Scene",
+      "native_pointer": 2500249583680,
+      "library": null
+    },
+    "selected_rig": {
+      "name": "CoshaRig",
+      "name_full": "CoshaRig",
+      "rna_type": "Object",
+      "native_pointer": 2500255289536,
+      "library": null
+    },
+    "selected_rig_data": {
+      "name": "metarig",
+      "name_full": "metarig",
+      "rna_type": "Armature",
+      "native_pointer": 2500292889088,
+      "library": null
+    },
+    "selected_rig_users_collection": [
+      {
+        "name": "Main",
+        "name_full": "Main",
+        "rna_type": "Collection",
+        "native_pointer": 2500078551184,
+        "library": null
+      }
+    ],
+    "all_name_matching_objects": [
+      {
+        "object": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "type": "ARMATURE",
+        "users_scene": [
+          "Composition QA · Fresh Workspace",
+          "Scene"
+        ]
+      }
+    ],
+    "rig_bone_count": 346,
+    "rig_users_scene": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "adoption": {
+      "decoded": true,
+      "rig": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": "ViewLayer",
+      "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+      "packet_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\Cosha_HoldPose.cdanim.json",
+      "packet_sha256": "5b8ebb91890fc66e5f9ecd5c0df0e67ab93534bc9b4c07799f92c1d31664bf1a",
+      "mapped_count": 217
+    },
+    "context": {
+      "window": {
+        "name": "",
+        "name_full": "",
+        "rna_type": "Window",
+        "native_pointer": 2498777232672
+      },
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": {
+        "name": "ViewLayer",
+        "name_full": "",
+        "rna_type": "ViewLayer",
+        "native_pointer": 2498805305712
+      },
+      "mode": "OBJECT",
+      "active_object": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "window_manager": {
+        "name": "WinMan",
+        "name_full": "WinMan",
+        "rna_type": "WindowManager",
+        "native_pointer": 2498780289376,
+        "library": null
+      },
+      "windows": [
+        {
+          "window": {
+            "name": "",
+            "name_full": "",
+            "rna_type": "Window",
+            "native_pointer": 2498777232672
+          },
+          "scene": {
+            "name": "Composition QA · Fresh Workspace",
+            "name_full": "Composition QA · Fresh Workspace",
+            "rna_type": "Scene",
+            "native_pointer": 2500249583680,
+            "library": null
+          },
+          "view_layer": {
+            "name": "ViewLayer",
+            "name_full": "",
+            "rna_type": "ViewLayer",
+            "native_pointer": 2498805305712
+          },
+          "screen": {
+            "name": "Layout",
+            "name_full": "Layout",
+            "rna_type": "Screen",
+            "native_pointer": 2498778742976,
+            "library": null
+          },
+          "field_errors": {}
+        }
+      ],
+      "field_errors": {}
+    },
+    "runner_gate_clauses": {
+      "scene_exists": true,
+      "rig_exists": true,
+      "rig_name_in_selected_scene": true,
+      "users_scene_exact": true,
+      "context_window_exists": true
+    },
+    "runner_gate_clause_errors": {}
+  },
+  "inside_window_override_after_switch_update": {
+    "scene_names": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "scenes": [
+      {
+        "scene": {
+          "name": "Composition QA · Fresh Workspace",
+          "name_full": "Composition QA · Fresh Workspace",
+          "rna_type": "Scene",
+          "native_pointer": 2500249583680,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078535200,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "697cd144dee805449a9dbe39352aa229",
+          "model_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+          "items": [
+            {
+              "item_id": "0a4b0b854eb643528ee0851cbdeb8bdb",
+              "work_item_id": "1753d84253a948e8951cc28f5dd2fa36",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Hold",
+                "name_full": "Source · Hold [0a4b0b854eb643528ee0851cbdeb8bdb.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247006608,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\0a4b0b854eb643528ee0851cbdeb8bdb.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · Hold · Custom",
+                "name_full": "Cosha.Player · Hold · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500247000528,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "6ce5c78566c9499496ec4c6dab8e4160",
+              "work_item_id": "948e797b8d7044c49530a820349e8968",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [6ce5c78566c9499496ec4c6dab8e4160.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247010864,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\6ce5c78566c9499496ec4c6dab8e4160.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom",
+                "name_full": "Cosha.Player · HoldPose · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500246999920,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "d96388be7e1c4db7a2a2f9ebc65bb946",
+              "work_item_id": "8f6f7a3356ff4ca182951d726437117c",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [d96388be7e1c4db7a2a2f9ebc65bb946.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012688,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\d96388be7e1c4db7a2a2f9ebc65bb946.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom.001",
+                "name_full": "Cosha.Player · HoldPose · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247005392,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      },
+      {
+        "scene": {
+          "name": "Scene",
+          "name_full": "Scene",
+          "rna_type": "Scene",
+          "native_pointer": 2500250685552,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078534608,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\Blender\\Projects\\Character\\Animation\\UnityExports\\CharacterTuning\\Workspaces\\16c8d53b-f513-46c0-9778-4789d512ea56\\3207a6768cff4594fb4b180b85f70a37\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"d3444e049cfd4afebb343e61e518c768\",\"3207a6768cff4594fb4b180b85f70a37\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "3207a6768cff4594fb4b180b85f70a37",
+          "model_sha256": "2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5",
+          "items": [
+            {
+              "item_id": "5f771ad1e0644d199cba30b6afd1ad0a",
+              "work_item_id": "430266588d394b5b8d3cadc34216a965",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Walk_N",
+                "name_full": "Source · Walk_N [5f771ad1e0644d199cba30b6afd1ad0a.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012080,
+                "library": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\datafiles\\character_designer\\animation_sources\\d3444e049cfd4afebb343e61e518c768\\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\\5f771ad1e0644d199cba30b6afd1ad0a.blend"
+              },
+              "custom_action": {
+                "name": "Cosha · Walk_N · Custom.001",
+                "name_full": "Cosha · Walk_N · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247003568,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      }
+    ],
+    "selected_scene": {
+      "name": "Composition QA · Fresh Workspace",
+      "name_full": "Composition QA · Fresh Workspace",
+      "rna_type": "Scene",
+      "native_pointer": 2500249583680,
+      "library": null
+    },
+    "selected_rig": {
+      "name": "CoshaRig",
+      "name_full": "CoshaRig",
+      "rna_type": "Object",
+      "native_pointer": 2500255289536,
+      "library": null
+    },
+    "selected_rig_data": {
+      "name": "metarig",
+      "name_full": "metarig",
+      "rna_type": "Armature",
+      "native_pointer": 2500292889088,
+      "library": null
+    },
+    "selected_rig_users_collection": [
+      {
+        "name": "Main",
+        "name_full": "Main",
+        "rna_type": "Collection",
+        "native_pointer": 2500078551184,
+        "library": null
+      }
+    ],
+    "all_name_matching_objects": [
+      {
+        "object": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "type": "ARMATURE",
+        "users_scene": [
+          "Composition QA · Fresh Workspace",
+          "Scene"
+        ]
+      }
+    ],
+    "rig_bone_count": 346,
+    "rig_users_scene": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "adoption": {
+      "decoded": true,
+      "rig": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": "ViewLayer",
+      "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+      "packet_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\Cosha_HoldPose.cdanim.json",
+      "packet_sha256": "5b8ebb91890fc66e5f9ecd5c0df0e67ab93534bc9b4c07799f92c1d31664bf1a",
+      "mapped_count": 217
+    },
+    "context": {
+      "window": {
+        "name": "",
+        "name_full": "",
+        "rna_type": "Window",
+        "native_pointer": 2498777232672
+      },
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": {
+        "name": "ViewLayer",
+        "name_full": "",
+        "rna_type": "ViewLayer",
+        "native_pointer": 2498805305712
+      },
+      "mode": "OBJECT",
+      "active_object": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "window_manager": {
+        "name": "WinMan",
+        "name_full": "WinMan",
+        "rna_type": "WindowManager",
+        "native_pointer": 2498780289376,
+        "library": null
+      },
+      "windows": [
+        {
+          "window": {
+            "name": "",
+            "name_full": "",
+            "rna_type": "Window",
+            "native_pointer": 2498777232672
+          },
+          "scene": {
+            "name": "Composition QA · Fresh Workspace",
+            "name_full": "Composition QA · Fresh Workspace",
+            "rna_type": "Scene",
+            "native_pointer": 2500249583680,
+            "library": null
+          },
+          "view_layer": {
+            "name": "ViewLayer",
+            "name_full": "",
+            "rna_type": "ViewLayer",
+            "native_pointer": 2498805305712
+          },
+          "screen": {
+            "name": "Layout",
+            "name_full": "Layout",
+            "rna_type": "Screen",
+            "native_pointer": 2498778742976,
+            "library": null
+          },
+          "field_errors": {}
+        }
+      ],
+      "field_errors": {}
+    },
+    "runner_gate_clauses": {
+      "scene_exists": true,
+      "rig_exists": true,
+      "rig_name_in_selected_scene": true,
+      "users_scene_exact": true,
+      "context_window_exists": true
+    },
+    "runner_gate_clause_errors": {}
+  },
+  "after_window_override": {
+    "scene_names": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "scenes": [
+      {
+        "scene": {
+          "name": "Composition QA · Fresh Workspace",
+          "name_full": "Composition QA · Fresh Workspace",
+          "rna_type": "Scene",
+          "native_pointer": 2500249583680,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078535200,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "697cd144dee805449a9dbe39352aa229",
+          "model_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+          "items": [
+            {
+              "item_id": "0a4b0b854eb643528ee0851cbdeb8bdb",
+              "work_item_id": "1753d84253a948e8951cc28f5dd2fa36",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Hold",
+                "name_full": "Source · Hold [0a4b0b854eb643528ee0851cbdeb8bdb.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247006608,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\0a4b0b854eb643528ee0851cbdeb8bdb.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · Hold · Custom",
+                "name_full": "Cosha.Player · Hold · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500247000528,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "6ce5c78566c9499496ec4c6dab8e4160",
+              "work_item_id": "948e797b8d7044c49530a820349e8968",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [6ce5c78566c9499496ec4c6dab8e4160.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247010864,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\6ce5c78566c9499496ec4c6dab8e4160.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom",
+                "name_full": "Cosha.Player · HoldPose · Custom",
+                "rna_type": "Action",
+                "native_pointer": 2500246999920,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            },
+            {
+              "item_id": "d96388be7e1c4db7a2a2f9ebc65bb946",
+              "work_item_id": "8f6f7a3356ff4ca182951d726437117c",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · HoldPose",
+                "name_full": "Source · HoldPose [d96388be7e1c4db7a2a2f9ebc65bb946.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012688,
+                "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\animation_sources\\973dbf6339f746cdae0e5d23eb8c74d4\\f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\\d96388be7e1c4db7a2a2f9ebc65bb946.blend"
+              },
+              "custom_action": {
+                "name": "Cosha.Player · HoldPose · Custom.001",
+                "name_full": "Cosha.Player · HoldPose · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247005392,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      },
+      {
+        "scene": {
+          "name": "Scene",
+          "name_full": "Scene",
+          "rna_type": "Scene",
+          "native_pointer": 2500250685552,
+          "library": null
+        },
+        "users": 1,
+        "use_fake_user": false,
+        "master_collection": {
+          "name": "Scene Collection",
+          "name_full": "Scene Collection",
+          "rna_type": "Collection",
+          "native_pointer": 2500078534608,
+          "library": null
+        },
+        "rig_lookup": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "setup_rig": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "rig_lookup_equals_global_native": true,
+        "setup_rig_equals_global_native": true,
+        "setup_rig_equals_scene_lookup_native": true,
+        "armature_objects": [
+          {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          {
+            "name": "Strap2.001",
+            "name_full": "Strap2.001",
+            "rna_type": "Object",
+            "native_pointer": 2500269290928,
+            "library": null
+          }
+        ],
+        "worklist": {
+          "rig": {
+            "name": "CoshaRig",
+            "name_full": "CoshaRig",
+            "rna_type": "Object",
+            "native_pointer": 2500255289536,
+            "library": null
+          },
+          "workspace_path": "D:\\Blender\\Projects\\Character\\Animation\\UnityExports\\CharacterTuning\\Workspaces\\16c8d53b-f513-46c0-9778-4789d512ea56\\3207a6768cff4594fb4b180b85f70a37\\character_animation_workspace.json",
+          "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"d3444e049cfd4afebb343e61e518c768\",\"3207a6768cff4594fb4b180b85f70a37\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+          "target_guid": "3207a6768cff4594fb4b180b85f70a37",
+          "model_sha256": "2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5",
+          "items": [
+            {
+              "item_id": "5f771ad1e0644d199cba30b6afd1ad0a",
+              "work_item_id": "430266588d394b5b8d3cadc34216a965",
+              "rig": {
+                "name": "CoshaRig",
+                "name_full": "CoshaRig",
+                "rna_type": "Object",
+                "native_pointer": 2500255289536,
+                "library": null
+              },
+              "source_action": {
+                "name": "Source · Walk_N",
+                "name_full": "Source · Walk_N [5f771ad1e0644d199cba30b6afd1ad0a.blend]",
+                "rna_type": "Action",
+                "native_pointer": 2500247012080,
+                "library": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\datafiles\\character_designer\\animation_sources\\d3444e049cfd4afebb343e61e518c768\\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\\5f771ad1e0644d199cba30b6afd1ad0a.blend"
+              },
+              "custom_action": {
+                "name": "Cosha · Walk_N · Custom.001",
+                "name_full": "Cosha · Walk_N · Custom.001",
+                "rna_type": "Action",
+                "native_pointer": 2500247003568,
+                "library": null
+              },
+              "source_slot": 929201142,
+              "custom_slot": 929201142
+            }
+          ]
+        }
+      }
+    ],
+    "selected_scene": {
+      "name": "Composition QA · Fresh Workspace",
+      "name_full": "Composition QA · Fresh Workspace",
+      "rna_type": "Scene",
+      "native_pointer": 2500249583680,
+      "library": null
+    },
+    "selected_rig": {
+      "name": "CoshaRig",
+      "name_full": "CoshaRig",
+      "rna_type": "Object",
+      "native_pointer": 2500255289536,
+      "library": null
+    },
+    "selected_rig_data": {
+      "name": "metarig",
+      "name_full": "metarig",
+      "rna_type": "Armature",
+      "native_pointer": 2500292889088,
+      "library": null
+    },
+    "selected_rig_users_collection": [
+      {
+        "name": "Main",
+        "name_full": "Main",
+        "rna_type": "Collection",
+        "native_pointer": 2500078551184,
+        "library": null
+      }
+    ],
+    "all_name_matching_objects": [
+      {
+        "object": {
+          "name": "CoshaRig",
+          "name_full": "CoshaRig",
+          "rna_type": "Object",
+          "native_pointer": 2500255289536,
+          "library": null
+        },
+        "type": "ARMATURE",
+        "users_scene": [
+          "Composition QA · Fresh Workspace",
+          "Scene"
+        ]
+      }
+    ],
+    "rig_bone_count": 346,
+    "rig_users_scene": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "adoption": {
+      "decoded": true,
+      "rig": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": "ViewLayer",
+      "workspace_identity": "[[\"randomrealm.animation-workspace/1\",\"973dbf6339f746cdae0e5d23eb8c74d4\",\"697cd144dee805449a9dbe39352aa229\",\"d:\\\\unity projects\\\\randomrealm2\\\\assets\\\\art\\\\character\\\\cosha\\\\cosha.fbx\",\"f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635\"],{\"projectId\":\"16c8d53b-f513-46c0-9778-4789d512ea56\",\"baseControllerGuid\":\"4c9fd1476736cb8498afee4edfc47b3d\",\"avatarGuid\":\"874ce658cb6c4b54a8203998231760cd\",\"avatarHash\":\"8ef337a02f6306d5125f3dcae346e4e2\"}]",
+      "packet_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\Cosha_HoldPose.cdanim.json",
+      "packet_sha256": "5b8ebb91890fc66e5f9ecd5c0df0e67ab93534bc9b4c07799f92c1d31664bf1a",
+      "mapped_count": 217
+    },
+    "context": {
+      "window": null,
+      "scene": {
+        "name": "Composition QA · Fresh Workspace",
+        "name_full": "Composition QA · Fresh Workspace",
+        "rna_type": "Scene",
+        "native_pointer": 2500249583680,
+        "library": null
+      },
+      "view_layer": {
+        "name": "ViewLayer",
+        "name_full": "",
+        "rna_type": "ViewLayer",
+        "native_pointer": 2498805305712
+      },
+      "mode": "OBJECT",
+      "active_object": {
+        "name": "CoshaRig",
+        "name_full": "CoshaRig",
+        "rna_type": "Object",
+        "native_pointer": 2500255289536,
+        "library": null
+      },
+      "window_manager": {
+        "name": "WinMan",
+        "name_full": "WinMan",
+        "rna_type": "WindowManager",
+        "native_pointer": 2498780289376,
+        "library": null
+      },
+      "windows": [
+        {
+          "window": {
+            "name": "",
+            "name_full": "",
+            "rna_type": "Window",
+            "native_pointer": 2498777232672
+          },
+          "scene": {
+            "name": "Composition QA · Fresh Workspace",
+            "name_full": "Composition QA · Fresh Workspace",
+            "rna_type": "Scene",
+            "native_pointer": 2500249583680,
+            "library": null
+          },
+          "view_layer": {
+            "name": "ViewLayer",
+            "name_full": "",
+            "rna_type": "ViewLayer",
+            "native_pointer": 2498805305712
+          },
+          "screen": {
+            "name": "Layout",
+            "name_full": "Layout",
+            "rna_type": "Screen",
+            "native_pointer": 2498778742976,
+            "library": null
+          },
+          "field_errors": {}
+        }
+      ],
+      "field_errors": {}
+    },
+    "runner_gate_clauses": {
+      "scene_exists": true,
+      "rig_exists": true,
+      "rig_name_in_selected_scene": true,
+      "users_scene_exact": true,
+      "context_window_exists": false
+    },
+    "runner_gate_clause_errors": {}
+  },
+  "all_input_bytes_unchanged": true
+}

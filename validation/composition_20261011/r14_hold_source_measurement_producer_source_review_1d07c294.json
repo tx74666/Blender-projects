@@ -1,0 +1,43 @@
+{
+  "schema": "x.validation.character-composition-hold-source-measurement-producer-source-review/1",
+  "utc": "2026-10-11T03:56:29.997818+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "status": "READY",
+  "producer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\measure_character_composition_hold_sources_r2.py",
+    "sha256": "1d07c294db68d750ac5d8299292b269846246f90a3bc590c6d87bd4cf197fb1d",
+    "bytes": 23857
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\measure_character_composition_hold_sources.py",
+    "sha256": "c9509296b579f08524e2748d74d6c22fdc47117300ebb7635bcf025dd1652fed",
+    "bytes": 23446
+  },
+  "historical_reader_failure": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\r14_hold_source_measurement_failure_c9509296.json",
+    "sha256": "c40171d8dbca98b520f965609381cb70f00c8dfd682ec054125e7c01b9f71c88",
+    "bytes": 2270
+  },
+  "checks": {
+    "complete_source_read": true,
+    "row_major_parent_local_inverse_times_world": true,
+    "all_41_paths_every_frame": true,
+    "exact_source_constancy_and_two_A_same_snapshot": true,
+    "original_moving_loop_source_and_actual_meta": true,
+    "actual_sealed_spec_route_source_file_pins": true,
+    "finite_hierarchy_timing_and_components": true,
+    "exclusive_outputs_and_final_input_rehash": true,
+    "source_compile_AST_only": true,
+    "only_changed_function": "packet_frames",
+    "unchanged_function_count": 15,
+    "actual_protocol_tail": "meshes:[]",
+    "tail_limit_characters": 65536,
+    "duplicate_unknown_or_nonempty_mesh_tail_rejected": true
+  },
+  "limitations": [
+    "This SOURCE review proves no actual new packet numeric result; the independently pinned actual measurement proof/report remain required.",
+    "No native Actions/Bezier handles/control mapping/physical export/GUI/scene save success is implied.",
+    "Only bounded historical header and actual packet tail were inspected by this reviewer; producer CLI invocation is delegated separately."
+  ]
+}

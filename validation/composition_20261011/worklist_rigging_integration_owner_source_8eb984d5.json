@@ -1,0 +1,177 @@
+{
+  "schema": "x.validation.character-designer-worklist-rigging-integration-source/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "source_files": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "8eb984d505d21be19aba2120d3e883495c03061b7aff6a477d0f57e271545b2b",
+      "bytes": 39866
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485
+    }
+  },
+  "changed_runtime_sources": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "8eb984d505d21be19aba2120d3e883495c03061b7aff6a477d0f57e271545b2b",
+      "bytes": 39866
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485
+    }
+  },
+  "source_changes": {
+    "animation_worklist.py": {
+      "before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_fea0c713_before_rigging_inputs.py",
+        "sha256": "fea0c713008ad73a9cca30112054312a28b8cfdebbcfda20d6a38483defbd043",
+        "bytes": 33381
+      },
+      "after": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+        "sha256": "8eb984d505d21be19aba2120d3e883495c03061b7aff6a477d0f57e271545b2b",
+        "bytes": 39866
+      },
+      "changed_functions": [
+        "_capture_rig",
+        "_restore_rig",
+        "adopt_main_rig",
+        "restore_main_rig",
+        "add",
+        "activate",
+        "remove",
+        "sync"
+      ],
+      "added_functions": [
+        "_rigging_module"
+      ],
+      "unchanged_function_count": 24,
+      "unchanged_functions": [
+        "state",
+        "current",
+        "_idle",
+        "_encoded",
+        "_identity",
+        "_clip_key",
+        "_validate_route",
+        "_fill_catalog",
+        "connect",
+        "refresh",
+        "_fresh_workspace",
+        "_prepared",
+        "_clean_action",
+        "_slot",
+        "_linked_baseline",
+        "_find_owned_rig",
+        "_editing_data",
+        "_copy_workspace",
+        "_composition_add_route",
+        "_item",
+        "_check_baseline",
+        "_association_record",
+        "_association",
+        "move"
+      ],
+      "unchanged_functions_text_and_ast_equal": true,
+      "top_level_ast_equal": true
+    },
+    "animation_link_source.py": {
+      "before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_link_source_9aaa0327_before_rigging_inputs.py",
+        "sha256": "9aaa032749a86ec808523697c8a85679dce0134e60dfb640331bd41f53859998",
+        "bytes": 12785
+      },
+      "after": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+        "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+        "bytes": 13485
+      },
+      "changed_functions": [
+        "_packet",
+        "_import_prepared_source"
+      ],
+      "added_functions": [],
+      "unchanged_function_count": 9,
+      "unchanged_functions": [
+        "_error",
+        "_import_action",
+        "_sha256",
+        "_source_model",
+        "_context_state",
+        "_restore_context",
+        "_validate_import_context",
+        "import_source",
+        "_restore_image_settings"
+      ],
+      "unchanged_functions_text_and_ast_equal": true,
+      "top_level_ast_equal": true
+    }
+  },
+  "independent_ast_normalization": {
+    "animation_worklist.py": {
+      "whole_module_inverse_ast_equal": true,
+      "method": "Remove the explicitly added rigging tag dispatcher/hooks, restore original managed-target admission position, unwrap activate and Sync transactions, and remove only the added native-clock keyword/conditional; compare complete AST to pinned raw snapshot."
+    },
+    "animation_link_source.py": {
+      "whole_module_inverse_ast_equal": true,
+      "method": "Remove the explicitly added rigging tag dispatcher/hooks, restore original managed-target admission position, unwrap activate and Sync transactions, and remove only the added native-clock keyword/conditional; compare complete AST to pinned raw snapshot."
+    }
+  },
+  "source_diff": {
+    "animation_worklist.py": "--- D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_fea0c713_before_rigging_inputs.py\n+++ D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py\n@@ -14,6 +14,23 @@\n \n from . import animation_link as links, animation_link_source as source\n from . import animation_workspace as workspace, unity_animation as ua\n+\n+\n+def _rigging_module(rig=None, action=None, *, packet=None, owned_state=None):\n+    def tagged(value, key):\n+        keys = getattr(value, 'keys', None)\n+        return callable(keys) and key in keys()\n+\n+    capture_key = 'character_designer_rigging_capture_v1'\n+    input_key = 'character_designer_rigging_input_action_v1'\n+    if tagged(action, input_key) and not tagged(action, capture_key):\n+        raise ValueError('The Custom Rigging input draft lost its authenticated capture.')\n+    if (owned_state is not None or packet is not None and 'rigging' in packet\n+            or tagged(rig, 'character_designer_rigging_session_v1')\n+            or tagged(action, capture_key)):\n+        from . import unity_animation_rigging\n+        return unity_animation_rigging\n+    return None\n \n \n def state(context):\n@@ -221,6 +238,8 @@\n                     props={key: rig[key] for key in (links.LINK_KEY, links.ACTION_KEY,\n                             links.RIG_ID_KEY, ua.ACTIVE_KEY) if key in rig},\n                     target_session=target.capture_session_metadata(rig))\n+    rigging = _rigging_module(rig, action)\n+    captured['rigging'] = rigging._capture_owned(context, rig) if rigging else None\n     # Pin temporary legacy-preview data until adoption commits or rolls back.\n     data.use_fake_user = True\n     return captured\n@@ -228,6 +247,9 @@\n \n def _restore_rig(context, rig, captured):\n     from . import animation_worklist_target as target\n+    rigging = _rigging_module(rig, captured['action'], owned_state=captured.get('rigging'))\n+    if rigging:\n+        rigging.restore_owned(context, rig)\n     if rig.data is not captured['data']:\n         ua._swap_armature_data(context, rig, captured['data'])\n     ua._restore_snapshot(context, rig, captured['snapshot'], captured['action'])\n@@ -245,11 +267,23 @@\n             del rig[key]\n     captured['data'].use_fake_user = captured['fake_user']\n     target.restore_session_metadata(rig, captured.get('target_session', {}))\n+    if rigging:\n+        rigging._restore_owned_state(context, rig, captured.get('rigging'))\n \n \n def adopt_main_rig(context):\n     from .animation_worklist_target import adopt_main_rig as adopt\n-    return adopt(context)\n+    rig = getattr(getattr(context.scene, 'character_designer_setup', None), 'rig', None)\n+    rigging = _rigging_module(rig)\n+    if rigging is None:\n+        return adopt(context)\n+    captured = rigging._capture_owned(context, rig)\n+    try:\n+        rigging.restore_owned(context, rig)\n+        return adopt(context)\n+    except Exception:\n+        rigging._restore_owned_state(context, rig, captured)\n+        raise\n \n \n def restore_main_rig(context):\n@@ -257,7 +291,17 @@\n     if composition.active(state(context).rig):\n         raise ValueError('Close Composition before restoring Main Rig; its native draft is retained.')\n     from .animation_worklist_target import restore_main_rig as restore\n-    return restore(context)\n+    rig = state(context).rig\n+    rigging = _rigging_module(rig)\n+    if rigging is None:\n+        return restore(context)\n+    captured = rigging._capture_owned(context, rig)\n+    try:\n+        rigging.restore_owned(context, rig)\n+        return restore(context)\n+    except Exception:\n+        rigging._restore_owned_state(context, rig, captured)\n+        raise\n \n \n def _copy_workspace(source_state, destination):\n@@ -325,8 +369,7 @@\n         return existing\n     _record, clip, link, packet, export_name, model = _prepared(\n         saved, clip_key, existing_target=target.is_adopted(saved.rig))\n-    if target.managed(saved.rig):\n-        target.ensure_active(context, saved.rig)\n+    rigging = _rigging_module(saved.rig, packet=packet)\n     old_context = source._context_state(context)\n     previous_target = context.window_manager.character_designer_animation.target\n     created_before = set(bpy.data.user_map())\n@@ -342,16 +385,25 @@\n     existing_edit_props = None\n     existing_edit_fake_user = None\n     try:\n+        if rig is not None:\n+            if rigging:\n+                rigging.restore_owned(context, rig)\n+            if target.managed(rig):\n+                target.ensure_active(context, rig)\n         if rig is None:\n             rig = _find_owned_rig(context, saved)\n             if rig is None:\n                 prepared_import = getattr(source, '_import_prepared_source', None)\n                 if prepared_import is None:\n+                    if 'rigging' in packet:\n+                        raise ValueError('Refresh Character Designer before importing Rigging inputs on their native clock.')\n                     # A file-only update can precede a saved-session restart.\n                     imported = source.import_source(context, link['_manifest_path'], str(model), start_frame=1)\n                 else:\n-                    imported = prepared_import(context, link, packet, export_name,\n-                                               model, saved.model_sha256, start_frame=1)\n+                    imported = (prepared_import(context, link, packet, export_name,\n+                        model, saved.model_sha256, start_frame=1, native_timebase=True)\n+                        if 'rigging' in packet else prepared_import(context, link, packet, export_name,\n+                            model, saved.model_sha256, start_frame=1))\n                 rig, baseline = imported.rig, imported.action\n                 first_scene = True\n                 destination = state(context)\n@@ -360,6 +412,9 @@\n                 context.scene.name = 'Animation Worklist · ' + saved.target_name\n             else:\n                 captured = _capture_rig(context, rig)\n+                rigging = _rigging_module(rig, packet=packet)\n+                if rigging:\n+                    rigging.restore_owned(context, rig)\n                 associated = links.get_link(rig)\n                 if _clip_key(associated['identity']) == clip_key:\n                     if links._identity(associated['identity']) != links._identity(link):\n@@ -380,7 +435,8 @@\n         if baseline is None:\n             if ua.active_preview(rig):\n                 raise ValueError('Restore the unrelated Unity test preview before adding a worklist clip.')\n-            imported = source._import_action(context, rig, packet, 1)\n+            imported = (source._import_action(context, rig, packet, 1, native_timebase=True)\n+                        if 'rigging' in packet else source._import_action(context, rig, packet, 1))\n             baseline = imported.action\n             target.restore_import_preview(context, rig, baseline)\n         _clean_action(baseline)\n@@ -397,6 +453,9 @@\n                 or (not target.is_adopted(rig) and links._sha256(model) != saved.model_sha256)):\n             raise ValueError('A linked input changed during import; the worklist entry was not added.')\n         target.attach_action_motion_data(rig, custom)\n+        if 'rigging' in packet:\n+            rigging.import_inputs(context, rig, packet, base_action=custom, base_slot=_slot(custom).handle,\n+                work_item_id=workspace.work_item_id(clip))\n         item = saved.items.add()\n         item.item_id, item.clip_key, item.name = item_id, clip_key, clip['clipName']\n         item.work_item_id = workspace.work_item_id(clip)\n@@ -425,6 +484,8 @@\n         rig.show_in_front = True\n         return item\n     except Exception:\n+        if rig is not None and rigging:\n+            rigging.restore_owned(context, rig)\n         # Activation owns a temporary WindowManager target as well as Scene\n         # data. Restore it before removing a failed imported rig's IDs.\n         context.window_manager.character_designer_animation.target = previous_target\n@@ -521,41 +582,79 @@\n     if side == 'SOURCE' and getattr(item, 'new_animation', False):\n         raise ValueError('This new Action has no Original or Source version.')\n     rig = item.rig\n-    target.ensure_active(context, rig)\n-    if rig.name not in context.scene.objects:\n-        raise ValueError('Return to the worklist editing scene first.')\n-    _check_baseline(item)\n-    action = item.source_action if side == 'SOURCE' else item.custom_action\n-    if action is None or (side == 'CUSTOM' and action.library is not None):\n-        raise ValueError('This entry lost its local editable Custom Action.')\n-    slot = _slot(action, item.source_slot if side == 'SOURCE' else item.custom_slot)\n-    if ua.active_preview(rig):\n-        raise ValueError('Restore the unrelated Unity test preview before switching worklist Actions.')\n-    association = _association_record(item) if side == 'CUSTOM' and not getattr(item, 'new_animation', False) else None\n-    ua._set_playing(context, False)\n-    ad = rig.animation_data_create()\n-    ad.action, ad.action_slot = action, slot\n-    ad.use_nla, ad.action_blend_type, ad.action_influence = False, 'REPLACE', 1.0\n-    if association is not None:\n-        _association(item, association)\n-    saved.active_index = next(i for i, entry in enumerate(saved.items) if entry.item_id == item_id)\n-    item.side = side\n-    context.scene.tool_settings.use_keyframe_insert_auto = False\n-    start, end = map(float, action.frame_range)\n-    scene = context.scene\n-    scene.frame_start = scene.frame_preview_start = math.floor(start)\n-    scene.frame_end = scene.frame_preview_end = max(math.ceil(end), scene.frame_start)\n-    scene.use_preview_range = True\n-    ua._set_frame(scene, start)\n-    for selected in context.selected_objects:\n-        selected.select_set(False)\n-    rig.hide_set(False)\n-    rig.select_set(True)\n-    context.view_layer.objects.active = rig\n-    context.window_manager.character_designer_animation.target = rig\n-    context.view_layer.update()\n-    saved.status, saved.has_error = item.name + ' · ' + ('Source (read-only)' if side == 'SOURCE' else 'Custom'), False\n-    return action\n+    rigging = _rigging_module(rig, item.custom_action)\n+    captured = _capture_rig(context, rig) if rigging else None\n+    previous_index, previous_side = saved.active_index, item.side\n+    previous_target = context.window_manager.character_designer_animation.target if rigging else None\n+    previous_context = source._context_state(context) if rigging and context.window is not None else None\n+    previous_active = context.view_layer.objects.active if rigging else None\n+    previous_selected = tuple(context.selected_objects) if rigging else ()\n+    previous_mode = previous_active.mode if previous_active else 'OBJECT'\n+    try:\n+        if rigging:\n+            rigging.restore_owned(context, rig)\n+        target.ensure_active(context, rig)\n+        if rig.name not in context.scene.objects:\n+            raise ValueError('Return to the worklist editing scene first.')\n+        _check_baseline(item)\n+        action = item.source_action if side == 'SOURCE' else item.custom_action\n+        if action is None or (side == 'CUSTOM' and action.library is not None):\n+            raise ValueError('This entry lost its local editable Custom Action.')\n+        slot = _slot(action, item.source_slot if side == 'SOURCE' else item.custom_slot)\n+        if ua.active_preview(rig):\n+            raise ValueError('Restore the unrelated Unity test preview before switching worklist Actions.')\n+        association = _association_record(item) if side == 'CUSTOM' and not getattr(item, 'new_animation', False) else None\n+        ua._set_playing(context, False)\n+        ad = rig.animation_data_create()\n+        ad.action, ad.action_slot = action, slot\n+        ad.use_nla, ad.action_blend_type, ad.action_influence = False, 'REPLACE', 1.0\n+        if association is not None:\n+            _association(item, association)\n+        saved.active_index = next(i for i, entry in enumerate(saved.items) if entry.item_id == item_id)\n+        item.side = side\n+        context.scene.tool_settings.use_keyframe_insert_auto = False\n+        start, end = map(float, action.frame_range)\n+        scene = context.scene\n+        scene.frame_start = scene.frame_preview_start = math.floor(start)\n+        scene.frame_end = scene.frame_preview_end = max(math.ceil(end), scene.frame_start)\n+        scene.use_preview_range = True\n+        ua._set_frame(scene, start)\n+        for selected in context.selected_objects:\n+            selected.select_set(False)\n+        rig.hide_set(False)\n+        rig.select_set(True)\n+        context.view_layer.objects.active = rig\n+        context.window_manager.character_designer_animation.target = rig\n+        if rigging and 'character_designer_rigging_capture_v1' in item.custom_action:\n+            link = links.load_link(item.manifest_path)\n+            _validate_route(saved, json.loads(item.link_identity), link, item)\n+            packet, _export_name = source._packet(link)\n+            if 'rigging' not in packet:\n+                raise ValueError('The worklist Rigging inputs lost their authenticated source packet.')\n+            rigging.import_inputs(context, rig, packet, base_action=action, base_slot=slot.handle,\n+                work_item_id=item.work_item_id, source=side == 'SOURCE')\n+        context.view_layer.update()\n+        saved.status, saved.has_error = item.name + ' · ' + ('Source (read-only)' if side == 'SOURCE' else 'Custom'), False\n+        return action\n+    except Exception:\n+        if captured is not None:\n+            _restore_rig(context, rig, captured)\n+            saved.active_index, item.side = previous_index, previous_side\n+            context.window_manager.character_designer_animation.target = previous_target\n+            if previous_context is not None:\n+                source._restore_context(context, previous_context, playing=True)\n+            else:\n+                for selected in context.selected_objects:\n+                    selected.select_set(False)\n+                for selected in previous_selected:\n+                    selected.select_set(True)\n+                context.view_layer.objects.active = previous_active\n+                if previous_active and previous_active.mode != previous_mode:\n+                    bpy.ops.object.mode_set(mode=previous_mode)\n+        raise\n+    finally:\n+        if captured is not None:\n+            captured['data'].use_fake_user = captured['fake_user']\n \n \n def move(context, item_id, delta):\n@@ -581,6 +680,9 @@\n     saved = state(context)\n     item = _item(saved, item_id)\n     index = next(i for i, entry in enumerate(saved.items) if entry.item_id == item_id)\n+    rigging = _rigging_module(item.rig)\n+    if rigging:\n+        rigging.restore_owned(context, item.rig)\n     ad = item.rig.animation_data\n     if ad and ad.action in {item.source_action, item.custom_action}:\n         ua._set_playing(context, False)\n@@ -607,36 +709,39 @@\n     if composition.item_spec(item) is not None:\n         return composition.begin_sync(context, item, collection=_collection, collection_proof=_collection_proof)\n     _check_baseline(item)\n-    target.ensure_active(context, item.rig)\n-    if not item.rig.animation_data or item.rig.animation_data.action is not item.custom_action:\n-        raise ValueError('The active Action changed; select this entry\\'s Custom Action again.')\n-    if getattr(item, 'new_animation', False):\n-        from .animation_worklist_new import sync as sync_new\n-        return sync_new(context, item, collection=_collection, collection_proof=_collection_proof)\n-    catalog = _fresh_workspace(saved, item)\n-    clip = next((entry for entry in catalog['clips'] if _clip_key(entry) == item.clip_key), None)\n-    if (clip is None or clip.get('needsRebuild') or not clip.get('linkManifest')\n-            or Path(clip['linkManifest']).resolve() != Path(item.manifest_path).resolve()):\n-        raise ValueError('This Controller slot needs a freshly prepared Unity Link; existing edits are kept.')\n-    current_link = links.load_link(item.manifest_path)\n-    _validate_route(saved, clip, current_link, item)\n-    from .animation_worklist_collection import export_implementation, item_fingerprint, unchanged_proof\n-    # Collect before launching: a proof error must never strand a worker without\n-    # its poll/disposal owner. The snapshot freezes in the same event-loop turn.\n-    proof = item_fingerprint(context, item)\n-    implementation = export_implementation()\n-    if _collection_proof is not None:\n-        if not _collection or not _collection_proof(proof):\n-            raise ValueError('The collection launch was cancelled or lost its fingerprint owner.')\n-    if unchanged_proof(item, current_link, implementation, proof):\n-        raise ValueError('This Custom Action is unchanged; no duplicate animation was exported.')\n-    _association(item)\n-    job = links.begin_linked_export(context, item.rig)\n-    job['_worklist_scene'], job['_worklist_item_id'] = context.scene, item.item_id\n-    job['_worklist_fingerprint'] = proof\n-    job['_worklist_export_implementation'] = implementation\n-    from . import animation\n-    animation._export_window_manager = context.window_manager\n-    bpy.app.timers.register(animation._poll_action_export, first_interval=0.25)\n-    saved.status, saved.has_error = 'Syncing ' + item.name + '. Preview and Apply the candidate in Unity.', False\n-    return job\n+    from contextlib import nullcontext\n+    rigging = _rigging_module(item.rig, item.custom_action)\n+    with (rigging.base_only(context, item.rig, action=item.custom_action) if rigging else nullcontext()):\n+        target.ensure_active(context, item.rig)\n+        if not item.rig.animation_data or item.rig.animation_data.action is not item.custom_action:\n+            raise ValueError('The active Action changed; select this entry\\'s Custom Action again.')\n+        if getattr(item, 'new_animation', False):\n+            from .animation_worklist_new import sync as sync_new\n+            return sync_new(context, item, collection=_collection, collection_proof=_collection_proof)\n+        catalog = _fresh_workspace(saved, item)\n+        clip = next((entry for entry in catalog['clips'] if _clip_key(entry) == item.clip_key), None)\n+        if (clip is None or clip.get('needsRebuild') or not clip.get('linkManifest')\n+                or Path(clip['linkManifest']).resolve() != Path(item.manifest_path).resolve()):\n+            raise ValueError('This Controller slot needs a freshly prepared Unity Link; existing edits are kept.')\n+        current_link = links.load_link(item.manifest_path)\n+        _validate_route(saved, clip, current_link, item)\n+        from .animation_worklist_collection import export_implementation, item_fingerprint, unchanged_proof\n+        # Collect before launching: a proof error must never strand a worker without\n+        # its poll/disposal owner. The snapshot freezes in the same event-loop turn.\n+        proof = item_fingerprint(context, item)\n+        implementation = export_implementation()\n+        if _collection_proof is not None:\n+            if not _collection or not _collection_proof(proof):\n+                raise ValueError('The collection launch was cancelled or lost its fingerprint owner.')\n+        if unchanged_proof(item, current_link, implementation, proof):\n+            raise ValueError('This Custom Action is unchanged; no duplicate animation was exported.')\n+        _association(item)\n+        job = links.begin_linked_export(context, item.rig)\n+        job['_worklist_scene'], job['_worklist_item_id'] = context.scene, item.item_id\n+        job['_worklist_fingerprint'] = proof\n+        job['_worklist_export_implementation'] = implementation\n+        from . import animation\n+        animation._export_window_manager = context.window_manager\n+        bpy.app.timers.register(animation._poll_action_export, first_interval=0.25)\n+        saved.status, saved.has_error = 'Syncing ' + item.name + '. Preview and Apply the candidate in Unity.', False\n+        return job\n",
+    "animation_link_source.py": "--- D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_link_source_9aaa0327_before_rigging_inputs.py\n+++ D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py\n@@ -97,6 +97,9 @@\n     names = [bone['name'] for bone in packet['bones']]\n     if len(names) != len(set(names)):\n         raise _error('The linked model contains ambiguous bone names.')\n+    if 'rigging' in packet:\n+        from .animation_rigging_contract import validate_capture\n+        validate_capture(packet['rigging'], packet=packet)\n     return packet, name\n \n \n@@ -148,7 +151,8 @@\n             image.alpha_mode = alpha_mode\n \n \n-def _import_prepared_source(context, link, packet, export_name, path, digest, *, start_frame=1):\n+def _import_prepared_source(context, link, packet, export_name, path, digest, *, start_frame=1,\n+                            native_timebase=False):\n     \"\"\"Use this operation's validated Link, packet and model without reparsing.\n \n     Callers must have completed load_link, _packet and _source_model. Fresh final\n@@ -156,6 +160,8 @@\n     On failure only this operation's new IDs are removed, and the original scene,\n     selection and mode return. No user file or Link manifest is saved here.\n     \"\"\"\n+    if type(native_timebase) is not bool:\n+        raise _error('The native import timebase option must be true or false.')\n     _validate_import_context(context)\n     manifest_path = link['_manifest_path']\n     saved = _context_state(context)\n@@ -221,7 +227,8 @@\n             raise _error(str(error)) from error\n         # _mapping checks every bind origin and parent; no tolerance relaxation,\n         # body-only fallback or X-rest substitution is permitted in this route.\n-        result = _import_action(context, rig, packet, start_frame)\n+        result = (_import_action(context, rig, packet, start_frame, native_timebase=True)\n+                  if native_timebase else _import_action(context, rig, packet, start_frame))\n         if result.action[unity_animation.PACKAGE_HASH_KEY] != packet['_sha256'] or _sha256(path) != digest:\n             raise _error('A linked input changed during import; the new editing scene was discarded.')\n         current_link = animation_link.load_link(manifest_path)\n"
+  },
+  "checks": {
+    "compile_source_only": 2,
+    "target_module_imports": 0,
+    "tests_executed": 0,
+    "native_tests_executed": 0,
+    "shared_workspace_or_artist_reads": false,
+    "deployment_performed": false,
+    "cache_files_created": false
+  },
+  "contracts": {
+    "packet_rigging_pure_admission": "validate_capture(packet[rigging], packet=packet) after unchanged complete packet SHA/target/clip/root guards",
+    "no_rigging_lazy_native_import": true,
+    "partial_custom_input_tag_rejected": true,
+    "native_timebase_only_packet_rigging": true,
+    "ordinary_import_action_function_unchanged": true,
+    "ordinary_prepared_import_default_clock_unchanged": true,
+    "custom_model_slot_work_item_binding_before_add_row": true,
+    "source_comparison_original_input_custom_comparison_retained_draft": true,
+    "preview_enabled_from_explicit_packet_only": true,
+    "sync_original_complete_tail_inside_nest_safe_base_only": true,
+    "collector_plain_fk_policy_unchanged": true,
+    "add_failure_new_id_cleanup_preserved": true,
+    "activate_failure_original_context_and_opaque_preview_restored": true,
+    "remove_restore_main_keep_successful_input_drafts": true
+  },
+  "native_api": {
+    "module": "unity_animation_rigging",
+    "verified_declared_signatures": [
+      "import_inputs(context, rig, packet, *, base_action, base_slot, work_item_id, source)",
+      "_capture_owned(context, rig)",
+      "_restore_owned_state(context, rig, state)",
+      "restore_owned(context, rig)",
+      "base_only(context, rig, action=None)"
+    ],
+    "tag_names": [
+      "character_designer_rigging_session_v1",
+      "character_designer_rigging_capture_v1",
+      "character_designer_rigging_input_action_v1"
+    ],
+    "native_owner_confirmation": "import_inputs follows previewEnabled; Source and Custom carriers are distinct; successful carriers keep same native Action IDs/slots across close. Rollback preserves prior artist NLA and reconstructs only two disposable owned preview tracks; those temporary track wrappers are not retained."
+  },
+  "validation_limits": [
+    "Source-only integration and compile/AST checks; no Blender/Unity/SDK/worker execution or deployment.",
+    "Counterpart native module is still being finalized by its owner; native acceptance remains pending.",
+    "Unchanged plain FK fingerprints may remain Unknown while Rigging preview is active; no known proof was manufactured."
+  ]
+}

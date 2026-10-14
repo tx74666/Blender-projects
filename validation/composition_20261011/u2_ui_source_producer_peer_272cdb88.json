@@ -1,0 +1,148 @@
+{
+  "schema": "x.validation.character-composition-u2-source-producer-peer-review/1",
+  "utc": "2026-10-11T12:33:27.383556+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "build_u2_publication_recovery_source.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_u2_publication_recovery_source.py",
+      "sha256": "272cdb88cc9a07e6f69d93aaac07adf54614ca46a653374d4f4b81a0ffb5e163",
+      "bytes": 10664
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_ui_source_producer_owner_272cdb88.json",
+    "sha256": "a4cfe7f84b5c0c962eb5e69c876514efd15811ac67ee63deab8cea5e96ca9358",
+    "bytes": 3973
+  },
+  "actual_inputs_source_pins": {
+    "u1_fixture.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_fixture.json",
+      "sha256": "7c7ed49a889e936af768df533b3083631fa3369276497cabf692e3761447adc9",
+      "bytes": 2377
+    },
+    "u1_fixture_source_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_fixture_source_receipt.json",
+      "sha256": "8cec63f08a279ba6b311daabb6d461f43bf6ec9046d5dc2c2de0ff1d70108370",
+      "bytes": 778153
+    },
+    "tools_headful_10/frozen_tools_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\frozen_tools_receipt.json",
+      "sha256": "a594751f08f7266c17396a9bc104e451b2b627c7bd63e16f856347559dbd365f",
+      "bytes": 25074
+    },
+    "n16/completion_closure.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\completion_closure.json",
+      "sha256": "9810dbf836d11a85e412a1e2632fa97026aaf37509b6de098e9af74f22ad083d",
+      "bytes": 3280
+    },
+    "u1_natural_failure_protection_closure.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_natural_failure_protection_closure.json",
+      "sha256": "8ead12fe3dd254a503b89864df3013eac884e98b1475d4dd7b4b43fecc231f1a",
+      "bytes": 772943
+    }
+  },
+  "review_scope": "Narrow stdlib u2 generator only: config evidence path, Source receipt/profile paths, exact actual failed-u1 provenance, exclusive prewrite. No old numerical payload recomputation or matrix/clip/timing changes.",
+  "actual_failure_shape": {
+    "schema": "x.validation.character-composition-natural-ui-failure-protection/1",
+    "attempt": "u1",
+    "completed": false,
+    "pid": 32468,
+    "natural_exit_code": 1,
+    "boundary": "claim_evidence",
+    "ui_session_started": false,
+    "seed_loading_started": false,
+    "immutable_input_metadata_count": 1888,
+    "failure_artifact_metadata_count": 6,
+    "protection_verified": true,
+    "rehashed_1888_original_files_by_this_peer": false
+  },
+  "config_contract": {
+    "only_existing_field_changed": "evidenceDirectory",
+    "before": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1",
+    "after": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2",
+    "exact_other_config_fields_literal_equality_guard": true,
+    "seed_path_unchanged": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend",
+    "seed_sha256_unchanged": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0",
+    "runtime13_full14_frozen10_and_actual_n16_provenance_inherited_exactly": true,
+    "no_selection_control_clip_clock_scope_Action_or_numeric_body_changes": true
+  },
+  "receipt_contract": {
+    "existing_fields_allowed_to_change": [
+      "config_path",
+      "fixture",
+      "profiles",
+      "profile_utf16_units",
+      "admitted_inputs"
+    ],
+    "all_other_existing_fields_equality_guard": true,
+    "new_provenance_fields": [
+      "previous_ui_failure_protection",
+      "source_producer",
+      "parent_source_receipt",
+      "parent_fixture",
+      "previous_ui_attempt"
+    ],
+    "failure_closure_hard_pin_schema_and_actual_boundary_verified": true,
+    "no_nonexistent_draft_failure_fields_read": true,
+    "existing_counters_and_publication_proofs_preserved_exactly": true,
+    "no_u1_success_relabel": true,
+    "previous_authorization_reusable_false": true,
+    "gui_grant_consumed_remains_false_for_Source_generation_only": true
+  },
+  "write_contract": {
+    "owned_output_paths": [
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture.json",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture_source_receipt.json",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2"
+    ],
+    "all_three_outputs_must_be_absent_before_work_and_again_immediately_before_write": true,
+    "all_unique_input_pin_hashes_and_bytes_rechecked_before_write": true,
+    "both_JSON_outputs_encoded_before_first_write": true,
+    "config_and_Source_receipt_use_exclusive_xb": true,
+    "only_empty_CONFIG_and_DATAFILES_directories_created_inside_UI_evidence": true,
+    "no_OS_launch_receipt_or_onceclaim_created_inside_UI_evidence": true,
+    "runner729_empty_profile_claim_guard_unchanged": true,
+    "old_u1_n16_and_artist_inputs_not_written": true
+  },
+  "Source_syntax": {
+    "AST_parse_count": 1,
+    "in_memory_compile_count": 1,
+    "assert_statement_count": 0,
+    "semantic_logic_function": "build",
+    "function_locations": {
+      "require": {
+        "line": 19,
+        "end_line": 21
+      },
+      "encoded": {
+        "line": 24,
+        "end_line": 25
+      },
+      "load": {
+        "line": 28,
+        "end_line": 30
+      },
+      "build": {
+        "line": 33,
+        "end_line": 127
+      },
+      "main": {
+        "line": 130,
+        "end_line": 136
+      }
+    },
+    "target_imports": 0,
+    "tests_run": 0,
+    "bytecode_written": false
+  },
+  "not_performed": {
+    "producer_or_other_generator_invocation": true,
+    "UI_fixture_or_profile_generation": true,
+    "CIM_or_resource_query": true,
+    "native_Blender_or_SDK_or_GUI": true,
+    "grant_consumption": true
+  },
+  "limits": "Source readiness only. Root must explicitly generate fresh u2 outputs, read back actual resulting pins and obtain a separate exact fresh headful grant and proof-binding. This peer neither retries u1 nor launches u2."
+}

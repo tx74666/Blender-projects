@@ -1,0 +1,134 @@
+{
+  "schema": "x.validation.character-composition-recovery-ui-launch-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "preflight_invoked": false,
+  "launcher_invoked": false,
+  "CIM_or_resource_query_performed": false,
+  "GUI_or_SDK_performed": false,
+  "fixture_or_profile_generated": false,
+  "source_files": {
+    "preflight_u1_publication_recovery.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u1_publication_recovery.py",
+      "sha256": "47bd0c5d8ca3b13bf4b983f5efbab06e9e7c06fda4a51ac959119ff8b7cd56db",
+      "bytes": 22814
+    },
+    "launch_u1_publication_recovery_granted.ps1": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_u1_publication_recovery_granted.ps1",
+      "sha256": "61c589510f399a5542ef5ea8f1586b9cd21ad9a7399c2d072b78899b70fc97ed",
+      "bytes": 9457
+    }
+  },
+  "donor_sources": {
+    "preflight": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u1_n8.py",
+      "sha256": "7ee603b1ae96ca0f48959f5c414f07b512f427e49cd04b54bb7a7d8b01815583",
+      "bytes": 12125
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_u1_n8_granted.ps1",
+      "sha256": "c2046ab07a9200831a157dc2dd440d203d63c8bc98babaa8bddf9dee3d31ce0b",
+      "bytes": 9263
+    }
+  },
+  "admitted_source_bindings": {
+    "completed_file_audit": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    },
+    "recovery_UI_adapter": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "3c41c9c93d3d864dec5745a5d72a9120adb533092890749e7eb569a9067cda8d",
+      "bytes": 24472
+    }
+  },
+  "syntax": {
+    "Python_in_memory_AST_compile": 1,
+    "PowerShell_parser_only": 1,
+    "assert_statements": 0,
+    "modules_imported": 0,
+    "tests_run": 0,
+    "bytecode_written": false
+  },
+  "attempt": "u1",
+  "Parent_contract": {
+    "grant_schema": "randomrealm.character-composition-native-window/1",
+    "binding_schema": "randomrealm.character-composition-native-proof-binding/1",
+    "review_schema": "randomrealm.character-composition-recovery-ui-source-review/1",
+    "readback_schema": "randomrealm.character-composition-recovery-ui-input-readback/1",
+    "review_and_readback_required_fields": [
+      "attempt=u1",
+      "passed=true",
+      "sourceOnly=true",
+      "nativeExecutionPerformed=false"
+    ],
+    "readback_pins_field": "pins[] path/sha256; casefold file identity; all actual critical config/source/closure/audit/seed/tool/manifest/FBX/meta inputs required",
+    "grant_required_fields": [
+      "ownerThreadId",
+      "recipientThreadId",
+      "headfulAllowed=true",
+      "backgroundAllowed=false",
+      "sourceDeploymentAllowed=false",
+      "artistMutationAllowed=false",
+      "memoryFloorMiB=200",
+      "buildingExplicitlyReleased=true",
+      "consoleHeavyHeld=true",
+      "rootUnityGuiHeavyHeld=true",
+      "configPath",
+      "configSha256",
+      "sourceEntrySha256",
+      "toolsReceiptSha256",
+      "completionClosureSha256",
+      "pythonProjectionSha256",
+      "fullProjectionSha256",
+      "preflightSha256",
+      "launcherSha256",
+      "blenderExecutableSha256",
+      "reviewReceiptSha256"
+    ],
+    "grant_and_binding_not_required_inside_readback": "Avoid circular hash issuance chain; both exact external pins and binding links remain verified."
+  },
+  "explicit_cli_pairs": [
+    "grant",
+    "proof-binding",
+    "fixture",
+    "source-receipt",
+    "tools-receipt",
+    "completion-closure",
+    "audit-source",
+    "adapter-source"
+  ],
+  "launcher_powershell_parameters": [
+    "GrantPath",
+    "GrantSha256",
+    "ProofBindingPath",
+    "ProofBindingSha256",
+    "FixturePath",
+    "FixtureSha256",
+    "SourceReceiptPath",
+    "SourceReceiptSha256",
+    "ToolsReceiptPath",
+    "ToolsReceiptSha256",
+    "CompletionClosurePath",
+    "CompletionClosureSha256",
+    "AuditSourcePath",
+    "AuditSourceSha256",
+    "AdapterSourcePath",
+    "AdapterSourceSha256"
+  ],
+  "runtime_guards": [
+    "Current runtime13 1479/full14 9bc all167/173 .25 leaves; complete n16 recovery closure/audit only, inherited12/fresh2/3publications/0exports/currentack1/UI2 truthful counts.",
+    "Frozen10 twelve helpers/source ancestry from3c41; unchanged native1eb/runner729/EditA47cd; sole Sync131-to-db4 override verified by fbeb.",
+    "Actual config and source receipt must be actual future3c41 outputs outside u1; no future SHA constants fabricated.",
+    "Initial and final pins/artistE8 verified; output profiles exactlyempty CONFIG/DATAFILES; no prior onceclaim/log/report/receipt.",
+    "Verified Blender006091; bundledPython -B; child-only no-bytecode/profile env restored in finally.",
+    "Parent separate headful grant is required; Start-Process Normal is explicit interactive ownedQA exception. Exact --factory-startup --disable-autoexec --python-exit-code1 --python runner729 -- --fixture actualUI.",
+    "CIM soleartist27676/exe and fresh200MiB+near98 serial5sec reread happen only when launcher is explicitly invoked. No resource query in Source work.",
+    "CreateNew onceclaim before spawn; every report exclusive; natural wait/no forced kill/no artist action; actual exitcode and OSremaining inventory retained.",
+    "Postexit verify SDK PNG file hashes/ACK plus real native EditA C full/upper/lower multi-seek+Solo/returnB/4Action unchanged witness, actual A key lowerchanged and Bupperunchanged. Normal quit/completed session required.",
+    "No existing BG tools/1836inputs/old failedreports/projections or donor files changed."
+  ],
+  "future_prerequisites": "Actual n16 PASS+natural0/allgone Rootclosure, actualSourcefreeze10/u1 generation, fresh Parent grant+proof/review/readback. This SOURCE report grants no execution."
+}

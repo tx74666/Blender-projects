@@ -1,0 +1,21 @@
+{
+  "schema": "x.validation.character-composition-session/1",
+  "complete": false,
+  "blender": "5.2.0 LTS",
+  "phases": [
+    {
+      "phase": "preflight",
+      "owner": "2d7dd591-399c-4a00-807e-5e14a36a8122",
+      "protected_A_sha256": "14556ff41415ac0621456f863ecbf2df5742b61101919af959a434e5fb076548",
+      "A_workcopy_item_id": "3bef7ae8d3d6427f96561e8f2312d8e1",
+      "native_tweak": true,
+      "autokey": false,
+      "new_actions": [
+        "HoldPose · Composition Edit"
+      ]
+    }
+  ],
+  "item_id": "6ce5c78566c9499496ec4c6dab8e4160",
+  "failure_phase": "actual_weapon_UI_load_remove",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_13\\composition_session_acceptance.py\", line 671, in run_steps\n    report['phases'].append({'phase': phase, **(yield from _weapon_acceptance_steps(context, item, modules, checkpoints=headful))})\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_13\\composition_session_acceptance.py\", line 458, in _weapon_acceptance_steps\n    _require(bpy.ops.character_designer.composition_weapon('EXEC_DEFAULT', True, remove=False) == {'FINISHED'},\n             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Error: Weapon coordinate proof is unmatched; inspect the captured source geometry before retrying.\n\n"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "x.validation.original20-callback-coalescing-root-source-peer/1",
+  "status": "SourceReady_Actual167PurePASS_NativePending",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "ba6078acafc2e735452dab776787f7b88720c7751837d55d620cddad56b7ef5e",
+      "bytes": 36357
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "50f6c16ac35424ae131990be363a37500419ccc7716781b2622bdbe2032d67f3",
+      "bytes": 104041
+    }
+  },
+  "test_files": {
+    "test_original_inputs_contract.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_original_inputs_contract.py",
+      "sha256": "6f344cc095ce15e74514904fe0a79ab23e70ba250ca80fded87abc5c391b4bfd",
+      "bytes": 22455
+    },
+    "test_animation_rigging_recovery.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_recovery.py",
+      "sha256": "3cc8cb27b28d83631316aa7b2982c39517a9aa668e6dd6a8a848d2131e780b2b",
+      "bytes": 38854
+    }
+  },
+  "checks": {
+    "root_read_actual_three_changed_functions": true,
+    "setup_busy_restored_before_activate": true,
+    "setup_reentrant_guard_before_session_or_writes": true,
+    "original_exception_rollback_operations_preserved": true,
+    "mode_restore_original_nonIK_condition_preserved": true,
+    "parent_threshold_1e_7_preserved": true,
+    "parent_recomputed_after_mode_restore": true,
+    "original20_outer_flush_after_final_Target_write": true,
+    "ordinary_nullcontext_path_preserved": true,
+    "FK_before_apply_unchanged": true,
+    "Forearm_source_and_oracle_unchanged": true,
+    "actual_pure_167_no_failure_error_skip": true
+  },
+  "actual_pure": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r11_01/receipt.json",
+    "sha256": "8dc9d1cc09a97ef9a96fcbe84606c3558ea89fbeb50a308b72c55519773e3a69",
+    "bytes": 2753
+  },
+  "actual_syntax": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r11_01/syntax.raw.log",
+    "sha256": "73c3adbe2435639f7cfa59ba89eb23782e54cd8a5552c6d2d905037ce464a3ac",
+    "bytes": 838
+  },
+  "prior_native_failure": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/native_original20_r10_07/original20_controls_report.json",
+    "sha256": "15d25319e3e904a9e6a5e03a58e7178fd9cfdd0a0b03f5fb30779b9652ae5a2e",
+    "bytes": 14675
+  },
+  "limits": "Source peer and pure checks only. Same07 target failure has not been proved fixed; next native guard captures actual FT errors and preview status. No model/world equivalence claim."
+}

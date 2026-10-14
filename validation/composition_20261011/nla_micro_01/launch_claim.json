@@ -1,0 +1,48 @@
+{
+  "schema": "x.validation.character-composition-once-launch-claim/1",
+  "attempt": "nla_micro_01",
+  "consumed": true,
+  "utc": "2026-10-11T05:38:55.3977346Z",
+  "grant": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\x-nla-micro01\\grant.json",
+    "sha256": "eeb7cac2d3d8cff0490bd43abc51e02ed7af81a09ba2e97029866501aa79c8ae"
+  },
+  "launcher": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_nla_track_identity_micro_01.ps1",
+    "sha256": "326f56f042d446412907061af2d5024936b3ad79026d29bdb3d386bf3871b3fb"
+  },
+  "blender": {
+    "path": "D:\\Blender5.2\\blender.exe",
+    "sha256": "0060916d6921eb4d46c57254609d805a2ea711917399051391a52ba14beb6327"
+  },
+  "script": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_composition_nla_track_identity.py",
+    "sha256": "c103721f0c8c48bb16b8a5ee0a661934d5ba437d65101bd3a9e3e9012699a789"
+  },
+  "oldSource": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_09\\character_designer\\animation_composition.py",
+    "sha256": "c6b5c2f564239b002cfa5ff1be07bb3707e1cedcec4987bccad245710dc055f1"
+  },
+  "newSource": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+    "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5"
+  },
+  "argv": [
+    "--factory-startup",
+    "--background",
+    "--disable-autoexec",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "\"D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_composition_nla_track_identity.py\"",
+    "--",
+    "--old-source",
+    "\"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_09\\character_designer\\animation_composition.py\"",
+    "--new-source",
+    "\"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py\"",
+    "--report-out",
+    "\"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\nla_micro_01\\nla_track_identity_report.json\""
+  ],
+  "reportOut": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\nla_micro_01\\nla_track_identity_report.json",
+  "reason": "Any failure requires a new attempt and separately reviewed grant; no retry."
+}

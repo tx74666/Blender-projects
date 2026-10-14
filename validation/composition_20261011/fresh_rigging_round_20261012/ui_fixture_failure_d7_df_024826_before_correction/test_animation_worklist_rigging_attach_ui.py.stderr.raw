@@ -1,0 +1,243 @@
+test_backend_ordinary_ambiguous_and_stale_refusals_retain_feedback_and_old_ownership (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_backend_ordinary_ambiguous_and_stale_refusals_retain_feedback_and_old_ownership) ... ERROR
+test_busy_owning_context_disables_entry_without_reading_files (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_busy_owning_context_disables_entry_without_reading_files) ... ERROR
+test_direct_execute_rechecks_same_main_rig_and_idle_before_backend (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_direct_execute_rechecks_same_main_rig_and_idle_before_backend) ... ERROR
+test_edit_and_save_poll_use_only_cached_display (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_edit_and_save_poll_use_only_cached_display) ... ERROR
+test_edit_base_reauthenticates_before_activation (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_edit_base_reauthenticates_before_activation) ... ERROR
+test_edit_controls_reauthenticates_before_activation (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_edit_controls_reauthenticates_before_activation) ... ERROR
+test_execute_dispatches_exact_file_with_omitted_work_id_and_keeps_cached_old_rows (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_execute_dispatches_exact_file_with_omitted_work_id_and_keeps_cached_old_rows) ... ERROR
+test_file_selector_preserves_explicit_path_without_guessing_workspace (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_file_selector_preserves_explicit_path_without_guessing_workspace) ... ERROR
+test_only_cached_same_adopted_main_rig_is_eligible (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_only_cached_same_adopted_main_rig_is_eligible) ... ERROR
+test_poll_and_draw_have_no_file_access_or_backend_authentication (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_poll_and_draw_have_no_file_access_or_backend_authentication) ... ERROR
+test_reacquired_row_wrapper_is_passed_to_backend_by_current_stable_item_id (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_reacquired_row_wrapper_is_passed_to_backend_by_current_stable_item_id) ... ERROR
+test_save_controls_reauthenticates_before_keying (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_save_controls_reauthenticates_before_keying) ... ERROR
+test_source_foreign_session_and_stale_selection_fail_before_reauthentication (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_source_foreign_session_and_stale_selection_fail_before_reauthentication) ... ERROR
+test_stale_link_packet_capture_slot_or_work_id_refusal_prevents_mutation (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_stale_link_packet_capture_slot_or_work_id_refusal_prevents_mutation) ... ERROR
+
+======================================================================
+ERROR: test_backend_ordinary_ambiguous_and_stale_refusals_retain_feedback_and_old_ownership (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_backend_ordinary_ambiguous_and_stale_refusals_retain_feedback_and_old_ownership)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_busy_owning_context_disables_entry_without_reading_files (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_busy_owning_context_disables_entry_without_reading_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_direct_execute_rechecks_same_main_rig_and_idle_before_backend (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_direct_execute_rechecks_same_main_rig_and_idle_before_backend)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_edit_and_save_poll_use_only_cached_display (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_edit_and_save_poll_use_only_cached_display)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_edit_base_reauthenticates_before_activation (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_edit_base_reauthenticates_before_activation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_edit_controls_reauthenticates_before_activation (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_edit_controls_reauthenticates_before_activation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_execute_dispatches_exact_file_with_omitted_work_id_and_keeps_cached_old_rows (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_execute_dispatches_exact_file_with_omitted_work_id_and_keeps_cached_old_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_file_selector_preserves_explicit_path_without_guessing_workspace (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_file_selector_preserves_explicit_path_without_guessing_workspace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_only_cached_same_adopted_main_rig_is_eligible (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_only_cached_same_adopted_main_rig_is_eligible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_poll_and_draw_have_no_file_access_or_backend_authentication (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_poll_and_draw_have_no_file_access_or_backend_authentication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_reacquired_row_wrapper_is_passed_to_backend_by_current_stable_item_id (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_reacquired_row_wrapper_is_passed_to_backend_by_current_stable_item_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_save_controls_reauthenticates_before_keying (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_save_controls_reauthenticates_before_keying)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_source_foreign_session_and_stale_selection_fail_before_reauthentication (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_source_foreign_session_and_stale_selection_fail_before_reauthentication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+======================================================================
+ERROR: test_stale_link_packet_capture_slot_or_work_id_refusal_prevents_mutation (test_animation_worklist_rigging_attach_ui.PreparedRiggingUI.test_stale_link_packet_capture_slot_or_work_id_refusal_prevents_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach_ui.py", line 57, in setUp
+    self.ui.draw_worklist(_helpers.Layout(), self.context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist_ui.py", line 874, in draw_worklist
+    draw_composition(layout, context)
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition_ui.py", line 338, in draw_composition
+    if backend.active(saved.rig):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_composition.py", line 48, in active
+    return rig is not None and SESSION in rig
+                               ^^^^^^^^^^^^^^
+TypeError: argument of type 'types.SimpleNamespace' is not iterable
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.842s
+
+FAILED (errors=14)

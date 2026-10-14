@@ -1,0 +1,151 @@
+{
+  "schema": "x.validation.worklist-rigging-editing-data-source-owner/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "80af33958b6326b59f5c2864a560f94e1c24a2b6d3e38f34117b2d75357689f6",
+      "bytes": 41107
+    },
+    "test_animation_worklist_rigging_editing_data.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_editing_data.py",
+      "sha256": "f53bcee59ca3845a0567e414cd024b010d18ba10996777d86e1103033de26f68",
+      "bytes": 14112
+    }
+  },
+  "prior_source_snapshot": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\animation_worklist_bcddead3_before_rigging_translation_scope.py",
+    "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+    "bytes": 40384
+  },
+  "changed_runtime_functions": [
+    "_editing_data",
+    "add"
+  ],
+  "unchanged_existing_functions": 32,
+  "unchanged_function_text_and_AST": true,
+  "full_raw_inverse_equal": true,
+  "top_level_AST_unchanged": true,
+  "syntax": {
+    "AST": "PASS",
+    "compile_count": 2,
+    "target_addon_imports": 0
+  },
+  "runtime_contract": {
+    "Rigging_only_actual_packet_parameter": true,
+    "restore_preview_then_strict_UA_mapping_before_copy": true,
+    "translation_domain": "mapping.controls.mapped_names - mapping.controls.delegated_names",
+    "generated_control_parent_connect_inherit_Rest_preserved": true,
+    "no_prefix_or_MCH_name_heuristic": true,
+    "ordinary_old_omitted_joint_translation_names_default_retained": true,
+    "outer_Add_rollback_function_body_unchanged": true,
+    "limb_inventory_and_UA_swap_unchanged": true
+  },
+  "test_results": {
+    "new_pure": {
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "duration_seconds_unittest": 0.16,
+      "process_elapsed_seconds": 0.602722099982202,
+      "exit_code": 0,
+      "raw_log": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_editing_data_pure_02.log",
+        "sha256": "954bbc1859d58607c50edd3f736a36faa2e907b725ef0273d0496e8dccd2e766",
+        "bytes": 1524
+      },
+      "execution": "Actual AST _editing_data/_swap_armature_data/add with fake RNA and mocked strict mapping boundary; no solver/native/model import."
+    },
+    "ordinary_regression": {
+      "total": 15,
+      "passed": 15,
+      "failed": 0,
+      "duration_seconds_unittest": 1.466,
+      "process_elapsed_seconds": 2.1131696999655105,
+      "exit_code": 0,
+      "raw_log": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_editing_ordinary_regression_01.log",
+        "sha256": "cf89083073ada9a2105ec8ddc45ef0e1c97e50d7b13fdb1f5a17593c7ca515e8",
+        "bytes": 2728
+      },
+      "unique_new_cases": 0
+    },
+    "first_attempt": {
+      "passed": 6,
+      "failed": 1,
+      "raw_log": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_editing_data_pure_01.log",
+        "sha256": "0e155fa3ea95db64bd2f22443984f4bb54ca9255436fe65613684c78ef9e9bb3",
+        "bytes": 2196
+      },
+      "cause": "Fake ID inherited empty dict False truthiness; native IDs are truthy. Fixture __bool__ corrected, no product change for that test failure."
+    }
+  },
+  "held_source_and_R5_artifacts": {
+    "native": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "c5f2aa055c43d97afbe057498041e5a01d59002ebb99c271f1438f5d03a150ea",
+      "bytes": 98837
+    },
+    "reference_test": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_reference.py",
+      "sha256": "4b89ca819c495ebd4096c80091da39d64cf9f49cc6794c40d1e517ae10ac5709",
+      "bytes": 31363
+    },
+    "link_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "c563543dc6c540aa7f8c97f0f8e5913ff1df2a5377bbbe118e9a1c21b8cd5708",
+      "bytes": 14481
+    },
+    "weapon": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "9551956548f20607331179034b44dc679888fc85da035fe1f6342e37de580d9c",
+      "bytes": 40280
+    },
+    "init": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py",
+      "sha256": "d66a88023e93c3db64f1b64cfaf8089d4c956adc0f97896c591e34a54d8e4dd2",
+      "bytes": 355944
+    },
+    "r5_freeze": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r5_c5f2aa05.json",
+      "sha256": "8f8333f085c1a370befc6f2bdfdb1f96a946c03c4fbf7a46e358a75f9ebc327b",
+      "bytes": 30422
+    },
+    "r5_manifest": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_3dbbdce3\\python_projection.json",
+      "sha256": "d966326fda04aa9fa96f720470b5689566de73eef01c510886f8abb8051676e9",
+      "bytes": 20503
+    },
+    "r5_frozen_zip": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_3dbbdce3\\character_designer-0.77.25.zip",
+      "sha256": "70a6121c5c0d949c9f75b62937766aae97f55918c7618c554ed40eba8f295ffc",
+      "bytes": 1436243
+    }
+  },
+  "observed_native_failure": {
+    "report_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01\\new_official_cosha_report.json",
+    "failure_phase": "add_activate",
+    "error": "Character controls did not pass ownership validation: Limb IK roll-decoupled hierarchy was edited.",
+    "meaning": "R5 actual Add failed; this Source/pure patch does not relabel the failure or establish native success."
+  },
+  "boundaries": {
+    "Blender_calls": 0,
+    "SDK_calls": 0,
+    "GUI_calls": 0,
+    "worker_calls": 0,
+    "deployments": 0,
+    "installs": 0,
+    "artist_writes": 0,
+    "freeze_build_invocations": 0,
+    "Git_operations": 0,
+    "test_commands_used_B": true,
+    "bytecode_cache_deletion": false
+  },
+  "limits": [
+    "A future fresh native round must still authenticate actual model/Rest/Link/control topology and public Add/Activate.",
+    "No mechanism repair, weakened inventory, original-X acceptance, solve/curve/matrix oracle or physical publication acceptance is claimed."
+  ]
+}

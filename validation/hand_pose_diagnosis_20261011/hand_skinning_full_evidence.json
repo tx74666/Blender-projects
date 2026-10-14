@@ -1,0 +1,352 @@
+{
+  "schema": "cd.hand_skinning_evidence.v1",
+  "created_utc": "2026-10-10T18:56:24.212669+00:00",
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hand_pose_diagnosis_20261011\\current_full.json",
+    "sha256": "6df5cd02f7adf910a7310db3b2e849f3f7cf981b19128e311f80b0f29125ba16",
+    "bytes": 3916130,
+    "scene": "Animation Worklist · Cosha",
+    "frame": 1,
+    "rig": "CoshaRig.001",
+    "action": "Cosha · Walk_N · Custom",
+    "mesh": "Cosha.001",
+    "all_bones": 217
+  },
+  "method": {
+    "selection": "Captured hand_vertices; selected if finger/hand weights were present. This is not anatomical surface segmentation.",
+    "weights": "All captured positive influences, normalized per vertex.",
+    "skin_matrix": "D_i=pose_i @ inverse(rest_i); fixed-weight A_v=sum(w_i*D_i[:3,:3]).",
+    "direction_ratio": "Singular values of A_v; not measured mesh cross-section, not full Jacobian including weight gradients.",
+    "dominant_groups": "Sum of a digit family weights >= 0.5; both sides combined.",
+    "geometry_validation": "Reconstruct ordinary linear blend skinning in rig coordinates; transform back to evaluated mesh coordinates.",
+    "read_only": "Only source JSON files were read; no live connection, Blender mutation or artist save."
+  },
+  "coverage": {
+    "selected_vertices": 3808,
+    "calculated_vertices": 3808,
+    "missing_current_bone_influences": {},
+    "raw_weight_sum_max_error": 1.1920928955078125e-07
+  },
+  "all_selected": {
+    "vertices": 3808,
+    "mixed_vertices": 2760,
+    "single_vertices": 1048,
+    "mixed_min_singular": 0.6660930091167603,
+    "mixed_median_min_singular": 0.9811573605975138,
+    "mixed_min_singular_below_095": 935,
+    "mixed_min_singular_below_09": 418,
+    "single_singular_range": [
+      0.9999993882885179,
+      1.0000009581694669
+    ],
+    "max_lbs_position_error": 3.5076117929976987e-07,
+    "worst_mixed": {
+      "index": 3332,
+      "weights": {
+        "hand.R": 0.14069154858589172,
+        "thumb.01.R": 0.14069154858589172,
+        "f_ring.01.R": 0.2965422570705414,
+        "f_pinky.01.R": 0.14069154858589172,
+        "f_pinky.02.R": 0.14069154858589172,
+        "f_pinky.03.R": 0.14069154858589172
+      },
+      "sigma": [
+        0.6660930091167603,
+        0.681480188975765,
+        0.9825482234141278
+      ],
+      "lbs_error": 5.528611893159587e-08
+    }
+  },
+  "dominant_digit_groups": {
+    "thumb": {
+      "vertices": 490,
+      "mixed_vertices": 340,
+      "single_vertices": 150,
+      "mixed_min_singular": 0.931844548429426,
+      "mixed_median_min_singular": 0.996043130486948,
+      "mixed_min_singular_below_095": 30,
+      "mixed_min_singular_below_09": 0,
+      "single_singular_range": [
+        0.9999993882885179,
+        1.0000008662445248
+      ],
+      "max_lbs_position_error": 3.152269721685756e-07,
+      "worst_mixed": {
+        "index": 14170,
+        "weights": {
+          "forearm.R": 0.14724992435052878,
+          "hand.R": 0.33068752781581173,
+          "thumb.01.R": 0.5220625478336595
+        },
+        "sigma": [
+          0.931844548429426,
+          0.9412694185316416,
+          0.9905757295251175
+        ],
+        "lbs_error": 1.195627577542336e-07
+      }
+    },
+    "index": {
+      "vertices": 574,
+      "mixed_vertices": 408,
+      "single_vertices": 166,
+      "mixed_min_singular": 0.7553490448184033,
+      "mixed_median_min_singular": 0.9626366051233226,
+      "mixed_min_singular_below_095": 200,
+      "mixed_min_singular_below_09": 96,
+      "single_singular_range": [
+        0.9999996004656206,
+        1.0000009205526101
+      ],
+      "max_lbs_position_error": 3.110117860936802e-07,
+      "worst_mixed": {
+        "index": 2337,
+        "weights": {
+          "f_index.01.L": 0.5468448996543884,
+          "f_index.02.L": 0.4531551003456116
+        },
+        "sigma": [
+          0.7553490448184033,
+          0.7553492985675292,
+          0.9999998828620297
+        ],
+        "lbs_error": 1.549765745993855e-07
+      }
+    },
+    "middle": {
+      "vertices": 626,
+      "mixed_vertices": 440,
+      "single_vertices": 186,
+      "mixed_min_singular": 0.6967273812868026,
+      "mixed_median_min_singular": 0.9824348503838354,
+      "mixed_min_singular_below_095": 175,
+      "mixed_min_singular_below_09": 113,
+      "single_singular_range": [
+        0.9999996255064236,
+        1.0000009433346801
+      ],
+      "max_lbs_position_error": 3.2480681824072513e-07,
+      "worst_mixed": {
+        "index": 3588,
+        "weights": {
+          "f_middle.01.R": 0.5372848946665258,
+          "f_middle.02.R": 0.4627151053334741
+        },
+        "sigma": [
+          0.6967273812868026,
+          0.6967279911631116,
+          0.9999998365493427
+        ],
+        "lbs_error": 1.1044561374041876e-07
+      }
+    },
+    "ring": {
+      "vertices": 626,
+      "mixed_vertices": 396,
+      "single_vertices": 230,
+      "mixed_min_singular": 0.7624077582170229,
+      "mixed_median_min_singular": 0.9581128629700999,
+      "mixed_min_singular_below_095": 177,
+      "mixed_min_singular_below_09": 72,
+      "single_singular_range": [
+        0.999999583680436,
+        1.0000009581694669
+      ],
+      "max_lbs_position_error": 2.546816148287197e-07,
+      "worst_mixed": {
+        "index": 2463,
+        "weights": {
+          "f_ring.01.L": 0.5066921710968018,
+          "f_ring.02.L": 0.49330782890319824
+        },
+        "sigma": [
+          0.7624077582170229,
+          0.7624079375170234,
+          0.9999999650389633
+        ],
+        "lbs_error": 1.5169189662712093e-07
+      }
+    },
+    "pinky": {
+      "vertices": 584,
+      "mixed_vertices": 402,
+      "single_vertices": 182,
+      "mixed_min_singular": 0.7527940759684117,
+      "mixed_median_min_singular": 0.9573654616251757,
+      "mixed_min_singular_below_095": 186,
+      "mixed_min_singular_below_09": 109,
+      "single_singular_range": [
+        0.9999994299833442,
+        1.0000007435350957
+      ],
+      "max_lbs_position_error": 3.5076117929976987e-07,
+      "worst_mixed": {
+        "index": 6344,
+        "weights": {
+          "f_pinky.01.R": 0.45697913935718354,
+          "f_pinky.02.R": 0.5430208606428164
+        },
+        "sigma": [
+          0.7527940759684117,
+          0.7527947194992417,
+          0.9999999492491214
+        ],
+        "lbs_error": 5.997775173813586e-08
+      }
+    }
+  },
+  "pure_finger_tips": {
+    "vertices": 582,
+    "max_inverse_skin_rest_position_error": 4.0294071529672076e-07
+  },
+  "thumb_influences": {
+    "thumb_dominant": {
+      "vertices": 490,
+      "categories": {
+        "other_digit": {
+          "vertices_gt_01": 0,
+          "vertices_gt_10": 0,
+          "max_total_weight": 0,
+          "max_weight_example": null,
+          "vertices_gt_1e_minus5": 0
+        },
+        "forearm": {
+          "vertices_gt_01": 42,
+          "vertices_gt_10": 6,
+          "max_total_weight": 0.14926865696907043,
+          "max_weight_example": {
+            "index": 2156,
+            "weights": {
+              "forearm.L": 0.14926865696907043,
+              "hand.L": 0.283953458070755,
+              "thumb.01.L": 0.5667778849601746
+            },
+            "sigma": [
+              0.9362126818664868,
+              0.9513595511692429,
+              0.9848533496829651
+            ],
+            "lbs_error": 9.405962690034874e-08
+          },
+          "vertices_gt_1e_minus5": 42
+        },
+        "leg_remote": {
+          "vertices_gt_01": 0,
+          "vertices_gt_10": 0,
+          "max_total_weight": 0,
+          "max_weight_example": null,
+          "vertices_gt_1e_minus5": 0
+        },
+        "opposite_side": {
+          "vertices_gt_01": 0,
+          "vertices_gt_10": 0,
+          "max_total_weight": 0,
+          "max_weight_example": null,
+          "vertices_gt_1e_minus5": 0
+        },
+        "other_nonhand": {
+          "vertices_gt_01": 0,
+          "vertices_gt_10": 0,
+          "max_total_weight": 0,
+          "max_weight_example": null,
+          "vertices_gt_1e_minus5": 0
+        }
+      }
+    },
+    "any_thumb_weight": {
+      "vertices": 728,
+      "categories": {
+        "other_digit": {
+          "vertices_gt_01": 48,
+          "vertices_gt_10": 46,
+          "max_total_weight": 0.7890299747355087,
+          "max_weight_example": {
+            "index": 12863,
+            "weights": {
+              "hand.L": 0.21087129121952647,
+              "f_index.01.L": 0.3680600770982973,
+              "thumb.02.L": 9.87340449647336e-05,
+              "f_middle.01.L": 0.4209698976372115
+            },
+            "sigma": [
+              0.9312832336507779,
+              0.9317937325065194,
+              0.9994741689617301
+            ],
+            "lbs_error": 9.134599925614184e-08
+          },
+          "vertices_gt_1e_minus5": 48
+        },
+        "forearm": {
+          "vertices_gt_01": 108,
+          "vertices_gt_10": 36,
+          "max_total_weight": 0.4851279213546969,
+          "max_weight_example": {
+            "index": 12953,
+            "weights": {
+              "forearm.L": 0.4851279213546969,
+              "hand.L": 0.49703979029283124,
+              "thumb.01.L": 0.017832288352471883
+            },
+            "sigma": [
+              0.9564055381050908,
+              0.9596388275550187,
+              0.9967669809896842
+            ],
+            "lbs_error": 1.27137628075051e-07
+          },
+          "vertices_gt_1e_minus5": 110
+        },
+        "leg_remote": {
+          "vertices_gt_01": 0,
+          "vertices_gt_10": 0,
+          "max_total_weight": 0,
+          "max_weight_example": null,
+          "vertices_gt_1e_minus5": 0
+        },
+        "opposite_side": {
+          "vertices_gt_01": 0,
+          "vertices_gt_10": 0,
+          "max_total_weight": 0,
+          "max_weight_example": null,
+          "vertices_gt_1e_minus5": 0
+        },
+        "other_nonhand": {
+          "vertices_gt_01": 0,
+          "vertices_gt_10": 0,
+          "max_total_weight": 0,
+          "max_weight_example": null,
+          "vertices_gt_1e_minus5": 0
+        }
+      }
+    },
+    "cross_digit_context": {
+      "vertices": 48,
+      "maximum_thumb_weight_in_cross_digit_vertices": 0.14069154858589172,
+      "minimum_thumb_weight_in_cross_digit_vertices": 9.873404349348173e-05,
+      "thumb_weight_ge_025_count": 0,
+      "thumb_weight_ge_05_count": 0,
+      "maximum_thumb_weight_example": [
+        0.14069154858589172,
+        0.7186169028282166,
+        3332
+      ]
+    }
+  },
+  "old_frame1_matrix_comparison": {
+    "old_path": "D:\\Blender\\Projects\\Character\\X\\validation\\original_bone_diagnosis_20261010\\evaluated_readonly.json",
+    "shared_bones": 217,
+    "rest_max_abs_diff": 0.0,
+    "pose_max_abs_diff": 0.0
+  },
+  "interpretation": {
+    "confirmed": "Current mesh positions agree with ordinary LBS. Substantial fixed-weight directional contraction occurs at strongly bent mixed-weight finger joints without bone scaling.",
+    "thumb": "Among 490 thumb-dominant vertices, zero have other-digit, opposite-side or leg-remote influences. 42 include forearm (max 0.149268657). Cross-digit weights occur in 48 lower-thumb-weight vertices; they do not establish cross-digit pulling as the cause of the main thumb deformation. Dominant-thumb fixed-weight contraction min=0.931844548, not a measured cross-sectional ratio or whole-thumb elongation.",
+    "not_confirmed": [
+      "Whether imported animation rotation is anatomically correct or has reference-pose/retarget mapping errors.",
+      "Actual cross-sectional distortion or length ratio, because mesh faces/topology and a rotation-reset comparison were not captured.",
+      "Whether cross-digit weights are artistic intent or unwanted weight leakage."
+    ]
+  }
+}

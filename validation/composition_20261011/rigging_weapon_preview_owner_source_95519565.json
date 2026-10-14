@@ -1,0 +1,126 @@
+{
+  "schema": "x.validation.character-designer-rigging-weapon-source-owner/1",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "sdk_execution_performed": false,
+  "release_or_deployment_performed": false,
+  "source_files": {
+    "animation_composition_weapon.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "9551956548f20607331179034b44dc679888fc85da035fe1f6342e37de580d9c",
+      "bytes": 40280
+    }
+  },
+  "previous_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_composition_weapon_7e78949d_before_rigging_preview.py",
+    "sha256": "7e78949d3d240d9e9f50dd3277baf46f96b44069f5b051cfcbf53589af2a57a1",
+    "bytes": 32686
+  },
+  "test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_weapon.py",
+    "sha256": "5e79a45de2186a66a7dd11a5701ab6be1514e00fbaed20585a6127b92fc174a1",
+    "bytes": 10858
+  },
+  "changed_existing_functions": [
+    "validate_context",
+    "add_context"
+  ],
+  "added_functions": [
+    "_add_display",
+    "_rigging_context_admission",
+    "_validate_context_identity",
+    "add_rigging_context",
+    "remove_rigging_context"
+  ],
+  "unchanged_existing_functions": [
+    "_sha",
+    "_vector",
+    "_matrix",
+    "_project_source",
+    "_source_dependencies",
+    "_context_capture",
+    "_restore_context",
+    "_raw_surface",
+    "_weapon_identity",
+    "_rig_actions",
+    "_artist_fields",
+    "_first_artist_changes",
+    "_asset_snapshot",
+    "_new_assets",
+    "_remove_unused_assets",
+    "_attachment_basis",
+    "_bone_anchor",
+    "validate_owned",
+    "remove_context"
+  ],
+  "source_normalization": {
+    "shared_geometry_document_validator_raw_inverse_equal": true,
+    "shared_actual_display_body_raw_inverse_equal": true,
+    "full_module_inverse_ast_equal": true,
+    "top_level_ast_unchanged": true,
+    "remove_context_source_exact": true,
+    "all_other_existing_functions_source_exact": true
+  },
+  "public_api": {
+    "add": "add_rigging_context(context, rig, preview, packet, mapping, *, session)",
+    "remove": "remove_rigging_context(context, rig, *, session)",
+    "record_key": "character_designer_composition_weapon_v1",
+    "session_proof_key": "weapon_preview",
+    "session_proof_native_refs": false,
+    "returned_proof_fields_added": [
+      "display_owner",
+      "identity",
+      "rigging_session_owner",
+      "record_key"
+    ],
+    "close_order": "Call before deleting the owning native Rigging SESSION/REFS; close verifies actual current owner before unchanged remove_context."
+  },
+  "admission": {
+    "legacy_composition_validate_and_validate_scope_retained": true,
+    "new_route_no_legacy_composition_spec_or_fk_scope": true,
+    "actual_native_current_session_rig_scene_and_base_input_action_pointers_slots": true,
+    "capture_validated_with_full_packet": true,
+    "exact_packet_sha_and_capture_preview_binding": true,
+    "original_data_rest_and_all_native_mapping_rest_matrices_verified": true,
+    "mapping_conversion_and_complete_packet_named_indices_exact": true,
+    "socket_direct_parent_is_right_binding_tip_path": true,
+    "local_matrix_is_socket_local_trs": true,
+    "prefab_root_scale_applied_once": true,
+    "actual_captured_geometry_guid_hash_meta_dependency_importer_validation_shared": true,
+    "source_context_revalidated_after_real_mesh_construction": true,
+    "original_artist_action_slots_content_rest_units_protected": true,
+    "hand_ik_installed": false,
+    "target_parented_to_weapon": false,
+    "legacy_grip_fields_added_to_rigging": false,
+    "return_weapon_fields_added": false,
+    "rollback_only_new_display_assets": true,
+    "old_remove_external_reference_and_collection_users_guards_unchanged": true
+  },
+  "lightweight_checks": {
+    "compile_source_count": 2,
+    "ast_parse_only": true,
+    "tests_written": 10,
+    "test_names": [
+      "test_exact_native_session_packet_and_mapping_are_admitted",
+      "test_foreign_owner_action_slot_packet_or_rest_rejects",
+      "test_missing_current_or_foreign_scene_rejects_before_display",
+      "test_descendant_or_non_right_mount_is_not_a_socket_alias",
+      "test_mapping_conversion_indices_rest_and_duplicate_bones_reject",
+      "test_new_route_reuses_geometry_without_legacy_fk_scope_or_grips",
+      "test_absent_preview_does_not_load_native_but_cannot_omit_declared_context",
+      "test_legacy_route_still_validates_composition_and_fk_scope",
+      "test_remove_rejects_a_closed_or_foreign_session_without_deletion",
+      "test_remove_requires_exact_plain_proof_and_never_claims_legacy_display"
+    ],
+    "tests_executed": 0,
+    "target_modules_imported": 0,
+    "bpy_or_mathutils_imported": 0,
+    "process_or_artist_or_shared_workspace_operations": 0
+  },
+  "validation_limits": [
+    "Pure tests are supplied as Source only and will be executed by Root under the approved serial validation window.",
+    "Actual mesh display/mount/Rigging preview and cleanup remain native validation pending; this Source report does not claim runtime success.",
+    "No previous u7 removal failure or artist state was changed."
+  ]
+}

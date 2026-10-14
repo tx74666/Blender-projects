@@ -1,0 +1,19 @@
+{
+  "schema": "x.validation.standard-registration-diagnostic/1",
+  "completed": true,
+  "pid": 15124,
+  "addon_enable_returned_module": false,
+  "root_module_present": false,
+  "runtime_enabled": false,
+  "errors": [
+    {
+      "type": "AttributeError",
+      "message": "'_RestrictContext' object has no attribute 'scene'",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_c1e59f7f\\source\\character_designer\\__init__.py\", line 8962, in register\n    register_rigging_runtime()\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_c1e59f7f\\source\\character_designer\\unity_animation_rigging.py\", line 1995, in register\n    _reacquire()\n    ~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_c1e59f7f\\source\\character_designer\\unity_animation_rigging.py\", line 1952, in _reacquire\n    for rig in bpy.data.objects:\n               ^^^^^^^^^^^^^^^^\nAttributeError: '_RestrictData' object has no attribute 'objects'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Blender5.2\\5.2\\scripts\\modules\\addon_utils.py\", line 543, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_c1e59f7f\\source\\character_designer\\__init__.py\", line 8979, in register\n    skirt_wiggle.unregister()\n    ~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_c1e59f7f\\source\\character_designer\\skirt_wiggle.py\", line 856, in unregister\n    suspend(reason='Character Designer stopped automatic Dress motion; the current shape is kept.')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_c1e59f7f\\source\\character_designer\\skirt_wiggle.py\", line 580, in suspend\n    scene = (context or bpy.context).scene\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: '_RestrictContext' object has no attribute 'scene'\n"
+    }
+  ],
+  "elapsed_seconds": 0.10660789999747067,
+  "scene_opened_or_saved": false,
+  "source_sha256": "9d38d0d0e403c5dfad8d5fffdbc3c8e14d21646fa9d1cd0b711e6a06aaebed05",
+  "manifest_sha256": "e413d8e6d66bb5a0dd676fc24b0152d1599436464981979fd12d38085daca7e4"
+}

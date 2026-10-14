@@ -1,0 +1,73 @@
+{
+  "schema": "x.workflow-cleanup/1",
+  "date": "2026-10-14",
+  "recorded_utc": "2026-10-13T19:23:07.576Z",
+  "completed": true,
+  "original_task_acceptance_unchanged": true,
+  "current_summary": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/current_return_summary.json",
+    "sha256": "9941479692b273c9963ab0a8f41746f29298ed030a5312bca3127952293927cf",
+    "bytes": 5090
+  },
+  "checkpoint": {
+    "original_before": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/current_return_checkpoint.json",
+      "sha256": "81b1ae8f1d04e974e8aa7472629851403db7787bade27ea984b74e18e2270f81",
+      "bytes": 30666
+    },
+    "history_copy": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/workflow_cleanup_20261014/completed_checkpoint_before_summary.json",
+      "sha256": "81b1ae8f1d04e974e8aa7472629851403db7787bade27ea984b74e18e2270f81",
+      "bytes": 30666
+    },
+    "old_checkpoint_unchanged": true
+  },
+  "canonical_tool": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/tools/verify_file_pin.py",
+    "sha256": "3143ec735cc00624e92c8445c2e129d355f83d7bb399c011fc8df60887879f08",
+    "bytes": 2422
+  },
+  "regression_test": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_verify_file_pin.py",
+    "sha256": "3be465463101c38568bb2170287f95e85a06abdab4826b84f27ec1e7ea2f1aac",
+    "bytes": 2908
+  },
+  "test_count": 8,
+  "test_result": "PASS",
+  "real_pin_cases": [
+    {
+      "receipt": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_saved_status_07738_01/report.json",
+      "field": "writer_report",
+      "result": "PASS"
+    },
+    {
+      "receipt": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/artist_current_saved_resume_20261013_01/backup_receipt.json",
+      "field": "artist",
+      "result": "PASS"
+    },
+    {
+      "receipt": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/artist_current_saved_resume_20261013_01/backup_receipt.json",
+      "field": "backup",
+      "result": "PASS"
+    }
+  ],
+  "artist_at_completion": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "scene_saved_or_mutated": false,
+  "addon_runtime_changed": false,
+  "native_tests_started": false,
+  "deployment_or_refresh_performed": false,
+  "performance_gain_claimed": false,
+  "source_version": "0.77.38",
+  "accepted_blender_version": "5.2.0 LTS",
+  "live_artist_addon_runtime": "not observed in workflow cleanup",
+  "model_and_reasoning_effort": "unrecorded",
+  "entry_size_bytes": {
+    "legacy_checkpoint": 30666,
+    "compact_summary": 5090
+  },
+  "next_trigger": "Changed identity/Rig/Rest/modifiers/control graph, save recovery anomaly, or new responsiveness symptom; observe live identity before new scene work."
+}

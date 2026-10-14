@@ -1,0 +1,192 @@
+{
+  "schema": "x.validation.character-composition-publication-recovery-fixture-independent-source-readback/1",
+  "utc": "2026-10-11T11:28:24.870347+00:00",
+  "reviewer": "/root/export_scale_review",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "helper_or_candidate_imports_performed": false,
+  "tests_rerun": 0,
+  "SDK_GUI_CIM_calls": 0,
+  "existing_file_mutations_performed": false,
+  "config": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\recovery_config.json",
+    "sha256": "5fe6262c1a32fafb9866912241d76f5f6d6b60258e3299123c5b130d4952a4c6",
+    "bytes": 4077
+  },
+  "source_entry": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\source_entry_receipt.json",
+    "sha256": "d0ca62b6822f4926399f180f18ebeadd659c8c92d7daa1dcede3251bf877046a",
+    "bytes": 392237
+  },
+  "native_fixture": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\native_fixture.json",
+    "sha256": "292e5659669becff3ffcde4b3f9469b42f626e0a57fd3ba11c6cc4a12521c013",
+    "bytes": 2601
+  },
+  "driver": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\run_character_composition_publication_recovery.py",
+    "sha256": "a21e531819225c4990242351ee9a2e84646cd8ac8a6714c5cd845c4a56f61fcf",
+    "bytes": 51225
+  },
+  "driver_owner_and_peer": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_published_loop_recovery_driver_owner_source_a21e5318.json",
+      "sha256": "bf1fc04d21658d66436ccafbba5f1d01182314cdc79c5bbb829bfd323f3c3653",
+      "bytes": 10953
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_published_loop_recovery_driver_peer_source_a21e5318.json",
+      "sha256": "5a391cebf28c4c4752692ef66e3989c609f923ece3fca789b6ee14bb4b6b1fb7",
+      "bytes": 16436
+    }
+  ],
+  "producer": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_fixture.py",
+    "sha256": "311957a5e9bcc50b4b06e0fa9b50e1bcbb3503e62a95c00f522a19fa27d23b00",
+    "bytes": 11771
+  },
+  "producer_independent_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_fixture_producer_peer_source_311957a5.json",
+    "sha256": "e44c878b0b2c087c883cf283208c19ce00d3c7b2c2878b2b8ef43a9672ceb08a",
+    "bytes": 5560
+  },
+  "actual_checks": {
+    "config_exact_actual_driver_fields": [
+      "evidenceDirectory",
+      "failedProtection",
+      "failedSourceEntry",
+      "inheritedNumericReport",
+      "inheritedPhysicalReport",
+      "loopAuthorReport",
+      "nativeFixture",
+      "persistedNumericReport",
+      "publishedLink",
+      "qaSeedFile",
+      "schema",
+      "sidecar_budget_projection_receipt",
+      "tools",
+      "workerJob",
+      "workerResult",
+      "workerSnapshot"
+    ],
+    "field_count": 16,
+    "native_inputs_equal_n15_except_owned_runtime_and_evidence_fields": [
+      "addonPackage",
+      "evidenceDirectory",
+      "runtimeManifest",
+      "runtimeManifestSha256"
+    ],
+    "sessionChecks": null,
+    "tools_raw_inventory_count": 8,
+    "historical_7_tools_raw_equal_n15": [
+      {
+        "role": "run_character_composition_first_stage",
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\run_character_composition_first_stage.py",
+        "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+        "bytes": 9852,
+        "raw_equal_historical_n15": true
+      },
+      {
+        "role": "verify_character_composition_native",
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\verify_character_composition_native.py",
+        "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+        "bytes": 52884,
+        "raw_equal_historical_n15": true
+      },
+      {
+        "role": "composition_sync_acceptance",
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\composition_sync_acceptance.py",
+        "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+        "bytes": 21115,
+        "raw_equal_historical_n15": true
+      },
+      {
+        "role": "composition_timing_acceptance",
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\composition_timing_acceptance.py",
+        "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+        "bytes": 50843,
+        "raw_equal_historical_n15": true
+      },
+      {
+        "role": "composition_session_acceptance",
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\composition_session_acceptance.py",
+        "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+        "bytes": 57217,
+        "raw_equal_historical_n15": true
+      },
+      {
+        "role": "release_projection",
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\release_projection.py",
+        "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+        "bytes": 7529,
+        "raw_equal_historical_n15": true
+      },
+      {
+        "role": "run_character_composition_first_stage_continuation",
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\run_character_composition_first_stage_continuation.py",
+        "sha256": "23cda6830ce26421798df44b69b1c680b63536c393c9f22f16631f52818b411c",
+        "bytes": 66510,
+        "raw_equal_historical_n15": true
+      }
+    ],
+    "new_driver_raw_equals_final_owner_and_peer_approved_canonical_source": true,
+    "configtools_exact_native_and_continuation": true,
+    "runtime_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\python_projection.json",
+      "sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+      "bytes": 44600
+    },
+    "full_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\candidate_projection.json",
+      "sha256": "9bcf6326512b2b146264df165c970bf87508a48d363c7a1fcfa5448e29c2dee1",
+      "bytes": 41551
+    },
+    "budget_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_animation_sidecar_budget_projection_receipt_13_14.json",
+      "sha256": "fbeb346ac463ef18983fec699684d612a01a94af0265003b8881c1e6dbba9d09",
+      "bytes": 62305
+    },
+    "direct_raw_file_pins_verified": 58,
+    "direct_raw_pin_mismatches": 0,
+    "declared_source_inventory_count": 1836,
+    "all1836_declared_keys_and_hashes_reconstructed_exactly": true,
+    "old_declared_source_count": 1455,
+    "old_declared_hash_transitions": [
+      {
+        "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\character_animation_link.json",
+        "before_sha256": "fc1a315331e4d586caa5f26553a9e271fa438e52c2f56262329b1ec2ae86454e",
+        "after_sha256": "1c3b25a51cfdb7c1fbbc29be0e9877d1c68e5ddc9077af52856b4c23db4d3bea"
+      },
+      {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+        "before_sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+        "after_sha256": "db4d61e9deaa6833137507b49957178bc833bd5b83512fff1f809181ad49ab96"
+      }
+    ],
+    "all_old1455_or_new340_leaf_raw_hashes_repeated_by_this_bounded_reviewer": false,
+    "all_new_and_direct_admission_review_publication_tool_pins_raw_verified": true,
+    "failed_n15_completion_and_outer_recovery_false_preserved": true,
+    "existing_Loop_published_revision": 1,
+    "qa_seed_currently_exists": false,
+    "owned_config_native_tool_paths_are_n16": true
+  },
+  "expected_execution_only": {
+    "published_SOURCE_inherited": 3,
+    "published_SOURCE_executed": 0,
+    "authoring_executed": 0,
+    "numeric_resampling_executed": 0,
+    "current_receipt_acceptance": 1,
+    "current_UI_imports": 2,
+    "current_Loop_imports": 1,
+    "fresh_outer_recovery_and_seed_required": true
+  },
+  "native_launch_permission_inferred": false,
+  "qa_seed_provisional_until_actual_outer_recovery_and_natural_exit_closure": true,
+  "source_map_digest": "f22f6556dea9bd87e5e602b20da40acbb8a3cb7934819089e29604ca38827cf9",
+  "source_map_digest_encoding": "UTF8 sorted JSON, ensure_ascii=False, compact separators",
+  "limits": [
+    "SOURCE readback only; no archive Action load, receipt acknowledgement, current UI imports, QA seed, fresh outer recovery or new native execution performed.",
+    "The producer had rehashed original1455 and new340 leaves at Source generation. This bounded peer independently reconstructs all1836 declared path/hash records and raw-checks all direct/new admission, tool, review and publication pins; it does not relabel that as a repeated1836-file physical hash audit."
+  ]
+}

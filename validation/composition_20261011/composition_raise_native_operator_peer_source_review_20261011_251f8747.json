@@ -1,0 +1,114 @@
+{
+  "before_source": {
+    "bytes": 18339,
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_raise_authoring_e8cbbe96_before_native_operator_guards.py",
+    "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1"
+  },
+  "helper_dependencies": [
+    {
+      "bytes": 50843,
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874"
+    },
+    {
+      "bytes": 50843,
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_09\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874"
+    },
+    {
+      "bytes": 50843,
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874"
+    }
+  ],
+  "independent_AST": {
+    "added_functions": [],
+    "bare_assert_count": 0,
+    "changed_functions": [
+      "_rotation_control",
+      "_author",
+      "run"
+    ],
+    "normalized_module_inverse_AST_equal": true,
+    "public_run_signature_unchanged": true,
+    "run_outer_finally_AST_unchanged": true,
+    "top_level_AST_unchanged": true,
+    "unchanged_existing_functions": [
+      "validate_config",
+      "_set_inputs",
+      "_key_inputs",
+      "_created_identity",
+      "_row_anchor",
+      "_fresh_row"
+    ],
+    "validation_commit_endpoint_tail_AST_unchanged": true
+  },
+  "limitations": [
+    "SOURCE_READY only. Genuine prepared Raise, native operator context and final restoration require their own explicit native grant and actual evidence.",
+    "The existing outer recovery exception policy is unchanged; this review does not claim a new native failure reproduction or native acceptance."
+  ],
+  "native_execution_performed": false,
+  "owner_source_report": {
+    "bytes": 3994,
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_raise_native_operator_source_report_20261011_251f8747.json",
+    "sha256": "23c7a301a4abb7b178c76ad3447be9096e6dac89a5563ca27da683c468b1b893"
+  },
+  "passed": true,
+  "review_actions": {
+    "code_edits": 0,
+    "in_memory_compile_count": 1,
+    "native_Blender_SDK_GUI_executions": 0,
+    "resource_or_process_queries": 0,
+    "source_AST_parse": true,
+    "target_module_imports": 0,
+    "tests_run": 0,
+    "workspace_JSON_reads": 0
+  },
+  "reviewer": "/root/rig_controls_review",
+  "schema": "x.validation.character-composition-raise-native-operator-peer-source-review/1",
+  "source_files": {
+    "composition_raise_authoring.py": {
+      "bytes": 23114,
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+      "sha256": "251f87471a53e328770380874994de67ed579e07e8d82cb94ea93d7902e682f2"
+    }
+  },
+  "source_findings": [
+    {
+      "finding": "Control choice requires every declared rotation component and exact scope-native membership. A89 effective Pose/Collection visibility includes Solo/unassigned semantics; hide-select and local-X locks are checked. No visibility mutation or control fallback.",
+      "lines": [
+        65,
+        87
+      ]
+    },
+    {
+      "finding": "Each native mapped frame and canonical FK input update precedes view-layer update and fresh A89 exact B Full Stack Tweak Action/slot, Pose/VIEW3D-WINDOW, single selected and active control readback.",
+      "lines": [
+        169,
+        176
+      ]
+    },
+    {
+      "finding": "Real rotate poll is exactly True. Background requests undo False, headful True. Literal FINISHED plus valid finite quaternion evidence and delta >1e-7 are required; pending clears only after these gates. Every exact scoped key must succeed; report checkpoints bracket the native call and key batches.",
+      "lines": [
+        178,
+        217
+      ]
+    },
+    {
+      "finding": "Report owns diagnostics before _author. Durable checkpoint uses checkpoint_phase, not failure_phase. Operator BaseException evidence is retained; the run exception path alone records actual failure_phase. Existing recovery/final persistence remains unchanged.",
+      "lines": [
+        305,
+        328
+      ]
+    },
+    {
+      "finding": "Native B-local key coverage, strict moving check, actual commit/hash change and independently sampled real collected-Loop endpoint tolerance remain unchanged. No sampled output-matrix authoring or direct curve/operator fallback was introduced.",
+      "lines": [
+        219,
+        236
+      ]
+    }
+  ],
+  "source_only": true
+}

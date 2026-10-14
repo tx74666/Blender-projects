@@ -1,0 +1,41 @@
+{
+  "schema": "x.diagnostic.linear-handle-reencoding-summary/1",
+  "source_report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/action_undo_diagnostic_07734_01/action_undo_diagnostic_report.json",
+    "sha256": "fe2d6ce83934f804c83790b6b7439266370bb644c216b8b9ac953378f5fd946d",
+    "bytes": 27704
+  },
+  "release": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_release_X_ACTION_UNDO_DIAGNOSTIC_07734_01.json",
+    "sha256": "32a39589e80b1ddf0b69de7a2e5d777f66e013b1ae99c13ffba290e6f14fcba5",
+    "bytes": 1155
+  },
+  "before_payload": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/action_undo_diagnostic_07734_01/before_curve_undo_full20_payload.json",
+    "sha256": "9036b0dc5405c9626afea4428e95e2b3c5f6fcfc876cbf74ec9b41212edd8a13",
+    "bytes": 1064702
+  },
+  "after_payload": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/action_undo_diagnostic_07734_01/after_curve_redo_full20_payload.json",
+    "sha256": "e2a531dc6b6210663e8b493e1cf0ade010f10c179d673d5f0632fca43d4f4e44",
+    "bytes": 1064742
+  },
+  "structural_diff": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/action_undo_diagnostic_07734_01/curve_Redo_effect_structural_diff.json",
+    "sha256": "376f48fbe93f1a1f49ada7b986799851285838951f19a43d284948ba652bc1cd",
+    "bytes": 32365
+  },
+  "difference_count": 200,
+  "changed_fields": {
+    "$.layers[].strips[].curves[].keyframe_points[].handle_right[]": 100,
+    "$.layers[].strips[].curves[].keyframe_points[].handle_left[]": 100
+  },
+  "all_changed_values_float32_ulp_distance": 1,
+  "before_key_count": 1180,
+  "after_key_count": 1180,
+  "all_before_after_key_interpolation": "LINEAR",
+  "all_other_payload_fields_exact": true,
+  "diagnostic_only": true,
+  "original_native03_still_failed": true,
+  "historical_exact_before_edited_payload_unavailable": true
+}

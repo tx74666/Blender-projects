@@ -1,0 +1,342 @@
+{
+  "schema": "x.validation.character-composition-u7-failed-remove-closure/1",
+  "utc": "2026-10-11T18:15:40.503302+00:00",
+  "completed": false,
+  "native_execution_performed": true,
+  "pid": 64160,
+  "normal_owned_native_close": true,
+  "exit_code": 0,
+  "process_exit_verified": true,
+  "forced_termination": false,
+  "retained_handle_exit_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7_retained_handle_exit.json",
+    "sha256": "de72a2bb5906d616a3ddde287f0aefc7abe036e535de37d95790b352a1f521eb",
+    "bytes": 489
+  },
+  "sole_remaining_artist_pid": 27676,
+  "worker_count": 0,
+  "publication_count": 0,
+  "zero_worker_basis": "Actual retained-handle exit receipt remainingBlender contains solely protected artist PID 27676; no Sync evidence exists.",
+  "native_gui_and_worker_lane_released": true,
+  "actual_Load_passed": true,
+  "actual_Remove_attempted": true,
+  "actual_Remove_passed": false,
+  "weapon_visible_native_acceptance": true,
+  "native_B_pose_edit_performed": false,
+  "save_pose_performed": false,
+  "save_reopen_performed": false,
+  "artist_save_performed": false,
+  "actual_checkpoint_count": 2,
+  "all_actual_checkpoints_acknowledged": true,
+  "checkpoint_proofs": [
+    {
+      "name": "readonly_a_workcopy_entry",
+      "review_acknowledged": true,
+      "acknowledged_frame": 1.0,
+      "captures": [
+        {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\ui_01_readonly_a_workcopy_entry_01.png",
+          "sha256": "9b65cc20142f32c94948eb415e6c2e1608734ce1d672fa40e945c7c4ba3f9a72",
+          "bytes": 928113
+        },
+        {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\ui_01_readonly_a_workcopy_entry_02.png",
+          "sha256": "d12ce6e65554e742729421c3dbf4d554f05f416356cbf5e703b3068c09eb303f",
+          "bytes": 841770
+        }
+      ],
+      "latest_capture": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\ui_01_readonly_a_workcopy_entry_02.png",
+        "sha256": "d12ce6e65554e742729421c3dbf4d554f05f416356cbf5e703b3068c09eb303f",
+        "bytes": 841770
+      },
+      "native_tweak": false,
+      "editing": "",
+      "scene": "Composition QA · Fresh Workspace",
+      "rig": "CoshaRig",
+      "readonly_A_sha256": "14556ff41415ac0621456f863ecbf2df5742b61101919af959a434e5fb076548",
+      "B_custom_sha256": "9092d8ac8c38c84fdf01e0d0a911905a8d63e8725c8b12c46a4e17fe5b22d4a8"
+    },
+    {
+      "name": "c_edit_b_weapon",
+      "review_acknowledged": true,
+      "acknowledged_frame": 1.0,
+      "captures": [
+        {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\ui_02_c_edit_b_weapon_01.png",
+          "sha256": "45aa8e0a450b7ca5ee789e4f11d79b7d7b3e1cec264249f354543ee8fe322ee8",
+          "bytes": 860771
+        },
+        {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\ui_02_c_edit_b_weapon_02.png",
+          "sha256": "29b4263fd32d942bb978ce15b1d8591b22793741193d047b6aabe158373a8be7",
+          "bytes": 477576
+        }
+      ],
+      "latest_capture": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\ui_02_c_edit_b_weapon_02.png",
+        "sha256": "29b4263fd32d942bb978ce15b1d8591b22793741193d047b6aabe158373a8be7",
+        "bytes": 477576
+      },
+      "native_tweak": true,
+      "editing": "B",
+      "scene": "Composition QA · Fresh Workspace",
+      "rig": "CoshaRig",
+      "readonly_A_sha256": "14556ff41415ac0621456f863ecbf2df5742b61101919af959a434e5fb076548",
+      "B_custom_sha256": "9092d8ac8c38c84fdf01e0d0a911905a8d63e8725c8b12c46a4e17fe5b22d4a8"
+    }
+  ],
+  "captured_weapon_geometry_proof": {
+    "captured_unity_geometry": true,
+    "captured_renderer_count": 7,
+    "captured_vertex_count": 2034,
+    "captured_triangle_count": 1882,
+    "placed_surface_error_metres": 6.733050099683169e-07,
+    "placed_bounds_error_metres": 5.21540641784668e-07,
+    "placed_distinct_vertices": 1057,
+    "placed_surface_proved": true,
+    "schema": "cdesigner.weapon-context/1",
+    "context_sha256": "d740219368c5a773ec6e5c9ae8d7803cf1c3d5e5a69db54f32df768ee4824e77",
+    "source_sha256": "6c69c6320106df97fd8f5903359ee346f999d563871e173c7525ada55c295b43",
+    "native_mount": "hand.R",
+    "prefab_scale_applied_once": true,
+    "actual_fbx_import": false,
+    "artist_unit_system": "METRIC",
+    "artist_unit_scale": 1.0,
+    "authored_grip_count": 0,
+    "automatic_hand_ik": false,
+    "grip_limitation": "No authored named grip targets; edit supported FK controls against the actual weapon."
+  },
+  "failure": "Error: An external object uses this weapon context; preserve it for inspection.\n",
+  "failure_location": "Session529 actual Remove Weapon ownership guard after successful Load and gun C checkpoint ACK.",
+  "native_B_tweak_preflight": {
+    "phase": "preflight",
+    "owner": "bf0ee0ff-d24b-414b-a82d-02399df39d57",
+    "protected_A_sha256": "14556ff41415ac0621456f863ecbf2df5742b61101919af959a434e5fb076548",
+    "A_workcopy_item_id": "c18f131cfcde4a2f8883cd512e8b5e57",
+    "native_tweak": true,
+    "autokey": false,
+    "new_actions": [
+      "HoldPose · Composition Edit"
+    ]
+  },
+  "protected_source_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\w1_ready_fixture_source_receipt.json",
+    "sha256": "b24a144b1a5ec6c79e95fc4f96af5d07d230568c53cb222662aafc4364b4b2ab",
+    "bytes": 5662
+  },
+  "all_13_protected_files_final_exact": true,
+  "protected_files": [
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\character_animation_link.json",
+      "sha256": "63c1a7d96a7e153b1f29ecd41cfabdd51749bf1b05a1375c6e3086d4de56f8ee",
+      "bytes": 9549
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.fbx",
+      "sha256": "3bb3c384826db7fafda557148f6d18d0a7a9efd70d7770398543c191d9a394cf",
+      "bytes": 1340460
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.animation.json",
+      "sha256": "df5171af4d4c3450b1510494416b350269d762651723eda9a4ee0e91cb0c0eb9",
+      "bytes": 179023
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\character_animation_link.json",
+      "sha256": "c96fbb0ef988f3df2d43bf7bae013b37031e7adddb169495fc6ede351c05c0fd",
+      "bytes": 9558
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.fbx",
+      "sha256": "403aa1263862e5845c3615dcfc1b4456da187ee563226f056e0f1653929445c3",
+      "bytes": 1340460
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.animation.json",
+      "sha256": "0bbe84edd753233eff891ae5e4373a29e7f03dd57c0f4bcb59a9e7fa04e70039",
+      "bytes": 179040
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\character_animation_link.json",
+      "sha256": "1c3b25a51cfdb7c1fbbc29be0e9877d1c68e5ddc9077af52856b4c23db4d3bea",
+      "bytes": 9541
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\blender_revisions\\e0774c735f5943dfb01f649ec7d3f218\\a-3bf00d13549a4783.fbx",
+      "sha256": "49bae8eca63c78c8358a5b1bcb176d98d8f4e5316f160fd71e063221eb0fb3b4",
+      "bytes": 4889692
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\blender_revisions\\e0774c735f5943dfb01f649ec7d3f218\\a-3bf00d13549a4783.animation.json",
+      "sha256": "7bc949af65935408701c2c70bb0387037e3c01c5a36051fc2d34234954c6997c",
+      "bytes": 3974023
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+      "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+      "bytes": 34682050
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+      "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+      "bytes": 35156
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend",
+      "sha256": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0",
+      "bytes": 39960623
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\composition_references\\a385606b99c14b26-074dc5c3494c.blend",
+      "sha256": "b8eb415124ae19558d1ac347e59ce9bbb8cee1626513d8e47fb667dd31a5675c",
+      "bytes": 1002089
+    }
+  ],
+  "seed_was_temporarily_written": true,
+  "seed_restored_exact": true,
+  "seed_save_recovery_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7_seed_save_recovery_receipt.json",
+    "sha256": "94556458a89bbbef5f0c8f2242182c3a2cb781d550b57c561ed417523b7ddbc5",
+    "bytes": 2704
+  },
+  "temporary_seed_write_root_observation": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend",
+    "sha256": "21a3d7103b05f922ced0910696d9634f5c5fc0074a3a9258e18cb52120b39a13",
+    "bytes": 40829852,
+    "mtime_utc_time_root_observation": "18:12:43.742Z",
+    "cause": "GUI Control_L+Shift_L+s triggered ordinary Save during failed QA cleanup.",
+    "original_backup": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend1",
+    "original_backup_sha256": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0",
+    "original_backup_bytes": 39960623
+  },
+  "protection_limit": "The QA seed was temporarily overwritten, then restored byte-exactly; final equality does not mean it was never written. Artist, old publications and workspace were not written.",
+  "old_publication_files": [
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\character_animation_link.json",
+      "sha256": "63c1a7d96a7e153b1f29ecd41cfabdd51749bf1b05a1375c6e3086d4de56f8ee",
+      "bytes": 9549
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.fbx",
+      "sha256": "3bb3c384826db7fafda557148f6d18d0a7a9efd70d7770398543c191d9a394cf",
+      "bytes": 1340460
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.animation.json",
+      "sha256": "df5171af4d4c3450b1510494416b350269d762651723eda9a4ee0e91cb0c0eb9",
+      "bytes": 179023
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\character_animation_link.json",
+      "sha256": "c96fbb0ef988f3df2d43bf7bae013b37031e7adddb169495fc6ede351c05c0fd",
+      "bytes": 9558
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.fbx",
+      "sha256": "403aa1263862e5845c3615dcfc1b4456da187ee563226f056e0f1653929445c3",
+      "bytes": 1340460
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.animation.json",
+      "sha256": "0bbe84edd753233eff891ae5e4373a29e7f03dd57c0f4bcb59a9e7fa04e70039",
+      "bytes": 179040
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\character_animation_link.json",
+      "sha256": "1c3b25a51cfdb7c1fbbc29be0e9877d1c68e5ddc9077af52856b4c23db4d3bea",
+      "bytes": 9541
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\blender_revisions\\e0774c735f5943dfb01f649ec7d3f218\\a-3bf00d13549a4783.fbx",
+      "sha256": "49bae8eca63c78c8358a5b1bcb176d98d8f4e5316f160fd71e063221eb0fb3b4",
+      "bytes": 4889692
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042923-80d305ccc1a7\\blender_revisions\\e0774c735f5943dfb01f649ec7d3f218\\a-3bf00d13549a4783.animation.json",
+      "sha256": "7bc949af65935408701c2c70bb0387037e3c01c5a36051fc2d34234954c6997c",
+      "bytes": 3974023
+    }
+  ],
+  "current_artist": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "bytes": 34682050
+  },
+  "workspace": {
+    "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+    "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+    "bytes": 35156
+  },
+  "qa_seed": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend",
+    "sha256": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0",
+    "bytes": 39960623
+  },
+  "exact_A_cache": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\composition_references\\a385606b99c14b26-074dc5c3494c.blend",
+    "sha256": "b8eb415124ae19558d1ac347e59ce9bbb8cee1626513d8e47fb667dd31a5675c",
+    "bytes": 1002089
+  },
+  "source_packet": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7_final_weapon_core_source_packet.json",
+    "sha256": "b7e45ea246b6fca82e834b4f1b638db92a15e60366fd38b06425f873fadd3ff8",
+    "bytes": 1900
+  },
+  "source_package": {
+    "wrapper": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_u7_ui_then_sync_existing_b1.py",
+      "sha256": "46fec5f790416a580b628610c04ec8115aab04936c47f0fd8298e22af2dc3244",
+      "bytes": 13594
+    },
+    "fixture": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7_fixture.json",
+      "sha256": "e43a2a03b9dce37bddac0761ec2788d3279b0b7d7d41ce8edd75d894c75f4c6a",
+      "bytes": 3435
+    },
+    "fixture_source_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7_fixture_source_receipt.json",
+      "sha256": "fef26c604c4f74a4dcd7a1410dacd6c0a492593bff1bfd77c45efa2d80acab39",
+      "bytes": 4223
+    },
+    "frozen_tools_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_15\\frozen_tools_receipt.json",
+      "sha256": "121172c4f6a42a5a80f50a7fd224f4e7cdb6df926b026d7bfc07567beb81ffef",
+      "bytes": 4683
+    },
+    "runtime_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_18\\python_projection.json",
+      "sha256": "f53d04d64d63e6c61a967d1fc69d6937b975dc00332f1936a19922b1849eb973",
+      "bytes": 18110
+    }
+  },
+  "reports": {
+    "session_acceptance_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\session_acceptance_report.json",
+      "sha256": "b43fb15c6ba42974286a2eb9a541f1b9c3b03af2348c5db9c19296f770d91d59",
+      "bytes": 1580
+    },
+    "headful_checkpoint_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\headful_checkpoint_report.json",
+      "sha256": "25eace2802b4ddb123774b0ef90f311fca233d17a351814dd94ca0fcc2058387",
+      "bytes": 146201
+    },
+    "composition_ui_run_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\composition_ui_run_report.json",
+      "sha256": "e2bbc538115d95d44b027afc630b838ebf57d0d5ff3566e5ec09d557971c2085",
+      "bytes": 168368
+    },
+    "ui_then_single_b1_sync_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\ui_then_single_b1_sync_report.json",
+      "sha256": "85825c1b4c1a8bc21e8b58628f9934da16592338c647efd9997ea64b3635bc34",
+      "bytes": 5809
+    }
+  },
+  "failed_inspection_snapshot": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u7\\failed_remove_inspection_QA.blend",
+    "sha256": "21a3d7103b05f922ced0910696d9634f5c5fc0074a3a9258e18cb52120b39a13",
+    "bytes": 40829852
+  },
+  "failed_inspection_snapshot_limit": "Pinned if present; file existence/hash alone does not claim a Blender FINISHED save receipt.",
+  "pending": "Diagnose Remove ownership guard from preserved owned QA; B edit/SavePose/UndoRedo/reopen/Sync and new Unity ReturnApply remain unverified. No automatic rerun."
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "resource_owner": "X",
+  "written_utc": "2026-10-12T21:39:50.417Z",
+  "start": {
+    "schema": "x.validation.process-start/1",
+    "stage": "Integration",
+    "pid": 25684,
+    "process_filetime": "134363147080488446",
+    "started_utc": "2026-10-12T21:38:28.0111592Z",
+    "resource_token": "X_ORIGINAL_INTEGRATION_SAVE_07738_02",
+    "free_mib": 1484.3,
+    "request_sha256": "d2059c7a2b05afd9c89585ce622d695cebfa31ceec6e64e3fdb3219007f5c459",
+    "argv": [
+      "-B",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\call_original20_artist_sdk_long.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738_02\\integration_request.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738_02\\integration_caller",
+      "9877",
+      "d2059c7a2b05afd9c89585ce622d695cebfa31ceec6e64e3fdb3219007f5c459"
+    ],
+    "retained_handle": true
+  },
+  "end": {
+    "schema": "x.validation.process-end/1",
+    "stage": "Integration",
+    "pid": 25684,
+    "process_filetime": "134363147080488446",
+    "retained_handle_natural_exit": true,
+    "exit_code": 1,
+    "ended_utc": "2026-10-12T21:38:55.5989790Z",
+    "elapsed_seconds": 27.5767656,
+    "owned_process_gone": true,
+    "process_termination_performed": false,
+    "operation_success_inferred": false
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_artist_integration_07738_02/original20_artist_integration_report.json",
+    "sha256": "078565f98c6bac4dcfcd9fdd398b6d45103226a44810b206d53cd7ccee58d6be",
+    "bytes": 116328
+  },
+  "completed": false,
+  "original_save_attempted": false,
+  "original_disk_unchanged": true,
+  "public_failure_close_completed": true,
+  "failure": "AttributeError: module 'character_designer' has no attribute 'animation_worklist'",
+  "known_premutation_stage": "First construction of readonly protection helper",
+  "resource_returned_to_parent": false
+}

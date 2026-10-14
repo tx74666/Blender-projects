@@ -1,0 +1,95 @@
+{
+  "schema": "x.validation.character-composition-u2-source-producer-review/1",
+  "utc": "2026-10-11T12:31:01.722651+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "build_u2_publication_recovery_source.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_u2_publication_recovery_source.py",
+      "sha256": "272cdb88cc9a07e6f69d93aaac07adf54614ca46a653374d4f4b81a0ffb5e163",
+      "bytes": 10664
+    }
+  },
+  "actual_inputs_read": {
+    "u1_fixture.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_fixture.json",
+      "sha256": "7c7ed49a889e936af768df533b3083631fa3369276497cabf692e3761447adc9",
+      "bytes": 2377
+    },
+    "u1_fixture_source_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_fixture_source_receipt.json",
+      "sha256": "8cec63f08a279ba6b311daabb6d461f43bf6ec9046d5dc2c2de0ff1d70108370",
+      "bytes": 778153
+    },
+    "tools_headful_10/frozen_tools_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\frozen_tools_receipt.json",
+      "sha256": "a594751f08f7266c17396a9bc104e451b2b627c7bd63e16f856347559dbd365f",
+      "bytes": 25074
+    },
+    "n16/completion_closure.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\completion_closure.json",
+      "sha256": "9810dbf836d11a85e412a1e2632fa97026aaf37509b6de098e9af74f22ad083d",
+      "bytes": 3280
+    },
+    "u1_natural_failure_protection_closure.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_natural_failure_protection_closure.json",
+      "sha256": "8ead12fe3dd254a503b89864df3013eac884e98b1475d4dd7b4b43fecc231f1a",
+      "bytes": 772943
+    }
+  },
+  "syntax_validation": {
+    "ast_parse": true,
+    "in_memory_compile": true,
+    "assert_count": 0,
+    "candidate_imports": 0,
+    "producer_invocations": 0,
+    "tests_executed": 0
+  },
+  "input_contract": {
+    "old_fixture_changes": [
+      "evidenceDirectory"
+    ],
+    "old_receipt_changes": [
+      "config_path",
+      "fixture",
+      "profiles",
+      "profile_utf16_units",
+      "admitted_inputs"
+    ],
+    "other_existing_fields_literal_equal_guard": true,
+    "all_counters_and_publication_proofs_inherited_exactly": true,
+    "new_fields": [
+      "previous_ui_failure_protection",
+      "source_producer",
+      "parent_source_receipt",
+      "parent_fixture",
+      "previous_ui_attempt"
+    ],
+    "failure_schema": "x.validation.character-composition-natural-ui-failure-protection/1",
+    "actual_u1_completed": false,
+    "actual_u1_natural_exit_code": 1,
+    "actual_u1_boundary": "claim_evidence",
+    "actual_u1_seed_loading_started": false,
+    "actual_u1_ui_session_started": false,
+    "actual_failed_protection_inputs": 1888,
+    "failure_artifact_pins": 6,
+    "gui_grant_consumed_false_is_new_source_generation_only": true,
+    "new_gui_permission_inferred": false
+  },
+  "write_contract": {
+    "all_admissions_before_write": true,
+    "all_unique_inputs_raw_rehash_before_write": true,
+    "output_encoding_before_write": true,
+    "config_and_receipt_exclusive_xb": true,
+    "new_u2_directory_must_be_absent": true,
+    "only_empty_CONFIG_DATAFILES_created": true,
+    "old_u1_n16_artist_products_untouched": true,
+    "outputs": [
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture.json",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture_source_receipt.json",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2"
+    ]
+  },
+  "scope": "Source code/actual field shapes only. No producer/adaptor/auditor/helper invocation, candidate import, tests, Blender, GUI, SDK, OS query or new grant."
+}

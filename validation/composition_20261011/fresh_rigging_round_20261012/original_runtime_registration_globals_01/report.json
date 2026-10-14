@@ -1,0 +1,2144 @@
+{
+  "root_namespace_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+  "root_namespace_name": "character_designer",
+  "root_version": [
+    0,
+    77,
+    36
+  ],
+  "enabled": false,
+  "classes": [
+    {
+      "name": "CharacterDesignerState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_preview_selected_root",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_cancel_preview",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_capture_root",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_clear_root",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_build_centerline",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_confirm_centerline",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_set_front_alignment",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_set_update_target",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_update_existing_centerline",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_generate_or_update_centerline",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_recover_applied_curve",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_select_output",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_refresh_addon",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_set_ui_page",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_set_rig_section",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_main",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_curve_tools",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_curve_to_mesh_copy",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.curve_tools"
+    },
+    {
+      "name": "CharacterDesignerFingerRootSlot",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_root"
+    },
+    {
+      "name": "CharacterDesignerFingerRootState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_root"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_root",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_root"
+    },
+    {
+      "name": "CharacterDesignerFingerDefinition",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_definition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_definition",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_definition_ui"
+    },
+    {
+      "name": "CharacterDesignerFingerSlot",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_bank_ui"
+    },
+    {
+      "name": "CharacterDesignerFingerBank",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_bank_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_setup",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_bank_ui"
+    },
+    {
+      "name": "CharacterDesignerFingerFlexState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_flex"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_flex",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_flex"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_bone_tools",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_bone_tools"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_loop_marks",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_loop_marks_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_bone_mirror",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_bone_mirror"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_finger_roll",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.finger_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_fingers",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.finger_bones"
+    },
+    {
+      "name": "CharacterDesignerAsset",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CharacterDesignerBoneMapping",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CharacterDesignerSetup",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_capture_character_bone",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_register_assets",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_character_asset",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_quick_bind",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_restore_quick_binding",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_remove_quick_binding",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_restore_removed_quick_binding",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_character_setup",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_quick_bind",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.character_setup"
+    },
+    {
+      "name": "CharacterDesignerUnityExtra",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CharacterDesignerUnitySimpleMaterial",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CharacterDesignerUnityMaterialMatch",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_material_match_ui"
+    },
+    {
+      "name": "CharacterDesignerUnityExport",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_match_material",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_material_match_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_export",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_locate_unweighted",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_export_section",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_choose_simple_material",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_simple_material",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_add_selected",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_remove_extra",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_set_included",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_unity_open_path",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_unity_export",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.unity_export_ui"
+    },
+    {
+      "name": "CharacterDesignerHairBonesState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_select_hair_strands",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_generate_hair_bones",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_bind_to_character",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_remove_binding",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_cleanup_generated_copies",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_show_source",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_clear_groups",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_hair_bones",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.hair_bones"
+    },
+    {
+      "name": "CharacterDesignerHairMotionState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_motion_initialize",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_motion_navigate",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_motion_apply",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_motion_depth",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_motion_preview",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_hair_motion_pair",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_hair_motion",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.hair_motion_ui"
+    },
+    {
+      "name": "CharacterDesignerSkirtState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_create_skirt_setup",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_update_attachment",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_unify_rig",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_restore_attachment",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_select_controls",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_add_physics",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_toggle_helpers",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_select_colliders",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_clear_cache",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_bake_physics",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_bake_animation",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_preview_bake",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_remove_skirt_setup",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_skirt_details",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_dress_motion_mode",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_dress_motion_tuning",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_dress_motion_reset",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.skirt_motion_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_skirt_setup",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.skirt"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_original_inputs_attach",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_original_inputs_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_original_inputs_edit",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_original_inputs_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_original_inputs_save",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_original_inputs_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_original_inputs_body_view",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_original_inputs_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_original_inputs_publish",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_original_inputs_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_original_inputs_close",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_original_inputs_ui"
+    },
+    {
+      "name": "CharacterDesignerAnimationWorklistCatalog",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CharacterDesignerAnimationWorklistItem",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CharacterDesignerAnimationWorklistState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_connect",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_add_prepared_animation",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_refresh",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_use_main_rig",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_restore_main_rig",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_add",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_add_ready",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_scan_changes",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_register_new",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_sync_changed",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_cancel_collection",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_activate",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_remove",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_move",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_drag_handle",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_drag",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_sync",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_rigging_edit",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_worklist_save_controls",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_UL_animation_catalog",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_UL_animation_worklist",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.animation_worklist_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_connect",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_add",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_open",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_create_a",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_refresh",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_target",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_view",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_capture_hold",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_resume",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_close",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_sync",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_cancel_sync",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_UL_composition_catalog",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_weapon",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_composition_register_b",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation_composition_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_link_import",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_link_model",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_link_sync",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_export",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_export_cancel",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CharacterDesignerAnimationState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_unity_import",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_play_pause",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_unity_cancel",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_generate",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_cancel",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_import",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_apply",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_restore",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_animation_open_log",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_animation",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.animation"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_auto_weight_selected_bones",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.selected_bone_weights"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_weight_tools",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.selected_bone_weights"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_simplify_bone_collections",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.bone_collections"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_restore_bone_collections",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.bone_collections"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_bone_display",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.bone_display"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_bone_display",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.bone_display"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_bone_color_palette",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.bone_display"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_rig_sections",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_organize_widgets",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.widget_collections"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_copy_weight_to_opposite",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.weight_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_locate_weight_symmetry",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.weight_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_weight_symmetry",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.weight_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_analyze_topology_boundary",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.topology_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_topology_mirror",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.topology_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_topology_mirror_repair",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.topology_symmetry"
+    },
+    {
+      "name": "CharacterDesignerMeshMirrorSettings",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.mesh_mirror_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_mesh_mirror_settings",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.mesh_mirror_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_mesh_mirror_preview",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.mesh_mirror_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_mesh_mirror",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.mesh_mirror_ui"
+    },
+    {
+      "name": "CharacterDesignerRefineSymmetrySettings",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.refine_symmetry_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_analyze_refine_symmetry",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.refine_symmetry_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_select_refine_misaligned",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.refine_symmetry_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_preview_refine_symmetry",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.refine_symmetry_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_refine_symmetry",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.refine_symmetry_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_refine_symmetry",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.refine_symmetry_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_clear_shape_key_selected",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.shape_key_tools"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_shape_key_tools",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.shape_key_tools"
+    },
+    {
+      "name": "CharacterDesignerDeltaState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.delta_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_delta_build_pairs",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.delta_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_delta_clear",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.delta_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_delta_select_group",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.delta_symmetry"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_delta_symmetry",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.delta_symmetry"
+    },
+    {
+      "name": "CharacterDesignerLimbIKState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_analyze",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_build_arm",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_build_leg",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_build_selected",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_build_all",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_remove",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_rebuild",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_fk_switch",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_body_ik_fk_switch",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_foot_controls",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_default_pole_direction",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_auto_align_target",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_reset_target_rotation",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_set_control_shape",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_reset_control_visual",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_direct_preroll_check",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_ik_flip_pole",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_limb_ik",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_limb_ik_target_rotation",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_limb_ik_control_visual",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_limb_ik_direct_preroll",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.limb_ik"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_torso_controls",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.torso_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_spine_ik_fk",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.torso_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_torso_controls",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.torso_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_eye_controls",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.eye_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_root_control",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_controls_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_limb_fk_visuals",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_controls_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_head_neck_visuals",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_controls_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_body_detail_visuals",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_controls_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_upgrade_wrist_rotation",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_controls_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_upgrade_foot_auto_align",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_controls_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_body_setup",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_setup_ui"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_body_original_mode",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_original_mode"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_clear_dress_corrections",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.body_original_mode"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_control_colors",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.control_colors"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_bone_color_palette",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.bone_color_palette"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_bone_color_group",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.bone_color_palette"
+    },
+    {
+      "name": "CharacterDesignerForearmTwistState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_forearm_twist_start",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_forearm_twist_finish",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_forearm_twist_remove",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_forearm_twist_toggle",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_forearm_loop_edit",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist_edit"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_forearm_loop_pick",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist_edit"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_forearm_loop_add",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.forearm_twist_edit"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_forearm_twist",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.forearm_twist"
+    },
+    {
+      "name": "CharacterDesignerSplineIKState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_spline_ik_capture_chain",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_spline_ik_build",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_spline_ik_select_controls",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_spline_ik_enable_rotation_tilt",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_spline_ik_clear_status",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_spline_ik_remove_generated",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_spline_ik_setup",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.spline_ik_setup"
+    },
+    {
+      "name": "CharacterDesignerReferenceState",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.reference_views"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_scan_reference_views",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.reference_views"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_sync_reference_views",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.reference_views"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_reference_visibility",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.reference_views"
+    },
+    {
+      "name": "CHARACTERDESIGNER_OT_clear_reference_views",
+      "registered": true,
+      "actual_same": false,
+      "module": "character_designer.reference_views"
+    },
+    {
+      "name": "CHARACTERDESIGNER_PT_reference_views",
+      "registered": true,
+      "actual_same": true,
+      "module": "character_designer.reference_views"
+    }
+  ],
+  "root_modules": [
+    {
+      "key": "ui_constants",
+      "name": "character_designer.ui_constants",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\ui_constants.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "delta_symmetry",
+      "name": "character_designer.delta_symmetry",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\delta_symmetry.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "shape_key_tools",
+      "name": "character_designer.shape_key_tools",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\shape_key_tools.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "reference_views",
+      "name": "character_designer.reference_views",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\reference_views.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "bone_collections",
+      "name": "character_designer.bone_collections",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\bone_collections.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "limb_ik_fk",
+      "name": "character_designer.limb_ik_fk",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\limb_ik_fk.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "generated_names",
+      "name": "character_designer.generated_names",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\generated_names.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "foot_controls",
+      "name": "character_designer.foot_controls",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\foot_controls.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "torso_controls",
+      "name": "character_designer.torso_controls",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\torso_controls.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "eye_controls",
+      "name": "character_designer.eye_controls",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\eye_controls.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "spine_ik_fk",
+      "name": "character_designer.spine_ik_fk",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\spine_ik_fk.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "root_control",
+      "name": "character_designer.root_control",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\root_control.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "limb_fk_visuals",
+      "name": "character_designer.limb_fk_visuals",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\limb_fk_visuals.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "control_colors",
+      "name": "character_designer.control_colors",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\control_colors.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "limb_ik",
+      "name": "character_designer.limb_ik",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\limb_ik.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "spline_ik_setup",
+      "name": "character_designer.spline_ik_setup",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\spline_ik_setup.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "selected_bone_weights",
+      "name": "character_designer.selected_bone_weights",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\selected_bone_weights.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "character_setup",
+      "name": "character_designer.character_setup",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\character_setup.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "unity_material_match",
+      "name": "character_designer.unity_material_match",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_material_match.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "unity_material_match_ui",
+      "name": "character_designer.unity_material_match_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_material_match_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "unity_export_ui",
+      "name": "character_designer.unity_export_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_export_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_motion_lifecycle",
+      "name": "character_designer.hair_motion_lifecycle",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_motion_lifecycle.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_bones_rig",
+      "name": "character_designer.hair_bones_rig",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_bones_rig.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "skirt_topology",
+      "name": "character_designer.skirt_topology",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\skirt_topology.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "skirt_rig",
+      "name": "character_designer.skirt_rig",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\skirt_rig.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "bone_display",
+      "name": "character_designer.bone_display",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\bone_display.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "widget_collections",
+      "name": "character_designer.widget_collections",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\widget_collections.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "bone_display_sync",
+      "name": "character_designer.bone_display_sync",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\bone_display_sync.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "torso_ui",
+      "name": "character_designer.torso_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\torso_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "eye_ui",
+      "name": "character_designer.eye_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\eye_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "body_setup_ui",
+      "name": "character_designer.body_setup_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\body_setup_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "control_pose_assets",
+      "name": "character_designer.control_pose_assets",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\control_pose_assets.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "skirt_original_mode",
+      "name": "character_designer.skirt_original_mode",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\skirt_original_mode.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "body_original_mode",
+      "name": "character_designer.body_original_mode",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\body_original_mode.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "body_controls_ui",
+      "name": "character_designer.body_controls_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\body_controls_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "bone_color_palette",
+      "name": "character_designer.bone_color_palette",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\bone_color_palette.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_bones_topology",
+      "name": "character_designer.hair_bones_topology",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_bones_topology.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_bones",
+      "name": "character_designer.hair_bones",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_bones.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_motion_profiles",
+      "name": "character_designer.hair_motion_profiles",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_motion_profiles.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_strand_registry",
+      "name": "character_designer.hair_strand_registry",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_strand_registry.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_motion_ui",
+      "name": "character_designer.hair_motion_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_motion_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "hair_wiggle_adapter",
+      "name": "character_designer.hair_wiggle_adapter",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\hair_wiggle_adapter.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "skirt_motion_ui",
+      "name": "character_designer.skirt_motion_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\skirt_motion_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "skirt",
+      "name": "character_designer.skirt",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\skirt.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "skirt_wiggle",
+      "name": "character_designer.skirt_wiggle",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\skirt_wiggle.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "skirt_wiggle_ui",
+      "name": "character_designer.skirt_wiggle_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\skirt_wiggle_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_runtime",
+      "name": "character_designer.animation_runtime",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_runtime.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation",
+      "name": "character_designer.animation",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_original_inputs_ui",
+      "name": "character_designer.animation_original_inputs_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_original_inputs_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_worklist_ui",
+      "name": "character_designer.animation_worklist_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_worklist_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_composition_ui",
+      "name": "character_designer.animation_composition_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_composition_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_composition_contract",
+      "name": "character_designer.animation_composition_contract",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_composition_contract.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_composition",
+      "name": "character_designer.animation_composition",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_composition.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_rigging_contract",
+      "name": "character_designer.animation_rigging_contract",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_rigging_contract.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_worklist_fingerprint",
+      "name": "character_designer.animation_worklist_fingerprint",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_worklist_fingerprint.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "animation_retarget",
+      "name": "character_designer.animation_retarget",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_retarget.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "unity_animation",
+      "name": "character_designer.unity_animation",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_animation.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "unity_animation_rigging",
+      "name": "character_designer.unity_animation_rigging",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_animation_rigging.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "weight_symmetry",
+      "name": "character_designer.weight_symmetry",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\weight_symmetry.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "curve_tools",
+      "name": "character_designer.curve_tools",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\curve_tools.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "topology_symmetry",
+      "name": "character_designer.topology_symmetry",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\topology_symmetry.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "mesh_mirror_match",
+      "name": "character_designer.mesh_mirror_match",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\mesh_mirror_match.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "mesh_mirror",
+      "name": "character_designer.mesh_mirror",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\mesh_mirror.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "mesh_mirror_ui",
+      "name": "character_designer.mesh_mirror_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\mesh_mirror_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "symmetry_pairs",
+      "name": "character_designer.symmetry_pairs",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\symmetry_pairs.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "native_symmetry_pairs",
+      "name": "character_designer.native_symmetry_pairs",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\native_symmetry_pairs.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "refine_symmetry",
+      "name": "character_designer.refine_symmetry",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\refine_symmetry.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "refine_symmetry_ui",
+      "name": "character_designer.refine_symmetry_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\refine_symmetry_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_original_inventory",
+      "name": "character_designer.forearm_original_inventory",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_original_inventory.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_twist_math",
+      "name": "character_designer.forearm_twist_math",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist_math.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_twist_topology",
+      "name": "character_designer.forearm_twist_topology",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist_topology.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_twist_profile",
+      "name": "character_designer.forearm_twist_profile",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist_profile.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_twist_edit",
+      "name": "character_designer.forearm_twist_edit",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist_edit.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_twist_cache",
+      "name": "character_designer.forearm_twist_cache",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist_cache.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_twist_symmetry",
+      "name": "character_designer.forearm_twist_symmetry",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist_symmetry.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "forearm_twist",
+      "name": "character_designer.forearm_twist",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_root",
+      "name": "character_designer.finger_root",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_root.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_symmetry",
+      "name": "character_designer.finger_symmetry",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_symmetry.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_flex",
+      "name": "character_designer.finger_flex",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_flex.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_definition",
+      "name": "character_designer.finger_definition",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_definition.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_range",
+      "name": "character_designer.finger_range",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_range.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_detect",
+      "name": "character_designer.finger_detect",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_detect.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_bank",
+      "name": "character_designer.finger_bank",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bank.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_preview_cache",
+      "name": "character_designer.finger_preview_cache",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_preview_cache.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_definition_ui",
+      "name": "character_designer.finger_definition_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_definition_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_bank_ui",
+      "name": "character_designer.finger_bank_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bank_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_targets",
+      "name": "character_designer.finger_targets",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_targets.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_internal",
+      "name": "character_designer.finger_internal",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_internal.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_chain",
+      "name": "character_designer.finger_chain",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_chain.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_bone_tools",
+      "name": "character_designer.finger_bone_tools",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bone_tools.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_loop_marks",
+      "name": "character_designer.finger_loop_marks",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_loop_marks.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_loop_marks_ui",
+      "name": "character_designer.finger_loop_marks_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_loop_marks_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_bone_mirror",
+      "name": "character_designer.finger_bone_mirror",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bone_mirror.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "finger_bones",
+      "name": "character_designer.finger_bones",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\finger_bones.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "body_calibration",
+      "name": "character_designer.body_calibration",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\body_calibration.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "body_calibration_display",
+      "name": "character_designer.body_calibration_display",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\body_calibration_display.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "body_calibration_ui",
+      "name": "character_designer.body_calibration_ui",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\body_calibration_ui.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "control_pose_capture",
+      "name": "character_designer.control_pose_capture",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\control_pose_capture.py",
+      "same_as_sys": false
+    },
+    {
+      "key": "control_weight_paint",
+      "name": "character_designer.control_weight_paint",
+      "file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\control_weight_paint.py",
+      "same_as_sys": false
+    }
+  ],
+  "functions": {
+    "register": {
+      "module": "character_designer",
+      "code_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+      "globals_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py"
+    },
+    "unregister": {
+      "module": "character_designer",
+      "code_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+      "globals_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py"
+    },
+    "register_rigging_runtime": {
+      "module": "character_designer.unity_animation_rigging",
+      "code_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_animation_rigging.py",
+      "globals_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_animation_rigging.py"
+    },
+    "register_composition_runtime": {
+      "module": "character_designer.animation_composition",
+      "code_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_composition.py",
+      "globals_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_composition.py"
+    },
+    "unregister_rigging_runtime": {
+      "module": "character_designer.unity_animation_rigging",
+      "code_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_animation_rigging.py",
+      "globals_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\unity_animation_rigging.py"
+    }
+  },
+  "dirty": true,
+  "datafilepath": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "read_only": true
+}

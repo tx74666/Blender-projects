@@ -1,0 +1,208 @@
+{
+  "schema": "x.validation.character-composition-loop-tail-source-review/1",
+  "utc": "2026-10-11T09:47:27.802358+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "reviewer": "/root/worklist_review owner Source review",
+  "reviewed_source_changes": {
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_continuation_fixture.py": {
+      "before_sha256": "239a2b187106dc5592da74fc2bae12c5e37df87356ffc233cd50f4646ecef339",
+      "after_sha256": "3afa17c92ee6fd7b461b1e971ade92304edc65c66648a8628d158dee799c70f7"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py": {
+      "before_sha256": "0da0072321607a2e5e31974a8bc4889d04fcb670430b8cebf0dd7443e231f2f9",
+      "after_sha256": "23cda6830ce26421798df44b69b1c680b63536c393c9f22f16631f52818b411c"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py": {
+      "before_sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "after_sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874"
+    }
+  },
+  "source_files": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_continuation_fixture.py",
+      "sha256": "3afa17c92ee6fd7b461b1e971ade92304edc65c66648a8628d158dee799c70f7",
+      "bytes": 39915
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "23cda6830ce26421798df44b69b1c680b63536c393c9f22f16631f52818b411c",
+      "bytes": 66510
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+      "bytes": 50843
+    }
+  ],
+  "native_seam": {
+    "signature": "run(config, report, *, after_numeric=None, cases_runner=None)",
+    "default": "_run_fresh_cases",
+    "inverse_normalized_source_exact": true,
+    "other_function_AST_equal": true,
+    "other_function_count": 21,
+    "default_numeric_function_bodies_unchanged": true
+  },
+  "unchanged_native_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+    "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+    "bytes": 52884
+  },
+  "unchanged_driver_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+    "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+    "bytes": 9852
+  },
+  "bounded_ast_proofs": {
+    "build_character_composition_continuation_fixture.py": {
+      "changed_functions": [
+        "build_tail",
+        "main"
+      ],
+      "added_functions": [],
+      "unchanged_function_count": 3,
+      "prior_source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_continuation_fixture_ec25dc21_before_native_frame_precision.py",
+        "sha256": "ec25dc21856d27d7b785fa58c2b78e8e8009ad96d68381c17b325a14d206f112",
+        "bytes": 33029
+      },
+      "source_syntax_compile_passed": true
+    },
+    "run_character_composition_first_stage_continuation.py": {
+      "changed_functions": [
+        "validate_delta",
+        "physical_tail",
+        "admit",
+        "run"
+      ],
+      "added_functions": [
+        "historical_pin",
+        "range_projection"
+      ],
+      "unchanged_function_count": 8,
+      "prior_source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_first_stage_continuation_af08e593_before_native_frame_precision.py",
+        "sha256": "af08e593e350646a0055cb689641631c08e111015a61219b713a45a14d441435",
+        "bytes": 57213
+      },
+      "source_syntax_compile_passed": true
+    }
+  },
+  "operator_owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_loop_background_undo_checkpoint_source_report_a89ffd1a.json",
+    "sha256": "e5ca6468fe0594ef53762535b208ea9f8ff2c69e0943ab5a1090e387c13b7a47",
+    "bytes": 8718
+  },
+  "operator_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_loop_background_undo_checkpoint_peer_source_review_a89ffd1a.json",
+    "sha256": "4f1393844ac0ec1af4da6a22420f40b7c9f84d9b9ed3072df50fc1f4a7d80142",
+    "bytes": 5151
+  },
+  "preserved_previous_owner_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14_short_loop_tail_owner_source_review_af08e593.json",
+    "sha256": "f2a09b3beca9a502e4d821aecce0a2c4a13a6408d9cbc4bbfffba06e9d0ccc10",
+    "bytes": 8717
+  },
+  "preserved_previous_peer_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14_short_loop_tail_peer_source_review_af08e593.json",
+    "sha256": "a0bb2c6cec35240ed5da80f4d3a6e2761e057b6522565d37fa378266a607036c",
+    "bytes": 15674
+  },
+  "range_fix_projection_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_native_frame_precision_projection_receipt_12_13.json",
+    "sha256": "001311420fbe4f255ed18b4fe5fb69680f2f7048d0cbe9eaee8068f1f68e34bc",
+    "bytes": 58562
+  },
+  "independent_projection_byte_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_frame_precision_projection_peer_00131142.json",
+    "sha256": "a37ee5b9b46200b513513405cfdd52b8957b9df838ba05a22c640fecacd38d33",
+    "bytes": 242612
+  },
+  "latest_failure_readback": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n14_natural_failure_readback_43b9cf86.json",
+    "sha256": "829c2758f1e7b33e52ed46571891a55d2dc31313a9816fc9cb951f607e459488",
+    "bytes": 366242
+  },
+  "original_serializer_projection_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_projection_receipt_11_12.json",
+    "sha256": "cbf7528f2c014389ba3b4d29adc359e7dd89ec25e460b5cf51674f34ef8145cb",
+    "bytes": 4375
+  },
+  "shared_range_checker": {
+    "api": "range_projection(admission, fixture=None) -> full receipt dict or None; historical_pin(row, range_fix=None) -> verified Path",
+    "source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "23cda6830ce26421798df44b69b1c680b63536c393c9f22f16631f52818b411c",
+      "bytes": 66510
+    },
+    "source_stage_call": "Producer loads only exact owner/peer-pinned pure stdlib module; calls only range_projection. No run/admit/native/acceptance function invocation.",
+    "range_fix_delta_fields": [
+      "changed_functions",
+      "previous_projection",
+      "projection",
+      "timing_admission_only"
+    ],
+    "original_serializer_facts_retained": true,
+    "superseded_canonical_2dd_verified_only_by_immutable_runtime11_leaf": true,
+    "one_guard_float32_block_full_inverse_exporter_ast_equal": true,
+    "matrix_curve_sampling_hash_isolation_worker_unchanged": true
+  },
+  "tail_scope": {
+    "schema": "x.validation.character-composition-physical-tail-reuse/2",
+    "exact_fields": 12,
+    "numeric_cases_inherited": 12,
+    "numeric_cases_reexecuted": 0,
+    "fresh_isolated_variants_inherited": 2,
+    "fresh_isolated_variants_executed": 0,
+    "physical_source_publications_inherited": 2,
+    "physical_source_publications_to_execute": 1,
+    "first_two_source_reexport_planned": false,
+    "current_UI_pose_adds_after_real_Loop_only": 2,
+    "current_UI_packet_rest_native217_association_fingerprint_proofs_required": true,
+    "current_UI_numeric_resampling_or_isolated_sync_planned": false,
+    "background_operator_undo_requested": false,
+    "headful_operator_undo_requested": true,
+    "durable_pre_native_operator_checkpoint_required": true,
+    "native_operator_finished_and_positive_finite_quaternion_delta_required": true,
+    "old_failed_reports_preserved": true,
+    "product_340_files_unchanged": false,
+    "changed_product_leaf": "animation_composition_export.py",
+    "changed_product_function": "_validate_action_timing",
+    "embedded_Unity_8_unchanged": true,
+    "timing_admission_only": true,
+    "n14_completed": false,
+    "n14_natural_exit_code": 1,
+    "n14_source_input_count": 964,
+    "n14_real_FINISHED_rotation_count": 1,
+    "n14_real_keyframe_insert_count": 3,
+    "n14_full_outer_recovery_completed": false,
+    "n15_success_or_grant_claimed": false
+  },
+  "source_methods": {
+    "syntax_compile_source_count": 2,
+    "runtime_or_acceptance_functions_called": 0,
+    "candidate_module_imported": false,
+    "native_or_resource_calls": 0,
+    "tests_run": 0,
+    "projection_680_leaves_rerehashed_by_owner": false,
+    "reuse_of_actual_pinned_projection_peer": true,
+    "original_native_seam_literal_inverse_verified": true
+  },
+  "unchanged_timing_evidence": {
+    "source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+      "bytes": 50843
+    },
+    "owner_reported_focused_tests_passed": 18,
+    "peer_source_review_reused": true,
+    "tests_rerun_by_this_owner": 0
+  },
+  "limits": [
+    "SOURCE-only readiness does not authorize config generation or a native launch; producer/continuation have not been invoked.",
+    "All previous attempts and SOURCE snapshots remain immutable. n14 real keys and scope restoration do not imply Loop export, seed, full recovery or completion.",
+    "Actual fresh Loop authoring, foreground proof, worker publication, subsequent two real Pose UI imports, seed and exact outer recovery remain mandatory.",
+    "Original serializer-only delta is historical; the separate range-fix proof changes one timing-admission function and does not resample or retime sealed packets."
+  ]
+}

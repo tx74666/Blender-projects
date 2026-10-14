@@ -1,0 +1,86 @@
+{
+  "schema": "x.validation.original20-controls-clone/1",
+  "completed": false,
+  "source_inputs": {
+    "source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_controls.py",
+      "sha256": "cc1d75a4fdf0957661beab2080f897d9a04a95bca6f7327330d30ed266ad1d49",
+      "bytes": 27822
+    },
+    "protection_helper": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_cosha_control_round.py",
+      "sha256": "7098c3b20a5a115423913ce91268cc4fd9a57adab9973c9c6c2000e2afd2d468",
+      "bytes": 42400
+    },
+    "protection_inherited_helper": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_round.py",
+      "sha256": "cfaa6dc580d69dbdc7c752078752f2a3cbe89f33ec02a60c5186a196fba4cdcb",
+      "bytes": 45017
+    },
+    "snapshot_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z\\artist_latest_snapshot_receipt.json",
+      "sha256": "99b08426346d77908dbed93e518bc0e2370701a0e8ee906df7d36cb072bb2949",
+      "bytes": 6210450
+    },
+    "seed": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z\\artist_latest_before_rigging.blend",
+      "sha256": "1c1984156b3d7637596382ff12359f3460f51b4b6216cd088f9dd97c1cd4bf41",
+      "bytes": 34688918
+    },
+    "prepared_report": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\rigging-prepare\\22e9216461994547ba6f06c17ba6d108\\report.json",
+      "sha256": "401b00d209b7806fa3c44c06fdf7e643256c64009d2abda45495a8b1cc0d4ac6",
+      "bytes": 5230
+    },
+    "clock_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_04\\original_legacy_base_clock_report.json",
+      "sha256": "9ef154439cba0e5523c5e9100ccf7584b624e76b5a8554426a78fe5a50f5a81c",
+      "bytes": 169668
+    },
+    "clock_exit_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_ORIGINAL_CLOCK_202610120859Z.json",
+      "sha256": "dd7c4aa296e2156c921f6ee04bff956e4e3af7c8adc98ee10ea7b30b56aa3f06",
+      "bytes": 10372
+    },
+    "package_manifest": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_7398435c\\python_projection.json",
+      "sha256": "3ff8b790d8f585daf1490d36088118db0bb549fd499b3c698652f76f41f4c730",
+      "bytes": 21061
+    },
+    "protected_artist": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+      "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+      "bytes": 34682050
+    },
+    "preservation_oracle": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\validation_preservation.py",
+      "sha256": "260b2bc581df220ea861d18f6b369d104561d5a3d119e21e5e52e9e230219a5d",
+      "bytes": 24274
+    }
+  },
+  "native_execution_performed": true,
+  "package_manifest_version": "0.77.26",
+  "package_file_count": 190,
+  "artist_opened": false,
+  "artist_written": false,
+  "original_artist_integration_verified": false,
+  "ordinary_Attach_or_FBX_or_fresh_Rig_setup_performed": false,
+  "Target_Hint_edit_or_Key_or_Undo_Redo_performed": false,
+  "Undo_Redo_performed": false,
+  "public_UI_operators_executed": false,
+  "deferred_public_UI": [
+    "character_designer.original_inputs_attach",
+    "character_designer.original_inputs_edit",
+    "character_designer.original_inputs_save",
+    "character_designer.original_inputs_body_view",
+    "character_designer.original_inputs_publish",
+    "character_designer.original_inputs_close"
+  ],
+  "Unity_Apply_verified": false,
+  "world_model_equivalence": "Unknown",
+  "natural_exit_verified": false,
+  "scope": "Exact captured Input20, one live Target edit/public Save and exact restore, read-only Body references, owned clone save/reopen then actual controls-only publication.",
+  "error": "RuntimeError: The SaveCopy did not retain the original Action inventory; no reconstruction is allowed.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_controls.py\", line 208, in main\n    probe = protection(helper, package, bpy, ctx, rig, receipt, oracle, report)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_controls.py\", line 96, in protection\n    probe.check_loaded_snapshot(ctx, rig)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_cosha_control_round.py\", line 223, in check_loaded_snapshot\n    require(len(actions) == len(before['actions']) and set(actions) == {digest(self.id(a)) for a in self.bpy.data.actions},\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            'The SaveCopy did not retain the original Action inventory; no reconstruction is allowed.')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_round.py\", line 24, in require\n    raise RuntimeError(text)\nRuntimeError: The SaveCopy did not retain the original Action inventory; no reconstruction is allowed.\n",
+  "natural_exit_external_retained_handle_readback_required": true
+}

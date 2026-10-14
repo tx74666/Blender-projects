@@ -1,0 +1,159 @@
+{
+  "schema": "x.validation.character-composition-current-ui-adapter-source-owner/1",
+  "utc": "2026-10-11T14:00:14.905445+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "build_character_composition_publication_recovery_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "d77db89939b00678bb11580e89e665d1a964658974575edd18d6c014be25cad6",
+      "bytes": 48853
+    },
+    "audit_character_composition_publication_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    }
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_publication_recovery_ui_fixture_77564114_before_context_catalog.py",
+    "sha256": "775641147dd7ad12cdd68300cee3720e03aa8e6668199febcf2f74bb6406ed9f",
+    "bytes": 25547
+  },
+  "previous_context_draft": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_publication_recovery_ui_fixture_11a54b43_before_current_runtime.py",
+    "sha256": "11a54b433a0af64cb2c36916c1e6733cd3a1fe505ae825043f5a721051778eb9",
+    "bytes": 47134
+  },
+  "required_context_sources": {
+    "composition_session_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "91255f9fe392a284fac332d8135e3deaa82b560b57b5a72a7e4f4eceb9dd604e",
+      "bytes": 58352
+    },
+    "run_character_composition_ui_fixture": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "a88c413ab89be39bcdf675228170a6f1439734c5b818651ccffcb956ffa5ec8f",
+      "bytes": 34229
+    },
+    "composition_ui_checkpoints": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "98325ddfc8c7903bc0d11f2dd78a8b62cf9457a2fc6d398ab06c6ff524a51be7",
+      "bytes": 28709
+    },
+    "run_character_composition_raise_stage": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+      "bytes": 24737
+    }
+  },
+  "delta": {
+    "changed_existing_functions": [
+      "main"
+    ],
+    "unchanged_existing_functions": [
+      "require",
+      "api",
+      "frozen09_record",
+      "freeze",
+      "frozen_api",
+      "build"
+    ],
+    "added_functions": [
+      "build_current",
+      "context_sources",
+      "freeze_context",
+      "pure_workspace"
+    ],
+    "old_freeze_and_build_bodies_preserved": true,
+    "new_stdlib_imports": [
+      "contextlib.contextmanager",
+      "sys",
+      "types"
+    ]
+  },
+  "freeze_contract": {
+    "new_directory": "tools_headful_11",
+    "existing_tools_headful_10_sha256": "a594751f08f7266c17396a9bc104e451b2b627c7bd63e16f856347559dbd365f",
+    "names_retained": 12,
+    "replaced_sources": [
+      "composition_session_acceptance",
+      "composition_ui_checkpoints",
+      "run_character_composition_raise_stage",
+      "run_character_composition_ui_fixture"
+    ],
+    "unchanged_sources": 8,
+    "old_raise_author_slot_kept_unused": true,
+    "source_manifest_schema": "x.validation.character-composition-ui-owned-context-sources/1",
+    "source_manifest_exact_tool_fields": [
+      "source",
+      "owner_review",
+      "peer_review"
+    ],
+    "each_source_exact_owner_and_independent_peer_required": true,
+    "historical_source_ledgers_replayed": false,
+    "exclusive_new_directory_and_file_writes": true
+  },
+  "build_contract": {
+    "new_attempt": "u3",
+    "source_ancestry_attempt": "u2",
+    "source_ancestry_is_UI_success": false,
+    "u2_source_fixture_sha256": "d9f6beae5425d2dbea55a1ab51e216f24ad367cf7019c35571e6f8254c5fcf30",
+    "u2_source_receipt_sha256": "17159e00f7cd3b06ba9319ee220826b9378b2b4c2e6c1f7123b5bfd6510e73ea",
+    "historical_admitted_inputs_rehashed": false,
+    "audit_immutable_inputs_rehashed": false,
+    "new_ledger_only_currently_admitted_inputs": true,
+    "historical_runtime13_manifest_sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+    "historical_runtime_bridge_uses_exact_runner_helper": true,
+    "optional_current_runtime_cli": [
+      "--current-runtime",
+      "--current-runtime-sha256"
+    ],
+    "current_runtime_validation": "release_projection.load_source: module, version, source_root, full167 file inventory and hashes",
+    "current_runtime_only_existing_config_fields_changed": [
+      "addonPackage",
+      "runtimeManifest",
+      "runtimeManifestSha256"
+    ],
+    "new_config_fields": [
+      "currentWorkspace",
+      "historicalWorkspaceSnapshot",
+      "sourceCompletionClosure",
+      "sourceCompletedFileAudit",
+      "preparedRaiseWorkItemId"
+    ],
+    "preparedRaiseWorkItemId_None": "Exact runner core catalog policy: all original ready routes/specs retained; zero new prepared Sources.",
+    "real_Raise_id": "Exact Stage catalog extension: only actual Raise plus its readonly A companion.",
+    "pure_workspace_load": "Manifest-pinned workspace plus composition_contract in temporary owned stdlib namespace; no add-on __init__; namespace removed in finally.",
+    "prepared_Source_checks": [
+      "full target/model/workspace identity",
+      "all original sealed route fields and complete composition DTO",
+      "current Source packet SHA and sealed composition",
+      "actual Link route/source package/link ID/target/model/full composition",
+      "unique readonly A companion and exact reference packet/owner",
+      "reference/weapon/model actual file pins"
+    ],
+    "no_resampling_or_export_or_native_reexecution": true,
+    "all_new_output_bytes_encoded_before_first_write": true,
+    "failed_UI_grant_reusable": false,
+    "gui_launch_permission_inferred": false
+  },
+  "validation": {
+    "ast_and_in_memory_compile_passed": true,
+    "assert_nodes": 0,
+    "target_imports": 0,
+    "source_helper_invocations": 0,
+    "tests_executed": 0,
+    "native_calls": 0,
+    "shared_workspace_reads": 0,
+    "freeze_generated": false,
+    "fixture_generated": false
+  },
+  "limits": [
+    "Source-only review; no generator, audit, native or GUI was run.",
+    "Four independent Source review pairs and actual Parent current workspace SHA are mandatory before freeze/build.",
+    "Current runtime CLI pin must be supplied from the separately reviewed new product projection for actual UI execution.",
+    "Historical u1/u2 failures and n16 completion retain their original statuses and bytes."
+  ]
+}

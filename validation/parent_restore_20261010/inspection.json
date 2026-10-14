@@ -1,0 +1,463 @@
+{
+  "scene": "Scene",
+  "filepath": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "mode": "POSE",
+  "frame": 46,
+  "active": "CoshaRig",
+  "selected": [],
+  "dirty": true,
+  "rig_world": [
+    [
+      0.782315731048584,
+      0.0,
+      0.0,
+      4.9632518539510784e-08
+    ],
+    [
+      0.0,
+      0.782315731048584,
+      0.0,
+      0.02721264585852623
+    ],
+    [
+      0.0,
+      0.0,
+      0.782315731048584,
+      0.1756228804588318
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "meshes": [
+    {
+      "name": "Cosha",
+      "parent": "CoshaRig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "library": null,
+      "collections": [
+        "Main"
+      ],
+      "vertex_count": 3658,
+      "vertex_groups": 93,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "target": "CoshaRig",
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Subdivision",
+          "type": "SUBSURF",
+          "target": null,
+          "viewport": true,
+          "render": true
+        }
+      ],
+      "constraints": [],
+      "removed_binding": false,
+      "binding_owner": null,
+      "parent_metadata": {},
+      "action": null,
+      "world": [
+        [
+          0.9999999403953552,
+          0.0,
+          0.0,
+          3.552713678800501e-15
+        ],
+        [
+          0.0,
+          0.9999999403953552,
+          0.0,
+          1.862645149230957e-09
+        ],
+        [
+          0.0,
+          0.0,
+          0.9999999403953552,
+          1.5393869876861572
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Clothes",
+      "parent": "CoshaRig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "library": null,
+      "collections": [
+        "Main"
+      ],
+      "vertex_count": 101,
+      "vertex_groups": 56,
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "target": null,
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "target": "CoshaRig",
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Subdivision",
+          "type": "SUBSURF",
+          "target": null,
+          "viewport": true,
+          "render": true
+        }
+      ],
+      "constraints": [],
+      "removed_binding": false,
+      "binding_owner": "CoshaRig",
+      "parent_metadata": {
+        "character_designer_quick_binding_parent_v1": "{\"version\":1,\"had_parent\":false,\"parent_type\":\"OBJECT\",\"parent_bone\":\"\",\"parent_inverse\":[[1.0,0.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.0,1.0]]}",
+        "character_designer_quick_binding_parent_rig": "<bpy_struct, Object(\"CoshaRig\") at 0x000001E3EFC54D90>"
+      },
+      "action": null,
+      "world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          3.552713678800501e-15
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.862645149230957e-09
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.5393871068954468
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Dress",
+      "parent": "CoshaRig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "library": null,
+      "collections": [
+        "Main"
+      ],
+      "vertex_count": 800,
+      "vertex_groups": 33,
+      "modifiers": [
+        {
+          "name": "SK_Dress_857c5a_Skin",
+          "type": "ARMATURE",
+          "target": "CoshaRig",
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Subdivision",
+          "type": "SUBSURF",
+          "target": null,
+          "viewport": true,
+          "render": true
+        }
+      ],
+      "constraints": [],
+      "removed_binding": false,
+      "binding_owner": null,
+      "parent_metadata": {},
+      "action": null,
+      "world": [
+        [
+          0.7299652099609375,
+          7.701183745887578e-15,
+          1.0429209206582347e-14,
+          -4.263256414560601e-14
+        ],
+        [
+          1.7347375367237315e-14,
+          0.7299649715423584,
+          6.534190077900348e-08,
+          0.10510388016700745
+        ],
+        [
+          -1.0435306149736683e-14,
+          7.621921582767754e-08,
+          0.7299649715423584,
+          1.1820251941680908
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Hair",
+      "parent": "CoshaRig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "library": null,
+      "collections": [
+        "Main"
+      ],
+      "vertex_count": 5463,
+      "vertex_groups": 129,
+      "modifiers": [
+        {
+          "name": "Hair Armature",
+          "type": "ARMATURE",
+          "target": "CoshaRig",
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Smooth by Angle",
+          "type": "NODES",
+          "target": null,
+          "viewport": true,
+          "render": true
+        }
+      ],
+      "constraints": [],
+      "removed_binding": false,
+      "binding_owner": null,
+      "parent_metadata": {},
+      "action": null,
+      "world": [
+        [
+          0.02720828913152218,
+          0.0,
+          0.0,
+          3.552713678800501e-15
+        ],
+        [
+          0.0,
+          0.02720828913152218,
+          0.0,
+          0.0005216170684434474
+        ],
+        [
+          0.0,
+          0.0,
+          0.02720828913152218,
+          1.6558467149734497
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Jacket",
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "library": null,
+      "collections": [
+        "Main"
+      ],
+      "vertex_count": 139,
+      "vertex_groups": 0,
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "target": null,
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Subdivision",
+          "type": "SUBSURF",
+          "target": null,
+          "viewport": true,
+          "render": true
+        }
+      ],
+      "constraints": [],
+      "removed_binding": false,
+      "binding_owner": null,
+      "parent_metadata": {},
+      "action": null,
+      "world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.05856012925505638
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.5393871068954468
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Shoes",
+      "parent": null,
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "library": null,
+      "collections": [
+        "Main"
+      ],
+      "vertex_count": 28177,
+      "vertex_groups": 76,
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "target": null,
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "target": "CoshaRig",
+          "viewport": false,
+          "render": true
+        }
+      ],
+      "constraints": [],
+      "removed_binding": false,
+      "binding_owner": "CoshaRig",
+      "parent_metadata": {},
+      "action": "ShoesAction",
+      "world": [
+        [
+          -1.8545172508765972e-08,
+          -0.6000000238418579,
+          -1.8545172508765972e-08,
+          4.963252564493814e-08
+        ],
+        [
+          0.4242640733718872,
+          -2.622683403785686e-08,
+          0.4242640733718872,
+          0.02721264213323593
+        ],
+        [
+          -0.4242640733718872,
+          0.0,
+          0.4242640733718872,
+          0.1756228804588318
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "Stocking",
+      "parent": "CoshaRig",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "library": null,
+      "collections": [
+        "Main"
+      ],
+      "vertex_count": 528,
+      "vertex_groups": 56,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "target": "CoshaRig",
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Subdivision",
+          "type": "SUBSURF",
+          "target": null,
+          "viewport": true,
+          "render": true
+        }
+      ],
+      "constraints": [],
+      "removed_binding": false,
+      "binding_owner": "CoshaRig",
+      "parent_metadata": {
+        "character_designer_quick_binding_parent_v1": "{\"version\":1,\"had_parent\":false,\"parent_type\":\"OBJECT\",\"parent_bone\":\"\",\"parent_inverse\":[[1.0,0.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.0,1.0]]}",
+        "character_designer_quick_binding_parent_rig": "<bpy_struct, Object(\"CoshaRig\") at 0x000001E3EFC54D90>"
+      },
+      "action": null,
+      "world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          3.552713678800501e-15
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.862645149230957e-09
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          1.5393871068954468
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

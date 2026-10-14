@@ -1,0 +1,32 @@
+{
+  "schema": "x.validation.original20-source-scope-peer/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "77397546086392365428bcb3d87a48139aa2f36fb540e4479ec21d86109d4faf",
+      "bytes": 108776
+    }
+  },
+  "review_scope": "Actual final 77397546 source review returned through collaboration: parent Character and its independent agent; Root also read exact final deferred payload skip delta. Recorded faithfully by package agent, not a new review.",
+  "review_facts": [
+    "Final same-payload failure remains fail-closed; deferred record no longer owns the Rig after Activate/Close and is skipped without removing current cache or inserting a stale error.",
+    "Strict identity/matrix/file admission remains in place.",
+    "Native scene acceptance remains pending; the actual unit receipt is reused at its stated .33 version at execution."
+  ],
+  "review_attribution": {
+    "implementation_owner": "/root/forearm_review",
+    "relayed_by": "/root",
+    "original_parent_Character_thread": "01a12305-aada-7273-b72c-54a41aad77e4",
+    "formal_independent_review_file_provided": false,
+    "review_performed_by_package_agent": false
+  },
+  "targeted_pure": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/lifecycle_unit_07734_03/portable_contracts_receipt.json",
+    "sha256": "bf929b77c0a553858a54e1b3098ae748ff0a0cf3ec28e8d8318b690d02613c49",
+    "bytes": 17244
+  },
+  "native_acceptance": false
+}

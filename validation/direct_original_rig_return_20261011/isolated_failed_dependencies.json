@@ -1,0 +1,109 @@
+{
+  "schema": "x.validation.direct-original-rig-return/1",
+  "completed": false,
+  "input": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\artist_before_direct_return.blend",
+  "input_sha256": "079d12824d4fc75a2abba00f7bf68d606e07ab558634c0f430acfe1e4c475337",
+  "packet": "D:\\Blender\\Projects\\Character\\Animation\\UnityExports\\CharacterTuning\\20261009-233830-d8fa2427ba96\\Cosha_Walk_N.cdanim.json",
+  "packet_sha256": "e54537cb65ab6b0365b42af0236f645cc0f009e1c10b056d66a13b87e7669c02",
+  "operation": "Disposable backup only; no artist or Unity mutations.",
+  "runtime": {
+    "blender": "5.2.0 LTS",
+    "addon": [
+      0,
+      77,
+      24
+    ],
+    "addon_path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\__init__.py",
+    "module_sha256": {
+      "character_designer.unity_animation": "44c6014ac8c6c46ef4864aa0560d93375f10b99aa0c5d3276122882304ed493f",
+      "character_designer.animation_worklist": "a8ae5490ff75b345a097d640b593c066f6c7b7d32138e050366c608bd0be24fe",
+      "character_designer.animation_worklist_target": "23de4960b0f24cfc89ac26c95eac58c3908bf9537b743d09f37c51eb4abcdb06",
+      "character_designer.animation_worklist_fingerprint": "74a49632682def0ec598cb819018d67f217a032bd4253d8a88af50cbf7d63193"
+    }
+  },
+  "isolated_source_cache_root": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\isolated_datafiles",
+  "existing_worklists": [
+    {
+      "scene": "Animation Worklist · Cosha",
+      "item": "Walk_N",
+      "item_id": "8069c6d729ea43e1888db9fd07b9d6da",
+      "source_slot": 929201142,
+      "source_proof": {
+        "schema": "character-designer.animation-worklist-fingerprint/1",
+        "fingerprint_known": true,
+        "fingerprint": "",
+        "action_fingerprint": "9358b82f4207b5ba4c5dfb888490d8f667ffbd9d19aa131add04fcd538ff7c7e",
+        "proof_reason": "Complete selected-slot Action content."
+      },
+      "custom_slot": 929201142,
+      "custom_proof": {
+        "schema": "character-designer.animation-worklist-fingerprint/1",
+        "fingerprint_known": true,
+        "fingerprint": "",
+        "action_fingerprint": "9358b82f4207b5ba4c5dfb888490d8f667ffbd9d19aa131add04fcd538ff7c7e",
+        "proof_reason": "Complete selected-slot Action content."
+      },
+      "entire_action_equal": true,
+      "source_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\datafiles\\character_designer\\animation_sources\\d3444e049cfd4afebb343e61e518c768\\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\\8069c6d729ea43e1888db9fd07b9d6da.blend",
+      "source_file_hash": "e5238d1c8bb01cf950c998a0e3dab3f1a2aa54259bf973ae5096a43262664919",
+      "source": "Source · Walk_N",
+      "custom": "Cosha · Walk_N · Custom"
+    }
+  ],
+  "original_assets_before": {
+    "sha256": "a94a10047a9b3d72e25a5ae6b6d23331cc0fe6091da7afb081fe5d5f08926ca3",
+    "component_sha256": {
+      "rest": "e304e6958da8e88ddb4843e02fb91bbb39fd4728dc41c9c6961e54019bd09974",
+      "rig_raw_transform": "8e0052a3dc6a4e6227f408c2a41a2a579b3b0a50f9ca4e67321ec24d9042c43f",
+      "bone_colors_collections_widgets": "97cff5b8e6f57b6e4c85477a333350cf739279da874aa3c2f96c31f0acf6c65a",
+      "collections": "13863761e6c6f5d33214d19bf30c806a48198930e8bd126118c0c83f7a141cf3",
+      "skin_meshes": "244f45e6751cb1005793591339bb36beaeaa4614429feed85feccc51bdba9ed4",
+      "widgets": "62f8492020bf8e346b5806cb2bbc1be9eac088f3e94ff4f3fd1ad67f7e11ceca",
+      "materials": "7178a77d077de3f95352ee29361bb92ab63092aa84c278f4ea67c3fc34ec4d57"
+    },
+    "counts": {
+      "bones": 346,
+      "collections": 5,
+      "skin_meshes": 6,
+      "widgets": 50,
+      "materials": 18
+    },
+    "skin_mesh_summary": {
+      "Cosha": {
+        "vertices": 3658,
+        "shape_keys": 14,
+        "weight_influences": 22900
+      },
+      "Clothes": {
+        "vertices": 101,
+        "shape_keys": 0,
+        "weight_influences": 493
+      },
+      "Stocking": {
+        "vertices": 528,
+        "shape_keys": 0,
+        "weight_influences": 912
+      },
+      "Dress": {
+        "vertices": 800,
+        "shape_keys": 0,
+        "weight_influences": 2440
+      },
+      "Shoes": {
+        "vertices": 28177,
+        "shape_keys": 0,
+        "weight_influences": 91410
+      },
+      "Hair": {
+        "vertices": 5463,
+        "shape_keys": 0,
+        "weight_influences": 8378
+      }
+    }
+  },
+  "error_type": "ImportError",
+  "error": "cannot import name 'skirt_surface' from 'character_designer' (D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\__init__.py)",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\verify_direct_return_isolated.py\", line 243, in main\n    result = target.adopt_main_rig(bpy.context)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\animation_worklist_target.py\", line 383, in adopt_main_rig\n    ua._mapping(rig, packet, context.scene.unit_settings.scale_length)\n    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\unity_animation.py\", line 184, in _mapping\n    controls = build_plan(target, candidates, package=data)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\unity_animation_controls.py\", line 127, in build_plan\n    dress = unity_animation_dress.build_plan(target, names, package=package)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\unity_animation_dress.py\", line 215, in build_plan\n    constraints.update(_manual_graph(source, target, record))\n                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\unity_animation_dress.py\", line 152, in _manual_graph\n    from . import skirt_surface\nImportError: cannot import name 'skirt_surface' from 'character_designer' (D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\__init__.py)\n",
+  "input_file_unchanged": true,
+  "packet_file_unchanged": true
+}

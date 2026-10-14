@@ -1,0 +1,149 @@
+{
+  "agreed_controller_source": {
+    "bytes": 28709,
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+    "sha256": "98325ddfc8c7903bc0d11f2dd78a8b62cf9457a2fc6d398ab06c6ff524a51be7"
+  },
+  "historical_source": {
+    "bytes": 57217,
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_session_acceptance_47cd966e_before_headful_reopen_seams.py",
+    "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3"
+  },
+  "independent_AST": {
+    "added_functions": [],
+    "changed_functions": [
+      "run_steps"
+    ],
+    "failure_handlers_AST_exact": true,
+    "final_preferences_restore_AST_exact": true,
+    "inverse_full_module_AST_equal": true,
+    "unchanged_function_count": 24,
+    "unchanged_functions_AST_and_text": [
+      "_sha",
+      "_require",
+      "_write",
+      "_evidence",
+      "_modules",
+      "_current",
+      "_pose",
+      "_error",
+      "_a_only",
+      "_full_stack",
+      "_c_native_domains",
+      "_edit_a_c_witness",
+      "_view3d",
+      "_work_copy",
+      "_drain",
+      "_checkpoint",
+      "visual_guard",
+      "checkpoint_state",
+      "_pose_hidden",
+      "_show_control",
+      "_weapon_acceptance_steps",
+      "_weapon_acceptance",
+      "_positive_a_edit",
+      "run"
+    ]
+  },
+  "limitations": [
+    "SOURCE_READY only. Actual headful load/Undo/Resume and normal process exit remain pending fresh granted native evidence.",
+    "The preexisting native-transform visibility/finite checks and recovery policy were preserved; this narrow peer does not claim additional native compatibility beyond the reviewed reopen context boundary."
+  ],
+  "native_execution_performed": false,
+  "owner_source_report": {
+    "bytes": 5483,
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_session_reopen_source_owner_91255f9f.json",
+    "sha256": "2d8b6c8f56117000e8f89c67f525376a146583fb1b582c065ae1787000cf113d"
+  },
+  "passed": true,
+  "reviewer": "/root/rig_controls_review",
+  "schema": "x.validation.character-composition-session-reopen-peer-source-review/1",
+  "seams": [
+    {
+      "BG_open_AST_exact": true,
+      "deleted_native_locals": [
+        "context",
+        "saved",
+        "item",
+        "a_item",
+        "session",
+        "_item",
+        "scope",
+        "_scope",
+        "_tracks",
+        "base",
+        "_base_slot",
+        "prior_b_action",
+        "prior_b_source",
+        "prior_action",
+        "ui_context",
+        "selections",
+        "pb",
+        "selection_owner"
+      ],
+      "fields": [
+        "schema",
+        "phase",
+        "path",
+        "sha256",
+        "sceneName"
+      ],
+      "line": 783,
+      "next_statement_fresh_current": true,
+      "no_enclosing_context_manager": true,
+      "path_key": "active",
+      "sha_variable": "active_sha"
+    },
+    {
+      "BG_open_AST_exact": true,
+      "deleted_native_locals": [
+        "context",
+        "saved",
+        "item",
+        "a_item",
+        "session",
+        "_item",
+        "scope",
+        "_scope",
+        "_tracks"
+      ],
+      "fields": [
+        "schema",
+        "phase",
+        "path",
+        "sha256",
+        "sceneName"
+      ],
+      "line": 834,
+      "next_statement_fresh_current": true,
+      "no_enclosing_context_manager": true,
+      "path_key": "closed",
+      "sha_variable": "closed_sha"
+    }
+  ],
+  "source_files": {
+    "composition_session_acceptance.py": {
+      "bytes": 58352,
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "91255f9fe392a284fac332d8135e3deaa82b560b57b5a72a7e4f4eceb9dd604e"
+    }
+  },
+  "source_findings": [
+    "Exactly two five-field plain reopen payloads detach the current actual Scene name and just-saved owned path/full SHA. No native contextmanager encloses either yield; the controller consumes them outside its old override.",
+    "The immediately following _current replaces context/saved/item after each load. Active then revalidates exact session owner/draft/Custom/readonly A before explicit Resume and native Full Stack sampling; closed requires committed B/retained drafts and no implicit Resume.",
+    "Native Action, Worklist row, scopes, tracks, Pose selection and context aliases are deleted before the active seam; the closed seam deletes its reacquired native row/session/scope aliases. Deleted native names are not used after loading until newly assigned or are no longer referenced.",
+    "The session owner remains the original plain owner ID. The one explicitly authorized selection-loop rename to selection_owner prevents shadowing; slots, native hashes and plain prior-pose/timing evidence remain intact.",
+    "Both synchronous BG open statements remain AST-identical. The unchanged original scope/A-readonly, C Edit A multi-seek witness, native Undo/Redo, Close/restoration, positive A lower-motion/upper-B protection and failed-Sync/publication protections were not relaxed."
+  ],
+  "source_only": true,
+  "validation": {
+    "code_edits": 0,
+    "helper_calls": 0,
+    "in_memory_source_compile_count": 1,
+    "native_SDK_GUI_execution": 0,
+    "resource_process_queries": 0,
+    "shared_workspace_JSON_reads": 0,
+    "target_imports": 0,
+    "tests_run": 0
+  }
+}

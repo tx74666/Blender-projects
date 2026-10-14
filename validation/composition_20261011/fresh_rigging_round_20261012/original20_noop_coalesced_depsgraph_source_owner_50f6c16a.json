@@ -1,0 +1,79 @@
+{
+  "schema": "x.validation.character-designer-original20-noop-coalesced-depsgraph-source-owner/1",
+  "status": "SourceReadyNativePending",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "50f6c16ac35424ae131990be363a37500419ccc7716781b2622bdbe2032d67f3",
+      "bytes": 104041
+    }
+  },
+  "test_source_files": {
+    "test_animation_rigging_recovery.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_recovery.py",
+      "sha256": "3cc8cb27b28d83631316aa7b2982c39517a9aa668e6dd6a8a848d2131e780b2b",
+      "bytes": 38854
+    }
+  },
+  "previous_owner": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_Forearm_final_mode_source_owner_d6851b82.json",
+    "sha256": "ca19bde5ddfa5df4f0f88a79b66405239def4bda1f5508bc1dd24f568885b0e1",
+    "bytes": 5754
+  },
+  "original_sources": {
+    "unity_animation_rigging.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unity_animation_rigging_d6851b82_before_noop_coalesced_depsgraph.py",
+      "sha256": "d6851b82169497a628439ae4b8be05954bfd101c952dcbbdff557c8e548c0038",
+      "bytes": 102410
+    },
+    "test_animation_rigging_recovery.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/test_animation_rigging_recovery_08d9748e_before_noop_coalesced_depsgraph.py",
+      "sha256": "08d9748e0ea7a49cbcb81080bafa9e9560d453c0fc10c0c3e8d3c858115e29af",
+      "bytes": 32830
+    }
+  },
+  "changed_functions": [
+    "_restore_preview_mode",
+    "_depsgraph"
+  ],
+  "source_readback": {
+    "two_function_raw_inverse_matches_D685": true,
+    "all_other_native_bytes_exact": true,
+    "original_13_test_methods_and_all_prior_test_bytes_exact": true,
+    "one_test_method_added": "test_actual_depsgraph_noop_and_changed_parent_coalesce_final_forearm_refresh",
+    "official_forearm_source_unchanged": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist.py",
+      "sha256": "e8403be47320e95b7b40955e79b89d27e4ac7e39f3565f3fe7cabfe529a2cb14",
+      "bytes": 96726
+    }
+  },
+  "behavior": {
+    "stable_noop": "Validated session/inventory; no enabled limb needs mode != IK and Left parent delta <=1e-7: no Original20 Forearm scope or refresh.",
+    "changed_callback": "Original20 mode or Left parent work uses one outer official defer_runtime scope; nested mode restoration and the original parent recomputation/Target write complete before final refresh.",
+    "mode_policy": "Existing non-IK handling including BLEND retained; constraint/Target channel weights and threshold unchanged.",
+    "ordinary": "Existing callback sequence under nullcontext; no Original20 Forearm import.",
+    "guards": "Original current/session ownership, FK-before-apply, Body/asset/oracle and exception/finally guards unchanged."
+  },
+  "new_test_scope": [
+    "Actual extracted _restore_preview_mode and _depsgraph; real official defer_runtime/update_runtime, fake geometry observation only.",
+    "Stable IK/matrix no-op and <=1e-7 threshold; non-IK mode-only; mode plus dynamic parent recomputation; parent-only; stable repeat; ordinary callback.",
+    "One final Forearm observation after final mode/Target writes, busy flags released, capture DTO unchanged."
+  ],
+  "executions": {
+    "ast": 0,
+    "compile": 0,
+    "tests": 0,
+    "target_imports": 0,
+    "native": 0,
+    "processes": 0,
+    "sdk": 0,
+    "gui": 0
+  },
+  "limitations": [
+    "New test source has not been executed. Root owns syntax, actual regression checks, version and release build.",
+    "This patch removes established redundant callbacks and orders actual changes; it does not claim to resolve Native07 Forearm oracle failure.",
+    "Official Forearm errors/record rollback remain untouched and require actual next-run evidence."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "x.validation.unified-r11-source-direct-argv/1",
+  "status": "SOURCE_DRAFT_ACTUAL_FINAL_INPUTS_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "producer": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r11.py",
+    "sha256": "ff413c58547ce4fba94183ab9c40143653b983081c5775ff6e45b18ccbd03f98",
+    "bytes": 31623
+  },
+  "executable": "C:/Users/Randy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "cwd": "D:/MyRepository/Blender-addons-by-Randy",
+  "required_variables": {
+    "FINAL_ADMISSION_PATH": "Actual finalized x.validation.unified-r11-final-source-admission/1 artifact afterNative07 END and actual.29 source/checks.",
+    "FINAL_ADMISSION_SHA256": "Actual64hex finalized admission SHA; binds actual_pure_tests and genuine current Source/pure/syntax/map pins."
+  },
+  "serial_steps": [
+    {
+      "mode": "--inspect-only",
+      "argv": [
+        "-B",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r11.py",
+        "--inspect-only",
+        "--final-admission",
+        "${FINAL_ADMISSION_PATH}",
+        "--final-admission-sha256",
+        "${FINAL_ADMISSION_SHA256}"
+      ]
+    },
+    {
+      "mode": "--capture",
+      "argv": [
+        "-B",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r11.py",
+        "--capture",
+        "--final-admission",
+        "${FINAL_ADMISSION_PATH}",
+        "--final-admission-sha256",
+        "${FINAL_ADMISSION_SHA256}"
+      ]
+    },
+    {
+      "mode": "--build-and-verify",
+      "argv": [
+        "-B",
+        "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r11.py",
+        "--build-and-verify",
+        "--final-admission",
+        "${FINAL_ADMISSION_PATH}",
+        "--final-admission-sha256",
+        "${FINAL_ADMISSION_SHA256}"
+      ]
+    }
+  ],
+  "candidate": {
+    "version": "0.77.29",
+    "shipped_files": 190,
+    "Python_files": 158,
+    "added": [],
+    "replaced": [
+      "unity_animation_rigging.py",
+      "__init__.py"
+    ],
+    "other188_exact": true,
+    "file_map": "Required actualfinaladmission",
+    "source_bytes": "Derived from actualfull190 payload"
+  },
+  "proposed_package": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_<actual_map_prefix8>",
+  "proposed_freeze": "D:/Blender/Projects/Character/X/validation/composition_20261011/x_rigging_source_freeze_r11_<actual_native_prefix8>.json",
+  "official_dist": "D:/MyRepository/Blender-addons-by-Randy/dist/character_designer-0.77.29.zip",
+  "execution_counts": {
+    "AST": 0,
+    "Python": 0,
+    "tests": 0,
+    "capture": 0,
+    "build": 0,
+    "native": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "deployment": 0,
+    "artist_writes": 0
+  },
+  "resource_scope": "Execute serially only after Root actual START/fresh RAM>=200MiB, using existing Parent fullprovider static scope. No new approval layer."
+}

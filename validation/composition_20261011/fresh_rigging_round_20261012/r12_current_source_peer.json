@@ -1,0 +1,29 @@
+{
+  "schema": "x.validation.original20-source-scope-peer/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "forearm_twist.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist.py",
+      "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+      "bytes": 97739
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "69bcc032fb890ecc005f75f9562df63625cb871386708dc0d29656354fd5c9f6",
+      "bytes": 104329
+    },
+    "animation_original_inputs_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_original_inputs_ui.py",
+      "sha256": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+      "bytes": 15250
+    }
+  },
+  "review_facts": [
+    "FT independently inspected by X forearm_review: no actionable issues.",
+    "X read exact native diff against R11: synchronous capture only local verified curve map; unchanged output checks.",
+    "X read FD38 UI patch, exact candidate bytes plus independent implementation tests."
+  ],
+  "native_acceptance": false
+}

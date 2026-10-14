@@ -1,0 +1,19 @@
+import hashlib, json, sys, unittest, os
+from datetime import datetime, timezone
+from pathlib import Path
+pins={"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_original_inputs.py":"ba6078acafc2e735452dab776787f7b88720c7751837d55d620cddad56b7ef5e","D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py":"50f6c16ac35424ae131990be363a37500419ccc7716781b2622bdbe2032d67f3","D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_original_inputs_ui.py":"505d36d9747c3e965d29494f85b0fbb42e8e290d41ca927d265b8a6288ea3f82","D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_ui.py":"24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067","D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/__init__.py":"cf2bced9d75881050318ce3640ba15160d45d4c42f6de55c6e265a1f1114a365","D:/MyRepository/Blender-addons-by-Randy/tests/test_original_inputs_contract.py":"6f344cc095ce15e74514904fe0a79ab23e70ba250ca80fded87abc5c391b4bfd","D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\certify_original_legacy_base_clock.py":"af4076b3a6923e7e8b891c237221e1761fd5056c410b2f905b52fbedda8a8b5c","D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_contract.py":"5823df371bfa47f44d46e55426b7cabb5525ac6e96e1e2724842455fac8d69ad","D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_reference.py":"4b89ca819c495ebd4096c80091da39d64cf9f49cc6794c40d1e517ae10ac5709","D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_recovery.py":"3cc8cb27b28d83631316aa7b2982c39517a9aa668e6dd6a8a848d2131e780b2b","D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_export.py":"d236f82007007297b768cde2d0428afdd63c3a6b36aa3d19e5fcf4635470846d","D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_worklist_ui.py":"d0645a68a4a963b8c83544698ab149b492122237fcc22a3d12152e2f0f99831b","D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_worklist_rigging_attach_ui.py":"89fe11bb6634e8e8ca0c16c5fcddc93093d7883cdfa70d5525149d1a2faf8bb0","D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_rigging_contract.py":"bff52cbe97530662fcee5e4ca248c1fe09e781f73588627cecda62c777d3c179"}
+modules=["test_original_inputs_contract","test_animation_rigging_contract","test_animation_rigging_reference","test_animation_rigging_recovery","test_animation_rigging_export","test_animation_worklist_ui","test_animation_worklist_rigging_attach_ui"]
+out=Path("D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r11_01")
+now=lambda: datetime.now(timezone.utc).isoformat()
+report={"schema":"x.validation.portable-contracts/1","started_utc":now(),"pid":os.getpid(),"completed":False,"passed":False,"native_execution_performed":False,"SDK":0,"GUI":False,"input_pins":pins}
+for name, expected in pins.items():
+    assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==expected, name
+sys.path.insert(0, "D:/MyRepository/Blender-addons-by-Randy/tests")
+suite=unittest.defaultTestLoader.loadTestsFromNames(modules)
+result=unittest.TextTestRunner(verbosity=2).run(suite)
+post={name:hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in pins}
+report.update(completed=True,passed=result.wasSuccessful(),tests_run=result.testsRun,failures=len(result.failures),errors=len(result.errors),skipped=len(result.skipped),input_files_unchanged=(post==pins),ended_utc=now())
+report["passed"] = report["passed"] and report["input_files_unchanged"] and report["skipped"]==0
+(out/"receipt.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
+print("PORTABLE_RESULT "+json.dumps({k:report[k] for k in ("passed","tests_run","failures","errors","skipped","input_files_unchanged")}))
+sys.exit(0 if report["passed"] else 1)

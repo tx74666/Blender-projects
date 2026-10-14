@@ -1,0 +1,148 @@
+{
+  "schema": "x.validation.character-composition-loop-tail-continuation-source-owner/1",
+  "created_utc": "2026-10-11T07:46:01.546736+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "tool_import_or_invocation_performed": false,
+  "tests_executed_by_writer": 0,
+  "passed": true,
+  "source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+    "sha256": "5317df7fab6932a22565997720320984192352cb2a9c98965d58a921cbd0384a",
+    "bytes": 38541
+  },
+  "baseline": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_first_stage_continuation_0da00723_before_physical_tail.py",
+    "sha256": "0da0072321607a2e5e31974a8bc4889d04fcb670430b8cebf0dd7443e231f2f9",
+    "bytes": 25540
+  },
+  "source_delta": {
+    "changed_existing_functions": [
+      "admit",
+      "run"
+    ],
+    "added_functions": [
+      "physical_tail"
+    ],
+    "unchanged_existing_functions": [
+      "require",
+      "sha",
+      "pin",
+      "load",
+      "digest",
+      "functions",
+      "validate_delta",
+      "validate_numeric",
+      "main"
+    ],
+    "cases_runner_ast_unchanged": true,
+    "before_worker_ast_unchanged": true,
+    "syntax_compile_only": true
+  },
+  "historical_evidence_pins": {
+    "first_stage_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\composition_first_stage_report.json",
+      "sha256": "916860cd83d4c2eafbc346017659855d96ba42f1f3bcaeea2fb182e365c4467d",
+      "bytes": 2192247
+    },
+    "native_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\composition_native_report.json",
+      "sha256": "32d5178e73f2900d21add8518ec6fd45fc4df40c41586f11a4abb00257d06eb9",
+      "bytes": 1545407
+    },
+    "physical_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\physical\\composition_sync_report.json",
+      "sha256": "d1624f1b737b90c162a0fb1d0436102c59b20d20acf46b675fe9c675f179d5af",
+      "bytes": 530658
+    },
+    "loop_failure": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\loop_author\\composition_HoldLoop_authoring_report.json",
+      "sha256": "67d00b7fe4529e60eeacd7aff58f40d7a268414b92674ff7b58b80e7e9f50a43",
+      "bytes": 1816
+    },
+    "failure_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12_natural_failure_readback_916860cd.json",
+      "sha256": "041253e90a8baae9ed715c28b4fde0e002aeea3e57ff595b41911e08011f5ff7",
+      "bytes": 377490
+    },
+    "source_entry": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\source_entry_receipt.json",
+      "sha256": "845394a52e7ba286c20fe100f1bbd69a559ae7771678b3589b906bb3acec31ec",
+      "bytes": 200420
+    }
+  },
+  "current_inherited_publication_pins": [
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\character_animation_link.json",
+      "sha256": "63c1a7d96a7e153b1f29ecd41cfabdd51749bf1b05a1375c6e3086d4de56f8ee",
+      "bytes": 9549
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.fbx",
+      "sha256": "3bb3c384826db7fafda557148f6d18d0a7a9efd70d7770398543c191d9a394cf",
+      "bytes": 1340460
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.animation.json",
+      "sha256": "df5171af4d4c3450b1510494416b350269d762651723eda9a4ee0e91cb0c0eb9",
+      "bytes": 179023
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\character_animation_link.json",
+      "sha256": "c96fbb0ef988f3df2d43bf7bae013b37031e7adddb169495fc6ede351c05c0fd",
+      "bytes": 9558
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.fbx",
+      "sha256": "403aa1263862e5845c3615dcfc1b4456da187ee563226f056e0f1653929445c3",
+      "bytes": 1340460
+    },
+    {
+      "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.animation.json",
+      "sha256": "0bbe84edd753233eff891ae5e4373a29e7f03dd57c0f4bcb59a9e7fa04e70039",
+      "bytes": 179040
+    }
+  ],
+  "admission_contract": {
+    "outer_schema": "x.validation.character-composition-numeric-reuse/1",
+    "outer_keys_existing": [
+      "schema",
+      "numeric_report",
+      "failure_readback",
+      "owner_review",
+      "peer_review",
+      "projection_receipt"
+    ],
+    "optional_seventh_key": "physical_tail",
+    "tail_schema": "x.validation.character-composition-physical-tail-reuse/1",
+    "tail_exact_keys": [
+      "schema",
+      "first_stage_report",
+      "native_report",
+      "physical_report",
+      "loop_failure",
+      "failure_readback",
+      "source_entry",
+      "owner_review",
+      "peer_review"
+    ],
+    "reviewed_source_changes_exact_paths": [
+      "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_continuation_fixture.py"
+    ]
+  },
+  "preserved_guards": [
+    "Old failed n11/n12 reports remain completed=false; numeric reuse remains twelve inherited cases, zero reexecution and two freshly isolated verified variants.",
+    "Fresh original common adoption/217 native Rest/mapping/action/import anchors/isolated B values and unchanged outer native recovery run through existing cases_runner.",
+    "Two inherited SOURCE rows are checked against old full values/composition_export, actual literal public identities, revision 1 and exact sealed packet; manifest_after_sha256 is used for current publication, while manifestSha256 remains prepublication history.",
+    "All 903 n12 source baselines are validated, with only exactly three reviewed source replacements and the two exact authorized publication Link changes; every current admitted source is rehashed before first owned output.",
+    "Tail skips physical.run for the first two and executes only genuine Loop authoring/run_one; records executed=1 immediately after its actual successful SOURCE completion, then rehashes all six inherited publication files.",
+    "Seed consumes original pinned d162 two-A physical report; final success is assigned only after unchanged native outer final checks."
+  ],
+  "limitations": [
+    "Source/API/AST evidence only. This source was not imported or invoked; no Blender, worker, SDK, GUI, CIM, deployment or native tests were performed.",
+    "The completed two-SOURCE report is genuine historical n12 evidence. The n12 Loop and whole attempt failed; no third SOURCE, new seed, future native success or authorization is claimed.",
+    "Actual final timing operator proof and combined owner/peer reviewed_source_changes reports are required independently by the future admission."
+  ]
+}

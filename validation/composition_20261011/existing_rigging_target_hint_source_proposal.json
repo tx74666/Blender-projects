@@ -1,0 +1,76 @@
+{
+  "schema": "x.character-existing-rigging-source-proposal/1",
+  "date_local": "2026-10-12",
+  "source_only": true,
+  "implementation_performed": false,
+  "native_execution_performed_for_this_proposal": false,
+  "product_edit_performed_for_this_proposal": false,
+  "scope": "基础动画加目标角色已存在的 Unity Rigging。未覆盖部位默认保存基础动画编辑；覆盖部位保存其明确的 Target/Hint 输入来源。目标角色及保存来源由 Unity 当前证据决定。",
+  "existing_rigging_evidence_owner": "Parent Character / RandomRealm2",
+  "known_target_limit": "Parent 已确认 Soldier 4.0 有 RigBuilder 和双手 TwoBoneIK；Cosha.Player 尚无同一套。本提案不增加 Cosha Rigging，也不把当前 X CoshaRig 当成 Soldier 匹配 Rig。",
+  "canonical_root": "D:\\MyRepository\\Blender-addons-by-Randy",
+  "reusable_routes": [
+    {
+      "file": "addons/character_designer/animation_worklist.py",
+      "functions": {"connect": 82, "_prepared": 114, "add": 310, "activate": 511, "sync": 599},
+      "reuse": "Workspace/角色/模型/WorkID/packet SHA、Source 与 Custom 身份、已有基础动画编辑入口。"
+    },
+    {
+      "file": "addons/character_designer/animation_link.py",
+      "functions": {"_revision_result": 271, "publish_linked_revision": 301},
+      "reuse": "不可变修订、metadata SHA、manifest 锁与原子发布。新增 Rigging 输入需要由同一次完整 metadata 发布封存，不能仅把骨骼 FBX 当作 Target 数据。"
+    },
+    {
+      "file": "addons/character_designer/animation_worklist_target.py",
+      "functions": {"validation_rest_view": 391, "adopt_main_rig": 620, "restore_main_rig": 737},
+      "reuse": "模型和原 Rig 匹配时复用已验证的 Main Rig 身份/原 Rest/恢复事务，保留控制器、颜色与分组。"
+    }
+  ],
+  "required_unity_input_declaration": {
+    "identity": "target/model GUID、Animator/RigBuilder/constraint 的确切身份、组件类型和路径，左右 Root/Mid/Tip，以及 Target/Hint 实际路径和完整父链。",
+    "coverage": "实际覆盖骨骼、约束执行顺序、enabled 状态、Rig/constraint/Target/Hint 权重和位置/旋转 offset。覆盖来自真实约束记录，不用 UpperBodyOverride 代替。",
+    "coordinate": "单位、坐标约定、根及父节点 Rest/world 矩阵、Target/Hint 原始 local 输入、骨架 Rest hash；不能把已包含 root 的矩阵再次乘 root。",
+    "clock": "基础 clip 的身份和采样秒数/FPS，Rigging 求解前后阶段，以及原始 Target/Hint 输入流。",
+    "save_source": "每个输入的 source_save_scope 和当前来源修订。动画曲线、Prefab/Scene local Transform 与 runtime 挂点分别由明确 consumer 保存，不默认写入基础 clip。"
+  },
+  "minimal_blender_routing": [
+    "在 unity_animation.load_package:55 和 _import_package_action:494 附近增加明确输入声明验证/接收，保留原完整骨骼与 packet SHA 检查。",
+    "若原 Rig 已有通过所有权验证且匹配的左右臂控制，以 Armature 身份、rig_id、左右 ARM 和 Root/Mid/Tip 映射实际 Unity constraint。limb_ik._validate_inventory:3168 的 rigs:3712 返回 chain、target、pole、solver_target 与 auto_rotation_space。Target 对应 visible target PoseBone，Hint 对应 pole 位置，内部 solver_target 不作为任意回传对象。",
+    "Rigging 输入单独记录 Target 位置/旋转、Hint 位置与明确允许的权重，使用原始父空间及已验证的控制 Rest/Auto Align 映射。未知、重复或不匹配控制拒绝；不按名称自行创建 Unity Rigging。",
+    "limb_ik_fk.switch_limb:678 的事务可作为显式 IK 预览切换基础，但采用 Main Rig motion-data 时还须验证其原 Rest 事务兼容性，不能声称当前直接调用已验证。关闭 AutoKey，保存并恢复原显示/pose 状态。",
+    "基础动画保留其自身原始流，未覆盖部位编辑走 base；覆盖部位编辑写明确 Target/Hint 输入。保存不从合成后 deform 骨骼矩阵推断约束输入。",
+    "发布时基础动画数据和 Rigging 输入各自保持归属，通过现有 metadata/SHA/修订事务一同封存；由 Unity 显式保存 consumer 消费对应来源。"
+  ],
+  "current_source_gaps": [
+    {
+      "file": "addons/character_designer/unity_runtime/Editor/CharacterAnimationTransfer.cs",
+      "lines": [26, 355, 469, 524],
+      "gap": "Document/Frame 当前只声明骨骼/root/mesh；BuildBoneDefinitions 只收蒙皮骨链，Preview/EvaluatePose 没有现有 RigBuilder/TwoBoneIK 的复制和实际评价。Target/Hint 原输入尚未有专门记录。"
+    },
+    {
+      "file": "addons/character_designer/unity_animation_controls.py",
+      "lines": [86, 313],
+      "gap": "当前骨骼导入控制计划强制 limb FK。不能将这个已验证的骨骼烘焙当成 Unity Rigging Target/Hint 往返。"
+    },
+    {
+      "file": "addons/character_designer/animation_composition_controls.py",
+      "lines": [326],
+      "gap": "现有 resolve_scope 只接受 FK；不应放宽旧 UpperBody 路由来假称 Target 支持。"
+    },
+    {
+      "file": "addons/character_designer/unity_runtime/Editor/CharacterAnimationReturn.cs",
+      "lines": [278, 290, 304, 546, 573],
+      "gap": "现有 Import 候选保存点/ReadMetadata 可复用，但需要明确的 Rigging 声明与 consumer。当前 Channel validator 允许 Transform local TRS 类型，仍不构成专门 Target/Hint 身份/来源验证；旧 UpperBody restriction 移除 Transform 曲线。仅当实际来源是动画曲线时，新增 owned Rigging 曲线候选才适用。静态和 runtime 来源由对应入口保存。"
+    }
+  ],
+  "coordinate_limit": "unity_animation._mapping:173 是同角色骨架验证和骨骼 Rest-relative 映射；不能直接拿来替代 Target 父空间变换。limb_ik_fk:585 附近的 Auto Align/PARENT_DELTA/Rest 轴影响 Target 旋转。Hint 保存其原输入，不能从求解后手肘反推。",
+  "unverified": [
+    "目标角色最终选择和 source_save_scope。",
+    "实际 RigBuilder/TwoBoneIK 输入捕获、Blender 接入和 Unity 保存消费。",
+    "Blender IK 与 Unity TwoBoneIK 的一致性，尤其部分权重、offset、手腕轴、接近伸直时 Hint 行为。Unity 原约束应保留为最终求解来源。",
+    "匹配目标原 Rig 的控制库存和 Main Rig Rest 事务兼容性。"
+  ],
+  "execution_boundary": "当前仅提案；Parent 分配 owner 和下一次明确 native 时段后才实现/测试。旧 RT18/173-r18 保留为旧候选，不当新首版包。",
+  "u7_cleanup_evidence": "u7_failed_remove_completion_closure.json",
+  "u7_limit": "Load 成功，Remove ownership 检查失败。失败现场已保留并正常退出；QA seed 曾临时覆盖后精确恢复。最终 13 文件精确一致并不表示 seed 从未写入。无新的 B 编辑、SavePose、reopen、worker 或发布。"
+}

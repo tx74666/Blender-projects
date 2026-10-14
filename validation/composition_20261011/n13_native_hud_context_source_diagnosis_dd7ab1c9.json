@@ -1,0 +1,159 @@
+{
+  "schema": "x.validation.character-composition-native-hud-context-source-diagnosis/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "runtime_tool_edits_performed": false,
+  "sdk_gui_cim_resource_queries_performed": false,
+  "tests_executed": 0,
+  "actual_saved_files_read": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_stdout.log",
+      "sha256": "0ee6303a1baae81ce996cf5abf8863f5ba081de0a36e8c22f51f68da5c526dfd",
+      "bytes": 3752
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_stderr.log",
+      "sha256": "05990319573ec8609be5bcf0c12ce0d90139f29c785ac511021bcfc428d01737",
+      "bytes": 107
+    }
+  ],
+  "reviewed_sources": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+      "bytes": 57217
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "bytes": 49161
+    }
+  ],
+  "installed_version_from_saved_stdout": "Blender 5.2.0 LTS, hash fbe6228777e7",
+  "official_source_evidence": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/blenkernel/intern/screen.cc",
+      "lines": [
+        1439,
+        1445
+      ],
+      "fact": "File read resets ScrArea.type; native callback pointer is separate from RNA spacetype."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/editors/screen/screen_edit.cc",
+      "lines": [
+        721,
+        761
+      ],
+      "fact": "Background screen refresh skips area/region runtime type initialization."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/editors/screen/area.cc",
+      "lines": [
+        2594,
+        2632
+      ],
+      "fact": "A genuine space change assigns native area type; selecting an already VIEW3D area does not force that change."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/makesrna/intern/rna_screen.cc",
+      "lines": [
+        118,
+        140
+      ],
+      "fact": "RNA Area.type getter uses integer spacetype/butspacetype, not native SpaceType callback pointer."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/editors/interface/regions/interface_region_hud.cc",
+      "lines": [
+        336,
+        343
+      ],
+      "fact": "HUD lookup forwards area.type to native region type lookup."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/blenkernel/intern/screen.cc",
+      "lines": [
+        325,
+        332
+      ],
+      "fact": "Region type lookup dereferences its SpaceType pointer without a null guard."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/windowmanager/intern/wm_event_system.cc",
+      "lines": [
+        1850,
+        1868
+      ],
+      "fact": "Python is_undo false wraps the same operator execution in positive undo depth."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/windowmanager/intern/wm_event_system.cc",
+      "lines": [
+        1174,
+        1179,
+        1198,
+        1207,
+        1238,
+        1258
+      ],
+      "fact": "Positive undo depth suppresses registration/redo-HUD handling while leaving actual operator exec intact."
+    }
+  ],
+  "local_source_findings": [
+    {
+      "file": "composition_session_acceptance.py",
+      "function": "_view3d",
+      "lines": [
+        265,
+        285
+      ],
+      "fact": "Prefers an existing VIEW3D area; only writes area.type when different. String type checks do not prove initialized native callback pointers."
+    },
+    {
+      "file": "composition_timing_acceptance.py",
+      "function": "_author_loop",
+      "lines": [
+        380,
+        388
+      ],
+      "fact": "Native rotate currently passes True as its undo positional argument; diagnostics are still only in memory at the C boundary."
+    },
+    {
+      "file": "composition_timing_acceptance.py",
+      "function": "author_hold_loop",
+      "lines": [
+        649,
+        664
+      ],
+      "fact": "Owns diagnostics before author call but writes the report only after completion or catchable Python exception; C process crash bypasses both."
+    }
+  ],
+  "diagnosis": {
+    "source_lifetime_seam_proven": true,
+    "actual_null_runtime_pointer_observed": false,
+    "actual_crash_cause_inference": "Saved crash path supplied by Root is consistent with uninitialized ScrArea.type reached during native finished-operator HUD registration. Native locals and pre-call diagnostics were not persisted, so exact pointer value/candidate remains unobserved.",
+    "no_operator_result_or_authoring_pass_claimed": true
+  },
+  "minimal_future_source_proposal": {
+    "scope": "timing native operator boundary and report plumbing only; no edits in this report",
+    "background_operator_undo": "Pass not bpy.app.background as the second rotate argument; headful keeps True.",
+    "persist_before_C": "A narrow optional callback from author_hold_loop writes its owned report through existing temporary-file replacement immediately before the C rotate call, after poll/context/finite-before evidence is populated.",
+    "pending_status": "Keep complete false and explicit pending native call until returned result/finite actual delta/key/commit proofs finish.",
+    "guards_preserved": [
+      "Same actual native transform EXEC, exact scope-owned control and after-frame selection/context",
+      "Literal FINISHED plus finite positive native rotation",
+      "Native key insertion, selected-slot B clock, moving B and commit",
+      "Readonly A/Source/packet/native rig ownership and exact recovery"
+    ],
+    "no_manual_pose_or_curve_fallback": true,
+    "no_visibility_mutation_or_poll_only_success": true,
+    "no_shared_headful_helper_change_needed": true
+  },
+  "limits": [
+    "No native operator rerun, installed-binary probe, SDK, GUI or resource query.",
+    "All n13 failed evidence, dd7/47cd backgrounds, runtime/projections and first two publications remain unchanged.",
+    "Freezer07 and builder92eba remain SOURCE-only; failed n13 cannot generate u1.",
+    "A future corrected native run requires a separate fresh grant and actual new source pins."
+  ]
+}

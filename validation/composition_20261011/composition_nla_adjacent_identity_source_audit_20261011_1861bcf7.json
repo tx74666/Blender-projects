@@ -1,0 +1,368 @@
+{
+  "schema": "x.validation.composition-nla-adjacent-identity-source-audit/1",
+  "date": "2026-10-11",
+  "source_only": true,
+  "native_execution_performed": false,
+  "tests_or_runtime_imports_performed": false,
+  "product_changes_performed": false,
+  "conclusion": "No remaining same-native NlaTrack/NlaStrip/ActionSlot Python-identity predicate found in the bounded adjacent route. The repaired _tweak uses native RNA equality; remaining is/is-not checks are None or ID datablocks.",
+  "reviewed_sources": [
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+        "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+        "bytes": 99028
+      },
+      "functions": {
+        "_slot": {
+          "line": 716,
+          "end_line": 717,
+          "ast_sha256": "e335a4efc40bb574e97180e57602d94ee9290472f1fef0e0dcc70a9af9fc49f0",
+          "identity_comparisons": []
+        },
+        "_bag": {
+          "line": 720,
+          "end_line": 731,
+          "ast_sha256": "d18aa5039da0263d0777e7b95a7a4d31359d5c1582c3204af74479628f316940",
+          "identity_comparisons": []
+        },
+        "_layout": {
+          "line": 869,
+          "end_line": 877,
+          "ast_sha256": "eb0591085d91a47494d69f7e9646cf36949955f832ce321b41e3bd7a25e25989",
+          "identity_comparisons": []
+        },
+        "_prior": {
+          "line": 889,
+          "end_line": 902,
+          "ast_sha256": "22bbfa5f89e74f6795e7f4eb0977e8f4ae2a6dbee8bfee9a9ebb44dedee781ea",
+          "identity_comparisons": []
+        },
+        "_nla_context": {
+          "line": 906,
+          "end_line": 940,
+          "ast_sha256": "35806c5c3b32ed2c3524b4f74f077f341fb1a672396714c584a334eb8a781724",
+          "identity_comparisons": [
+            {
+              "line": 907,
+              "expression": "context.window.scene is not context.scene"
+            },
+            {
+              "line": 911,
+              "expression": "area is None"
+            },
+            {
+              "line": 938,
+              "expression": "context.view_layer.objects.get(obj.name) is obj"
+            }
+          ]
+        },
+        "_tweak": {
+          "line": 943,
+          "end_line": 977,
+          "ast_sha256": "1ef3793f25678d53fc6659144899db9b3f57f25fba26e973ca631b5e07a6392c",
+          "identity_comparisons": [
+            {
+              "line": 956,
+              "expression": "track.strips[0].action is None"
+            }
+          ]
+        },
+        "_track": {
+          "line": 980,
+          "end_line": 994,
+          "ast_sha256": "c7671a34a4cedab0e4e527affc480cf2fce285db2e90b19ce7a05684e4e4375c",
+          "identity_comparisons": []
+        },
+        "_owned_tracks": {
+          "line": 997,
+          "end_line": 1025,
+          "ast_sha256": "3e5147e738910a17cd3b3ef1167f24c1c96b3a05a66123cb14e2f10715210b67",
+          "identity_comparisons": [
+            {
+              "line": 999,
+              "expression": "ad is None"
+            },
+            {
+              "line": 1004,
+              "expression": "track is None"
+            },
+            {
+              "line": 1004,
+              "expression": "track.strips[0].action is not row['action']"
+            },
+            {
+              "line": 1018,
+              "expression": "track is None"
+            },
+            {
+              "line": 1021,
+              "expression": "strip.action is not old['action']"
+            }
+          ]
+        },
+        "validate": {
+          "line": 1028,
+          "end_line": 1083,
+          "ast_sha256": "5b9b0141650b59579b2243dc716a3c02728097a5d7a797d0b4ed515bfdf561f2",
+          "identity_comparisons": [
+            {
+              "line": 1036,
+              "expression": "session['scene'] is not context.scene"
+            },
+            {
+              "line": 1037,
+              "expression": "item.rig is not rig"
+            },
+            {
+              "line": 1037,
+              "expression": "item.custom_action is not session['custom_action']"
+            },
+            {
+              "line": 1042,
+              "expression": "target._load(rig)['motion_data'] is not rig.data"
+            },
+            {
+              "line": 1053,
+              "expression": "base_item.custom_action is not session['base_custom_action']"
+            },
+            {
+              "line": 1061,
+              "expression": "actual.custom_action is not hold['custom_action']"
+            },
+            {
+              "line": 1081,
+              "expression": "rig.animation_data.action is not session['tracks'][role]['action']"
+            }
+          ]
+        },
+        "_restore_prior": {
+          "line": 1250,
+          "end_line": 1292,
+          "ast_sha256": "afd0be4029d86e477ca8e1b9dcf2c734fe44e3bafc3483da140ea5867ff2c180",
+          "identity_comparisons": [
+            {
+              "line": 1256,
+              "expression": "track is None"
+            },
+            {
+              "line": 1284,
+              "expression": "context.view_layer.objects.get(obj.name) is obj"
+            }
+          ]
+        },
+        "set_edit_target": {
+          "line": 1367,
+          "end_line": 1443,
+          "ast_sha256": "3b34a155f1451732c6796c9ef997df8ad2ff489738366ee132459f105e93d7b1",
+          "identity_comparisons": [
+            {
+              "line": 1379,
+              "expression": "base_item.custom_action is None"
+            },
+            {
+              "line": 1380,
+              "expression": "base_item.custom_action is session['base_action']"
+            },
+            {
+              "line": 1381,
+              "expression": "base_item.custom_action is item.custom_action"
+            }
+          ]
+        },
+        "resume": {
+          "line": 1490,
+          "end_line": 1497,
+          "ast_sha256": "c710dc544a73a1e0e6c438051a2948a8396ba96074ef705d39f694c9cb0cf16e",
+          "identity_comparisons": []
+        },
+        "exit": {
+          "line": 1500,
+          "end_line": 1569,
+          "ast_sha256": "4173f25b0f99b6b661769437e7a26cf2c6af77befc64b7344ed3ab481b2315b7",
+          "identity_comparisons": [
+            {
+              "line": 1530,
+              "expression": "ad.nla_tracks.get(row['name']) is None"
+            },
+            {
+              "line": 1536,
+              "expression": "track is not None"
+            },
+            {
+              "line": 1537,
+              "expression": "track.strips[0].action is not row['action']"
+            },
+            {
+              "line": 1544,
+              "expression": "track is not None"
+            },
+            {
+              "line": 1548,
+              "expression": "track is None"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+        "sha256": "fea0c713008ad73a9cca30112054312a28b8cfdebbcfda20d6a38483defbd043",
+        "bytes": 33381
+      },
+      "functions": {
+        "_slot": {
+          "line": 156,
+          "end_line": 162,
+          "ast_sha256": "9294035172a5cf47b6aeb5ec170cb432cfd0f93d50d905de432aec9a8525e743",
+          "identity_comparisons": [
+            {
+              "line": 158,
+              "expression": "handle is not None"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+        "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+        "bytes": 41190
+      },
+      "functions": {
+        "_snapshot": {
+          "line": 369,
+          "end_line": 393,
+          "ast_sha256": "1e263e31fe518c524d15e962edd9b46c1f7881557ee787b46f0c0c22f500a19a",
+          "identity_comparisons": [
+            {
+              "line": 372,
+              "expression": "ad is not None"
+            }
+          ]
+        },
+        "_restore_snapshot": {
+          "line": 396,
+          "end_line": 428,
+          "ast_sha256": "5c134862bfa7084408c5cb869f8ee8a1f25d89c992cfdb0657f97e73b9161605",
+          "identity_comparisons": [
+            {
+              "line": 425,
+              "expression": "previous is None"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+        "sha256": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67",
+        "bytes": 44171
+      },
+      "functions": {
+        "_artist_state": {
+          "line": 360,
+          "end_line": 381,
+          "ast_sha256": "ec4339ea57853765ae9a29c6146d4aaecbe890607dc45fce71e15a91a3f41542",
+          "identity_comparisons": [
+            {
+              "line": 363,
+              "expression": "ad is None"
+            },
+            {
+              "line": 364,
+              "expression": "ad.action is not None"
+            },
+            {
+              "line": 365,
+              "expression": "ad.action_slot is not None"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "frozen_current_product": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_composition.py",
+    "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+    "bytes": 99028
+  },
+  "semantic_findings": [
+    {
+      "route": "_slot / Worklist._slot",
+      "fields": [
+        "slot.target_id_type",
+        "slot.handle"
+      ],
+      "rule": "One OBJECT slot selected by saved integer handle; never compares ActionSlot wrappers."
+    },
+    {
+      "route": "_bag",
+      "fields": [
+        "action.is_action_layered",
+        "layer.strips length",
+        "strip.type",
+        "bag.slot_handle"
+      ],
+      "rule": "One KEYFRAME strip and unique channelbag by integer handle; no wrapper identity."
+    },
+    {
+      "route": "_tweak",
+      "fields": [
+        "NlaTrack == / !=",
+        "strip.select",
+        "nla_tracks.active",
+        "ad.action",
+        "ad.action_slot_handle"
+      ],
+      "rule": "Exact unique native track and one Action strip; selection/active readback uses native equality. Result exact Action identity and slot handle. The only is check is Action is None."
+    },
+    {
+      "route": "_owned_tracks",
+      "fields": [
+        "track name",
+        "strip action ID",
+        "strip.action_slot_handle",
+        "saved primitive timing fields"
+      ],
+      "rule": "Track get by saved name, single strip/count, full saved fields and Action ID identity. None predicates refer only to absent lookup. No is comparison of track/strip wrappers."
+    },
+    {
+      "route": "validate / EditA / resume / Close recovery",
+      "fields": [
+        "rig/Scene/Armature/Action ID references",
+        "track name",
+        "integer slot",
+        "primitive timing"
+      ],
+      "rule": "Remaining non-None is comparisons protect ID datablocks. Track lookups use names; slot assignment resolves saved integer handles."
+    },
+    {
+      "route": "_restore_prior / Unity._restore_snapshot",
+      "fields": [
+        "saved track names",
+        "track/strip selected booleans",
+        "active-track name",
+        "Action ID",
+        "slot handle"
+      ],
+      "rule": "Restores saved booleans and active-track assignment, then saved Action/slot by handle. No track/strip/slot identity comparison."
+    },
+    {
+      "route": "export._artist_state",
+      "fields": [
+        "action.as_pointer",
+        "action_slot.handle"
+      ],
+      "rule": "Fingerprints native Action pointer and slot handle; ActionSlot is checked only against None."
+    }
+  ],
+  "audit_limits": [
+    "Bounded SOURCE/AST/read-only audit only; no native operator or installed-binary acceptance was performed.",
+    "None and ID-datablock identity checks were retained as explicitly scoped. No global replacement, unrelated framework expansion or new tests.",
+    "Whole canonical product and frozen runtime10 remain exact1861; no source or frozen candidate edit."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "passed": false,
+  "scope": "ISOLATED_REAL_MODEL_TERMINAL_LENGTH_ROUNDTRIP",
+  "Blender_version": "5.2.0 LTS",
+  "saved_blend": false,
+  "Unity_written": false,
+  "tolerance_local": 2e-05,
+  "samples": {},
+  "source_blend": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "source_sha256": "a186ca66e585cfc011c4263c06439155e24e2e9dfe032bf761d06b1873a338ce",
+  "manifest": "D:\\Unity Projects\\RandomRealm2\\Assets\\Art\\Character\\Cosha\\Cosha.cdesigner.json",
+  "manifest_sha256": "3b49fbdf30474973400e5abfc52caaed2dfb1642d78b8cbf49781dfa8403af7b",
+  "frozen_addon_dir": "D:\\Blender\\Projects\\Character\\X\\validation\\bone_rest_lengths_20261010\\release_07717\\character_designer",
+  "worker_sha256": "ade4b7627365371877c76d03edcde1229148671c1e7dfdcfe7f64d708f628622",
+  "helper_sha256": "29cfec8c5f1b8994421e699655b1895a4a9f9d8b51c01a6a0ff4f9dea521600b",
+  "texture_publication_omitted_for_bone_skin_scope": true,
+  "source_scene": "Scene",
+  "source_frame": 46,
+  "source_rig": "CoshaRig",
+  "source_objects": [
+    "CoshaRig",
+    "Clothes",
+    "Cosha",
+    "Dress",
+    "Hair",
+    "Stocking"
+  ],
+  "owned_keys_stripped": {
+    "Clothes": [],
+    "Cosha": [
+      "CD Forearm Twist.L",
+      "CD Forearm Twist.R",
+      "CD Forearm Twist.L.001",
+      "CD Forearm Twist.R.001",
+      "CD Forearm Twist.L.002",
+      "CD Forearm Twist.R.002"
+    ],
+    "Dress": [],
+    "Hair": [],
+    "Stocking": []
+  },
+  "forearm_companion_tested": false,
+  "source_unit_scale": 1.0,
+  "hair_capture_included": true,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\bone_rest_lengths_20261010\\probe_cosha_roundtrip.py\", line 350, in main\n    result = worker.export_job(job)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\bone_rest_lengths_20261010\\release_07717\\character_designer\\unity_export_worker.py\", line 845, in export_job\n    hair_capture['profiles'], hair_mapping, job['asset_id'],\n                                            ~~~^^^^^^^^^^^^\nKeyError: 'asset_id'\n",
+  "source_file_unchanged": true,
+  "Unity_manifest_unchanged": true
+}

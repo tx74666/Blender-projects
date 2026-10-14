@@ -1,0 +1,31 @@
+--- 0.77.15/__init__.py
++++ 0.77.16/__init__.py
+@@ -1,7 +1,7 @@
+ bl_info = {
+     "name": "Character Designer",
+     "author": "Randy & Codex",
+-    "version": (0, 77, 15),
++    "version": (0, 77, 16),
+     "blender": (4, 0, 0),
+     "location": "View3D > Sidebar > Character Designer",
+     "description": "Personal modeling, rig-setup, and generic reference-view tools.",
+--- 0.77.15/animation_link_source.py
++++ 0.77.16/animation_link_source.py
+@@ -213,6 +213,7 @@
+         _restore_context(context, saved, playing=False)
+         context.window.scene = scene
+         context.view_layer.objects.active = rig
++        rig.show_in_front = True
+         return SourceResult(rig, result.action, result.first_frame, result.last_frame,
+                             scene, collection, str(path), digest, export_name)
+     except Exception:
+--- 0.77.15/animation_worklist.py
++++ 0.77.16/animation_worklist.py
+@@ -332,6 +332,7 @@
+         saved.status, saved.has_error = 'Added ' + item.name + '. Select Source to compare or Custom to edit.', False
+         if captured:
+             captured['data'].use_fake_user = captured['fake_user']
++        rig.show_in_front = True
+         return item
+     except Exception:
+         # Activation owns a temporary WindowManager target as well as Scene

@@ -1,0 +1,240 @@
+{
+  "schema": "x.validation.character-composition-loop-tail-peer-source-review/1",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "acceptance_tool_imports_performed": false,
+  "reviewer_pure_tests_executed": 0,
+  "sdk_gui_cim_resource_queries_performed": false,
+  "source_files": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_continuation_fixture.py",
+      "sha256": "c0b3264e348e47b13f5fb287b1af73b35bb0c9f8fa9e500ff77b378442072956",
+      "bytes": 28700
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "5317df7fab6932a22565997720320984192352cb2a9c98965d58a921cbd0384a",
+      "bytes": 38541
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "bytes": 49161
+    }
+  ],
+  "preserved_parent_sources": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_continuation_fixture_239a2b18_before_loop_tail.py",
+      "sha256": "239a2b187106dc5592da74fc2bae12c5e37df87356ffc233cd50f4646ecef339",
+      "bytes": 16391
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "0da0072321607a2e5e31974a8bc4889d04fcb670430b8cebf0dd7443e231f2f9",
+      "bytes": 25540
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\tools\\composition_timing_acceptance.py",
+      "sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "bytes": 40700
+    }
+  ],
+  "reviewed_source_changes": {
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_continuation_fixture.py": {
+      "before_sha256": "239a2b187106dc5592da74fc2bae12c5e37df87356ffc233cd50f4646ecef339",
+      "after_sha256": "c0b3264e348e47b13f5fb287b1af73b35bb0c9f8fa9e500ff77b378442072956"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py": {
+      "before_sha256": "0da0072321607a2e5e31974a8bc4889d04fcb670430b8cebf0dd7443e231f2f9",
+      "after_sha256": "5317df7fab6932a22565997720320984192352cb2a9c98965d58a921cbd0384a"
+    },
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py": {
+      "before_sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "after_sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c"
+    }
+  },
+  "native_seam": {
+    "source_file": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    "preserved_parent": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\tools\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692
+    },
+    "inverse_normalized_source_exact": true,
+    "default_numeric_function_bodies_unchanged": true,
+    "continuation_cases_runner_ast_unchanged": true,
+    "continuation_before_worker_ast_unchanged": true
+  },
+  "continuation_review": {
+    "unchanged_existing_functions": [
+      "require",
+      "sha",
+      "pin",
+      "load",
+      "digest",
+      "functions",
+      "validate_delta",
+      "validate_numeric",
+      "main"
+    ],
+    "changed_existing_functions": [
+      "admit",
+      "run"
+    ],
+    "added_functions": [
+      "physical_tail"
+    ],
+    "exact_tail_field_count": 9,
+    "actual_failed_n12_kept_false": true,
+    "old_n11_cases_reused_12_not_reexecuted": true,
+    "fresh_two_isolated_variants_full217_required": true,
+    "source_input_inventory": 903,
+    "recorded_unchanged_before_patch": 901,
+    "authorized_published_link_exceptions": 2,
+    "only_reviewed_tool_changes": 3,
+    "six_current_publication_files_rehashed": [
+      {
+        "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\character_animation_link.json",
+        "sha256": "63c1a7d96a7e153b1f29ecd41cfabdd51749bf1b05a1375c6e3086d4de56f8ee",
+        "bytes": 9549
+      },
+      {
+        "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.fbx",
+        "sha256": "3bb3c384826db7fafda557148f6d18d0a7a9efd70d7770398543c191d9a394cf",
+        "bytes": 1340460
+      },
+      {
+        "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\blender_revisions\\7b34c8665fd84ec1a0d064d5f8b34c8c\\a-066591e782464aeb.animation.json",
+        "sha256": "df5171af4d4c3450b1510494416b350269d762651723eda9a4ee0e91cb0c0eb9",
+        "bytes": 179023
+      },
+      {
+        "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\character_animation_link.json",
+        "sha256": "c96fbb0ef988f3df2d43bf7bae013b37031e7adddb169495fc6ede351c05c0fd",
+        "bytes": 9558
+      },
+      {
+        "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.fbx",
+        "sha256": "403aa1263862e5845c3615dcfc1b4456da187ee563226f056e0f1653929445c3",
+        "bytes": 1340460
+      },
+      {
+        "path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042906-998cf9944b58\\blender_revisions\\f8e0554324bd4fd8a6583d086d43644f\\a-a4b995b391f0498f.animation.json",
+        "sha256": "0bbe84edd753233eff891ae5e4373a29e7f03dd57c0f4bcb59a9e7fa04e70039",
+        "bytes": 179040
+      }
+    ],
+    "both_complete_effective_values_and_composition_export_equal_old": true,
+    "first_two_exports_not_relaunched": true,
+    "third_source_authoring_numeric_and_physical_required": true,
+    "executed_third_count_set_before_postpublication_hash_guard": true,
+    "seed_after_third_success_and_inherited_rehash": true,
+    "existing_outer_adoption_and_failure_restoration_unchanged": true
+  },
+  "operator_review": {
+    "owner_source_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_loop_native_operator_source_report_20261011_dd7ab1c9.json",
+      "sha256": "279397fc97c12acdd38a275b69dcaea82d8a4265fb24cc605677f965f1e2f7ab",
+      "bytes": 7517
+    },
+    "focused_test_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_loop_operator_guards.py",
+      "sha256": "31043daa967fa8d701d3f550e112cb45b9b812ca38fb34c877abc19ab5e9b267",
+      "bytes": 12769
+    },
+    "owner_reported_focused_pass_count": 11,
+    "reviewer_tests_rerun": false,
+    "unchanged_other_function_count": 27,
+    "inverse_full_module_ast_exact": true,
+    "changed_functions": [
+      "_author_loop",
+      "author_hold_loop"
+    ],
+    "added_functions": [
+      "_loop_rotation_delta",
+      "_loop_rotation_state",
+      "_loop_select",
+      "_loop_visibility"
+    ],
+    "native_effective_visibility_solo_and_unassigned_checked": true,
+    "all_hidden_fails_without_reveal": true,
+    "initial_and_three_key_frames_fresh_selection_context_readback": true,
+    "selected_pose_bones_native_equality_required": true,
+    "literal_finished_and_finite_actual_rotation_delta_required": true,
+    "diagnostics_attached_before_call_and_retained_on_failure": true,
+    "no_visibility_hide_or_collection_writes": true,
+    "no_bake_rna_motion_fallback": true,
+    "original_open_recovery_and_final_authoring_guards_preserved": true
+  },
+  "builder_review": {
+    "old_build_require_digest_ast_exact": true,
+    "only_main_dispatch_plus_build_tail_added": true,
+    "exact_three_source_map_owner_peer_equality": true,
+    "all_actual_pins_before_exclusive_fresh_n13_write": true,
+    "seven_frozen_tools_eleven_source_manifest_five_config_helpers": true,
+    "product_runtime11_full12_and_native1eb_unchanged": true,
+    "source_generation_grants_no_native_authority": true
+  },
+  "launch_gate_review": {
+    "source_file": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_loop_tail_granted_r6.py",
+      "sha256": "edcf7e636b39faa06d696464cdd0d27d59b98c4e13c6ade10870f9a4e85df45c",
+      "bytes": 32832
+    },
+    "preserved_parent": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_continuation_granted_r5.py",
+      "sha256": "41fa31d2a5fe25809cb76df4e9c9786cfe2b5bc10148699b6e346756de9f0345",
+      "bytes": 27984
+    },
+    "other_eight_function_asts_exact": true,
+    "only_check_modified": true,
+    "fresh_parent_n13_background_only_grant_and_proof_binding_required": true,
+    "full_source_and_current_publication_pin_checks_before_launch": true,
+    "no_gui_artist_mutation_or_source_deployment_authority": true
+  },
+  "launcher_review": {
+    "source_file": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_loop_tail_granted_r7.ps1",
+      "sha256": "849f944cb7214d1cd6f82eb05a3314fa57a8ed43e911d456a734b9754786026f",
+      "bytes": 10602
+    },
+    "preserved_parent": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_continuation_granted_r6.ps1",
+      "sha256": "36ba820a94b24b3e79a1a80e160c5d8dee8d6602951962748edc1ec2b4286f17",
+      "bytes": 10433
+    },
+    "inverse_attempt_and_preflight_filename_text_exact": true,
+    "two_hundred_mib_and_near98_reread_preserved": true,
+    "sole_artist_and_once_create_new_claim_preserved": true,
+    "normal_wait_and_all_qa_gone_gate_preserved": true,
+    "no_retry_forced_termination_or_gui": true
+  },
+  "actual_evidence_read": {
+    "old_numeric_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\composition_native_report.json",
+      "sha256": "c5d1170c43848b5d6ccb607953c7dad0cecbeb52291a81b2d490ead3020dfb6c",
+      "bytes": 1544723
+    },
+    "two_source_physical_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\physical\\composition_sync_report.json",
+      "sha256": "d1624f1b737b90c162a0fb1d0436102c59b20d20acf46b675fe9c675f179d5af",
+      "bytes": 530658
+    },
+    "n12_failure_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12_natural_failure_readback_916860cd.json",
+      "sha256": "041253e90a8baae9ed715c28b4fde0e002aeea3e57ff595b41911e08011f5ff7",
+      "bytes": 377490
+    }
+  },
+  "limitations": [
+    "The actual n12 selected controller/operator cause remains unproved; this is an eligibility and diagnostic source correction.",
+    "SOURCE-only review; no tool/module import, tests, config generation, launch, native SDK, UI or resource query by reviewer.",
+    "All failed attempts, first two published revisions and frozen projections remain untouched.",
+    "Native corrected Loop execution and complete final acceptance remain pending a fresh grant."
+  ]
+}

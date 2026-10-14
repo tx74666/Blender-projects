@@ -1,0 +1,26 @@
+{
+  "schema": "x.validation.original20-source-scope-peer/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "6a0b2f1a8b8f227983595409645831d7db3c5d619aaab73aed9b46b21d01a83d",
+      "bytes": 104998
+    }
+  },
+  "review_scope": "Package agent independent source read relative to implementation agent forearm_review: complete delta against frozen .32 and current _write_target/_apply call order. This is not Blender or solver verification.",
+  "review_facts": [
+    "Target setter remains once per arm regardless of Hint weight.",
+    "Hint enabled sets Pole and updates before final Target encoding; Hint disabled still executes final Target setter.",
+    "Arm loop order remains unchanged, so completed RightHand is available before Left dynamic-parent sampling.",
+    "_write_target, display handoff, Forearm scope, action/capture/DTO and preservation oracle are unchanged by the native delta."
+  ],
+  "historical_implementation_unit_evidence": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/rigging_hint_order_07733_unit_evidence.json",
+    "sha256": "b26ba27026e8085384281181abba3dbfe3abd5c53e63193376406eae4fee58d7",
+    "bytes": 6729
+  },
+  "native_acceptance": false
+}

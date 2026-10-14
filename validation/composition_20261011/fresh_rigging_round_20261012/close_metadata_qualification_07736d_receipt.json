@@ -1,0 +1,171 @@
+{
+  "schema": "x.validation.close-metadata-qualification-pure/1",
+  "completed": true,
+  "passed": true,
+  "started_utc": "2026-10-12T20:26:33.910361+00:00",
+  "ended_utc": "2026-10-12T20:26:36.895404+00:00",
+  "tests_run": 17,
+  "failures": 0,
+  "native_execution_performed": false,
+  "SDK_calls": 0,
+  "GUI": false,
+  "input_files_unchanged": true,
+  "input_pins": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\verify_close_metadata_qualification_07736d.py",
+      "sha256": "b1b8c26a79cc3e79bb943c96e6530723ebeeb2ff2e0f4b40d699f92708106ea8",
+      "bytes": 6145
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_close_continuation_07736d.py",
+      "sha256": "06a919ed4017c8b70be359e7155ff83b28244f4f4b2a72dba411b87da97164f1",
+      "bytes": 57807
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\metadata_live_reopen_07736_01\\live_D4CB_after_capture_metadata.json",
+      "sha256": "96b2a4f1c6f5ee541f7833d5ac2ba4aee9272d0087c32c5ea5a88307622aab98",
+      "bytes": 768870
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\metadata_live_reopen_07736_01\\closed_saved_clone_metadata.json",
+      "sha256": "8b1841ebb97c8984188118e04f95ddc3621006f59a73ab86e8537054ce7accf5",
+      "bytes": 768990
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\metadata_live_reopen_07736_01\\live_metadata_diff.json",
+      "sha256": "f65365b7b9960dc3e0bb4f0ea04a04cde68743cea7860707e85c95e8a70328c6",
+      "bytes": 485
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\close_continuation_07736_03\\live_before_Close_metadata.json",
+      "sha256": "8b1841ebb97c8984188118e04f95ddc3621006f59a73ab86e8537054ce7accf5",
+      "bytes": 768990
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\close_continuation_07736_03\\reopened_closed_BF59_metadata.json",
+      "sha256": "96b2a4f1c6f5ee541f7833d5ac2ba4aee9272d0087c32c5ea5a88307622aab98",
+      "bytes": 768870
+    }
+  ],
+  "checks": [
+    {
+      "name": "raw first Close exact",
+      "passed": true,
+      "accepted": true,
+      "difference_count": 0,
+      "error": null
+    },
+    {
+      "name": "actual warning at reopened closed boundary",
+      "passed": true,
+      "accepted": true,
+      "difference_count": 1,
+      "error": null
+    },
+    {
+      "name": "actual warning at final closed boundary",
+      "passed": true,
+      "accepted": true,
+      "difference_count": 1,
+      "error": null
+    },
+    {
+      "name": "same warning before reopen rejected",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 1,
+      "error": "Metadata before reopening must remain raw exact."
+    },
+    {
+      "name": "actual reverse warning at reopened boundary",
+      "passed": true,
+      "accepted": true,
+      "difference_count": 1,
+      "error": null
+    },
+    {
+      "name": "actual reverse warning at final boundary",
+      "passed": true,
+      "accepted": true,
+      "difference_count": 1,
+      "error": null
+    },
+    {
+      "name": "reverse warning before reopen rejected",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 1,
+      "error": "Metadata before reopening must remain raw exact."
+    },
+    {
+      "name": "reverse plus boolean-to-integer rejected",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "reverse plus signed-zero change rejected",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "bone color change",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "node group change",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "node parameter change",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "different warning text",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 1,
+      "error": "Only the exact measured warning may appear or disappear after reopen."
+    },
+    {
+      "name": "different Object identity",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "boolean to integer",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "positive to negative zero",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 2,
+      "error": "Metadata changed beyond the measured readonly native warning."
+    },
+    {
+      "name": "same warning on a different modifier UID rejected",
+      "passed": true,
+      "accepted": false,
+      "difference_count": 1,
+      "error": "Warning qualification does not belong to the exact measured original Object/modifier/configuration."
+    }
+  ]
+}

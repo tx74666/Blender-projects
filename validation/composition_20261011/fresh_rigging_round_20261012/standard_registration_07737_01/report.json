@@ -1,0 +1,43 @@
+{
+  "schema": "x.validation.standard-registration-lifecycle/1",
+  "completed": false,
+  "passed": false,
+  "pid": 13108,
+  "native_execution_performed": true,
+  "scene_opened_or_saved": false,
+  "artist_opened": false,
+  "Body_Gun_or_animation_protocol_retested": false,
+  "runtime_source_mutated": false,
+  "in_memory_failure_injection_performed": false,
+  "scope": "Factory blank standard addon_utils.enable: deferred admission, ordinary disable, immediate cancellation and controlled initialization cleanup only.",
+  "natural_exit_verified": false,
+  "natural_exit_external_retained_handle_required": true,
+  "source_inputs": {
+    "source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737.py",
+      "sha256": "2838ab23c91366439748fbf9390251420121a766c39de0edb7ef8d98e9b25f7e",
+      "bytes": 16741
+    },
+    "package_manifest": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4dff2238\\python_projection.json",
+      "sha256": "eb0534299f9db2b5b589466d806416ce209b16020d28190aebf2e890fc776dae",
+      "bytes": 21061
+    }
+  },
+  "package_manifest_version": "0.77.37",
+  "package_manifest_file_count": 190,
+  "stage": "observe_admission",
+  "operations": [
+    {
+      "operation": "standard restricted addon_utils.enable",
+      "started_utc": "2026-10-12T20:58:47.361019+00:00",
+      "completed": true,
+      "ended_utc": "2026-10-12T20:58:49.277750+00:00",
+      "elapsed_seconds": 1.9158231000001251
+    }
+  ],
+  "standard_enable_returned_module_before_deferred_admission": true,
+  "error": "RuntimeError: The actual one-shot registration admission did not settle exactly once.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737.py\", line 252, in tick\n    state['phase'] = phases[state['phase']]()\n                     ~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737.py\", line 146, in observe_admission\n    require(native._REACQUIRE_TIMER is None and not bpy.app.timers.is_registered(state['first_timer'])\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        and native._REACQUIRE_GENERATION == state['first_generation'] + 1\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        and not native._REACQUIRE_PENDING and not native._HANDLER_ERRORS and not native._CACHE,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        'The actual one-shot registration admission did not settle exactly once.')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737.py\", line 24, in require\n    raise RuntimeError(message)\nRuntimeError: The actual one-shot registration admission did not settle exactly once.\n",
+  "input_files_unchanged": true
+}

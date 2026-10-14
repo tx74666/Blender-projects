@@ -1,0 +1,50 @@
+{
+  "schema": "x.validation.character-composition-native-helper-source/1",
+  "date": "2026-10-11",
+  "source_only": true,
+  "background_source_status": "READY",
+  "tool": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+    "sha256": "009b345e84a25fa867be4a4adc5ce379fa8f195d7cb6a224399a90cf2fbebbd5",
+    "bytes": 50676
+  },
+  "test": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_native_fixture.py",
+    "sha256": "8db2c2daeb13916eb29e1a3e8c3ed6c4665a60c71cc19a76a70ba0ecc2fc7471",
+    "bytes": 16420
+  },
+  "historical_frozen_tool": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n5\\tools\\verify_character_composition_native.py",
+    "sha256": "50de12f44258bb8c656ca769f25b6ee5fb8256ba690d1f229a3492758e832926",
+    "bytes": 48250
+  },
+  "diagnosis": "Official composition.add_work_item stores nonempty Link identity and successful activate authenticates a freshly resolved row. Driver-held CollectionProperty row aliases across later add/activation can be invalid; empty current-row identity is not a supported alternate route.",
+  "change": "Hold plain native item IDs across imports and mutations. Reacquire unique exact current row through state/_item before hashes, association, isolated checks and postExit. Authenticate current workspace ready route, current Link/source cache, official _association_record against saved get_link and exact native Rig, target, model, Action, slot/name/export. Empty current identity still rejects.",
+  "strict_mapping": "Existing full217 exact native Scope/Rest/parent/size/control proof unchanged; no guard relaxation.",
+  "unchanged_API_AST": [
+    "validate_fixture",
+    "validate_variant_specs",
+    "runtime_projection",
+    "load_helper",
+    "save_qa_seed",
+    "fresh_main_rig_scene"
+  ],
+  "focused_validation": {
+    "tests_passed": 3,
+    "compile_passed": true,
+    "full_suite_repeated": false,
+    "coverage": "Actual canonical _item/_association_record bodies, stale old alias resolved by fixed native ID, empty current identity rejects, native Action/slot/model/identity mismatch, absent/ambiguous/foreign row and changed prepared workspace/route/manifest rejected."
+  },
+  "independent_core_review": {
+    "reviewer": "/root/export_scale_review",
+    "status": "READY_FOR_BACKGROUND_CORE",
+    "finding": "Plain IDs, unique current row, official workspace/route/baseline/association-record checks and no empty fallback reviewed correct.",
+    "headful_caller_gap": "Old4arg UI runner must update to6arg API before headful; Root separately authorized this pending tools-only integration fix. Background entry uses the updated internal caller."
+  },
+  "new_API": "fresh_association_proof(context, rig, plain_item_id, links, worklist, expected_model_sha256); reacquire_work_item(context, rig, plain_item_id, worklist)",
+  "immutable_policy": "Native source009b final for root background snapshot; no further edits. n5/frozen50de/report evidence unchanged.",
+  "native_executed_by_this_fix": false,
+  "fixture_generated": false,
+  "product_or_projection_modified": false,
+  "remaining": "Root owns new explicit background candidate/config/grant. UI/session/Raise source work is separate and must be refrozen before any headful use."
+}

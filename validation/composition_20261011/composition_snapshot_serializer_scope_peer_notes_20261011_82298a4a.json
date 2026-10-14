@@ -1,0 +1,137 @@
+{
+  "schema": "x.validation.character-composition-snapshot-serializer-scope-peer-notes/1",
+  "utc": "2026-10-11T06:21:54.320228+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer": "/root/export_scale_review",
+  "status": "EXACT_PROVEN_EDITOR_RNA_UNSET_CANDIDATE_SUPPORTED; FINAL_PATCH_NOT_YET_REVIEWED",
+  "reviewer_native_calls": 0,
+  "reviewer_test_runs": 0,
+  "runtime_edits": 0,
+  "source_pins": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_composition_export.py",
+      "sha256": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67",
+      "bytes": 44171
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_composition_export_worker.py",
+      "sha256": "e98cd3202ad18f47a2f53e1e9d6999dd023089a11d73ab6950229516c33c5741",
+      "bytes": 7242
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_composition_controls.py",
+      "sha256": "aff2415b44acf440bb1c97f63eb8ed5af622b5d7f5a597a9d68b945d572e6b42",
+      "bytes": 21621
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_export_worker.py",
+      "sha256": "b2668e204e4e75e71af165e3427eed8a3e2387c2dd2635cbd757d27d748a97be",
+      "bytes": 26478
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\unity_export_worker.py",
+      "sha256": "ade4b7627365371877c76d03edcde1229148671c1e7dfdcfe7f64d708f628622",
+      "bytes": 46925
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\unity_animation_controls.py",
+      "sha256": "acf81b37e8d89bdaff0a04b8a3a2a244584e6b5d5551c58efb1946b1ece5b3c7",
+      "bytes": 18492
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\unity_export_ui.py",
+      "sha256": "940086354a5c0ed33502c70b54391e79065317df72debb0cecfe6ff130f78e34",
+      "bytes": 36993
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "sha256": "c8d612988159e83a3332c35245970cc07ad4f0a9b8704ef466e43c819c066861",
+      "bytes": 355675
+    }
+  ],
+  "actual_failed_evidence": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_natural_failure_readback_c5d1170c.json",
+    "sha256": "2291e1e7360b8431eafb0d2fd86b12eafe486d96a2760b58051867468a0a6189",
+    "bytes": 42810
+  },
+  "scope_facts": {
+    "snapshot_writer": "begin_isolated_export libraries.write with {isolated rig, isolated selected Action, exact eight owned Dress wires}",
+    "shared_numeric_boundary": "isolate_export has already measured full effective finite B before begin snapshot; shared sample/isolation/curve/controls functions must stay unchanged.",
+    "actual_worker_guard": "Loaded Objects exact isolated rig+eight wires; loaded Actions exact isolated Action; then native packet/rest/selected channels and exact worker numeric equality.",
+    "strict_unknown_active_dependencies": "Unrecognized native/object drivers and animated Armature data reject during Scope. Closed-dependency guard remains unchanged; muted native references are still serialization edges, not authority to accept unknown dependencies.",
+    "registered_exact_editor_property": "Object.character_designer_unity_export",
+    "registered_property_members": "Directory/filename/asset ID; extras Object refs; simplified/material-match editor collections; UI/status fields.",
+    "native217_scope_ownership": "Reconstructed from pinned job scope/mapping, verified Rest/packet/controlplan; no read of this Object UI group in inspected evaluator modules.",
+    "current_strip_limit": "_strip_id_refs visits block.items() and nested items, while actual peer decoded path begins cloned Object.id.system_properties; this is not evidence that arbitrary ID-containing custom groups are safe to delete."
+  },
+  "exact_property_consumer_matches": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "line": 8800,
+      "text": "export_property = bpy.types.Object.bl_rna.properties.get(\"character_designer_unity_export\")"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "line": 8837,
+      "text": "unity_export_registered = hasattr(bpy.types.Object, \"character_designer_unity_export\")"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "line": 8894,
+      "text": "bpy.types.Object.character_designer_unity_export = PointerProperty(type=CharacterDesignerUnityExport)"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "line": 9000,
+      "text": "if added_export and hasattr(bpy.types.Object, \"character_designer_unity_export\"):"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "line": 9001,
+      "text": "del bpy.types.Object.character_designer_unity_export"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "line": 9045,
+      "text": "if hasattr(bpy.types.Object, \"character_designer_unity_export\"):"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__init__.py",
+      "line": 9046,
+      "text": "del bpy.types.Object.character_designer_unity_export"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\unity_export_ui.py",
+      "line": 59,
+      "text": "return rig, rig.character_designer_unity_export"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\unity_export_ui.py",
+      "line": 668,
+      "text": "config = rig.character_designer_unity_export"
+    }
+  ],
+  "inspected_evaluator_no_consumer": [
+    "animation_composition_export.py",
+    "animation_composition_export_worker.py",
+    "animation_composition_controls.py",
+    "animation_export_worker.py",
+    "unity_export_worker.py",
+    "unity_animation_controls.py"
+  ],
+  "candidate_requirements": [
+    "Call new helper only in begin_isolated_export at snapshot boundary; no shared12numeric path change.",
+    "Unset only exact BFS-proven editor RNA property on authenticated disposable Object copy, never source rig, its data, or other artist IDs.",
+    "Keep ordinary fixed control properties, native Rest, bone metadata, constraints, drivers and selected Action payload intact.",
+    "Do not replace exact worker Object/Action sets with a dependency allowlist or skip numeric equality.",
+    "Unknown active evaluation dependencies remain failclosed; absent supported editor property is a no-op.",
+    "Focused tests should prove unchanged original RNA preference/ref inventory and reject source-object use. _artist_state covers pose/Rest/actions/time but does not fingerprint editor RNA prefs.",
+    "Generic Mapping/Sequence contains-ID root deletion requires additional unused-input proof: a mixed numeric/editor group can carry meaningful values; containing an ID alone does not establish editor-only semantics."
+  ],
+  "limits": [
+    "Exact raw system-property field names/paths were decoded by peer Agent1, not independently binary-decoded in this review. Final patch/name inventory remains pending.",
+    "No native operation, snapshot reload, source model evaluation, test or publication occurred.",
+    "Candidate scope notes do not certify a completed serializer fix or physical export acceptance."
+  ]
+}

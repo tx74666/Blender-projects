@@ -1,0 +1,66 @@
+{
+  "schema": "cdesigner.current-native-recovery-pure/1",
+  "created_utc": "2026-10-11T23:26:17.047083+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "c5f2aa055c43d97afbe057498041e5a01d59002ebb99c271f1438f5d03a150ea",
+      "bytes": 98837
+    },
+    "test_animation_rigging_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+      "sha256": "3b9a05733b1b4dd01591a60a03a7f44f7dce272851e61c15de361501812682d9",
+      "bytes": 28692
+    }
+  },
+  "prior_immutable_native": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_f9e41c12\\source\\character_designer\\unity_animation_rigging.py",
+    "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+    "bytes": 78327
+  },
+  "producer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\run_current_native_recovery_pure.py",
+    "sha256": "fe40269f6f637c147554ac1cfeb14f00576c1c797affdef7e37996b1eb037f0c",
+    "bytes": 4792
+  },
+  "apply_and_binding_plan_AST_unchanged": true,
+  "source_pins_unchanged_after_test": true,
+  "test_result": {
+    "total": 12,
+    "exit_code": 0,
+    "actual_run": 1,
+    "log_pin": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\recovery_current_native_c5f2aa05\\actual_test_log.txt",
+      "sha256": "6090b8a81e582a636d81f0c85fdabf9720fa68e6f82eae321f68a4770aa3a72f",
+      "bytes": 2510
+    },
+    "command": [
+      "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_animation_rigging_recovery.py",
+      "-v"
+    ]
+  },
+  "scope": "Actual existing seven recovery plus five preview semantic cases against the new Native source; no new unique cases beyond the already recorded twelve.",
+  "runtime_operations": {
+    "blender": 0,
+    "native": 0,
+    "gui": 0,
+    "sdk": 0,
+    "worker": 0,
+    "deployment": 0,
+    "artist_mutation_or_save": 0
+  },
+  "limitations": [
+    "AST functions and fake RNA only; no actual solver/Blender, save/reopen, Unity Apply or original Rig acceptance."
+  ]
+}

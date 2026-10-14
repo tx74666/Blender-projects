@@ -1,0 +1,55 @@
+{
+  "schema": "x.validation.original20-source-scope/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "f45309023033f762ab10735ac958e14391b2807510acd92410413577aac901d9",
+      "bytes": 37102
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "6a0b2f1a8b8f227983595409645831d7db3c5d619aaab73aed9b46b21d01a83d",
+      "bytes": 104998
+    },
+    "forearm_twist.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist.py",
+      "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+      "bytes": 97739
+    },
+    "animation_original_inputs_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_original_inputs_ui.py",
+      "sha256": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+      "bytes": 15250
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_ui.py",
+      "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+      "bytes": 43636
+    }
+  },
+  "review_facts": [
+    "Package agent compared changed native source to frozen .32: final _write_target moves after the Hint/Pole update within each arm; only explanatory comment added.",
+    "Unchanged _write_target derives Auto Align offset against the solved natural hand. Finishing Pole first keeps Target encoded against the final Hint pose before the following arm reads its dynamic parent.",
+    "BackendF453, Forearm54C3, UI38A3 and Worklist24BA are unchanged from R14. Init version-only .32-to-.33 inverse comparison passed.",
+    "Current recovery18 and separate syntax8 actually passed with current native6A0B/init8063 pins. Prior B26 tests retain their historical .32 version qualification."
+  ],
+  "comparison_baseline": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_05989efd/python_projection.json",
+    "sha256": "772fb8908edeabe886ab52f833063353cc24f1c597613c95fa3589986c52f205",
+    "bytes": 21060
+  },
+  "historical_owner": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r14_current_source_owner.json",
+    "sha256": "bd5496c38047a7649e16e503c3c4dd3f616030ea025ec7e8deaf37c34b1df3a9",
+    "bytes": 2973
+  },
+  "targeted_pure": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r15_01/receipt.json",
+    "sha256": "59202b5bc7270d38d707ee252489f5a872212dd49b7323966e6e60e422f0c74c",
+    "bytes": 1575
+  },
+  "native_acceptance": false
+}

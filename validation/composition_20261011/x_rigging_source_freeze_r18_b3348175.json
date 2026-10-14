@@ -1,0 +1,792 @@
+{
+  "schema": "cdesigner.x-rigging-source-freeze/1",
+  "status": "SOURCE_FROZEN_NATIVE_PENDING",
+  "created_utc": "2026-10-12T19:42:34.297889+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "canonical_repository": "D:\\MyRepository\\Blender-addons-by-Randy",
+  "version": "0.77.36",
+  "source_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_original_inputs.py",
+      "sha256": "f2f6e1693c7fab0cb8ffaa479a3af19f5c4392f66119844183c32a61f91b1473",
+      "bytes": 37288
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b3348175c63cf1d0d29ffb184bd7eb5123c2e4ca274eb5b39893f94658a5019f",
+      "bytes": 109020
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py",
+      "sha256": "81b276e22fb170f860a08510db7db2bc26508fb3a711bc8e291b328a59fe71a9",
+      "bytes": 355944
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+      "bytes": 97739
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_original_inputs_ui.py",
+      "sha256": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+      "bytes": 15250
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+      "bytes": 43636
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+      "bytes": 41160
+    }
+  ],
+  "previous_source_freeze": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r17_f2f6e169.json",
+    "sha256": "85227de7a446c50012ad4edbf4169dfa4de45f5df84667d3c45c37d88200db10",
+    "bytes": 41555
+  },
+  "r18_source_provenance": {
+    "r17_producer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r17.py",
+      "sha256": "f99959d828f4bdc699b482c033a172614fda6b76f8155285b187fdc097c11b84",
+      "bytes": 35994
+    },
+    "r17_freeze": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r17_f2f6e169.json",
+      "sha256": "85227de7a446c50012ad4edbf4169dfa4de45f5df84667d3c45c37d88200db10",
+      "bytes": 41555
+    },
+    "r17_manifest": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_cd043f92\\python_projection.json",
+      "sha256": "004281ac5eed3ba7740eca5398b4b41dde94bb9e12685d28d77db00b6f735713",
+      "bytes": 21061
+    },
+    "r17_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_cd043f92\\unified_package_receipt.json",
+      "sha256": "8e4a3b9fb25fa0efd13096736f7043e9ef6d58b0e20525807a90ada7bd74cac1",
+      "bytes": 90793
+    },
+    "r17_archive": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_cd043f92\\character_designer-0.77.35.zip",
+      "sha256": "e92de609cbcf8e061500d89b76ab4a6811257d61ac918bcfd54095ef4e25eb3a",
+      "bytes": 1455345
+    },
+    "r17_postreadback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_cd043f92\\postbuild_source_readback.json",
+      "sha256": "1a14db4625e498f81b23aa74054ed9e26cff737cc06485304b9d414d59908874",
+      "bytes": 9897
+    },
+    "r17_static_release": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_R17_STATIC_BUILD_202610121841Z.json",
+      "sha256": "17a6ad283aaa123981b0654f6e4f90c8af4cd90a0e693fe6293a55665c94b33b",
+      "bytes": 4266
+    },
+    "official_resolver": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529
+    },
+    "official_builder": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_releases.py",
+      "sha256": "30759e923bde1da595f5cd9f67dd9d6f866ebb2866eb4c5f5b1747628e2872c1",
+      "bytes": 2845
+    },
+    "producer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r18.py",
+      "sha256": "b3bfa8992f6fa881393231d25b30abe5bc71bb7d83ed150b8deec9c7ebdb6228",
+      "bytes": 36259
+    },
+    "final_admission": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\unified_r18_final_source_admission_c1e59f7f.json",
+      "sha256": "b1e9bb81b290610b33ae9a8368d29746179672af453a8daee5080643550a51d6",
+      "bytes": 13867
+    },
+    "clock_source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\certify_original_legacy_base_clock_latest_saved.py",
+      "sha256": "9f3647bc0e7d177e1e2dbecd0db7a49ffbf6a52b4f61c28d8b024c7c45a08155",
+      "bytes": 24915
+    },
+    "clock_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_07\\original_legacy_base_clock_report.json",
+      "sha256": "cc0c749f29419747ec54195c63bd5d35249e97c2da0e62f5657880db77fc4e1d",
+      "bytes": 169608
+    },
+    "clock_release": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_LATEST_SAVED_CLOCK07.json",
+      "sha256": "c275d5a607facf3034e81837347ec68c9b8a8cfbf319a14ae91262d9388c38f6",
+      "bytes": 1148
+    },
+    "feature_test_0": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_weapon_ownership.py",
+      "sha256": "c1203ebdb0f32a933106eea4bad03935a5b13770711cda65fd5f272554d4b7f9",
+      "bytes": 15199
+    },
+    "feature_test_1": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+      "sha256": "67b4f45988d9eddab0e54b0eeb886cbc32f41a8d2beb68baf95e49730811524b",
+      "bytes": 70235
+    },
+    "feature_test_2": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_weapon.py",
+      "sha256": "5e79a45de2186a66a7dd11a5701ab6be1514e00fbaed20585a6127b92fc174a1",
+      "bytes": 10858
+    },
+    "actual_pure": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_portable_contracts_receipt.json",
+      "sha256": "5acfb1faeeb089f154f0a18acc3e751ae356fe0b6e43f2bc0dc2e556f53dce86",
+      "bytes": 8411
+    },
+    "actual_pure_raw_log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_ownership_observed.log",
+      "sha256": "b03cf94c6ae049319eb41cb55d5d67b10070cbd1a62b1a2be997d449821bada6",
+      "bytes": 3833
+    },
+    "actual_pure_raw_log_0": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_ownership_observed.log",
+      "sha256": "b03cf94c6ae049319eb41cb55d5d67b10070cbd1a62b1a2be997d449821bada6",
+      "bytes": 3833
+    },
+    "actual_pure_raw_log_1": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_portable.log",
+      "sha256": "776cedb05fe2526a0767fc91f826cfa93a6145eaaf4d5f5503e039fe2c41b32e",
+      "bytes": 9388
+    },
+    "actual_syntax_raw_log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\r18_syntax_01\\syntax.txt",
+      "sha256": "5491a7462826a5c6ca778b5c249312fe469bd0bc4f4c62490475859843c21e2e",
+      "bytes": 1303
+    },
+    "historical_failed_portable": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_original20_r8_01\\receipt.json",
+      "sha256": "9807932e13f408e650421dd982523bebff94538b0419e8ee9614d837f1091fe1",
+      "bytes": 2754
+    },
+    "r5_failed_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01\\new_official_cosha_report.json",
+      "sha256": "46aae9142e5c7cd1bfbdc04315386aaa3ef4ffc442949866e7542840ab18a37a",
+      "bytes": 112390
+    },
+    "r5_failed_closure": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_COSHA_CONTROLS_R5_202610112351Z.json",
+      "sha256": "15926680c930f98dc45cce5191bc1c92bfa39fb817d204a1d9bbed232da24ea0",
+      "bytes": 2755
+    },
+    "r5_failed_saved_scene": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01\\failure_scene.blend",
+      "sha256": "cdaf6a5b16b05cd745388607e0478f6369a19037b220acf25f04850edf2a370a",
+      "bytes": 103291
+    }
+  },
+  "final_source_admission": {
+    "schema": "x.validation.unified-r18-final-source-admission/1",
+    "status": "ACTUAL_TARGETED_CHECKS_PASS_SOURCE_NATIVE_PENDING",
+    "passed": true,
+    "source_only": true,
+    "final_source_stable": true,
+    "final_destination_existing_X_Rig": true,
+    "native": false,
+    "native_acceptance": false,
+    "version": "0.77.36",
+    "source_map_sha256": "c1e59f7f491c2260ffbdd9b1fd56f3915136e4efb9465cd31c6c587a05e8200f",
+    "shipped_file_count": 190,
+    "python_file_count": 158,
+    "shipped_bytes": 5662488,
+    "current_sources": {
+      "unity_animation_original_inputs.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_original_inputs.py",
+        "sha256": "f2f6e1693c7fab0cb8ffaa479a3af19f5c4392f66119844183c32a61f91b1473",
+        "bytes": 37288
+      },
+      "unity_animation_rigging.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+        "sha256": "b3348175c63cf1d0d29ffb184bd7eb5123c2e4ca274eb5b39893f94658a5019f",
+        "bytes": 109020
+      },
+      "__init__.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py",
+        "sha256": "81b276e22fb170f860a08510db7db2bc26508fb3a711bc8e291b328a59fe71a9",
+        "bytes": 355944
+      },
+      "forearm_twist.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+        "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+        "bytes": 97739
+      },
+      "animation_original_inputs_ui.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_original_inputs_ui.py",
+        "sha256": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+        "bytes": 15250
+      },
+      "animation_worklist_ui.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+        "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+        "bytes": 43636
+      },
+      "animation_composition_weapon.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+        "sha256": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+        "bytes": 41160
+      }
+    },
+    "source_owners": {
+      "current": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\r18_current_source_owner.json",
+        "sha256": "6ee59c76908187eb6262979e394abcf9cee7bbc049f24ce1023a999d3953c58a",
+        "bytes": 4195
+      }
+    },
+    "source_peers": {
+      "close": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\r18_weapon_close_source_peer.json",
+        "sha256": "983c0b9ca3c35d651c6862a9d8c7c38f8b352cfa20a365d42f6331e19987cb3e",
+        "bytes": 2044
+      }
+    },
+    "pure_receipts": {
+      "original20": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_portable_contracts_receipt.json",
+        "sha256": "5acfb1faeeb089f154f0a18acc3e751ae356fe0b6e43f2bc0dc2e556f53dce86",
+        "bytes": 8411
+      }
+    },
+    "pure_raw_logs": {
+      "original20": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_ownership_observed.log",
+        "sha256": "b03cf94c6ae049319eb41cb55d5d67b10070cbd1a62b1a2be997d449821bada6",
+        "bytes": 3833
+      }
+    },
+    "actual_pure_tests": 66,
+    "syntax_compilation": {
+      "result": "PASS",
+      "exit_code": 0,
+      "target_imports": 0,
+      "source_files": 11,
+      "input_pins": {
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_original_inputs.py": "f2f6e1693c7fab0cb8ffaa479a3af19f5c4392f66119844183c32a61f91b1473",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py": "b3348175c63cf1d0d29ffb184bd7eb5123c2e4ca274eb5b39893f94658a5019f",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py": "81b276e22fb170f860a08510db7db2bc26508fb3a711bc8e291b328a59fe71a9",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_original_inputs_ui.py": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_weapon_ownership.py": "c1203ebdb0f32a933106eea4bad03935a5b13770711cda65fd5f272554d4b7f9",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py": "67b4f45988d9eddab0e54b0eeb886cbc32f41a8d2beb68baf95e49730811524b",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_weapon.py": "5e79a45de2186a66a7dd11a5701ab6be1514e00fbaed20585a6127b92fc174a1",
+        "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\certify_original_legacy_base_clock_latest_saved.py": "9f3647bc0e7d177e1e2dbecd0db7a49ffbf6a52b4f61c28d8b024c7c45a08155"
+      },
+      "raw_log": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\r18_syntax_01\\syntax.txt",
+        "sha256": "5491a7462826a5c6ca778b5c249312fe469bd0bc4f4c62490475859843c21e2e",
+        "bytes": 1303
+      }
+    },
+    "clock_certificate": {
+      "source": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/certify_original_legacy_base_clock_latest_saved.py",
+        "sha256": "9f3647bc0e7d177e1e2dbecd0db7a49ffbf6a52b4f61c28d8b024c7c45a08155",
+        "bytes": 24915
+      },
+      "report": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/clock_original_07/original_legacy_base_clock_report.json",
+        "sha256": "cc0c749f29419747ec54195c63bd5d35249e97c2da0e62f5657880db77fc4e1d",
+        "bytes": 169608
+      },
+      "external_release": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_release_X_LATEST_SAVED_CLOCK07.json",
+        "sha256": "c275d5a607facf3034e81837347ec68c9b8a8cfbf319a14ae91262d9388c38f6",
+        "bytes": 1148
+      },
+      "legacy_action_rate": 30
+    },
+    "historical_failed_portable_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_original20_r8_01\\receipt.json",
+      "sha256": "9807932e13f408e650421dd982523bebff94538b0419e8ee9614d837f1091fe1",
+      "bytes": 2754
+    },
+    "historical_R12_actual192": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r12_01/receipt.json",
+      "sha256": "7571dfbe3198fddd7135f86322a51383055eb8d8c2cdf06b63c85dabfd05b011",
+      "bytes": 3218
+    },
+    "historical_R13_actual58": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r13_01/receipt.json",
+      "sha256": "d3a84c4423affd9ac2c4c651e404065e79ee72bdae705f340e6229ecead26d2f",
+      "bytes": 2373
+    },
+    "historical_R14_actual25": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r14_01/receipt.json",
+      "sha256": "2b9ab5d9f2e9741e64f319df011b7e4a8fa130b8520de14b1d9424c4047ac572",
+      "bytes": 1883
+    },
+    "historical_hint_order_observed_unit": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/rigging_hint_order_07733_unit_evidence.json",
+      "sha256": "b26ba27026e8085384281181abba3dbfe3abd5c53e63193376406eae4fee58d7",
+      "bytes": 6729
+    },
+    "historical_hint_order_version_qualification": "B26 remains historical native6A0B/test9239 evidence executed with init09D0 version .32. It is not relabelled as current .34 evidence and no historical unit rerun is requested.",
+    "historical_native12_failure": {
+      "report": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_original20_r13_12\\original20_controls_report.json",
+        "sha256": "01b1d9fa2e428e03710a304bac7c8e7174c727edf650d3228b2c08fd09c7ea5b",
+        "bytes": 267889
+      },
+      "actual_release": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_release_X_NATIVE12_FAILED_GUN_VISIBILITY.json",
+        "sha256": "239d846cade89959e0ecd73979c39e968d62acb86161cc4b990d9f4a10a7e6e2",
+        "bytes": 1361
+      },
+      "completed": false,
+      "passed": false,
+      "error": "RuntimeError: Error: Show the Right Target collection in Bone Display, then choose Gun Motion.\n",
+      "passed_asset_boundaries": [
+        "reference_SOURCE",
+        "reference_CUSTOM"
+      ],
+      "retained_handle_natural_exit": true,
+      "native_exit_code": 0,
+      "process_termination_performed": false
+    },
+    "qualification": "Current .36 static candidate: reuse actual66 targeted ownership/recovery/weapon tests at exact runtime/test/dependency pins; execution init metadata was .35, no init unit import. Actual syntax11 PASS. Only init/native restore_owned/weapon removal preflight differ from immutable R17; other187 exact. Native continuation/deployment/original artist operations pending.",
+    "created_utc": "2026-10-12T19:42:03.022Z",
+    "current_unit_evidence_qualification": "References actual owner executions20+46, none repeated by package agent. The20 log was persisted from full observed tool output with explicit provenance;46 log was written by execution. All9 physical unit inputs are exact. Version-only init change is separate syntax evidence, not a new unit run.",
+    "historical_R15_actual18": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r15_01/receipt.json",
+      "sha256": "59202b5bc7270d38d707ee252489f5a872212dd49b7323966e6e60e422f0c74c",
+      "bytes": 1575
+    },
+    "source_only_scope": "Admission for reused actual66 targeted portable evidence, new syntax11 and complete190 source freeze/build. Failed .35 close_save remains failed; no deploy/SDK/artist work.",
+    "historical_R16_actual50": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\lifecycle_unit_07734_03\\portable_contracts_receipt.json",
+      "sha256": "bf929b77c0a553858a54e1b3098ae748ff0a0cf3ec28e8d8318b690d02613c49",
+      "bytes": 17244
+    },
+    "historical_owner_capture24": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\capture_dedup_unit_07735_01\\portable_contracts_receipt.json",
+      "sha256": "e643dd35014b1cd463985958bad86578e7b38be6bffc0eac20a2164504be9994",
+      "bytes": 12722
+    },
+    "historical_native_07734_03": {
+      "report": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\recovery_gun_undo_07734_03\\original20_recovery_gun_undo_report.json",
+        "sha256": "64faf182b88775599a6cfa0848301b7b41a3b6434d301f833d68a7c30b7dfa88",
+        "bytes": 48065
+      },
+      "source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_recovery_gun_undo_07734c.py",
+        "sha256": "7ecfe2d41960c0b565c835cb7c0b6e634650cd74aadd4c8b068a96cd78a21806",
+        "bytes": 61843
+      },
+      "completed": false,
+      "qualification": "Actual .34 run failed at Redo exact whole-Action fingerprint after exact 59x20 DTO passed. This is not completed native acceptance; later diagnostic evidence does not rewrite historical flags."
+    },
+    "historical_R17_actual74": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_original20_r17_01\\portable_contracts_receipt.json",
+      "sha256": "c66ccac3cbe4bacd8349dc1852764352eddd74bcfc43ea8ea8ee058553a91870",
+      "bytes": 28043
+    },
+    "historical_native_07735_01": {
+      "report": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\recovery_gun_undo_07735_01\\original20_recovery_gun_undo_report.json",
+        "sha256": "17c37654b8587bae2111f8a03092ce476977036b9d5a0d605c692a1e9a396ce9",
+        "bytes": 197788
+      },
+      "source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_recovery_gun_undo_07735.py",
+        "sha256": "1bde43fa0b108f1b43f832f4ec9f0a3e5cf14c94d9e8dfb9d244528778ea13b8",
+        "bytes": 79688
+      },
+      "release": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_RECOVERY_GUN_UNDO_07735_01.json",
+        "sha256": "377c0048dff9c58c488f5e152aee7b63ba45c23f23e85fd06532d0d5b15eac31",
+        "bytes": 1164
+      },
+      "completed": false,
+      "stage": "close_save",
+      "qualification": "Gun Undo, qualified Redo200 and final BF59 passed as subproofs. Close/save-reopen/final publication did not complete. No whole-run native acceptance inferred."
+    }
+  },
+  "source_delta": {
+    "runtime_added": [],
+    "runtime_replaced": [
+      "__init__.py",
+      "animation_composition_weapon.py",
+      "unity_animation_rigging.py"
+    ],
+    "runtime_deleted": [],
+    "other_187_payload_files_unchanged": true
+  },
+  "syntax_compilation": {
+    "python_payload_files": 158,
+    "result": "PASS",
+    "target_imports": 0,
+    "separate_actual_source_check": {
+      "result": "PASS",
+      "exit_code": 0,
+      "target_imports": 0,
+      "source_files": 11,
+      "input_pins": {
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_original_inputs.py": "f2f6e1693c7fab0cb8ffaa479a3af19f5c4392f66119844183c32a61f91b1473",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py": "b3348175c63cf1d0d29ffb184bd7eb5123c2e4ca274eb5b39893f94658a5019f",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py": "81b276e22fb170f860a08510db7db2bc26508fb3a711bc8e291b328a59fe71a9",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_original_inputs_ui.py": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_weapon_ownership.py": "c1203ebdb0f32a933106eea4bad03935a5b13770711cda65fd5f272554d4b7f9",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py": "67b4f45988d9eddab0e54b0eeb886cbc32f41a8d2beb68baf95e49730811524b",
+        "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_weapon.py": "5e79a45de2186a66a7dd11a5701ab6be1514e00fbaed20585a6127b92fc174a1",
+        "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\certify_original_legacy_base_clock_latest_saved.py": "9f3647bc0e7d177e1e2dbecd0db7a49ffbf6a52b4f61c28d8b024c7c45a08155"
+      },
+      "raw_log": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\r18_syntax_01\\syntax.txt",
+        "sha256": "5491a7462826a5c6ca778b5c249312fe469bd0bc4f4c62490475859843c21e2e",
+        "bytes": 1303
+      }
+    }
+  },
+  "pure_tests": [
+    {
+      "file": "test_animation_rigging_contract.py",
+      "tests": 32,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\transform_colon_contract_source_receipt.json",
+        "sha256": "fb0e118d5ec9f0b3c459c85b7ed7f08f34885d87e8e7aa3c565b8f7b34637a6f",
+        "bytes": 7404
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_rigging_export.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_link.py",
+      "tests": 16,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_worklist.py",
+      "tests": 15,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_link_source_images.py",
+      "tests": 6,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_link_source_fresh_arm_routing_source_receipt_df88a63f.json",
+        "sha256": "bb371718ab881bbefb5ac8aabbd178e8534febaefe24e04a211dd61077d926e2",
+        "bytes": 5781
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Actual six existing image cases rerun with routing; zero new unique cases.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_worklist_target.py",
+      "tests": 45,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_worklist_rigging_collection.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_worklist_collection.py",
+      "tests": 48,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_rigging_weapon.py",
+      "tests": 10,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_character_composition_weapon_sources.py",
+      "tests": 8,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_character_composition_weapon_ownership.py",
+      "tests": 13,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Carried historical exact test Source; not rerun by this producer.",
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_rigging_recovery.py",
+      "tests": 12,
+      "result": "PASS",
+      "native": false,
+      "runner": "delegated source reviewer",
+      "seconds": 0.836,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\recovery_current_native_c5f2aa05\\receipt.json",
+        "sha256": "c426850bd7c1458c5bc5051ddf10f16390949ea0cdfc24dfebab362110e055ea",
+        "bytes": 2565
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "One actual current-final-native twelve-test pure PASS, bound to exact source and durable log; historical b459 semantics remain separate.",
+      "historical_preview_semantics_provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_preview_semantics_source_receipt_3b9a0573.json",
+        "sha256": "141d5e27d9c1b70bd29e85736a70cfc83d21882fb271f84569cfee1ebbaf8bbe",
+        "bytes": 2756
+      },
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_rigging_setup.py",
+      "tests": 8,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_rigging_fresh_arm_setup_owner_source_e5ae7c4d.json",
+        "sha256": "0c3b86c6e8c3d074bd735c12513a2168fd4dc910a44cd7e6ec3839de18978197",
+        "bytes": 7058
+      },
+      "executions_by_this_producer": 0,
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_link_source_rigging_setup.py",
+      "tests": 7,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_link_source_fresh_arm_routing_source_receipt_df88a63f.json",
+        "sha256": "bb371718ab881bbefb5ac8aabbd178e8534febaefe24e04a211dd61077d926e2",
+        "bytes": 5781
+      },
+      "executions_by_this_producer": 0,
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_rigging_reference.py",
+      "tests": 20,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_source_owner_c5f2aa05.json",
+        "sha256": "8c632d2fc1d1f603ff955aff6b9ed1e8a57fdad44462d2e1878a7ded2afd7506",
+        "bytes": 9787
+      },
+      "executions_by_this_producer": 0,
+      "r7_evidence_scope": "Carried exact historical evidence; not a current full-suite execution by this producer."
+    },
+    {
+      "file": "test_animation_worklist_rigging_editing_data.py",
+      "tests": 7,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_editing_data_source_owner_80af3395.json",
+        "sha256": "8e8796ebcf9943225dc05b4f6a9471441da2ecff02ea3f90370f38161f4bce4d",
+        "bytes": 6787
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical 80af seven-case evidence."
+    },
+    {
+      "file": "test_animation_worklist_rigging_attach.py",
+      "tests": 19,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_caf_032040\\receipt.json",
+        "sha256": "2cf99421ddb20f48dcefb74279ce36f7dfd8484ab4ea1a336b06a2797101bd0a",
+        "bytes": 15507
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Actual final Source-bound pure receipt; no native/artist/publication proof."
+    },
+    {
+      "file": "test_animation_worklist_rigging_attach_ui.py",
+      "tests": 14,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_ui_d064_032040\\receipt.json",
+        "sha256": "292705305638ac83f66767c07d92159ecca0784348374d569039259acef97fbd",
+        "bytes": 11713
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Actual final Source-bound pure receipt; no native/artist/publication proof."
+    }
+  ],
+  "pure_tests_total": 302,
+  "cumulative_case_attribution": {
+    "historical_R7_unique": 302,
+    "actual_R18_current_tests_run": 66,
+    "new_R18_unique_cases_claimed": false,
+    "all_cumulative_cases_run_against_current_candidate": false
+  },
+  "actual_R18_pure": {
+    "receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_portable_contracts_receipt.json",
+      "sha256": "5acfb1faeeb089f154f0a18acc3e751ae356fe0b6e43f2bc0dc2e556f53dce86",
+      "bytes": 8411
+    },
+    "raw_log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_ownership_observed.log",
+      "sha256": "b03cf94c6ae049319eb41cb55d5d67b10070cbd1a62b1a2be997d449821bada6",
+      "bytes": 3833
+    },
+    "tests_executed_by_this_producer": 0
+  },
+  "source_owners": {
+    "current": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\r18_current_source_owner.json",
+      "sha256": "6ee59c76908187eb6262979e394abcf9cee7bbc049f24ce1023a999d3953c58a",
+      "bytes": 4195
+    }
+  },
+  "source_peers": {
+    "close": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\r18_weapon_close_source_peer.json",
+      "sha256": "983c0b9ca3c35d651c6862a9d8c7c38f8b352cfa20a365d42f6331e19987cb3e",
+      "bytes": 2044
+    }
+  },
+  "historical_clock_certificate": {
+    "report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_07\\original_legacy_base_clock_report.json",
+      "sha256": "cc0c749f29419747ec54195c63bd5d35249e97c2da0e62f5657880db77fc4e1d",
+      "bytes": 169608
+    },
+    "release": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_LATEST_SAVED_CLOCK07.json",
+      "sha256": "c275d5a607facf3034e81837347ec68c9b8a8cfbf319a14ae91262d9388c38f6",
+      "bytes": 1148
+    },
+    "verified_legacy_action_rate": 30,
+    "new20_native_acceptance_inferred": false
+  },
+  "actual_R5_native_failure": {
+    "result": "FAIL",
+    "phase": "add_activate",
+    "report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01\\new_official_cosha_report.json",
+      "sha256": "46aae9142e5c7cd1bfbdc04315386aaa3ef4ffc442949866e7542840ab18a37a",
+      "bytes": 112390
+    },
+    "closure": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_COSHA_CONTROLS_R5_202610112351Z.json",
+      "sha256": "15926680c930f98dc45cce5191bc1c92bfa39fb817d204a1d9bbed232da24ea0",
+      "bytes": 2755
+    },
+    "saved_scene": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_c5_control_01\\failure_scene.blend",
+      "sha256": "cdaf6a5b16b05cd745388607e0478f6369a19037b220acf25f04850edf2a370a",
+      "bytes": 103291
+    },
+    "R7_native_success_inferred": false
+  },
+  "final_destination": "Existing original X.blend/Rig; preserve modifiers, design, materials, colors, Bone Collections, custom shapes and controllers. New scenes are isolated tests only.",
+  "boundaries": {
+    "deployments": 0,
+    "native_calls": 0,
+    "SDK_calls": 0,
+    "GUI_calls": 0,
+    "workers": 0,
+    "artist_writes": 0,
+    "Git_publish": 0,
+    "version_changes": 0
+  },
+  "limitations": [
+    "Historical302 cases are carried exact; this producer executes zero tests.",
+    "Historical clock verifies its recorded legacy30 inputs only; current-artist clock and native acceptance remain pending.",
+    "Original20 native clone/public UI/Undo/save-reopen and original artist integration remain pending.",
+    "R5 actual add_activate FAIL and its saved scene/natural closure remain failed ancestry.",
+    "Static build and old resource receipts grant no new native/deployment/SDK resource scope."
+  ]
+}

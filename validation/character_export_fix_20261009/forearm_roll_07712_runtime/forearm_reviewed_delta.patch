@@ -1,0 +1,312 @@
+--- approved_07711/forearm_twist.py
++++ reviewed_forearm/forearm_twist.py
+@@ -22,7 +22,8 @@
+ from . import limb_ik
+ from . import forearm_original_inventory
+ from .forearm_twist_math import corrected_vertex, profile_ratio, twist_angle
+-from .forearm_twist_topology import detect_rings, selected_loop, expand_rings, capture_loop
++from .forearm_twist_topology import (detect_rings, selected_loop, expand_rings, capture_loop,
++                                    support_topology_digest)
+ from . import forearm_twist_profile as profile
+ from . import forearm_twist_edit as editor
+ from . import forearm_twist_cache as validation_cache
+@@ -49,6 +50,11 @@
+ 
+ 
+ class ForearmTwistError(ValueError):
++    pass
++
++
++class ForearmTwistRecaptureRequired(ForearmTwistError):
++    """A Setup preview can repair this record without removing its owned key."""
+     pass
+ 
+ 
+@@ -182,6 +188,41 @@
+ def _topology_digest(mesh):
+     return hashlib.sha256(repr((len(mesh.vertices), tuple(tuple(e.vertices) for e in mesh.edges),
+                                tuple(tuple(p.vertices) for p in mesh.polygons))).encode()).hexdigest()
++
++
++def _support_topology(mesh, vertices):
++    try:
++        digest = validation_cache.support_topology_digest(mesh, vertices, support_topology_digest)
++    except (ValueError, TypeError, IndexError) as exc:
++        raise ForearmTwistRecaptureRequired(str(exc)) from exc
++    return {"version": 1, "vertices": list(vertices), "digest": digest}
++
++
++def _current_topology_record(mesh, record, *, topology=None):
++    """Prepare a conservative topology migration without writing mesh or keys.
++
++    Old records gain a scoped proof only while their original full hash still
++    matches. Once stale, missing proof cannot be reconstructed from today's
++    mesh. New records can accept an unrelated edit only when the saved support
++    IDs and every incident edge/face remain exact.
++    """
++    topology = _topology(mesh) if topology is None else topology
++    saved = record.get("support_topology")
++    if saved is None and record["topology"] != topology:
++        raise ForearmTwistRecaptureRequired(
++            "Mesh topology changed before this calibration had a local proof; use Forearm Twist Setup to recapture its loops.")
++    current = _support_topology(mesh, record["vertices"])
++    if saved is not None and (not isinstance(saved, dict)
++            or type(saved.get("version")) is not int or saved.get("version") != 1
++            or not isinstance(saved.get("vertices"), list)
++            or any(type(index) is not int for index in saved["vertices"])
++            or saved != current):
++        raise ForearmTwistRecaptureRequired(
++            "Mesh topology changed in the captured forearm support; use Forearm Twist Setup to recapture its loops.")
++    fresh = dict(record)
++    fresh["support_topology"] = current
++    fresh["topology"] = topology
++    return fresh
+ 
+ 
+ def _rest_signature(armature, names):
+@@ -405,6 +446,12 @@
+     if obj.mode == "EDIT":
+         raise ForearmTwistError("Calibration pauses in Edit Mode; return to Object Mode to resume.")
+     topology = _topology(obj.data)
++    for side, record in tuple(records.items()):
++        if record["armature"] != armature.name:
++            raise ForearmTwistRecaptureRequired(
++                "Mesh topology or rig binding changed; use Forearm Twist Setup to recapture its loops.")
++        # Validate before indexing saved support IDs or touching any output.
++        records[side] = _current_topology_record(obj.data, record, topology=topology)
+     owned_names = {r["key"] for r in records.values()}
+     # The shape output is managed data. Validate its structure even when pose
+     # inputs have not changed, and repair value/mute after manual UI changes.
+@@ -443,8 +490,6 @@
+         key = _managed_key(obj, side, record)
+         if key is None or key.relative_key != keys.reference_key or key.vertex_group:
+             raise ForearmTwistError("The managed corrective key was renamed or changed; restore it or remove calibration.")
+-        if record["armature"] != armature.name or record["topology"] != topology:
+-            raise ForearmTwistError("Mesh topology or rig binding changed; remove calibration and capture the loops again.")
+         if record["rest"] != _rest_signature(armature, record["chain"]):
+             raise ForearmTwistError("The rig is changing; Forearm Twist will resume when its arm chain is ready.")
+         lower, hand = record["chain"][1:]
+@@ -918,6 +963,7 @@
+               "topology": _topology(obj.data), "rest": _rest_signature(arm, rig["chain"]),
+               "rings": rings, "vertices": vertices, "positions": [positions[i] for i in vertices],
+               "key": key_name, "enabled": True, "created_basis": obj.data.shape_keys is None}
++    record["support_topology"] = _support_topology(obj.data, vertices)
+     if continuous:
+         record['distribution'] = 'WRIST_CONTINUOUS'
+     return editor.bounded_record(record)
+@@ -925,23 +971,24 @@
+ 
+ def _current_record(obj, arm, rig, side, record, records):
+     """Keep the artist's loop profile through binding and rig reconstruction."""
+-    if (record["armature"] != arm.name or record["topology"] != _topology(obj.data)
+-            or record["chain"] != list(rig["chain"])):
+-        raise ForearmTwistError("Mesh topology or rig chain changed; remove calibration and capture again.")
++    if record["armature"] != arm.name or record["chain"] != list(rig["chain"]):
++        raise ForearmTwistRecaptureRequired(
++            "Mesh topology or rig chain changed; use Forearm Twist Setup to recapture its loops.")
++    record = _current_topology_record(obj.data, record)
+     if record["rest"] == _rest_signature(arm, rig["chain"]):
+         record["target"] = rig["target"].name
+         return record
+     for ring in record["rings"]:
+         measured = capture_loop(obj, arm, rig["chain"][1], ring["vertices"])
+         if abs(measured["position"] - ring["position"]) > 1.e-5:
+-            raise ForearmTwistError("The forearm rest span changed; explicitly recapture its loop range.")
++            raise ForearmTwistRecaptureRequired("The forearm rest span changed; use Forearm Twist Setup to recapture its loop range.")
+     fresh = _capture_record(obj, arm, rig, side, {s: r for s, r in records.items() if s != side},
+                             owned_record=record, rings_override=record["rings"],
+                             continuous=record.get('distribution') == 'WRIST_CONTINUOUS')
+     old_rings = {frozenset(r["vertices"]): r for r in record["rings"]}
+     if (len(old_rings) != len(fresh["rings"])
+             or any(frozenset(r["vertices"]) not in old_rings for r in fresh["rings"])):
+-        raise ForearmTwistError("The captured loops changed; remove calibration and capture again.")
++        raise ForearmTwistRecaptureRequired("The captured loops changed; use Forearm Twist Setup to recapture its loops.")
+     for ring in fresh["rings"]:
+         ring["ratio"] = old_rings[frozenset(ring["vertices"])]["ratio"]
+     fresh["created_basis"] = record.get("created_basis", False)
+@@ -950,6 +997,7 @@
+         # A roll/frame repair does not opt old profiles into bounded correction.
+         fresh["vertices"] = record["vertices"]
+         fresh["positions"] = record["positions"]
++        fresh["support_topology"] = _support_topology(obj.data, fresh["vertices"])
+     for name in ("paired", "profile_source", "range_start", "range_end", "current_ring", "curve_strength", "transition"):
+         if name in record:
+             fresh[name] = record[name]
+@@ -1171,7 +1219,7 @@
+         bpy.ops.object.mode_set(mode="EDIT")
+ 
+ 
+-def start_paired_test(context, *, recapture=False, seed=False):
++def start_paired_test(context, *, recapture=False, seed=False, repair_stale=False):
+     obj = context_mesh(context)
+     if obj is None:
+         raise ForearmTwistError("Select the body Mesh or a Hand Target.")
+@@ -1206,6 +1254,21 @@
+         obj.select_set(True)
+         context.view_layer.objects.active = obj
+         context.view_layer.update()
++        if repair_stale and not recapture:
++            # Setup is explicit authorization for a cancellable recapture
++            # preview. Keep healthy profiles on the ordinary edit path, and
++            # reuse owned output keys when a genuine local proof is stale.
++            saved = _records(obj)
++            sides = (side, 'R' if side == 'L' else 'L') if settings.symmetry else (side,)
++            for saved_side in sides:
++                if saved_side not in saved:
++                    continue
++                _arm, saved_rig = _resolve_rig(obj, saved_side)
++                try:
++                    _current_record(obj, _arm, saved_rig, saved_side, saved[saved_side], saved)
++                except ForearmTwistRecaptureRequired:
++                    recapture = True
++                    break
+         record = start_test(context, obj, side, symmetry=settings.symmetry,
+                             recapture=recapture, rings_override=rings_override,
+                             start_vertices=start_vertices, continuous=True)
+@@ -1669,10 +1732,12 @@
+     bl_options = {"REGISTER", "UNDO"}
+     recapture: BoolProperty(default=False, options={"SKIP_SAVE"})
+     seed: BoolProperty(default=False, options={"SKIP_SAVE"})
++    repair_stale: BoolProperty(default=False, options={"SKIP_SAVE"})
+ 
+     def execute(self, context):
+         try:
+-            start_paired_test(context, recapture=self.recapture, seed=self.seed)
++            start_paired_test(context, recapture=self.recapture, seed=self.seed,
++                              repair_stale=self.repair_stale)
+             return {"FINISHED"}
+         except Exception as exc:
+             self.report({"ERROR"}, str(exc))
+@@ -1815,7 +1880,8 @@
+             except Exception:
+                 records = {}
+             record = records.get("L") or records.get("R")
+-            layout.operator("character_designer.forearm_twist_start", text="Edit Calibration" if record else "Capture & Preview", icon="DRIVER_ROTATIONAL_DIFFERENCE")
++            op = layout.operator("character_designer.forearm_twist_start", text="Edit Calibration" if record else "Capture & Preview", icon="DRIVER_ROTATIONAL_DIFFERENCE")
++            op.repair_stale = True
+             if record:
+                 enabled = all(item.get("enabled", True) for item in records.values())
+                 paused = obj.name in _ERRORS and any(item.get("enabled", True) for item in records.values())
+--- approved_07711/forearm_twist_cache.py
++++ reviewed_forearm/forearm_twist_cache.py
+@@ -10,6 +10,7 @@
+ 
+ _TOPOLOGY = {}
+ _MIRROR = {}
++_SUPPORT = {}
+ _LIMIT = 32
+ _READ_SCOPE = None
+ 
+@@ -29,6 +30,7 @@
+ def clear():
+     _TOPOLOGY.clear()
+     _MIRROR.clear()
++    _SUPPORT.clear()
+ 
+ 
+ def _remember(cache, key, value):
+@@ -73,6 +75,22 @@
+     return result
+ 
+ 
++def support_topology_digest(mesh, vertices, calculate):
++    """Cache a scoped proof only while the complete topology token is exact."""
++    token = topology_token(mesh)
++    key = _identity(mesh)
++    cached = _SUPPORT.get(key)
++    if cached is None or cached[0] != token:
++        cached = (token, {})
++        _remember(_SUPPORT, key, cached)
++    indices = tuple(vertices)
++    if any(type(index) is not int for index in indices):
++        return calculate(mesh, indices)
++    if indices not in cached[1]:
++        _remember(cached[1], indices, calculate(mesh, indices))
++    return cached[1][indices]
++
++
+ def mirror_pairs(obj, armature, source, target, calculate):
+     if obj is None or obj.type != 'MESH' or armature is None or armature.type != 'ARMATURE':
+         return calculate(obj, armature, source, target)
+--- approved_07711/forearm_twist_topology.py
++++ reviewed_forearm/forearm_twist_topology.py
+@@ -9,12 +9,35 @@
+ from __future__ import annotations
+ 
+ import math
++import hashlib
+ 
+ _EPSILON = 1.0e-8
+ _END_PADDING = 0.08
+ _RING_END_PADDING = 0.025
+ _MAX_AXIAL_SPREAD = 0.20
+ _MAX_EDGE_AXIAL_COSINE = 0.60
++
++
++def support_topology_digest(mesh, vertices):
++    """Prove saved vertex IDs and all connectivity incident to their support.
++
++    Mesh-wide edge/face inventory indices are not part of this proof: editing a
++    disconnected sock may reorder those inventories without changing a sleeve.
++    Endpoint order and polygon winding remain exact, and boundary connectivity
++    includes outside vertex IDs so a local reindex or attachment change fails.
++    This is a topology proof, never a nearest-point remapping of artist data.
++    """
++    indices = tuple(vertices)
++    if (not indices or any(type(index) is not int for index in indices)
++            or indices != tuple(sorted(set(indices)))
++            or indices[0] < 0 or indices[-1] >= len(mesh.vertices)):
++        raise ValueError('The saved forearm support vertex IDs are invalid; recapture its loops.')
++    support = set(indices)
++    edges = sorted(tuple(edge.vertices) for edge in mesh.edges
++                   if any(index in support for index in edge.vertices))
++    faces = sorted(tuple(face.vertices) for face in mesh.polygons
++                   if any(index in support for index in face.vertices))
++    return hashlib.sha256(repr((indices, edges, faces)).encode()).hexdigest()
+ 
+ 
+ def _closed_loop(start_edge, start_vertex, edges, vertex_edges, edge_faces):
+--- approved_07711/body_calibration_ui.py
++++ reviewed_forearm/body_calibration_ui.py
+@@ -225,7 +225,7 @@
+     if part=='ARMS':
+         row=box.row()
+         row.enabled=item['state'] in {'READY','CONFIRMED'} and context.mode in {'OBJECT','POSE'}
+-        row.operator('character_designer.forearm_twist_start',text='Forearm Twist Setup',icon='DRIVER_ROTATIONAL_DIFFERENCE')
++        row.operator('character_designer.forearm_twist_start',text='Forearm Twist Setup',icon='DRIVER_ROTATIONAL_DIFFERENCE').repair_stale=True
+     failed = bool(s.last_error and s.last_error_signature == (p or {}).get('signature',''))
+     box.prop(s,'show_details',text='Details',icon='TRIA_DOWN' if s.show_details else 'TRIA_RIGHT',emboss=False)
+     if s.show_details:
+--- approved_07711/forearm_twist_edit.py
++++ reviewed_forearm/forearm_twist_edit.py
+@@ -214,7 +214,8 @@
+                                owned_record=record, rings_override=rings,
+                                continuous=record.get("distribution") == "WRIST_CONTINUOUS")
+     fresh.update({key: value for key, value in record.items()
+-                  if key not in {"rings", "vertices", "positions", "range_start", "range_end", "current_ring"}})
++                  if key not in {"rings", "vertices", "positions", "support_topology",
++                                 "range_start", "range_end", "current_ring"}})
+     for name, anchor in zip(("range_start", "range_end", "current_ring"), anchors):
+         fresh[name] = next(i for i, item in enumerate(rings) if frozenset(item["vertices"]) == anchor)
+     records[side] = fresh
+--- approved_07711/unity_forearm.py
++++ reviewed_forearm/unity_forearm.py
+@@ -28,10 +28,16 @@
+     topology = twist._topology(obj.data)
+     keys = obj.data.shape_keys
+     owned = []
+-    for side, record in records.items():
++    for side, record in tuple(records.items()):
+         key = twist._managed_key(obj, side, record, repair_name=False)
+-        if record["topology"] != topology or record["armature"] != rig.name:
++        if record["armature"] != rig.name:
+             raise ValueError(f"{obj.name}: recapture forearm loops after the topology/binding change.")
++        # Export can precede the next runtime evaluation after an unrelated
++        # mesh edit. Use the same saved support proof, preparing only local
++        # metadata copies: capture remains read-only even if later export
++        # validation or atomic sidecar publication fails.
++        record = twist._current_topology_record(obj.data, record, topology=topology)
++        records[side] = record
+         if record["rest"] != twist._rest_signature(rig, record["chain"]):
+             raise ValueError(f"{obj.name}: forearm calibration rest bones have changed.")
+         if key.relative_key != keys.reference_key or key.vertex_group:

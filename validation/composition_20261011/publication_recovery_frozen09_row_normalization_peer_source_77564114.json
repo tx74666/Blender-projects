@@ -1,0 +1,205 @@
+{
+  "schema": "x.validation.character-composition-publication-recovery-completion-ui-source-peer-review/1",
+  "utc": "2026-10-11T12:18:41.715214+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "audit_character_composition_publication_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    },
+    "build_character_composition_publication_recovery_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "775641147dd7ad12cdd68300cee3720e03aa8e6668199febcf2f74bb6406ed9f",
+      "bytes": 25547
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_completion_ui_owner_source_1d77c43b_77564114.json",
+    "sha256": "815e2ff99048afa26943494dec8cd5cbe86ded678b1a65eb12540df78b695313",
+    "bytes": 9508
+  },
+  "previous_full_body_source_peer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_completion_ui_peer_source_1d77c43b_3c41c9c9.json",
+    "sha256": "a8b2e02cf789ce1d64b40bc1974d81d58b09e3792a564955ed239dc0fe62f845",
+    "bytes": 14223
+  },
+  "preserved_adapter_before_normalization": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_publication_recovery_ui_fixture_3c41c9c9_before_frozen09_row_normalization.py",
+    "sha256": "3c41c9c93d3d864dec5745a5d72a9120adb533092890749e7eb569a9067cda8d",
+    "bytes": 24472
+  },
+  "actual_historical_frozen09_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_09\\frozen_tools_receipt.json",
+    "sha256": "f25ac72e961bbb5bc2bdd2c86432d7b807850ae4e03d948004745864bf513b1f",
+    "bytes": 8140
+  },
+  "review_scope": "Only the frozen09 row normalization helper and two use points; previous full audit/adapter review retained. No audit, build/main/API, product, n16 report or native-state change.",
+  "delta": {
+    "changed_functions": [
+      "freeze",
+      "frozen_api"
+    ],
+    "added_functions": [
+      "frozen09_record"
+    ],
+    "unchanged_other_function_count": 4,
+    "unchanged_other_function_names": [
+      "require",
+      "api",
+      "build",
+      "main"
+    ],
+    "top_level_AST_unchanged": true,
+    "audit_exactly_unchanged": true,
+    "locations": {
+      "freeze": {
+        "line": 60,
+        "end_line": 150
+      },
+      "frozen_api": {
+        "line": 153,
+        "end_line": 192
+      },
+      "frozen09_record": {
+        "line": 45,
+        "end_line": 57
+      }
+    }
+  },
+  "actual_old09_rows": [
+    {
+      "tool": "run_character_composition_first_stage",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "verify_character_composition_native",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "composition_sync_acceptance",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "composition_timing_acceptance",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "composition_session_acceptance",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "composition_raise_authoring",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "run_character_composition_raise_stage",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "run_character_composition_ui_fixture",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "composition_ui_checkpoints",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "release_projection",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    },
+    {
+      "tool": "run_character_composition_first_stage_continuation",
+      "exact_four_keys": true,
+      "absolute_canonical_provenance": true,
+      "canonical_name_exact": true,
+      "frozen_path_exact": true,
+      "frozen_source_sha256_exact": true,
+      "frozen_source_bytes_exact": true
+    }
+  ],
+  "strict_admission_facts": {
+    "old_receipt_exact_sha256_and_eleven_names": true,
+    "only_exact_four_key_legacy_format_accepted": true,
+    "canonical_source_is_retained_historical_provenance_not_executable_source": true,
+    "canonical_source_absolute_and_tool_basename_verified": true,
+    "executable_row_reduced_to_exact_path_sha256_bytes": true,
+    "strict_audit_record_not_relaxed": true,
+    "exact_frozen09_sibling_paths_required": true,
+    "freeze_buffers_still_copy_pinned_old_source_bytes_with_sole_reviewed_Sync_override": true,
+    "frozen_api_revalidates_all_eleven_old_rows_before_current_frozen10_checks": true,
+    "twelve_tool_set_and_recovery_ancestry_guards_preserved": true,
+    "build_and_main_unchanged": true,
+    "all_output_writes_remain_exclusive": true
+  },
+  "syntax": {
+    "in_memory_compile_count": 1,
+    "AST_parse_count": 2,
+    "target_module_imports": 0,
+    "tests_run": 0,
+    "bytecode_written": false
+  },
+  "execution_limits": {
+    "adapter_invoked": false,
+    "audit_invoked": false,
+    "freeze_invoked": false,
+    "UI_fixture_generated": false,
+    "CIM_or_resource_query_performed": false,
+    "GUI_or_SDK_performed": false,
+    "native_executed": false
+  },
+  "historical_failure": "Root reported one adapter3c41 freeze-only exit1 before creating frozen10 because actual frozen09 rows have canonical_source. This Source review does not relabel that failure or claim a successful freeze.",
+  "future_prerequisites": "Root may explicitly invoke reviewed Source-only generation. Actual u1 launch remains conditional on a separately pinned generated fixture/receipt, completed recovery closure and fresh Parent headful grant; this peer consumes no grant."
+}

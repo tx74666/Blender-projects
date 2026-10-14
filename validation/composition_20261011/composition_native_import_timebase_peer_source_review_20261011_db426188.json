@@ -1,0 +1,293 @@
+{
+  "schema": "x.validation.composition-native-import-timebase-peer-source/1",
+  "date": "2026-10-11",
+  "reviewer": "/root/worklist_review",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "changed_runtime_sources": {
+    "unity_animation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "9aaa032749a86ec808523697c8a85679dce0134e60dfb640331bd41f53859998",
+      "bytes": 12785
+    },
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "c6b5c2f564239b002cfa5ff1be07bb3707e1cedcec4987bccad245710dc055f1",
+      "bytes": 98130
+    },
+    "animation_export.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+      "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+      "bytes": 10708
+    }
+  },
+  "minimal_export_projection": {
+    "preserved_frozen_parent_sha256": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+    "projected_source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+      "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+      "bytes": 10708
+    },
+    "canonical_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+      "bytes": 11624
+    },
+    "unchanged_other_functions": true,
+    "new_clock_helper_ast_equal": true,
+    "only_clock_statements_added": true,
+    "default_scene_clock_preserved": true,
+    "unrelated_canonical_changes_preserved": true,
+    "canonical_before_clock_sha256": "9c8e638cfd8408fe729103efe232ed23c334b2a879e9c226376057b22d5b28cf",
+    "frozen_parent_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_export.py",
+    "unchanged_other_function_count": 7,
+    "strict_reverse_ast_verified": "Remove the new frame_fps assignment and restore exactly fps expression plus two job dictionary values; begin_export becomes AST-identical to frozen9c7ef.",
+    "excluded_unrelated_work": "Existing canonical Dress admission/snapshot imports and code were not copied into the approved minimal projected exporter."
+  },
+  "owner_source_report": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_native_import_timebase_source_report_20261011_projected_db426188_freeze.json",
+    "sha256": "678f6dfc15dede3953cccd0e8a6d396a8966485478c1b31e6a6f241671328506",
+    "bytes": 12764
+  },
+  "test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_native_import_timebase.py",
+    "sha256": "94ed66bcca11e29d33dc6c3ed3285b0952a4a372badbd360c4173eaee9be6081",
+    "bytes": 28501
+  },
+  "independent_source_ast_checks": {
+    "unity_animation.py": {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\unity_animation.py",
+        "sha256": "44c6014ac8c6c46ef4864aa0560d93375f10b99aa0c5d3276122882304ed493f",
+        "bytes": 38315
+      },
+      "unchanged_existing_functions": [
+        "_matrix",
+        "load_package",
+        "validate_target",
+        "_mapping",
+        "expected_world_matrices",
+        "_world_samples",
+        "_playing",
+        "_set_playing",
+        "_set_frame",
+        "_swap_armature_data",
+        "_discard_preview_data",
+        "_same_rest_bone",
+        "_rest_state",
+        "_matches_rest_state",
+        "_snapshot",
+        "_restore_snapshot",
+        "active_preview",
+        "import_test_action",
+        "restore_preview",
+        "preview_time_seconds"
+      ],
+      "changed_existing_functions": [
+        "_import_package_action"
+      ],
+      "added_functions": [
+        "_import_sample_frames",
+        "native_action_frame_rate"
+      ],
+      "removed_functions": []
+    },
+    "animation_link_source.py": {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_link_source.py",
+        "sha256": "cce7fddb3839ff82ba352d78bcddb98a3847d01264de484499ae62a752481965",
+        "bytes": 12064
+      },
+      "unchanged_existing_functions": [
+        "_error",
+        "_sha256",
+        "_source_model",
+        "_packet",
+        "_context_state",
+        "_restore_context",
+        "_validate_import_context",
+        "import_source",
+        "_restore_image_settings",
+        "_import_prepared_source"
+      ],
+      "changed_existing_functions": [
+        "_import_action"
+      ],
+      "added_functions": [],
+      "removed_functions": []
+    },
+    "animation_composition.py": {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_composition.py",
+        "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+        "bytes": 96417
+      },
+      "unchanged_existing_functions": [
+        "_host",
+        "_service",
+        "active",
+        "item_spec",
+        "bind_item",
+        "item_fingerprint",
+        "composition_metadata",
+        "_library_state",
+        "connect_library",
+        "refresh_configuration",
+        "_prepared_reference_entry",
+        "create_reference_work_copy",
+        "reference_receipt_key",
+        "reference_receipt",
+        "_plain",
+        "_encode",
+        "_decode",
+        "_store",
+        "_load",
+        "_slot",
+        "_bag",
+        "_curves",
+        "_motion_hash",
+        "_curve_payload",
+        "_write_curve",
+        "_constant_curve",
+        "_channel_rows",
+        "_frame_range",
+        "_following_hold",
+        "_assert_hold_constant",
+        "_editing_action",
+        "_layout",
+        "_pose_selection_owner",
+        "_prior",
+        "_nla_context",
+        "_tweak",
+        "_track",
+        "_owned_tracks",
+        "validate",
+        "_restrict_selection",
+        "_restore_prior",
+        "commit",
+        "_commit_base",
+        "set_edit_target",
+        "capture_hold_pose",
+        "set_solo",
+        "resume",
+        "exit",
+        "isolated_sync",
+        "_export_session",
+        "begin_sync",
+        "_poll_sync",
+        "cancel_sync",
+        "load_weapon",
+        "remove_weapon",
+        "register_b",
+        "register_runtime",
+        "unregister_runtime"
+      ],
+      "changed_existing_functions": [
+        "_packet_for_item",
+        "add_work_item",
+        "find_reference",
+        "prepare_reference",
+        "enter"
+      ],
+      "added_functions": [
+        "_require_native_action_timebase"
+      ],
+      "removed_functions": []
+    },
+    "animation_export.py": {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_export.py",
+        "sha256": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+        "bytes": 10275
+      },
+      "unchanged_existing_functions": [
+        "active_job",
+        "_slot",
+        "_dispose",
+        "_publish",
+        "poll_export",
+        "cancel_export",
+        "export_action"
+      ],
+      "changed_existing_functions": [
+        "begin_export"
+      ],
+      "added_functions": [
+        "_action_frame_clock"
+      ],
+      "removed_functions": []
+    }
+  },
+  "canonical_export_before_clock": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\canonical_animation_export_before_native_timebase_9c8e638c.py",
+    "sha256": "9c8e638cfd8408fe729103efe232ed23c334b2a879e9c226376057b22d5b28cf",
+    "bytes": 11191
+  },
+  "canonical_export_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+    "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+    "bytes": 11624
+  },
+  "frozen_export_parent": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_export.py",
+    "sha256": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+    "bytes": 10275
+  },
+  "verification_method": "Exact SHA/byte readback, independent AST comparisons, full scoped source/API/control-flow review. No runtime imports, tests, Blender/Unity/SDK, process or UI execution.",
+  "reviewer_test_executions": 0,
+  "reviewer_native_executions": 0,
+  "owner_reported_tests": {
+    "test_count": 26,
+    "run_count": 2,
+    "total_test_executions": 52,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0
+  },
+  "owner_reported_pure_runs": [
+    {
+      "command": "python -m unittest discover -s tests -p test_composition_native_import_timebase.py -v",
+      "export_source": "canonical",
+      "test_count": 26,
+      "exit_code": 0,
+      "failures": 0,
+      "errors": 0,
+      "stdout_summary": "Ran 26 tests in 1.630s; OK"
+    },
+    {
+      "command": "CHARACTER_DESIGNER_TEST_ANIMATION_EXPORT_SOURCE=<projected path>; python -m unittest discover -s tests -p test_composition_native_import_timebase.py -v",
+      "export_source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+        "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+        "bytes": 10708
+      },
+      "test_count": 26,
+      "exit_code": 0,
+      "failures": 0,
+      "errors": 0,
+      "stdout_summary": "Ran 26 tests in 1.365s; OK"
+    }
+  ],
+  "findings": [
+    "Native packet rate is explicit finite numeric1..240 and validated before Blender access; frame coordinates are1+packetSeconds*packetRate. Default ordinary preview remains Scene fps/fps_base.",
+    "Cached source importer must expose the explicit native_timebase parameter; old, absent or kwargs-only owners cannot fall back for native imports. Ordinary fallback is unchanged.",
+    "Both prepared B Source/Custom and protected A cache require new native clock proof. Existing packet/slot/motion/cache/library/fullSHA admission remains; old cache is rejected without repair.",
+    "Found and explicit A in enter share exact native_action_frame_rate admission before view update/prior/NLA/draft writes. Action marker authenticates actual source packet SHA,rate,origin,duration.",
+    "A Work Copy retains native marker and source package through clean/copy/genuine New All registration. Generic begin_export uses that proved native clock in job fps/fps_base, so closed C/restored Scene rate cannot change A duration. Unmarked Actions still use Scene clock.",
+    "Existing A reference scale, B raw local samples and Raise following-Hold own fps/speed/phase/transition functions are unchanged. No Scene FPS writes were added by import/export clock functions.",
+    "Original snapshot/rest/control mapping/bake logic and reference rollback/receipt codec are unchanged. The projected exporter is frozen9c7ef264 plus one canonical-equivalent helper and exactly one clock assignment,two replaced job fields,and fps-expression substitution.",
+    "Canonical unrelated Dress work remains AST-identical to recorded pre-clock9c8e638c after reversing only clock changes; none of it enters the projected exporter."
+  ],
+  "limitations": [
+    "SOURCE-only PASS is not native bake/FBX/UI/Undo/reopen/normal-exit acceptance. Future runtime/full projection and fresh native grant belong to Root.",
+    "Packet sampleRate must still exactly match sealed spec fps; actual r14/n9 timing mismatch is not resolved by this import fix and those immutable inputs cannot be launched.",
+    "An entirely stale cached exporter may still contain old begin_export; fresh full pinned projection/normal runtime refresh is required. No blanket hot-cache acceptance is claimed.",
+    "All owner26 canonical plus26 projected pure results are owner-reported and exact-source-bound; this reviewer did not rerun them."
+  ]
+}

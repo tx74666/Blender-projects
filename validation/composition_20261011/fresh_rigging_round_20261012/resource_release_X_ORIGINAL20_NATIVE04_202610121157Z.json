@@ -1,0 +1,53 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "passed": false,
+  "resource_token": "X_ORIGINAL20_NATIVE04_202610121157Z",
+  "owned_pid": 84288,
+  "owned_process_filetime": "134362798859226808",
+  "retained_handle_natural_exit": true,
+  "native_exit_code": 0,
+  "native_exited_utc": "2026-10-12T12:04:26.4375932+00:00",
+  "owned_native_gone": true,
+  "process_termination_performed": false,
+  "GUI": true,
+  "all_owned_activity_closed": true,
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls.py",
+    "sha256": "2cce4620c90d21b10c71c569449069b3cecddd5bcc9b46c7ed042f7e6a7a389b",
+    "bytes": 32337
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/native_original20_r9_04/original20_controls_report.json",
+    "sha256": "d52b43c96a0a1f5293bfddfb03304e95057e9472d8a8eff66b4c50b6ad3bd35d",
+    "bytes": 14675
+  },
+  "start": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_start_X_ORIGINAL20_NATIVE04_202610121157Z.json",
+    "sha256": "64590b61dba61369dd4e63bc1e3310288525d68538bb3c90bebb973565db9efc",
+    "bytes": 4723
+  },
+  "launch": {
+    "resource_token": "X_ORIGINAL20_NATIVE04_202610121157Z",
+    "actual_started_utc": "2026-10-12T11:58:05.9391969+00:00",
+    "owned_pid": 84288,
+    "owned_process_filetime": "134362798859226808",
+    "retained_handle_acquired": true,
+    "background": false,
+    "GUI": true,
+    "fresh_memory_MiB": 1620.6,
+    "artist_process_filetime": "134359355330496074"
+  },
+  "original_artist": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "bytes": 34682050
+  },
+  "artist_saved": false,
+  "SDK": 0,
+  "Unity": 0,
+  "no_real20_edit_or_key_or_publication_or_save": true,
+  "actual_failure": "AssertionError: Forearm Twist derived target does not match official current mode: Cosha/L recorded=hand.L expected=CTRL_hand_IK.L",
+  "qualification": "Actual import/read-only Body reference reached; initial captured BF20 exact verified. Forearm derived mode target guard failed at first Source reference, before live Target edit/key/Return or save. Original artist untouched. Preserve user Forearm modifiers/weights/design; repair runtime mode consistency, never weaken oracle or claim PASS. CLI no-splash is unrecognized in this Blender executable, retained raw logs; normalquit succeeded nonetheless.",
+  "initial20_exact_verified": true
+}

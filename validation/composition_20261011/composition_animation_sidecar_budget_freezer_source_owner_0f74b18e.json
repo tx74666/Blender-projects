@@ -1,0 +1,177 @@
+{
+  "schema": "x.validation.character-composition-animation-sidecar-budget-freezer-source-owner/1",
+  "utc": "2026-10-11T11:04:41.606985+00:00",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "candidate_imports_performed": false,
+  "producer_invocations": 0,
+  "projections_created": false,
+  "tests_rerun": 0,
+  "producer": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\freeze_composition_animation_sidecar_budget.py",
+    "sha256": "0f74b18efe84e047bfd5847f0043a4c3df2daf0bab07661bd964c577e14877f2",
+    "bytes": 18881
+  },
+  "historical_producer": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\freeze_composition_native_frame_precision.py",
+    "sha256": "6416f3acf942deb475d6fa307bd94b33d0b2f0a28a350a633a79203135fe31cf",
+    "bytes": 14304
+  },
+  "parent_projection_pins": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_12\\python_projection.json",
+      "sha256": "c1dc22a65fb20a5372972337282cd78be195cb0cfec0382075390506fd43e53c",
+      "bytes": 37695
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_13\\candidate_projection.json",
+      "sha256": "172ee6cf99167d3e23a620dd56bd0219a51dfa0e0f39686c9be1646399cc7cf1",
+      "bytes": 34522
+    }
+  ],
+  "source_review_pins": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_sidecar32_owner_source_e0a0114f.json",
+      "sha256": "e68a079e01172e756ebddf4e81d10d6e0c0d8890da784187a5eae565d23d2b8e",
+      "bytes": 10871
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\character_animation_return_metadata_32mib_source_owner_26f13c71.json",
+      "sha256": "95811734cf126a5f80be56772298a58c9d2c93c559172915bd916701d7a573f8",
+      "bytes": 1779
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_sidecar32_peer_source_review_e0a0114f_26f13c71.json",
+      "sha256": "d8ca616b8a7b196639cbb38392d79f97428e94914b92ca495df1ef3d2435cc31",
+      "bytes": 16058
+    }
+  ],
+  "receiver_actual_validation_pins": [
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\metadata-size-r19\\closure.json",
+      "sha256": "bd44a1352aa2fd14a04c8ddc6e18514d028f5df05e1677d9df7ef90a3e7c7eab",
+      "bytes": 777
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\metadata-size-r19\\composition-contracts.json",
+      "sha256": "01bdd008ce83b56b65997e500c070fbde599081ed0b905549c7d190167290948",
+      "bytes": 11073
+    }
+  ],
+  "syntax_validation": {
+    "AST_parsed": true,
+    "compiled_in_memory": true,
+    "assert_count": 0
+  },
+  "independent_source_inverse_readback": {
+    "Python": [
+      {
+        "file": "animation_link.py",
+        "current": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+          "sha256": "05a981398b7c4edca7e43de1ac8e7ae8fbabb803dda2e05bed877803bab6f83c",
+          "bytes": 19796
+        },
+        "before": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_link_aabd94b5_before_sidecar32.py",
+          "sha256": "aabd94b5ce0b2cac63ed88d1f24fab35636e0eb14aacd07de105d7e84ef3fccb",
+          "bytes": 19666
+        },
+        "normalized_whole_source_inverse_exact": true,
+        "module_inverse_AST_equal": true
+      },
+      {
+        "file": "animation_worklist_collection.py",
+        "current": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+          "sha256": "e0a0114f9c990bbc9687f982a445e384bf23fd35abc77c24ee7787456638a324",
+          "bytes": 36939
+        },
+        "before": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_collection_7e306c7a_before_sidecar32.py",
+          "sha256": "7e306c7af9e3b55aacd84ca5b16a44d3980b459ca905a07111c99132b6b9968f",
+          "bytes": 36915
+        },
+        "normalized_whole_source_inverse_exact": true,
+        "module_inverse_AST_equal": true
+      },
+      {
+        "file": "animation_worklist_new.py",
+        "current": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_new.py",
+          "sha256": "fa0396f50879f8312442502438286494200986760ec82119fee8deb9b286bbc1",
+          "bytes": 46722
+        },
+        "before": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_new_b332692c_before_sidecar32.py",
+          "sha256": "b332692c2119c369916a126ec689b5dbdf68c63c7534f54a07e12bab142a7c9d",
+          "bytes": 46698
+        },
+        "normalized_whole_source_inverse_exact": true,
+        "module_inverse_AST_equal": true
+      }
+    ],
+    "CSharp": {
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+        "sha256": "26f13c7191756eacfc189ed728eebbc7c580fb0ec1b4cbab23115c73bf1f143b",
+        "bytes": 46320
+      },
+      "before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_13\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+        "sha256": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5",
+        "bytes": 46156
+      },
+      "whole_byte_inverse_exact": true,
+      "producer_actual_inverse_literals_extracted_from_AST": true
+    }
+  },
+  "planned_output": {
+    "runtime_directory": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13",
+    "full_directory": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14",
+    "receipt": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_animation_sidecar_budget_projection_receipt_13_14.json",
+    "receipt_schema": "x.validation.character-composition-animation-sidecar-budget-projections/1",
+    "admission_field": "sidecar_budget_projection_receipt",
+    "runtime_files": 167,
+    "full_files": 173,
+    "runtime_changed_paths": [
+      "animation_link.py",
+      "animation_worklist_collection.py",
+      "animation_worklist_new.py"
+    ],
+    "full_changed_paths": [
+      "animation_link.py",
+      "animation_worklist_collection.py",
+      "animation_worklist_new.py",
+      "unity_runtime/Editor/CharacterAnimationReturn.cs"
+    ],
+    "changed_product_paths": 7,
+    "unchanged_product_paths": 333,
+    "runtime_Return_historical_sha256_retained": "4b5ceb26d45e90b77af10d7bf80024190a3e0108c257b388e0e29421cda02285",
+    "full_Return_baseline_sha256": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5",
+    "exporter_sha256_unchanged": "562565879a9c4c05356f82c3b0ec45bd567d1311ef58cbde8a20607452079520"
+  },
+  "producer_source_guards": {
+    "all340_parent_leaves_held_and_hashed_once": true,
+    "old_runtime_cache_only_observed_root_cpython313_files_with_pinned_py_source": true,
+    "other_parent_extras_rejected": true,
+    "cache_hashes_rechecked_before_writes": true,
+    "cache_executed_deleted_copied": false,
+    "paired_owner_peer_current_source_maps_checked": true,
+    "actual_owner_reported_tests_10": true,
+    "Parent_Unity_receiver_validation_separate_from_LoopCollect": true,
+    "old_range_receipt_retained_historical": true,
+    "both_manifests_encoded_before_first_exclusive_creation": true,
+    "all_destinations_must_be_absent": true,
+    "new167_173_raw_inventories_and_leaf_differences_verified": true,
+    "checks_are_source_review_of_guards_not_an_actual_projection_run": true
+  },
+  "pre_invocation_source_self_check_correction": {
+    "historical_draft_source_sha256": "4ddb24e269ccf05c10886a564b2778cc77b0478cda8cc2f2232b1bdb3e222e5e",
+    "caught": "Two CSharp old error-text inverse targets were incorrect; actual old bytes rejected the Source comparison. Corrected only those two inverse literals.",
+    "draft_producer_invoked": false,
+    "projection_or_owner_output_created_by_failed_self_check": false
+  },
+  "scope": "Source producer only. No receiver publication-receipt recovery, current UI rows, seed, native acceptance, package release or deployment is claimed."
+}

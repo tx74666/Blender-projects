@@ -1,0 +1,157 @@
+{
+  "schema": "cdesigner.worklist-original-rigging-attach-source-owner/1",
+  "status": "source_prepared_pure_checks_held",
+  "source_only": true,
+  "native_execution_performed": false,
+  "release_or_deployment_performed": false,
+  "passed": false,
+  "source_scope_verified": true,
+  "reason": "Parent Building/Console priority: compile and all Python/test subprocesses remain held. This is an immutable pre-run Source scope receipt, not completed checks or original-Rig acceptance.",
+  "source_files": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    "test_animation_worklist_rigging_attach.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "sha256": "be52410c4c954d5ec9b80424b1deb350355230d3db2f3daf19510a2700c95b8f",
+      "bytes": 30907
+    }
+  },
+  "changed_runtime_sources": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    }
+  },
+  "prior_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\animation_worklist_80af3395_before_original_rigging_attach.py",
+    "sha256": "80af33958b6326b59f5c2864a560f94e1c24a2b6d3e38f34117b2d75357689f6",
+    "bytes": 41107
+  },
+  "source_snapshots": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\animation_worklist_d4de3eff_attach_prerun_source.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\test_animation_worklist_rigging_attach_be52410c_19case_prerun.py",
+      "sha256": "be52410c4c954d5ec9b80424b1deb350355230d3db2f3daf19510a2700c95b8f",
+      "bytes": 30907
+    }
+  ],
+  "source_scope": {
+    "changed_existing_functions": [
+      "_validate_route",
+      "add",
+      "activate",
+      "sync"
+    ],
+    "added_functions": [
+      "_item_workspace",
+      "_original_rigging_mapping",
+      "_attached_context",
+      "_check_attached_context",
+      "attach_prepared_rigging_work",
+      "_rigging_entry_packet",
+      "validate_rigging_entry"
+    ],
+    "unchanged_existing_function_count": 30,
+    "full_raw_inverse_equal": true,
+    "top_level_bytes_preserved_by_inverse": true,
+    "no_main_session_schema_changes": true,
+    "no_new_rna_fields": true,
+    "restore_adopt_remove_and_opaque_token_functions_unchanged": true,
+    "ordinary_blank_workspace_row_route_unchanged": true,
+    "new_animation_body_existing_schema_gate_retained": true,
+    "native_row_identity": "as_pointer + exact item ID/Rig/WorkID/side; no PropertyGroup Python object identity",
+    "attach_original_rig_gate": "saved.rig == setup.rig; adopted current Scene/viewLayer; physical model path/SHA unchanged; strict mapped bone-name domain identical",
+    "typed_row_admission": "actual workspace/typed Link/full packet/Custom capture prechecks before Activate mutation and before Sync ordinary worker dispatch",
+    "new_row_context": "new per-item workspace path/identity, prepared WorkID and cache namespace; no temporary global-header reassignment",
+    "publication_guard": "actual raw workspace/Link/packet/model rehash after native input import and before publishing row",
+    "unknown_fingerprint_policy_unchanged": true
+  },
+  "api": {
+    "attach": "attach_prepared_rigging_work(context, workspace_path, work_item_id=None)",
+    "validate": "validate_rigging_entry(context, item, session) -> raises on invalid ownership; no return consumed by UI"
+  },
+  "test_plan": {
+    "new_unique_planned": 19,
+    "new_test_names": [
+      "test_current_request_requires_one_ready_rigging_work_not_choose_first",
+      "test_empty_request_and_ordinary_packet_cannot_attach",
+      "test_actual_typed_link_route_target_mismatch_is_nonmutating",
+      "test_original_adoption_model_and_mapping_domain_reject_before_import",
+      "test_add_preserves_old_nine_rows_header_actions_and_uses_new_cache_owner",
+      "test_public_attach_uses_actual_add_then_the_existing_activation_entry",
+      "test_existing_preserved_work_id_cannot_be_reassigned_to_the_new_workspace",
+      "test_prepared_packet_changed_during_input_import_rolls_back_only_new_ids",
+      "test_input_import_failure_retains_original_rows_header_context_and_actions",
+      "test_per_item_route_uses_its_actual_target_keeps_legacy_global_target_guard",
+      "test_activate_missing_capture_rejects_before_preview_close_or_action_assignment",
+      "test_activate_changed_workspace_rejects_before_any_native_transaction",
+      "test_validate_rigging_entry_exact_current_owner_slots_packet_and_capture",
+      "test_distinct_rna_wrappers_of_the_same_native_row_validate_without_python_identity",
+      "test_closed_sync_missing_both_rigging_tags_rejects_before_ordinary_worker_fallback",
+      "test_paired_ordinary_packet_does_not_require_a_rigging_capture",
+      "test_actual_registered_new_origin_keeps_paired_body_activate_and_new_sync_routes",
+      "test_forged_new_animation_flag_on_typed_rigging_link_still_rejects_real_new_schema_gate",
+      "test_validate_rigging_entry_foreign_row_source_side_or_half_workspace_pair_reject"
+    ],
+    "regression_counts": {
+      "rigging_editing_data": 7,
+      "ordinary_worklist": 15
+    },
+    "planned_total": 41,
+    "regression_tests_do_not_add_unique": true,
+    "native_boundary": "Fake packet importer, adopted Rest/control mapping and native 20-channel carrier validator; real workspace/Link JSON, Add/Activate/Sync routing and _register_origin/new-manifest writer execute in planned tests."
+  },
+  "test_result": {
+    "executed": false,
+    "actual_run": 0,
+    "passed": 0,
+    "failed": 0,
+    "duration_seconds": null,
+    "log_pin": null
+  },
+  "source_compilation": {
+    "executed": false,
+    "status": "held pending coordinated pure-check window"
+  },
+  "historical_held_drafts": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\animation_worklist_cac35f35_before_parent_boundary_fixes.py",
+      "sha256": "cac35f35cbea5c71fe41b62dfe2f5281a84d37f68c37a4296a7d144d39f7e875",
+      "bytes": 52679
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\test_animation_worklist_rigging_attach_3b6f926f_13case_source_draft.py",
+      "sha256": "3b6f926f8d8f799c0a37f405a1da8b98c7aa2cfb1f7f2cdb80e9bfe25f6dbc2c",
+      "bytes": 24279
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\test_animation_worklist_rigging_attach_6ba04adb_14case_before_parent_boundary_fixes.py",
+      "sha256": "6ba04adb733d75a38a2b1d5d52dc118164dc9069a7201d0bbd439e4f5b721244",
+      "bytes": 25084
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\animation_worklist_ab573710_before_new_body_compatibility.py",
+      "sha256": "ab573710e42bb0a612ef5406019ef6e1e9d9dcdfa84ea2df810bcbec6af9c272",
+      "bytes": 53003
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\test_animation_worklist_rigging_attach_a69b826d_17case_source_draft.py",
+      "sha256": "a69b826d8d7e962bf7b00b00a2eb1e501984e9a82406eef0894c856075859f94",
+      "bytes": 27402
+    }
+  ],
+  "acceptance_limits": [
+    "No original Rig native acceptance.",
+    "No new WorkID, Link, workspace or artist writes.",
+    "No native/SDK/GUI/worker/build/deploy/install.",
+    "R5 frozen package and all old Source artifacts unchanged."
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "x.validation.character-composition-exact-reference-reconnect-peer-source/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "8c12644a9a5f625cb3a4c73f91d3ca2f1dd69f748fdae608a2daaa54ba665685",
+      "bytes": 103413
+    }
+  },
+  "changed_runtime_sources": {
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "8c12644a9a5f625cb3a4c73f91d3ca2f1dd69f748fdae608a2daaa54ba665685",
+      "bytes": 103413
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_exact_reference_reconnect_owner_source_8c12644a.json",
+    "sha256": "5c255bf78ffdf0a0f715eb1ea2a24450f4ef780af703a608b8fa9666f36c8b6c",
+    "bytes": 7437
+  },
+  "preserved_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_composition_805a457e_before_exact_reference_reconnect.py",
+    "sha256": "805a457ee482d4ee0c7bc01673cb22630f07429e63f854521ae839c0133b65bb",
+    "bytes": 99303
+  },
+  "prior_actual_diagnostic": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\a_reference_readback_probe_01.json",
+    "sha256": "00b99266edfe13b4cb8c60a15a4e300ddda8ed10ea01578172ef41d620dae7ca",
+    "bytes": 2289,
+    "executed_by_this_review": false,
+    "candidate_count": 0,
+    "owned_reference_action_count": 0,
+    "cache_hash_equal": true,
+    "unique_available_action_name": "Reference · Walk_N"
+  },
+  "delta": {
+    "changed_functions": [
+      "prepare_reference",
+      "begin_sync"
+    ],
+    "added_functions": [
+      "_reconnect_reference"
+    ],
+    "unchanged_existing_function_count": 62,
+    "full_raw_inverse_to_preserved_source_exact": true,
+    "top_level_ast_unchanged": true
+  },
+  "review": {
+    "find_reference_read_only_and_byte_unchanged": true,
+    "explicit_prepare_only_reconnects_receipt_present_matching_actions_zero": true,
+    "existing_same_packet_proof_including_case_alias_rejects_reconnect": true,
+    "existing_duplicate_or_changed_native_reference_still_uses_unchanged_strict_finder": true,
+    "packet_schema_full_sha_resolved_path_clip_guid_local_id_native_clock_checked_before_link": true,
+    "cache_absolute_regular_nonsymlink_hash_pinned_before_link": true,
+    "one_available_action_required_inside_exact_cache_not_a_name_picker": true,
+    "only_link_true_and_exact_one_new_native_action_pointer_inventory": true,
+    "unchanged_finder_rechecks_cache_library_path_hash_native_clock_slot_motion_and_unique_candidate_after_link": true,
+    "failure_cleanup_only_new_actions_from_same_exact_cache_not_preexisting_actions": true,
+    "reconnect_no_import_bake_cache_write_receipt_write_rig_pose_action_binding_or_artist_write": true,
+    "existing_reference_creation_receipt_transaction_rollback_unchanged": true,
+    "begin_sync_single_export_session_call_moves_after_exact_route_dto_model_before_collection_fingerprint": true,
+    "closed_sync_metadata_now_sees_explicitly_restored_reference": true,
+    "active_resume_and_session_id_reference_guards_unchanged": true,
+    "foreground_one_existing_export_session_preparation_order_needs_no_tool_change": true,
+    "save_pose_commit_exit_isolation_publication_and_worker_guards_unchanged": true
+  },
+  "line_evidence": {
+    "helper": [
+      534,
+      597
+    ],
+    "prepare_existing_receipt_branch": [
+      610,
+      616
+    ],
+    "unchanged_read_only_find_reference": [
+      499,
+      531
+    ],
+    "sync_route_model_admission_and_preparation": [
+      1701,
+      1720
+    ],
+    "active_resume": [
+      1560,
+      1567
+    ]
+  },
+  "validation": {
+    "stdlib_ast_parse": true,
+    "in_memory_compile": true,
+    "target_imports": 0,
+    "tests_executed": 0,
+    "native_or_sdk_execution": 0,
+    "workspace_or_artist_reads": 0,
+    "source_edits": 0
+  },
+  "limitations": [
+    "This is a Source review. The prior Root-owned probe established zero candidates and the intact cache; this review did not execute a relink or a native UI/Sync chain.",
+    "The revised product requires a fresh separately granted native acceptance; no previous failed UI attempt is relabelled."
+  ]
+}

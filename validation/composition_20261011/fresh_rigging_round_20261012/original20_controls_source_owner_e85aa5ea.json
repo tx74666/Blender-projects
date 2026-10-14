@@ -1,0 +1,171 @@
+{
+  "schema": "x.validation.original20-controls-source-owner/1",
+  "status": "SourceReady",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "e85aa5eac255d2fb1d244dabedb378f541a294c218031f94793bd0f7e42a1f56",
+      "bytes": 34657
+    }
+  },
+  "dependency_source_readback": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "3ef897863611f8be69be7234aa92b39e0f8239fff9d7843547f2677bfd616da1",
+      "bytes": 100310
+    },
+    "animation_worklist_target.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_target.py",
+      "sha256": "ce7aa98f40ebd5bc9af02f38b2362f1f6d4f1af1ca4cb5fa53ac913f7e3d4fa1",
+      "bytes": 39004
+    },
+    "animation_rigging_contract.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_rigging_contract.py",
+      "sha256": "bff52cbe97530662fcee5e4ca248c1fe09e781f73588627cecda62c777d3c179",
+      "bytes": 23545
+    },
+    "animation_composition_weapon.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_composition_weapon.py",
+      "sha256": "9551956548f20607331179034b44dc679888fc85da035fe1f6342e37de580d9c",
+      "bytes": 40280
+    },
+    "animation_original_inputs_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_original_inputs_ui.py",
+      "sha256": "505d36d9747c3e965d29494f85b0fbb42e8e290d41ca927d265b8a6288ea3f82",
+      "bytes": 12482
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_ui.py",
+      "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+      "bytes": 43636
+    }
+  },
+  "required_C5_hooks": {
+    "source_factory": "_new_input_action(..., source_action_id=None), source-only distinct UUID override; capture.newActionId unchanged",
+    "session_validator": "_validate calls validate_session for original_inputs",
+    "reference_validator": "_validate_preview_reference delegates validate_reference for original_inputs",
+    "reference_timing": "_preview_base_timing delegates preview_base_timing for original_inputs",
+    "body_read_only": "activate rejects original BASE Tweak",
+    "body_export_rejected": "base_only rejects ordinary Body export for original_inputs",
+    "presentation_preserved": "original restrict_inputs skips Body collections; apply skips sync_limb_display; original colors/widgets/groups unchanged",
+    "ordinary_paths": "ordinary Attach/import/physicalModel/slot/proof guards remain Root-owned and unchanged outside exact new branch"
+  },
+  "public_api": {
+    "import_inputs": "(context,rig,prepared_report_file,prepared_report_sha256,clock_certificate_file,clock_certificate_sha256)",
+    "current": "(rig)",
+    "display_state": "(rig), cache only",
+    "edit_controls": "(context,rig)",
+    "key_current": "(context,rig)",
+    "view_body": "(context,rig,side=SOURCE|CUSTOM), readonly",
+    "capture_inputs": "(context,session)",
+    "publish_inputs": "(context,rig,filepath) -> exact return/publication three-field pins",
+    "close_owned": "(context,rig)"
+  },
+  "persisted_keys": {
+    "PAIR_KEY": "character_designer_original_inputs_pair_v1",
+    "PAIR_META": "character_designer_original_inputs_owner_v1",
+    "PAIR_REFS": "character_designer_original_inputs_refs_v1",
+    "session_extension": "original_inputs",
+    "preview_reference": "legacy Body Source or Custom; independent stored30 clock"
+  },
+  "source_design_checks": {
+    "only_new_owned_module_written": true,
+    "no_body_model_import_or_rebinding": true,
+    "no_old_Action_tags_or_worklist_writes": true,
+    "actual_completed_known_clock_required_before_new_ids": true,
+    "actual_original_main_record_and_typed_references_verified": true,
+    "selected_slot_body_source_and_custom_motion_preserved": true,
+    "LegacyE545_to_PreparedBFF_float32_rest_parent_lineage_strict": true,
+    "Avatar_hash_matches_original_header": true,
+    "original_model_owner_retained": true,
+    "physical_model_equivalence_not_claimed": true,
+    "no_new_direct_Armature_ID_refs": true,
+    "Source20_new_independent_UUID": true,
+    "Custom20_capture_newActionId_retained": true,
+    "foreign_target_UUID_rejected_before_creation": true,
+    "original_capture_and_frame_times_unmodified": true,
+    "source_and_custom_exact_20_channels": true,
+    "Source20_motion_immutable": true,
+    "no_pose_capture_on_publication": true,
+    "controls_only_Return14": true,
+    "controls_only_publication_completed_flag_and_20_count": true,
+    "legacy_Body_reference_clock_separate": true,
+    "independent_failure_restoration_attempts": true,
+    "exclusive_new_JSON_outputs_and_hash_readback": true,
+    "failed_partial_changed_outputs_retained_with_error": true,
+    "normal_close_retains_committed_carriers": true,
+    "ordinary_body_export_requires_other_route": true
+  },
+  "publication": {
+    "schema": "cdesigner.controls-only-publication/1",
+    "completed": true,
+    "sourceActionId": "actual generated persistent Source UUID; not DB32 or WorkID",
+    "targetInputActionId": "actual prepared capture.newActionId",
+    "sourceAction": "new readonly20Source name/native slot",
+    "targetInputAction": "new editable20Custom name/native slot",
+    "controlChannelCount": 20,
+    "prepareReportPath": "actual required whole SHA pinned Prepare report",
+    "returnFile": "actual new file with full SHA",
+    "legacyBodyReference": "separate old Actions/slots/motion/clock; modelEquivalenceVerified false"
+  },
+  "actual_input_scope": {
+    "prepared_report": "D:/Unity Projects/RandomRealm2/.codex/rigging-prepare/22e9216461994547ba6f06c17ba6d108/report.json",
+    "prepared_report_sha256": "401b00d209b7806fa3c44c06fdf7e643256c64009d2abda45495a8b1cc0d4ac6",
+    "packet_sha256": "bffbbf00c3bcdfccc1a8bc1995aadeb188afb9f1d643bc78f1a34c8bb5cf7c4f",
+    "input_capture_new_action_id": "db32bc9214884033a9185a8706ec01bc",
+    "actual_frame_count": 59,
+    "actual_last_input_time": 0.9666667,
+    "clock_source": "Root-held 8DF certificate producer; actual completed native certificate required, not assumed"
+  },
+  "checks_performed_by_owner": {
+    "bounded_NodeFS_source_review": true,
+    "exact_source_and_dependency_byte_hashes": true,
+    "syntax_or_AST": 0,
+    "Python_or_other_processes": 0,
+    "tests": 0,
+    "Blender_SDK_GUI": 0,
+    "build_deploy": 0
+  },
+  "not_claimed": [
+    "compiled or test-passed product",
+    "native product or original artist acceptance",
+    "full physical model equivalence",
+    "clock native acceptance before actual certificate",
+    "Body FBX/Link Sync/Unity application",
+    "installed/deployed release"
+  ],
+  "authored_tests": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_original_inputs_contract.py",
+    "sha256": "c501fc2835850a06a4f18f21509a9424b5b5b16283dc7fb4d1452f31cf05f13e",
+    "bytes": 11123,
+    "cases": 5,
+    "executed": false,
+    "scope": [
+      "float32 Rest lineage and parent/identity rejection",
+      "legacy30/native60 normalized phase with different double/f32 duration",
+      "exact Action/slot edit role without fabricated native pair proof",
+      "real pure Return14/grid/endpoint and controls-only publication identity",
+      "no overwrite or success on publication readback failure"
+    ],
+    "native_simulation": false
+  },
+  "superseded_owner": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_controls_source_owner_ed8136a0.json",
+    "sha256": "34bd79283a683bc4be077266ef7dc580f8c9ec049e76a3950dbd89729252659b",
+    "bytes": 7035
+  },
+  "preserved_source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unity_animation_original_inputs_ed8136a0_before_view_transaction.py",
+    "sha256": "ed8136a04e278d20e1a815e01395954ef7749067c0caaf8d41b05ad14b57097c",
+    "bytes": 32204
+  },
+  "only_product_delta_from_superseded": "view_body transaction captures before first role/Tweak change; failed switch restores exact old reference/NLA/session/role/Tweak/live pose/display, records independent recovery errors; created stack/properties restored when previously inactive",
+  "review_attribution": {
+    "owner_NodeFS_only": true,
+    "worklist_peer_Source_found_view_body_gap": true,
+    "worklist_final_delta_review_no_new_concrete_blocker": true,
+    "no_peer_tests_or_AST_run": true
+  }
+}

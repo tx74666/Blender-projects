@@ -1,0 +1,329 @@
+{
+  "schema": "x.validation.character-composition-n14-stage-tools-peer-source/1",
+  "utc": "2026-10-11T08:51:47.693204+00:00",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "tool_import_or_invocation_performed": false,
+  "tests_executed": 0,
+  "sdk_gui_cim_resource_queries_performed": false,
+  "fixture_or_grant_created": false,
+  "source_files": {
+    "preflight": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_loop_tail_granted_r8.py",
+      "sha256": "64c495b3fa9dc2b31468f74ccd7f6d18d24b5ecf82c56eb39b7c06eac940f016",
+      "bytes": 39457
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_loop_tail_granted_r9.ps1",
+      "sha256": "5c40a16bc9c84ba4c97706ef5a5d71ba43f92c6c875cbd206d0bd5016b6d9e40",
+      "bytes": 10602
+    }
+  },
+  "preserved_parents": {
+    "preflight": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_loop_tail_granted_r7.py",
+      "sha256": "66e96c9bfc336ca4c23891be7ea0dc9a87acf03005dff17a05e978ce1e685380",
+      "bytes": 32852
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_loop_tail_granted_r8.ps1",
+      "sha256": "f23c46f3dcfb35cc07b7294ba1fa47338361744a4729c158e0e3b678b750abcc",
+      "bytes": 10602
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\n14_stage_preflight_launcher_owner_source_r8_r9.json",
+    "sha256": "bb964773f1f12897bf28cece9ffda0dfe687610edbff6593ac1065ce229c6d3e",
+    "bytes": 4519
+  },
+  "source_delta": {
+    "changed_gate_functions": [
+      "check"
+    ],
+    "unchanged_gate_functions": [
+      "require",
+      "checksum",
+      "sha",
+      "uid",
+      "same_path",
+      "load",
+      "reparse",
+      "main"
+    ],
+    "unchanged_function_count": 8,
+    "added_gate_functions": [],
+    "python_ast_parse_and_in_memory_compile_passed": true,
+    "powershell_in_memory_parser_errors": 0,
+    "top_level_except_attempt_docstring_unchanged": true,
+    "assert_count": 0,
+    "launcher_inverse_byte_exact": true,
+    "launcher_delta": "Only n13->n14 and preflight r7 filename->r8",
+    "preflight_changed_line_ranges": [
+      {
+        "tag": "replace",
+        "old_lines": [
+          1,
+          1
+        ],
+        "new_lines": [
+          1,
+          1
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          77,
+          77
+        ],
+        "new_lines": [
+          77,
+          77
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          107,
+          107
+        ],
+        "new_lines": [
+          107,
+          107
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          110,
+          110
+        ],
+        "new_lines": [
+          110,
+          110
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          114,
+          114
+        ],
+        "new_lines": [
+          114,
+          114
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          118,
+          118
+        ],
+        "new_lines": [
+          118,
+          118
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          124,
+          124
+        ],
+        "new_lines": [
+          124,
+          124
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          128,
+          128
+        ],
+        "new_lines": [
+          128,
+          128
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          131,
+          131
+        ],
+        "new_lines": [
+          131,
+          131
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          218,
+          219
+        ],
+        "new_lines": [
+          218,
+          220
+        ]
+      },
+      {
+        "tag": "insert",
+        "old_lines": [
+          236,
+          235
+        ],
+        "new_lines": [
+          237,
+          304
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          395,
+          395
+        ],
+        "new_lines": [
+          464,
+          464
+        ]
+      },
+      {
+        "tag": "replace",
+        "old_lines": [
+          399,
+          399
+        ],
+        "new_lines": [
+          468,
+          468
+        ]
+      },
+      {
+        "tag": "insert",
+        "old_lines": [
+          411,
+          410
+        ],
+        "new_lines": [
+          480,
+          483
+        ]
+      }
+    ],
+    "unchanged_original_tail_review_map_and_publication_guards": true,
+    "unchanged_projection_tools_clock_packet_artist_profile_guards": true
+  },
+  "reviewed_checks": [
+    {
+      "lines": [
+        99,
+        138
+      ],
+      "finding": "Fresh Parent/X once background-only n14 grant with exact config/source-entry, separately pinned binding/review/readback and reviewed launch bytes. No n13 grant reused."
+    },
+    {
+      "lines": [
+        207,
+        220
+      ],
+      "finding": "Immutable n11 actual12 numeric source/recovery pins retained; schema/2 physical tail requires exactly12 fields."
+    },
+    {
+      "lines": [
+        221,
+        306
+      ],
+      "finding": "Six exact n12 historic pins/two actual SOURCE rev1 exports retained. Actual n12 JSON has numericTrue/completedFalse/fresh2/native217; current plan executes0 numerical variants. Latest 496/862/C16 pins enforce failure/noLoop/noSeed/noRecovery/consumed oldclaim plus exact historical939 checks."
+    },
+    {
+      "lines": [
+        307,
+        325
+      ],
+      "finding": "Original239/0da/583 before-map remains independent from the verified latestc0/531/dd7 SourceEntry map; paired source changes are identical and their current after bytes pin before continuation."
+    },
+    {
+      "lines": [
+        326,
+        408
+      ],
+      "finding": "Exact runtime167/full173=340 inventory, same eight overlays, exact eleven source/seven background helpers, native1eb/driver701/clock-export/serializer provenance unchanged."
+    },
+    {
+      "lines": [
+        409,
+        466
+      ],
+      "finding": "Native fixture217/3seek/two-object, originalartistE8, actual three sealed B packets/rate equality and current two revision1/Looprevision0 links verified. Owned empty short profiles, no prior attempt outputs, final complete pin rehash retained."
+    },
+    {
+      "launcher_lines": [
+        33,
+        103
+      ],
+      "finding": "Soleartist PID27676/executable, RAM200MiB, near98 percent slowdown/recheck, complete preflight, exclusive claim and logs precede spawn; unchanged by delta."
+    },
+    {
+      "launcher_lines": [
+        108,
+        172
+      ],
+      "finding": "factory startup/background/disable-autoexec/python-exit-code1, frozen continuation --config/--reuse-admission+SHA, owned profile restoration, Hidden window and natural exit/OS closure retain no-artist/no-kill/no-GUI semantics."
+    }
+  ],
+  "actual_saved_shape_evidence": {
+    "pins": [
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_native_crash_protection_readback_64160.json",
+        "sha256": "496c1945714b87f380cdbe1eef125922fbdcfeba0bdaa1db4424bb033e5b4f68",
+        "bytes": 334778
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\process_exit.json",
+        "sha256": "86225dbffdb3867c17ad6e66d32ea94bca9758cd5f62bec1bb5f1a2604818268",
+        "bytes": 572
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\source_entry_receipt.json",
+        "sha256": "c16ae8f065288e033db6c02b0fd75aa2c54176b9b33d44405b9bf624aabf9a72",
+        "bytes": 207270
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\composition_native_report.json",
+        "sha256": "32d5178e73f2900d21add8518ec6fd45fc4df40c41586f11a4abb00257d06eb9",
+        "bytes": 1545407
+      }
+    ],
+    "historical939_checks_match_entry": true,
+    "latest_before": {
+      "build_character_composition_continuation_fixture.py": "c0b3264e348e47b13f5fb287b1af73b35bb0c9f8fa9e500ff77b378442072956",
+      "run_character_composition_first_stage_continuation.py": "5317df7fab6932a22565997720320984192352cb2a9c98965d58a921cbd0384a",
+      "composition_timing_acceptance.py": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c"
+    },
+    "n12": {
+      "numeric_completed": true,
+      "completed": false,
+      "fresh_isolated_variants_verified": 2,
+      "fresh_packet_count": 2,
+      "fresh_association_count": 2,
+      "pre_post_native_count": 217
+    },
+    "n13": {
+      "natural_exit_code": 11,
+      "completed": false,
+      "allQaGone_saved_record": true
+    }
+  },
+  "blockers_found": [],
+  "limitations": [
+    "This is source/API/immutable-JSON-shape review, not a fresh preflight execution, RAM/CIM/SDK/native/GUI query or native acceptance.",
+    "No new n14 config/grant/readback/fixture/source-entry pins are fabricated; actual later inputs must satisfy the reviewed gate.",
+    "Inherited n12 numerics/publications remain historical facts; failed n13 is never relabeled completed.",
+    "Future UI08 freezer/builder adaptation remains read-only planning until full n14 contract and actual successful closure."
+  ]
+}

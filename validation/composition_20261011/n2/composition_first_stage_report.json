@@ -1,0 +1,50 @@
+{
+  "schema": "x.validation.character-composition-first-stage-report/1",
+  "completed": false,
+  "config": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\first_stage_config.json",
+  "config_sha256": "472e276f9491cd8b6cffeee5ecffa98c0af2884dab74a72c34ddeac3faec66d2",
+  "resource_checks": [
+    {
+      "phase": "before_native_numeric",
+      "available_bytes": 1612292096,
+      "total_bytes": 16943685632,
+      "used_percent": 90,
+      "minimum_available_bytes": 209715200
+    }
+  ],
+  "numeric": {
+    "schema": "x.validation.character-composition-native/1",
+    "completed": false,
+    "fixture": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\native_fixture.json",
+    "fixture_sha256": "8f26dd1972b19463f82af49db074482864a126696e0e60544d883fb9b96879f2",
+    "initial_workspace_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\initial_workspace.json",
+      "sha256": "8ec5adb1609a9cc48d0da54c50b0d7c4a4e8b8632d77662b1302b57a477b122e"
+    },
+    "runtime": {
+      "package": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer",
+      "manifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\python_projection.json",
+      "manifest_sha256": "0cc92b42ac34c43d17c1d00b64c304a1306215c82384fc3dfbb5505988bad962",
+      "files": 167
+    },
+    "original_after_historical_restore": true,
+    "fresh_workspace_scene": {
+      "name": "Composition QA · Fresh Workspace",
+      "target_guid": "4925d3edceb94a540818298698a4120e",
+      "historical_target_guid": "3207a6768cff4594fb4b180b85f70a37",
+      "same_native_rig_object": true,
+      "historical_rig_scene_names": [
+        "Scene"
+      ],
+      "official_original_owner_transition": true,
+      "official_fresh_adoption": true
+    },
+    "phase_seconds": {
+      "official_qa_fk_match": 2.42573899999843
+    },
+    "fresh_workspace_cleanup": "historical_native_state_and_rows_restored"
+  },
+  "error_type": "LimbIKError",
+  "error": "The active Armature must belong only to the current Scene.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\tools\\run_character_composition_first_stage.py\", line 174, in main\n    run(config, report)\n    ~~~^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\tools\\run_character_composition_first_stage.py\", line 153, in run\n    native.run(fixture, report['numeric'], after_numeric=after_numeric)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\tools\\verify_character_composition_native.py\", line 539, in run\n    report['qa_fk_preflight'] = phase(report, 'official_qa_fk_match',\n                                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        lambda: match_qa_fk(bpy.context, rig, specs[0], prepared_packet))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\tools\\verify_character_composition_native.py\", line 404, in phase\n    return operation()\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\tools\\verify_character_composition_native.py\", line 540, in <lambda>\n    lambda: match_qa_fk(bpy.context, rig, specs[0], prepared_packet))\n            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n2\\tools\\verify_character_composition_native.py\", line 109, in match_qa_fk\n    result = batch.switch_all(context, rig, 'FK', keys=selected, keyframe=False)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer\\limb_ik_fk_batch.py\", line 233, in switch_all\n    saved_original = _require(context, armature)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer\\limb_ik_fk_batch.py\", line 209, in _require\n    active = limb_ik._require_active_armature(context, limb_ik._settings(context), analyzed=False)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer\\limb_ik.py\", line 668, in _require_active_armature\n    raise LimbIKError(\"The active Armature must belong only to the current Scene.\")\ncharacter_designer.limb_ik.LimbIKError: The active Armature must belong only to the current Scene.\n"
+}

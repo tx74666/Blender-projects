@@ -1,0 +1,689 @@
+{
+  "schema": "x.validation.composition-snapshot-serializer-source-peer/1",
+  "utc": "2026-10-11T06:32:08.731496+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "reviewer": "/root/export_scale_review",
+  "changed_runtime_sources": {
+    "animation_composition_export.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+      "sha256": "2dd2173ec604918328b25945f22916d96ce8039a322c7ed034ee65f686b69984",
+      "bytes": 47158
+    }
+  },
+  "numeric_reuse_delta": {
+    "old_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\python_projection.json",
+      "sha256": "a7c660d546bcc6f2b0720750eb03279b62a24f968967a385746c6f13effeb150"
+    },
+    "changed_functions": {
+      "animation_composition_export.py": [
+        "begin_isolated_export"
+      ]
+    },
+    "added_functions": {
+      "animation_composition_export.py": [
+        "_snapshot_editor_state",
+        "_prepare_snapshot_editor"
+      ]
+    },
+    "serialization_only": true
+  },
+  "input_pins": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_composition_export.py",
+      "sha256": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67",
+      "bytes": 44171
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+      "sha256": "2dd2173ec604918328b25945f22916d96ce8039a322c7ed034ee65f686b69984",
+      "bytes": 47158
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_owner_source_2dd2173e.json",
+      "sha256": "c8ddda33148e625367b1f995e29635892ee0200858711c8d8a29e097d2c02c25",
+      "bytes": 5638
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export_worker.py",
+      "sha256": "e98cd3202ad18f47a2f53e1e9d6999dd023089a11d73ab6950229516c33c5741",
+      "bytes": 7242
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_snapshot_id_links_source_r3_11d94f69.json",
+      "sha256": "b6fd99e828a6421092889cbd81dac267ef091d8dfdc43215ba16ff21e548969f",
+      "bytes": 101434
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_snapshot_system_property_source_diagnosis_20261011_b6fd99e8.json",
+      "sha256": "1c962b309f3a5e5e85de8208a9198c0118380f24fbf48ea976099ec9fc7e0785",
+      "bytes": 14927
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_snapshot_editor_state.py",
+      "sha256": "2bf2c7717f5d41a16ce0f83589c8b65bf6b442c661267de362b8c12a84f1aeb3",
+      "bytes": 6053
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_composition_controls_export.py",
+      "sha256": "60ce4ca50f66427cef9c00250740a0f4085e91631e5dfc42b51b43e6ea380720",
+      "bytes": 26909
+    }
+  ],
+  "normalized_delta": {
+    "existing_top_level_function_count": 27,
+    "unchanged_function_ast_and_utf8_source_count": 26,
+    "unchanged_functions": [
+      "_sha256",
+      "baseline_worker",
+      "_curves",
+      "_action_hash",
+      "_simple_action",
+      "_validate_curve",
+      "assert_constant_curve",
+      "_validate_action_timing",
+      "validate_action_scope",
+      "_pose_path",
+      "effective_fingerprint",
+      "effective_values_proof",
+      "_frame_range",
+      "export_timing",
+      "_source_wires",
+      "_check_closed_dependencies",
+      "_strip_id_refs",
+      "_copy_selected_action",
+      "_sample_effective",
+      "_artist_state",
+      "_raise_destination",
+      "isolate_export",
+      "_worker_scope",
+      "validate_export_receipt",
+      "poll_isolated_export",
+      "cancel_isolated_export"
+    ],
+    "added_functions": [
+      "_snapshot_editor_state",
+      "_prepare_snapshot_editor"
+    ],
+    "standalone_boundary_call_count": 1,
+    "exact_call": "_prepare_snapshot_editor(rig, original)",
+    "call_immediately_before": "bpy.data.libraries.write",
+    "complete_normalized_module_ast_equal": true,
+    "all_other_top_level_imports_statements_and_nested_functions_unchanged": true,
+    "worker_exact_bytes_unchanged": true,
+    "UTF8_generated_names_codepoint_183_preserved": true
+  },
+  "semantic_review": {
+    "exact_editor_field": "character_designer_unity_export",
+    "only_disposable_native_Object_and_Armature_pointers_admitted": true,
+    "known_field_registration_required": true,
+    "direct_driver_output_target_or_use_self_reads_refused_even_if_muted": true,
+    "target_ID_matches_use_native_pointer_not_Python_wrapper_identity": true,
+    "unset_performed_once_only_on_disposable_Object": true,
+    "original_full_preferences_and_native_ID_pointer_state_checked_unchanged": true,
+    "unmaterialized_pointer_preferences_not_materialized_by_reader": true,
+    "reader_stops_at_native_ID_pointer_and_does_not_follow_mesh_material_graph": true,
+    "controls_scope_Rest_action_curves_sampling_mathematics_timebase_unchanged": true,
+    "unknown_evaluation_dependency_admission_not_relaxed": true,
+    "worker_exact_Object_and_Action_inventory_and_sample_value_equality_retained": true,
+    "no_generic_root_IDProperty_deletion": true,
+    "exact_field_consumers": [
+      {
+        "file": "__init__.py",
+        "line": 8800,
+        "text": "export_property = bpy.types.Object.bl_rna.properties.get(\"character_designer_unity_export\")"
+      },
+      {
+        "file": "__init__.py",
+        "line": 8837,
+        "text": "unity_export_registered = hasattr(bpy.types.Object, \"character_designer_unity_export\")"
+      },
+      {
+        "file": "__init__.py",
+        "line": 8894,
+        "text": "bpy.types.Object.character_designer_unity_export = PointerProperty(type=CharacterDesignerUnityExport)"
+      },
+      {
+        "file": "__init__.py",
+        "line": 9000,
+        "text": "if added_export and hasattr(bpy.types.Object, \"character_designer_unity_export\"):"
+      },
+      {
+        "file": "__init__.py",
+        "line": 9001,
+        "text": "del bpy.types.Object.character_designer_unity_export"
+      },
+      {
+        "file": "__init__.py",
+        "line": 9045,
+        "text": "if hasattr(bpy.types.Object, \"character_designer_unity_export\"):"
+      },
+      {
+        "file": "__init__.py",
+        "line": 9046,
+        "text": "del bpy.types.Object.character_designer_unity_export"
+      },
+      {
+        "file": "unity_export_ui.py",
+        "line": 59,
+        "text": "return rig, rig.character_designer_unity_export"
+      },
+      {
+        "file": "unity_export_ui.py",
+        "line": 668,
+        "text": "config = rig.character_designer_unity_export"
+      }
+    ],
+    "binary_peer_saved_SDNa_root_count": 19,
+    "binary_peer_exact_property_copy_proof": {
+      "original_object": "OBCoshaRig",
+      "original_address": "0x7a99ff64e569ced0",
+      "copied_object": "OBComposition · B Evaluation",
+      "copied_address": "0x5a8cec072193f7e0",
+      "original_system_storage_address": "0x984b82baa390700",
+      "copied_system_storage_address": "0x2c73232b06516f50",
+      "original_export_property_records": [
+        {
+          "path": "system_properties.character_designer_unity_export",
+          "address": "0x984b82baa390b80",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.directory",
+          "address": "0x984b82baa390ba0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.filename",
+          "address": "0x984b82baa390bd0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras",
+          "address": "0x984b82baa390bf0",
+          "array_index": 0,
+          "type": 9
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0]",
+          "address": "0x984b82baa390c20",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0].object",
+          "address": "0x984b82baa390c30",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0].enabled",
+          "address": "0x984b82baa390c40",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1]",
+          "address": "0x984b82baa390c20",
+          "array_index": 1,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1].object",
+          "address": "0x984b82baa390c60",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1].enabled",
+          "address": "0x984b82baa390c70",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2]",
+          "address": "0x984b82baa390c20",
+          "array_index": 2,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2].object",
+          "address": "0x984b82baa390c90",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2].enabled",
+          "address": "0x984b82baa390ca0",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.show_objects",
+          "address": "0x984b82baa390c10",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.asset_id",
+          "address": "0x984b82baa390cc0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.last_status",
+          "address": "0x984b82baa390cd0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.last_report",
+          "address": "0x984b82baa390cf0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials",
+          "address": "0x984b82baa390d10",
+          "array_index": 0,
+          "type": 9
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials[0]",
+          "address": "0x984b82baa390d40",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials[0].material",
+          "address": "0x984b82baa390d50",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.show_warnings",
+          "address": "0x984b82baa390d30",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.show_materials",
+          "address": "0x984b82baa390d70",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches",
+          "address": "0x984b82baa390bb0",
+          "array_index": 0,
+          "type": 9
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0]",
+          "address": "0x984b82baa390d80",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material",
+          "address": "0x984b82baa390d90",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].source_material",
+          "address": "0x984b82baa390dc0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_guid",
+          "address": "0x984b82baa390dd0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_path",
+          "address": "0x984b82baa390df0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_name",
+          "address": "0x984b82baa390e10",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].project_root",
+          "address": "0x984b82baa390e30",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].export_asset_id",
+          "address": "0x984b82baa390e50",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_local_id",
+          "address": "0x984b82baa390da0",
+          "array_index": 0,
+          "type": 0
+        }
+      ],
+      "copied_export_property_records": [
+        {
+          "path": "system_properties.character_designer_unity_export",
+          "address": "0x2c73232b06517290",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.directory",
+          "address": "0x2c73232b065172b0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.filename",
+          "address": "0x2c73232b065172e0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras",
+          "address": "0x2c73232b06517300",
+          "array_index": 0,
+          "type": 9
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0]",
+          "address": "0x2c73232b06517330",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0].object",
+          "address": "0x2c73232b06517340",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0].enabled",
+          "address": "0x2c73232b06517350",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1]",
+          "address": "0x2c73232b06517330",
+          "array_index": 1,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1].object",
+          "address": "0x2c73232b06517370",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1].enabled",
+          "address": "0x2c73232b06517380",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2]",
+          "address": "0x2c73232b06517330",
+          "array_index": 2,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2].object",
+          "address": "0x2c73232b065173a0",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2].enabled",
+          "address": "0x2c73232b065173b0",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.show_objects",
+          "address": "0x2c73232b06517320",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.asset_id",
+          "address": "0x2c73232b065173d0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.last_status",
+          "address": "0x2c73232b065173e0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.last_report",
+          "address": "0x2c73232b06517400",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials",
+          "address": "0x2c73232b06517420",
+          "array_index": 0,
+          "type": 9
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials[0]",
+          "address": "0x2c73232b06517450",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials[0].material",
+          "address": "0x2c73232b06517460",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.show_warnings",
+          "address": "0x2c73232b06517440",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.show_materials",
+          "address": "0x2c73232b06517480",
+          "array_index": 0,
+          "type": 1
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches",
+          "address": "0x2c73232b065172c0",
+          "array_index": 0,
+          "type": 9
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0]",
+          "address": "0x2c73232b06517490",
+          "array_index": 0,
+          "type": 6
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material",
+          "address": "0x2c73232b065174a0",
+          "array_index": 0,
+          "type": 7
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].source_material",
+          "address": "0x2c73232b065174d0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_guid",
+          "address": "0x2c73232b065174e0",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_path",
+          "address": "0x2c73232b06517500",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_name",
+          "address": "0x2c73232b06517520",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].project_root",
+          "address": "0x2c73232b06517540",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].export_asset_id",
+          "address": "0x2c73232b06517560",
+          "array_index": 0,
+          "type": 0
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material_local_id",
+          "address": "0x2c73232b065174b0",
+          "array_index": 0,
+          "type": 0
+        }
+      ],
+      "all_export_records_disjoint": true,
+      "same_export_native_targets": true,
+      "original_export_native_ID_links": [
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0].object",
+          "property_address": "0x984b82baa390c30",
+          "array_index": 0,
+          "target_address": "0x6bc6b79f701ca300",
+          "target_id": "OBHair"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1].object",
+          "property_address": "0x984b82baa390c60",
+          "array_index": 0,
+          "target_address": "0x21c57bb701431580",
+          "target_id": "OBDress"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2].object",
+          "property_address": "0x984b82baa390c90",
+          "array_index": 0,
+          "target_address": "0x58cdfb1ad0853a80",
+          "target_id": "OBJacket"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials[0].material",
+          "property_address": "0x984b82baa390d50",
+          "array_index": 0,
+          "target_address": "0x64438a6abc39ce00",
+          "target_id": "MAStocking Main"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material",
+          "property_address": "0x984b82baa390d90",
+          "array_index": 0,
+          "target_address": "0x458ba1f79574d660",
+          "target_id": "MACrystal_Blue"
+        }
+      ],
+      "copied_export_native_ID_links": [
+        {
+          "path": "system_properties.character_designer_unity_export.extras[0].object",
+          "property_address": "0x2c73232b06517340",
+          "array_index": 0,
+          "target_address": "0x6bc6b79f701ca300",
+          "target_id": "OBHair"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[1].object",
+          "property_address": "0x2c73232b06517370",
+          "array_index": 0,
+          "target_address": "0x21c57bb701431580",
+          "target_id": "OBDress"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.extras[2].object",
+          "property_address": "0x2c73232b065173a0",
+          "array_index": 0,
+          "target_address": "0x58cdfb1ad0853a80",
+          "target_id": "OBJacket"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.simple_materials[0].material",
+          "property_address": "0x2c73232b06517460",
+          "array_index": 0,
+          "target_address": "0x64438a6abc39ce00",
+          "target_id": "MAStocking Main"
+        },
+        {
+          "path": "system_properties.character_designer_unity_export.unity_material_matches[0].material",
+          "property_address": "0x2c73232b065174a0",
+          "array_index": 0,
+          "target_address": "0x458ba1f79574d660",
+          "target_id": "MACrystal_Blue"
+        }
+      ]
+    },
+    "binary_peer_ref_storage": "Object ID.system_properties.character_designer_unity_export (five mesh/material picker links); ordinary custom props and other copied root groups do not supply the leaked links."
+  },
+  "validation_accounting": {
+    "owner_reported_pure_tests": 43,
+    "owner_batches": [
+      {
+        "count": 8,
+        "exit_code": 0,
+        "file": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_snapshot_editor_state.py",
+          "sha256": "2bf2c7717f5d41a16ce0f83589c8b65bf6b442c661267de362b8c12a84f1aeb3",
+          "bytes": 6053
+        }
+      },
+      {
+        "count": 35,
+        "exit_code": 0,
+        "file": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_composition_controls_export.py",
+          "sha256": "60ce4ca50f66427cef9c00250740a0f4085e91631e5dfc42b51b43e6ea380720",
+          "bytes": 26909
+        }
+      }
+    ],
+    "reviewer_tests_rerun": 0,
+    "reviewer_native_calls": 0,
+    "reviewer_source_AST_and_pin_readback": true
+  },
+  "review_correction": {
+    "previous_Unicode_blocker_retracted": true,
+    "reason": "An earlier reviewer diff mixed default text decoding for the frozen source with explicit UTF-8 for canonical source. Raw read_bytes().decode(utf-8), constant ordinals and AST prove identical U+00B7 (183); no product repair was needed or performed."
+  },
+  "limitations": [
+    "SOURCE-only approval of exact serializer patch; new native serialized inventory and physical export remain pending.",
+    "Prior n11 actual12numeric+217 remains historical immutable evidence, not a fresh native result.",
+    "Saved SDNA pointer evidence was produced by peer bounded file decoder; this reviewer checked its pins/records and product consumers without new Blender evaluation."
+  ]
+}

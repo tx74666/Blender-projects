@@ -1,0 +1,67 @@
+--- 0.77.18/__init__.py
++++ 0.77.19/__init__.py
+@@ -1,7 +1,7 @@
+ bl_info = {
+     "name": "Character Designer",
+     "author": "Randy & Codex",
+-    "version": (0, 77, 18),
++    "version": (0, 77, 19),
+     "blender": (4, 0, 0),
+     "location": "View3D > Sidebar > Character Designer",
+     "description": "Personal modeling, rig-setup, and generic reference-view tools.",
+--- 0.77.18/animation_worklist_collection.py
++++ 0.77.19/animation_worklist_collection.py
+@@ -314,9 +314,14 @@
+         clip = next((clip for clip in catalog['clips'] if worklist._clip_key(clip) == attempt.key), None)
+         if clip is None or (workspace.route_identity(clip), clip.get('linkManifest')) != batch['add_routes'][attempt.key]:
+             raise ValueError('A requested work-item source or destination changed; its import was stopped.')
++        previous_scene = context.window.scene
+         item = worklist.add(context, attempt.key, activate_new=False, _collection=True)
+-        # The first import owns a new independent scene. Subsequent imports use
+-        # that one rig and leave the artist's active Action untouched.
++        # Only a successful first import that actually switches scenes created
++        # an editing scene; a legacy owned rig can be reused with saved.rig unset.
++        if not queue.successes:
++            batch['created_scene'] = context.window.scene != previous_scene
++        # Subsequent imports use that one rig and leave the artist's active
++        # Action untouched.
+         batch['scene'] = context.window.scene
+         queue.complete(attempt.token, success=True, result={'item_id': item.item_id}, published=True)
+     else:
+@@ -337,6 +342,14 @@
+     queue = batch['queue']
+     message = (('Added' if queue.mode == ADD else 'Synced') + ' ' + str(len(queue.successes)) +
+                ' / ' + str(queue.total) + '; ' + queue.state.title() + '.')
++    if queue.mode == ADD and queue.successes:
++        try:
++            scene_name = batch['scene'].name
++        except ReferenceError:
++            pass  # A deleted scene cannot supply a label; queue cleanup still runs.
++        else:
++            message += ((' Created' if batch.get('created_scene') else ' Used') +
++                        ' animation scene "' + scene_name + '".')
+     if queue.failure:
+         message += ' ' + queue.failure.message
+     if queue.cancel_error:
+--- 0.77.18/animation_worklist_ui.py
++++ 0.77.19/animation_worklist_ui.py
+@@ -331,7 +331,10 @@
+ class CHARACTERDESIGNER_OT_worklist_add_ready(Operator):
+     bl_idname = 'character_designer.worklist_add_ready'
+     bl_label = 'Import Prepared'
+-    bl_description = 'Import animations from the latest Unity preparation; keep existing edits and the active animation'
++    bl_description = (
++        'Import animations prepared in Unity. Use this workspace\'s animation rig when available; '
++        'otherwise create a separate animation scene and import the character. '
++        'Keep existing custom edits and the active animation')
+ 
+     @classmethod
+     def poll(cls, context):
+@@ -649,6 +652,7 @@
+     header.operator_context = 'INVOKE_DEFAULT'
+     header.operator('character_designer.worklist_connect', text='Connect', icon='FILE_FOLDER')
+     header.operator('character_designer.worklist_refresh', text='', icon='FILE_REFRESH')
++    box.label(text='Scene: ' + getattr(context.scene, 'name', 'Unnamed'), icon='SCENE_DATA')
+     busy = scan_pending() or _collection().running()
+     if settings.workspace_path:
+         box.label(text='Character: ' + (settings.target_name or 'Unnamed'))

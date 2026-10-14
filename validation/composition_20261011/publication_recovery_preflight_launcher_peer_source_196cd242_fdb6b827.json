@@ -1,0 +1,145 @@
+{
+  "schema": "x.validation.character-composition-recovery-launcher-independent-source-review/1",
+  "utc": "2026-10-11T11:36:33.163205+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "result": "READY_SOURCE_ONLY",
+  "source_files": {
+    "preflight": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_publication_recovery_n16.py",
+      "sha256": "196cd242f8a6363b9debc5bc305f2dd901138c940327948bbd2f73cf57ccadcb",
+      "bytes": 9962
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_publication_recovery_n16.ps1",
+      "sha256": "fdb6b827139c442a0b972a170f92d62c967a37e99f71f14e5d450289a8496e04",
+      "bytes": 10277
+    },
+    "reviewed_launcher_donor": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_loop_tail_granted_r10.ps1",
+      "sha256": "6a059b3de88f2da53fa238fa8a63919dc17a546190192d3c22dcd87bfeb82c31",
+      "bytes": 10602
+    },
+    "parent_admission_writer_source": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\New-PublishedLoopRecoveryAdmission.ps1",
+      "sha256": "89d81e2c89d65206b4bc7b8972b5087ec8e72dc7391d752dfb6a780a657c061a",
+      "bytes": 8989
+    },
+    "config": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\recovery_config.json",
+      "sha256": "5fe6262c1a32fafb9866912241d76f5f6d6b60258e3299123c5b130d4952a4c6",
+      "bytes": 4077
+    },
+    "source_entry": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\source_entry_receipt.json",
+      "sha256": "d0ca62b6822f4926399f180f18ebeadd659c8c92d7daa1dcede3251bf877046a",
+      "bytes": 392237
+    },
+    "native_fixture": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\native_fixture.json",
+      "sha256": "292e5659669becff3ffcde4b3f9469b42f626e0a57fd3ba11c6cc4a12521c013",
+      "bytes": 2601
+    },
+    "fixture_independent_source_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\independent_source_readback_d0ca62b6.json",
+      "sha256": "95740d1e9711dd72dc4d6b26191e4c3e895e83ec62344decb2baab8f7b771418",
+      "bytes": 9208
+    },
+    "frozen_recovery_driver": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\run_character_composition_publication_recovery.py",
+      "sha256": "a21e531819225c4990242351ee9a2e84646cd8ac8a6714c5cd845c4a56f61fcf",
+      "bytes": 51225
+    },
+    "historical_pre_fix_owner_HOLD": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16_launcher_source_owner_21431754_fdb6b827.json",
+      "sha256": "076b2cb27d33f3925273d0bc6ed54c362790ae014c4332d0a085f938528fd263",
+      "bytes": 2368
+    }
+  },
+  "reviewed_fix": {
+    "superseded_preflight_sha256": "21431754bb2cf28c661fe654fdb43a1c9645e699453f8aee9e17b3182e625330",
+    "defect": "Historical entry.tools contains seven helpers; the recovery driver has an independent entry.driver pin. The old guard required eight entry.tools and omitted the driver filename.",
+    "final_guard": "Require seven historical helpers, union with independently authenticated A21 driver filename, exactly eight raw directory entries, and nonreparse tools directory.",
+    "actual_entry_helper_count": 7,
+    "actual_tool_directory_count": 8,
+    "actual_directory_names": [
+      "composition_session_acceptance.py",
+      "composition_sync_acceptance.py",
+      "composition_timing_acceptance.py",
+      "release_projection.py",
+      "run_character_composition_first_stage.py",
+      "run_character_composition_first_stage_continuation.py",
+      "run_character_composition_publication_recovery.py",
+      "verify_character_composition_native.py"
+    ]
+  },
+  "launcher_inverse": {
+    "normalized_complete_source_equals_reviewed_donor": true,
+    "changes": [
+      "n15 to n16 attempt and owned paths",
+      "preflight filename",
+      "recovery --config-sha256 replaces prior --reuse-admission arguments",
+      "runner receipt replaces unused cache/reuse fields"
+    ],
+    "all_other_source_unchanged": true
+  },
+  "admission_contract": {
+    "parent_source_schema_read": true,
+    "readback_pin_field": "pins",
+    "requires_actual_separate_parent_grant_and_binding": true,
+    "parent_thread": "01a12305-aada-7273-b72c-54a41aad77e4",
+    "recipient_thread": "01a12751-d08f-7630-b790-18db26fe3186",
+    "strict_config_source_entry_driver_and_projection_pins": true,
+    "requires_parent_admitted_preflight_launcher_blender_config_entry": true,
+    "declared_source_inputs_rehashed_by_preflight": 1836,
+    "profiles_empty_and_separate_guard": true,
+    "once_outputs_absent_guard": true,
+    "validation_copy_matches_artist_SHA_without_loading_artist": true,
+    "driver_CLI_matches_actual_main": [
+      "--config",
+      "--config-sha256"
+    ]
+  },
+  "execution_contract": {
+    "once_claim_exclusive_before_spawn": true,
+    "spawn_failure_consumes_claim": true,
+    "bundled_python_B": true,
+    "background_hidden_blender_factory_startup_disable_autoexec": true,
+    "owned_profiles_env_restored_in_finally": true,
+    "resource_floor_MiB": 200,
+    "near_98_percent_reread_and_serialization_retained": true,
+    "sole_artist_PID": 27676,
+    "normal_exit_actual_code_retained": true,
+    "postexit_CIM_error_cannot_count_as_success": true,
+    "no_StopProcess_or_forced_termination": true,
+    "completion_and_UI_not_invoked": true
+  },
+  "source_truth_counters": {
+    "published_SOURCE_inherited": 3,
+    "published_SOURCE_executed": 0,
+    "authoring_executed": 0,
+    "numeric_resampling_executed": 0,
+    "current_receipt_acceptance": 1,
+    "current_UI_imports": 2,
+    "current_Loop_imports": 1,
+    "fresh_outer_recovery_and_seed_required": true
+  },
+  "checks_performed": {
+    "bounded_raw_pin_hash_and_size_readback": 10,
+    "source_AST_parse_and_in_memory_compile": true,
+    "candidate_modules_imported": 0,
+    "preflight_checks_invoked": 0,
+    "launchers_invoked": 0,
+    "tests_run": 0,
+    "Blender_calls": 0,
+    "SDK_GUI_CIM_resource_calls": 0,
+    "full1836_raw_source_rehash_repeated": false
+  },
+  "limits": [
+    "This is source compatibility and fail-closed admission review, not native recovery acceptance.",
+    "Parent admission writer source was read; no actual grant was created or consumed by this reviewer.",
+    "All live process, resource, native receipt, recovery and seed facts remain pending the separately authorized execution.",
+    "Historical owner076b records the superseded preflight214 draft and is not presented as a current-source approval."
+  ]
+}

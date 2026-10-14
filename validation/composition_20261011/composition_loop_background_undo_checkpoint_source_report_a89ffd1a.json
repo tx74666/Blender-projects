@@ -1,0 +1,223 @@
+{
+  "schema": "x.validation.character-composition-loop-background-undo-checkpoint-source-report/1",
+  "created_utc": "2026-10-11T08:36:51.892699+00:00",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "bpy_native_import_or_tool_execution_performed": false,
+  "sdk_gui_cim_resource_queries_performed": false,
+  "source_files": {
+    "timing": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+      "bytes": 50843
+    },
+    "new_native_boundary_tests": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_loop_native_boundary.py",
+      "sha256": "1373aaf0d2d03786dd1cd44ec6121c9713d41d76811cc1b5b5a21bdff06e96f0",
+      "bytes": 10130
+    },
+    "existing_operator_tests": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_loop_operator_guards.py",
+      "sha256": "37c85e9e8b03e4f195796c50bc5a3f15ed824fc7e5a5caeb7d4eef223d2c2162",
+      "bytes": 12786
+    }
+  },
+  "preserved_old_sources": {
+    "timing": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_timing_acceptance_dd7ab1c9_before_background_undo_checkpoint.py",
+      "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "bytes": 49161
+    },
+    "operator_tests": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\test_composition_loop_operator_guards_31043daa_before_background_checkpoint.py",
+      "sha256": "31043daa967fa8d701d3f550e112cb45b9b812ca38fb34c877abc19ab5e9b267",
+      "bytes": 12769
+    },
+    "n13_frozen_timing": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\tools\\composition_timing_acceptance.py",
+      "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "bytes": 49161
+    },
+    "headful07_frozen_timing": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_07\\composition_timing_acceptance.py",
+      "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "bytes": 49161
+    }
+  },
+  "source_delta": {
+    "changed_functions": [
+      "_author_loop",
+      "author_hold_loop"
+    ],
+    "added_functions": [],
+    "unchanged_function_count": 31,
+    "unchanged_functions": [
+      "require",
+      "validate_config",
+      "validate_author_config",
+      "_sealed_loop",
+      "_sealed_clocks",
+      "_sealed_raise",
+      "b_clock",
+      "a_clock",
+      "_write",
+      "_sha",
+      "_modules",
+      "_row",
+      "_input_values",
+      "_assert_moving",
+      "_pose",
+      "_max_error",
+      "_open",
+      "_loop_visibility",
+      "_loop_rotation_state",
+      "_loop_rotation_delta",
+      "_loop_select",
+      "_raw_timing",
+      "_reset_clone",
+      "_isolated_samples",
+      "_isolated_a_samples",
+      "_published_hold",
+      "_assert_strip_clocks",
+      "_compare",
+      "_numeric_proof",
+      "measure_registered_raise",
+      "run"
+    ],
+    "top_level_non_function_ast_unchanged": true,
+    "native_key_moving_commit_protection_tail_exact": true,
+    "new_callback_is_optional": true,
+    "other_runtime_tool_or_product_edits_performed": false
+  },
+  "pure_test_results": {
+    "test_count": 18,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0,
+    "new_boundary_test_count": 7,
+    "existing_operator_test_count": 11,
+    "command": [
+      "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_composition_loop_*.py",
+      "-v"
+    ],
+    "cwd": "D:\\MyRepository\\Blender-addons-by-Randy",
+    "stdout_summary": "Ran 18 tests; OK",
+    "duration_seconds": 0.337,
+    "log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_loop_background_undo_checkpoint_pure_tests_a89ffd1a.txt",
+      "sha256": "37b5a380f4479806bbadabbf47a1cf4e37e3ceb8d1860bc92df8aca135e600c7",
+      "bytes": 3295
+    }
+  },
+  "earlier_owner_fixture_runs": [
+    {
+      "tests": 18,
+      "failures": 0,
+      "errors": 6,
+      "cause": "New AST test namespace lacked json/traceback; corrected test-only fixture."
+    },
+    {
+      "tests": 18,
+      "failures": 0,
+      "errors": 6,
+      "cause": "New fake AnimationData lacked native Tweak frame-conversion method; corrected test-only identity-clock fixture."
+    }
+  ],
+  "coverage": [
+    "Background sends EXEC_DEFAULT, False to actual extracted author-loop fake C boundary; headful sends True.",
+    "All four native-frame readbacks retain actualundo_requested and checkpoint_stage.",
+    "Pre-call callback sees pending true, complete false, no operator result; native nonreturning BaseException preserves report checkpoint.",
+    "Callback storage failure prevents native operator invocation and commit.",
+    "CANCELLED and FINISHED with zero actual rotation retain pending true and never commit.",
+    "Exact bool background admission rejects unknown/int state before C.",
+    "checkpoint_phase is populated before C; failure_phase is absent from pre-call report and reserved for actual Exception path.",
+    "Existing selection/effective visibility/native equality/finite basis/motion/clock/key/commit/protection guards still exercised."
+  ],
+  "checkpoint_contract": {
+    "pre_call": {
+      "complete": false,
+      "pendingNativeOperator": true,
+      "checkpoint_stage": "before_native_rotate",
+      "checkpoint_phase": "author_actual_HoldLoop_Custom"
+    },
+    "verified_return": {
+      "pendingNativeOperator": false,
+      "checkpoint_stage": "native_rotate_verified"
+    },
+    "verified_return_requires": [
+      "literal FINISHED",
+      "finite positive native quaternion-basis rotation delta > 1e-7"
+    ],
+    "pending_false_does_not_mean_authoring_complete": true,
+    "persistence_writer": "Existing _write temporary-file replacement unchanged."
+  },
+  "actual_failed_attempt_evidence": {
+    "protection_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_native_crash_protection_readback_64160.json",
+      "sha256": "496c1945714b87f380cdbe1eef125922fbdcfeba0bdaa1db4424bb033e5b4f68",
+      "bytes": 334778
+    },
+    "source_diagnosis": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13_native_hud_context_source_diagnosis_dd7ab1c9.json",
+      "sha256": "cbef8f937c68b6c7b9c25a0795fac4eddbcc1d3a9596579ebb7a2595ba2b1196",
+      "bytes": 6673
+    },
+    "installed_commit_from_saved_stdout": "fbe6228777e7",
+    "actual_null_runtime_pointer_observed": false,
+    "native_operator_result_or_acceptance_claimed": false
+  },
+  "official_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/python/intern/bpy_operator_function.cc",
+      "lines": [
+        107,
+        139,
+        303,
+        357,
+        400
+      ],
+      "fact": "Second Python positional bool is forwarded as C_undo; operator result and post-FINISHED update remain actual."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/windowmanager/intern/wm_event_system.cc",
+      "lines": [
+        1850,
+        1868,
+        1174,
+        1179,
+        1198,
+        1207,
+        1238,
+        1258
+      ],
+      "fact": "False brackets same operator execution with positive undo depth; depth-zero undo/register/redo-HUD handling is suppressed."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/editors/transform/transform_ops.cc",
+      "lines": [
+        481,
+        501,
+        893,
+        905
+      ],
+      "fact": "Native rotate is REGISTER|UNDO; actual EXEC transforms and returns its literal status."
+    }
+  ],
+  "limits": [
+    "Pure fake-C fixtures do not prove installed Blender native behavior.",
+    "n13 crash did not persist operator after-value/result or committed Loop/seed; no completed attempt claimed.",
+    "No manual curve fallback, collection visibility mutation, poll-only pass, or relaxed numeric/ownership guard.",
+    "Headful undo remains enabled; existing session/Raise/headful07 sources and failed evidence remain immutable.",
+    "No projection, build, deploy, Blender/SDK/GUI execution or future attempt fixture generation performed.",
+    "A corrected native run needs a separate fresh grant."
+  ]
+}

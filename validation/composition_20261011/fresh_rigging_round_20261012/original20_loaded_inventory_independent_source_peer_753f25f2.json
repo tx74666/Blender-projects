@@ -1,0 +1,41 @@
+{
+  "schema": "x.validation.original20-loaded-inventory-independent-source-peer/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "validate_original20_controls.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls.py",
+      "sha256": "753f25f209772c348907e78eed1950010b6d396dbdccc344c0345708cefd3be5",
+      "bytes": 28824
+    }
+  },
+  "owner": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_loaded_inventory_diagnostic_source_753f25f2.json",
+    "sha256": "dfb501faef349a5e5438df084c8dd23446697d8427ac6417b9667c188071a0a4",
+    "bytes": 1421
+  },
+  "before": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls_cc1d75a4_before_loaded_inventory_diagnostic.py",
+    "sha256": "cc1d75a4fdf0957661beab2080f897d9a04a95bca6f7327330d30ed266ad1d49",
+    "bytes": 27822
+  },
+  "findings": {
+    "sole_insert_before_original_check_loaded_snapshot": true,
+    "whole_byte_inverse_exact": true,
+    "expected_original_memory_vs_actual_reopened_seed_label_explicit": true,
+    "actual_Action_identity_users_fakeuser_asset_and_missing_unexpected_recorded": true,
+    "original_inventory_slot_oldBody_assets_guards_unchanged": true,
+    "no_creation_reconstruction_mutation_or_waiver": true
+  },
+  "concrete_source_blockers": [],
+  "execution": {
+    "AST": 0,
+    "compile": 0,
+    "tests": 0,
+    "imports": 0,
+    "processes": 0,
+    "native_GUI": 0
+  },
+  "limits": "Diagnostic evidence only; no reopened-seed equality or original20 native pass inferred."
+}

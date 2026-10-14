@@ -1,0 +1,56 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "resource_owner": "X",
+  "written_utc": "2026-10-12T21:48:27.293Z",
+  "start": {
+    "schema": "x.validation.process-start/1",
+    "stage": "Integration",
+    "pid": 34268,
+    "process_filetime": "134363150014561428",
+    "started_utc": "2026-10-12T21:43:21.4205561Z",
+    "resource_token": "X_ORIGINAL_INTEGRATION_SAVE_07738_03",
+    "free_mib": 1725.8,
+    "request_sha256": "3f0064786d59649886140ea8de77467c1461a43eda85d3374e80b59fb441b725",
+    "argv": [
+      "-B",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\call_original20_artist_sdk_long.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738_03\\integration_request.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738_03\\integration_caller",
+      "9877",
+      "3f0064786d59649886140ea8de77467c1461a43eda85d3374e80b59fb441b725"
+    ],
+    "retained_handle": true
+  },
+  "end": {
+    "schema": "x.validation.process-end/1",
+    "stage": "Integration",
+    "pid": 34268,
+    "process_filetime": "134363150014561428",
+    "retained_handle_natural_exit": true,
+    "exit_code": 1,
+    "ended_utc": "2026-10-12T21:44:38.2450108Z",
+    "elapsed_seconds": 76.8105232,
+    "owned_process_gone": true,
+    "process_termination_performed": false,
+    "operation_success_inferred": false
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_artist_integration_07738_03/original20_artist_integration_report.json",
+    "sha256": "33e538b103e832df568f7ca9791c23c1c9211274d0423b6cb6f78b5585302662",
+    "bytes": 121961
+  },
+  "completed": false,
+  "full_qualified_current_assets_actions_before_Pose_verified": true,
+  "Pose_append_completed": true,
+  "Pose_accepted_content_sha256": "acdd30eda498c058f9fea9a7a019ec11ffd355e7409b666e26cb98e69d225d3f",
+  "original_save_attempted": false,
+  "original_disk_unchanged": true,
+  "public_failure_close_completed": true,
+  "failure": "RuntimeError: Pose restoration added unexpected native data.",
+  "diagnostic": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_pose_append_diagnostic_01/report.json",
+    "sha256": "0a3f9c7eea5077262bafa5332af31eecb75994bab27a5bbb2f0b67ad20f9bef0",
+    "bytes": 3190
+  },
+  "resource_returned_to_parent": false
+}

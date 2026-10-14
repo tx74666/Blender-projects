@@ -1,0 +1,114 @@
+{
+  "schema": "x.validation.character-composition-completion-writer-source-review/1",
+  "createdUtc": "2026-10-11T03:08:53.761414+00:00",
+  "reviewer": "/root/export_scale_review",
+  "status": "READY_SOURCE_ONLY",
+  "pins": {
+    "originalWriter": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_n8_completion.py",
+      "sha256": "c1d6558c39c308c498c26aea8d8006abd1474e01defda6abd8a5511a08291780",
+      "bytes": 3937
+    },
+    "repairedWriter": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_n8_completion_r2.py",
+      "sha256": "60efa43f06fb52e065323add3da8b1b78a987a0c99bde975e0c6a4ccca838150",
+      "bytes": 5028
+    },
+    "auditor": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_n8_completed.py",
+      "sha256": "8e6319df911621a5bc8fcfe0dc9d569fda260109b52d7303719b740f55ab4f05",
+      "bytes": 25257
+    },
+    "reviewedN7R2Auditor": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_n7_completed_r2.py",
+      "sha256": "93a9f2ac0fff042fadccf61a70b205d99a114b598b1c949c3e9ee202db2a78d9",
+      "bytes": 24930
+    },
+    "actualN8Launch": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n8\\launch_receipt.json",
+      "sha256": "94b49954027128bcea1a5dbfb452693bf77eb62969d6f2f9a9d931fc5fc2dbb3",
+      "bytes": 1262
+    }
+  },
+  "concreteOriginalGap": "Original writer used Python assert for expected SHA, completion/PASS/code, destination and OS-return admission. Python optimization removes these statements; it could label a wrong pin or failed sole-artist census completed. Original source preserved; a unique r2 was created within authorized staging scope.",
+  "repairScope": [
+    "Replace all four assert statements with unconditional require gates.",
+    "Require exact completed-audit schema/read-only/PASS/natural0/actual main PID47592 and actual OS absence flags.",
+    "Use fixed read-only PowerShell CIM query with Stop-on-error and nonzero-return rejection. Independently validate returned JSON is exactly artist PID27676/executable D:/Blender5.2/blender.exe.",
+    "Keep actual artist e8 and runtime08/full09 JSON pins; no new native/report/candidate fields were fabricated.",
+    "Serialize finite JSON before destination.open(x); never overwrite the original completion path."
+  ],
+  "fixedPowerShellLiteral": "$ErrorActionPreference = 'Stop'; $taskBlender = @(Get-CimInstance Win32_Process -Filter \"Name='blender.exe'\" -ErrorAction Stop | Select-Object ProcessId, ExecutablePath, CommandLine); $taskBlender | ConvertTo-Json -Compress; if ($taskBlender.Count -ne 1 -or $taskBlender[0].ProcessId -ne 27676 -or $taskBlender[0].ExecutablePath -ne \"D:\\Blender5.2\\blender.exe\") { exit 2 }",
+  "auditorCompatibility": {
+    "originalReviewedAuditor": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_n7_completed_r2.py",
+      "sha256": "93a9f2ac0fff042fadccf61a70b205d99a114b598b1c949c3e9ee202db2a78d9",
+      "bytes": 24930
+    },
+    "currentAuditor": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_n8_completed.py",
+      "sha256": "8e6319df911621a5bc8fcfe0dc9d569fda260109b52d7303719b740f55ab4f05",
+      "bytes": 25257
+    },
+    "sameFunctionSet": true,
+    "unchangedFunctionNames": [
+      "load",
+      "numeric_payload",
+      "passed",
+      "pid_absent",
+      "pin",
+      "require",
+      "sha",
+      "uid"
+    ],
+    "changedFunctionNames": [
+      "audit",
+      "main"
+    ],
+    "functionAstEqualAfterOnlyN7ToN8LabelReplacement": true,
+    "otherChanges": "Only n8 CONFIG_SHA, ENTRY_SHA and DEFAULT constants plus n7-to-n8 explanatory labels/doc text differ. Full Loop SOURCE/export/provenance proof, completed/natural0/PID-absence, numeric/physical/seed and recovery gates are retained."
+  },
+  "currentLaunchBinding": {
+    "launchReceipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n8\\launch_receipt.json",
+      "sha256": "94b49954027128bcea1a5dbfb452693bf77eb62969d6f2f9a9d931fc5fc2dbb3",
+      "bytes": 1262
+    },
+    "pid": 47592,
+    "background": true,
+    "guiGranted": false,
+    "artistMutationAllowed": false
+  },
+  "sourceReviewResults": {
+    "noAssertDependentGuardRemaining": true,
+    "unknownOrIncompleteAuditCannotPublish": true,
+    "naturalExitCodeZeroRequired": true,
+    "mainActualPidAbsenceRequired": true,
+    "externalAllBlenderEqualsArtistCensusRequired": true,
+    "powershellLiteralNoInterpolatedInput": true,
+    "unexpectedCimJsonRejects": true,
+    "artistAndProjectionPinsRequired": true,
+    "exclusiveCreatePreserved": true,
+    "jsonSerializationBeforeCreate": true
+  },
+  "rootReadback": "Root independently read the complete r2 source and approved its unconditional gates, actual PID47592, OS stop-on-error/exact dict/path and serialization-before-exclusive creation. No execution was authorized to this reviewer.",
+  "diff": "--- D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_n8_completion.py\n+++ D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_n8_completion_r2.py\n@@ -16,6 +16,11 @@\n AUDITOR_SHA = '8e6319df911621a5bc8fcfe0dc9d569fda260109b52d7303719b740f55ab4f05'\n \n \n+def require(value, message):\n+    if not value:\n+        raise RuntimeError(message)\n+\n+\n def sha(path):\n     return hashlib.sha256(Path(path).read_bytes()).hexdigest()\n \n@@ -24,7 +29,7 @@\n     path = Path(path)\n     digest = sha(path)\n     if expected is not None:\n-        assert digest == expected.lower(), str(path)\n+        require(digest == expected.lower(), 'Changed immutable pin: ' + str(path))\n     return {'path': str(path), 'sha256': digest}\n \n \n@@ -34,22 +39,34 @@\n \n def main():\n     destination = E / 'completion_closure.json'\n-    assert not destination.exists()\n+    require(not destination.exists(), 'Preserve the existing completion closure; never overwrite.')\n     proof(AUDITOR, AUDITOR_SHA)\n     spec = importlib.util.spec_from_file_location('actual_n8_completion_auditor', AUDITOR)\n     audit_module = importlib.util.module_from_spec(spec)\n     spec.loader.exec_module(audit_module)\n     audit = audit_module.audit(E)\n-    assert audit['status'] == 'PASS' and audit['natural_exit_code'] == 0\n-    command = ('$taskBlender = @(Get-CimInstance Win32_Process -Filter \"Name=\\'blender.exe\\'\" '\n+    require(audit['schema'] == 'x.validation.character-composition-completed-file-audit/1'\n+            and audit['status'] == 'PASS' and audit['natural_exit_code'] == 0\n+            and audit['read_only'] is True and audit['actual_os_pid_absent'] is True\n+            and audit['pid'] == 47592,\n+            'Only the actual n8 PID47592 natural-exit0 completed audit is admissible.')\n+    command = (\"$ErrorActionPreference = 'Stop'; \"\n+               '$taskBlender = @(Get-CimInstance Win32_Process -Filter \"Name=\\'blender.exe\\'\" -ErrorAction Stop '\n                '| Select-Object ProcessId, ExecutablePath, CommandLine); '\n                '$taskBlender | ConvertTo-Json -Compress; '\n                'if ($taskBlender.Count -ne 1 -or $taskBlender[0].ProcessId -ne 27676 '\n                '-or $taskBlender[0].ExecutablePath -ne \"D:\\\\Blender5.2\\\\blender.exe\") { exit 2 }')\n     result = subprocess.run(['powershell', '-NoProfile', '-Command', command],\n                             capture_output=True, check=False)\n-    assert result.returncode == 0, result.stdout.decode('utf-8-sig', errors='replace')\n+    require(result.returncode == 0, 'The actual sole-artist process query failed: '\n+            + result.stdout.decode('utf-8-sig', errors='replace')\n+            + result.stderr.decode('utf-8-sig', errors='replace'))\n     remaining = json.loads(result.stdout.decode('utf-8-sig'))\n+    require(type(remaining) is dict and type(remaining.get('ProcessId')) is int\n+            and remaining['ProcessId'] == 27676\n+            and type(remaining.get('ExecutablePath')) is str\n+            and remaining['ExecutablePath'].lower() == r'D:\\Blender5.2\\blender.exe'.lower(),\n+            'The returned actual process inventory is not the sole original artist PID27676.')\n     artist = proof(r'D:\\Blender\\Projects\\Character\\X\\X.blend',\n                    'e8d3013ef14e02ed76160a838e7d255490fd1b6ece340e7c3f9e33dc57a3377f')\n     record = {'schema': 'x.validation.character-composition-completion-closure/1',\n@@ -68,8 +85,9 @@\n               'unity_import_performed': False, 'gui_verification_performed': False,\n               'next_step': 'Generate SOURCE-only u1 fixture before Parent catalog mutation; '\n                            'actual GUI needs a separate exact once-only grant.'}\n+    serialized = json.dumps(record, ensure_ascii=False, allow_nan=False, indent=2) + '\\n'\n     with destination.open('x', encoding='utf-8') as stream:\n-        stream.write(json.dumps(record, ensure_ascii=False, allow_nan=False, indent=2) + '\\n')\n+        stream.write(serialized)\n     print(json.dumps({'completion_closure': proof(destination), 'completed': True,\n                       'all_qa_workers_gone_verified': True, 'numeric_cases': audit['numeric_cases'],\n                       'source_publication_count': len(audit['publications'])}, indent=2))\n",
+  "actionsPerformed": {
+    "sourceReads": true,
+    "hashReadback": true,
+    "astParsing": true,
+    "newUniqueStagingWriterAndThisReviewOnly": true
+  },
+  "actionsNotPerformed": {
+    "writerExecution": true,
+    "auditorExecution": true,
+    "processCensusExecution": true,
+    "testsOrCompilation": true,
+    "nativeOrUnityExecution": true,
+    "sdkOrGuiOperations": true,
+    "workerLaunchOrPublication": true,
+    "candidateToolOrRuntimeEdits": true,
+    "artistMutations": true
+  },
+  "limits": "This proves source fail-closed boundaries only. Actual n8 is still running at review; no completion/numeric/physical/seed/exit/worker-gone/artist-preservation pass is claimed. Root alone may invoke r2 after actual natural exit and decide subsequent admission."
+}

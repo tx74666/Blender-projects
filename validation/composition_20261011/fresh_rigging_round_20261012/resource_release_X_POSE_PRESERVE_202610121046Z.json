@@ -1,0 +1,79 @@
+{
+  "schema": "x.validation.owned-Pose-preservation-release/1",
+  "completed": true,
+  "resource_released": true,
+  "write_sdk_original_pid": 27676,
+  "write_sdk_count": 2,
+  "first_sdk_error_before_output_or_write": "Bone.select unavailable in Blender 5.2; preserved 01 caller error",
+  "write_source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/preserve_original_pose_action.py",
+    "sha256": "702aa1b69291cba7e8bc722d3324507f8d412043a6b15503d97a4b9fb9cc5458",
+    "bytes": 7540
+  },
+  "write_caller": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/call_preserve_original_pose_action.py",
+    "sha256": "141363a068d6d8a32b5f17455fc11336fbcd0f4d9d06ad79cad449145ca0adcd",
+    "bytes": 1247
+  },
+  "write_report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/Pose-preservation_01/Pose_library_write_report.json",
+    "sha256": "6ac66dc320e88238075a243586cdb92b535da14cc4decf912886dedb912296d4",
+    "bytes": 496343
+  },
+  "backup": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\Pose-preservation_01\\Pose.blend",
+    "sha256": "c956d715940c7a92ea19a85e26997498a7bda0b0d86a300a443ba507e0055dc6",
+    "bytes": 95415
+  },
+  "readback_source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/readback_preserved_pose_action.py",
+    "sha256": "6b93cbc4d46798f78340388185eebfc329ecf65e6468266c530c5baa0bd1608b",
+    "bytes": 8290
+  },
+  "readback_report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/Pose-preservation_02_readback/Pose_library_readback_report.json",
+    "sha256": "26123aaff8dd5a83e00611ae52ca1aa1e4bb30db69294b99dfb1f5a9d6391aa2",
+    "bytes": 495682
+  },
+  "readback_end": {
+    "ended_at": "2026-10-12T10:46:09.6349849Z",
+    "started_at": "2026-10-12T10:46:07.5517383Z",
+    "pid": 70448,
+    "filetime": "134362755675730448",
+    "exit_code": 0,
+    "retained_handle_normal_exit": true,
+    "kill_used": false,
+    "original_file_sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "original_filetime": "134359355330496074"
+  },
+  "readback_end_pin": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/Pose-preservation_02_readback_caller/end.json",
+    "sha256": "ebdcd9ad883edb3a78a11cdf7a48fee0a463e5cffe59f70438fce5af901477ca",
+    "bytes": 378
+  },
+  "failed_readback01_report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/Pose-preservation_01_readback/Pose_library_readback_report.json",
+    "sha256": "9383b2b73e60a19d8b06045662fcbfcdc59de5506d90d2a8584d393ce203eca6",
+    "bytes": 495659
+  },
+  "all_pose_layers_slots_curves_keys_metadata_equal": true,
+  "content_sha256": "acdd30eda498c058f9fea9a7a019ec11ffd355e7409b666e26cb98e69d225d3f",
+  "curves": 360,
+  "keys": 360,
+  "only_action_Pose_in_library": true,
+  "objects_in_library": 0,
+  "fake_user_after_append": false,
+  "fake_user_in_saved_library": true,
+  "original_live_write_before_after_equal": true,
+  "original_fake_flag_was_changed": false,
+  "artist_saved": false,
+  "original_file": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "bytes": 34682050
+  },
+  "model_or_frame_edit": false,
+  "native20_started": false,
+  "remaining": "final artist save must retain original Pose via fake-user, then verify; native20 validation still pending",
+  "qualification": "Readback01 contents exact but assumed append fake-user retention; 02 direct-open actual persisted flag proves library retained. No original user-content deletion."
+}

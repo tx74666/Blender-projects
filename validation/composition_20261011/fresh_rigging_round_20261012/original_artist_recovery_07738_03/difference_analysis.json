@@ -1,0 +1,58 @@
+{
+  "schema": "x.recovery.diff-analysis/1",
+  "read_only": true,
+  "source_inputs": {
+    "before": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_02\\fresh_full_before.json",
+      "sha256": "ff34b835cf347f6dd55308c9b22d682f54139d04b4d914f546ce58329ea2b599",
+      "bytes": 4084462
+    },
+    "after": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_03\\fresh_full_after.json",
+      "sha256": "866747ce3f95a44389be3f71fb14b193f895a2f304b4252968d6b9486d3259a9",
+      "bytes": 4084464
+    },
+    "raw_before": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_02\\fresh_raw_before.json",
+      "sha256": "05f3bb41c1953eb2cf56236d288096637b080fb13b9792120d164111ed9449df",
+      "bytes": 3183134
+    },
+    "raw_after": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_recovery_07738_03\\fresh_raw_after.json",
+      "sha256": "f0388908ef247b6aa6a9fc73da4a0afc42c9acf0ffcc34864a9bcc8f94318b03",
+      "bytes": 3183244
+    },
+    "original_prefailure": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_refresh_07736_01/original_artist_runtime_refresh_receipt.json",
+      "sha256": "34f4a7449d2ae68daefa0c02d584aa823a867e34e617b0afca59f7856a771b05",
+      "bytes": 183069
+    }
+  },
+  "full_differences": [
+    {
+      "path": ".assets.CoshaRig.runtime_generated_outputs.objects.Cosha.keys.CD Forearm Twist.L.002.mute",
+      "before": true,
+      "after": false
+    },
+    {
+      "path": ".assets.CoshaRig.runtime_generated_outputs.objects.Cosha.keys.CD Forearm Twist.R.002.mute",
+      "before": true,
+      "after": false
+    }
+  ],
+  "raw_differences": [
+    {
+      "path": ".window_managers.2556597908496.character_designer_dress_wiggle_advanced",
+      "before": "<absent>",
+      "after": false
+    },
+    {
+      "path": ".Scene_custom_properties.2558108551696.character_designer_twist_render_lock",
+      "before": "<absent>",
+      "after": false
+    }
+  ],
+  "after_assets_equal_original_pre_F9_assets": true,
+  "qualification_accepted": false,
+  "source_review_pending": true
+}

@@ -1,0 +1,84 @@
+{
+  "review": "07712_existing_subdivision_skin_order_fidelity_limit",
+  "source_reports": {
+    "before": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\character_export_fix_20261009\\real_fbx_roundtrip_explicit_parent.json",
+      "sha256": "aaec682c804bf07ceef2c0892abe8d309e1ffc418fc57f7c4bddee7a1ada3cce",
+      "passed": true
+    },
+    "final": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\character_export_fix_20261009\\final_fbx_roundtrip_07712.json",
+      "sha256": "cf01bf57ac68d23c914b02fd91b563e0a5830cb99bcf8be117e93fcbb33aec9b",
+      "passed": true
+    }
+  },
+  "source_rest_and_root_errors": {
+    "root": 0.0,
+    "local_rest": 0.0,
+    "world_rest": 0.0
+  },
+  "source_combined_pose_matrix_error": 3.159046173095703e-06,
+  "actual_fbx_imported_pose_max_matrix_error": 3.3080577850341797e-06,
+  "actual_fbx_imported_skin_vs_independent_lbs_max_m": 2.730067523225686e-06,
+  "before_final_pipeline_diagnostics_identical": true,
+  "pipeline_diagnostic": {
+    "Clothes": {
+      "label": "source_linear_armature_then_modifiers_vs_baked_modifiers_then_linear_skin",
+      "diagnostic_only": true,
+      "count": 2525,
+      "maximum_m": 3.570755603769498e-07,
+      "rms_m": 2.0745495045842136e-07,
+      "p99_m": 3.3986193940738655e-07
+    },
+    "Cosha": {
+      "label": "source_linear_armature_then_modifiers_vs_baked_modifiers_then_linear_skin",
+      "diagnostic_only": true,
+      "count": 14470,
+      "maximum_m": 0.011670617666802222,
+      "rms_m": 0.00031487076738359615,
+      "p99_m": 0.0015232384655844632
+    },
+    "Dress": {
+      "label": "source_linear_armature_then_modifiers_vs_baked_modifiers_then_linear_skin",
+      "diagnostic_only": true,
+      "count": 3040,
+      "maximum_m": 3.869244981698715e-07,
+      "rms_m": 1.5547496257887852e-07,
+      "p99_m": 3.390559943518941e-07
+    },
+    "Hair": {
+      "label": "source_linear_armature_then_modifiers_vs_baked_modifiers_then_linear_skin",
+      "diagnostic_only": true,
+      "count": 5463,
+      "maximum_m": 6.876131253352751e-07,
+      "rms_m": 2.2051781934258454e-07,
+      "p99_m": 5.281875971901311e-07
+    },
+    "Stocking": {
+      "label": "source_linear_armature_then_modifiers_vs_baked_modifiers_then_linear_skin",
+      "diagnostic_only": true,
+      "count": 2063,
+      "maximum_m": 0.011316095889303285,
+      "rms_m": 0.0005550690089564551,
+      "p99_m": 0.0020973849796880025
+    }
+  },
+  "tested_diagnostic_pose": "combined bilateral forearm/hand +45 deg, shin +30 deg, foot +20 deg; retained descendant frames transported in world space",
+  "source_pipeline": "native source ShapeKey Basis + linear Armature skin, then native Subdivision and remaining modifiers",
+  "export_pipeline": "native source ShapeKey Basis + native Subdivision and remaining modifiers with Armature disabled, then normalized ordinary FBX linear skin",
+  "mathematical_reason": "Subdivision of normalized weighted transformed vertices generally differs from normalized multiplication of separately subdivided weights and Basis vertices. The ordering does not commute when neighboring skin transforms/weights differ.",
+  "normalization_note": {
+    "Cosha_baked_retained_weight_sum_min": 0.7659979462623596,
+    "Cosha_baked_retained_weight_sum_max": 1.2256388366222382
+  },
+  "interpretation": "Existing export surface-fidelity limitation; differs from the repaired 180-degree bone bind-axis corruption. It is present identically before and after 07712 Forearm calibration.",
+  "limits": {
+    "source_preserve_volume": "explicitly disabled for this source diagnostic to compare ordinary linear skin",
+    "forearm_correction_runtime": "explicitly disabled; .002 owned keys omitted; four orphan artist keys preserved",
+    "Unity_runtime_verified": false,
+    "all_original_Blender_subdivision_surfaces_match_export": false
+  },
+  "review_only": true,
+  "native_process_started": false,
+  "frozen_oracle_modified": false
+}

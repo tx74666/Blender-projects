@@ -1,0 +1,87 @@
+{
+  "schema": "x.validation.character-composition-ui-owned-window-context-independent-source-review/1",
+  "reviewer": "/root/worklist_review",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "composition_ui_checkpoints.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "98325ddfc8c7903bc0d11f2dd78a8b62cf9457a2fc6d398ab06c6ff524a51be7",
+      "bytes": 28709
+    }
+  },
+  "before_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_ui_checkpoints_7eaaa038_before_owned_window_context.py",
+    "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+    "bytes": 20498
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_ui_owned_context_source_owner_98325ddf.json",
+    "sha256": "921d765b38df1b74b743b4b3d165213861f2e9119042b484e717147f91f02b28",
+    "bytes": 4752
+  },
+  "original_source_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_ui_context_original_source_7eaaa038.json",
+    "sha256": "a83b03f5cdc1ff5384437b1f6633e925e32bab3e354ffb59a9f51ff79854b6bd",
+    "bytes": 791
+  },
+  "paired_source_files": {
+    "composition_session_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "91255f9fe392a284fac332d8135e3deaa82b560b57b5a72a7e4f4eceb9dd604e",
+      "bytes": 58352
+    }
+  },
+  "runner_approval": "No runner source approved here. Root superseded in-flight9106; new final runner needs separate independent peer.",
+  "independent_AST_evidence": {
+    "unchanged_top_functions": [
+      "require",
+      "validate_options",
+      "capture_path",
+      "owned_profile",
+      "_persist"
+    ],
+    "unchanged_controller_methods": [
+      "persist",
+      "verify_captures",
+      "fresh_state",
+      "prepare_view"
+    ],
+    "original_continue_capture_stop_bodies_AST_exact": true,
+    "tick_inner_inverse_AST_exact": true,
+    "timer_failure_handler_AST_exact": true,
+    "four_temporary_class_AST_exact": true,
+    "registration_body_AST_exact_after_scope_unwrap": true,
+    "startup_rollback_AST_exact_after_scope_unwrap": true,
+    "module_top_level_exact_except_contextmanager_import_and_three_reopen_constants": true,
+    "added_top_definitions": [
+      "owned_scene_context",
+      "validate_reopen_boundary"
+    ],
+    "bare_assert_count": 0
+  },
+  "review_findings": {
+    "owned_context": "Exact owned sibling profile roots and actual Blender resources, nonbackground process, one actual WM window, one exact local named QA Scene and current ViewLayer. Only owned QA window.scene changes; no saved artist file or actor state mutation.",
+    "ordinary_operations": "Timer next/guard/capture and Continue/stop/finished use freshly reacquired scopes. Each generator yield returns to Controller and exits its temp_override. Native context references are temporary scope locals, not Controller state.",
+    "reopen": "Exact five-field plain command with two admitted phase/basename/path/Scene/fullSHA combinations. Old tick override exits before open_mainfile(use_scripts=False,load_ui=False). Only plain operator/report state is touched afterward; next persistent tick reacquires context and protection before Session _current continues.",
+    "seam": "No visual checkpoint, screenshot or ACK is fabricated for the reopen command. Exact Session91255 phase/filename contract matches.",
+    "missing_context": "completedFalse/native_pendingTrue and cleanup-deferred failure preserve evidence; generator close and finished are not invoked in unadmitted context.",
+    "normal_quit": "Explicit completed/nonpending flow, guarded3-second callback in fresh owned context. FINISHED is operator return only, process_exit_verifiedFalse requires genuine OS closure.",
+    "remaining_native_admission": "Saved-seed loading, persistent timer/Continue, screenshot pixels, two reopens, Undo and natural exit remain unexecuted/native pending."
+  },
+  "validation": {
+    "in_memory_compile_checks": 2,
+    "AST_and_source_readback": "PASS",
+    "exact_pin_checks": 5,
+    "target_module_imports": 0,
+    "tests_run": 0,
+    "native_SDK_GUI_execution": 0,
+    "process_or_resource_queries": 0,
+    "shared_workspace_reads": 0,
+    "artist_mutation": false,
+    "runtime_edit": false
+  },
+  "status": "SOURCE_READY_NATIVE_PENDING",
+  "concrete_source_blockers": []
+}

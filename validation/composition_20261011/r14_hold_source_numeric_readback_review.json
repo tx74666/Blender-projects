@@ -1,0 +1,95 @@
+{
+  "schema": "x.validation.character-composition-hold-source-numeric-readback/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "utc": "2026-10-11T03:57:23.529795+00:00",
+  "status": "PASS_SOURCE_CONSTANCY_ONLY",
+  "actual_r2_cli_exit_code": 0,
+  "actual_r2_invocation_count": 1,
+  "prior_c950_invocation_exit_code": 1,
+  "prior_c950_failure_preserved": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\r14_hold_source_measurement_failure_c9509296.json",
+    "sha256": "c40171d8dbca98b520f965609381cb70f00c8dfd682ec054125e7c01b9f71c88"
+  },
+  "proof": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\r14_hold_source_constancy_proof.json",
+    "sha256": "0106be46f9358748287ad6af45fd6b5b31ec3dba3488ceac8a2986a6d08f5e62",
+    "bytes": 11007
+  },
+  "numeric_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\r14_hold_source_numeric_report.json",
+    "sha256": "6d4a469d5c0b590b1ee7b8d6893e72810d4db03eb3db1d78b8de34541265ff01",
+    "bytes": 223485
+  },
+  "actual_numeric_rows": [
+    {
+      "work_item_id": "5550ed39-9321-4cd4-b48b-d162a81bce21",
+      "time_mode": "HoldPose",
+      "sourceBGuid": "3751000e1a9f29547aad2fe1ed77fadf",
+      "sourceBLocalId": 7400000,
+      "sourceBSha256": "ff87706978931cccc23518c4722e2112af952d0467f775b12d69250afb9d403c",
+      "frame_count": 3,
+      "selected_frame_count": 3,
+      "duration_seconds": 0.0333333351,
+      "scope_path_count": 41,
+      "exported_node_count": 218,
+      "world_max_abs_delta": 0.0,
+      "parent_local_max_abs_delta": 0.0,
+      "scoped_world_pose_sha256": "cc544acff38c55caad66705baaf70b0d58f82db7226bbbe400926ca9bb280788",
+      "scoped_parent_local_pose_sha256": "d717a43b7d932f4861dc7455de9e8c28573d05549fb34a1a53c14285591da8b9",
+      "selected_scoped_motion_measured": false
+    },
+    {
+      "work_item_id": "5fd05f01-0db3-4888-a95f-629815fb70f4",
+      "time_mode": "HoldPose",
+      "sourceBGuid": "3751000e1a9f29547aad2fe1ed77fadf",
+      "sourceBLocalId": 7400000,
+      "sourceBSha256": "ff87706978931cccc23518c4722e2112af952d0467f775b12d69250afb9d403c",
+      "frame_count": 3,
+      "selected_frame_count": 3,
+      "duration_seconds": 0.0333333351,
+      "scope_path_count": 41,
+      "exported_node_count": 218,
+      "world_max_abs_delta": 0.0,
+      "parent_local_max_abs_delta": 0.0,
+      "scoped_world_pose_sha256": "cc544acff38c55caad66705baaf70b0d58f82db7226bbbe400926ca9bb280788",
+      "scoped_parent_local_pose_sha256": "d717a43b7d932f4861dc7455de9e8c28573d05549fb34a1a53c14285591da8b9",
+      "selected_scoped_motion_measured": false
+    },
+    {
+      "work_item_id": "af177471-666d-4fd1-851b-717d14708db9",
+      "time_mode": "HoldLoop",
+      "sourceBGuid": "8b7231239e4108341aa1e73d989903f6",
+      "sourceBLocalId": 7400000,
+      "sourceBSha256": "317b39b6a14e54bd890ed92d829802a81bcfc3e7756ae4ba91cf6dac5961b093",
+      "frame_count": 297,
+      "selected_frame_count": 297,
+      "duration_seconds": 4.9333334,
+      "scope_path_count": 41,
+      "exported_node_count": 218,
+      "world_max_abs_delta": 0.1052212,
+      "parent_local_max_abs_delta": 0.04611912516486233,
+      "scoped_world_pose_sha256": "cc544acff38c55caad66705baaf70b0d58f82db7226bbbe400926ca9bb280788",
+      "scoped_parent_local_pose_sha256": "d717a43b7d932f4861dc7455de9e8c28573d05549fb34a1a53c14285591da8b9",
+      "selected_scoped_motion_measured": true
+    }
+  ],
+  "readback_checks": [
+    "Actual report measurements equal each proof row",
+    "All sealed spec canonical digests recalculated from actual report DTO",
+    "All41 measured paths exactly match actual sealed allowlist",
+    "Actual retained world/local first-pose payloads contain finite16 matrices in UTF16 ordinal path order; both digests recalculated",
+    "All41 per-bone maximum deltas match reported totals; both Pose rows are exactzero",
+    "Two Pose variants have identical actual pose digests; original Loop has positive full+selected world/local motion",
+    "All actual durations positive and >=2frames"
+  ],
+  "measurement_scope": "The producer read actual source packet bytes sequentially and derived parent-local matrices from inverse(parentWorld)*boneWorld. This readback verifies generated raw numeric evidence consistency and hashes; it does not repeat packet measurement or inspect native Blender curves.",
+  "tests_performed_by_reviewer": 0,
+  "native_checks_performed": 0,
+  "limits": [
+    "Source packet math only; native Blender Actions/Fcurves/Bezier handles and control-solve noise are uninspected.",
+    "Source constancy is a precondition; native strict HoldPose curve/handle admission, mapping/control/Rest and physical export proof remain mandatory.",
+    "No Blender/Unity/process/SDK/GUI/publication/source asset/workspace mutation or native success is performed or implied.",
+    "A completed numeric rejection writes false constant_source_pass and exits1; no producer pass flag is used to infer static matrices."
+  ]
+}

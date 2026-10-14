@@ -1,0 +1,108 @@
+{
+  "schema": "x.validation.character-composition-loop-background-undo-checkpoint-peer-source/1",
+  "utc": "2026-10-11T08:38:47.765287+00:00",
+  "reviewer": "/root/worklist_review",
+  "source_only": true,
+  "passed": true,
+  "status": "SOURCE_READY_NATIVE_PENDING",
+  "native_execution_performed": false,
+  "bpy_addon_or_tool_import_performed": false,
+  "producer_or_tool_invocations_performed": false,
+  "tests_executed": 0,
+  "sdk_gui_cim_resource_queries_performed": false,
+  "source_files": {
+    "timing": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874",
+      "bytes": 50843
+    }
+  },
+  "preserved_old_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n13\\tools\\composition_timing_acceptance.py",
+    "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+    "bytes": 49161
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_loop_background_undo_checkpoint_source_report_a89ffd1a.json",
+    "sha256": "e5ca6468fe0594ef53762535b208ea9f8ff2c69e0943ab5a1090e387c13b7a47",
+    "bytes": 8718
+  },
+  "owner_pure_test_pins": {
+    "boundary": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_loop_native_boundary.py",
+      "sha256": "1373aaf0d2d03786dd1cd44ec6121c9713d41d76811cc1b5b5a21bdff06e96f0",
+      "bytes": 10130
+    },
+    "operator": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_loop_operator_guards.py",
+      "sha256": "37c85e9e8b03e4f195796c50bc5a3f15ed824fc7e5a5caeb7d4eef223d2c2162",
+      "bytes": 12786
+    },
+    "owner_log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_loop_background_undo_checkpoint_pure_tests_a89ffd1a.txt",
+      "sha256": "37b5a380f4479806bbadabbf47a1cf4e37e3ceb8d1860bc92df8aca135e600c7",
+      "bytes": 3295
+    }
+  },
+  "reviewed_source_changes": {
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py": {
+      "before_sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "after_sha256": "a89ffd1a3acf4937ef033bf4dfad1c77bc34ec883bc032f7dc0cf44e1bb99874"
+    }
+  },
+  "source_delta": {
+    "changed_functions": [
+      "_author_loop",
+      "author_hold_loop"
+    ],
+    "added_functions": [],
+    "unchanged_functions": [
+      "_assert_moving",
+      "_assert_strip_clocks",
+      "_compare",
+      "_input_values",
+      "_isolated_a_samples",
+      "_isolated_samples",
+      "_loop_rotation_delta",
+      "_loop_rotation_state",
+      "_loop_select",
+      "_loop_visibility",
+      "_max_error",
+      "_modules",
+      "_numeric_proof",
+      "_open",
+      "_pose",
+      "_published_hold",
+      "_raw_timing",
+      "_reset_clone",
+      "_row",
+      "_sealed_clocks",
+      "_sealed_loop",
+      "_sealed_raise",
+      "_sha",
+      "_write",
+      "a_clock",
+      "b_clock",
+      "measure_registered_raise",
+      "require",
+      "run",
+      "validate_author_config",
+      "validate_config"
+    ],
+    "unchanged_function_count": 31,
+    "top_level_non_function_ast_unchanged": true,
+    "native_key_moving_commit_protection_tail_exact": true,
+    "new_callback_is_optional": true
+  },
+  "findings": [
+    "No concrete SOURCE/API blocker found. Exact boolean bpy.app.background is admitted; same native transform call uses False only for background and True for headful. No global undo settings or artist scene data are changed by this switch.",
+    "Pre-call checkpoint is written synchronously by the existing unchanged _write helper before the C operator call. It records complete=false, pendingNativeOperator=true, checkpoint_phase and before_native_rotate, without falsely setting failure_phase before a failure. A callback exception prevents native invocation.",
+    "Literal FINISHED and the existing finite positive quaternion-basis angle greater than 1e-7 are both required before pending is cleared and native_rotate_verified is persisted. CANCELLED, zero change, invalid evidence or a nonreturning BaseException cannot create a completed authoring receipt.",
+    "After native verification the original exact key/moving/commit/protected A/Source/packet/DTO/workspace safeguards remain; pending=false alone is not complete=true.",
+    "Optional callback preserves other _author_loop callers; clock/selection/effective visibility/native equality and all other31 functions are unchanged. Owner reported18 focused pure tests PASS; reviewer did not rerun them."
+  ],
+  "limits": [
+    "Source and AST/API readback only. No full timing module import, native/UI/SDK/resource inspection, tests, projection, fixture generation, retry or deployment occurred.",
+    "Pure test fixtures and Source-level bool dispatch do not prove installed Blender native acceptance or crash resolution. Failed n13 and frozen dd7/headful07 evidence remain immutable; a fresh granted native attempt is still required."
+  ]
+}

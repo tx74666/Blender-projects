@@ -1,0 +1,169 @@
+{
+  "schema": "x.validation.unified-r7-parent-adapter-source-peer/1",
+  "created_utc": "2026-10-12T02:26:06.554Z",
+  "reviewer": "/root/u4_receipt_review",
+  "independent_review": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "no_identified_source_blocker": true,
+  "passed": false,
+  "status": "NARROW_PARENT_ADAPTER_SOURCE_VERIFIED_SYNTAX_ACTUAL_PURE_PENDING_HOLD",
+  "source_files": {
+    "prepare_unified_package_r7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7.py",
+      "sha256": "116c7ac302ed0ff5966f0cde0e7a89e9316c6656a07abecf0894d87f01d720aa",
+      "bytes": 41912
+    },
+    "prepare_unified_package_r7_README.md": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_README.md",
+      "sha256": "5beda468aa527601f5ca3f92567a4c417acd476c40cd3d137be82a0914da6d58",
+      "bytes": 8330
+    },
+    "prepare_unified_package_r7_owner_parent_adapter_116c7ac3.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_owner_parent_adapter_116c7ac3.json",
+      "sha256": "0283d68af210e1109cde17620f59cce0ece4c3efa3004475e7f3197489796298",
+      "bytes": 7482
+    }
+  },
+  "author_stable_ready": "/root/r6_package_prepare reported stable Source authoring complete and no further edits; owner passed=null and all execution pending/HOLD are preserved.",
+  "method": "Physical file reads and SHA256 only through fs tool runtime. Byte splice removes the unique known Parent schema branch from new Source in memory, then compares the entire inverse Buffer to the exact preserved old file. No Python, shell/subprocess, AST, product/producer execution or tests.",
+  "exact_inverse": {
+    "source_new_sha256": "116c7ac302ed0ff5966f0cde0e7a89e9316c6656a07abecf0894d87f01d720aa",
+    "source_new_bytes": 41912,
+    "removed_region_lines": "111..145",
+    "removed_bytes": 2733,
+    "added_lines": 35,
+    "inverse_sha256": "4cfc5e5aaf965211cd8dab1d510b2b8e8adf0e44fbfea7828b112813814b35b7",
+    "inverse_bytes": 39179,
+    "whole_file_byte_equal_prior_snapshot": true,
+    "prior_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_before_parent_schema_4cfc5e5a.py",
+      "sha256": "4cfc5e5aaf965211cd8dab1d510b2b8e8adf0e44fbfea7828b112813814b35b7",
+      "bytes": 39179
+    },
+    "all_other_producer_bytes_unchanged": true
+  },
+  "actual_parent_artifact": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\generic-rigging-design\\source-peer-r7\\x-core-d4de.json",
+    "sha256": "ae1ac00c60515453fd55be5470bb615a7760b11cc41ef17ba4143d348b8f6c33",
+    "bytes": 3459
+  },
+  "actual_parent_source_bindings": [
+    {
+      "field": "core",
+      "original_path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist.py",
+      "normalized_path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "parent_sha256": "D4DE3EFF83ABD01E74EC7C92A67EA62BE0314CDA757CC83AC2663E9308B13AAD",
+      "physical_sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "parent_bytes": 53135,
+      "physical_bytes": 53135,
+      "executed": null
+    },
+    {
+      "field": "testDraftActuallyRead",
+      "original_path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_worklist_rigging_attach.py",
+      "normalized_path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "parent_sha256": "BE52410C4C954D5EC9B80424B1DEB350355230D3DB2F3DAF19510A2700C95B8F",
+      "physical_sha256": "be52410c4c954d5ec9b80424b1deb350355230d3db2f3daf19510a2700c95b8f",
+      "parent_bytes": 30907,
+      "physical_bytes": 30907,
+      "executed": false
+    }
+  ],
+  "adapter_review": [
+    {
+      "lines": "111..117",
+      "observation": "Only the known randomrealm.character-rigging-worklist-core-source-peer/1 schema enters this branch. It requires peer=True and exactly core plus Attach as required subset; actual SOURCE_PASS/passed/sourceOnly must be true and native/test/overall-native/overall-test flags strictly false. It cannot substitute for an owner or Root four-file/UI proof."
+    },
+    {
+      "lines": "118..127",
+      "observation": "Exact eight review count keys require integer zero, excluding bool values; exact write keys require live/canonical/artist false and hidden receipt true. Actual Parent JSON matches these declared fields, without any invented peer run."
+    },
+    {
+      "lines": "128..144",
+      "observation": "Only known core and testDraftActuallyRead path/SHA256/bytes are read and normalized. Absolute path, 64hex case, positive integer bytes and strict test executed=false are checked; normalized exact physical pins must equal current coreD4/Attachbe524. Physical reads independently confirm those same hashes and lengths."
+    },
+    {
+      "lines": "145",
+      "observation": "Returns the original Parent artifact pin. Parent JSON is not changed, wrapped, reseeded or converted into a test/native receipt."
+    },
+    {
+      "lines": "146..end",
+      "observation": "Byte inverse proves the pre-existing generic Root/UI/native/source reader, actual pure41/82 admission, 23Source/188payload/156Python/twoR5-delta scope, old FAIL provenance, 302historical accounting, capture/build and other functions unchanged."
+    }
+  ],
+  "preserved_snapshots": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_before_parent_schema_4cfc5e5a.py",
+      "sha256": "4cfc5e5aaf965211cd8dab1d510b2b8e8adf0e44fbfea7828b112813814b35b7",
+      "bytes": 39179
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_README_before_parent_schema_0696da28.md",
+      "sha256": "0696da283281e4b03310df5f318769b3f247693b85a7e5d20300920743d111a8",
+      "bytes": 7314
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_owner_before_parent_schema_885320a0.json",
+      "sha256": "885320a0816f7d4ac144104802241d6b1ae39d2de8b4123659b876f1f5ce9197",
+      "bytes": 9332
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_peer_before_parent_schema_f5b38965.json",
+      "sha256": "f5b38965e6c175b2b563a69c7ae884220567eff3168a63e0d9e56ddbd78eb528",
+      "bytes": 7349
+    }
+  ],
+  "preserved_original_receipts": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_owner_draft_4cfc5e5a.json",
+      "sha256": "885320a0816f7d4ac144104802241d6b1ae39d2de8b4123659b876f1f5ce9197",
+      "bytes": 9332
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_source_peer_4cfc5e5a.json",
+      "sha256": "f5b38965e6c175b2b563a69c7ae884220567eff3168a63e0d9e56ddbd78eb528",
+      "bytes": 7349
+    }
+  ],
+  "historical_receipt_meaning": "Old4cfc owner/peer remain immutable historical Source observations. Their old mutable producer paths do not authenticate new116c; exact before-edit Source snapshots preserve their byte basis. This new receipt is only the narrow adapter peer.",
+  "pending": {
+    "syntax_compile_and_AST": true,
+    "producer_inspect": true,
+    "actual_core41_and_ui82_receipts": true,
+    "actual_current_total": 123,
+    "cumulative_historical_total_if_checks_pass": 302,
+    "all302_current_rerun_claim": false,
+    "root_actual_runner": "Retain logs first, derive actual suite counts/results from Ran N/OK/noSkipped/exit0 after explicit GO; this producer only binds declared results and log pins.",
+    "native_original_X_Rig_and_artist_preservation_acceptance": true
+  },
+  "execution_counts": {
+    "Python_subprocess": 0,
+    "shell_subprocess": 0,
+    "AST_parse_compile": 0,
+    "producer_import_invoke": 0,
+    "inspect": 0,
+    "tests": 0,
+    "socket_calls": 0,
+    "capture": 0,
+    "build": 0,
+    "native": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "workers": 0,
+    "deploy_install": 0,
+    "canonical_product_or_producer_edits": 0,
+    "parent_JSON_writes": 0,
+    "artist_workspace_publication_writes": 0,
+    "Git": 0
+  },
+  "writes": [
+    "New independent116c Source peer JSON only."
+  ],
+  "limitations": [
+    "No syntax/test/inspect/native PASS or capture/resource grant is claimed; passed=false retains pending execution.",
+    "Only the Parent schema Source adapter and precise byte inverse were reviewed in this turn; no new full matrix or canonical payload enumeration was performed.",
+    "Original Scene/Rig integration and physical Return remain unverified by this Source peer."
+  ]
+}

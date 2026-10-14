@@ -1,0 +1,133 @@
+{
+  "schema": "x.validation.character-composition-core-ui-source-owner/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "owner": "/root",
+  "source_files": {
+    "run_character_composition_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "f6aff82e6b74cc391b5e0c3026066b03e064608e57bcc52de2defbed836233d4",
+      "bytes": 33329
+    }
+  },
+  "historical_held_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_ui_fixture_9106b1a5_before_core_catalog.py",
+    "sha256": "9106b1a56fe37e2c091131f9c5cfe770fce3b7ec39818741286c401159409f8c",
+    "bytes": 30900
+  },
+  "original_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_ui_fixture_729df315_before_owned_scene_context.py",
+    "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+    "bytes": 24773
+  },
+  "historical_held_owner": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\ui_runner_owned_context_source_owner_9106b1a5.json",
+    "sha256": "582c6615e3802cfb89790df8d87b421d387b3229c804e9976908a802888a9878",
+    "bytes": 4490
+  },
+  "changed_existing_functions_since_9106": [
+    "validate_fixture",
+    "run"
+  ],
+  "added_functions": [
+    "validate_core_catalog"
+  ],
+  "unchanged_existing_functions_AST_and_text": [
+    "_absolute",
+    "_activate_selected",
+    "_checkpoint_api",
+    "_id",
+    "_pin_model",
+    "_sha",
+    "claim_evidence",
+    "main",
+    "require",
+    "select_native_row",
+    "validate_reports"
+  ],
+  "Stage_validate_reports_original729_interface_unchanged": true,
+  "source_admission_context_and_217_pose_guards_retained": true,
+  "preparedRaiseWorkItemId_explicit_null_for_core": true,
+  "core_catalog_no_new_prepared_sources": true,
+  "every_original_sealed_route_and_spec_preserved": true,
+  "explicit_real_raise_keeps_stage_strict_extension": true,
+  "temporal_immutable_ledgers_rehashed": false,
+  "shared_workspace_reads": 0,
+  "contract_inputs": {
+    "pure_frozen_workspace_module": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer\\animation_workspace.py",
+      "sha256": "58569e35850419236e6f1152b976ce28806c420a9e88cbb8faa31387da04957b",
+      "bytes": 16323
+    },
+    "pure_frozen_composition_contract": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer\\animation_composition_contract.py",
+      "sha256": "2d286b46f29e4777c9c11f43b680f9f132f408a0e910169f031516c85135a4d9",
+      "bytes": 10340
+    },
+    "historical_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\initial_workspace.json",
+      "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+      "bytes": 35156
+    },
+    "reviewed_stage_route_fields_AST_only": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+      "bytes": 24737
+    },
+    "sealed_completed_audit": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\actual_completed_file_audit.json",
+      "sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3",
+      "bytes": 771503
+    }
+  },
+  "contracts": {
+    "passed": 6,
+    "actual_historical_catalog_positive": {
+      "workspace_identity_equal": true,
+      "protected_prepared_source_count": 6,
+      "protected_hold_work_ids": [
+        "1753d84253a948e8951cc28f5dd2fa36",
+        "8f6f7a3356ff4ca182951d726437117c",
+        "948e797b8d7044c49530a820349e8968"
+      ],
+      "actual_prepared_raise_work_id": null,
+      "admitted_prepared_additions": [],
+      "scope": "Core A+B editing; optional Raise deferred."
+    },
+    "synthetic_negative_copies_never_native_fixtures": [
+      {
+        "case": "sealed_spec_changed",
+        "rejected": true
+      },
+      {
+        "case": "source_packet_hash_changed",
+        "rejected": true
+      },
+      {
+        "case": "model_identity_changed",
+        "rejected": true
+      },
+      {
+        "case": "prepared_source_removed",
+        "rejected": true
+      },
+      {
+        "case": "unrelated_prepared_source_added",
+        "rejected": true
+      }
+    ]
+  },
+  "validation": {
+    "in_memory_compile_passed": true,
+    "candidate_imports": 0,
+    "pure_workspace_and_contract_stdlib_imports": 2,
+    "bpy_imports": 0,
+    "native_calls": 0,
+    "fixture_generation_performed": false
+  },
+  "prior_review_harness_attempt": "Standalone workspace parse lacked its relative package namespace; ImportError before contracts/output. Fixed only stdlib review namespace, not candidate Source.",
+  "limitations": [
+    "Source-only contracts; timer, actual edit/save/reopen/Undo, Sync and screenshots remain pending."
+  ]
+}

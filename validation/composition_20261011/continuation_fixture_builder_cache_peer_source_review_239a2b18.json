@@ -1,0 +1,147 @@
+{
+  "schema": "x.validation.character-composition-continuation-builder-cache-peer-source/1",
+  "utc": "2026-10-11T07:03:27.288393+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "fixture_generation_performed": false,
+  "passed": true,
+  "status": "SOURCE_ONLY_READY_OLD_RUNTIME10_OBSERVED_CACHE_ONLY",
+  "source_file": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_continuation_fixture.py",
+    "sha256": "239a2b187106dc5592da74fc2bae12c5e37df87356ffc233cd50f4646ecef339",
+    "bytes": 16391
+  },
+  "preserved_pre_cache_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_continuation_fixture_342da270_before_old_cache_admission.py",
+    "sha256": "342da270dcadb2d386544af7e48c84a39179b8e03b65d73e1418664de489be5b",
+    "bytes": 14673
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\continuation_fixture_builder_source_report_239a2b18.json",
+    "sha256": "72cd0c41b3811c92483d4f0e68650bf0b885ece068e90016e4175aaed1422f6f",
+    "bytes": 9780
+  },
+  "old_runtime_bytecode_provenance": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_runtime10_observed_bytecode_provenance_116.json",
+    "sha256": "0a09c09f9e965b530fa34270548989301e29f3b20792ea6307f8ddc71eda1234",
+    "bytes": 59952
+  },
+  "changed_lines": [
+    {
+      "kind": "insert",
+      "old_start": 23,
+      "old_end": 22,
+      "old_count": 0,
+      "new_start": 23,
+      "new_end": 23,
+      "new_count": 1
+    },
+    {
+      "kind": "insert",
+      "old_start": 91,
+      "old_end": 90,
+      "old_count": 0,
+      "new_start": 92,
+      "new_end": 98,
+      "new_count": 7
+    },
+    {
+      "kind": "replace",
+      "old_start": 99,
+      "old_end": 99,
+      "old_count": 1,
+      "new_start": 107,
+      "new_end": 118,
+      "new_count": 12
+    },
+    {
+      "kind": "insert",
+      "old_start": 175,
+      "old_end": 174,
+      "old_count": 0,
+      "new_start": 194,
+      "new_end": 194,
+      "new_count": 1
+    }
+  ],
+  "source_checks": {
+    "in_memory_syntax_sources": 2,
+    "whole_module_inverse_AST_equal_to_preserved_342": true,
+    "normalization": [
+      "remove only CACHE hash constant",
+      "remove three cache receipt admission statements",
+      "restore original manifest inventory requirement after removing old-only allowed-set block",
+      "remove only entry.old_runtime_bytecode_provenance keyword"
+    ],
+    "target_functions_imported_or_invoked": 0,
+    "tests_executed": 0,
+    "bytecode_imported_unmarshalled_or_executed": false,
+    "CIM_API_SDK_GUI_native_calls": 0
+  },
+  "cache_metadata_readback": {
+    "schema": "x.validation.character-composition-old-runtime-bytecode-provenance/1",
+    "source_only": true,
+    "native_execution_performed": false,
+    "cache_file_count": 116,
+    "distinct_relative_paths": 116,
+    "cache_bytes_recorded": 5533150,
+    "source_file_count": 167,
+    "source_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\python_projection.json",
+      "sha256": "a7c660d546bcc6f2b0720750eb03279b62a24f968967a385746c6f13effeb150",
+      "bytes": 31012
+    },
+    "all_116_receipt_names_paths_and_source_hashes_match_pinned_manifest": true,
+    "all_rows_have_full_sha256_positive_integer_byte_count": true,
+    "raw_cache_bytes_not_independently_rehashed_by_reviewer": true
+  },
+  "guard_review": [
+    {
+      "lines": "92-98",
+      "fact": "Receipt SHA is a fixed full hash; source-only/no-execution schema flags, old167 projection record exact equality and exactly116 cache rows are mandatory."
+    },
+    {
+      "lines": "107-118",
+      "fact": "Only count167 plus exact old runtime10 manifest SHA enters cache allowlist. Each parent must be __pycache__, suffix exactly.cpython-313.pyc, source leaf/path and sourceSHA must match pinned manifest, absolute record path must resolve to that package-relative path, and raw cache read verifies its recorded SHA/bytes.116 distinct paths are required."
+    },
+    {
+      "lines": "119-121",
+      "fact": "Actual file inventory equals manifest files union this exact allowed set. Other old extras reject. Oldfull11 and newruntime11/full12 never enter the allowlist branch, so their raw file sets remain exact. All manifest source leaves are still rehashed."
+    },
+    {
+      "lines": "189-198",
+      "fact": "Existing final admitted-input rehash includes every cache raw pin and receipt before exclusive creation. New source entry retains durable old_runtime_bytecode_provenance and source_inputs. No cache removal, copying into new projections or import was added."
+    }
+  ],
+  "preserved_scope": {
+    "legacy_entry_config_runtime_full_pins_two_fields": true,
+    "serializer_projection_pin_records_preserved": true,
+    "numeric_reuse_owner_peer_pins_exact_three_fields": true,
+    "native_inverse_newline_proof_and_7_5_11_counts_unchanged": true,
+    "all_shared_rest_mapping_217_numeric_clock_FK_and_physical_authority_guards_unchanged": true,
+    "new_runtime11_full12_source_files_not_modified": true
+  },
+  "unchanged_launch_inputs": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_continuation_granted_r5.py",
+      "sha256": "41fa31d2a5fe25809cb76df4e9c9786cfe2b5bc10148699b6e346756de9f0345",
+      "bytes": 27984
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_continuation_granted_r6.ps1",
+      "sha256": "36ba820a94b24b3e79a1a80e160c5d8dee8d6602951962748edc1ec2b4286f17",
+      "bytes": 10433
+    }
+  ],
+  "preserved_previous_launch_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\continuation_preflight_launcher_peer_source_review_41fa31d2_36ba820a.json",
+    "sha256": "69c0dbe53eaa907725aa2f47ee314fa54994213554c390f630d7934e82cf34db",
+    "bytes": 20083
+  },
+  "limitations": [
+    "Only the bounded cache-source delta and durable receipt metadata were reviewed; no builder invocation, fixture generation, tests, Blender, native API, SDK, GUI, CIM or resource reads occurred.",
+    "Raw cache file SHA/byte checks and all source/file-inventory rehash remain mandatory when Root invokes the builder; this peer did not repeat those execution loops.",
+    "Receipt proves names and raw file-byte provenance, not semantic equivalence of bytecode. No cached bytecode is imported or unmarshalled by this review or the source builder.",
+    "Existing342/69c review remains immutable historical binding. New sourcebuilder239 must be pinned in actual source entry and future Parent input readback before any separately granted native launch."
+  ]
+}

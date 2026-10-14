@@ -1,0 +1,48 @@
+{
+  "schema": "x.validation.single-sync-source-peer/1",
+  "status": "SOURCE_PEER_NO_CONCRETE_BLOCKER_NATIVE_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_single_sync.py",
+    "sha256": "0854aa755b0e50438d0be054f885aa57f68f67862e8de97f6e3b86f56f8f325b",
+    "bytes": 16150
+  },
+  "control_harness_source_observed": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_round.py",
+    "sha256": "cfaa6dc580d69dbdc7c752078752f2a3cbe89f33ec02a60c5186a196fba4cdcb",
+    "bytes": 45017
+  },
+  "syntax": {
+    "ast_parse": "PASS",
+    "in_memory_compile": "PASS",
+    "script_invocations": 0,
+    "target_imports": 0
+  },
+  "fixed_findings": [
+    "Presentation hash reads actual nested native_controller_presentation.sha256.",
+    "Worker archival and exact-job cancellation now have independent try blocks; archive failure cannot skip disposal."
+  ],
+  "reviewed_boundaries": [
+    "Subclass admission requires completed actual public Add/Save/Undo/reopen control report; pins same packet/Link/workspace/model/full package and saved scene/Return.",
+    "Saved scene opens outside context override and readback occurs on next persistent tick in a separate fresh process.",
+    "Public single worklist.sync returns exact active row/job; only its exact UI poll timer is removed.",
+    "Natural worker exit is observed before evidence archive and exporter.poll_export publication/disposal; export_finished runs once on the normal successful path.",
+    "Actual pair/metadata/source hashes/Action slots/strict Return14/saved twenty input DTO and Link source identity are checked before completed.",
+    "No artist/model repair/old Rig acceptance/Unity Apply claim; failed execution records original error and stops without retry."
+  ],
+  "limitations": [
+    "The control harness remains another owner's Source; this observed hash is not its final freeze or actual control report.",
+    "Actual operator/save/worker/publication and process natural exit still require the separately authorized native execution.",
+    "This is Source review and compile only; no fake or actual run is reported."
+  ],
+  "boundaries": {
+    "Blender": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "worker": 0,
+    "Source_script_edits": 0,
+    "deployment": 0,
+    "artist_writes": 0
+  }
+}

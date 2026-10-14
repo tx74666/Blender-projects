@@ -1,0 +1,216 @@
+{
+  "schema": "x.validation.composition-nla-track-identity-independent-native-readback/1",
+  "date": "2026-10-11",
+  "reviewed_at_utc": "2026-10-11T05:43:04.752769+00:00",
+  "reviewer": "/root/export_scale_review",
+  "passed": true,
+  "operation": "read_only_saved_native_evidence",
+  "source_only_review_operation": true,
+  "reviewer_new_native_calls": 0,
+  "reviewer_tests_reruns": 0,
+  "reviewer_cim_sdk_gui_blender_calls": 0,
+  "actual_root_owned_native_probe_completed": true,
+  "scope": "Small synthetic Blender5.2 NLA API probe only. No real model/composition/export/UI acceptance.",
+  "input_pins": {
+    "nla_track_identity_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\nla_micro_01\\nla_track_identity_report.json",
+      "sha256": "2a755e2d7ab0988b4b6265e260126ba465d7ad59f2cc9996dc39a9deec950090",
+      "bytes": 2361
+    },
+    "process_exit.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\nla_micro_01\\process_exit.json",
+      "sha256": "142487d12be3bbc77b4fedd6c5b461d903a1d7b20e101f277ea7d9ed088f87a5",
+      "bytes": 1287
+    },
+    "launch_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\nla_micro_01\\launch_receipt.json",
+      "sha256": "e9b9d64882c093d71b572bb011edf5d11813d1ce04bd34c280773f57ea481b90",
+      "bytes": 3127
+    },
+    "launch_claim.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\nla_micro_01\\launch_claim.json",
+      "sha256": "338626d54075e584060b00ffe8b09ad0a5f798f754ad716bea4fb97ce6bbdef9",
+      "bytes": 2424
+    },
+    "grant": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\evidence\\x-nla-micro01\\grant.json",
+      "sha256": "eeb7cac2d3d8cff0490bd43abc51e02ed7af81a09ba2e97029866501aa79c8ae",
+      "bytes": 2479
+    }
+  },
+  "actual_five_asset_pins": {
+    "blender": {
+      "path": "D:\\Blender5.2\\blender.exe",
+      "sha256": "0060916d6921eb4d46c57254609d805a2ea711917399051391a52ba14beb6327",
+      "bytes": 112975320
+    },
+    "script": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_composition_nla_track_identity.py",
+      "sha256": "c103721f0c8c48bb16b8a5ee0a661934d5ba437d65101bd3a9e3e9012699a789",
+      "bytes": 10424
+    },
+    "oldSource": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_09\\character_designer\\animation_composition.py",
+      "sha256": "c6b5c2f564239b002cfa5ff1be07bb3707e1cedcec4987bccad245710dc055f1",
+      "bytes": 98130
+    },
+    "newSource": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+      "bytes": 99028
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_nla_track_identity_micro_01.ps1",
+      "sha256": "326f56f042d446412907061af2d5024936b3ad79026d29bdb3d386bf3871b3fb",
+      "bytes": 13492
+    }
+  },
+  "artist_current_disk_pin": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "e8d3013ef14e02ed76160a838e7d255490fd1b6ece340e7c3f9e33dc57a3377f",
+    "bytes": 34648532
+  },
+  "observed_native_result": {
+    "blender": "5.2.0 LTS",
+    "modes": [
+      {
+        "mode": "OBJECT",
+        "distinct_python_wrapper": true,
+        "native_equal": true,
+        "track_pointer": 1782116084848,
+        "old_exact_failure": "Error: No active strip(s) to enter tweak mode on\n",
+        "new_b_full_stack": [
+          2.0,
+          3.0,
+          0.0
+        ],
+        "switch_a_full_stack": [
+          2.0,
+          3.0,
+          0.0
+        ],
+        "return_b_full_stack_equal": true,
+        "protected_actions_exact": true,
+        "native_tweak_exited": true
+      },
+      {
+        "mode": "POSE",
+        "distinct_python_wrapper": true,
+        "native_equal": true,
+        "track_pointer": 1782116084848,
+        "old_exact_failure": "Error: No active strip(s) to enter tweak mode on\n",
+        "new_b_full_stack": [
+          2.0,
+          3.0,
+          0.0
+        ],
+        "switch_a_full_stack": [
+          2.0,
+          3.0,
+          0.0
+        ],
+        "return_b_full_stack_equal": true,
+        "protected_actions_exact": true,
+        "native_tweak_exited": true
+      }
+    ],
+    "negative_cases": [
+      {
+        "case": "foreign_track",
+        "rejected_before_selection": true
+      },
+      {
+        "case": "multiple_strips",
+        "rejected_before_selection": true
+      }
+    ],
+    "source_pins": {
+      "old": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_09\\character_designer\\animation_composition.py",
+        "sha256": "c6b5c2f564239b002cfa5ff1be07bb3707e1cedcec4987bccad245710dc055f1",
+        "functions": {
+          "_nla_context": "d9af1d1b7524dec4b32716e3ec754fe4bfc9c595fbf470165edcf919564a6938",
+          "_tweak": "8bcf1abf95f81accf9ef9f993648fb003274c90b9c76f4bbc4094677c8ee5d8e"
+        }
+      },
+      "new": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+        "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+        "functions": {
+          "_nla_context": "d9af1d1b7524dec4b32716e3ec754fe4bfc9c595fbf470165edcf919564a6938",
+          "_tweak": "8677b7ed5d008e887551fee6294ffcbb086800ecdb200cbce97e266b737d8399"
+        }
+      }
+    },
+    "exact_action_and_slot_checks": "Both expected native Action/slot entry gates are enforced by actual pinned c103 tool before completed=true; raw slot handles are not separately serialized.",
+    "final_return_b_finite": "Actual c103 evaluated() length/every-component finite gate covers return-B before equality; report serializes its passed boolean, not a third raw vector."
+  },
+  "admission_closure": {
+    "actual_grant_and_claim_and_launch_five_pins_same": true,
+    "exact_once_claim_consumed": true,
+    "factory_background_disable_autoexec_and_python_exit_code_arguments_observed": true,
+    "report_output_path_exact": true,
+    "memory_record_free_mib": 404.37890625,
+    "memory_record_used_percent": 97.49746291799,
+    "launcher_source_revalidates_grant_and_pins_before_exclusive_claim_then_spawn": true,
+    "trusted_root_authorization_sequence": "Root states trusted Parent direct grant message arrived; Root read grant bytes/SHA before invoking326. This readback relies on that explicit trusted sequence plus pinned launcher source, not on declared grant clock ordering."
+  },
+  "exit_closure": {
+    "process_exit": {
+      "schema": "x.validation.character-composition-natural-process-exit/1",
+      "attempt": "nla_micro_01",
+      "pid": 38600,
+      "launchedUtc": "2026-10-11T05:38:55.4753975Z",
+      "observedExitUtc": "2026-10-11T05:39:06.9442509Z",
+      "naturalExitCode": 0,
+      "completed": true,
+      "forcedTermination": false,
+      "ownedProcessIds": [
+        38600,
+        61076
+      ],
+      "allOwnedChildrenGoneVerified": true,
+      "allQaBlenderWorkersGoneVerified": true,
+      "remainingBlenderProcesses": [
+        {
+          "ProcessId": 27676,
+          "ExecutablePath": "D:\\Blender5.2\\blender.exe",
+          "CommandLine": "\"D:\\Blender5.2\\blender.exe\" \"D:\\Blender\\Projects\\Character\\X\\X.blend\""
+        }
+      ],
+      "osInventoryError": null,
+      "launchReceiptError": null,
+      "report": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\nla_micro_01\\nla_track_identity_report.json",
+        "sha256": "2a755e2d7ab0988b4b6265e260126ba465d7ad59f2cc9996dc39a9deec950090"
+      },
+      "reportCompleted": true,
+      "reportReadError": null,
+      "artistUnchanged": true,
+      "artist": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+        "sha256": "e8d3013ef14e02ed76160a838e7d255490fd1b6ece340e7c3f9e33dc57a3377f"
+      },
+      "unityOrExternalSdkOrGuiOrDeploymentPerformed": false
+    },
+    "os_gone_evidence_source": "Root launcher saved actual OS observations in process_exit; reviewer did not make a fresh OS/CIM query.",
+    "all_owned_gone_and_sole_artist_recorded": true,
+    "artist_disk_sha_rechecked_by_reviewer": true
+  },
+  "timestamp_precision": {
+    "grant_declared_createdUtc": "2026-10-11T05:39:00Z",
+    "claim_utc": "2026-10-11T05:38:55.3977346Z",
+    "launch_utc": "2026-10-11T05:38:55.4753975Z",
+    "natural_exit_observedUtc": "2026-10-11T05:39:06.9442509Z",
+    "grant_declared_clock_is_later_than_claim_and_launch": true,
+    "cross_clock_chronological_authorization_inference_performed": false,
+    "manual_rounding_or_clock_cause_inferred": false,
+    "limit": "Preserved ~4.5-second metadata timestamp discrepancy. Clock fields alone do not prove authorization order; no expiry gate or chronological claim is fabricated."
+  },
+  "limitations": [
+    "This is independent saved evidence readback, not a rerun or observer capture.",
+    "Native synthetic [2,3,0] Full Stack and Action-slot entry/exit PASS closes this narrow installed API uncertainty. Real217 mapping, model motion/asset preservation, physical export and headful UI remain outside probe scope.",
+    "Full n11 still requires its separate exact fresh grant. No old micro/n10 authorization is carried forward.",
+    "No product/toolkit/projection changes, clock audit, source packet measurement or native/SDK/GUI/CIM action was performed."
+  ]
+}

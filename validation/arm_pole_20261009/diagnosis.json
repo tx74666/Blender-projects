@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-09",
+  "blender": "5.2.0 LTS",
+  "runtime_addon_version": "0.77.9",
+  "symptom": "Both elbows bend downward when the hand IK controls are retracted.",
+  "confirmed_cause": "Both native upper-arm pose rotations retain the Arm Flat asset seed (about 37.4479 degrees). Both hand and Pole controls have been cleared to their rest channels. Direct IK measures Pole Angle from the current source frame; clearing only the visible controls loses the position compensation for that frame.",
+  "causation_evidence": "With the saved scene's source seeds and unchanged Pole controls/angles, retraction gives posterior-plane dot about 0.323 and downward radial Z about -0.661 on both sides. Restoring only the historical neutral source rotations gives posterior-plane dot about 0.982. The live artist has exactly the same relevant raw channels.",
+  "repair": "Restore only rotation_quaternion on upper_arm, forearm and hand on both sides, using the neutral channels captured in the verified 2026-10-08 live_before.json. Preserve all locations/scales, visible controls, calibrated Pole Angles, Rest matrices, weights and asset action curves.",
+  "scope": "Current artist scene repair; no add-on source or deployment change.",
+  "artist_saved": true,
+  "artist_sha256": "a1e0e4150052c92d394a0df8a2273a289b5eb733db3e0a31dbcde63cc440dfed",
+  "backup_receipt": "backup_receipt.json",
+  "live_capture": "live_before.json",
+  "live_repair_receipt": "live_repair.json",
+  "isolated_drag_evidence": "saved_drag_probe.json",
+  "isolated_repair_verification": "isolated_repair_verified.json",
+  "final_saved_file_verification": "saved_reopen_verified.json",
+  "checks": "Both arms retract at 2%, 15%, 30%; all 6 cases pass before application and all 6 pass after reading the final saved file. Hand endpoint change under repair is 8.87214e-7 Blender units. All other saved pose channels and all saved Rest matrices compare exactly.",
+  "known_workflow_limit": "The existing add-on does not provide a complete Direct limb pose reset. Native clearing of only visible Hand/Pole controls can leave native source rotations behind and can reproduce this problem. This run does not claim to change that workflow.",
+  "operator_observation": "The old Console command was inadvertently triggered while trying a Shift shortcut; its existing repeat guard stopped it before modifications, and the artist disk hash remained unchanged. Nested save_mainfile returned FINISHED but an immediate is_dirty assertion failed. The final normal UI Ctrl-S displayed Saved X.blend with a clean title, and a separate native process verified the final saved rig and all six drag cases.",
+  "background_processes": "All background Blender checks completed with exit code 0; artist Blender remains open.",
+  "model_and_reasoning_effort": "Unrecorded"
+}

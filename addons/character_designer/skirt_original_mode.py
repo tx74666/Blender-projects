@@ -7,6 +7,7 @@ No rest bones, helper objects or per-frame Python pose handlers are added.
 """
 import json
 import math
+import hashlib
 
 from mathutils import Matrix
 from . import skirt_rig as skirt, limb_ik
@@ -56,6 +57,24 @@ def _update(context, targets):
     for target in targets:
         target.update_tag(refresh={'OBJECT'})
     context.view_layer.update()
+
+
+def _surface(source, target, record, *, prove=True):
+    """Keep the surface output running during Original posing and protect its graph."""
+    from . import skirt_physics
+    backend = skirt_physics.backend(record)
+    if backend == skirt_physics.LEGACY_BACKEND:
+        return None, None
+    service = skirt_physics._surface_module(record)
+    if prove:
+        service.validate(source, target, record)
+    physics = record['physics']
+    identity = {'backend': backend, 'surface': physics.get('surface'),
+                'proxy': physics.get('proxy'), 'tracker': physics.get('tracker'),
+                'rows': physics.get('rows'), 'columns': physics.get('columns')}
+    digest = hashlib.sha256(json.dumps(identity, sort_keys=True, allow_nan=False,
+                                     separators=(',', ':')).encode('utf-8')).hexdigest()
+    return service, digest
 
 
 def _inventory(context, main):
@@ -203,6 +222,9 @@ def _resolve(context, main, entries):
         parents = {name: target.data.bones[name].parent.name if target.data.bones[name].parent else '' for name in names}
         if set(entry['names']) != names or entry['rest'] != rest or entry['parents'] != parents:
             raise ValueError('The Dress originals were structurally edited; undo that edit before returning.')
+        _service, identity = _surface(source, target, record, prove=False)
+        if entry.get('surface_installation') != identity:
+            raise ValueError('The Dress surface setup changed in Original; restore it before returning.')
         relations = _relations(target, source, record, working=True)
         result.append((entry, target, source, record, relations))
     if set(inventory) != {entry['owner'] for entry in entries}:
@@ -213,6 +235,7 @@ def _resolve(context, main, entries):
 def validate_active(context, main, entries):
     """Refuse edits to isolated setup state before returning to Controls."""
     for entry, _target, _source, _record, relations in _resolve(context, main, entries):
+        _surface(_source, _target, _record)
         for pb, copy, rotation in relations:
             state = entry['constraints'][pb.name]
             if (copy.mix_mode != 'BEFORE_FULL' or copy.mute != state['manual_mute']
@@ -227,9 +250,10 @@ def prepare(context, main):
         from . import bone_display
         bone_display._editable(target)
         relations = _relations(target, source, record)
+        _service, surface_identity = _surface(source, target, record)
         evaluated = target.evaluated_get(context.evaluated_depsgraph_get())
         names = sorted({pb.name for pb, _copy, _rot in relations} | {record['controls']['waist']})
-        entries.append({'owner': owner, 'names': names,
+        entries.append({'owner': owner, 'names': names, 'surface_installation': surface_identity,
                         'rest': _rest(target, names),
                         'parents': {name: target.data.bones[name].parent.name if target.data.bones[name].parent else '' for name in names},
                         'channels': {name: _channels(target.pose.bones[name]) for name in names},
@@ -244,12 +268,19 @@ def prepare(context, main):
 def checkpoint(context, main, entries, *, targets=None):
     """Reuse a proof only across consecutive reads before any native update."""
     targets = _resolve(context, main, entries) if targets is None else targets
-    return [{'entry': entry, 'target': target, 'source': source,
-             'channels': {name: _channels(target.pose.bones[name]) for name in entry['names']},
-             'locks': {name: _locks(target.pose.bones[name]) for name in entry['names']},
-             'constraints': [(copy, copy.mute, copy.mix_mode, rot, rot.mute) for _pb, copy, rot in relations],
-             'corrections': source.get(CORRECTIONS)}
-            for entry, target, source, _record, relations in targets]
+    saved = []
+    for entry, target, source, record, relations in targets:
+        item = {'entry': entry, 'target': target, 'source': source,
+                'channels': {name: _channels(target.pose.bones[name]) for name in entry['names']},
+                'locks': {name: _locks(target.pose.bones[name]) for name in entry['names']},
+                'constraints': [(copy, copy.mute, copy.mix_mode, rot, rot.mute) for _pb, copy, rot in relations],
+                'corrections': source.get(CORRECTIONS)}
+        service, _identity = _surface(source, target, record, prove=False)
+        if service is not None:
+            item.update(surface=service, surface_record=json.loads(json.dumps(record)),
+                        surface_state=service.capture_mode(source, record))
+        saved.append(item)
+    return saved
 
 
 def rollback(context, state):
@@ -268,12 +299,15 @@ def rollback(context, state):
             saved['source'].pop(CORRECTIONS, None)
         else:
             saved['source'][CORRECTIONS] = saved['corrections']
+        if 'surface' in saved:
+            saved['surface'].restore_mode(saved['source'], saved['surface_record'], saved['surface_state'])
     _update(context, {saved['target'] for saved in state})
 
 
 def verify(context, main, entries, desired=None):
     worst = 0.0
     for entry, target, _source, _record, _relations in _resolve(context, main, entries):
+        _surface(_source, target, _record)
         expected = desired.get(entry['owner']) if desired is not None else {name: Matrix(value) for name, value in entry['pose'].items()}
         evaluated = target.evaluated_get(context.evaluated_depsgraph_get())
         for name, matrix in expected.items():
@@ -341,6 +375,9 @@ def _preserve(context, main, entries, wanted):
 def enter(context, main, entries):
     targets = _resolve(context, main, entries)
     for entry, target, _source, _record, relations in targets:
+        service, _identity = _surface(_source, target, _record, prove=False)
+        if service is not None and getattr(service, 'BACKEND', None) == 'DIRECT_MAIN_CLOTH_V1':
+            service.set_editing(_source, _record, True)
         correction = _corrections(_source, _record)
         for pb, copy, rotation in relations:
             # REPLACE previously discarded these dormant channels. Identity is
@@ -408,6 +445,10 @@ def leave(context, main, entries, desired=None):
         if correction['bones']:
             source[CORRECTIONS] = json.dumps(correction, separators=(',', ':'))
     verify(context, main, entries, desired)
+    for _entry, target, source, record, _relations in targets:
+        service, _identity = _surface(source, target, record, prove=False)
+        if service is not None and getattr(service, 'BACKEND', None) == 'DIRECT_MAIN_CLOTH_V1':
+            service.set_editing(source, record, False)
     return count
 
 
@@ -419,13 +460,25 @@ def clear(context, main, selected_only=True):
     entries = prepare(context, main)
     state = checkpoint(context, main, entries)
     count = 0
+    changed_targets = set()
+    direct_edits = []
     try:
         for entry, target, source, record, relations in _resolve(context, main, entries):
             correction = _corrections(source, record)
-            for pb, copy, _rotation in relations:
-                value = correction['bones'].get(pb.name)
-                if value is None or selected_only and not (pb.select if hasattr(pb, 'select') else pb.bone.select):
-                    continue
+            clearing = [(pb, copy, correction['bones'][pb.name])
+                        for pb, copy, _rotation in relations
+                        if pb.name in correction['bones'] and (not selected_only
+                            or (pb.select if hasattr(pb, 'select') else pb.bone.select))]
+            if not clearing:
+                continue
+            service, _identity = _surface(source, target, record, prove=False)
+            if service is not None and getattr(service, 'BACKEND', None) == 'DIRECT_MAIN_CLOTH_V1':
+                # Clearing changes the same input as Original posing. Withdraw
+                # the old Cloth result before the first channel mutation;
+                # explicit Reset/replay owns cache replacement, not Clear.
+                service.set_editing(source, record, True)
+                direct_edits.append((service, source, record))
+            for pb, copy, value in clearing:
                 copy.mix_mode = value['mix_mode']
                 _restore(pb, value['channels'])
                 correction['bones'].pop(pb.name)
@@ -434,7 +487,10 @@ def clear(context, main, selected_only=True):
                 source[CORRECTIONS] = json.dumps(correction, separators=(',', ':'))
             else:
                 source.pop(CORRECTIONS, None)
-        _update(context, {saved['target'] for saved in state})
+            changed_targets.add(target)
+        _update(context, changed_targets)
+        for service, source, record in direct_edits:
+            service.set_editing(source, record, False)
     except Exception:
         rollback(context, state)
         raise

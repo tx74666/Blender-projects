@@ -1,0 +1,49 @@
+{
+  "schema": "cdesigner.workspace-reference-projection/1",
+  "baseline_package": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_scene_feedback_20261010\\release_07719\\character_designer",
+  "projected_package": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_scene_feedback_20261010\\reference_reader_projection\\character_designer",
+  "baseline_workspace_sha256": "598b4c62c9320091ce0ad7330f312bfa54eaaa56d5d75f25b0a0e722f53eff04",
+  "canonical_workspace_sha256": "0e66354b6c89c0b328dab98fe845966617069aa4aa2b088a35e201775e94b3ce",
+  "projected_workspace_sha256": "bcd56229206c96bdff3ec1533ef745432a3a6c4bb6a6c3137938f8d3653e7590",
+  "constants": [
+    "REFERENCE_SCHEMA",
+    "REFERENCE_SUFFIX"
+  ],
+  "functions": [
+    "_decode_json",
+    "parse_workspace",
+    "_uuid",
+    "_parse_reference",
+    "_read_bytes",
+    "_load_reference",
+    "load_workspace"
+  ],
+  "existing_baseline_dependencies": [
+    "AnimationWorkspaceError",
+    "_text",
+    "_hex",
+    "_absolute_path",
+    "_object",
+    "_constant",
+    "_float",
+    "_validate"
+  ],
+  "changed_package_files": [
+    "animation_workspace.py"
+  ],
+  "tests": [
+    {
+      "file": "test_animation_workspace.py",
+      "count": 26,
+      "passed": true,
+      "runtime_source": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_scene_feedback_20261010\\reference_reader_projection\\character_designer\\animation_workspace.py"
+    },
+    {
+      "file": "test_animation_worklist.py",
+      "count": 14,
+      "passed": true,
+      "runtime_source": "D:\\Blender\\Projects\\Character\\X\\validation\\animation_scene_feedback_20261010\\reference_reader_projection\\character_designer"
+    }
+  ],
+  "passed": true
+}

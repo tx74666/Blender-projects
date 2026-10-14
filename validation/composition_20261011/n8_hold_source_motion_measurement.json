@@ -1,0 +1,2430 @@
+{
+  "schema": "x.validation.n8-hold-source-motion/1",
+  "source_only": true,
+  "native_or_tests_executed": false,
+  "method": {
+    "packet": "Stream single frames. Compare row-major world matrices and inverse(parent world) * bone world to first frame for all 41 sealed allowed paths.",
+    "rotation_angle": "Degrees from relative orthonormal column bases (Gram-Schmidt); explanatory metric, not a runtime tolerance or pass gate.",
+    "unity_asset": "Parse serialized m_FloatCurves only, excluding duplicated editor curves; report native humanoid parameter key ranges and slopes."
+  },
+  "measurements": [
+    {
+      "name": "A1_HoldPose",
+      "packet": {
+        "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002603-6b96f45335e1\\Cosha_Hold.cdanim.json",
+        "sha256": "b2ef89bd3000ae687536a7f3ef225bcae5ff87a8e3fa2b4242926567cdf91eee",
+        "bytes": 11191028
+      },
+      "link": {
+        "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002603-6b96f45335e1\\character_animation_link.json",
+        "sha256": "14c17d9d118b50686bc5ac0d53715be2d24c47971f00cf8cf7d3a9f2b2f0a6b5",
+        "bytes": 8920
+      },
+      "sealed_time_mode": "HoldPose",
+      "sealed_work_item_id": "2d07bb27-7943-4668-8e6e-a42de0798c43",
+      "sealed_new_action_id": "",
+      "scope_path_count": 41,
+      "exported_node_count": 218,
+      "frame_count": 297,
+      "time_start": 0.0,
+      "time_end": 4.9333334,
+      "frames_with_exact_parent_local_delta": 295,
+      "world_max_abs_delta": 0.1052212,
+      "parent_local_max_abs_delta": 0.04611912516486233,
+      "local_translation_max_distance_metres": 5.64043991589548e-07,
+      "local_rotation_max_degrees": 3.2303378270380483,
+      "per_bone": [
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L",
+          "world_max_abs_delta": 0.06584627812800001,
+          "parent_local_max_abs_delta": 0.04611912516486233,
+          "local_translation_max_distance_metres": 3.0971994697320693e-07,
+          "local_rotation_max_degrees": 3.2303378270380483,
+          "local_rotation_max_time": 2.75
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L",
+          "world_max_abs_delta": 0.08870992399999997,
+          "parent_local_max_abs_delta": 0.045323386834720536,
+          "local_translation_max_distance_metres": 3.136512286181436e-07,
+          "local_rotation_max_degrees": 2.7809303602420443,
+          "local_rotation_max_time": 0.85
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L",
+          "world_max_abs_delta": 0.07028496999999999,
+          "parent_local_max_abs_delta": 0.039603444900403656,
+          "local_translation_max_distance_metres": 2.874813312464939e-07,
+          "local_rotation_max_degrees": 2.7251039894054956,
+          "local_rotation_max_time": 2.6833334
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R",
+          "world_max_abs_delta": 0.045640349,
+          "parent_local_max_abs_delta": 0.037743070385553246,
+          "local_translation_max_distance_metres": 2.483962812671955e-07,
+          "local_rotation_max_degrees": 2.199821420595964,
+          "local_rotation_max_time": 1.91666663
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R",
+          "world_max_abs_delta": 0.046961814100000006,
+          "parent_local_max_abs_delta": 0.032522558998111545,
+          "local_translation_max_distance_metres": 3.4887828519935117e-07,
+          "local_rotation_max_degrees": 1.8771777449436493,
+          "local_rotation_max_time": 0.6333333
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L",
+          "world_max_abs_delta": 0.1052212,
+          "parent_local_max_abs_delta": 0.03065702045042218,
+          "local_translation_max_distance_metres": 3.544923652154082e-07,
+          "local_rotation_max_degrees": 2.0433339564997173,
+          "local_rotation_max_time": 0.683333337
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest",
+          "world_max_abs_delta": 0.03774895379999999,
+          "parent_local_max_abs_delta": 0.017943285781107682,
+          "local_translation_max_distance_metres": 2.712966546041549e-07,
+          "local_rotation_max_degrees": 1.2239709348563854,
+          "local_rotation_max_time": 3.5
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest",
+          "world_max_abs_delta": 0.034292600000000006,
+          "parent_local_max_abs_delta": 0.017320587830643608,
+          "local_translation_max_distance_metres": 3.0797857430897866e-07,
+          "local_rotation_max_degrees": 1.2239714622065723,
+          "local_rotation_max_time": 3.5
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R",
+          "world_max_abs_delta": 0.043147475000000005,
+          "parent_local_max_abs_delta": 0.01683304940979624,
+          "local_translation_max_distance_metres": 2.997760877180819e-07,
+          "local_rotation_max_degrees": 1.1856635549510408,
+          "local_rotation_max_time": 0.7
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R",
+          "world_max_abs_delta": 0.037379704,
+          "parent_local_max_abs_delta": 0.01213218061911812,
+          "local_translation_max_distance_metres": 3.5258175060411824e-07,
+          "local_rotation_max_degrees": 0.7165840020937899,
+          "local_rotation_max_time": 0.55
+        },
+        {
+          "path": "CoshaRig/Hips/spine",
+          "world_max_abs_delta": 0.042012802099999996,
+          "parent_local_max_abs_delta": 0.00895470804417358,
+          "local_translation_max_distance_metres": 2.92603535293021e-07,
+          "local_rotation_max_degrees": 0.6131310004672076,
+          "local_rotation_max_time": 3.5
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_middle.01.L/f_middle.02.L",
+          "world_max_abs_delta": 0.06876203980000001,
+          "parent_local_max_abs_delta": 7.362735344740301e-07,
+          "local_translation_max_distance_metres": 3.639942796189806e-07,
+          "local_rotation_max_degrees": 2.3319120084582497e-05,
+          "local_rotation_max_time": 3.4666667
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_index.01.R",
+          "world_max_abs_delta": 0.032768956,
+          "parent_local_max_abs_delta": 6.518265651678234e-07,
+          "local_translation_max_distance_metres": 5.64043991589548e-07,
+          "local_rotation_max_degrees": 2.5670064528288854e-05,
+          "local_rotation_max_time": 4.2833333
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L",
+          "world_max_abs_delta": 0.06884916589,
+          "parent_local_max_abs_delta": 6.110051294916374e-07,
+          "local_translation_max_distance_metres": 4.790171864392073e-07,
+          "local_rotation_max_degrees": 2.196705006686931e-05,
+          "local_rotation_max_time": 3.58333325
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_middle.01.R/f_middle.02.R",
+          "world_max_abs_delta": 0.036087408,
+          "parent_local_max_abs_delta": 5.855755682571129e-07,
+          "local_translation_max_distance_metres": 3.707843924078957e-07,
+          "local_rotation_max_degrees": 2.7770620203692138e-05,
+          "local_rotation_max_time": 3.51666665
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R",
+          "world_max_abs_delta": 0.033420499999999964,
+          "parent_local_max_abs_delta": 5.776353496633746e-07,
+          "local_translation_max_distance_metres": 2.64956463622427e-07,
+          "local_rotation_max_degrees": 3.2845327974766325e-05,
+          "local_rotation_max_time": 4.5666666
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R",
+          "world_max_abs_delta": 0.0352442926,
+          "parent_local_max_abs_delta": 5.697328226972331e-07,
+          "local_translation_max_distance_metres": 4.145120311656345e-07,
+          "local_rotation_max_degrees": 2.699869328381941e-05,
+          "local_rotation_max_time": 2.2
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_pinky.01.L/f_pinky.02.L",
+          "world_max_abs_delta": 0.069878556,
+          "parent_local_max_abs_delta": 5.651620494928622e-07,
+          "local_translation_max_distance_metres": 3.451155377060811e-07,
+          "local_rotation_max_degrees": 2.2749503328951236e-05,
+          "local_rotation_max_time": 1.55
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_index.01.R/f_index.02.R",
+          "world_max_abs_delta": 0.033580700000000005,
+          "parent_local_max_abs_delta": 5.620560673547104e-07,
+          "local_translation_max_distance_metres": 3.7686402708354926e-07,
+          "local_rotation_max_degrees": 1.9876613291913992e-05,
+          "local_rotation_max_time": 0.533333361
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L",
+          "world_max_abs_delta": 0.06867353152,
+          "parent_local_max_abs_delta": 5.53858431895371e-07,
+          "local_translation_max_distance_metres": 3.3455960735086895e-07,
+          "local_rotation_max_degrees": 2.7079568232672354e-05,
+          "local_rotation_max_time": 2.3
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_middle.01.R",
+          "world_max_abs_delta": 0.035130287999999996,
+          "parent_local_max_abs_delta": 5.500706665717559e-07,
+          "local_translation_max_distance_metres": 3.5968908155903705e-07,
+          "local_rotation_max_degrees": 2.5269392327350655e-05,
+          "local_rotation_max_time": 4.3166666
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R/f_ring.02.R",
+          "world_max_abs_delta": 0.0372168271,
+          "parent_local_max_abs_delta": 5.412399924908939e-07,
+          "local_translation_max_distance_metres": 4.008020149121175e-07,
+          "local_rotation_max_degrees": 1.924308070525986e-05,
+          "local_rotation_max_time": 4.3166666
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L",
+          "world_max_abs_delta": 0.0704541173,
+          "parent_local_max_abs_delta": 5.305240804442946e-07,
+          "local_translation_max_distance_metres": 4.887440025582603e-07,
+          "local_rotation_max_degrees": 1.9655345397318433e-05,
+          "local_rotation_max_time": 0.9
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.02.L",
+          "world_max_abs_delta": 0.06739676793,
+          "parent_local_max_abs_delta": 5.283777000375522e-07,
+          "local_translation_max_distance_metres": 3.711092984181172e-07,
+          "local_rotation_max_degrees": 3.268960932197713e-05,
+          "local_rotation_max_time": 4.0
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_index.01.L/f_index.02.L",
+          "world_max_abs_delta": 0.06581825599999999,
+          "parent_local_max_abs_delta": 5.178996173027528e-07,
+          "local_translation_max_distance_metres": 4.242217209073811e-07,
+          "local_rotation_max_degrees": 3.0161298710667795e-05,
+          "local_rotation_max_time": 4.33333349
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_pinky.01.R/f_pinky.02.R",
+          "world_max_abs_delta": 0.03822247699999998,
+          "parent_local_max_abs_delta": 5.164415890490659e-07,
+          "local_translation_max_distance_metres": 3.8671386715053824e-07,
+          "local_rotation_max_degrees": 1.862714183604302e-05,
+          "local_rotation_max_time": 4.266667
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_pinky.01.L",
+          "world_max_abs_delta": 0.070308831,
+          "parent_local_max_abs_delta": 5.134514502458387e-07,
+          "local_translation_max_distance_metres": 3.436451027284186e-07,
+          "local_rotation_max_degrees": 2.468572484316022e-05,
+          "local_rotation_max_time": 0.6166667
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R",
+          "world_max_abs_delta": 0.0359400958,
+          "parent_local_max_abs_delta": 5.052614686640311e-07,
+          "local_translation_max_distance_metres": 5.574719103214887e-07,
+          "local_rotation_max_degrees": 2.265317472408141e-05,
+          "local_rotation_max_time": 0.733333349
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L/f_ring.02.L",
+          "world_max_abs_delta": 0.070558796,
+          "parent_local_max_abs_delta": 4.889363989235562e-07,
+          "local_translation_max_distance_metres": 3.502147633954058e-07,
+          "local_rotation_max_degrees": 2.6092529506690732e-05,
+          "local_rotation_max_time": 0.816666663
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.02.R",
+          "world_max_abs_delta": 0.03227935700000001,
+          "parent_local_max_abs_delta": 4.780105844204297e-07,
+          "local_translation_max_distance_metres": 2.7087020783814455e-07,
+          "local_rotation_max_degrees": 2.937775443794112e-05,
+          "local_rotation_max_time": 0.8
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R",
+          "world_max_abs_delta": 0.0379858548,
+          "parent_local_max_abs_delta": 4.764849232952173e-07,
+          "local_translation_max_distance_metres": 3.3433358881452075e-07,
+          "local_rotation_max_degrees": 2.1155677147440178e-05,
+          "local_rotation_max_time": 0.316666663
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_pinky.01.R",
+          "world_max_abs_delta": 0.038938610000000005,
+          "parent_local_max_abs_delta": 4.656695389293475e-07,
+          "local_translation_max_distance_metres": 2.8468443555403935e-07,
+          "local_rotation_max_degrees": 2.9845464889983747e-05,
+          "local_rotation_max_time": 4.75
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L",
+          "world_max_abs_delta": 0.0706509668,
+          "parent_local_max_abs_delta": 4.593900237992443e-07,
+          "local_translation_max_distance_metres": 4.6703729392243164e-07,
+          "local_rotation_max_degrees": 1.8390847172212026e-05,
+          "local_rotation_max_time": 3.7833333
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L",
+          "world_max_abs_delta": 0.06988687,
+          "parent_local_max_abs_delta": 4.5894509625998836e-07,
+          "local_translation_max_distance_metres": 4.1386782761897784e-07,
+          "local_rotation_max_degrees": 2.7267343614925723e-05,
+          "local_rotation_max_time": 1.31666672
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R",
+          "world_max_abs_delta": 0.03809869299999999,
+          "parent_local_max_abs_delta": 4.5616549770866044e-07,
+          "local_translation_max_distance_metres": 3.520354607268965e-07,
+          "local_rotation_max_degrees": 2.2329078268013787e-05,
+          "local_rotation_max_time": 3.61666656
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L",
+          "world_max_abs_delta": 0.07046819,
+          "parent_local_max_abs_delta": 4.4909320806585384e-07,
+          "local_translation_max_distance_metres": 4.1869493301786604e-07,
+          "local_rotation_max_degrees": 2.5037558139104298e-05,
+          "local_rotation_max_time": 4.4333334
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L",
+          "world_max_abs_delta": 0.05504489000000001,
+          "parent_local_max_abs_delta": 4.24726645409379e-07,
+          "local_translation_max_distance_metres": 3.3809177291275127e-07,
+          "local_rotation_max_degrees": 2.1258792350482307e-05,
+          "local_rotation_max_time": 2.4333334
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R",
+          "world_max_abs_delta": 0.0333838425,
+          "parent_local_max_abs_delta": 4.1934789618558455e-07,
+          "local_translation_max_distance_metres": 3.6514667548493157e-07,
+          "local_rotation_max_degrees": 1.866623346736378e-05,
+          "local_rotation_max_time": 1.25
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_middle.01.L",
+          "world_max_abs_delta": 0.068953340037,
+          "parent_local_max_abs_delta": 4.048985349225376e-07,
+          "local_translation_max_distance_metres": 2.8989658003882095e-07,
+          "local_rotation_max_degrees": 1.9581033806511645e-05,
+          "local_rotation_max_time": 1.1
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_index.01.L",
+          "world_max_abs_delta": 0.06527775,
+          "parent_local_max_abs_delta": 3.9888116264152895e-07,
+          "local_translation_max_distance_metres": 4.502394848025876e-07,
+          "local_rotation_max_degrees": 1.9205163268014068e-05,
+          "local_rotation_max_time": 3.86666656
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R",
+          "world_max_abs_delta": 0.0377687129,
+          "parent_local_max_abs_delta": 3.9271671692375776e-07,
+          "local_translation_max_distance_metres": 2.978124493703262e-07,
+          "local_rotation_max_degrees": 1.9655345397318433e-05,
+          "local_rotation_max_time": 1.7166667
+        }
+      ]
+    },
+    {
+      "name": "A2_HoldPose",
+      "packet": {
+        "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002637-051fa3de7e45\\Cosha_Hold.cdanim.json",
+        "sha256": "f0cfb4a25e936e669338cd846f456d01d72485e7aba51424f6e738944d3bbbc7",
+        "bytes": 11191033
+      },
+      "link": {
+        "path": "D:\\Codex\\CQ\\e16685fce2c84c33840bfdefd4748954\\CharacterTuning\\20261011-002637-051fa3de7e45\\character_animation_link.json",
+        "sha256": "c361b28c234fa60bf9715eb079845e17b281aaaa8a33b04fea6f2c8fc9dcba39",
+        "bytes": 8925
+      },
+      "sealed_time_mode": "HoldPose",
+      "sealed_work_item_id": "0f4890fc-64a5-404f-a0be-2800ac0c839a",
+      "sealed_new_action_id": "",
+      "scope_path_count": 41,
+      "exported_node_count": 218,
+      "frame_count": 297,
+      "time_start": 0.0,
+      "time_end": 4.9333334,
+      "frames_with_exact_parent_local_delta": 295,
+      "world_max_abs_delta": 0.1052212,
+      "parent_local_max_abs_delta": 0.04611912516486233,
+      "local_translation_max_distance_metres": 5.64043991589548e-07,
+      "local_rotation_max_degrees": 3.2303378270380483,
+      "per_bone": [
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L",
+          "world_max_abs_delta": 0.06584627812800001,
+          "parent_local_max_abs_delta": 0.04611912516486233,
+          "local_translation_max_distance_metres": 3.0971994697320693e-07,
+          "local_rotation_max_degrees": 3.2303378270380483,
+          "local_rotation_max_time": 2.75
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L",
+          "world_max_abs_delta": 0.08870992399999997,
+          "parent_local_max_abs_delta": 0.045323386834720536,
+          "local_translation_max_distance_metres": 3.136512286181436e-07,
+          "local_rotation_max_degrees": 2.7809303602420443,
+          "local_rotation_max_time": 0.85
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L",
+          "world_max_abs_delta": 0.07028496999999999,
+          "parent_local_max_abs_delta": 0.039603444900403656,
+          "local_translation_max_distance_metres": 2.874813312464939e-07,
+          "local_rotation_max_degrees": 2.7251039894054956,
+          "local_rotation_max_time": 2.6833334
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R",
+          "world_max_abs_delta": 0.045640349,
+          "parent_local_max_abs_delta": 0.037743070385553246,
+          "local_translation_max_distance_metres": 2.483962812671955e-07,
+          "local_rotation_max_degrees": 2.199821420595964,
+          "local_rotation_max_time": 1.91666663
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R",
+          "world_max_abs_delta": 0.046961814100000006,
+          "parent_local_max_abs_delta": 0.032522558998111545,
+          "local_translation_max_distance_metres": 3.4887828519935117e-07,
+          "local_rotation_max_degrees": 1.8771777449436493,
+          "local_rotation_max_time": 0.6333333
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L",
+          "world_max_abs_delta": 0.1052212,
+          "parent_local_max_abs_delta": 0.03065702045042218,
+          "local_translation_max_distance_metres": 3.544923652154082e-07,
+          "local_rotation_max_degrees": 2.0433339564997173,
+          "local_rotation_max_time": 0.683333337
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest",
+          "world_max_abs_delta": 0.03774895379999999,
+          "parent_local_max_abs_delta": 0.017943285781107682,
+          "local_translation_max_distance_metres": 2.712966546041549e-07,
+          "local_rotation_max_degrees": 1.2239709348563854,
+          "local_rotation_max_time": 3.5
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest",
+          "world_max_abs_delta": 0.034292600000000006,
+          "parent_local_max_abs_delta": 0.017320587830643608,
+          "local_translation_max_distance_metres": 3.0797857430897866e-07,
+          "local_rotation_max_degrees": 1.2239714622065723,
+          "local_rotation_max_time": 3.5
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R",
+          "world_max_abs_delta": 0.043147475000000005,
+          "parent_local_max_abs_delta": 0.01683304940979624,
+          "local_translation_max_distance_metres": 2.997760877180819e-07,
+          "local_rotation_max_degrees": 1.1856635549510408,
+          "local_rotation_max_time": 0.7
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R",
+          "world_max_abs_delta": 0.037379704,
+          "parent_local_max_abs_delta": 0.01213218061911812,
+          "local_translation_max_distance_metres": 3.5258175060411824e-07,
+          "local_rotation_max_degrees": 0.7165840020937899,
+          "local_rotation_max_time": 0.55
+        },
+        {
+          "path": "CoshaRig/Hips/spine",
+          "world_max_abs_delta": 0.042012802099999996,
+          "parent_local_max_abs_delta": 0.00895470804417358,
+          "local_translation_max_distance_metres": 2.92603535293021e-07,
+          "local_rotation_max_degrees": 0.6131310004672076,
+          "local_rotation_max_time": 3.5
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_middle.01.L/f_middle.02.L",
+          "world_max_abs_delta": 0.06876203980000001,
+          "parent_local_max_abs_delta": 7.362735344740301e-07,
+          "local_translation_max_distance_metres": 3.639942796189806e-07,
+          "local_rotation_max_degrees": 2.3319120084582497e-05,
+          "local_rotation_max_time": 3.4666667
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_index.01.R",
+          "world_max_abs_delta": 0.032768956,
+          "parent_local_max_abs_delta": 6.518265651678234e-07,
+          "local_translation_max_distance_metres": 5.64043991589548e-07,
+          "local_rotation_max_degrees": 2.5670064528288854e-05,
+          "local_rotation_max_time": 4.2833333
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L",
+          "world_max_abs_delta": 0.06884916589,
+          "parent_local_max_abs_delta": 6.110051294916374e-07,
+          "local_translation_max_distance_metres": 4.790171864392073e-07,
+          "local_rotation_max_degrees": 2.196705006686931e-05,
+          "local_rotation_max_time": 3.58333325
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_middle.01.R/f_middle.02.R",
+          "world_max_abs_delta": 0.036087408,
+          "parent_local_max_abs_delta": 5.855755682571129e-07,
+          "local_translation_max_distance_metres": 3.707843924078957e-07,
+          "local_rotation_max_degrees": 2.7770620203692138e-05,
+          "local_rotation_max_time": 3.51666665
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R",
+          "world_max_abs_delta": 0.033420499999999964,
+          "parent_local_max_abs_delta": 5.776353496633746e-07,
+          "local_translation_max_distance_metres": 2.64956463622427e-07,
+          "local_rotation_max_degrees": 3.2845327974766325e-05,
+          "local_rotation_max_time": 4.5666666
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R",
+          "world_max_abs_delta": 0.0352442926,
+          "parent_local_max_abs_delta": 5.697328226972331e-07,
+          "local_translation_max_distance_metres": 4.145120311656345e-07,
+          "local_rotation_max_degrees": 2.699869328381941e-05,
+          "local_rotation_max_time": 2.2
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_pinky.01.L/f_pinky.02.L",
+          "world_max_abs_delta": 0.069878556,
+          "parent_local_max_abs_delta": 5.651620494928622e-07,
+          "local_translation_max_distance_metres": 3.451155377060811e-07,
+          "local_rotation_max_degrees": 2.2749503328951236e-05,
+          "local_rotation_max_time": 1.55
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_index.01.R/f_index.02.R",
+          "world_max_abs_delta": 0.033580700000000005,
+          "parent_local_max_abs_delta": 5.620560673547104e-07,
+          "local_translation_max_distance_metres": 3.7686402708354926e-07,
+          "local_rotation_max_degrees": 1.9876613291913992e-05,
+          "local_rotation_max_time": 0.533333361
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L",
+          "world_max_abs_delta": 0.06867353152,
+          "parent_local_max_abs_delta": 5.53858431895371e-07,
+          "local_translation_max_distance_metres": 3.3455960735086895e-07,
+          "local_rotation_max_degrees": 2.7079568232672354e-05,
+          "local_rotation_max_time": 2.3
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_middle.01.R",
+          "world_max_abs_delta": 0.035130287999999996,
+          "parent_local_max_abs_delta": 5.500706665717559e-07,
+          "local_translation_max_distance_metres": 3.5968908155903705e-07,
+          "local_rotation_max_degrees": 2.5269392327350655e-05,
+          "local_rotation_max_time": 4.3166666
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R/f_ring.02.R",
+          "world_max_abs_delta": 0.0372168271,
+          "parent_local_max_abs_delta": 5.412399924908939e-07,
+          "local_translation_max_distance_metres": 4.008020149121175e-07,
+          "local_rotation_max_degrees": 1.924308070525986e-05,
+          "local_rotation_max_time": 4.3166666
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L",
+          "world_max_abs_delta": 0.0704541173,
+          "parent_local_max_abs_delta": 5.305240804442946e-07,
+          "local_translation_max_distance_metres": 4.887440025582603e-07,
+          "local_rotation_max_degrees": 1.9655345397318433e-05,
+          "local_rotation_max_time": 0.9
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.02.L",
+          "world_max_abs_delta": 0.06739676793,
+          "parent_local_max_abs_delta": 5.283777000375522e-07,
+          "local_translation_max_distance_metres": 3.711092984181172e-07,
+          "local_rotation_max_degrees": 3.268960932197713e-05,
+          "local_rotation_max_time": 4.0
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_index.01.L/f_index.02.L",
+          "world_max_abs_delta": 0.06581825599999999,
+          "parent_local_max_abs_delta": 5.178996173027528e-07,
+          "local_translation_max_distance_metres": 4.242217209073811e-07,
+          "local_rotation_max_degrees": 3.0161298710667795e-05,
+          "local_rotation_max_time": 4.33333349
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_pinky.01.R/f_pinky.02.R",
+          "world_max_abs_delta": 0.03822247699999998,
+          "parent_local_max_abs_delta": 5.164415890490659e-07,
+          "local_translation_max_distance_metres": 3.8671386715053824e-07,
+          "local_rotation_max_degrees": 1.862714183604302e-05,
+          "local_rotation_max_time": 4.266667
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_pinky.01.L",
+          "world_max_abs_delta": 0.070308831,
+          "parent_local_max_abs_delta": 5.134514502458387e-07,
+          "local_translation_max_distance_metres": 3.436451027284186e-07,
+          "local_rotation_max_degrees": 2.468572484316022e-05,
+          "local_rotation_max_time": 0.6166667
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R",
+          "world_max_abs_delta": 0.0359400958,
+          "parent_local_max_abs_delta": 5.052614686640311e-07,
+          "local_translation_max_distance_metres": 5.574719103214887e-07,
+          "local_rotation_max_degrees": 2.265317472408141e-05,
+          "local_rotation_max_time": 0.733333349
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L/f_ring.02.L",
+          "world_max_abs_delta": 0.070558796,
+          "parent_local_max_abs_delta": 4.889363989235562e-07,
+          "local_translation_max_distance_metres": 3.502147633954058e-07,
+          "local_rotation_max_degrees": 2.6092529506690732e-05,
+          "local_rotation_max_time": 0.816666663
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.02.R",
+          "world_max_abs_delta": 0.03227935700000001,
+          "parent_local_max_abs_delta": 4.780105844204297e-07,
+          "local_translation_max_distance_metres": 2.7087020783814455e-07,
+          "local_rotation_max_degrees": 2.937775443794112e-05,
+          "local_rotation_max_time": 0.8
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R",
+          "world_max_abs_delta": 0.0379858548,
+          "parent_local_max_abs_delta": 4.764849232952173e-07,
+          "local_translation_max_distance_metres": 3.3433358881452075e-07,
+          "local_rotation_max_degrees": 2.1155677147440178e-05,
+          "local_rotation_max_time": 0.316666663
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_pinky.01.R",
+          "world_max_abs_delta": 0.038938610000000005,
+          "parent_local_max_abs_delta": 4.656695389293475e-07,
+          "local_translation_max_distance_metres": 2.8468443555403935e-07,
+          "local_rotation_max_degrees": 2.9845464889983747e-05,
+          "local_rotation_max_time": 4.75
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_ring.01.L",
+          "world_max_abs_delta": 0.0706509668,
+          "parent_local_max_abs_delta": 4.593900237992443e-07,
+          "local_translation_max_distance_metres": 4.6703729392243164e-07,
+          "local_rotation_max_degrees": 1.8390847172212026e-05,
+          "local_rotation_max_time": 3.7833333
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L",
+          "world_max_abs_delta": 0.06988687,
+          "parent_local_max_abs_delta": 4.5894509625998836e-07,
+          "local_translation_max_distance_metres": 4.1386782761897784e-07,
+          "local_rotation_max_degrees": 2.7267343614925723e-05,
+          "local_rotation_max_time": 1.31666672
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R",
+          "world_max_abs_delta": 0.03809869299999999,
+          "parent_local_max_abs_delta": 4.5616549770866044e-07,
+          "local_translation_max_distance_metres": 3.520354607268965e-07,
+          "local_rotation_max_degrees": 2.2329078268013787e-05,
+          "local_rotation_max_time": 3.61666656
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L",
+          "world_max_abs_delta": 0.07046819,
+          "parent_local_max_abs_delta": 4.4909320806585384e-07,
+          "local_translation_max_distance_metres": 4.1869493301786604e-07,
+          "local_rotation_max_degrees": 2.5037558139104298e-05,
+          "local_rotation_max_time": 4.4333334
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/thumb.01.L",
+          "world_max_abs_delta": 0.05504489000000001,
+          "parent_local_max_abs_delta": 4.24726645409379e-07,
+          "local_translation_max_distance_metres": 3.3809177291275127e-07,
+          "local_rotation_max_degrees": 2.1258792350482307e-05,
+          "local_rotation_max_time": 2.4333334
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R",
+          "world_max_abs_delta": 0.0333838425,
+          "parent_local_max_abs_delta": 4.1934789618558455e-07,
+          "local_translation_max_distance_metres": 3.6514667548493157e-07,
+          "local_rotation_max_degrees": 1.866623346736378e-05,
+          "local_rotation_max_time": 1.25
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_middle.01.L",
+          "world_max_abs_delta": 0.068953340037,
+          "parent_local_max_abs_delta": 4.048985349225376e-07,
+          "local_translation_max_distance_metres": 2.8989658003882095e-07,
+          "local_rotation_max_degrees": 1.9581033806511645e-05,
+          "local_rotation_max_time": 1.1
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.L/upper_arm.L/forearm.L/hand.L/f_index.01.L",
+          "world_max_abs_delta": 0.06527775,
+          "parent_local_max_abs_delta": 3.9888116264152895e-07,
+          "local_translation_max_distance_metres": 4.502394848025876e-07,
+          "local_rotation_max_degrees": 1.9205163268014068e-05,
+          "local_rotation_max_time": 3.86666656
+        },
+        {
+          "path": "CoshaRig/Hips/spine/Chest/UpperChest/shoulder.R/upper_arm.R/forearm.R/hand.R/f_ring.01.R",
+          "world_max_abs_delta": 0.0377687129,
+          "parent_local_max_abs_delta": 3.9271671692375776e-07,
+          "local_translation_max_distance_metres": 2.978124493703262e-07,
+          "local_rotation_max_degrees": 1.9655345397318433e-05,
+          "local_rotation_max_time": 1.7166667
+        }
+      ]
+    }
+  ],
+  "unity_source_asset": {
+    "asset": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Assets\\Art\\Animation\\Character\\Hold\\Hold.anim",
+      "sha256": "317b39b6a14e54bd890ed92d829802a81bcfc3e7756ae4ba91cf6dac5961b093",
+      "bytes": 3752505
+    },
+    "float_curve_count": 141,
+    "upper_body_curve_count": 27,
+    "nonconstant_upper_body_curve_count": 27,
+    "upper_body_curves": [
+      {
+        "attribute": "Left Shoulder Front-Back",
+        "key_count": 136,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.15325062,
+        "value_max": 0.031383295,
+        "value_range": 0.184633915,
+        "max_abs_serialized_slope": 0.41160136
+      },
+      {
+        "attribute": "Right Shoulder Down-Up",
+        "key_count": 98,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.03138438,
+        "value_max": 0.15106845,
+        "value_range": 0.11968406999999999,
+        "max_abs_serialized_slope": 0.23844829
+      },
+      {
+        "attribute": "Right Shoulder Front-Back",
+        "key_count": 113,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.09840127,
+        "value_max": 0.21614811,
+        "value_range": 0.11774684,
+        "max_abs_serialized_slope": 0.35173473
+      },
+      {
+        "attribute": "Left Shoulder Down-Up",
+        "key_count": 62,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2066041,
+        "value_max": 0.28805315,
+        "value_range": 0.08144904999999997,
+        "max_abs_serialized_slope": 0.14611456
+      },
+      {
+        "attribute": "Left Arm Twist In-Out",
+        "key_count": 89,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.17206046,
+        "value_max": 0.23946477,
+        "value_range": 0.06740431,
+        "max_abs_serialized_slope": 0.1750362
+      },
+      {
+        "attribute": "Right Arm Down-Up",
+        "key_count": 33,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.7854269,
+        "value_max": -0.7196757,
+        "value_range": 0.06575120000000001,
+        "max_abs_serialized_slope": 0.14820091
+      },
+      {
+        "attribute": "UpperChest Left-Right",
+        "key_count": 119,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.013186517,
+        "value_max": 0.03952846,
+        "value_range": 0.052714977,
+        "max_abs_serialized_slope": 0.07782084
+      },
+      {
+        "attribute": "Left Forearm Twist In-Out",
+        "key_count": 76,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2874874,
+        "value_max": 0.3373062,
+        "value_range": 0.049818799999999996,
+        "max_abs_serialized_slope": 0.1378865
+      },
+      {
+        "attribute": "UpperChest Front-Back",
+        "key_count": 122,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0039759767,
+        "value_max": 0.046552595,
+        "value_range": 0.0425766183,
+        "max_abs_serialized_slope": 0.09324276
+      },
+      {
+        "attribute": "UpperChest Twist Left-Right",
+        "key_count": 143,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.024487356,
+        "value_max": 0.005275155,
+        "value_range": 0.029762511,
+        "max_abs_serialized_slope": 0.083076
+      },
+      {
+        "attribute": "Chest Left-Right",
+        "key_count": 118,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00707251,
+        "value_max": 0.019806217,
+        "value_range": 0.026878727,
+        "max_abs_serialized_slope": 0.041001223
+      },
+      {
+        "attribute": "Left Arm Down-Up",
+        "key_count": 27,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.91456676,
+        "value_max": -0.88929576,
+        "value_range": 0.025271000000000043,
+        "max_abs_serialized_slope": 0.06704353
+      },
+      {
+        "attribute": "Right Hand In-Out",
+        "key_count": 114,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.04405807,
+        "value_max": -0.019452328,
+        "value_range": 0.024605741999999996,
+        "max_abs_serialized_slope": 0.062022038
+      },
+      {
+        "attribute": "Left Hand In-Out",
+        "key_count": 95,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.14190216,
+        "value_max": -0.11858043,
+        "value_range": 0.02332173,
+        "max_abs_serialized_slope": 0.08835943
+      },
+      {
+        "attribute": "Right Forearm Stretch",
+        "key_count": 27,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.57008225,
+        "value_max": 0.5925514,
+        "value_range": 0.022469149999999938,
+        "max_abs_serialized_slope": 0.051349103
+      },
+      {
+        "attribute": "Chest Front-Back",
+        "key_count": 123,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0019858587,
+        "value_max": 0.02327935,
+        "value_range": 0.0212934913,
+        "max_abs_serialized_slope": 0.04662814
+      },
+      {
+        "attribute": "Left Arm Front-Back",
+        "key_count": 47,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.23384741,
+        "value_max": 0.25457,
+        "value_range": 0.020722590000000013,
+        "max_abs_serialized_slope": 0.05943634
+      },
+      {
+        "attribute": "Right Arm Twist In-Out",
+        "key_count": 122,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.03071361,
+        "value_max": 0.051134508,
+        "value_range": 0.020420898000000003,
+        "max_abs_serialized_slope": 0.078393556
+      },
+      {
+        "attribute": "Left Forearm Stretch",
+        "key_count": 30,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.60473555,
+        "value_max": 0.6243159,
+        "value_range": 0.019580350000000024,
+        "max_abs_serialized_slope": 0.047173843
+      },
+      {
+        "attribute": "Left Hand Down-Up",
+        "key_count": 86,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.064799294,
+        "value_max": -0.0464125,
+        "value_range": 0.01838679399999999,
+        "max_abs_serialized_slope": 0.03607267
+      },
+      {
+        "attribute": "Chest Twist Left-Right",
+        "key_count": 141,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.012041586,
+        "value_max": 0.002066827,
+        "value_range": 0.014108413,
+        "max_abs_serialized_slope": 0.039300025
+      },
+      {
+        "attribute": "Spine Left-Right",
+        "key_count": 113,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00348788,
+        "value_max": 0.009844259,
+        "value_range": 0.013332139,
+        "max_abs_serialized_slope": 0.020525455
+      },
+      {
+        "attribute": "Right Arm Front-Back",
+        "key_count": 43,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2279369,
+        "value_max": 0.24095303,
+        "value_range": 0.013016130000000015,
+        "max_abs_serialized_slope": 0.035184972
+      },
+      {
+        "attribute": "Right Forearm Twist In-Out",
+        "key_count": 58,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2866486,
+        "value_max": 0.2995393,
+        "value_range": 0.012890700000000033,
+        "max_abs_serialized_slope": 0.065331966
+      },
+      {
+        "attribute": "Spine Front-Back",
+        "key_count": 111,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.001127308,
+        "value_max": 0.011662108,
+        "value_range": 0.010534799999999999,
+        "max_abs_serialized_slope": 0.023317331
+      },
+      {
+        "attribute": "Right Hand Down-Up",
+        "key_count": 120,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0033378298,
+        "value_max": 0.0123295095,
+        "value_range": 0.008991679700000001,
+        "max_abs_serialized_slope": 0.018893778
+      },
+      {
+        "attribute": "Spine Twist Left-Right",
+        "key_count": 115,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.0060398206,
+        "value_max": 0.0009480317,
+        "value_range": 0.0069878523,
+        "max_abs_serialized_slope": 0.019662049
+      }
+    ],
+    "all_float_curves": [
+      {
+        "attribute": "RootT.x",
+        "key_count": 46,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.022173101,
+        "value_max": 0.05077964,
+        "value_range": 0.028606539,
+        "max_abs_serialized_slope": 0.04577016
+      },
+      {
+        "attribute": "RootT.y",
+        "key_count": 5,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.9651581,
+        "value_max": 0.9671136,
+        "value_range": 0.001955499999999999,
+        "max_abs_serialized_slope": 0.002536478
+      },
+      {
+        "attribute": "RootT.z",
+        "key_count": 106,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.014348785,
+        "value_max": 0.0034952704,
+        "value_range": 0.0178440554,
+        "max_abs_serialized_slope": 0.03349163
+      },
+      {
+        "attribute": "RootQ.x",
+        "key_count": 142,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.0065416675,
+        "value_max": 0.0016380334,
+        "value_range": 0.0081797009,
+        "max_abs_serialized_slope": 0.019787708
+      },
+      {
+        "attribute": "RootQ.y",
+        "key_count": 58,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.02472728,
+        "value_max": 0.05606158,
+        "value_range": 0.031334299999999995,
+        "max_abs_serialized_slope": 0.033820115
+      },
+      {
+        "attribute": "RootQ.z",
+        "key_count": 81,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.01725306,
+        "value_max": -0.0063889455,
+        "value_range": 0.0108641145,
+        "max_abs_serialized_slope": 0.02000466
+      },
+      {
+        "attribute": "RootQ.w",
+        "key_count": 4,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.99849796,
+        "value_max": 0.9995406,
+        "value_range": 0.0010426399999999836,
+        "max_abs_serialized_slope": 0.0008225449
+      },
+      {
+        "attribute": "LeftFootT.x",
+        "key_count": 35,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.15980448,
+        "value_max": -0.13369995,
+        "value_range": 0.026104529999999987,
+        "max_abs_serialized_slope": 0.046848178
+      },
+      {
+        "attribute": "LeftFootT.y",
+        "key_count": 7,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.970754,
+        "value_max": -0.96830434,
+        "value_range": 0.00244966000000002,
+        "max_abs_serialized_slope": 0.0025811782
+      },
+      {
+        "attribute": "LeftFootT.z",
+        "key_count": 53,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.081378974,
+        "value_max": 0.117916204,
+        "value_range": 0.03653722999999999,
+        "max_abs_serialized_slope": 0.079110935
+      },
+      {
+        "attribute": "LeftFootQ.x",
+        "key_count": 17,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.4529861,
+        "value_max": -0.43322325,
+        "value_range": 0.01976285,
+        "max_abs_serialized_slope": 0.031535655
+      },
+      {
+        "attribute": "LeftFootQ.y",
+        "key_count": 17,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.42711493,
+        "value_max": 0.4431306,
+        "value_range": 0.016015669999999982,
+        "max_abs_serialized_slope": 0.027597222
+      },
+      {
+        "attribute": "LeftFootQ.z",
+        "key_count": 14,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.550275,
+        "value_max": -0.5346687,
+        "value_range": 0.015606299999999962,
+        "max_abs_serialized_slope": 0.013139261
+      },
+      {
+        "attribute": "LeftFootQ.w",
+        "key_count": 16,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.5577126,
+        "value_max": 0.57263076,
+        "value_range": 0.014918160000000014,
+        "max_abs_serialized_slope": 0.019745547
+      },
+      {
+        "attribute": "RightFootT.x",
+        "key_count": 38,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.122370854,
+        "value_max": 0.15628259,
+        "value_range": 0.033911736,
+        "max_abs_serialized_slope": 0.05892327
+      },
+      {
+        "attribute": "RightFootT.y",
+        "key_count": 8,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.96628463,
+        "value_max": -0.9628065,
+        "value_range": 0.003478129999999968,
+        "max_abs_serialized_slope": 0.006228977
+      },
+      {
+        "attribute": "RightFootT.z",
+        "key_count": 48,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.141907,
+        "value_max": -0.11889892,
+        "value_range": 0.02300808,
+        "max_abs_serialized_slope": 0.0643923
+      },
+      {
+        "attribute": "RightFootQ.x",
+        "key_count": 17,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.5511026,
+        "value_max": -0.5282007,
+        "value_range": 0.02290190000000003,
+        "max_abs_serialized_slope": 0.07840194
+      },
+      {
+        "attribute": "RightFootQ.y",
+        "key_count": 19,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.5177988,
+        "value_max": 0.5289922,
+        "value_range": 0.01119340000000002,
+        "max_abs_serialized_slope": 0.057160612
+      },
+      {
+        "attribute": "RightFootQ.z",
+        "key_count": 18,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.47038475,
+        "value_max": -0.45594367,
+        "value_range": 0.014441079999999995,
+        "max_abs_serialized_slope": 0.03190267
+      },
+      {
+        "attribute": "RightFootQ.w",
+        "key_count": 19,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.45899883,
+        "value_max": 0.47867748,
+        "value_range": 0.019678649999999964,
+        "max_abs_serialized_slope": 0.058942497
+      },
+      {
+        "attribute": "LeftHandT.x",
+        "key_count": 22,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.23768458,
+        "value_max": -0.22346313,
+        "value_range": 0.014221449999999997,
+        "max_abs_serialized_slope": 0.027951945
+      },
+      {
+        "attribute": "LeftHandT.y",
+        "key_count": 41,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.04557902,
+        "value_max": -0.041538298,
+        "value_range": 0.004040721999999997,
+        "max_abs_serialized_slope": 0.013048153
+      },
+      {
+        "attribute": "LeftHandT.z",
+        "key_count": 92,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.022946313,
+        "value_max": -0.011218982,
+        "value_range": 0.011727330999999999,
+        "max_abs_serialized_slope": 0.04691989
+      },
+      {
+        "attribute": "LeftHandQ.x",
+        "key_count": 128,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0117487,
+        "value_max": 0.026289465,
+        "value_range": 0.014540765,
+        "max_abs_serialized_slope": 0.05994968
+      },
+      {
+        "attribute": "LeftHandQ.y",
+        "key_count": 59,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.31645164,
+        "value_max": 0.33932528,
+        "value_range": 0.02287364000000003,
+        "max_abs_serialized_slope": 0.051254332
+      },
+      {
+        "attribute": "LeftHandQ.z",
+        "key_count": 22,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.66757005,
+        "value_max": 0.678041,
+        "value_range": 0.010470949999999979,
+        "max_abs_serialized_slope": 0.027562406
+      },
+      {
+        "attribute": "LeftHandQ.w",
+        "key_count": 20,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.670108,
+        "value_max": -0.6569909,
+        "value_range": 0.013117099999999993,
+        "max_abs_serialized_slope": 0.02041965
+      },
+      {
+        "attribute": "RightHandT.x",
+        "key_count": 21,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.21433887,
+        "value_max": 0.22269173,
+        "value_range": 0.008352860000000017,
+        "max_abs_serialized_slope": 0.03148285
+      },
+      {
+        "attribute": "RightHandT.y",
+        "key_count": 45,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.05538189,
+        "value_max": -0.048166882,
+        "value_range": 0.007215008000000002,
+        "max_abs_serialized_slope": 0.016299605
+      },
+      {
+        "attribute": "RightHandT.z",
+        "key_count": 81,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.01704706,
+        "value_max": 0.030684834,
+        "value_range": 0.013637774000000002,
+        "max_abs_serialized_slope": 0.03730054
+      },
+      {
+        "attribute": "RightHandQ.x",
+        "key_count": 60,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.24001831,
+        "value_max": -0.22267488,
+        "value_range": 0.01734343000000002,
+        "max_abs_serialized_slope": 0.04995208
+      },
+      {
+        "attribute": "RightHandQ.y",
+        "key_count": 64,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.118850365,
+        "value_max": -0.10650555,
+        "value_range": 0.012344814999999995,
+        "max_abs_serialized_slope": 0.04450225
+      },
+      {
+        "attribute": "RightHandQ.z",
+        "key_count": 18,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.68122435,
+        "value_max": -0.6751029,
+        "value_range": 0.006121450000000084,
+        "max_abs_serialized_slope": 0.032330483
+      },
+      {
+        "attribute": "RightHandQ.w",
+        "key_count": 18,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.68411815,
+        "value_max": 0.692252,
+        "value_range": 0.008133849999999998,
+        "max_abs_serialized_slope": 0.036068592
+      },
+      {
+        "attribute": "Spine Front-Back",
+        "key_count": 111,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.001127308,
+        "value_max": 0.011662108,
+        "value_range": 0.010534799999999999,
+        "max_abs_serialized_slope": 0.023317331
+      },
+      {
+        "attribute": "Spine Left-Right",
+        "key_count": 113,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00348788,
+        "value_max": 0.009844259,
+        "value_range": 0.013332139,
+        "max_abs_serialized_slope": 0.020525455
+      },
+      {
+        "attribute": "Spine Twist Left-Right",
+        "key_count": 115,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.0060398206,
+        "value_max": 0.0009480317,
+        "value_range": 0.0069878523,
+        "max_abs_serialized_slope": 0.019662049
+      },
+      {
+        "attribute": "Chest Front-Back",
+        "key_count": 123,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0019858587,
+        "value_max": 0.02327935,
+        "value_range": 0.0212934913,
+        "max_abs_serialized_slope": 0.04662814
+      },
+      {
+        "attribute": "Chest Left-Right",
+        "key_count": 118,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00707251,
+        "value_max": 0.019806217,
+        "value_range": 0.026878727,
+        "max_abs_serialized_slope": 0.041001223
+      },
+      {
+        "attribute": "Chest Twist Left-Right",
+        "key_count": 141,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.012041586,
+        "value_max": 0.002066827,
+        "value_range": 0.014108413,
+        "max_abs_serialized_slope": 0.039300025
+      },
+      {
+        "attribute": "UpperChest Front-Back",
+        "key_count": 122,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0039759767,
+        "value_max": 0.046552595,
+        "value_range": 0.0425766183,
+        "max_abs_serialized_slope": 0.09324276
+      },
+      {
+        "attribute": "UpperChest Left-Right",
+        "key_count": 119,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.013186517,
+        "value_max": 0.03952846,
+        "value_range": 0.052714977,
+        "max_abs_serialized_slope": 0.07782084
+      },
+      {
+        "attribute": "UpperChest Twist Left-Right",
+        "key_count": 143,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.024487356,
+        "value_max": 0.005275155,
+        "value_range": 0.029762511,
+        "max_abs_serialized_slope": 0.083076
+      },
+      {
+        "attribute": "Neck Nod Down-Up",
+        "key_count": 64,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.17336136,
+        "value_max": -0.11784292,
+        "value_range": 0.05551843999999999,
+        "max_abs_serialized_slope": 0.13036886
+      },
+      {
+        "attribute": "Neck Tilt Left-Right",
+        "key_count": 117,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.030878203,
+        "value_max": -0.007490349,
+        "value_range": 0.023387854,
+        "max_abs_serialized_slope": 0.06195706
+      },
+      {
+        "attribute": "Neck Turn Left-Right",
+        "key_count": 118,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.0015840547,
+        "value_max": -0.00036698912,
+        "value_range": 0.0012170655799999999,
+        "max_abs_serialized_slope": 0.003624475
+      },
+      {
+        "attribute": "Head Nod Down-Up",
+        "key_count": 79,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.09704436,
+        "value_max": 0.19944274,
+        "value_range": 0.10239838000000001,
+        "max_abs_serialized_slope": 0.24026924
+      },
+      {
+        "attribute": "Head Tilt Left-Right",
+        "key_count": 138,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.012955735,
+        "value_max": 0.020905998,
+        "value_range": 0.033861733,
+        "max_abs_serialized_slope": 0.09893109
+      },
+      {
+        "attribute": "Head Turn Left-Right",
+        "key_count": 95,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.12401059,
+        "value_max": -0.076284856,
+        "value_range": 0.047725734000000006,
+        "max_abs_serialized_slope": 0.14794509
+      },
+      {
+        "attribute": "Left Eye Down-Up",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0,
+        "value_max": 0.0,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "Left Eye In-Out",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0,
+        "value_max": 0.0,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "Right Eye Down-Up",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0,
+        "value_max": 0.0,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "Right Eye In-Out",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0,
+        "value_max": 0.0,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "Jaw Close",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 1.0285529,
+        "value_max": 1.0285529,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "Jaw Left-Right",
+        "key_count": 129,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -2.0730972e-06,
+        "value_max": 1.0349726e-06,
+        "value_range": 3.1080698e-06,
+        "max_abs_serialized_slope": 4.6621037e-05
+      },
+      {
+        "attribute": "Left Upper Leg Front-Back",
+        "key_count": 47,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.32044774,
+        "value_max": 0.4088025,
+        "value_range": 0.08835476000000003,
+        "max_abs_serialized_slope": 0.31514153
+      },
+      {
+        "attribute": "Left Upper Leg In-Out",
+        "key_count": 81,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.048401363,
+        "value_max": 0.08669812,
+        "value_range": 0.038296757,
+        "max_abs_serialized_slope": 0.07564831
+      },
+      {
+        "attribute": "Left Upper Leg Twist In-Out",
+        "key_count": 107,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.040214166,
+        "value_max": 0.170709,
+        "value_range": 0.210923166,
+        "max_abs_serialized_slope": 0.8163411
+      },
+      {
+        "attribute": "Left Lower Leg Stretch",
+        "key_count": 32,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.918157,
+        "value_max": 1.0475208,
+        "value_range": 0.12936380000000003,
+        "max_abs_serialized_slope": 0.42753738
+      },
+      {
+        "attribute": "Left Lower Leg Twist In-Out",
+        "key_count": 116,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.04508621,
+        "value_max": 0.15530789,
+        "value_range": 0.11022168,
+        "max_abs_serialized_slope": 0.51758873
+      },
+      {
+        "attribute": "Left Foot Up-Down",
+        "key_count": 58,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.15574354,
+        "value_max": 0.28562692,
+        "value_range": 0.12988338,
+        "max_abs_serialized_slope": 0.32543808
+      },
+      {
+        "attribute": "Left Foot Twist In-Out",
+        "key_count": 89,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.085461006,
+        "value_max": -0.027518582,
+        "value_range": 0.057942424000000006,
+        "max_abs_serialized_slope": 0.20716166
+      },
+      {
+        "attribute": "Left Toes Up-Down",
+        "key_count": 88,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.017099688,
+        "value_max": -0.011217296,
+        "value_range": 0.0058823919999999984,
+        "max_abs_serialized_slope": 0.012971271
+      },
+      {
+        "attribute": "Right Upper Leg Front-Back",
+        "key_count": 38,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.61450803,
+        "value_max": 0.65121335,
+        "value_range": 0.03670532000000004,
+        "max_abs_serialized_slope": 0.20367286
+      },
+      {
+        "attribute": "Right Upper Leg In-Out",
+        "key_count": 79,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.021972097,
+        "value_max": 0.091461204,
+        "value_range": 0.06948910700000001,
+        "max_abs_serialized_slope": 0.13821414
+      },
+      {
+        "attribute": "Right Upper Leg Twist In-Out",
+        "key_count": 69,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.08143173,
+        "value_max": 0.15055192,
+        "value_range": 0.06912019000000001,
+        "max_abs_serialized_slope": 0.14099732
+      },
+      {
+        "attribute": "Right Lower Leg Stretch",
+        "key_count": 29,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.87962186,
+        "value_max": 0.9162024,
+        "value_range": 0.036580539999999995,
+        "max_abs_serialized_slope": 0.3026259
+      },
+      {
+        "attribute": "Right Lower Leg Twist In-Out",
+        "key_count": 118,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.00036184394,
+        "value_max": 0.01831509,
+        "value_range": 0.01795324606,
+        "max_abs_serialized_slope": 0.15364459
+      },
+      {
+        "attribute": "Right Foot Up-Down",
+        "key_count": 43,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.2346598,
+        "value_max": -0.1973516,
+        "value_range": 0.037308200000000014,
+        "max_abs_serialized_slope": 0.060287252
+      },
+      {
+        "attribute": "Right Foot Twist In-Out",
+        "key_count": 91,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.061253782,
+        "value_max": 0.0248825,
+        "value_range": 0.086136282,
+        "max_abs_serialized_slope": 0.13436991
+      },
+      {
+        "attribute": "Right Toes Up-Down",
+        "key_count": 43,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.003414043,
+        "value_max": 0.026997404,
+        "value_range": 0.030411446999999998,
+        "max_abs_serialized_slope": 0.21714863
+      },
+      {
+        "attribute": "Left Shoulder Down-Up",
+        "key_count": 62,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2066041,
+        "value_max": 0.28805315,
+        "value_range": 0.08144904999999997,
+        "max_abs_serialized_slope": 0.14611456
+      },
+      {
+        "attribute": "Left Shoulder Front-Back",
+        "key_count": 136,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.15325062,
+        "value_max": 0.031383295,
+        "value_range": 0.184633915,
+        "max_abs_serialized_slope": 0.41160136
+      },
+      {
+        "attribute": "Left Arm Down-Up",
+        "key_count": 27,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.91456676,
+        "value_max": -0.88929576,
+        "value_range": 0.025271000000000043,
+        "max_abs_serialized_slope": 0.06704353
+      },
+      {
+        "attribute": "Left Arm Front-Back",
+        "key_count": 47,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.23384741,
+        "value_max": 0.25457,
+        "value_range": 0.020722590000000013,
+        "max_abs_serialized_slope": 0.05943634
+      },
+      {
+        "attribute": "Left Arm Twist In-Out",
+        "key_count": 89,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.17206046,
+        "value_max": 0.23946477,
+        "value_range": 0.06740431,
+        "max_abs_serialized_slope": 0.1750362
+      },
+      {
+        "attribute": "Left Forearm Stretch",
+        "key_count": 30,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.60473555,
+        "value_max": 0.6243159,
+        "value_range": 0.019580350000000024,
+        "max_abs_serialized_slope": 0.047173843
+      },
+      {
+        "attribute": "Left Forearm Twist In-Out",
+        "key_count": 76,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2874874,
+        "value_max": 0.3373062,
+        "value_range": 0.049818799999999996,
+        "max_abs_serialized_slope": 0.1378865
+      },
+      {
+        "attribute": "Left Hand Down-Up",
+        "key_count": 86,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.064799294,
+        "value_max": -0.0464125,
+        "value_range": 0.01838679399999999,
+        "max_abs_serialized_slope": 0.03607267
+      },
+      {
+        "attribute": "Left Hand In-Out",
+        "key_count": 95,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.14190216,
+        "value_max": -0.11858043,
+        "value_range": 0.02332173,
+        "max_abs_serialized_slope": 0.08835943
+      },
+      {
+        "attribute": "Right Shoulder Down-Up",
+        "key_count": 98,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.03138438,
+        "value_max": 0.15106845,
+        "value_range": 0.11968406999999999,
+        "max_abs_serialized_slope": 0.23844829
+      },
+      {
+        "attribute": "Right Shoulder Front-Back",
+        "key_count": 113,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.09840127,
+        "value_max": 0.21614811,
+        "value_range": 0.11774684,
+        "max_abs_serialized_slope": 0.35173473
+      },
+      {
+        "attribute": "Right Arm Down-Up",
+        "key_count": 33,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.7854269,
+        "value_max": -0.7196757,
+        "value_range": 0.06575120000000001,
+        "max_abs_serialized_slope": 0.14820091
+      },
+      {
+        "attribute": "Right Arm Front-Back",
+        "key_count": 43,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2279369,
+        "value_max": 0.24095303,
+        "value_range": 0.013016130000000015,
+        "max_abs_serialized_slope": 0.035184972
+      },
+      {
+        "attribute": "Right Arm Twist In-Out",
+        "key_count": 122,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.03071361,
+        "value_max": 0.051134508,
+        "value_range": 0.020420898000000003,
+        "max_abs_serialized_slope": 0.078393556
+      },
+      {
+        "attribute": "Right Forearm Stretch",
+        "key_count": 27,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.57008225,
+        "value_max": 0.5925514,
+        "value_range": 0.022469149999999938,
+        "max_abs_serialized_slope": 0.051349103
+      },
+      {
+        "attribute": "Right Forearm Twist In-Out",
+        "key_count": 58,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.2866486,
+        "value_max": 0.2995393,
+        "value_range": 0.012890700000000033,
+        "max_abs_serialized_slope": 0.065331966
+      },
+      {
+        "attribute": "Right Hand Down-Up",
+        "key_count": 120,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.0033378298,
+        "value_max": 0.0123295095,
+        "value_range": 0.008991679700000001,
+        "max_abs_serialized_slope": 0.018893778
+      },
+      {
+        "attribute": "Right Hand In-Out",
+        "key_count": 114,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.04405807,
+        "value_max": -0.019452328,
+        "value_range": 0.024605741999999996,
+        "max_abs_serialized_slope": 0.062022038
+      },
+      {
+        "attribute": "LeftHand.Thumb.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -2.5641246,
+        "value_max": -2.5641246,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Thumb.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.8110583,
+        "value_max": -0.8110583,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Thumb.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.51101935,
+        "value_max": 0.51101935,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Thumb.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.36974534,
+        "value_max": 0.36974534,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Index.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.24828313,
+        "value_max": -0.24828313,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Index.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -1.6573434,
+        "value_max": -1.6573434,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Index.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -1.0213054,
+        "value_max": -1.0213054,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Index.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.81720585,
+        "value_max": 0.81720585,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Middle.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.31356263,
+        "value_max": -0.31356263,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Middle.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -3.8793032,
+        "value_max": -3.8793032,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Middle.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -1.2330413,
+        "value_max": -1.2330413,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Middle.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.6333805,
+        "value_max": 0.6333805,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Ring.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.22765379,
+        "value_max": -0.22765379,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Ring.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 3.2864492,
+        "value_max": 3.2864492,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Ring.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.9821012,
+        "value_max": -0.9821012,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Ring.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.28179035,
+        "value_max": 0.28179035,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Little.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.2724785,
+        "value_max": -0.2724785,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Little.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.9669579,
+        "value_max": 0.9669579,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Little.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.92914546,
+        "value_max": -0.92914546,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftHand.Little.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.4478372,
+        "value_max": 0.4478372,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Thumb.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -2.5642326,
+        "value_max": -2.5642326,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Thumb.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.81103474,
+        "value_max": -0.81103474,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Thumb.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.6384425,
+        "value_max": 0.6384425,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Thumb.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.36974928,
+        "value_max": 0.36974928,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Index.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.2483124,
+        "value_max": -0.2483124,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Index.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -1.6574793,
+        "value_max": -1.6574793,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Index.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -1.0212868,
+        "value_max": -1.0212868,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Index.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.8172742,
+        "value_max": 0.8172742,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Middle.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.3137443,
+        "value_max": -0.3137443,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Middle.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -3.879756,
+        "value_max": -3.879756,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Middle.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -1.2330515,
+        "value_max": -1.2330515,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Middle.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.6333834,
+        "value_max": 0.6333834,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Ring.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.2427291,
+        "value_max": -0.2427291,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Ring.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 2.9197898,
+        "value_max": 2.9197898,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Ring.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.9821174,
+        "value_max": -0.9821174,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Ring.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.28183395,
+        "value_max": 0.28183395,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Little.1 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.28003514,
+        "value_max": -0.28003514,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Little.Spread",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.96612304,
+        "value_max": 0.96612304,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Little.2 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.92914265,
+        "value_max": -0.92914265,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "RightHand.Little.3 Stretched",
+        "key_count": 2,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.44781026,
+        "value_max": 0.44781026,
+        "value_range": 0.0,
+        "max_abs_serialized_slope": 0.0
+      },
+      {
+        "attribute": "LeftFootTDOF.x",
+        "key_count": 145,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00020688513,
+        "value_max": -3.9229717e-06,
+        "value_range": 0.00020296215829999998,
+        "max_abs_serialized_slope": 0.0017706482
+      },
+      {
+        "attribute": "LeftFootTDOF.y",
+        "key_count": 118,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00492445,
+        "value_max": -0.0002865244,
+        "value_range": 0.0046379256,
+        "max_abs_serialized_slope": 0.03400158
+      },
+      {
+        "attribute": "LeftFootTDOF.z",
+        "key_count": 109,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.012025423,
+        "value_max": -0.0016397053,
+        "value_range": 0.0103857177,
+        "max_abs_serialized_slope": 0.059199065
+      },
+      {
+        "attribute": "LeftToesTDOF.x",
+        "key_count": 148,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 7.838569e-06,
+        "value_max": 0.00025110703,
+        "value_range": 0.00024326846100000002,
+        "max_abs_serialized_slope": 0.0017064943
+      },
+      {
+        "attribute": "LeftToesTDOF.y",
+        "key_count": 114,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.00015990534,
+        "value_max": 0.0016291835,
+        "value_range": 0.0014692781599999999,
+        "max_abs_serialized_slope": 0.0094728805
+      },
+      {
+        "attribute": "LeftToesTDOF.z",
+        "key_count": 138,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.0005503885,
+        "value_max": -2.0204778e-05,
+        "value_range": 0.000530183722,
+        "max_abs_serialized_slope": 0.0042847074
+      },
+      {
+        "attribute": "RightFootTDOF.y",
+        "key_count": 121,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00028513809,
+        "value_max": -0.00011588989,
+        "value_range": 0.0001692482,
+        "max_abs_serialized_slope": 0.0012813087
+      },
+      {
+        "attribute": "RightFootTDOF.z",
+        "key_count": 98,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 0.00081035355,
+        "value_max": 0.0016333443,
+        "value_range": 0.00082299075,
+        "max_abs_serialized_slope": 0.006316285
+      },
+      {
+        "attribute": "RightToesTDOF.y",
+        "key_count": 98,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": 9.745487e-05,
+        "value_max": 0.00022784206,
+        "value_range": 0.00013038718999999998,
+        "max_abs_serialized_slope": 0.00085247285
+      },
+      {
+        "attribute": "LeftHandTDOF.z",
+        "key_count": 103,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.0003328903,
+        "value_max": -0.00016514641,
+        "value_range": 0.00016774389,
+        "max_abs_serialized_slope": 0.002479987
+      },
+      {
+        "attribute": "RightHandTDOF.z",
+        "key_count": 114,
+        "time_start": 0.0,
+        "time_end": 4.9333334,
+        "value_min": -0.00023375508,
+        "value_max": -0.00015605518,
+        "value_range": 7.769989999999998e-05,
+        "max_abs_serialized_slope": 0.00015872566
+      }
+    ]
+  },
+  "limitations": [
+    "No native Blender cached Action/Fcurve or handle payload was inspected.",
+    "This measures source packet variation; it does not quantify additional importer or control-solve noise.",
+    "HoldPose runtime admission remains exact; no guard, tolerance, DTO, publication, runtime, or projection was changed."
+  ],
+  "conclusion": "Both sealed HoldPose B source packets contain upper-body motion already present in the original Unity Hold asset. This is not solely an importer-noise explanation.",
+  "supported_next_step": "Prepare a genuinely constant authored B pose with new sealed provenance for HoldPose, or prepare the animated Hold B as genuine HoldLoop variants. Preserve this failed attempt and its exact source inputs.",
+  "analysis_script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\measure_n8_hold_source_motion.py",
+    "sha256": "b493656ba596076ccf4b8ff99faa519b42a470ff7930cf2cc60b4e65c7d9a6dc",
+    "bytes": 10809
+  }
+}

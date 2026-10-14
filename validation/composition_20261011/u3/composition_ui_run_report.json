@@ -1,0 +1,66 @@
+{
+  "schema": "x.validation.character-composition-ui-run/1",
+  "completed": false,
+  "fixture": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u3_fixture.json",
+  "fixture_sha256": "9f1fbefc4fd4eef30dd0171e264135bbf6297a375c00dadccc6d14b27ddb3dd9",
+  "scope": "Immutable QA seed only; root owns the native launch.",
+  "source_completion": {
+    "closure": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\completion_closure.json",
+      "sha256": "9810dbf836d11a85e412a1e2632fa97026aaf37509b6de098e9af74f22ad083d"
+    },
+    "completed_file_audit": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\actual_completed_file_audit.json",
+      "sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3"
+    },
+    "initial_workspace_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\initial_workspace.json",
+      "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9"
+    },
+    "completed_attempt": "n16",
+    "source_immutable_ledger_rehashed": false,
+    "shared_workspace_read_by_completion_admission": false
+  },
+  "runtime": {
+    "package": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_14\\character_designer",
+    "manifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_14\\python_projection.json",
+    "manifest_sha256": "d61cbc30a554f13faac171fd8cd509e9c9f83198fbd68e2b08472b4d8a10edaf",
+    "files": 167
+  },
+  "runtime_provenance": {
+    "sealed_source_runtime": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\python_projection.json",
+    "sealed_source_runtime_sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+    "current_test_runtime": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_14\\python_projection.json",
+    "current_test_runtime_sha256": "d61cbc30a554f13faac171fd8cd509e9c9f83198fbd68e2b08472b4d8a10edaf",
+    "historical_source_proof_is_not_current_runtime_native_acceptance": true
+  },
+  "catalog_extension": {
+    "workspace_identity_equal": true,
+    "protected_prepared_source_count": 6,
+    "protected_hold_work_ids": [
+      "1753d84253a948e8951cc28f5dd2fa36",
+      "8f6f7a3356ff4ca182951d726437117c",
+      "948e797b8d7044c49530a820349e8968"
+    ],
+    "actual_prepared_raise_work_id": null,
+    "admitted_prepared_additions": [],
+    "scope": "Core A+B editing; optional Raise deferred."
+  },
+  "protected_pose_routes": [
+    {
+      "work_item_id": "948e797b8d7044c49530a820349e8968",
+      "native_item_id": "6ce5c78566c9499496ec4c6dab8e4160",
+      "packet_sha256": "5b8ebb91890fc66e5f9ecd5c0df0e67ab93534bc9b4c07799f92c1d31664bf1a",
+      "native_count": 217
+    },
+    {
+      "work_item_id": "8f6f7a3356ff4ca182951d726437117c",
+      "native_item_id": "d96388be7e1c4db7a2a2f9ebc65bb946",
+      "packet_sha256": "6273b41618d3df98cd4ae1c4ca418234e650d2564108cacf252d210845f6d292",
+      "native_count": 217
+    }
+  ],
+  "error_type": "AssertionError",
+  "error": "The actual selected B must retain its current prepared Link route.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_12\\run_character_composition_ui_fixture.py\", line 499, in main\n    run(config, report)\n    ~~~^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_12\\run_character_composition_ui_fixture.py\", line 391, in run\n    require(clip is not None and not clip.get('needsRebuild') and clip.get('linkManifest') == item.manifest_path,\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        'The actual selected B must retain its current prepared Link route.')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_12\\run_character_composition_ui_fixture.py\", line 50, in require\n    raise AssertionError(message)\nAssertionError: The actual selected B must retain its current prepared Link route.\n"
+}

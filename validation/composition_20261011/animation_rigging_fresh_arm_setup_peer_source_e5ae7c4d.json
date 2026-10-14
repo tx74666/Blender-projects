@@ -1,0 +1,128 @@
+{
+  "schema": "x.validation.fresh-arm-rigging-setup-peer-source/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer": "worklist_review",
+  "source_files": {
+    "animation_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_setup.py",
+      "sha256": "e5ae7c4df9bb30f4e55719285cb7721963a3ab798c7225c806a436837559df93",
+      "bytes": 13772
+    },
+    "test_animation_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_setup.py",
+      "sha256": "4a253d9cad67d0423e27f7ff3538aa066d10c47a5bb4f22d7c1bf3e990a9245c",
+      "bytes": 12803
+    }
+  },
+  "changed_runtime_sources": {
+    "animation_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_setup.py",
+      "sha256": "e5ae7c4df9bb30f4e55719285cb7721963a3ab798c7225c806a436837559df93",
+      "bytes": 13772
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_rigging_fresh_arm_setup_owner_source_e5ae7c4d.json",
+    "sha256": "0c3b86c6e8c3d074bd735c12513a2168fd4dc910a44cd7e6ec3839de18978197",
+    "bytes": 7058
+  },
+  "review_scope": "New animation_rigging_setup wrapper and exact public/native dependency APIs only. The importer call-site and any package/native launch have separate owners and are not admitted by this receipt.",
+  "syntax": {
+    "ast_parse_and_in_memory_compile_files": 2,
+    "zero_assert_runtime_gates": true,
+    "target_module_imports": 0,
+    "tests_executed_by_reviewer": 0,
+    "Blender_or_numpy_imports": 0,
+    "native_operations": 0
+  },
+  "verified_source_guards": {
+    "fresh_scene_rig_data_outside_actual_pre_import_inventory": true,
+    "single_scene_and_single_user_local_armature": true,
+    "empty_action_NLA_drivers_tweak_and_control_graph_before_build": true,
+    "exact_model_packet_raw_SHA_before_and_after": true,
+    "complete_capture_and_exact_packet_native_indices": true,
+    "two_disjoint_direct_deform_chains_from_Right_Left_bindings": true,
+    "partial_weights_and_maintained_offsets_rejected": true,
+    "public_Analyze_used_only_for_current_Rest_stamp": true,
+    "detector_chain_names_overwritten_by_explicit_packet_six_fields": true,
+    "only_public_ARM_operator_Stable_ROLL_DECOUPLED_schema3": true,
+    "operator_FINISHED_and_native_inventory_readback_required": true,
+    "global_widget_collection_objects_meshes_never_shared": true,
+    "original_native_data_Rest_and_mapping_exact_before_after": true,
+    "exact_two_ARM_inventory_without_leg_build": true,
+    "public_FK_switch_keyframe_false_sync_display_false": true,
+    "FK_readback_and_controlsPlan_required": true,
+    "unchanged_native_binding_plan_target_pole_solver_weights_offsets_wrist_admission": true,
+    "no_Action_or_curve_creation_by_wrapper": true,
+    "every_touched_setup_buffer_field_restored": true,
+    "restoration_errors_prevent_success_or_attach_to_original_failure": true,
+    "outer_importer_new_ID_cleanup_required_no_shared_ID_removal_by_wrapper": true
+  },
+  "dependency_source_pins": {
+    "limb_ik.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+      "sha256": "68aabcbfcc7010d0b94f096b935c6065f0099e809ad39253abece168453dfcfc",
+      "bytes": 450542
+    },
+    "limb_ik_fk.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py",
+      "sha256": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c",
+      "bytes": 47570
+    },
+    "unity_animation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327
+    },
+    "animation_rigging_contract.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_contract.py",
+      "sha256": "bff52cbe97530662fcee5e4ca248c1fe09e781f73588627cecda62c777d3c179",
+      "bytes": 23545
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "c563543dc6c540aa7f8c97f0f8e5913ff1df2a5377bbbe118e9a1c21b8cd5708",
+      "bytes": 14481
+    },
+    "widget_collections.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\widget_collections.py",
+      "sha256": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18",
+      "bytes": 13252
+    }
+  },
+  "public_api_readback": {
+    "limb_ik": "_execute_build7031/Build Arm Rig7121/_plans_for_kind5728/_require_active_armature652/_chain_from_settings685; CURRENT_SCHEMA equals ROLL_DECOUPLED_SCHEMA3.",
+    "limb_ik_fk": "switch_limb678 supports desired_pose/keyframe=False/sync_display=False; mode_for_rig115 is the official mode readback.",
+    "unity_animation": "_mapping173 validates full parents/bind/scale/Rest and build_plan controls, with no tolerance relaxation.",
+    "unity_animation_rigging": "_binding_plan294-326 remains exact b459; native source hash independently rechecked."
+  },
+  "owner_pure_test_evidence": {
+    "owner_reported_count": 8,
+    "owner_reported_seconds": 0.227,
+    "owner_reported_PASS": true,
+    "actual_wrapper_with_fake_native_APIs": true,
+    "reviewer_reruns": 0,
+    "evidence": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_rigging_fresh_arm_setup_owner_source_e5ae7c4d.json",
+      "sha256": "0c3b86c6e8c3d074bd735c12513a2168fd4dc910a44cd7e6ec3839de18978197",
+      "bytes": 7058
+    },
+    "initial_fixture_iteration_error_disclosed": true
+  },
+  "concrete_source_blockers": [],
+  "native_pending_limits": [
+    "Only the real importer pre-import ID inventory establishes fresh ownership. No direct artist-Rig operator is authorized by this helper.",
+    "Existing public zero-length, disconnected-tail, helper and opposite-side chain gates may reject the actual new model; no repair or fallback is permitted.",
+    "Existing default Pole/calibration values and fake-RNA pure PASS do not establish real Unity solver parity.",
+    "Any Body widget resources in the same process are rejected; an independent empty process/Scene must satisfy actual ownership.",
+    "No successful actual new Prepare model/packet import, native Build, Target edit, physical return or Unity Apply is claimed.",
+    "No existing product code, harness, source freeze, package or workspace was modified by reviewer."
+  ]
+}

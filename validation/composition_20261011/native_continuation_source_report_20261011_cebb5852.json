@@ -1,0 +1,107 @@
+{
+  "schema": "x.validation.character-composition-continuation-source/1",
+  "utc": "2026-10-11T06:38:17.741109+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "status": "SOURCE_ONLY_READY_PENDING_INDEPENDENT_REVIEW_AND_NATIVE",
+  "source_files": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "cebb5852d67b9c976c763ac37acbfe810c70134268d843afea87ae624ebc873b",
+      "bytes": 25479
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_continuation.py",
+      "sha256": "5af30b5f11935e13614d0825d8730ac426bba2fe81a54f52731697ee6e96bfd8",
+      "bytes": 9118
+    }
+  ],
+  "preserved_default_native_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\tools\\verify_character_composition_native.py",
+    "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+    "bytes": 52692
+  },
+  "native_seam": {
+    "signature": "run(config, report, *, after_numeric=None, cases_runner=None)",
+    "default": "_run_fresh_cases",
+    "inverse_normalized_source_exact": true,
+    "other_function_AST_equal": true,
+    "other_function_count": 21,
+    "default_numeric_function_bodies_unchanged": true
+  },
+  "source_checks": {
+    "in_memory_syntax_sources": 3,
+    "bare_assert_admission_gates": 0,
+    "function_imports_or_invocations": 0,
+    "tests_executed": 0,
+    "regressions_authored_not_executed": [
+      "test_exact_two_helpers_and_snapshot_call_are_admitted",
+      "test_shared_numeric_function_change_is_rejected",
+      "test_additional_begin_statement_is_rejected",
+      "test_snapshot_call_after_write_is_rejected",
+      "test_changed_owner_peer_facts_are_rejected",
+      "test_extra_helper_is_rejected",
+      "test_twelve_complete_numeric_cases_are_admitted",
+      "test_boolean_value_is_rejected_even_with_matching_digest",
+      "test_string_value_is_rejected_even_with_matching_digest",
+      "test_nonfinite_value_is_rejected",
+      "test_only_three_complete_samples_are_rejected"
+    ]
+  },
+  "admission": {
+    "schema": "x.validation.character-composition-numeric-reuse/1",
+    "exact_fields": [
+      "schema",
+      "numeric_report",
+      "failure_readback",
+      "owner_review",
+      "peer_review",
+      "projection_receipt"
+    ],
+    "pin_fields": "absolute path / full sha256 / optional bytes; owner_review and peer_review exactly equal their three-field projection receipt pins",
+    "numeric_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\composition_native_report.json",
+      "sha256": "c5d1170c43848b5d6ccb607953c7dad0cecbeb52291a81b2d490ead3020dfb6c",
+      "bytes": 1544723
+    },
+    "failure_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_natural_failure_readback_c5d1170c.json",
+      "sha256": "2291e1e7360b8431eafb0d2fd86b12eafe486d96a2760b58051867468a0a6189",
+      "bytes": 42810
+    },
+    "source_input_rehash_count": 28,
+    "old_report_completed": false,
+    "old_native_source_sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+    "product_scope": "Exactly two added snapshot editor helpers and one call immediately before libraries.write; every other exporter function/top-level AST unchanged; 167 and 173 file maps each have only the exporter leaf changed; embedded8 unchanged"
+  },
+  "fresh_checks": [
+    "Existing native.run common projection/artist/workspace/spec/current model admission and official FK Match",
+    "Existing fresh_main_rig_scene official historical Restore and genuine fresh Scene/adopt",
+    "Two real imports with immediate full native Action/slot/row anchors",
+    "Current sealed specs, model/packet/Rest/mapping217 and exact native association proof",
+    "Fresh Full Stack and isolated_sync for both A variants: copied native bone filter217, exact full effective values, authored B fingerprint and complete A-before/after export metadata against immutable cases",
+    "Unchanged physical.run then genuine author_hold_loop and physical.run_one",
+    "Existing copy=True save_qa_seed followed by fresh Scene cleanup and native.run exact outer Action/assets/historical session/association/artist file recovery"
+  ],
+  "cli_template": [
+    "--config",
+    "<actual fresh existing first-stage config>",
+    "--reuse-admission",
+    "<actual numeric-reuse admission>",
+    "--reuse-admission-sha256",
+    "<actual admission SHA256>"
+  ],
+  "limitations": [
+    "No twelve cases were rerun by this source task; new numeric_reuse explicitly marks cases_reexecuted false.",
+    "Historical full out-of-mask Custom Action hash is not persisted in c5d; export scoped B equivalence is proved, and full new-attempt Action content has original per-Add anchors.",
+    "No grant, config, native completion closure, UI seed, Blender or worker is created by this source task.",
+    "Existing completion/UI audit needs explicit reused-case admission and the actual successful new-attempt receipts; old failed report remains completed false.",
+    "11 authored pure regressions were compiled but not executed under this SOURCE-only instruction."
+  ]
+}

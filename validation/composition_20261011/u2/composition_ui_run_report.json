@@ -1,0 +1,16 @@
+{
+  "schema": "x.validation.character-composition-ui-run/1",
+  "completed": false,
+  "fixture": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_fixture.json",
+  "fixture_sha256": "d9f6beae5425d2dbea55a1ab51e216f24ad367cf7019c35571e6f8254c5fcf30",
+  "scope": "Immutable QA seed only; root owns the native launch.",
+  "runtime": {
+    "package": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer",
+    "manifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\python_projection.json",
+    "manifest_sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+    "files": 167
+  },
+  "error_type": "AssertionError",
+  "error": "The exact original native Rig must retain both pinned original and QA Scene memberships.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\run_character_composition_ui_fixture.py\", line 384, in main\n    run(config, report)\n    ~~~^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\run_character_composition_ui_fixture.py\", line 259, in run\n    require(scene is not None and rig is not None and rig.name in scene.objects\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        and sorted(owner.name for owner in rig.users_scene) == seed['rigSceneNames']\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        and bpy.context.window is not None,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        'The exact original native Rig must retain both pinned original and QA Scene memberships.')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\run_character_composition_ui_fixture.py\", line 45, in require\n    raise AssertionError(message)\nAssertionError: The exact original native Rig must retain both pinned original and QA Scene memberships.\n"
+}

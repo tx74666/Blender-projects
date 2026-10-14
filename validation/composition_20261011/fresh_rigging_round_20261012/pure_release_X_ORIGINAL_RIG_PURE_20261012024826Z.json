@@ -1,0 +1,93 @@
+{
+  "schema": "x.validation.original-rig-pure-release/1",
+  "status": "ACTUAL_RELEASE",
+  "token": "X_ORIGINAL_RIG_PURE_20261012024826Z",
+  "actual_release_utc": "2026-10-12T02:51:35.3562609Z",
+  "actual_result": "CORE_PASS_UI_FOCUSED_FAIL",
+  "executed_tests": 55,
+  "passed_tests": 41,
+  "UI_error_tests": 14,
+  "unstarted_tests": 68,
+  "receipts": [
+    {
+      "bytes": 15508,
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_caf_024826\\receipt.json",
+      "sha256": "e257e18a3665e5ef690f355fe8b82438eff11b44ee769213736fee73b511e410"
+    },
+    {
+      "bytes": 8110,
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_ui_e57_024826\\receipt.json",
+      "sha256": "6cdce7b2ecf9718a908f477873103c0810c7bab226edae990fc05d8fa87654b6"
+    }
+  ],
+  "suite_summary": [
+    {
+      "passed": true,
+      "total": 41,
+      "exit_code": 0,
+      "phase": "core"
+    },
+    {
+      "passed": false,
+      "total": 14,
+      "exit_code": 1,
+      "phase": "ui"
+    }
+  ],
+  "natural_owned_children_gone": true,
+  "OS_only_observed": [
+    {
+      "pid": 2620,
+      "no_process_action": true,
+      "name": "conhost",
+      "currently_exists": true
+    },
+    {
+      "pid": 3500,
+      "no_process_action": true,
+      "name": null,
+      "currently_exists": false
+    },
+    {
+      "pid": 39912,
+      "no_process_action": true,
+      "name": null,
+      "currently_exists": false
+    },
+    {
+      "pid": 66260,
+      "no_process_action": true,
+      "name": null,
+      "currently_exists": false
+    },
+    {
+      "pid": 45228,
+      "no_process_action": true,
+      "name": null,
+      "currently_exists": false
+    },
+    {
+      "pid": 71328,
+      "no_process_action": true,
+      "name": null,
+      "currently_exists": false
+    }
+  ],
+  "process_termination_performed": false,
+  "no_old_token_retry": true,
+  "counts": {
+    "artist_write": 0,
+    "SDK": 0,
+    "build": 0,
+    "worker": 0,
+    "source_write": 0,
+    "deploy": 0,
+    "Blender": 0,
+    "native": 0
+  },
+  "RAM": {
+    "used_percent": 88.63,
+    "free_MiB": 1838.0
+  },
+  "reason": "Core41 actualPASS; UI14 fixture warm draw uses SimpleNamespace Rig in actual Composition membership lookup, TypeError before each test assertion. ExistingUI68 not started."
+}

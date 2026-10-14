@@ -1,0 +1,131 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "token": "X_ORIGINAL_RIG_PURE_20261012031038Z",
+  "scope": "original-rig-current-pure-checks",
+  "owner": "Root",
+  "owner_thread": "01a12751-d08f-7630-b790-18db26fe3186",
+  "parent_thread": "01a12305-aada-7273-b72c-54a41aad77e4",
+  "status": "ACTUAL_RELEASE",
+  "actual_release_utc": "2026-10-12T03:12:24.1063276Z",
+  "actual_tests": 123,
+  "actual_passed": 107,
+  "actual_failed": 16,
+  "test_suites": 5,
+  "passed": false,
+  "results": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_caf_031038\\receipt.json",
+      "sha256": "ba35e9e1330de9fa5c7061f2c81caf17f9da313c5d785c8e707b4fb8f1e6a35f",
+      "bytes": 15516,
+      "actual_run": true,
+      "passed": true,
+      "total": 41,
+      "helper_pid": 37688,
+      "helper_direct_exec_exit": 0,
+      "child_natural_exit": true
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_ui_89_031038\\receipt.json",
+      "sha256": "eef038ba0b5e8f7bb72f0e271dfa552337efe11fe848e7c9418dfe24aac9f26b",
+      "bytes": 11803,
+      "actual_run": true,
+      "passed": false,
+      "total": 82,
+      "helper_pid": 68020,
+      "helper_direct_exec_exit": 1,
+      "child_natural_exit": true
+    }
+  ],
+  "process_liveness": [
+    {
+      "pid": 37688,
+      "currently_absent": true,
+      "current_name": null
+    },
+    {
+      "pid": 28116,
+      "currently_absent": true,
+      "current_name": null
+    },
+    {
+      "pid": 31544,
+      "currently_absent": true,
+      "current_name": null
+    },
+    {
+      "pid": 73936,
+      "currently_absent": true,
+      "current_name": null
+    },
+    {
+      "pid": 68020,
+      "currently_absent": true,
+      "current_name": null
+    },
+    {
+      "pid": 54456,
+      "currently_absent": true,
+      "current_name": null
+    },
+    {
+      "pid": 72880,
+      "currently_absent": true,
+      "current_name": null
+    }
+  ],
+  "natural_owned_children_gone": true,
+  "forced_termination_performed": false,
+  "independent_seven_source_pins_unchanged_after_run": true,
+  "source_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+      "bytes": 43229
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "sha256": "caf15123e39f60a09872e7b8aa23ca1cf490d6ebd8a5fc584a02496a70988684",
+      "bytes": 31447
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_editing_data.py",
+      "sha256": "f53bcee59ca3845a0567e414cd024b010d18ba10996777d86e1103033de26f68",
+      "bytes": 14112
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach_ui.py",
+      "sha256": "89fe11bb6634e8e8ca0c16c5fcddc93093d7883cdfa70d5525149d1a2faf8bb0",
+      "bytes": 16363
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist.py",
+      "sha256": "9242405a9c48f6dbec061670e9dc4b0cbd11f6ddc9b83746c9958e309aeded55",
+      "bytes": 17877
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_ui.py",
+      "sha256": "c30dbe9ef756c85444f2a80cc8cccfde33a9af1fde73ce5862d542269ca2df1c",
+      "bytes": 66049
+    }
+  ],
+  "SDK_calls": 0,
+  "native_calls": 0,
+  "GUI_calls": 0,
+  "workers": 0,
+  "artist_disk_writes": 0,
+  "build_deploy_install": 0,
+  "memory": {
+    "availableMiB": 1499.6,
+    "usedPercent": 90.72
+  },
+  "limits": [
+    "UI focused14 passed. Existing68 failed:1 assertion failure plus15 errors, no retry.",
+    "UI receipt source_pins_unchanged_after_run=false retained; separate seven Source physical readback here true, not rewriting receipt.",
+    "SDK/native/artist acceptance not executed. Direct helper exits recorded, no operation on reused PIDs."
+  ]
+}

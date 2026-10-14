@@ -652,6 +652,8 @@ def remove(context, source, *, allow_animation=False):
     record = skirt.read_record(source)
     main = source[skirt.RIG_KEY]
     names = set(record['shared']['names'])
+    surface, surface_plan = skirt._surface_remove_plan(context, source, main, record)
+    allowed_dependencies = surface_plan['allowed_dependencies'] if surface_plan is not None else frozenset()
     if record.get('physics'):
         # Existing cache/object cleanup is still source-owned; protect a running bake.
         from . import skirt_physics
@@ -689,6 +691,8 @@ def remove(context, source, *, allow_animation=False):
                     raise skirt.SkirtRigError('An artist bone uses a Dress shape; preserve that shape before removal.')
                 if obj != main or pb.name not in names:
                     for con in pb.constraints:
+                        if (obj, pb.name, con.name) in allowed_dependencies:
+                            continue
                         if main in set(_constraint_targets(con)) and (
                                 getattr(con, 'subtarget', '') in names or getattr(con, 'pole_subtarget', '') in names
                                 or getattr(con, 'space_subtarget', '') in names
@@ -722,7 +726,12 @@ def remove(context, source, *, allow_animation=False):
              if curve.data_path.startswith(tuple(main.pose.bones[name].path_from_id() for name in names))] if main.animation_data else []
     # All expected errors are checked before destructive cleanup. The caller's
     # Blender operator supplies Undo for a committed removal.
+    from . import skirt_wiggle
+    if skirt_wiggle.STATE_KEY in source:
+        skirt_wiggle.forget(context, source)
     skirt._activate(context, source)
+    if surface is not None:
+        surface.commit_remove(source, surface_plan)
     source.modifiers.remove(expected)
     for name in record['groups']:
         group = source.vertex_groups.get(name)

@@ -1,0 +1,198 @@
+{
+  "schema": "x.validation.character-composition-publication-recovery-driver-source-review/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "review_kind": "Owner bounded Source/API/schema review and in-memory syntax only",
+  "source_files": {
+    "run_character_composition_publication_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_publication_recovery.py",
+      "sha256": "a21e531819225c4990242351ee9a2e84646cd8ac8a6714c5cd845c4a56f61fcf",
+      "bytes": 51225
+    }
+  },
+  "unchanged_boundary_sources": {
+    "verify_character_composition_native.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    "run_character_composition_first_stage_continuation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "23cda6830ce26421798df44b69b1c680b63536c393c9f22f16631f52818b411c",
+      "bytes": 66510
+    },
+    "run_character_composition_first_stage.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+      "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "bytes": 9852
+    },
+    "release_projection.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529
+    }
+  },
+  "source_dependencies": {
+    "n15_published_loop_recovery_source_plan_compact_e1598ff1.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_published_loop_recovery_source_plan_compact_e1598ff1.json",
+      "sha256": "b27c8e1c7cf09ec885b983d48688669aacb22d21fe1fda11697d0f46cd7b18cd",
+      "bytes": 27165
+    },
+    "composition_animation_sidecar_budget_projection_receipt_13_14.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_animation_sidecar_budget_projection_receipt_13_14.json",
+      "sha256": "fbeb346ac463ef18983fec699684d612a01a94af0265003b8881c1e6dbba9d09",
+      "bytes": 62305
+    },
+    "animation_sidecar32_owner_source_e0a0114f.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_sidecar32_owner_source_e0a0114f.json",
+      "sha256": "e68a079e01172e756ebddf4e81d10d6e0c0d8890da784187a5eae565d23d2b8e",
+      "bytes": 10871
+    },
+    "animation_sidecar32_peer_source_review_e0a0114f_26f13c71.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\animation_sidecar32_peer_source_review_e0a0114f_26f13c71.json",
+      "sha256": "d8ca616b8a7b196639cbb38392d79f97428e94914b92ca495df1ef3d2435cc31",
+      "bytes": 16058
+    }
+  },
+  "native_source_review_limits": {
+    "imports_of_driver_or_addon": 0,
+    "native_or_SDK_calls": 0,
+    "GUI_or_CIM_or_resource_queries": 0,
+    "tests_run": 3,
+    "syntax_and_AST_in_memory": true,
+    "top_level_bpy_import": false,
+    "assert_admission_gate_count": 0,
+    "syntax_sources_in_memory": 2
+  },
+  "scope": {
+    "new_source_file_only": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_publication_recovery.py",
+    "line_count": 705,
+    "existing_native_cases_runner_seam_used": true,
+    "native_default_and_continuation_unchanged": true,
+    "new_pipeline_framework_created": false,
+    "new_native_authoring": false,
+    "new_matrix_or_sample_reconstruction": false,
+    "new_numeric_resampling": false,
+    "new_worker_export_or_publication": false,
+    "publication_revision_increment": false,
+    "original_artist_save": false
+  },
+  "configuration": {
+    "schema": "x.validation.character-composition-publication-recovery-fixture/1",
+    "fields": [
+      "evidenceDirectory",
+      "failedProtection",
+      "failedSourceEntry",
+      "inheritedNumericReport",
+      "inheritedPhysicalReport",
+      "loopAuthorReport",
+      "nativeFixture",
+      "persistedNumericReport",
+      "publishedLink",
+      "qaSeedFile",
+      "schema",
+      "sidecar_budget_projection_receipt",
+      "tools",
+      "workerJob",
+      "workerResult",
+      "workerSnapshot"
+    ],
+    "tools": [
+      "verify_character_composition_native",
+      "run_character_composition_first_stage_continuation"
+    ],
+    "tool_pin_shape": [
+      "path",
+      "sha256",
+      "bytes"
+    ],
+    "cli": [
+      "--config",
+      "PATH",
+      "--config-sha256",
+      "SHA256"
+    ],
+    "sibling_resource_driver": "run_character_composition_first_stage.py",
+    "sibling_source_projection_reader": "release_projection.py"
+  },
+  "actual_failed_inputs": {
+    "protection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_natural_failure_readback_5a2e5dd7.json",
+      "sha256": "17125fc4cf1f1a4e23549b028f1c0c59155d9d7b8764dca2738fed76895422e1",
+      "bytes": 589022
+    },
+    "source_entry": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\source_entry_receipt.json",
+      "sha256": "111f933867cfd675b2204d250544518a21b507b106a1ec69020e85b1388bd534",
+      "bytes": 317100
+    },
+    "author_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\loop_author\\composition_HoldLoop_authoring_report.json",
+      "sha256": "dcbeccb0ec7185663dd6318627a9cf66e747c46c70f7231e5508fb7c7c3b3d4a",
+      "bytes": 4258521
+    },
+    "worker_job": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\loop_sync\\worker_1\\job.json",
+      "sha256": "8e36a2511052c4611943e9f660b713ada0361c62e276cb79c9c070b7353b6378",
+      "bytes": 15411726
+    },
+    "worker_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\loop_sync\\worker_1\\animation.blend",
+      "sha256": "e1598ff1838dd77c9ed6dfddee3702bdc0a76ce864975864cc745a8889fff0a6",
+      "bytes": 1546789
+    },
+    "worker_result": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\loop_sync\\worker_1\\stage\\result.json",
+      "sha256": "0f18fd875083d944eaf0acb104f677d9be8258137dce89451ea760aff2b7dd93",
+      "bytes": 3973429
+    }
+  },
+  "reviewed_boundaries": [
+    "Exact actual failed naturalExitCode=1, forcedTermination=false, allQaBlenderWorkersGoneVerified=true; prior outer recovery and collector acceptance remain false.",
+    "Full budget receiver-only delta with unchanged numeric/export/clock/worker leaves; runtime Return4b5 and full Return26f/Transfer682 remain distinct, preserving historical overlay differences.",
+    "Explicit n11 twelve cases and n12 two fresh variants remain inherited; same-B seed prerequisite is copied only from independently admitted real numeric proof.",
+    "Link only one SHA-pinned archive Action and require global Object/Scene/Armature/Mesh/Material inventories unchanged; exact single slot/layer/strip/bag and authenticated native60 marker.",
+    "405 unique no-group/modifier/sample/driver curves transferred only via official B draft; exact key/handle/settings fingerprints, complete worker Scope canonical-byte equality, full Custom8f4a->294d and outside/Source/A hashes mandatory.",
+    "Failure rolls back full Custom and preserves primary error plus cleanup diagnostics; old/custom library data is never removed as an owned archive.",
+    "Fresh collector.item_fingerprint/implementation and metadata measured after exact recovery; public old source slot remains immutable history; wrapper is a new truthful acknowledgement event, not an invented archived launch fingerprint.",
+    "Actual current UI2 cheap217 Rest/packet/association/anchor proof, explicit copy=True save_qa_seed tied to actual n12 physical2; native.run complete outer protections must finish before completed=true.",
+    "Inherited3/executed0 publications, currentreceipt1/currentLoop1/UI2/author0/resample0/workers0 explicit, old n15 failed status unchanged.",
+    "Five calls reuse unchanged driver701 fresh200MiB/near98 resource guard before native adoption, each official Add and QA seed.",
+    "Only the newly authenticated owned draft and linked archive may be disposed; complete Action inventory returns to exact original set. Missing optional FCurve.is_driver does not create or silently replace a property; actual driver object remains strictly rejected."
+  ],
+  "runtime_acceptance": "Pending fresh exact Parent grant and owned QA execution; this report accepts Source only.",
+  "previous_declared_source_checkpoint": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_publication_recovery_17180036_before_native_curve_Action_guards.py",
+    "sha256": "17180036cd54f74c11ba33148bd3c0748f291117b888059324758f15670b51d4",
+    "bytes": 48868
+  },
+  "previous_source_owner_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_published_loop_recovery_driver_owner_source_17180036.json",
+    "sha256": "f6f4f02d451eba520a78e80055e149abc0d8bd1b987df4f693b0d193ff76a9fe",
+    "bytes": 8635
+  },
+  "focused_tests": {
+    "source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_publication_recovery_curves.py",
+      "sha256": "56cd181435af0ef72eecf16152f7d6a54bb2f3df9e48179c1d3bfb17a717a7a3",
+      "bytes": 2420
+    },
+    "count": 3,
+    "passed": 3,
+    "exit_code": 0,
+    "reported_seconds": 0.046,
+    "execution": "bundled Python -B; AST extracts only actual require/canonical/curve_rows; no full driver/addon/bpy imports",
+    "cases": [
+      "native FCurve missing is_driver property accepted",
+      "non-None driver rejects before payload read",
+      "is_driver True rejects before payload read"
+    ]
+  },
+  "new_reviewed_delta_from_previous_checkpoint": [
+    "One curve.is_driver direct read becomes existing-compatible getattr(curve,is_driver,False), with driver None still mandatory.",
+    "Action global set immediately after archive link must equal original plus onlyarchive; after Enter original+archive+exactownedDraft only.",
+    "After official Close verify exact preexisting draft table plus owned recovery draft, restore only old table, clear only that draft fakeuser, require users0/remove and archive users0/remove; exact original Action set restored.",
+    "Complete prior Source literal inverse checksum17180036 verified before exclusive preservation snapshot."
+  ]
+}

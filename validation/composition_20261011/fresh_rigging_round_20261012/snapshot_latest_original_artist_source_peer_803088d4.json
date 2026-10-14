@@ -1,0 +1,53 @@
+{
+  "schema": "x.validation.latest-original-artist-snapshot-source-peer/1",
+  "passed": true,
+  "source_only": true,
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\snapshot_latest_original_artist.py",
+    "sha256": "803088d42e1b239b7cc5c6753120ae9707e0a8d3b5e003f474bdbd3a0df28862",
+    "bytes": 15576
+  },
+  "owner": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\snapshot_latest_original_artist_owner_source_803088d4.json",
+    "sha256": "793242bee94fc64c0fc719f76f29a4a166b1817b7a88f7e7ec3273e337310e6a",
+    "bytes": 4138
+  },
+  "reviewed_boundary": "One future recoverable SaveCopy of the latest live artist; this is not an integration or full preservation acceptance.",
+  "checks": {
+    "artist_filepath_and_disk_sha_before_and_after": true,
+    "one_real_original_Window_Scene_ViewLayer_setupRig_required": true,
+    "no_scene_selection_mode_frame_or_pose_mutation": true,
+    "already_cached_07724_only_no_candidate_import_register_refresh": true,
+    "accessed_module_physical_path_and_sha_against_immutable_07724_projection": true,
+    "unique_empty_persistent_output_child_no_existing_snapshot_overwrite": true,
+    "single_SaveAs_EXEC_DEFAULT_copy_true_FINISHED_and_file_hash_required": true,
+    "exact_context_and_known_metadata_identity_before_after": true,
+    "bounded_RNA_recursion_and_Unknown_on_unsupported_values": true,
+    "complete_geometry_and_Action_motion_proofs_explicitly_deferred": true,
+    "full_preservation_verified_remains_false": true,
+    "original_artist_saved_remains_false": true
+  },
+  "required_external_launch_gates": [
+    "A fresh serial resource scope after all previous heavy owners release; do not reuse the failed R5 token.",
+    "Verify original PID 27676 and exact creation FILETIME 134359355330496074 immediately before the SDK call, retaining its process handle and checking it afterward.",
+    "Discover the currently owned original Blender SDK endpoint from actual process ownership; do not assume a historical socket port.",
+    "Verify the complete Source script and owner pins, original disk SHA, and fresh RAM before calling run once.",
+    "If cached runtime or any safety gate differs, preserve the failure result and reconcile the actual state before retrying."
+  ],
+  "limits": [
+    "The script checks its PID and records the externally supplied FILETIME; it does not independently prove that FILETIME.",
+    "SaveCopy may affect serialization dirty metadata; the script records before and after without treating dirty equality as a full-content proof.",
+    "Full streamed artist assets and complete Action curve content must be checked in the separately saved clone.",
+    "No original native compatibility, integration, Unity return, deployment or final artist save is established by this Source review."
+  ],
+  "reviewer_execution": {
+    "script_invocations": 0,
+    "tests": 0,
+    "Blender_calls": 0,
+    "SDK_calls": 0,
+    "GUI_calls": 0,
+    "worker_calls": 0,
+    "artist_reads_or_writes": 0,
+    "candidate_imports_or_deployments": 0
+  }
+}

@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\composition_20261011\fresh_rigging_round_20261012\original_artist_calls_07738h_01\reader_entry.py", line 35, in <module>
+    result = ns['run'](**kwargs)
+  File "D:\Blender\Projects\Character\X\validation\composition_20261011\fresh_rigging_round_20261012\verify_original20_saved_artist_readonly_07738h.py", line 94, in run
+    require(status['schema'] == 'x.validation.original-saved-eventloop-status/1'
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        and status['writer_report'] == inputs['integration_report']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        and status['actual_saved_file'] == completed['original_artist_disk_after'],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        'Retain the actual clean post-event-loop observation without inventing a live post-save full guard.')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\composition_20261011\fresh_rigging_round_20261012\verify_original20_saved_artist_readonly_07738h.py", line 47, in <lambda>
+    require = lambda ok, message: None if ok else (_ for _ in ()).throw(RuntimeError(message))
+                                                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\composition_20261011\fresh_rigging_round_20261012\verify_original20_saved_artist_readonly_07738h.py", line 47, in <genexpr>
+    require = lambda ok, message: None if ok else (_ for _ in ()).throw(RuntimeError(message))
+RuntimeError: Retain the actual clean post-event-loop observation without inventing a live post-save full guard.
+
+Error: script failed, file: 'D:\Blender\Projects\Character\X\validation\composition_20261011\fresh_rigging_round_20261012\original_artist_calls_07738h_01\reader_entry.py', exiting.

@@ -1,0 +1,73 @@
+{
+  "schema": "x.validation.observed-unit-execution-evidence/1",
+  "scope": "Transcription of already-observed lightweight Python tool results for the Hint-before-Target change; no rerun, native Blender, build or deployment.",
+  "record_label": "0.77.33 release preparation",
+  "version_at_execution": "0.77.32",
+  "evidence_origin": "functions.exec tool outputs in subagent /root/forearm_review",
+  "exact_execution_time_recorded": false,
+  "process_id_recorded": false,
+  "native_execution_performed": false,
+  "blender_solver_or_save_acceptance_claimed": false,
+  "completed": true,
+  "source_pins_at_execution": {
+    "runtime": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "6a0b2f1a8b8f227983595409645831d7db3c5d619aaab73aed9b46b21d01a83d",
+      "bytes": 104998
+    },
+    "regression": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+      "sha256": "9239601807e0e892d45334bdbd1373dc443933dece6aef9902e0b588ebdb2f4f",
+      "bytes": 48707
+    },
+    "init": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py",
+      "sha256": "09d0cc30ca4f04a76b4cf8231dad75a290cf5d77c34211ed35fd7ce5ac4edfd9",
+      "bytes": 355944,
+      "version": "0.77.32",
+      "qualification": "Historical execution pin; a later authorized 0.77.33 bump does not change which version existed during these tests."
+    }
+  },
+  "executions": [
+    {
+      "tool_chunk_id": "8107c6",
+      "shell": "powershell",
+      "workdir": "D:\\MyRepository\\Blender-addons-by-Randy",
+      "command": "& 'C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B 'tests\\test_animation_rigging_recovery.py'",
+      "exit_code": 0,
+      "raw_output": "..................\r\n----------------------------------------------------------------------\r\nRan 18 tests in 1.367s\r\n\r\nOK\r\n",
+      "test_count": 18,
+      "passed": true
+    },
+    {
+      "tool_chunk_id": "22f1c9",
+      "shell": "powershell",
+      "workdir": "D:\\MyRepository\\Blender-addons-by-Randy",
+      "command": "& 'C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B 'tests\\test_animation_rigging_reference.py'; & 'C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B 'tests\\test_animation_rigging_sampling.py'",
+      "exit_code": 0,
+      "exit_code_qualification": "The tool returned one shell exit code for the combined command. Each suite separately printed OK; individual child exit codes were not emitted.",
+      "raw_output": "....................\r\n----------------------------------------------------------------------\r\nRan 20 tests in 1.853s\r\n\r\nOK\r\n......\r\n----------------------------------------------------------------------\r\nRan 6 tests in 0.487s\r\n\r\nOK\r\n",
+      "suites": [
+        {"name": "test_animation_rigging_reference.py", "test_count": 20, "printed_OK": true},
+        {"name": "test_animation_rigging_sampling.py", "test_count": 6, "printed_OK": true}
+      ],
+      "qualification": "The changed runtime and recovery regression were SHA-pinned immediately after execution. Reference/sampling source hashes were not emitted by this execution, so this transcription does not manufacture them."
+    },
+    {
+      "tool_chunk_id": "28c573",
+      "shell": "powershell",
+      "workdir": "D:\\Blender\\Projects\\Character\\X",
+      "execution": "PowerShell literal here-string piped to the bundled Python executable with -B -",
+      "python_executable": "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "python_arguments": ["-B", "-"],
+      "python_source": "import ast,hashlib,importlib.util,io,pathlib,unittest\nroot=pathlib.Path(r'D:\\MyRepository\\Blender-addons-by-Randy')\np=root/'tests/test_animation_rigging_recovery.py'\nspec=importlib.util.spec_from_file_location('order_regression',p);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)\noriginal=m.functions\ndef old_order(path,names,namespace):\n    original(path,names,namespace)\n    if '_apply' not in names:return\n    tree=ast.parse(path.read_text(encoding='utf-8'))\n    fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='_apply')\n    for node in ast.walk(fn):\n        if isinstance(node,ast.For):\n            target=next((n for n in node.body if isinstance(n,ast.Expr) and isinstance(n.value,ast.Call) and isinstance(n.value.func,ast.Name) and n.value.func.id=='_write_target'),None)\n            hint=next((n for n in node.body if isinstance(n,ast.If) and isinstance(n.test,ast.Subscript) and isinstance(n.test.slice,ast.Constant) and n.test.slice.value=='hintWeight'),None)\n            if target is not None and hint is not None:\n                node.body.remove(target);node.body.insert(node.body.index(hint),target)\n    exec(compile(ast.Module(body=[fn],type_ignores=[]),str(path),'exec'),namespace)\nm.functions=old_order\nresult=unittest.TextTestRunner(stream=io.StringIO()).run(unittest.TestSuite([m.PreviewWeightSemanticsTests('test_apply_auto_align_readback_uses_final_pole_and_settled_right_parent')]))\nassert len(result.failures)==2 and not result.errors,(result.failures,result.errors)\nprint('OLD-ORDER NEGATIVE CONTROL: expected two failures (ordinary and Original20 Hint enabled); Hint disabled passed')\nfor name in ['addons/character_designer/unity_animation_rigging.py','tests/test_animation_rigging_recovery.py','addons/character_designer/__init__.py']:\n p=root/name;print(name,hashlib.sha256(p.read_bytes()).hexdigest(),p.stat().st_size)\n",
+      "exit_code": 0,
+      "raw_output": "OLD-ORDER NEGATIVE CONTROL: expected two failures (ordinary and Original20 Hint enabled); Hint disabled passed\r\naddons/character_designer/unity_animation_rigging.py 6a0b2f1a8b8f227983595409645831d7db3c5d619aaab73aed9b46b21d01a83d 104998\r\ntests/test_animation_rigging_recovery.py 9239601807e0e892d45334bdbd1373dc443933dece6aef9902e0b588ebdb2f4f 48707\r\naddons/character_designer/__init__.py 09d0cc30ca4f04a76b4cf8231dad75a290cf5d77c34211ed35fd7ce5ac4edfd9 355944\r\n",
+      "mutation_only_in_memory": true,
+      "expected_regression_failures": 2,
+      "unexpected_errors": 0,
+      "hint_disabled_control_passed": true,
+      "qualification": "The in-memory mutation restores the old _apply ordering only. The assertion and exit code authenticate the two expected failures and absence of errors. unittest traceback text was kept in StringIO and was not emitted, so no raw failure traceback is claimed."
+    }
+  ]
+}

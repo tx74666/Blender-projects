@@ -1,0 +1,133 @@
+{
+  "schema": "x.validation.unified-r7-package-preparation-fixture-pin-source-owner/1",
+  "created_date": "2026-10-12",
+  "owner": "/root/r6_package_prepare",
+  "status": "FIXTURE_PINS_AUTHORED_ACTUAL_ADMISSION_AND_PRODUCER_EXECUTION_PENDING",
+  "passed": null,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_authoring_complete": true,
+  "source_files": {
+    "prepare_unified_package_r7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7.py",
+      "sha256": "b0083cf39cfd0e2eba5ce2f1ab70abc1557fc4195c82bfd7e315d181e35a2838",
+      "bytes": 42284
+    },
+    "prepare_unified_package_r7_README.md": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_README.md",
+      "sha256": "cc55ed82c82634c3f493aade2cebda546c7e40a1ef8ba35aeb54febaf64d6c75",
+      "bytes": 9310
+    }
+  },
+  "genuine_fixture_source_owners_read": {
+    "core": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_original_rigging_attach_fixture_source_owner_caf15123.json",
+      "sha256": "93c5d097bac70454af08dab3cd54f668718569be71780ac3e21e527f5471b7e6",
+      "bytes": 4589
+    },
+    "UI": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_attach_ui_fixture_source_owner_89fe11bb.json",
+      "sha256": "6cec223ce91c28e80d68cc974a0e6e3a80ce0421bb2bfc4c237195d2315b4184",
+      "bytes": 10503
+    },
+    "meaning": "Both immutable Source owners retain passed=false/source_scope_verified=true. Their fixture authoring and preservation evidence is not an actual test PASS; final run receipts are separate mandatory inputs."
+  },
+  "refreshed_focused_test_pins": {
+    "test_animation_worklist_rigging_attach.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "sha256": "caf15123e39f60a09872e7b8aa23ca1cf490d6ebd8a5fc584a02496a70988684",
+      "bytes": 31447
+    },
+    "test_animation_worklist_rigging_attach_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach_ui.py",
+      "sha256": "89fe11bb6634e8e8ca0c16c5fcddc93093d7883cdfa70d5525149d1a2faf8bb0",
+      "bytes": 16363
+    }
+  },
+  "before_edit_exact_history_snapshots": {
+    "producer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_before_fixture_pin_refresh_116c7ac3.py",
+      "sha256": "116c7ac302ed0ff5966f0cde0e7a89e9316c6656a07abecf0894d87f01d720aa",
+      "bytes": 41912
+    },
+    "README": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_README_before_fixture_pin_refresh_5beda468.md",
+      "sha256": "5beda468aa527601f5ca3f92567a4c417acd476c40cd3d137be82a0914da6d58",
+      "bytes": 8330
+    },
+    "owner": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_owner_before_fixture_pin_refresh_0283d68a.json",
+      "sha256": "0283d68af210e1109cde17620f59cce0ece4c3efa3004475e7f3197489796298",
+      "bytes": 7482
+    },
+    "peer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\prepare_unified_package_r7_peer_before_fixture_pin_refresh_69dd64eb.json",
+      "sha256": "69dd64eb1770c872001597fc067db06d229211c401a26e8542c78368b4d5f1fc",
+      "bytes": 9290
+    },
+    "original_old_owner_and_peer_edited": false
+  },
+  "scoped_source_byte_comparison": {
+    "method": "Node filesystem byte reads, literal constant substitutions and removal of two added owner rows, then Buffer full-byte equality. No AST or producer execution.",
+    "full_raw_inverse_equal_previous116c": true,
+    "inverse_sha256": "116c7ac302ed0ff5966f0cde0e7a89e9316c6656a07abecf0894d87f01d720aa",
+    "inverse_bytes": 41912,
+    "added_Source_owner_rows": 2,
+    "existing_Source_lines_replaced": 5,
+    "changed_current_lines": [41, 42, 53, 58, 248, 250, 251],
+    "all_other_producer_bytes_equal": true,
+    "change_list": [
+      "41/42: Add real CAF core and89 UI fixture Source-owner baseline pins.",
+      "53/58: ATTACH_TEST_SHA BE→CAF and UI_TEST_SHA D7→89.",
+      "248/250: Current UI/Attach expected test bytes16155→16363 and30907→31447.",
+      "251: Error text d7→89."
+    ]
+  },
+  "unchanged_contract": {
+    "product_core_D4_UI_E57_edited": false,
+    "Parent_known_schema_adapter_changed": false,
+    "Root_UI_other_Source_reader_algorithms_changed": false,
+    "actual_pure_receipt_validator_changed": false,
+    "capture_build_or_manifest_algorithms_changed": false,
+    "runtime_payload_files": 188,
+    "runtime_Python_files": 156,
+    "feature_Source_pins": 23,
+    "R5_runtime_deltas": ["animation_worklist.py", "animation_worklist_ui.py"],
+    "other_R5_payload_files_exact_required": 186,
+    "native_c5_init_d66_version_0_77_25_fixed": true,
+    "actual_scope_required": "core41=19+7+15 and UI82=14+68,123 current cases",
+    "cumulative_unique_if_all_required_actual_checks_pass": "302=262 historicalR5+7 historical80af+19 finalAttach+14 finalUI; not302 newly run",
+    "existing_UI68_is_feature_Source_pin": false,
+    "existing_UI68_current_file_hash_is_physically_bound": "actual suite.test_file exact pin must equal record(canonical test_animation_worklist_ui.py); the future real receipt must bind its corrected hash.",
+    "failed_actual_UI_receipt_can_pass_admission": false
+  },
+  "historical_claims_preserved": {
+    "BE_D7_tests_and_66ab_7b38_ae81_Source_artifacts": "Retain exact original evidence and actual failed fixture ancestry; do not convert to current corrected-test review or PASS.",
+    "Parent_ae1_original_review": "Truthfully reviewed D4 and old BE524. It remains immutable and cannot satisfy current CAF pin matching; genuine updated fixture peer is still required.",
+    "R5_actual_native": "FAIL/add_activate with full report/traceback/failureScene/natural-exit/release retained.",
+    "old_tokens_grant_fresh_execution": false
+  },
+  "pending": [
+    "Genuine Root and Parent Source peers binding current CAF/89 fixture Source, without rewriting earlier claims.",
+    "Actual fresh same-scope core41/UI82 success receipts and raw logs; any current failure stays failure.",
+    "Final admission, authorized producer compile/inspect, later capture/build under Root instruction.",
+    "Actual original X.blend/Rig edit/preservation/save/Undo/reopen and physicalReturn/UnityApply."
+  ],
+  "execution_counts_by_this_update": {
+    "Python_or_test_helper_subprocess": 0,
+    "AST_parse_compile": 0,
+    "producer_import_or_execute": 0,
+    "producer_inspect": 0,
+    "tests": 0,
+    "capture": 0,
+    "build": 0,
+    "native": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "workers": 0,
+    "deploy_install": 0,
+    "artist_workspace_publication_writes": 0,
+    "Git": 0
+  },
+  "final_destination": "Existing original X.blend/Rig with artist modifiers/design/materials/colors/Bone Collections/custom shapes/controllers preserved; independent scenes only isolated tests."
+}

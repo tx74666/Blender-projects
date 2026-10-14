@@ -1,0 +1,22 @@
+{
+  "schema": "x.validation.composition-source-review/1",
+  "date": "2026-10-11",
+  "reviewer": "/root/export_scale_review",
+  "source_only": true,
+  "native_validation": "pending",
+  "candidate_manifest_sha256": "5bbd11a924c17ae284f36506323a16230f56e55555654843e9c01f396f42daae",
+  "embedded_overlay_manifest_sha256": "ccb9f35236041c35f9c34dab6fdae3eb0a7c3cd6c1cc41b6f38f5d4d92dd560a",
+  "weapon_context_sha256": "4d9e6b1620c450a62407437b0cd81fcc34ddeac4a07b9587e56d6a1467a3fad0",
+  "all_eight_canonical_hashes_match": true,
+  "sole_delta": "unity_runtime/Editor/CharacterAnimationWeaponContext.cs",
+  "findings": [
+    "Capture and VerifySources share the actual saved renderer sharedMesh-to-one-FBX resolver.",
+    "All actual mesh renderers including inactive children require persistent mesh GUID/local ID and imported-model renderer identity.",
+    "Recursive dependency closure, full source/meta SHA inventories and source revalidation remain unchanged.",
+    "Project source mirror callers use the central resolver; live Unity integration deployment and native gates remain pending."
+  ],
+  "concrete_blocker_found": false,
+  "tests_or_native_performed_by_review": false,
+  "artist_modified": false,
+  "build_or_deploy_performed": false
+}

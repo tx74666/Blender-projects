@@ -1,0 +1,54 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "resource_token": "X_SAVED_ACTION_INVENTORY_202610121020Z",
+  "owned_pid": 79416,
+  "owned_process_filetime": "134362739477478491",
+  "retained_handle_natural_exit": true,
+  "native_exit_code": 0,
+  "native_exited_utc": "2026-10-12T10:19:19.5545375+00:00",
+  "owned_native_gone": true,
+  "process_termination_performed": false,
+  "GUI": false,
+  "actual_started_utc": "2026-10-12T10:19:07.7683975+00:00",
+  "release_utc": "2026-10-12T10:21:24.776Z",
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\read_saved_seed_action_inventory.py",
+    "sha256": "df91f582909e8c2f8db72e140f0165bfafe9122112f54bc5db0a5cbcf44b333a",
+    "bytes": 2794
+  },
+  "report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\saved_action_inventory_01\\saved_action_inventory.json",
+    "sha256": "cf0a3a63aabc714bc34e6be7f8491318fb60dc56a17a52d714fbce019414ea20",
+    "bytes": 7182
+  },
+  "passed": true,
+  "qualification": "Diagnostic available saved local-action names only; original memory11 versus loaded10, missing local Pose. No fullscene/native ownership or poseAction emptiness proven.",
+  "missing_local_names": [
+    "Pose"
+  ],
+  "input_files_unchanged": true,
+  "post_inputs": {
+    "seed": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z\\artist_latest_before_rigging.blend",
+      "sha256": "1c1984156b3d7637596382ff12359f3460f51b4b6216cd088f9dd97c1cd4bf41",
+      "bytes": 34688918
+    },
+    "snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z\\artist_latest_snapshot_receipt.json",
+      "sha256": "99b08426346d77908dbed93e518bc0e2370701a0e8ee906df7d36cb072bb2949",
+      "bytes": 6210450
+    },
+    "protected_artist": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+      "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+      "bytes": 34682050
+    }
+  },
+  "all_owned_activity_closed": true,
+  "addon_registered": false,
+  "full_scene_opened": false,
+  "original_artist_saved": false,
+  "SDK": 0,
+  "Unity": 0
+}

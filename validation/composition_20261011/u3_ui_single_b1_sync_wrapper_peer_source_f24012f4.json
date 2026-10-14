@@ -1,0 +1,105 @@
+{
+  "schema": "x.validation.character-composition-ui-single-source-sync-independent-source-review/1",
+  "created_utc": "2026-10-11T14:30:45.464157+00:00",
+  "reviewer": "/root/export_scale_review",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "run_u3_ui_then_sync_existing_b1.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_u3_ui_then_sync_existing_b1.py",
+      "sha256": "f24012f4f7a6d680a3310f2c1620eaa0181efa2a69bdbe9f5e248fec09dd2381",
+      "bytes": 13594
+    }
+  },
+  "source_owner_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u3_ui_single_b1_sync_wrapper_source_owner_f24012f4.json",
+    "sha256": "5cd7b9fd7b9b0cc2167ae6a38fc2d994142fd5c0ba01fb62081333e05a7ed442",
+    "bytes": 2424
+  },
+  "api_sources": {
+    "run_character_composition_ui_fixture": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "a88c413ab89be39bcdf675228170a6f1439734c5b818651ccffcb956ffa5ec8f",
+      "bytes": 34229
+    },
+    "composition_ui_checkpoints": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "98325ddfc8c7903bc0d11f2dd78a8b62cf9457a2fc6d398ab06c6ff524a51be7",
+      "bytes": 28709
+    },
+    "composition_sync_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "db4d61e9deaa6833137507b49957178bc833bd5b83512fff1f809181ad49ab96",
+      "bytes": 21223
+    },
+    "verify_character_composition_native": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    "composition_session_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "91255f9fe392a284fac332d8135e3deaa82b560b57b5a72a7e4f4eceb9dd604e",
+      "bytes": 58352
+    }
+  },
+  "official_Source_Link_publisher": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+    "sha256": "05a981398b7c4edca7e43de1ac8e7ae8fbabb803dda2e05bed877803bab6f83c",
+    "bytes": 19796
+  },
+  "sealed_completed_audit": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\actual_completed_file_audit.json",
+    "sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3",
+    "bytes": 771503
+  },
+  "target": {
+    "work_item_id": "948e797b8d7044c49530a820349e8968",
+    "kind": "SOURCE",
+    "old_revision": 1,
+    "old_manifest_sha256": "63c1a7d96a7e153b1f29ecd41cfabdd51749bf1b05a1375c6e3086d4de56f8ee",
+    "required_new_revision": 2,
+    "new_action_allowed": false,
+    "Raise_allowed": false
+  },
+  "verified_source_facts": [
+    "Only plain IDs/JSON/paths/modules retained across UI Undo/reopen; callback reacquires exact saved SOURCE row in owned QA Scene context.",
+    "Actual UI disk report must be complete, session complete, unchanged original Source/B Links and no worker before the one-use consumed flag permits foreground/publication.",
+    "Actual Session source closes native Tweak, commits changed B and completes saved reopen/positive-A proof before callback.",
+    "Independent foreground_one proof must identify actual HoldPose B and changed effective channel SHA versus sealed n16 B1 oracle.",
+    "One run_one call remeasures complete independent proof and requires official collector receipt/physical actual FBX+metadata values/hashes; no publication fallback.",
+    "All three old FBX/metadata files and other two Links protected; authorized B1 Link only may change after Session.",
+    "Official publisher Source updates exact six output fields plus revision; final dictionary comparison preserves every other existing or added Link field.",
+    "Fresh current artist exact X.blend path is separately protected; historical test input remains independent sealed artist_final_validation.blend. No artist save call.",
+    "Final QA save requires FINISHED/path/file; final guard rehashes new FBX and metadata, selected revised Link, all protected old assets and saved QA file both after save and before normal quit.",
+    "Native/worker resource gate keeps serial 200 MiB threshold and near-98-percent reread; normal quit scheduled only successful complete result and OS exit explicitly pending."
+  ],
+  "resolved_prior_findings": [
+    "Final new physical artifacts now rehashed at save/quit.",
+    "All nonpublication Link fields now compared exactly, with only official seven publication keys excluded."
+  ],
+  "call_cardinality": {
+    "run_one": 1,
+    "foreground_one": 1,
+    "save_as_mainfile": 1,
+    "schedule_completion_quit": 1
+  },
+  "validation": {
+    "final_source_AST_compile_checks": 1,
+    "target_imports": 0,
+    "wrapper_invocations": 0,
+    "tests_run": 0,
+    "native_calls": 0,
+    "OS_queries": 0,
+    "shared_workspace_reads": 0,
+    "live_artist_reads": 0
+  },
+  "concrete_source_blockers": [],
+  "status": "SOURCE_READY_NATIVE_PENDING",
+  "limitations": [
+    "This is Source/API compatibility and pin review, not genuine current-runtime/UI/worker/export acceptance.",
+    "Fresh Parent/Root grant, actual generated fixture/tool receipt and owned process are required before execution.",
+    "No natural process exit or success inferred from Source review or quit FINISHED."
+  ]
+}

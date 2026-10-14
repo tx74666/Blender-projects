@@ -1,0 +1,115 @@
+{
+  "schema": "x.validation.character-composition-loop-tail-completion-tools-source/1",
+  "utc": "2026-10-11T07:50:24.950057+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "tool_import_or_invocation_performed": false,
+  "tests_executed": 0,
+  "os_query_performed": false,
+  "passed": true,
+  "source_comparisons": [
+    {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_completed_continuation_r5.py",
+        "sha256": "238f8d2b72467523d3d1ea9f956487aabedfce511be272209a721606a0cc93cd",
+        "bytes": 37568
+      },
+      "source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_loop_tail_completed_r6.py",
+        "sha256": "d8fe2eca044ab6b746fda54fb182f7f8565bf170e842b4e013f163e75f196ad7",
+        "bytes": 47925
+      },
+      "changed_functions": [
+        "numeric_reuse",
+        "audit"
+      ],
+      "added_functions": [
+        "loop_operator_proof",
+        "physical_tail_reuse"
+      ],
+      "unchanged_functions": [
+        "require",
+        "sha",
+        "load",
+        "pin",
+        "uid",
+        "passed",
+        "numeric_payload",
+        "pid_absent",
+        "main"
+      ],
+      "assert_count": 0
+    },
+    {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_continuation_completion_r6.py",
+        "sha256": "a69e900c8a13b3f5c4ccfb804bd31a8eaf95606f00c808116031fe6501c932e3",
+        "bytes": 7546
+      },
+      "source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_loop_tail_completion_r7.py",
+        "sha256": "f08e20a782c501adcb6ccd6a477f4f5da9253e599fc80804ba51b32cc4e99478",
+        "bytes": 8310
+      },
+      "changed_functions": [
+        "record"
+      ],
+      "added_functions": [],
+      "unchanged_functions": [
+        "require",
+        "sha",
+        "proof",
+        "main"
+      ],
+      "assert_count": 0
+    }
+  ],
+  "actual_writer_dependencies": {
+    "continuation": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "5317df7fab6932a22565997720320984192352cb2a9c98965d58a921cbd0384a",
+      "bytes": 38541
+    },
+    "timing": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "dd7ab1c9ac54328a38d01dc416463b8eee72f5c890344a6b2309b0eca9c4d66c",
+      "bytes": 49161
+    },
+    "physical_history": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\physical\\composition_sync_report.json",
+      "sha256": "d1624f1b737b90c162a0fb1d0436102c59b20d20acf46b675fe9c675f179d5af",
+      "bytes": 530658
+    },
+    "failed_stage_history": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\composition_first_stage_report.json",
+      "sha256": "916860cd83d4c2eafbc346017659855d96ba42f1f3bcaeea2fb182e365c4467d",
+      "bytes": 2192247
+    },
+    "failed_native_history": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\composition_native_report.json",
+      "sha256": "32d5178e73f2900d21add8518ec6fd45fc4df40c41586f11a4abb00257d06eb9",
+      "bytes": 1545407
+    },
+    "failed_loop_history": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\loop_author\\composition_HoldLoop_authoring_report.json",
+      "sha256": "67d00b7fe4529e60eeacd7aff58f40d7a268414b92674ff7b58b80e7e9f50a43",
+      "bytes": 1816
+    },
+    "failed_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12_natural_failure_readback_916860cd.json",
+      "sha256": "041253e90a8baae9ed715c28b4fde0e002aeea3e57ff595b41911e08011f5ff7",
+      "bytes": 377490
+    }
+  },
+  "admission_boundary": [
+    "Only n13 is admitted; the n12 evidence remains failed with exact pinned first/native/Loop/status/natural exit 1 and preserved prior Source Entry.",
+    "The original six numeric admission fields plus exact nine-field physical_tail are required, with exact six historical paths/hashes and separately pinned identical three-source owner/peer changes.",
+    "Twelve n11 cases are explicitly reused, zero reexecuted, two current isolated B routes/full217/Rest/Action association are still required.",
+    "Two physical reports and their worker archives are read from actual n12/physical, while newly executed Loop author/worker/seed belong to n13. Current six inherited publication hashes and all complete worker/numeric/spec/receipt/packet proofs remain checked.",
+    "The current first-stage report must record inherited=2/executed=1, reexport=false and original first-two revisions unchanged=true. Failed old reports are not passed through a success validator.",
+    "Literal actual middle operator poll=true/result=[FINISHED]/noexception and finite positive quaternion angle independently recomputed from actual before/after states are mandatory. Four mapped-frame context/Pose/visible/selected/Tweak/native action-slot readbacks are mandatory.",
+    "The QA seed must point to the pinned original d162 two-A physical report, with actual seed SHA, correct original+QA native Scene memberships and actual two row UUIDs.",
+    "Native outer complete=true/original recovery/assets/actions/full217 guards, natural exit 0, main PID absence and sole-artist all-worker OS proof remain mandatory before exclusive closure creation."
+  ],
+  "execution_limit": "SOURCE/API/AST compilation only. No audit or writer import/invocation, module launch, process inventory, native test, SDK, GUI or completion evidence was executed/generated. The two new source files are intended for a future successfully completed n13 only; they must reject failed n12."
+}

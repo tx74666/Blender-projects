@@ -1,0 +1,31 @@
+{
+  "schema": "x.validation.native-harness-source-peer/1",
+  "scope": "Read-only Source review only",
+  "passed": true,
+  "native_execution_performed": false,
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_round.py",
+    "sha256": "a862f463347c91fa52ccab84cd8cbcbb8ab3fc1dcb0961ee51fc9b8fab3f460e",
+    "bytes": 56365
+  },
+  "reviewer": "u4_receipt_review",
+  "reported_exact_snapshot_read_before_and_after": true,
+  "source_findings": [
+    "managed and is_adopted plus ensure_active occur before direct import; formal new Link/model association remains unclaimed.",
+    "Actual Undo/Redo planned in separate ticks; cache and five callbacks readback precedes manual operations with newly acquired native IDs.",
+    "Enabled BASE preview and no transient Tweak save/reopen readback planned; no assertion that registration automatically solved the pose.",
+    "Optional full weapon input/context/model pins preserved and packet SHA unchanged; visual acceptance remains pending.",
+    "Owned isolated output/profile and file-load/normal-quit boundaries reviewed; natural exit requires external process evidence."
+  ],
+  "conclusion": "No concrete blocking Source defect found in specified boundaries; this is not native acceptance.",
+  "boundaries": {
+    "script_execution": 0,
+    "bpy_import": 0,
+    "native": 0,
+    "sdk": 0,
+    "gui": 0,
+    "worker": 0,
+    "deployment": 0,
+    "artist_scene_writes": 0
+  }
+}

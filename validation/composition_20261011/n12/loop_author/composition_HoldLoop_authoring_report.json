@@ -1,0 +1,13 @@
+{
+  "schema": "x.validation.character-composition-loop-authoring/1",
+  "complete": false,
+  "config": {
+    "schema": "x.validation.character-composition-loop-authoring-fixture/1",
+    "evidenceDirectory": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\loop_author",
+    "holdLoopWorkItemId": "1753d842-53a9-48e8-951c-c28f5dd2fa36",
+    "expectedModelSha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+    "holdLoopRotationControl": null
+  },
+  "failure_phase": "author_actual_HoldLoop_Custom",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\tools\\composition_timing_acceptance.py\", line 526, in author_hold_loop\n    report['authoring'] = _author_loop(context, row, modules, config['holdLoopRotationControl'])\n                          ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\tools\\composition_timing_acceptance.py\", line 269, in _author_loop\n    require(bpy.ops.transform.rotate('EXEC_DEFAULT', True, value=.073, orient_axis='X', orient_type='LOCAL') == {'FINISHED'},\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            'The actual native HoldLoop middle FK Pose rotation did not finish.')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\tools\\composition_timing_acceptance.py\", line 32, in require\n    raise AssertionError(message)\nAssertionError: The actual native HoldLoop middle FK Pose rotation did not finish.\n"
+}

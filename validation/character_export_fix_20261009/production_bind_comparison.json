@@ -1,0 +1,5305 @@
+{
+  "diagnostic": "historical_production_fbx_vs_captured_author_rest_v1",
+  "completed": true,
+  "scope": "Raw PoseNode and connected Cluster.TransformLink only; no Blender scene or Unity execution",
+  "input_paths": {
+    "capture": "D:\\Blender\\Projects\\Character\\X\\validation\\character_export_fix_20261009\\real_export_before\\capture_report.json",
+    "export_proof": "D:\\Blender\\Projects\\Character\\X\\validation\\character_export_fix_20261009\\real_export_new.json",
+    "production_fbx": "D:\\Unity Projects\\RandomRealm2\\Assets\\Art\\Character\\Cosha\\Cosha.fbx"
+  },
+  "sha256_before": {
+    "capture": "39a2dcbac39a664aba5406f64e2171990fe434a62e39f910bb98665bc689efc8",
+    "export_proof": "425a362d78e983ebab456db6435e7e2f79fdc8e0b587aaa5fe3a7e5dbe826be3",
+    "production_fbx": "e0b7ea6d62958bd09d362d110227ea21395d5384204bbf7b110cc72b5dbe65f0"
+  },
+  "tolerance_matrix_abs": 2e-05,
+  "bones": {
+    "Chest": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/4",
+        "max_abs": 1.848428610173869e-08,
+        "translation_max_abs": 1.848428610173869e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.268672004412166e-14
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.885169684916036e-09
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.885169684916036e-09
+          }
+        }
+      }
+    },
+    "Hair Hair 01.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/10",
+        "max_abs": 8.015260277716152e-08,
+        "translation_max_abs": 6.346812142510316e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.365465772731113e-08
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 8.015260277716152e-08
+          },
+          "Z": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 2.3443021746061277e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 01.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/11",
+        "max_abs": 1.4161565786707797e-07,
+        "translation_max_abs": 1.4161565786707797e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.4429136753242346e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.597979348844092e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 01.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/12",
+        "max_abs": 7.708987936894118e-08,
+        "translation_max_abs": 7.708987936894118e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.8930230655532796e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.5142826365918154e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 01.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/13",
+        "max_abs": 9.228335784428054e-08,
+        "translation_max_abs": 9.228335784428054e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 7.45445305483372e-09
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.800698777922662e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 02.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/14",
+        "max_abs": 1.8599554607590107e-07,
+        "translation_max_abs": 1.716739461699035e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.225395709315776e-05,
+            "max_abs": 1.8599554607590107e-07
+          },
+          "Y": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 7.277955660356383e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 8.048422728279547e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 02.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/15",
+        "max_abs": 2.1565573149473494e-07,
+        "translation_max_abs": 5.198413077778241e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2342862421580037e-05,
+            "max_abs": 2.1565573149473494e-07
+          },
+          "Y": {
+            "angle_degrees": 6.156649318399953e-06,
+            "max_abs": 1.4189421904120536e-07
+          },
+          "Z": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 5.633958721773524e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 02.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/16",
+        "max_abs": 1.8893248920903716e-07,
+        "translation_max_abs": 7.219534836622188e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.0138000340489137e-05,
+            "max_abs": 1.5871631120489837e-07
+          },
+          "Y": {
+            "angle_degrees": 6.097163388881822e-06,
+            "max_abs": 8.175953070121977e-08
+          },
+          "Z": {
+            "angle_degrees": 8.913658556096819e-06,
+            "max_abs": 1.8893248920903716e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 02.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/17",
+        "max_abs": 1.7980276822981978e-07,
+        "translation_max_abs": 3.5199960279896914e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.3226604453452851e-05,
+            "max_abs": 1.7980276822981978e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 8.022436759347329e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.1104305031039985e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 03.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/18",
+        "max_abs": 8.937897177929699e-08,
+        "translation_max_abs": 9.15093067987982e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 2.4909823537200282e-08
+          },
+          "Y": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 8.937897177929699e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.4504004159098258e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 03.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/19",
+        "max_abs": 8.226777481468162e-08,
+        "translation_max_abs": 7.342953267652774e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 5.089589194540167e-08
+          },
+          "Y": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 8.226777481468162e-08
+          },
+          "Z": {
+            "angle_degrees": 3.306651113363206e-06,
+            "max_abs": 5.631778776660212e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 03.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/20",
+        "max_abs": 2.2500029217553674e-07,
+        "translation_max_abs": 2.2500029217553674e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 4.2995111471100245e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 8.644812510283373e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 5.1006480816795374e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 03.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/21",
+        "max_abs": 1.3476216054186807e-07,
+        "translation_max_abs": 1.3476216054186807e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 2.4106213913910324e-08
+          },
+          "Y": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 2.3698163431618013e-08
+          },
+          "Z": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 5.052821450135525e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 04.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/22",
+        "max_abs": 8.235872428485891e-08,
+        "translation_max_abs": 4.7674177494627656e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.2770811963491724e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 9.779085985428537e-09
+          },
+          "Z": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 8.235872428485891e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 04.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/23",
+        "max_abs": 6.281226205828716e-08,
+        "translation_max_abs": 3.6113981138896634e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.195685055994545e-08
+          },
+          "Y": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 3.5717363289222703e-08
+          },
+          "Z": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 6.281226205828716e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 04.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/24",
+        "max_abs": 1.0365388902755512e-07,
+        "translation_max_abs": 1.0365388902755512e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.8017609565722523e-08
+          },
+          "Y": {
+            "angle_degrees": 4.90455619685548e-06,
+            "max_abs": 7.704555571308447e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 6.391121587512316e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 04.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/25",
+        "max_abs": 2.0215105678289547e-07,
+        "translation_max_abs": 2.3288180273084436e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 5.663293681020318e-06,
+            "max_abs": 1.0430792940496758e-07
+          },
+          "Y": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 2.0215105678289547e-07
+          },
+          "Z": {
+            "angle_degrees": 3.818191820832846e-06,
+            "max_abs": 6.80181102552524e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 05.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/26",
+        "max_abs": 3.09147594634851e-07,
+        "translation_max_abs": 8.30686985864304e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.3766686389570068e-05,
+            "max_abs": 1.7986184985829823e-07
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 5.775402200924873e-08
+          },
+          "Z": {
+            "angle_degrees": 1.1643920115677386e-05,
+            "max_abs": 3.09147594634851e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 05.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/27",
+        "max_abs": 3.2001247518564924e-07,
+        "translation_max_abs": 3.9440294585801894e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.7329712313881724e-05,
+            "max_abs": 2.3649501912359483e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.7615393466694513e-08
+          },
+          "Z": {
+            "angle_degrees": 1.319902026398418e-05,
+            "max_abs": 3.2001247518564924e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 05.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/28",
+        "max_abs": 3.281745648564538e-07,
+        "translation_max_abs": 9.453469829168171e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.6444841801656834e-05,
+            "max_abs": 2.239965155581558e-07
+          },
+          "Y": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 3.0151340979500674e-08
+          },
+          "Z": {
+            "angle_degrees": 4.90455619685548e-06,
+            "max_abs": 3.281745648564538e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 05.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/29",
+        "max_abs": 3.845108267341857e-07,
+        "translation_max_abs": 2.88970483097728e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.6222548091772e-06,
+            "max_abs": 5.469549080316938e-08
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 9.94625963812723e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2013660097101191e-05,
+            "max_abs": 3.845108267341857e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 06.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/30",
+        "max_abs": 8.937897177929699e-08,
+        "translation_max_abs": 9.15093067987982e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.143182815269534e-06,
+            "max_abs": 8.177197230452293e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 8.937897177929699e-08
+          },
+          "Z": {
+            "angle_degrees": 6.097163388881822e-06,
+            "max_abs": 8.319688760138888e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 06.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/31",
+        "max_abs": 1.4187241959007224e-07,
+        "translation_max_abs": 4.577975687425351e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.7920898421361926e-08
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 1.4187241959007224e-07
+          },
+          "Z": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 4.4582122882275144e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 06.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/32",
+        "max_abs": 2.2633707885688636e-07,
+        "translation_max_abs": 1.0579100262475549e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.963470424126384e-06,
+            "max_abs": 1.1250911313709366e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.2633707885688636e-07
+          },
+          "Z": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 4.752314453071449e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 06.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/33",
+        "max_abs": 2.0602732320185169e-07,
+        "translation_max_abs": 2.7123718382426887e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.6489107943111647e-05,
+            "max_abs": 2.0602732320185169e-07
+          },
+          "Y": {
+            "angle_degrees": 3.818191820832846e-06,
+            "max_abs": 4.048656876420864e-08
+          },
+          "Z": {
+            "angle_degrees": 4.094554566467037e-06,
+            "max_abs": 4.5713420604442945e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 07.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/34",
+        "max_abs": 6.938373076081916e-08,
+        "translation_max_abs": 4.7674177494627656e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 5.980882633593865e-08
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 6.938373076081916e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 3.8163420867931563e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 07.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/35",
+        "max_abs": 5.4258890713754226e-08,
+        "translation_max_abs": 5.4258890713754226e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 4.7906837608024944e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.5717363289222703e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.3962679658070556e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 07.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/36",
+        "max_abs": 6.524169293697923e-08,
+        "translation_max_abs": 6.02588841047691e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 6.524169293697923e-08
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 5.565689775721694e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.484721678934875e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 07.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/37",
+        "max_abs": 1.7615647607271967e-07,
+        "translation_max_abs": 9.592110927769681e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.1066171232981577e-05,
+            "max_abs": 9.02404053704231e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.7615647607271967e-07
+          },
+          "Z": {
+            "angle_degrees": 5.3318147119265075e-06,
+            "max_abs": 6.753242587365094e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 08.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/38",
+        "max_abs": 2.6008359554907656e-07,
+        "translation_max_abs": 8.30686985864304e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.45192788808014e-06,
+            "max_abs": 1.0038694142622262e-07
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 5.706240813196928e-08
+          },
+          "Z": {
+            "angle_degrees": 8.099607985145754e-06,
+            "max_abs": 2.6008359554907656e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 08.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/39",
+        "max_abs": 2.113438313244842e-07,
+        "translation_max_abs": 1.5089226224063168e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.722620413208828e-06,
+            "max_abs": 1.018763882143503e-07
+          },
+          "Y": {
+            "angle_degrees": 3.818191820832846e-06,
+            "max_abs": 1.2822354733543762e-07
+          },
+          "Z": {
+            "angle_degrees": 1.3309014001239913e-05,
+            "max_abs": 2.113438313244842e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 08.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/40",
+        "max_abs": 2.791105657706794e-07,
+        "translation_max_abs": 1.438838808098808e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 5.928549740019662e-08
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 4.24282973199297e-08
+          },
+          "Z": {
+            "angle_degrees": 5.3318147119265075e-06,
+            "max_abs": 2.791105657706794e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 08.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/41",
+        "max_abs": 2.0853286741839838e-07,
+        "translation_max_abs": 7.527751222369261e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 9.697004570245026e-06,
+            "max_abs": 1.3567544954184996e-07
+          },
+          "Y": {
+            "angle_degrees": 3.306651113363206e-06,
+            "max_abs": 4.042635737278033e-08
+          },
+          "Z": {
+            "angle_degrees": 5.263014220319208e-06,
+            "max_abs": 2.0853286741839838e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 09.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/42",
+        "max_abs": 7.645826372026931e-08,
+        "translation_max_abs": 7.645826372026931e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.91248236030638e-06,
+            "max_abs": 5.295576954722492e-08
+          },
+          "Y": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 6.245633699109021e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.0663946997956373e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 09.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/43",
+        "max_abs": 1.0499906721861407e-07,
+        "translation_max_abs": 1.0499906721861407e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.651965130302415e-08
+          },
+          "Y": {
+            "angle_degrees": 4.597711793052988e-06,
+            "max_abs": 1.0442565212542831e-07
+          },
+          "Z": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 2.9440684556902852e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 09.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/44",
+        "max_abs": 9.494269193055516e-08,
+        "translation_max_abs": 9.474867823655586e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.244509618354405e-06,
+            "max_abs": 9.494269193055516e-08
+          },
+          "Y": {
+            "angle_degrees": 4.9783130603797145e-06,
+            "max_abs": 9.250834409613162e-08
+          },
+          "Z": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 6.886119763294118e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 09.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/45",
+        "max_abs": 2.0010756429655885e-07,
+        "translation_max_abs": 1.6807632619020296e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 4.131609898649913e-08
+          },
+          "Y": {
+            "angle_degrees": 7.393896667355496e-06,
+            "max_abs": 2.0010756429655885e-07
+          },
+          "Z": {
+            "angle_degrees": 6.273929367455621e-06,
+            "max_abs": 7.551258818239148e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 10.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/46",
+        "max_abs": 1.8387041222922562e-07,
+        "translation_max_abs": 6.828184950791183e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.5080649355333767e-05,
+            "max_abs": 1.8387041222922562e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 8.512679983141425e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.6283182680563186e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 10.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/47",
+        "max_abs": 1.835575176301063e-07,
+        "translation_max_abs": 1.4052284313947894e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.666499673782919e-05,
+            "max_abs": 1.835575176301063e-07
+          },
+          "Y": {
+            "angle_degrees": 5.663293681020318e-06,
+            "max_abs": 9.962168689980899e-08
+          },
+          "Z": {
+            "angle_degrees": 5.533085616490783e-06,
+            "max_abs": 7.659741640964057e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 10.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/48",
+        "max_abs": 1.4138353776615986e-07,
+        "translation_max_abs": 7.162992687881342e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4362695820999273e-05,
+            "max_abs": 1.4138353776615986e-07
+          },
+          "Y": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 4.833930233871797e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 7.644536026418791e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 10.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/49",
+        "max_abs": 1.7943648344953544e-07,
+        "translation_max_abs": 7.479923169739777e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.6040950469935144e-05,
+            "max_abs": 1.7943648344953544e-07
+          },
+          "Y": {
+            "angle_degrees": 7.3444386094852035e-06,
+            "max_abs": 1.3163605672161793e-07
+          },
+          "Z": {
+            "angle_degrees": 7.636383641665695e-06,
+            "max_abs": 1.3264319420613901e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 11.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/50",
+        "max_abs": 1.0068956157738285e-07,
+        "translation_max_abs": 8.185281785699772e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 2.8602897828022833e-08
+          },
+          "Y": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 8.000989737411146e-08
+          },
+          "Z": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 1.0068956157738285e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 11.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/51",
+        "max_abs": 1.209818947245367e-07,
+        "translation_max_abs": 1.209818947245367e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 5.964281513115566e-08
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.765070578585437e-08
+          },
+          "Z": {
+            "angle_degrees": 3.6222548091772e-06,
+            "max_abs": 3.4409765703458106e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 11.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/52",
+        "max_abs": 5.8333341712568654e-08,
+        "translation_max_abs": 4.230167860441725e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.094554566467037e-06,
+            "max_abs": 5.318054263625527e-08
+          },
+          "Y": {
+            "angle_degrees": 5.263014220319208e-06,
+            "max_abs": 5.624875143439567e-08
+          },
+          "Z": {
+            "angle_degrees": 5.122641877509565e-06,
+            "max_abs": 5.8333341712568654e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 11.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/53",
+        "max_abs": 1.6354637466520217e-07,
+        "translation_max_abs": 1.6354637466520217e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.872676000826597e-06,
+            "max_abs": 1.0392369631517795e-07
+          },
+          "Y": {
+            "angle_degrees": 3.91248236030638e-06,
+            "max_abs": 4.024326472062967e-08
+          },
+          "Z": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 8.69561631589022e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 12.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/54",
+        "max_abs": 6.966615728742909e-08,
+        "translation_max_abs": 6.966615728742909e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 2.1778618020107388e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.6619403570293798e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.066026010856149e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 12.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/55",
+        "max_abs": 1.1681555633913376e-07,
+        "translation_max_abs": 1.1681555633913376e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 7.045647976156033e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.2978440483711893e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 3.472396770121122e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 12.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/56",
+        "max_abs": 6.725537105012336e-08,
+        "translation_max_abs": 6.725537105012336e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 3.2617236911391956e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 3.534336201482802e-08
+          },
+          "Z": {
+            "angle_degrees": 3.818191820832846e-06,
+            "max_abs": 4.5373695911621326e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 12.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/57",
+        "max_abs": 9.513388476989348e-08,
+        "translation_max_abs": 9.513388476989348e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.9884384818971375e-06,
+            "max_abs": 8.639823079192865e-08
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 5.983770279271994e-08
+          },
+          "Z": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 8.034118081923225e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 13.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/58",
+        "max_abs": 4.511920081995413e-07,
+        "translation_max_abs": 7.391753342744778e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.202504833283631e-05,
+            "max_abs": 4.511920081995413e-07
+          },
+          "Y": {
+            "angle_degrees": 9.391510108767544e-06,
+            "max_abs": 1.4019379079854843e-07
+          },
+          "Z": {
+            "angle_degrees": 1.668685248064749e-05,
+            "max_abs": 3.7160640431466163e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 13.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/59",
+        "max_abs": 4.3557329831855895e-07,
+        "translation_max_abs": 1.652780383665231e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.0281896147772326e-05,
+            "max_abs": 4.3557329831855895e-07
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 7.69128405408992e-08
+          },
+          "Z": {
+            "angle_degrees": 1.3088102160853195e-05,
+            "max_abs": 1.7099918636631628e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 13.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/60",
+        "max_abs": 4.5198214593256125e-07,
+        "translation_max_abs": 6.430877519392197e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.0497769823498184e-05,
+            "max_abs": 4.5198214593256125e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2013660097101191e-05,
+            "max_abs": 1.0732927080425725e-07
+          },
+          "Z": {
+            "angle_degrees": 1.4886052178675807e-05,
+            "max_abs": 1.8804809087669128e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 13.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/61",
+        "max_abs": 3.142154412216769e-07,
+        "translation_max_abs": 1.5207831438601715e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.6727342745830154e-05,
+            "max_abs": 3.142154412216769e-07
+          },
+          "Y": {
+            "angle_degrees": 8.913658556096819e-06,
+            "max_abs": 9.004207868201775e-08
+          },
+          "Z": {
+            "angle_degrees": 1.8802414151681903e-05,
+            "max_abs": 2.45305528778772e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 14.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/62",
+        "max_abs": 2.695540132435781e-06,
+        "translation_max_abs": 2.9175112103985157e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00022200413304911481,
+            "max_abs": 2.695540132435781e-06
+          },
+          "Y": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 2.434125860872882e-07
+          },
+          "Z": {
+            "angle_degrees": 5.8922753823272876e-05,
+            "max_abs": 1.927751981156689e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 14.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/63",
+        "max_abs": 2.418372218926379e-06,
+        "translation_max_abs": 5.97270854996168e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0001955458527120152,
+            "max_abs": 2.1249612416340824e-06
+          },
+          "Y": {
+            "angle_degrees": 9.2743557084027e-06,
+            "max_abs": 3.4275029747732333e-07
+          },
+          "Z": {
+            "angle_degrees": 6.618811017541803e-05,
+            "max_abs": 2.418372218926379e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 14.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/64",
+        "max_abs": 2.3685728365308023e-06,
+        "translation_max_abs": 7.901843446234125e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00011993316730770551,
+            "max_abs": 1.2344262643182446e-06
+          },
+          "Y": {
+            "angle_degrees": 6.097163388881822e-06,
+            "max_abs": 6.972084349854413e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00017147677580711638,
+            "max_abs": 2.3685728365308023e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 14.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/65",
+        "max_abs": 2.29450034794354e-06,
+        "translation_max_abs": 1.1962123380726553e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00012081425034828073,
+            "max_abs": 1.1827359571725538e-06
+          },
+          "Y": {
+            "angle_degrees": 6.3890569402603996e-06,
+            "max_abs": 1.1482352704206278e-06
+          },
+          "Z": {
+            "angle_degrees": 0.0001806069308397325,
+            "max_abs": 2.29450034794354e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 15.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/66",
+        "max_abs": 1.284849133753596e-07,
+        "translation_max_abs": 4.471814918360906e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.636383641665695e-06,
+            "max_abs": 1.0574056830137124e-07
+          },
+          "Y": {
+            "angle_degrees": 6.613302226726415e-06,
+            "max_abs": 1.284849133753596e-07
+          },
+          "Z": {
+            "angle_degrees": 7.091976543484069e-06,
+            "max_abs": 1.2102364621568995e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 15.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/67",
+        "max_abs": 1.7148659026133828e-07,
+        "translation_max_abs": 1.7148659026133828e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 5.533085616490783e-06,
+            "max_abs": 1.0801528560477891e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 6.990111955929024e-08
+          },
+          "Z": {
+            "angle_degrees": 5.7905745997743736e-06,
+            "max_abs": 1.0882610013140948e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 15.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/68",
+        "max_abs": 9.745241413838812e-08,
+        "translation_max_abs": 9.366553133105526e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.094554566467037e-06,
+            "max_abs": 7.07957781287405e-08
+          },
+          "Y": {
+            "angle_degrees": 5.663293681020318e-06,
+            "max_abs": 9.745241413838812e-08
+          },
+          "Z": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 2.9153824243621784e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 15.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/69",
+        "max_abs": 1.463792500544514e-07,
+        "translation_max_abs": 1.373828126816079e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.3890569402603996e-06,
+            "max_abs": 1.0028495012193162e-07
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 1.463792500544514e-07
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.3800423914744897e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 16.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/70",
+        "max_abs": 6.999876234203839e-08,
+        "translation_max_abs": 2.490992301318329e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 5.3318147119265075e-06,
+            "max_abs": 6.999876234203839e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.6634893401933368e-08
+          },
+          "Z": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 3.518789526424371e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 16.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/71",
+        "max_abs": 1.1535348676261492e-07,
+        "translation_max_abs": 3.153380667697547e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.321556147031972e-06,
+            "max_abs": 1.0773755576565236e-07
+          },
+          "Y": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 3.467448550509289e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.1535348676261492e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 16.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/72",
+        "max_abs": 1.579992954248155e-07,
+        "translation_max_abs": 1.579992954248155e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.1197136397927998e-05,
+            "max_abs": 1.543230894185399e-07
+          },
+          "Y": {
+            "angle_degrees": 6.883343194785022e-06,
+            "max_abs": 1.4759820032850257e-07
+          },
+          "Z": {
+            "angle_degrees": 5.3318147119265075e-06,
+            "max_abs": 1.3178723179407825e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 16.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/73",
+        "max_abs": 2.2283352052454575e-07,
+        "translation_max_abs": 8.52163815068252e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.943155808007896e-05,
+            "max_abs": 2.2283352052454575e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 8.374973958780174e-08
+          },
+          "Z": {
+            "angle_degrees": 9.115808030550376e-06,
+            "max_abs": 1.9830702058243332e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 17.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/74",
+        "max_abs": 8.193501344067045e-08,
+        "translation_max_abs": 8.193501344067045e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.4747322413531947e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.2669041754852515e-08
+          },
+          "Z": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 4.355979399406351e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 17.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/75",
+        "max_abs": 1.1303075098112458e-07,
+        "translation_max_abs": 5.881764764126274e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.91248236030638e-06,
+            "max_abs": 7.856857564547681e-08
+          },
+          "Y": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 8.009470775505179e-08
+          },
+          "Z": {
+            "angle_degrees": 6.883343194785022e-06,
+            "max_abs": 1.1303075098112458e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 17.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/76",
+        "max_abs": 9.965742719941773e-08,
+        "translation_max_abs": 6.695537013712283e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.353408482428142e-06,
+            "max_abs": 4.2100339214812266e-08
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 8.538583529116295e-08
+          },
+          "Z": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 9.965742719941773e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 17.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/77",
+        "max_abs": 6.352388481900562e-08,
+        "translation_max_abs": 6.345078418235062e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 5.7905745997743736e-06,
+            "max_abs": 6.352388481900562e-08
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 4.683582233155903e-08
+          },
+          "Z": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 3.2432780017188634e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 18.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/78",
+        "max_abs": 6.509011996058689e-08,
+        "translation_max_abs": 2.504646090528695e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.2312710850892472e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 6.265577212616336e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 6.509011996058689e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 18.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/79",
+        "max_abs": 1.0790995474962983e-07,
+        "translation_max_abs": 1.0790995474962983e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 2.7412831116180314e-08
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 6.295098842201696e-08
+          },
+          "Z": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 3.274266191510833e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 18.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/80",
+        "max_abs": 4.488305194172426e-08,
+        "translation_max_abs": 3.8959672821192726e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 1.5705268197052646e-08
+          },
+          "Y": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 4.093266170457355e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.488305194172426e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 18.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/81",
+        "max_abs": 1.2560312256937323e-07,
+        "translation_max_abs": 2.0501326858379798e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 3.4611502996995114e-08
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 1.2560312256937323e-07
+          },
+          "Z": {
+            "angle_degrees": 6.097163388881822e-06,
+            "max_abs": 1.0852937748495606e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 19.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/82",
+        "max_abs": 4.362246386335755e-08,
+        "translation_max_abs": 8.792028438620036e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 3.572918672034575e-08
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 4.362246386335755e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 3.591779318412591e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 19.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/83",
+        "max_abs": 6.347814718310474e-08,
+        "translation_max_abs": 1.7005426400373835e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 4.4924476583219075e-08
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 4.330567549004627e-08
+          },
+          "Z": {
+            "angle_degrees": 5.263014220319208e-06,
+            "max_abs": 6.347814718310474e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 19.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/84",
+        "max_abs": 8.628305181446194e-08,
+        "translation_max_abs": 3.4212632726848824e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 8.628305181446194e-08
+          },
+          "Y": {
+            "angle_degrees": 4.597711793052988e-06,
+            "max_abs": 6.096857418924628e-08
+          },
+          "Z": {
+            "angle_degrees": 4.26886823125797e-06,
+            "max_abs": 7.586579897633783e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 19.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/85",
+        "max_abs": 1.471397013119713e-07,
+        "translation_max_abs": 5.412336756549507e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.321556147031972e-06,
+            "max_abs": 1.2102383095680125e-07
+          },
+          "Y": {
+            "angle_degrees": 1.344524082641768e-05,
+            "max_abs": 1.1782623232647893e-07
+          },
+          "Z": {
+            "angle_degrees": 4.90455619685548e-06,
+            "max_abs": 1.471397013119713e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 20.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/86",
+        "max_abs": 2.2378626169938798e-06,
+        "translation_max_abs": 2.7527903512236662e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.705411522696106e-05,
+            "max_abs": 2.3190692566288362e-07
+          },
+          "Y": {
+            "angle_degrees": 8.537736462515945e-06,
+            "max_abs": 1.1811113864723666e-07
+          },
+          "Z": {
+            "angle_degrees": 2.106936231525657e-05,
+            "max_abs": 2.2378626169938798e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 20.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/87",
+        "max_abs": 1.9491129421567166e-06,
+        "translation_max_abs": 6.457349854827044e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.797873662851796e-05,
+            "max_abs": 6.429824210840707e-07
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 1.5649982287868625e-07
+          },
+          "Z": {
+            "angle_degrees": 4.666948857479521e-05,
+            "max_abs": 1.9491129421567166e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 20.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/88",
+        "max_abs": 1.8038571738543396e-06,
+        "translation_max_abs": 4.457149316294817e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00010293904631011671,
+            "max_abs": 1.3900712048098285e-06
+          },
+          "Y": {
+            "angle_degrees": 4.353408482428142e-06,
+            "max_abs": 2.946924837488041e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00011690153601646701,
+            "max_abs": 1.8038571738543396e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 20.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/89",
+        "max_abs": 1.913035220013626e-06,
+        "translation_max_abs": 9.391700217520338e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00014205777528759022,
+            "max_abs": 1.913035220013626e-06
+          },
+          "Y": {
+            "angle_degrees": 9.956626120759437e-06,
+            "max_abs": 5.341949531612045e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00010350046877209195,
+            "max_abs": 1.3224480994722398e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 21.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/90",
+        "max_abs": 3.00013510923236e-07,
+        "translation_max_abs": 4.477533366298303e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.329717220381263e-05,
+            "max_abs": 3.00013510923236e-07
+          },
+          "Y": {
+            "angle_degrees": 6.883343194785022e-06,
+            "max_abs": 1.349896194824396e-07
+          },
+          "Z": {
+            "angle_degrees": 8.18910913293408e-06,
+            "max_abs": 9.676324452811969e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 21.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/91",
+        "max_abs": 3.327300532873778e-07,
+        "translation_max_abs": 5.435703442913109e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.4448356591142834e-05,
+            "max_abs": 3.327300532873778e-07
+          },
+          "Y": {
+            "angle_degrees": 5.263014220319208e-06,
+            "max_abs": 6.932816631888272e-08
+          },
+          "Z": {
+            "angle_degrees": 7.73124918760008e-06,
+            "max_abs": 9.431147418581531e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 21.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/92",
+        "max_abs": 3.445298375481798e-07,
+        "translation_max_abs": 1.3281828614708502e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.675195573747838e-05,
+            "max_abs": 3.445298375481798e-07
+          },
+          "Y": {
+            "angle_degrees": 3.818191820832846e-06,
+            "max_abs": 5.8845671446761116e-08
+          },
+          "Z": {
+            "angle_degrees": 5.3318147119265075e-06,
+            "max_abs": 1.5801123254277627e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 21.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/93",
+        "max_abs": 4.0477519291926e-07,
+        "translation_max_abs": 1.1143561096105259e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.5938424628881283e-05,
+            "max_abs": 2.8029558052367065e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.9489634673373075e-08
+          },
+          "Z": {
+            "angle_degrees": 2.5499118800815618e-05,
+            "max_abs": 4.0477519291926e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 22.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/94",
+        "max_abs": 2.3640320137019444e-06,
+        "translation_max_abs": 7.680489488848252e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.967468746208086e-05,
+            "max_abs": 1.1797794812196116e-06
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 4.999151315132622e-08
+          },
+          "Z": {
+            "angle_degrees": 5.07331237874065e-05,
+            "max_abs": 2.3640320137019444e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 22.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/95",
+        "max_abs": 2.4607263355846953e-06,
+        "translation_max_abs": 1.396700781697291e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.115791034218409e-05,
+            "max_abs": 1.0483487216106369e-06
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 1.000561837827263e-07
+          },
+          "Z": {
+            "angle_degrees": 7.258080363221088e-05,
+            "max_abs": 2.4607263355846953e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 22.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/96",
+        "max_abs": 2.6706460403147503e-06,
+        "translation_max_abs": 5.439573680376952e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.266372864803975e-05,
+            "max_abs": 7.358913478583418e-07
+          },
+          "Y": {
+            "angle_degrees": 5.663293681020318e-06,
+            "max_abs": 2.2442125668931112e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00010497250273226868,
+            "max_abs": 2.6706460403147503e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 22.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/97",
+        "max_abs": 2.8036209016590874e-06,
+        "translation_max_abs": 6.70265762892086e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.709302391958106e-05,
+            "max_abs": 3.7469882840923674e-07
+          },
+          "Y": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 2.0453217075555585e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00012023970431517428,
+            "max_abs": 2.8036209016590874e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 23.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/98",
+        "max_abs": 4.344224180385936e-08,
+        "translation_max_abs": 4.344224180385936e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.365465772731113e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.6117021434401977e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.0775238479254767e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 23.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/99",
+        "max_abs": 9.792722721613245e-08,
+        "translation_max_abs": 9.792722721613245e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 9.048790161614306e-09
+          },
+          "Z": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 4.0269100054501905e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 23.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/100",
+        "max_abs": 7.033391113964171e-08,
+        "translation_max_abs": 1.9958434904765454e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          },
+          "Y": {
+            "angle_degrees": 3.6222548091772e-06,
+            "max_abs": 7.033391113964171e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.7515576423174934e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 23.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/101",
+        "max_abs": 7.744984031887725e-08,
+        "translation_max_abs": 7.744984031887725e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 7.062317308736965e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.8440175608702702e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 24.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/102",
+        "max_abs": 2.0373917308802447e-07,
+        "translation_max_abs": 5.492819354913081e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.5007971104097566e-05,
+            "max_abs": 2.0373917308802447e-07
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 8.658250294502068e-08
+          },
+          "Z": {
+            "angle_degrees": 4.7536104815230715e-06,
+            "max_abs": 1.61975094670197e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 24.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/103",
+        "max_abs": 2.119207920259214e-07,
+        "translation_max_abs": 3.248317170800874e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4959322771548181e-05,
+            "max_abs": 2.119207920259214e-07
+          },
+          "Y": {
+            "angle_degrees": 4.9783130603797145e-06,
+            "max_abs": 5.399972735631309e-08
+          },
+          "Z": {
+            "angle_degrees": 6.9884384818971375e-06,
+            "max_abs": 1.3032595802542346e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 24.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/104",
+        "max_abs": 2.2266752353061747e-07,
+        "translation_max_abs": 3.8134658097987995e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.705411522696106e-05,
+            "max_abs": 2.2266752353061747e-07
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 2.8424828713013994e-08
+          },
+          "Z": {
+            "angle_degrees": 6.445849674396954e-06,
+            "max_abs": 1.4171502016324666e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 24.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/105",
+        "max_abs": 3.017200356225658e-07,
+        "translation_max_abs": 5.06538953004565e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2634696163675251e-05,
+            "max_abs": 1.7799763440962124e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.752942324628748e-08
+          },
+          "Z": {
+            "angle_degrees": 8.748576518413899e-06,
+            "max_abs": 3.017200356225658e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 25.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/106",
+        "max_abs": 4.3552273609748227e-07,
+        "translation_max_abs": 7.669666501897154e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.107782982641696e-05,
+            "max_abs": 4.3552273609748227e-07
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 3.8461706708403653e-08
+          },
+          "Z": {
+            "angle_degrees": 6.097163388881822e-06,
+            "max_abs": 2.0530634969873063e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 25.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/107",
+        "max_abs": 4.5363421463662235e-07,
+        "translation_max_abs": 8.149078212227323e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.110127594806681e-05,
+            "max_abs": 4.5363421463662235e-07
+          },
+          "Y": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 1.7694208054308547e-07
+          },
+          "Z": {
+            "angle_degrees": 1.1768457563181822e-05,
+            "max_abs": 2.572263895217475e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 25.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/108",
+        "max_abs": 5.016036084271036e-07,
+        "translation_max_abs": 1.462330487811414e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.655308005830554e-05,
+            "max_abs": 5.016036084271036e-07
+          },
+          "Y": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 8.957516683949507e-08
+          },
+          "Z": {
+            "angle_degrees": 1.059505231752994e-05,
+            "max_abs": 1.9580946286623657e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 25.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/109",
+        "max_abs": 4.1754375956770673e-07,
+        "translation_max_abs": 5.861882357294235e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.769176357445497e-05,
+            "max_abs": 3.802027208621439e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 8.586587796344247e-08
+          },
+          "Z": {
+            "angle_degrees": 1.1066171232981577e-05,
+            "max_abs": 4.1754375956770673e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 26.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/110",
+        "max_abs": 1.917847470167544e-06,
+        "translation_max_abs": 8.792028438620036e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00015745586073700535,
+            "max_abs": 1.917847470167544e-06
+          },
+          "Y": {
+            "angle_degrees": 4.094554566467037e-06,
+            "max_abs": 3.3637536489550257e-07
+          },
+          "Z": {
+            "angle_degrees": 4.089210355488544e-05,
+            "max_abs": 6.810282400238066e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 26.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/111",
+        "max_abs": 1.9027701227969374e-06,
+        "translation_max_abs": 9.644061549352045e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0001468813283133478,
+            "max_abs": 1.9027701227969374e-06
+          },
+          "Y": {
+            "angle_degrees": 4.517745487845102e-06,
+            "max_abs": 1.443882240437233e-07
+          },
+          "Z": {
+            "angle_degrees": 2.5924369670044465e-05,
+            "max_abs": 7.101170353962516e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 26.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/112",
+        "max_abs": 1.6875021628948161e-06,
+        "translation_max_abs": 8.499665682393243e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00013272267637332093,
+            "max_abs": 1.5321903816811755e-06
+          },
+          "Y": {
+            "angle_degrees": 1.3898428017007624e-05,
+            "max_abs": 4.067459258294548e-07
+          },
+          "Z": {
+            "angle_degrees": 3.6939895910400344e-05,
+            "max_abs": 1.6875021628948161e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 26.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/113",
+        "max_abs": 2.2183305929956987e-06,
+        "translation_max_abs": 2.2380442032954306e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 5.310581888665072e-05,
+            "max_abs": 6.19545829749768e-07
+          },
+          "Y": {
+            "angle_degrees": 3.306651113363206e-06,
+            "max_abs": 5.227776966876263e-07
+          },
+          "Z": {
+            "angle_degrees": 8.693830774372319e-05,
+            "max_abs": 2.2183305929956987e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 27.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/114",
+        "max_abs": 2.1355872092954087e-06,
+        "translation_max_abs": 2.7527903512236662e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.3363671372914987e-05,
+            "max_abs": 1.8114369737531888e-07
+          },
+          "Y": {
+            "angle_degrees": 8.580318953419392e-06,
+            "max_abs": 1.1118478226990192e-07
+          },
+          "Z": {
+            "angle_degrees": 2.1327258847706145e-05,
+            "max_abs": 2.1355872092954087e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 27.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/115",
+        "max_abs": 2.2662026140096714e-06,
+        "translation_max_abs": 6.457349854827044e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.7600994619320316e-05,
+            "max_abs": 2.5899273481400087e-07
+          },
+          "Y": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 2.2907946117811662e-07
+          },
+          "Z": {
+            "angle_degrees": 3.96981793939094e-05,
+            "max_abs": 2.2662026140096714e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 27.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/116",
+        "max_abs": 2.0668055071837443e-06,
+        "translation_max_abs": 1.6378078271372942e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.798370541247349e-05,
+            "max_abs": 1.0456129331259945e-06
+          },
+          "Y": {
+            "angle_degrees": 1.3418106104862006e-05,
+            "max_abs": 4.878725690105057e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00011532582774302616,
+            "max_abs": 2.0668055071837443e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 27.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/117",
+        "max_abs": 1.6158105609065387e-06,
+        "translation_max_abs": 8.585783461967367e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00011988453507201639,
+            "max_abs": 1.6158105609065387e-06
+          },
+          "Y": {
+            "angle_degrees": 6.613302226726415e-06,
+            "max_abs": 4.815183558548597e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00012521981138406598,
+            "max_abs": 1.584401246645939e-06
+          }
+        }
+      }
+    },
+    "Hair Hair 28.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/118",
+        "max_abs": 3.509927921641065e-07,
+        "translation_max_abs": 4.477533366298303e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.9913252241518953e-05,
+            "max_abs": 3.509927921641065e-07
+          },
+          "Y": {
+            "angle_degrees": 1.210433051621537e-05,
+            "max_abs": 1.864429748366092e-07
+          },
+          "Z": {
+            "angle_degrees": 7.491833340751661e-06,
+            "max_abs": 1.2007807015379512e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 28.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/119",
+        "max_abs": 2.0575663484123652e-07,
+        "translation_max_abs": 1.423841808900761e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4106655764433061e-05,
+            "max_abs": 2.0575663484123652e-07
+          },
+          "Y": {
+            "angle_degrees": 5.9764155237611605e-06,
+            "max_abs": 1.6142371350724716e-07
+          },
+          "Z": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 2.923943043242616e-08
+          }
+        }
+      }
+    },
+    "Hair Hair 28.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/120",
+        "max_abs": 2.8273692009861406e-07,
+        "translation_max_abs": 2.5202757569786627e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.2940947124789083e-05,
+            "max_abs": 2.8273692009861406e-07
+          },
+          "Y": {
+            "angle_degrees": 4.9783130603797145e-06,
+            "max_abs": 5.639080313812883e-08
+          },
+          "Z": {
+            "angle_degrees": 5.3318147119265075e-06,
+            "max_abs": 1.4284796634456143e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 28.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/121",
+        "max_abs": 2.0850021087426285e-07,
+        "translation_max_abs": 1.1143561096105259e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.664856156940838e-06,
+            "max_abs": 1.085525980215607e-07
+          },
+          "Y": {
+            "angle_degrees": 5.263014220319208e-06,
+            "max_abs": 1.2874960475528496e-07
+          },
+          "Z": {
+            "angle_degrees": 7.091976543484069e-06,
+            "max_abs": 2.0850021087426285e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 29.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/122",
+        "max_abs": 4.1590337218622153e-07,
+        "translation_max_abs": 4.240439466229873e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.0966921055636708e-05,
+            "max_abs": 1.4881108256759035e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 9.613131624064408e-09
+          },
+          "Z": {
+            "angle_degrees": 6.3890569402603996e-06,
+            "max_abs": 4.1590337218622153e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 29.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/123",
+        "max_abs": 2.5960440552807995e-07,
+        "translation_max_abs": 1.396700781697291e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.664856156940838e-06,
+            "max_abs": 1.0907930203529759e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 2.071217863885977e-08
+          },
+          "Z": {
+            "angle_degrees": 4.353408482428142e-06,
+            "max_abs": 2.5960440552807995e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 29.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/124",
+        "max_abs": 3.4243760183017e-07,
+        "translation_max_abs": 1.405774128215853e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.143182815269534e-06,
+            "max_abs": 8.205371671010653e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 6.83316443428339e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4106655764433061e-05,
+            "max_abs": 3.4243760183017e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 29.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/125",
+        "max_abs": 4.0895633901527617e-07,
+        "translation_max_abs": 9.584164839537834e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.1197136397927998e-05,
+            "max_abs": 1.9093442915618652e-07
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 5.93610138821532e-08
+          },
+          "Z": {
+            "angle_degrees": 1.780686120515573e-05,
+            "max_abs": 4.0895633901527617e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 30.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/126",
+        "max_abs": 4.998150942014945e-07,
+        "translation_max_abs": 5.492819354913081e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.603086636370456e-05,
+            "max_abs": 4.998150942014945e-07
+          },
+          "Y": {
+            "angle_degrees": 4.26886823125797e-06,
+            "max_abs": 5.9128979046363384e-08
+          },
+          "Z": {
+            "angle_degrees": 8.321556147031972e-06,
+            "max_abs": 4.3610407374217175e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 30.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/127",
+        "max_abs": 6.683706317289762e-07,
+        "translation_max_abs": 1.5169246125879e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.531439318536835e-05,
+            "max_abs": 6.683706317289762e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 4.565200129036384e-08
+          },
+          "Z": {
+            "angle_degrees": 1.210433051621537e-05,
+            "max_abs": 3.408392501569324e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 30.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/128",
+        "max_abs": 6.725250614181277e-07,
+        "translation_max_abs": 3.8134658097987995e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.6040490969474196e-05,
+            "max_abs": 6.725250614181277e-07
+          },
+          "Y": {
+            "angle_degrees": 3.91248236030638e-06,
+            "max_abs": 4.7237932676580385e-08
+          },
+          "Z": {
+            "angle_degrees": 1.0900252224719401e-05,
+            "max_abs": 3.7607983927046007e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 30.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/129",
+        "max_abs": 4.982870791536698e-07,
+        "translation_max_abs": 5.117783530295128e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.608140765150808e-05,
+            "max_abs": 4.699549336351083e-07
+          },
+          "Y": {
+            "angle_degrees": 7.244509618354405e-06,
+            "max_abs": 7.138072533052764e-08
+          },
+          "Z": {
+            "angle_degrees": 8.748576518413899e-06,
+            "max_abs": 4.982870791536698e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 31.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/130",
+        "max_abs": 1.3975509318697732e-06,
+        "translation_max_abs": 1.716739461699035e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.40262491515722e-05,
+            "max_abs": 1.3975509318697732e-06
+          },
+          "Y": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 2.0496383967838483e-07
+          },
+          "Z": {
+            "angle_degrees": 2.106936231525657e-05,
+            "max_abs": 3.241731292291661e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 31.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/131",
+        "max_abs": 1.3171244859222497e-06,
+        "translation_max_abs": 1.1158374491060385e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.060042141597568e-05,
+            "max_abs": 1.3171244859222497e-06
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 1.808191996133246e-07
+          },
+          "Z": {
+            "angle_degrees": 1.7329712313881724e-05,
+            "max_abs": 2.4117674968238134e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 31.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/132",
+        "max_abs": 1.174630433808943e-06,
+        "translation_max_abs": 5.7932481922762236e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.980386274384737e-05,
+            "max_abs": 1.174630433808943e-06
+          },
+          "Y": {
+            "angle_degrees": 3.91248236030638e-06,
+            "max_abs": 2.7205277319808374e-07
+          },
+          "Z": {
+            "angle_degrees": 3.7459166703758946e-05,
+            "max_abs": 6.710399702569703e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 31.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/133",
+        "max_abs": 9.55017647186196e-07,
+        "translation_max_abs": 7.235191645804662e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.702439032083616e-05,
+            "max_abs": 9.55017647186196e-07
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 2.720132954436849e-07
+          },
+          "Z": {
+            "angle_degrees": 5.194004094977268e-05,
+            "max_abs": 8.445441039839352e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 32.01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/134",
+        "max_abs": 3.9154498665538995e-07,
+        "translation_max_abs": 5.074667797089205e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.855997272895711e-05,
+            "max_abs": 3.9154498665538995e-07
+          },
+          "Y": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 1.1339653838149388e-07
+          },
+          "Z": {
+            "angle_degrees": 4.353408482428142e-06,
+            "max_abs": 1.936808473601559e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 32.02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/135",
+        "max_abs": 3.630936760146142e-07,
+        "translation_max_abs": 2.5142739445982443e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.709302391958106e-05,
+            "max_abs": 3.630936760146142e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 9.513115628578817e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.0810614980982791e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 32.03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/136",
+        "max_abs": 3.7665509466933145e-07,
+        "translation_max_abs": 3.3841836000192416e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.6781832797798116e-05,
+            "max_abs": 3.7665509466933145e-07
+          },
+          "Y": {
+            "angle_degrees": 4.353408482428142e-06,
+            "max_abs": 1.2289342521398794e-07
+          },
+          "Z": {
+            "angle_degrees": 5.853177225625916e-06,
+            "max_abs": 1.2289342521398794e-07
+          }
+        }
+      }
+    },
+    "Hair Hair 32.04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/137",
+        "max_abs": 3.749943573438941e-07,
+        "translation_max_abs": 9.00278251947384e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.782306712520834e-05,
+            "max_abs": 3.749943573438941e-07
+          },
+          "Y": {
+            "angle_degrees": 6.273929367455621e-06,
+            "max_abs": 1.8620735886543116e-07
+          },
+          "Z": {
+            "angle_degrees": 6.883343194785022e-06,
+            "max_abs": 1.4728237829331192e-07
+          }
+        }
+      }
+    },
+    "Head": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/7",
+        "max_abs": 1.8018545233644545e-07,
+        "translation_max_abs": 1.8018545233644545e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 7.344905839090643e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 9.514451448922046e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.9384283329345635e-08
+          }
+        }
+      }
+    },
+    "Hips": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/2",
+        "max_abs": 2.4503151507815346e-08,
+        "translation_max_abs": 2.4503151507815346e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.4561688985691157e-14
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.5459875157830538e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.5459875157830538e-08
+          }
+        }
+      }
+    },
+    "Neck": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/6",
+        "max_abs": 6.983614753153233e-08,
+        "translation_max_abs": 3.463156872385298e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.9310740501387045e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 6.983614753153233e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 6.835279009465012e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_01_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/187",
+        "max_abs": 1.218581928696949e-07,
+        "translation_max_abs": 1.218581928696949e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.8063246898236685e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.342055603956396e-09
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 4.416261845108238e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_01_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/188",
+        "max_abs": 3.162438133585965e-08,
+        "translation_max_abs": 3.162438133585965e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 9.035311165916937e-09
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 7.671985713386675e-09
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.1676618782985315e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_01_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/189",
+        "max_abs": 1.2591874565259786e-07,
+        "translation_max_abs": 1.2591874565259786e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.5591410829074448e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 7.575847504881494e-09
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.841701984834799e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_01_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/190",
+        "max_abs": 7.099328058757237e-08,
+        "translation_max_abs": 7.099328058757237e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 2.8566404353114194e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.563075333725465e-09
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.841701984834799e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_02_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/191",
+        "max_abs": 4.4388656306182384e-08,
+        "translation_max_abs": 2.8598890366993146e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.0981381137753488e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.4388656306182384e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.384801061656617e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_02_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/192",
+        "max_abs": 9.122902611125028e-08,
+        "translation_max_abs": 9.122902611125028e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.4307516948974808e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 5.414096904132748e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 5.1706621206903947e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_02_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/193",
+        "max_abs": 6.631410087720724e-08,
+        "translation_max_abs": 6.631410087720724e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.9347140778336325e-08
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 1.843866925810289e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.0873017092526425e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_02_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/194",
+        "max_abs": 1.0642764891599654e-07,
+        "translation_max_abs": 7.099328058757237e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 6.59767920296872e-08
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 2.1442495778956072e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.0642764891599654e-07
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_03_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/195",
+        "max_abs": 3.9531869333586656e-08,
+        "translation_max_abs": 2.8598890366993146e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.0532382905003033e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.589328111454961e-09
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 3.9531869333586656e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_03_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/196",
+        "max_abs": 8.75849082149216e-08,
+        "translation_max_abs": 8.75849082149216e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.0532382905003033e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 7.91712295722391e-09
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.236810476257233e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_03_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/197",
+        "max_abs": 4.238353312757681e-08,
+        "translation_max_abs": 1.209487265896314e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.0532382905003033e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.238353312757681e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.3581882285507163e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_03_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/198",
+        "max_abs": 7.099328058757237e-08,
+        "translation_max_abs": 7.099328058757237e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.0532382905003033e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.9408539603537065e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.655687580954691e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_04_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/199",
+        "max_abs": 2.8598890366993146e-08,
+        "translation_max_abs": 2.8598890366993146e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.3648246977027156e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.770861039560259e-09
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.7683000780598377e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_04_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/200",
+        "max_abs": 1.1217787232453702e-07,
+        "translation_max_abs": 9.122902611125028e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.1217787232453702e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 2.217298344930896e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.1241979791520862e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_04_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/201",
+        "max_abs": 1.0450128229422262e-07,
+        "translation_max_abs": 1.4895931599312462e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 7.325289175241778e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.9487296160368714e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.0450128229422262e-07
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_04_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/202",
+        "max_abs": 1.328575365278084e-07,
+        "translation_max_abs": 2.3113408076369524e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 1.328575365278084e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.298238399589536e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.8946650470752502e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_05_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/203",
+        "max_abs": 1.218581928696949e-07,
+        "translation_max_abs": 1.218581928696949e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 8.426241038250737e-09
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.4270113979364396e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.4270113979364396e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_05_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/204",
+        "max_abs": 1.0752941648206615e-07,
+        "translation_max_abs": 3.162438133585965e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 7.5735556492873e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.0752941648206615e-07
+          },
+          "Z": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 2.23174012603522e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_05_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/205",
+        "max_abs": 1.1249983344896464e-07,
+        "translation_max_abs": 1.1249983344896464e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 6.803088581364136e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 3.235953727198648e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.5998992353161157e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_05_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/206",
+        "max_abs": 1.464543970541854e-07,
+        "translation_max_abs": 4.821600896320888e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 9.398087286172085e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.464543970541854e-07
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.7245107503404142e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_06_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/207",
+        "max_abs": 1.218581928696949e-07,
+        "translation_max_abs": 1.218581928696949e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 2.5080169052671408e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 9.245660237411357e-09
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 8.50578629751908e-09
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_06_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/208",
+        "max_abs": 5.10301561007509e-08,
+        "translation_max_abs": 2.7980263439530972e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 5.10301561007509e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.2243404512446432e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 2.1387450033216737e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_06_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/209",
+        "max_abs": 6.801710128456762e-08,
+        "translation_max_abs": 6.631410087720724e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 5.873482677998254e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.5504809880440007e-08
+          },
+          "Z": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 6.801710128456762e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_06_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/210",
+        "max_abs": 1.313144650794129e-07,
+        "translation_max_abs": 3.689535787998466e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.313144650794129e-07
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.5504809880440007e-08
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 5.504210776052787e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_07_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/211",
+        "max_abs": 1.218581928696949e-07,
+        "translation_max_abs": 1.218581928696949e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.943897487421964e-09
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.7500497051514685e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.586940356901323e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_07_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/212",
+        "max_abs": 2.7980263439530972e-08,
+        "translation_max_abs": 2.7980263439530972e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.4762244759936038e-09
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.4517304691707977e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.0258872862323187e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_07_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/213",
+        "max_abs": 6.631410087720724e-08,
+        "translation_max_abs": 6.631410087720724e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 7.785923017422647e-09
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 9.406107892573345e-09
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.3799630589091976e-09
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_07_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/214",
+        "max_abs": 8.873379897522682e-08,
+        "translation_max_abs": 4.821600896320888e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.6293260901866233e-09
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 8.873379897522682e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 3.076024768233765e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_08_01": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/215",
+        "max_abs": 1.218581928696949e-07,
+        "translation_max_abs": 1.218581928696949e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.096857715765509e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.1364030544646084e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.6203715580995777e-09
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_08_02": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/216",
+        "max_abs": 9.122902611125028e-08,
+        "translation_max_abs": 9.122902611125028e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 6.522421358567954e-08
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 2.0235162878634583e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.283127287228126e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_08_03": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/217",
+        "max_abs": 7.292888426491118e-08,
+        "translation_max_abs": 6.631410087720724e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 7.292888426491118e-08
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 6.799368179599696e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 6.272335895118886e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_DEF_08_04": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/218",
+        "max_abs": 7.099328058757237e-08,
+        "translation_max_abs": 7.099328058757237e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 5.995389074087143e-08
+          },
+          "Y": {
+            "angle_degrees": 2.2588727439225506e-06,
+            "max_abs": 3.0374181392289756e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.351093707555265e-08
+          }
+        }
+      }
+    },
+    "SK_Dress_Waist": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/186",
+        "max_abs": 2.5949987048079493e-08,
+        "translation_max_abs": 3.255550495850912e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.5790693558092152e-14
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.5949987048079493e-08
+          }
+        }
+      }
+    },
+    "UpperChest": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/5",
+        "max_abs": 2.8380952699080808e-08,
+        "translation_max_abs": 2.8380952699080808e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.5357811513717086e-14
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 5.392637447698689e-10
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.2483297950893757e-08
+          }
+        }
+      }
+    },
+    "breast.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/176",
+        "max_abs": 1.518309034054255e-07,
+        "translation_max_abs": 1.0630884617057745e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 2.3251257690037885e-14
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.518309034054255e-07
+          },
+          "Z": {
+            "angle_degrees": 3.818191820832846e-06,
+            "max_abs": 1.0520125215407461e-07
+          }
+        }
+      }
+    },
+    "breast.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/177",
+        "max_abs": 9.703613670541993e-07,
+        "translation_max_abs": 1.0630884617057745e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.148793112873128e-05,
+            "max_abs": 9.57579203101528e-07
+          },
+          "Y": {
+            "angle_degrees": 6.752372650525579e-05,
+            "max_abs": 8.035541583240047e-07
+          },
+          "Z": {
+            "angle_degrees": 9.406633011036721e-05,
+            "max_abs": 9.703613670541993e-07
+          }
+        }
+      }
+    },
+    "eye.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/8",
+        "max_abs": 1.0380887260907912e-07,
+        "translation_max_abs": 6.145990028016968e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.73124918760008e-06,
+            "max_abs": 1.0244724535368732e-07
+          },
+          "Y": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 8.201192258638912e-08
+          },
+          "Z": {
+            "angle_degrees": 9.956626120759437e-06,
+            "max_abs": 1.0380887260907912e-07
+          }
+        }
+      }
+    },
+    "eye.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/9",
+        "max_abs": 3.0001467621332267e-07,
+        "translation_max_abs": 6.145990028016968e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.313080647644551e-05,
+            "max_abs": 3.0001467621332267e-07
+          },
+          "Y": {
+            "angle_degrees": 8.233494873389921e-06,
+            "max_abs": 9.304717707436794e-08
+          },
+          "Z": {
+            "angle_degrees": 2.5283811382633788e-05,
+            "max_abs": 2.9585189054159855e-07
+          }
+        }
+      }
+    },
+    "f_index.01.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/142",
+        "max_abs": 1.2777551461340408e-07,
+        "translation_max_abs": 1.0191325827690889e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 9.391510108767544e-06,
+            "max_abs": 1.0900867408736303e-07
+          },
+          "Y": {
+            "angle_degrees": 1.0138000340489137e-05,
+            "max_abs": 1.2777551461340408e-07
+          },
+          "Z": {
+            "angle_degrees": 4.7536104815230715e-06,
+            "max_abs": 8.639230486551241e-08
+          }
+        }
+      }
+    },
+    "f_index.01.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/161",
+        "max_abs": 2.985531182275736e-07,
+        "translation_max_abs": 7.875883056840394e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.664856156940838e-06,
+            "max_abs": 1.60116144343192e-07
+          },
+          "Y": {
+            "angle_degrees": 3.4150945850063763e-06,
+            "max_abs": 2.985531182275736e-07
+          },
+          "Z": {
+            "angle_degrees": 7.3444386094852035e-06,
+            "max_abs": 7.639749455279343e-08
+          }
+        }
+      }
+    },
+    "f_index.02.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/143",
+        "max_abs": 1.5680745946156094e-07,
+        "translation_max_abs": 1.067430162038363e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.699869328381916e-06,
+            "max_abs": 1.5680745946156094e-07
+          },
+          "Y": {
+            "angle_degrees": 3.6222548091772e-06,
+            "max_abs": 1.1996220905530208e-07
+          },
+          "Z": {
+            "angle_degrees": 8.748576518413899e-06,
+            "max_abs": 1.269343385956745e-07
+          }
+        }
+      }
+    },
+    "f_index.02.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/162",
+        "max_abs": 3.6457961982705456e-07,
+        "translation_max_abs": 7.592325346195139e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.2576871163780067e-05,
+            "max_abs": 1.5892771187964172e-07
+          },
+          "Y": {
+            "angle_degrees": 7.143182815269534e-06,
+            "max_abs": 3.6457961982705456e-07
+          },
+          "Z": {
+            "angle_degrees": 6.3890569402603996e-06,
+            "max_abs": 5.969274496919752e-08
+          }
+        }
+      }
+    },
+    "f_index.03.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/144",
+        "max_abs": 1.4522791502713517e-07,
+        "translation_max_abs": 1.4522791502713517e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 9.80911239371097e-06,
+            "max_abs": 1.193037633129279e-07
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 6.559525900229346e-08
+          },
+          "Z": {
+            "angle_degrees": 9.80911239371097e-06,
+            "max_abs": 1.3124541808906542e-07
+          }
+        }
+      }
+    },
+    "f_index.03.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/163",
+        "max_abs": 2.9973728032928193e-07,
+        "translation_max_abs": 2.162522889648244e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4837004097464935e-05,
+            "max_abs": 1.9350376945226344e-07
+          },
+          "Y": {
+            "angle_degrees": 3.6222548091772e-06,
+            "max_abs": 2.9973728032928193e-07
+          },
+          "Z": {
+            "angle_degrees": 1.6266572668182135e-05,
+            "max_abs": 1.9133160478190803e-07
+          }
+        }
+      }
+    },
+    "f_middle.01.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/148",
+        "max_abs": 0.031703781609696335,
+        "translation_max_abs": 1.164701757261355e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.3289776944589216,
+            "max_abs": 0.02282286820931745
+          },
+          "Y": {
+            "angle_degrees": 0.00034357680385293035,
+            "max_abs": 3.354617405193494e-06
+          },
+          "Z": {
+            "angle_degrees": 2.3289801942102177,
+            "max_abs": 0.031703781609696335
+          }
+        }
+      }
+    },
+    "f_middle.01.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/167",
+        "max_abs": 4.35181846114574e-07,
+        "translation_max_abs": 1.164701757261355e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4713668590566475e-05,
+            "max_abs": 1.5180249945956348e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 4.35181846114574e-07
+          },
+          "Z": {
+            "angle_degrees": 1.5152979023796936e-05,
+            "max_abs": 1.8522085198924287e-07
+          }
+        }
+      }
+    },
+    "f_middle.02.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/149",
+        "max_abs": 1.4725480923516443e-07,
+        "translation_max_abs": 1.4725480923516443e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 2.174359892137545e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.1931493304473406e-07
+          },
+          "Z": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 5.0407834351062775e-08
+          }
+        }
+      }
+    },
+    "f_middle.02.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/168",
+        "max_abs": 0.03782318207154134,
+        "translation_max_abs": 0.004244937667522208,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.773111121589013,
+            "max_abs": 0.027182337151725022
+          },
+          "Y": {
+            "angle_degrees": 5.4159136465346226e-05,
+            "max_abs": 9.845986426171294e-07
+          },
+          "Z": {
+            "angle_degrees": 2.773111603128682,
+            "max_abs": 0.03782318207154134
+          }
+        }
+      }
+    },
+    "f_middle.03.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/150",
+        "max_abs": 9.353715260118634e-07,
+        "translation_max_abs": 1.0996561172760266e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.872214952619119e-05,
+            "max_abs": 7.735707292511051e-07
+          },
+          "Y": {
+            "angle_degrees": 6.936615332467498e-05,
+            "max_abs": 7.222382123472926e-07
+          },
+          "Z": {
+            "angle_degrees": 9.458409488525617e-05,
+            "max_abs": 9.353715260118634e-07
+          }
+        }
+      }
+    },
+    "f_middle.03.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/169",
+        "max_abs": 0.04591049155824578,
+        "translation_max_abs": 0.007247704496592178,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.375019902547746,
+            "max_abs": 0.0330600810829651
+          },
+          "Y": {
+            "angle_degrees": 0.00044917825900261666,
+            "max_abs": 4.626153923936727e-06
+          },
+          "Z": {
+            "angle_degrees": 3.3750216663450368,
+            "max_abs": 0.04591049155824578
+          }
+        }
+      }
+    },
+    "f_pinky.01.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/154",
+        "max_abs": 3.1397377142639016e-07,
+        "translation_max_abs": 1.28670365029393e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.972937709214414e-05,
+            "max_abs": 2.150745217477379e-07
+          },
+          "Y": {
+            "angle_degrees": 2.0965315445691517e-05,
+            "max_abs": 3.1397377142639016e-07
+          },
+          "Z": {
+            "angle_degrees": 7.244509618354405e-06,
+            "max_abs": 9.856890414994268e-08
+          }
+        }
+      }
+    },
+    "f_pinky.01.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/173",
+        "max_abs": 0.07300577618036641,
+        "translation_max_abs": 1.28670365029393e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.033900440106491,
+            "max_abs": 0.045035415473925866
+          },
+          "Y": {
+            "angle_degrees": 5.6893688705255565,
+            "max_abs": 0.05222675528497689
+          },
+          "Z": {
+            "angle_degrees": 6.848777098102016,
+            "max_abs": 0.07300577618036641
+          }
+        }
+      }
+    },
+    "f_pinky.02.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/155",
+        "max_abs": 0.04550432496287726,
+        "translation_max_abs": 0.005360095504840956,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.561704830486498,
+            "max_abs": 0.03301758947754152
+          },
+          "Y": {
+            "angle_degrees": 3.7624030110987747,
+            "max_abs": 0.03692904685880194
+          },
+          "Z": {
+            "angle_degrees": 4.298323885395111,
+            "max_abs": 0.04550432496287726
+          }
+        }
+      }
+    },
+    "f_pinky.02.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/174",
+        "max_abs": 5.213887703803266e-07,
+        "translation_max_abs": 7.616580433023046e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.558703577427806e-05,
+            "max_abs": 5.014476158748948e-07
+          },
+          "Y": {
+            "angle_degrees": 2.9427337181133195e-05,
+            "max_abs": 5.213887703803266e-07
+          },
+          "Z": {
+            "angle_degrees": 1.679570459689203e-05,
+            "max_abs": 1.8858426642509585e-07
+          }
+        }
+      }
+    },
+    "f_pinky.03.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/156",
+        "max_abs": 0.07240266966803688,
+        "translation_max_abs": 0.006789055842091329,
+        "axes": {
+          "X": {
+            "angle_degrees": 3.9593702550073577,
+            "max_abs": 0.04056483519720189
+          },
+          "Y": {
+            "angle_degrees": 5.43888889499866,
+            "max_abs": 0.053750232221347005
+          },
+          "Z": {
+            "angle_degrees": 6.648387639802178,
+            "max_abs": 0.07240266966803688
+          }
+        }
+      }
+    },
+    "f_pinky.03.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/175",
+        "max_abs": 2.6287492005394597e-07,
+        "translation_max_abs": 4.2254328036506195e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.7455443435103742e-05,
+            "max_abs": 1.934147206839043e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 2.6287492005394597e-07
+          },
+          "Z": {
+            "angle_degrees": 1.0697753125226707e-05,
+            "max_abs": 2.167590480439685e-07
+          }
+        }
+      }
+    },
+    "f_ring.01.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/151",
+        "max_abs": 0.035583629257370575,
+        "translation_max_abs": 9.596419658919331e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.1241335728949835,
+            "max_abs": 0.02310627943167276
+          },
+          "Y": {
+            "angle_degrees": 2.7037497417775924,
+            "max_abs": 0.028057543798013285
+          },
+          "Z": {
+            "angle_degrees": 3.432294645628725,
+            "max_abs": 0.035583629257370575
+          }
+        }
+      }
+    },
+    "f_ring.01.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/170",
+        "max_abs": 7.133693706862232e-07,
+        "translation_max_abs": 9.596419658919331e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.745937174694151e-05,
+            "max_abs": 5.501793367557184e-07
+          },
+          "Y": {
+            "angle_degrees": 5.1700911529071824e-05,
+            "max_abs": 6.364715545714716e-07
+          },
+          "Z": {
+            "angle_degrees": 6.278575002574126e-05,
+            "max_abs": 7.133693706862232e-07
+          }
+        }
+      }
+    },
+    "f_ring.02.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/152",
+        "max_abs": 0.02679209082204892,
+        "translation_max_abs": 0.005756733685757354,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.0704697251465443,
+            "max_abs": 0.024649972801420006
+          },
+          "Y": {
+            "angle_degrees": 2.0486200785039848,
+            "max_abs": 0.02679209082204892
+          },
+          "Z": {
+            "angle_degrees": 0.7020557163040597,
+            "max_abs": 0.0084983527301139
+          }
+        }
+      }
+    },
+    "f_ring.02.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/171",
+        "max_abs": 2.2543810018760269e-07,
+        "translation_max_abs": 1.294030766985088e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.540324677666867e-06,
+            "max_abs": 8.278996688204643e-08
+          },
+          "Y": {
+            "angle_degrees": 1.1131846416284069e-05,
+            "max_abs": 2.2543810018760269e-07
+          },
+          "Z": {
+            "angle_degrees": 4.597711793052988e-06,
+            "max_abs": 4.870176439908391e-08
+          }
+        }
+      }
+    },
+    "f_ring.03.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/153",
+        "max_abs": 3.0830214825527946e-07,
+        "translation_max_abs": 7.64131868891127e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.524052950545017e-05,
+            "max_abs": 2.479301031144132e-07
+          },
+          "Y": {
+            "angle_degrees": 2.7039160995690242e-05,
+            "max_abs": 3.0830214825527946e-07
+          },
+          "Z": {
+            "angle_degrees": 7.091976543484069e-06,
+            "max_abs": 7.096593890310032e-08
+          }
+        }
+      }
+    },
+    "f_ring.03.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/172",
+        "max_abs": 0.08300185473772714,
+        "translation_max_abs": 0.007768110015149432,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.16545230144502,
+            "max_abs": 0.08300185473772714
+          },
+          "Y": {
+            "angle_degrees": 6.767728509906896,
+            "max_abs": 0.059645593172945155
+          },
+          "Z": {
+            "angle_degrees": 7.038939256696503,
+            "max_abs": 0.07329987017190476
+          }
+        }
+      }
+    },
+    "foot.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/180",
+        "max_abs": 1.1698482211386363e-05,
+        "translation_max_abs": 5.3831030299988925e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00013284070456594154,
+            "max_abs": 1.1698482211386363e-05
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.3708178648339526e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00014545506855371426,
+            "max_abs": 1.987222820076795e-06
+          }
+        }
+      }
+    },
+    "foot.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/184",
+        "max_abs": 2.136561860766051e-06,
+        "translation_max_abs": 1.004606815513398e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0001547239497839966,
+            "max_abs": 2.0623912853068305e-06
+          },
+          "Y": {
+            "angle_degrees": 5.9101860138662303e-05,
+            "max_abs": 7.836521263016039e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00016154155476974101,
+            "max_abs": 2.136561860766051e-06
+          }
+        }
+      }
+    },
+    "forearm.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/140",
+        "max_abs": 1.5586596376992645,
+        "translation_max_abs": 4.7651553813921055e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99996138148592,
+            "max_abs": 1.5586596376992645
+          },
+          "Y": {
+            "angle_degrees": 1.1131846416284069e-05,
+            "max_abs": 3.1111383691495575e-07
+          },
+          "Z": {
+            "angle_degrees": 179.99996065224113,
+            "max_abs": 1.117050716850656
+          }
+        }
+      }
+    },
+    "forearm.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/159",
+        "max_abs": 3.6375320888737406e-07,
+        "translation_max_abs": 4.7651553813921055e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.7966789019893227e-05,
+            "max_abs": 2.862096870615005e-07
+          },
+          "Y": {
+            "angle_degrees": 1.1390761175093017e-05,
+            "max_abs": 1.845727979343792e-07
+          },
+          "Z": {
+            "angle_degrees": 2.745383470411562e-05,
+            "max_abs": 3.6375320888737406e-07
+          }
+        }
+      }
+    },
+    "hand.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/141",
+        "max_abs": 1.367655499961984e-07,
+        "translation_max_abs": 1.367655499961984e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 3.738147924536861e-08
+          },
+          "Y": {
+            "angle_degrees": 3.6222548091772e-06,
+            "max_abs": 8.893198355508503e-08
+          },
+          "Z": {
+            "angle_degrees": 9.313570918021479e-06,
+            "max_abs": 8.107016924441268e-08
+          }
+        }
+      }
+    },
+    "hand.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/160",
+        "max_abs": 1.5587024854063145,
+        "translation_max_abs": 1.223097001457063e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99999852122068,
+            "max_abs": 1.5587024854063145
+          },
+          "Y": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 3.699245780808269e-07
+          },
+          "Z": {
+            "angle_degrees": 179.999987835598,
+            "max_abs": 1.1753279437828326
+          }
+        }
+      }
+    },
+    "shin.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/179",
+        "max_abs": 1.1584431547362328e-05,
+        "translation_max_abs": 1.3421899325294362e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.187945008841479e-05,
+            "max_abs": 8.44819233320783e-07
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 6.279307740442164e-08
+          },
+          "Z": {
+            "angle_degrees": 3.152032400536224e-05,
+            "max_abs": 1.1584431547362328e-05
+          }
+        }
+      }
+    },
+    "shin.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/183",
+        "max_abs": 1.5646287389304518,
+        "translation_max_abs": 1.0056433552563249e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99998708006032,
+            "max_abs": 1.5646118221290237
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.560523799071234e-07
+          },
+          "Z": {
+            "angle_degrees": 179.99998680097974,
+            "max_abs": 1.5646287389304518
+          }
+        }
+      }
+    },
+    "shoulder.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/138",
+        "max_abs": 6.085531367716612e-08,
+        "translation_max_abs": 6.085531367716612e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.0903821602332755e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.7249163875021623e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.2933469406561926e-08
+          }
+        }
+      }
+    },
+    "shoulder.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/157",
+        "max_abs": 7.253811418195255e-08,
+        "translation_max_abs": 6.085531367716612e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 5.0903821602332755e-08
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 4.2355480900369e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 7.253811418195255e-08
+          }
+        }
+      }
+    },
+    "spine": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/3",
+        "max_abs": 3.607246412684617e-08,
+        "translation_max_abs": 8.307267762575066e-09,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0,
+            "max_abs": 4.594013971320754e-14
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 1.0557187124504708e-08
+          },
+          "Z": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.607246412684617e-08
+          }
+        }
+      }
+    },
+    "thigh.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/178",
+        "max_abs": 1.5646174934798296,
+        "translation_max_abs": 1.621140199858928e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99994236553587,
+            "max_abs": 1.5623227016407668
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.984220597885724e-08
+          },
+          "Z": {
+            "angle_degrees": 179.99997220314398,
+            "max_abs": 1.5646174934798296
+          }
+        }
+      }
+    },
+    "thigh.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/182",
+        "max_abs": 8.801263812197035e-08,
+        "translation_max_abs": 1.621140199858928e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.156649318399953e-06,
+            "max_abs": 8.451771000422825e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 6.787445272493642e-09
+          },
+          "Z": {
+            "angle_degrees": 6.445849674396954e-06,
+            "max_abs": 8.801263812197035e-08
+          }
+        }
+      }
+    },
+    "thumb.01.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/145",
+        "max_abs": 1.339981849923788e-07,
+        "translation_max_abs": 1.339981849923788e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 7.393896667355496e-06,
+            "max_abs": 9.925764743456966e-08
+          },
+          "Y": {
+            "angle_degrees": 6.273929367455621e-06,
+            "max_abs": 9.083282748179045e-08
+          },
+          "Z": {
+            "angle_degrees": 8.580318953419392e-06,
+            "max_abs": 9.842652559655107e-08
+          }
+        }
+      }
+    },
+    "thumb.01.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/164",
+        "max_abs": 7.202275327244934e-07,
+        "translation_max_abs": 1.339981849923788e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 4.734403895981925e-05,
+            "max_abs": 5.161489156080279e-07
+          },
+          "Y": {
+            "angle_degrees": 1.03514553342977e-05,
+            "max_abs": 1.2524071735242615e-07
+          },
+          "Z": {
+            "angle_degrees": 5.391632964943716e-05,
+            "max_abs": 7.202275327244934e-07
+          }
+        }
+      }
+    },
+    "thumb.02.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/146",
+        "max_abs": 1.807212441917727e-07,
+        "translation_max_abs": 1.2756146361425635e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4028932551663055e-05,
+            "max_abs": 1.7700531884656812e-07
+          },
+          "Y": {
+            "angle_degrees": 1.079947731352768e-05,
+            "max_abs": 1.1748072381578822e-07
+          },
+          "Z": {
+            "angle_degrees": 1.5320420339170408e-05,
+            "max_abs": 1.807212441917727e-07
+          }
+        }
+      }
+    },
+    "thumb.02.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/165",
+        "max_abs": 2.9532580470004177e-07,
+        "translation_max_abs": 6.795681883886573e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.8995264470959744e-05,
+            "max_abs": 2.658561299995199e-07
+          },
+          "Y": {
+            "angle_degrees": 3.078324659199975e-06,
+            "max_abs": 1.7460848766859272e-07
+          },
+          "Z": {
+            "angle_degrees": 2.1800504449438904e-05,
+            "max_abs": 2.9532580470004177e-07
+          }
+        }
+      }
+    },
+    "thumb.03.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/147",
+        "max_abs": 1.30595878999884e-07,
+        "translation_max_abs": 1.30595878999884e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 8.233494873389921e-06,
+            "max_abs": 9.206179640841583e-08
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 4.1648604565125424e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 5.325026108948805e-08
+          }
+        }
+      }
+    },
+    "thumb.03.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/166",
+        "max_abs": 3.5900491468510154e-07,
+        "translation_max_abs": 4.275698994860022e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.63782182658682e-05,
+            "max_abs": 1.8933704382106953e-07
+          },
+          "Y": {
+            "angle_degrees": 6.3890569402603996e-06,
+            "max_abs": 1.3662783260315337e-07
+          },
+          "Z": {
+            "angle_degrees": 2.325651830698318e-05,
+            "max_abs": 3.5900491468510154e-07
+          }
+        }
+      }
+    },
+    "toe.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/181",
+        "max_abs": 1.1651314650862332e-05,
+        "translation_max_abs": 8.815155183583556e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00011184434765897655,
+            "max_abs": 1.1651314650862332e-05
+          },
+          "Y": {
+            "angle_degrees": 7.73124918760008e-06,
+            "max_abs": 3.499231979731121e-07
+          },
+          "Z": {
+            "angle_degrees": 6.603926736222441e-05,
+            "max_abs": 8.853665693919766e-07
+          }
+        }
+      }
+    },
+    "toe.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/185",
+        "max_abs": 1.9694117003865586e-07,
+        "translation_max_abs": 1.1113705511434091e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.4688877218970437e-05,
+            "max_abs": 1.9694117003865586e-07
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 5.960464477539063e-08
+          },
+          "Z": {
+            "angle_degrees": 1.2164402004367092e-05,
+            "max_abs": 1.8651860500540351e-07
+          }
+        }
+      }
+    },
+    "upper_arm.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/139",
+        "max_abs": 1.5487592008867068e-07,
+        "translation_max_abs": 2.8010163077851757e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 5.122586799188866e-08
+          },
+          "Y": {
+            "angle_degrees": 5.3318147119265075e-06,
+            "max_abs": 6.96229847108043e-08
+          },
+          "Z": {
+            "angle_degrees": 1.1486349657968266e-05,
+            "max_abs": 1.5487592008867068e-07
+          }
+        }
+      }
+    },
+    "upper_arm.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/158",
+        "max_abs": 2.01853637804561e-07,
+        "translation_max_abs": 2.8010163077851757e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 1.392462677356116e-05,
+            "max_abs": 1.4504424150629802e-07
+          },
+          "Y": {
+            "angle_degrees": 1.9090959104164224e-06,
+            "max_abs": 1.3550203448176035e-07
+          },
+          "Z": {
+            "angle_degrees": 1.5926940848252804e-05,
+            "max_abs": 2.01853637804561e-07
+          }
+        }
+      }
+    }
+  },
+  "focus": {
+    "forearm.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/140",
+        "max_abs": 1.5586596376992645,
+        "translation_max_abs": 4.7651553813921055e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99996138148592,
+            "max_abs": 1.5586596376992645
+          },
+          "Y": {
+            "angle_degrees": 1.1131846416284069e-05,
+            "max_abs": 3.1111383691495575e-07
+          },
+          "Z": {
+            "angle_degrees": 179.99996065224113,
+            "max_abs": 1.117050716850656
+          }
+        }
+      }
+    },
+    "forearm.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/159",
+        "max_abs": 3.6375320888737406e-07,
+        "translation_max_abs": 4.7651553813921055e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.7966789019893227e-05,
+            "max_abs": 2.862096870615005e-07
+          },
+          "Y": {
+            "angle_degrees": 1.1390761175093017e-05,
+            "max_abs": 1.845727979343792e-07
+          },
+          "Z": {
+            "angle_degrees": 2.745383470411562e-05,
+            "max_abs": 3.6375320888737406e-07
+          }
+        }
+      }
+    },
+    "hand.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/141",
+        "max_abs": 1.367655499961984e-07,
+        "translation_max_abs": 1.367655499961984e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 2.831646840510158e-06,
+            "max_abs": 3.738147924536861e-08
+          },
+          "Y": {
+            "angle_degrees": 3.6222548091772e-06,
+            "max_abs": 8.893198355508503e-08
+          },
+          "Z": {
+            "angle_degrees": 9.313570918021479e-06,
+            "max_abs": 8.107016924441268e-08
+          }
+        }
+      }
+    },
+    "hand.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/160",
+        "max_abs": 1.5587024854063145,
+        "translation_max_abs": 1.223097001457063e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99999852122068,
+            "max_abs": 1.5587024854063145
+          },
+          "Y": {
+            "angle_degrees": 2.4148365394514667e-06,
+            "max_abs": 3.699245780808269e-07
+          },
+          "Z": {
+            "angle_degrees": 179.999987835598,
+            "max_abs": 1.1753279437828326
+          }
+        }
+      }
+    },
+    "thigh.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/178",
+        "max_abs": 1.5646174934798296,
+        "translation_max_abs": 1.621140199858928e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99994236553587,
+            "max_abs": 1.5623227016407668
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 3.984220597885724e-08
+          },
+          "Z": {
+            "angle_degrees": 179.99997220314398,
+            "max_abs": 1.5646174934798296
+          }
+        }
+      }
+    },
+    "thigh.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/182",
+        "max_abs": 8.801263812197035e-08,
+        "translation_max_abs": 1.621140199858928e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.156649318399953e-06,
+            "max_abs": 8.451771000422825e-08
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 6.787445272493642e-09
+          },
+          "Z": {
+            "angle_degrees": 6.445849674396954e-06,
+            "max_abs": 8.801263812197035e-08
+          }
+        }
+      }
+    },
+    "shin.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/179",
+        "max_abs": 1.1584431547362328e-05,
+        "translation_max_abs": 1.3421899325294362e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 6.187945008841479e-05,
+            "max_abs": 8.44819233320783e-07
+          },
+          "Y": {
+            "angle_degrees": 0.0,
+            "max_abs": 6.279307740442164e-08
+          },
+          "Z": {
+            "angle_degrees": 3.152032400536224e-05,
+            "max_abs": 1.1584431547362328e-05
+          }
+        }
+      }
+    },
+    "shin.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/183",
+        "max_abs": 1.5646287389304518,
+        "translation_max_abs": 1.0056433552563249e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 179.99998708006032,
+            "max_abs": 1.5646118221290237
+          },
+          "Y": {
+            "angle_degrees": 1.2074182697257333e-06,
+            "max_abs": 1.560523799071234e-07
+          },
+          "Z": {
+            "angle_degrees": 179.99998680097974,
+            "max_abs": 1.5646287389304518
+          }
+        }
+      }
+    },
+    "foot.L": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/180",
+        "max_abs": 1.1698482211386363e-05,
+        "translation_max_abs": 5.3831030299988925e-08,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.00013284070456594154,
+            "max_abs": 1.1698482211386363e-05
+          },
+          "Y": {
+            "angle_degrees": 1.4787793334710982e-06,
+            "max_abs": 3.3708178648339526e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00014545506855371426,
+            "max_abs": 1.987222820076795e-06
+          }
+        }
+      }
+    },
+    "foot.R": {
+      "pose_samples": 5,
+      "cluster_samples": 5,
+      "worst": {
+        "location": "Pose/701775744/184",
+        "max_abs": 2.136561860766051e-06,
+        "translation_max_abs": 1.004606815513398e-07,
+        "axes": {
+          "X": {
+            "angle_degrees": 0.0001547239497839966,
+            "max_abs": 2.0623912853068305e-06
+          },
+          "Y": {
+            "angle_degrees": 5.9101860138662303e-05,
+            "max_abs": 7.836521263016039e-07
+          },
+          "Z": {
+            "angle_degrees": 0.00016154155476974101,
+            "max_abs": 2.136561860766051e-06
+          }
+        }
+      }
+    }
+  },
+  "errors": [],
+  "parser_source": "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\parse_fbx.py",
+  "parser_sha256": "96fe3f11b5c9b2950d9c434857e3b0db1a1b558510e2ad360b767643a69c2047",
+  "fbx_version": 7400,
+  "global_settings": {
+    "UpAxis": 1,
+    "UpAxisSign": 1,
+    "FrontAxis": 2,
+    "FrontAxisSign": 1,
+    "CoordAxis": 0,
+    "CoordAxisSign": 1,
+    "UnitScaleFactor": 100.0
+  },
+  "axis_unit_contract_matches": true,
+  "counts": {
+    "retained_bones": 217,
+    "production_bone_models": 217,
+    "bind_poses": 6,
+    "clusters": 1085
+  },
+  "missing_pose_bones": [],
+  "missing_cluster_bones": [],
+  "mismatch_bones": [
+    "f_middle.01.L",
+    "f_middle.02.R",
+    "f_middle.03.R",
+    "f_pinky.01.R",
+    "f_pinky.02.L",
+    "f_pinky.03.L",
+    "f_ring.01.L",
+    "f_ring.02.L",
+    "f_ring.03.R",
+    "forearm.L",
+    "hand.R",
+    "shin.R",
+    "thigh.L"
+  ],
+  "all_retained_worst": {
+    "bone": "shin.R",
+    "location": "Pose/701775744/183",
+    "max_abs": 1.5646287389304518,
+    "translation_max_abs": 1.0056433552563249e-07,
+    "axes": {
+      "X": {
+        "angle_degrees": 179.99998708006032,
+        "max_abs": 1.5646118221290237
+      },
+      "Y": {
+        "angle_degrees": 1.2074182697257333e-06,
+        "max_abs": 1.560523799071234e-07
+      },
+      "Z": {
+        "angle_degrees": 179.99998680097974,
+        "max_abs": 1.5646287389304518
+      }
+    }
+  },
+  "bind_matches_captured_author_rest": false,
+  "sha256_after": {
+    "capture": "39a2dcbac39a664aba5406f64e2171990fe434a62e39f910bb98665bc689efc8",
+    "export_proof": "425a362d78e983ebab456db6435e7e2f79fdc8e0b587aaa5fe3a7e5dbe826be3",
+    "production_fbx": "e0b7ea6d62958bd09d362d110227ea21395d5384204bbf7b110cc72b5dbe65f0"
+  },
+  "inputs_unchanged": true
+}

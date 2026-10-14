@@ -1,0 +1,112 @@
+{
+  "schema": "x.validation.original20-Forearm-final-mode-source-owner/1",
+  "status": "SOURCE_READY_PURE_AND_NATIVE_PENDING",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "d6851b82169497a628439ae4b8be05954bfd101c952dcbbdff557c8e548c0038",
+      "bytes": 102410
+    },
+    "test_animation_rigging_recovery.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_recovery.py",
+      "sha256": "08d9748e0ea7a49cbcb81080bafa9e9560d453c0fc10c0c3e8d3c858115e29af",
+      "bytes": 32830
+    }
+  },
+  "prior_sources": {
+    "unity_animation_rigging.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unity_animation_rigging_3ef89786_before_Original20_Forearm_sync.py",
+      "sha256": "3ef897863611f8be69be7234aa92b39e0f8239fff9d7843547f2677bfd616da1",
+      "bytes": 100310
+    },
+    "test_animation_rigging_recovery.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/test_animation_rigging_recovery_3b9a0573_before_Original20_Forearm_sync.py",
+      "sha256": "3b9a05733b1b4dd01591a60a03a7f44f7dce272851e61c15de361501812682d9",
+      "bytes": 28692
+    }
+  },
+  "reported_failure": {
+    "source": "Root/Parent actual Native04 .27",
+    "phase": "First reference_SOURCE asset gate after exact initial20 passed.",
+    "actual_diagnostic": "Forearm current target record hand.L differs from official mode resolver CTRL_hand_IK.L.",
+    "native_report_pin": "Not supplied in this Source owner; no invented Native result or artifact pin."
+  },
+  "source_evidence": {
+    "C5_apply": "Original FK Action evaluated→strict FK mode guard→official switch_limb IK→final Target/ORI/Pole writes; no prior Forearm final sync.",
+    "C5_restore_preview_mode": "Post-dependency callback can reestablish IK after BASE FK properties evaluate at same frame.",
+    "Forearm_official_resolver": "Actual body_original_mode/FK resolves hand; IK resolves managed Target.",
+    "oracle": "Unchanged260B authenticates record.target against official resolver.",
+    "official_transaction": "forearm_twist.defer_runtime/context preserves previous_busy and refreshes final pose/mode once when outermost scope exits, including exception rollback."
+  },
+  "change_scope": {
+    "functions": [
+      "_apply",
+      "_restore_preview_mode",
+      "activate",
+      "restore_owned"
+    ],
+    "new_top_level_helpers": 0,
+    "new_global_imports": 0,
+    "Original20_only_condition": "'original_inputs' in session",
+    "ordinary_behavior": "Existing body under stdlib nullcontext; no Forearm import or forced refresh.",
+    "actual_transaction_API": "Existing forearm_twist.defer_runtime(context), default flush_on_exit=True.",
+    "nested_apply_coalesced_by_outer_activate": true,
+    "activate_existing_try_rollback_finally_inside_scope": true,
+    "close_session_tracks_properties_prior_display_removal_before_finalflush": true,
+    "_apply_FK_guard_unchanged": true,
+    "Original20_bonecollection_widget_skip_unchanged": true,
+    "Original_mode_record_and_Forearm_design_calibration_untouched": true,
+    "no_oracle_weakening_or_manual_record_target_update": true
+  },
+  "checks": {
+    "mode": "Text/read and full raw inverse only; no AST/compile.",
+    "full_module_raw_inverse_equal_3EF": true,
+    "other_functions_and_top_level_text_unchanged": true,
+    "all_existing_12_test_methods_text_unchanged": true,
+    "scope_cannot_span_timer_or_external_generator_suspend": true,
+    "imports_executed": 0,
+    "AST_or_compile": 0,
+    "tests_executed": 0,
+    "processes_started": 0,
+    "Native_SDK_GUI_calls": 0,
+    "build_or_deploy": false,
+    "artist_sharedworkspace_reads_or_mutations": false
+  },
+  "unchanged_dependencies": {
+    "forearm_twist.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist.py",
+      "sha256": "e8403be47320e95b7b40955e79b89d27e4ac7e39f3565f3fe7cabfe529a2cb14",
+      "bytes": 96726
+    },
+    "limb_ik_fk.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/limb_ik_fk.py",
+      "sha256": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c",
+      "bytes": 47570
+    },
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "a7fc96e0ad2e12ee8ddf425198fa3edd89006facd3abc906905b50223d7e5adf",
+      "bytes": 35730
+    }
+  },
+  "focused_pure_test_source": {
+    "existing_cases": 12,
+    "added_cases": 1,
+    "planned_total": 13,
+    "executed": false,
+    "name": "test_original20_forearm_refresh_is_final_after_nested_apply_and_failed_activation_recovery",
+    "actual_functions": [
+      "C5 activate",
+      "C5 _apply",
+      "official Forearm defer_runtime",
+      "official Forearm update_runtime"
+    ],
+    "fake_boundary": "Explicit native/geometry observation stub; no solver/asset/native PASS inferred.",
+    "positive": "Intermediate mode/Target callbacks stay deferred; only final both-IK refresh after all writes.",
+    "negative": "Second-Target failure enters actual activation rollback, restores both prior FK modes before the only final official refresh; both busy guards clear; saved capture unchanged."
+  },
+  "next": "Root serial relevant pure checks, official .28 Source freeze/build and separately authorized one actual Native05; Source readiness does not prove handler native scheduling or final Forearm cache."
+}

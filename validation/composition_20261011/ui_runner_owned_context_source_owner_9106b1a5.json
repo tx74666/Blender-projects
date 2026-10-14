@@ -1,0 +1,106 @@
+{
+  "schema": "x.validation.character-composition-ui-owned-context-source-owner/1",
+  "created_utc": "2026-10-11T13:37:06.347490+00:00",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "run_character_composition_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "9106b1a56fe37e2c091131f9c5cfe770fce3b7ec39818741286c401159409f8c",
+      "bytes": 30900
+    },
+    "run_character_composition_raise_stage.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+      "bytes": 24737
+    }
+  },
+  "old_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_ui_fixture_729df315_before_owned_scene_context.py",
+    "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+    "bytes": 24773
+  },
+  "changed_functions": [
+    "validate_fixture",
+    "run"
+  ],
+  "unchanged_functions": [
+    "_checkpoint_api",
+    "require",
+    "_sha",
+    "_absolute",
+    "_id",
+    "validate_reports",
+    "claim_evidence",
+    "select_native_row",
+    "_pin_model",
+    "_activate_selected",
+    "main"
+  ],
+  "added_functions": [],
+  "validation": {
+    "ast_parse_passed": true,
+    "in_memory_compile_passed": true,
+    "source_imports": 0,
+    "candidate_imports": 0,
+    "tests_executed": 0,
+    "native_calls": 0,
+    "shared_workspace_reads": 0,
+    "fixture_generation_performed": false
+  },
+  "fixture_api": {
+    "new_two_field_pins": [
+      "currentWorkspace",
+      "historicalWorkspaceSnapshot",
+      "sourceCompletionClosure",
+      "sourceCompletedFileAudit"
+    ],
+    "new_actual_id": "preparedRaiseWorkItemId",
+    "pins_outside_mutable_evidence": true,
+    "current_workspace_requires_future_actual_parent_sha": true,
+    "historical_workspace_sha": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9"
+  },
+  "admission": {
+    "reviewed_stage_delayed_load_pinned": true,
+    "no_top_level_stage_to_runner_import": true,
+    "validate_reports_stage_interface_unchanged": true,
+    "n16_closure_and_actual_audit_authenticated": true,
+    "n16_natural_exit_and_all_workers_gone_authenticated": true,
+    "historical_snapshot_retains_seed_sha": true,
+    "current_workspace_distinct_pin_and_same_actual_path": true,
+    "same_target_model_workspace_adoption_required": true,
+    "catalog_extension_only_explicit_raise_and_its_readonly_A_companion": true,
+    "all_old_prepared_sealed_route_fields_and_composition_preserved": true,
+    "both_actual_seed_pose_items_link_baseline_packet_positive_duration_native_217_required": true,
+    "selected_custom_original_anchor_and_association_guards_preserved": true,
+    "completion_immutable_inputs_not_rehashed": true
+  },
+  "context_contract": {
+    "initial_original_five_conditions_inside_owned_scene_context": true,
+    "admission_scope_exits_before_timer_execution": true,
+    "startup_guard_state_reader_use_fresh_owned_context": true,
+    "finished_visual_guard_uses_fresh_owned_context": true,
+    "quit_passes_plain_scene_name": true,
+    "no_scene_rig_window_native_refs_in_timer_closures": true,
+    "sync_helper_run_outside_override": true,
+    "controller_handles_reopen_after_old_override_exits": true,
+    "reload_use_scripts_false_load_ui_false": true,
+    "sibling_required_API": [
+      "owned_scene_context(scene_name)",
+      "schedule_completion_quit(..., scene_name=scene_name)"
+    ],
+    "new_checkpoint_controller_source_peer_pending": true
+  },
+  "handoff": {
+    "next_freeze_replace_existing_stage_slot_with_77161b99": true,
+    "new_scene_context_controller_and_session_reopen_seam_must_be_pinned": true,
+    "no_ui_native_acceptance_claim": true,
+    "no_autoexec_or_rig_ui_security_option_change": true,
+    "owned_profile_first_quick_setup": "During a separately granted visual QA window, finish/dismiss the owned-profile first-run setup through normal UI before observation; leave autoexec disabled."
+  },
+  "limitations": [
+    "Source-only admission and API review; no Blender load, timer, reopen, screenshot, transform, or UI acceptance was performed.",
+    "Current catalog and prepared Raise bytes must come from actual future Parent Collect/Prepare output; no SHA or identity was invented."
+  ]
+}

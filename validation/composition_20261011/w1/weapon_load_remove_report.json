@@ -1,0 +1,54 @@
+{
+  "schema": "x.validation.existing-b1-weapon-load-remove/1",
+  "completed": false,
+  "pid": 60604,
+  "runtime": {
+    "package": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_17\\character_designer",
+    "manifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_17\\python_projection.json",
+    "manifest_sha256": "92098c05ba0c60093b578ab1cdf3c03d86eeb6e9aa2918de963042ea4cacfd6d",
+    "files": 167
+  },
+  "worker_count": 0,
+  "publication_count": 0,
+  "B_edit_performed": false,
+  "save_performed": false,
+  "artist_write_performed": false,
+  "phases": [
+    {
+      "phase": "existing_B1_native_B_tweak",
+      "owner": "abd9581c-5ea9-4899-901a-5a60fdff3bfd",
+      "autokey": false
+    }
+  ],
+  "process_exit_verified": false,
+  "native_association": {
+    "model_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+    "manifest_path": "D:\\codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\20261011-042846-c109db17b44f\\character_animation_link.json",
+    "packet_sha256": "5b8ebb91890fc66e5f9ecd5c0df0e67ab93534bc9b4c07799f92c1d31664bf1a",
+    "link_id": "7b34c8665fd84ec1a0d064d5f8b34c8c",
+    "action_slot": 929201142
+  },
+  "exact_A": {
+    "name": "Reference · Walk_N",
+    "library": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\DATAFILES\\character_designer\\composition_references\\a385606b99c14b26-074dc5c3494c.blend",
+    "motion_sha256": "14556ff41415ac0621456f863ecbf2df5742b61101919af959a434e5fb076548"
+  },
+  "headful_checkpoints": {
+    "schema": "x.validation.character-composition-ui-checkpoints/1",
+    "completed": false,
+    "pid": 60604,
+    "blender": "5.2.0 LTS",
+    "source": "bpy.ops.screen.screenshot",
+    "native_pending": true,
+    "checkpoints": [],
+    "scene_name": "Composition QA · Fresh Workspace",
+    "reopen_boundaries": [],
+    "raise_visual_pending": true,
+    "raise_reason": "Actual Raise requires its later genuine prepared/registered row; a Hold screenshot does not prove Raise.",
+    "error": "Error: Cannot assign an embedded ID pointer to an id-property\n",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_14\\composition_ui_checkpoints.py\", line 301, in tick\n    response = self._tick_owned()\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_14\\composition_ui_checkpoints.py\", line 326, in _tick_owned\n    checkpoint = next(self.iterator)\n  File \"D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_w1_weapon_load_remove_ready.py\", line 130, in steps\n    proof = yield from helper._weapon_acceptance_steps(context, item, modules, checkpoints=True)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_14\\composition_session_acceptance.py\", line 458, in _weapon_acceptance_steps\n    _require(bpy.ops.character_designer.composition_weapon('EXEC_DEFAULT', True, remove=False) == {'FINISHED'},\n             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Error: Cannot assign an embedded ID pointer to an id-property\n\n",
+    "protected_inputs_verified_on_stop": true
+  },
+  "error_type": "RuntimeError",
+  "error": "Error: Cannot assign an embedded ID pointer to an id-property\n"
+}

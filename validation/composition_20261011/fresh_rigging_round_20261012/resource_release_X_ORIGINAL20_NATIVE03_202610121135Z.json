@@ -1,0 +1,52 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "passed": false,
+  "resource_token": "X_ORIGINAL20_NATIVE03_202610121135Z",
+  "owned_pid": 80356,
+  "owned_process_filetime": "134362784945380228",
+  "retained_handle_natural_exit": true,
+  "native_exit_code": 0,
+  "native_exited_utc": "2026-10-12T11:36:03.8743774+00:00",
+  "owned_native_gone": true,
+  "process_termination_performed": false,
+  "GUI": true,
+  "all_owned_activity_closed": true,
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls.py",
+    "sha256": "2cce4620c90d21b10c71c569449069b3cecddd5bcc9b46c7ed042f7e6a7a389b",
+    "bytes": 32337
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/native_original20_r8_03/original20_controls_report.json",
+    "sha256": "cc0217361c79a30b5fbe5477dbb86af8596686e3662dbb8ccd30281eaee3076c",
+    "bytes": 12948
+  },
+  "start": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_start_X_ORIGINAL20_NATIVE03_202610121135Z.json",
+    "sha256": "8f2836e35dc8b84cbf046ca4374bcb60aeadcfe4825632a43ef3b507c24f4b11",
+    "bytes": 4686
+  },
+  "launch": {
+    "resource_token": "X_ORIGINAL20_NATIVE03_202610121135Z",
+    "actual_started_utc": "2026-10-12T11:34:54.5538273+00:00",
+    "owned_pid": 80356,
+    "owned_process_filetime": "134362784945380228",
+    "retained_handle_acquired": true,
+    "background": false,
+    "GUI": true,
+    "fresh_memory_MiB": 1105.7,
+    "artist_process_filetime": "134359355330496074"
+  },
+  "original_artist": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "bytes": 34682050
+  },
+  "artist_saved": false,
+  "SDK": 0,
+  "Unity": 0,
+  "no_real20_edit_or_key_or_publication_or_save": true,
+  "actual_failure": "ValueError: Composition cannot add Armature ownership references to the protected Main Rig transaction.",
+  "qualification": "Report FAIL inside Original20 import before live edit/key/publication/save. Readonly legacy Body property digest wrongly used Composition recovery encoder, which correctly rejects Armature ownership. New Input20 creation was attempted and backend rollback ran; original artist never opened/written by clone."
+}

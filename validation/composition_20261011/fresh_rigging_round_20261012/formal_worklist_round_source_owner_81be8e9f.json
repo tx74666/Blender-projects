@@ -1,0 +1,134 @@
+{
+  "schema": "x.validation.formal-worklist-round-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "formal_worklist_round.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\formal_worklist_round.py",
+      "sha256": "81be8e9f33ecae8171b585ae3c06cbe4c592f5057413d4d5e363fa0e8ed096fa",
+      "bytes": 22001
+    }
+  },
+  "source_freeze": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r4_bff52cbe.json",
+    "sha256": "71fd41971f2e7c889dcb1ff7a427ddb7cd58b6560015b658c960c067c869ed89",
+    "bytes": 18526
+  },
+  "package_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_f9e41c12\\python_projection.json",
+    "sha256": "ac12952c816f17ae86ac732ab18f4dcb5dc37dfa68aa39be600b27ef1d6b362f",
+    "bytes": 20959
+  },
+  "frozen_product_sources_read_only": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+      "bytes": 40384
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327
+    }
+  },
+  "syntax": {
+    "ast_parse": "PASS",
+    "in_memory_compile": "PASS",
+    "assert_count": 0,
+    "target_imports": 0,
+    "tests_executed": 0
+  },
+  "script_lines": 364,
+  "default_mode": "READINESS_ONLY",
+  "explicit_execution_option": "--add-activate",
+  "native_report_schema": "x.validation.formal-worklist-admission-round/1",
+  "actual_run_performed": false,
+  "status": "SOURCE_ONLY_NATIVE_PENDING",
+  "required_cli_pairs": [
+    "isolated-clone",
+    "protected-artist",
+    "initial-workspace",
+    "workspace",
+    "prepared-link",
+    "model",
+    "actualpacket",
+    "source-freeze",
+    "package-manifest"
+  ],
+  "required_cli_other": [
+    "script-sha256",
+    "addon-root",
+    "output-root",
+    "scene-name",
+    "rig-name",
+    "work-item-id",
+    "initial-workspace-identity",
+    "workspace-identity",
+    "initial-row-count",
+    "confirm-isolated-headful"
+  ],
+  "optional_cli": [
+    "add-activate",
+    "quit-on-completion"
+  ],
+  "formal_api_order": [
+    "complete package import and register",
+    "actual owning Scene/Window reacquired after isolated clone open",
+    "exact saved.rig plus target.is_adopted/target.ensure_active",
+    "original saved workspace identity and existing row count match explicit CLI",
+    "workspace.load_workspace for actual Parent Prepare index",
+    "links.load_link + route_identity + model/fullpacket exact pins",
+    "source._packet full protocol and native packet authentication",
+    "reject changed old/new workspace identity without touching rows",
+    "explicit only: worklist.connect",
+    "explicit only: worklist.add(...activate_new=False)",
+    "explicit only: worklist.activate(...CUSTOM)",
+    "target.ensure_active and pre-existing row/Action/slot native identity equality",
+    "immutable artist/clone/input/package file rehash"
+  ],
+  "failure_contract": {
+    "durable_report": "formal_worklist_report.json",
+    "exact_error_and_traceback": true,
+    "phase_before_each_formal_boundary": true,
+    "initial_and_failure_worklist_rows_and_identity": true,
+    "whole_clone_relative_owned_path_and_sha": true,
+    "row_clear_or_re_adoption_or_mapping_repair": false,
+    "no_automatic_retry": true,
+    "no_automatic_row_cleanup_or_disassociation": true,
+    "original_failure_retained": true
+  },
+  "isolation": {
+    "fresh_headful_factory_process_required": true,
+    "disable_autoexec_required": true,
+    "owned_CONFIG_DATAFILES": true,
+    "unique_actual_window_scene": true,
+    "actual_profile_readback": true,
+    "all_registered_package_module_files_pinned": true,
+    "clone_open_outside_context_override": true,
+    "no_RNA_in_driver_across_load": true,
+    "persistent_timer": true,
+    "memory_minimum_MiB": 200,
+    "memory_near98_one_serial_reread_seconds": 5,
+    "report_only_no_blend_save": true,
+    "no_artist_file_load_or_save": true,
+    "quit_return_is_not_natural_exit_proof": true
+  },
+  "limits": [
+    "No actual Prepare path, WorkID, target GUID, model revision, workspace identity or row count is invented. All are future explicit CLI inputs.",
+    "Source-only preparation does not authorize or claim native readiness, formal Add success, physical return, control save or Unity Apply.",
+    "A preserved old Main Rig/workspace identity may reject the new Prepare. The script records that actual failure and never re-adopts, repairs Rest/mapping, clears rows or replaces a workspace.",
+    "No Sync, export worker, collection, Return DTO experiment, source publication, model repair, installation, deployment or SDK action."
+  ],
+  "previous_source_draft": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\formal_worklist_round_source_owner_b64b86b1.json",
+    "sha256": "9833eb12a305f08f3d27efdc68565a153066bdaa88345b66002587bc1e2132d9",
+    "bytes": 5935
+  },
+  "final_delta_from_draft": "One explicit existing-route admission: prepared Link.targetGuid must match workspace.targetGuid before readiness is claimed; formal public Add retains its original _validate_route guard."
+}

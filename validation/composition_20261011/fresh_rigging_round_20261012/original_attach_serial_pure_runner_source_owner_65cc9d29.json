@@ -1,0 +1,123 @@
+{
+  "schema": "x.validation.original-attach-serial-pure-runner-source/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": false,
+  "source_scope_verified": true,
+  "status": "prepared_unexecuted_pending_root_source_peer_and_fresh_go",
+  "source_files": {
+    "run_original_attach_serial_pure.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\run_original_attach_serial_pure.py",
+      "sha256": "65cc9d292ebf18802850a99d168daa8e70d66bc1c67d6d772cda62ebc4ad03db",
+      "bytes": 19443
+    },
+    "run_original_attach_serial_pure_SOURCE.md": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\run_original_attach_serial_pure_SOURCE.md",
+      "sha256": "1e9702c468e366f2d0ffed28b7729d82dd42077d6ad1b9b0beea79a68826ee56",
+      "bytes": 5713
+    }
+  },
+  "owner_scope": "Only new ROUND runner, its new README and this exclusive owner receipt; no product/test/frozen-package edits.",
+  "execution_counts": {
+    "syntax_compilation": 0,
+    "python_processes": 0,
+    "test_executions": 0,
+    "sdk_calls": 0,
+    "blender_launches": 0,
+    "workers": 0,
+    "builds": 0,
+    "deployments": 0,
+    "artist_writes": 0
+  },
+  "cli": {
+    "python": "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "helper_flag": "-B",
+    "required": [
+      "--phase",
+      "--resource-start",
+      "--resource-start-sha256",
+      "--scope-owner-token",
+      "--output-root"
+    ],
+    "phase_core": {
+      "suite_totals": [
+        19,
+        7,
+        15
+      ],
+      "new_unique": 19,
+      "total": 41
+    },
+    "phase_ui": {
+      "suite_totals": [
+        14,
+        68
+      ],
+      "new_unique": 14,
+      "total": 82
+    }
+  },
+  "resource_contract": {
+    "schema": "x.validation.resource-start/1",
+    "scopes": [
+      "original-rig-current-pure-checks",
+      "latest-original-artist-savecopy"
+    ],
+    "owner": "Root",
+    "status": "ACTUAL_START",
+    "owner_thread": "01a12751-d08f-7630-b790-18db26fe3186",
+    "parent_thread": "01a12305-aada-7273-b72c-54a41aad77e4",
+    "start_and_created_exact_utc_z": true,
+    "deadline_max_seconds": 210,
+    "pure_allowed": true,
+    "false_flags": [
+      "worker_allowed",
+      "native_allowed",
+      "new_blender_allowed",
+      "build_allowed",
+      "install_allowed",
+      "deploy_allowed",
+      "artist_disk_write_allowed"
+    ],
+    "pure_only_sdk_allowed": false,
+    "combined_sdk_permission_not_consumed_by_runner": true,
+    "source_and_resource_hashes_exact_before_and_after_suites": true,
+    "minimum_available_mib": 200,
+    "near98_reread_threshold_percent": 97.5,
+    "reread_seconds": 5,
+    "each_phase_claim": "ROUND/r7_serial_pure_claims/<ResourceStartSHA>.<phase>.json CreateNew",
+    "ui_requires_actual_same_start_core41_success": true,
+    "no_same_phase_blind_retry": true
+  },
+  "receipt_contract": {
+    "schema": "x.validation.r7-actual-serial-pure/1",
+    "execution_mode": "SERIAL_PYTHON_B",
+    "r7_producer_consumer": "prepare_unified_package_r7.py:actual_pure_receipt",
+    "sources": "All five mandatory feature pins plus exact two legacy suite files",
+    "actual_suite_processes": 5,
+    "phase_process_count": {
+      "ui": 2,
+      "core": 3
+    },
+    "process_test_total_semantics": "Sum of actual child unittest Ran totals; not one invented combined unittest process",
+    "true_pass_requires": "Natural child exit0, exact expected Ran count, official unittest stderr OK, zero skips, exact Source pre/post, window remains valid",
+    "raw_logs": "Per-suite stdout/stderr binary originals plus declared stdout-then-stderr combined log; aggregate concatenates suite logs in execution order",
+    "retained_child_handles_until_natural_exit": true,
+    "termination_calls": 0,
+    "failure": "Stop first failure. Preserve actual stdout/stderr/counts and consumed claim. Wait for existing child natural exit; never start a next suite after error/deadline.",
+    "audit_guards": [
+      "process launch denied",
+      "network SDK connection denied",
+      "real bpy/mathutils import denied",
+      "all character_designer __init__ execution denied",
+      "other candidate source import denied"
+    ]
+  },
+  "limits": [
+    "No actual ResourceStart was created by this Source preparation.",
+    "No runner/source/module import, compilation or test was executed.",
+    "No original snapshot/SDK permission inferred.",
+    "Core prerun66ab and all previous Source artifacts remain immutable.",
+    "Fresh GO and Root exact runner hash/Source peer remain required."
+  ]
+}

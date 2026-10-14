@@ -1,0 +1,946 @@
+{
+  "schema": "x.validation.character-composition-old-runtime-bytecode-provenance/1",
+  "utc": "2026-10-11T06:59:40.075321+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "bytecode_imported_unmarshalled_or_executed": false,
+  "runtime_projection": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\python_projection.json",
+    "sha256": "a7c660d546bcc6f2b0720750eb03279b62a24f968967a385746c6f13effeb150",
+    "bytes": 31012
+  },
+  "source_file_count": 167,
+  "cache_file_count": 116,
+  "cache_files": [
+    {
+      "relative_path": "__pycache__/__init__.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\__init__.cpython-313.pyc",
+      "sha256": "b69d765bfa7732953b04e62021b5de25337e5f5b038b0535f84c6e35f7aa04dd",
+      "bytes": 418185,
+      "source_relative_path": "__init__.py",
+      "source_sha256": "c8d612988159e83a3332c35245970cc07ad4f0a9b8704ef466e43c819c066861"
+    },
+    {
+      "relative_path": "__pycache__/animation.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation.cpython-313.pyc",
+      "sha256": "93b93a756e941ddc6f7099ac592059d3a7358084eb597b08014e7175ea5d0d3e",
+      "bytes": 54247,
+      "source_relative_path": "animation.py",
+      "source_sha256": "21bc2bdd62ab6cba661c31a0006319e487047385fcb7a3381f3943bf6be2b05a"
+    },
+    {
+      "relative_path": "__pycache__/animation_composition.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_composition.cpython-313.pyc",
+      "sha256": "af0069bb243bb176d9131f3685fc94235fdf44cc3f4e726c5a7d415f25817411",
+      "bytes": 141091,
+      "source_relative_path": "animation_composition.py",
+      "source_sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5"
+    },
+    {
+      "relative_path": "__pycache__/animation_composition_contract.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_composition_contract.cpython-313.pyc",
+      "sha256": "c7896a41359e53b26b8d3382d888d4f81108e64ebb7339e5a4a8e41c9cb8c6b6",
+      "bytes": 14214,
+      "source_relative_path": "animation_composition_contract.py",
+      "source_sha256": "2d286b46f29e4777c9c11f43b680f9f132f408a0e910169f031516c85135a4d9"
+    },
+    {
+      "relative_path": "__pycache__/animation_composition_controls.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_composition_controls.cpython-313.pyc",
+      "sha256": "f3a2617f71a693dbe995cd0e9f3eb5db72aa527f86792f0f0f06b3ad62d28f5e",
+      "bytes": 34618,
+      "source_relative_path": "animation_composition_controls.py",
+      "source_sha256": "aff2415b44acf440bb1c97f63eb8ed5af622b5d7f5a597a9d68b945d572e6b42"
+    },
+    {
+      "relative_path": "__pycache__/animation_composition_export.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_composition_export.cpython-313.pyc",
+      "sha256": "16501d41a37a7062f7e94174f6b005cec4e579df4b602057b02c77d5dcb12eac",
+      "bytes": 66142,
+      "source_relative_path": "animation_composition_export.py",
+      "source_sha256": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67"
+    },
+    {
+      "relative_path": "__pycache__/animation_composition_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_composition_ui.cpython-313.pyc",
+      "sha256": "57dc539b7ee8432aa7dde122af67f6a3194a770f72692d57211279d0cd3b0790",
+      "bytes": 28979,
+      "source_relative_path": "animation_composition_ui.py",
+      "source_sha256": "dec613ae44ccaf8644f339b6bc5072372adaa08d66e3049851807e1433c9c3a8"
+    },
+    {
+      "relative_path": "__pycache__/animation_export.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_export.cpython-313.pyc",
+      "sha256": "09e1519e705209f3ea42b0af44ebf13c822e27077d7bfd00c31feb245dc9cfe2",
+      "bytes": 16653,
+      "source_relative_path": "animation_export.py",
+      "source_sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b"
+    },
+    {
+      "relative_path": "__pycache__/animation_export_worker.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_export_worker.cpython-313.pyc",
+      "sha256": "f323ba37255cacda47fea8ba75f60c2006c9e1bfc424e122aebc4ac770610a02",
+      "bytes": 44859,
+      "source_relative_path": "animation_export_worker.py",
+      "source_sha256": "b2668e204e4e75e71af165e3427eed8a3e2387c2dd2635cbd757d27d748a97be"
+    },
+    {
+      "relative_path": "__pycache__/animation_link.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_link.cpython-313.pyc",
+      "sha256": "70bd4d4f039d153f9a0d7b94d16b2e44ee6d0287cda5b5be07e89fc1177ff05a",
+      "bytes": 29045,
+      "source_relative_path": "animation_link.py",
+      "source_sha256": "aabd94b5ce0b2cac63ed88d1f24fab35636e0eb14aacd07de105d7e84ef3fccb"
+    },
+    {
+      "relative_path": "__pycache__/animation_link_source.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_link_source.cpython-313.pyc",
+      "sha256": "f0fd1a7d1b4d1e62075fe99e8413d22f26ce573ec9e6f3e809c0ec9a675509bd",
+      "bytes": 18601,
+      "source_relative_path": "animation_link_source.py",
+      "source_sha256": "9aaa032749a86ec808523697c8a85679dce0134e60dfb640331bd41f53859998"
+    },
+    {
+      "relative_path": "__pycache__/animation_retarget.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_retarget.cpython-313.pyc",
+      "sha256": "2d7498d2c734e61f3b54941ed45aafd041b064eef5731d823a8f1d5065cad3e8",
+      "bytes": 36090,
+      "source_relative_path": "animation_retarget.py",
+      "source_sha256": "f98f84c2bcec2402586c5704fd531de23069465f7adf26524eb201c6811bd28c"
+    },
+    {
+      "relative_path": "__pycache__/animation_runtime.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_runtime.cpython-313.pyc",
+      "sha256": "339a6eeba23fc8be80ff4f1b7781b000e954905d7c67e217635128a929ed67d0",
+      "bytes": 8362,
+      "source_relative_path": "animation_runtime.py",
+      "source_sha256": "1a42593c14bb61e33de16c25b3dc107dcf9ef65ef1034b5ea248f4e35a28a59d"
+    },
+    {
+      "relative_path": "__pycache__/animation_worklist.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_worklist.cpython-313.pyc",
+      "sha256": "376bf9eec7bfd12e18d7e314ff2a563588f15fcec4951fd2ee2ba9d50b339366",
+      "bytes": 47519,
+      "source_relative_path": "animation_worklist.py",
+      "source_sha256": "fea0c713008ad73a9cca30112054312a28b8cfdebbcfda20d6a38483defbd043"
+    },
+    {
+      "relative_path": "__pycache__/animation_worklist_collection.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_worklist_collection.cpython-313.pyc",
+      "sha256": "5a5e9a731e87b9966fcab1bad202969c52f35447603cc1a94ec55ab0894f6f07",
+      "bytes": 48521,
+      "source_relative_path": "animation_worklist_collection.py",
+      "source_sha256": "7e306c7af9e3b55aacd84ca5b16a44d3980b459ca905a07111c99132b6b9968f"
+    },
+    {
+      "relative_path": "__pycache__/animation_worklist_fingerprint.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_worklist_fingerprint.cpython-313.pyc",
+      "sha256": "267f330885eec4fdb8f79cfa3348aa7c25b6896759864c573f62680a5e10e572",
+      "bytes": 40640,
+      "source_relative_path": "animation_worklist_fingerprint.py",
+      "source_sha256": "74a49632682def0ec598cb819018d67f217a032bd4253d8a88af50cbf7d63193"
+    },
+    {
+      "relative_path": "__pycache__/animation_worklist_new.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_worklist_new.cpython-313.pyc",
+      "sha256": "d0954dc6d7a41cfd618de1eee2b4198ab2914693c1868165f06710080665dbfd",
+      "bytes": 68587,
+      "source_relative_path": "animation_worklist_new.py",
+      "source_sha256": "b332692c2119c369916a126ec689b5dbdf68c63c7534f54a07e12bab142a7c9d"
+    },
+    {
+      "relative_path": "__pycache__/animation_worklist_queue.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_worklist_queue.cpython-313.pyc",
+      "sha256": "3dcbf53ea13e8e7e0eca32a564109a58397642a0aad8e7bc0bede596c4ee1570",
+      "bytes": 12649,
+      "source_relative_path": "animation_worklist_queue.py",
+      "source_sha256": "12f936ac57ce6981d8988932cf4f05a2cdfdc8567b7d5842b92a79069187650b"
+    },
+    {
+      "relative_path": "__pycache__/animation_worklist_target.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_worklist_target.cpython-313.pyc",
+      "sha256": "2c4bbc35f2300664406eaf49bbc294c9edf8e715014569b2d60a342e85832ee3",
+      "bytes": 57303,
+      "source_relative_path": "animation_worklist_target.py",
+      "source_sha256": "ce7aa98f40ebd5bc9af02f38b2362f1f6d4f1af1ca4cb5fa53ac913f7e3d4fa1"
+    },
+    {
+      "relative_path": "__pycache__/animation_worklist_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_worklist_ui.cpython-313.pyc",
+      "sha256": "01756dd578cf82d7c1e60aeaaf6d23b8dfe2ec440554adda547e53372693cad7",
+      "bytes": 49865,
+      "source_relative_path": "animation_worklist_ui.py",
+      "source_sha256": "77d40e3dc4eaa579d75b1d4470ec303cc528db6809b59e729b8804f93be1ae6a"
+    },
+    {
+      "relative_path": "__pycache__/animation_workspace.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\animation_workspace.cpython-313.pyc",
+      "sha256": "394d1039cc4fe330dfbc28d405b1a711e2adf224cab4644fb5f9be9f4cc2d7fd",
+      "bytes": 22553,
+      "source_relative_path": "animation_workspace.py",
+      "source_sha256": "58569e35850419236e6f1152b976ce28806c420a9e88cbb8faa31387da04957b"
+    },
+    {
+      "relative_path": "__pycache__/body_calibration.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_calibration.cpython-313.pyc",
+      "sha256": "33c06182287ee26a8d6da5cc6aa1b516bd76f2c484b257e40b05d990f0ca8091",
+      "bytes": 65236,
+      "source_relative_path": "body_calibration.py",
+      "source_sha256": "8310159a27ccd0d501161fbf4aa24dd0cf57f1fec3e761be6e13094f713552e0"
+    },
+    {
+      "relative_path": "__pycache__/body_calibration_display.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_calibration_display.cpython-313.pyc",
+      "sha256": "38a0083240df82371cf7ccfb33a92e89c86d07ec346c22f0eca78dd7a75bc7b2",
+      "bytes": 18057,
+      "source_relative_path": "body_calibration_display.py",
+      "source_sha256": "bc96daee9eac162de5aa2912f94aa8b9393e80f8ffce10c24001d705c6c6be7c"
+    },
+    {
+      "relative_path": "__pycache__/body_calibration_overlay.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_calibration_overlay.cpython-313.pyc",
+      "sha256": "f167be172b1856db6d48152ffbbca7a7d41ae5487ae22cfb643ca03cc37aad73",
+      "bytes": 19826,
+      "source_relative_path": "body_calibration_overlay.py",
+      "source_sha256": "05b700219ad7f5ce17e4fdee386a9da78ef590f8439b038b4736b108a2957dac"
+    },
+    {
+      "relative_path": "__pycache__/body_calibration_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_calibration_ui.cpython-313.pyc",
+      "sha256": "339024df0c3c7861820c61e7d45f077b0c882917fda3892cf29da919c07b8be0",
+      "bytes": 22591,
+      "source_relative_path": "body_calibration_ui.py",
+      "source_sha256": "86d14dae2ba9d2e58b91915dbfbbc6200f3f06a112b33300992fd7561f30a058"
+    },
+    {
+      "relative_path": "__pycache__/body_controls_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_controls_ui.cpython-313.pyc",
+      "sha256": "771a042ec05596edc0c44cd07f93b1ecf49c65fbf696828d30eee155d8fbb7e1",
+      "bytes": 26692,
+      "source_relative_path": "body_controls_ui.py",
+      "source_sha256": "4f7a8c3b5ff181be6b3828d5ad603de353b2313aff00245cce13ef7eb7bb0458"
+    },
+    {
+      "relative_path": "__pycache__/body_original_mode.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_original_mode.cpython-313.pyc",
+      "sha256": "046acafa93a531e976acb1edc5b798a6be6f87ca6adea7d6e749a84d094d9a6e",
+      "bytes": 53047,
+      "source_relative_path": "body_original_mode.py",
+      "source_sha256": "e419bc7f221de3746295a705f4806dab6b91aaecd1efe0d1d9b8f71d087a5c2f"
+    },
+    {
+      "relative_path": "__pycache__/body_rest_resync.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_rest_resync.cpython-313.pyc",
+      "sha256": "db24b88b8eb6a0964447590fc7b48d84e60b86a83e7eb2f6fd5167e4d11e8ff4",
+      "bytes": 37787,
+      "source_relative_path": "body_rest_resync.py",
+      "source_sha256": "41d048dbb8892d8d1baea2f90d3335a7dc29ebb3124e9b220be6048687301c03"
+    },
+    {
+      "relative_path": "__pycache__/body_setup_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\body_setup_ui.cpython-313.pyc",
+      "sha256": "815d74001c2f3e8b9456982a78bf207665d39cee4fba19c7a20443f51b8560c0",
+      "bytes": 9759,
+      "source_relative_path": "body_setup_ui.py",
+      "source_sha256": "bc3bcd8ed76449063c2649801777bf5908228cf46e78b21540f008254582051f"
+    },
+    {
+      "relative_path": "__pycache__/bone_collections.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\bone_collections.cpython-313.pyc",
+      "sha256": "d42f963bb93ba2b6cf7ef212e1bd3052ff13387d6323e0a44182eb2b576dbeb4",
+      "bytes": 66937,
+      "source_relative_path": "bone_collections.py",
+      "source_sha256": "c4f2814eb4981e032f5343ae01e4fc16f1536247ea7d1a4e9ee4d91292795452"
+    },
+    {
+      "relative_path": "__pycache__/bone_color_palette.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\bone_color_palette.cpython-313.pyc",
+      "sha256": "3e701c2426f0a17a8197b35708c4379f838700a5c78e50b465fdf8a0aa257403",
+      "bytes": 57928,
+      "source_relative_path": "bone_color_palette.py",
+      "source_sha256": "c0fb02f35bd9f1eaaf75307bad71d537180c82ad7f1b52e43ca1d75359e0629d"
+    },
+    {
+      "relative_path": "__pycache__/bone_display.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\bone_display.cpython-313.pyc",
+      "sha256": "83b53009f67c4fd797e6a6b11a27afacc443fc63d9f01611920a259120783a3e",
+      "bytes": 38251,
+      "source_relative_path": "bone_display.py",
+      "source_sha256": "dba2df867ae94fae4f95ab5b4159b4058c95a657c8bee300da5d7185787b64f3"
+    },
+    {
+      "relative_path": "__pycache__/bone_display_sync.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\bone_display_sync.cpython-313.pyc",
+      "sha256": "14939610dbda230763465ad45c937ae82ebd3ff79c3f504fb638dce98e5b3009",
+      "bytes": 3921,
+      "source_relative_path": "bone_display_sync.py",
+      "source_sha256": "79c2f3c09978944a3f1cd2d4b4303ff9f9abda75848248222f44cffa4487a3a9"
+    },
+    {
+      "relative_path": "__pycache__/bone_rest_lengths.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\bone_rest_lengths.cpython-313.pyc",
+      "sha256": "d1dea0f7336ae71d941fd0b3e0577f4d131fbe4759cd20fbba36e16741a51bbd",
+      "bytes": 22419,
+      "source_relative_path": "bone_rest_lengths.py",
+      "source_sha256": "074f3806c7cd8290446e869379ef1ca43de065247262d2757eee637ed5358e03"
+    },
+    {
+      "relative_path": "__pycache__/character_setup.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\character_setup.cpython-313.pyc",
+      "sha256": "e7d085fec9faf35ce52f78e973821788661fd135381533296d00502bb4d3de37",
+      "bytes": 35320,
+      "source_relative_path": "character_setup.py",
+      "source_sha256": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9"
+    },
+    {
+      "relative_path": "__pycache__/control_colors.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\control_colors.cpython-313.pyc",
+      "sha256": "c077477f828d4bd252e9928e0b276dd444bd02cc2669c83e1e6d277ce0846807",
+      "bytes": 19071,
+      "source_relative_path": "control_colors.py",
+      "source_sha256": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf"
+    },
+    {
+      "relative_path": "__pycache__/control_pose_assets.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\control_pose_assets.cpython-313.pyc",
+      "sha256": "6f2f2015ccf87dae48eb4ee93fca2a7f4d01a69570bdd79ed066b8a340475803",
+      "bytes": 73942,
+      "source_relative_path": "control_pose_assets.py",
+      "source_sha256": "19b51c76bc9998fe94a47f035b14f43ffb4ea5869d4efc5a82b9742150cba3d6"
+    },
+    {
+      "relative_path": "__pycache__/control_pose_capture.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\control_pose_capture.cpython-313.pyc",
+      "sha256": "7eb25ed93dce72e5bb897ae424ca9e2c562979c70d8789a1ad9ccd489987f75c",
+      "bytes": 26875,
+      "source_relative_path": "control_pose_capture.py",
+      "source_sha256": "461ddba7fe2f6bc71038f01364f6d90f34d0b5f96ecb3c2a536952aaa9db569a"
+    },
+    {
+      "relative_path": "__pycache__/control_weight_paint.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\control_weight_paint.cpython-313.pyc",
+      "sha256": "137fa0beb5d1e7eaadbd37bd6a253c47ac0ac19a8d0140497c793634a51cb281",
+      "bytes": 18788,
+      "source_relative_path": "control_weight_paint.py",
+      "source_sha256": "339a5ade54c73892e7a5aa02da1a38e562b107610cfc1a8620edd1b00fcc1eda"
+    },
+    {
+      "relative_path": "__pycache__/curve_tools.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\curve_tools.cpython-313.pyc",
+      "sha256": "7b19a7950b04c66289a3a8d0a885c55788368781ab27acd99cbcf5bca421bced",
+      "bytes": 8094,
+      "source_relative_path": "curve_tools.py",
+      "source_sha256": "ed25cb3c8b230c6a6cf1a0799f5875ee73dc711b5f32f818eae858f5e0c0335a"
+    },
+    {
+      "relative_path": "__pycache__/delta_symmetry.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\delta_symmetry.cpython-313.pyc",
+      "sha256": "a7defad74807d4cd891c19071257b45f9eef4e75df2e3e905ca599cf90623b76",
+      "bytes": 89199,
+      "source_relative_path": "delta_symmetry.py",
+      "source_sha256": "73ec541ad3d727965d7585d9ba77b56b0e91be80f3197892b0b0740a8b5bb282"
+    },
+    {
+      "relative_path": "__pycache__/eye_controls.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\eye_controls.cpython-313.pyc",
+      "sha256": "253157ba8b0127a37406b063a0d74c1822c318eccf47bc91985dd0b40cf4ad80",
+      "bytes": 47971,
+      "source_relative_path": "eye_controls.py",
+      "source_sha256": "ffd8e0218141fd613e5eb3534db939c2786afc5f0f10d5618ab64120c3fb23e9"
+    },
+    {
+      "relative_path": "__pycache__/eye_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\eye_ui.cpython-313.pyc",
+      "sha256": "fc7a98db7e534e6d9f89ab2132153e181d656584150b6fcf25031415407f2196",
+      "bytes": 7866,
+      "source_relative_path": "eye_ui.py",
+      "source_sha256": "346f3c4a6f7067844124ab5d5891bfe84493f6c5e91523648c8f5a904da13001"
+    },
+    {
+      "relative_path": "__pycache__/finger_bank.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_bank.cpython-313.pyc",
+      "sha256": "fca1826bd5bf7e1d2e4a9c429154e0745b2b92004501b9071c0e9e3bd38a1f78",
+      "bytes": 79432,
+      "source_relative_path": "finger_bank.py",
+      "source_sha256": "3f8e5e452c50bd87b61500ec337913c0d909d4168d2830d5defbdd2206774c92"
+    },
+    {
+      "relative_path": "__pycache__/finger_bank_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_bank_ui.cpython-313.pyc",
+      "sha256": "aaaf20c004d04472f6458838b7ca25a4c4f195f634959ab12457c5b84299eb17",
+      "bytes": 15254,
+      "source_relative_path": "finger_bank_ui.py",
+      "source_sha256": "9f6033db46f68e8e214d9f9836c63773b36bdb56efeacb16088ea10a6f3fece2"
+    },
+    {
+      "relative_path": "__pycache__/finger_bone_mirror.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_bone_mirror.cpython-313.pyc",
+      "sha256": "634b37da39d9327d8a2adb1c48f6682a5f00c8c42dfec88e0e3bcee9d56b71b4",
+      "bytes": 15188,
+      "source_relative_path": "finger_bone_mirror.py",
+      "source_sha256": "3956599bac6762f5088d6a92dd7465ec65b63d938f414272c9e8a1458b314fc3"
+    },
+    {
+      "relative_path": "__pycache__/finger_bone_tools.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_bone_tools.cpython-313.pyc",
+      "sha256": "6686349b1b25b93fa12c601756955c0d2ea0cd02a0114c1603203763fa703502",
+      "bytes": 30451,
+      "source_relative_path": "finger_bone_tools.py",
+      "source_sha256": "8f9a8d95511a4b8714b6e20645e07da49fba161be56ac574c35fc81dcb193b8a"
+    },
+    {
+      "relative_path": "__pycache__/finger_bones.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_bones.cpython-313.pyc",
+      "sha256": "632f93657590fe5ec4e83e211ab58f6d6a299f1e3f9b8da9428f617636d82ab6",
+      "bytes": 31464,
+      "source_relative_path": "finger_bones.py",
+      "source_sha256": "fd8f4e7e78364c789f2f8fbaf7fb72c2035e79f3f04ba9a7e152402f151a4613"
+    },
+    {
+      "relative_path": "__pycache__/finger_chain.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_chain.cpython-313.pyc",
+      "sha256": "e9bedf90003e843b0d2c8a743850b609cba686cd5d7f6c7c8be13100cea272a8",
+      "bytes": 39589,
+      "source_relative_path": "finger_chain.py",
+      "source_sha256": "ffc27af7094d5c91f6be86ae365e52ec541587cd2e15dd81fc79367dc3228d6f"
+    },
+    {
+      "relative_path": "__pycache__/finger_definition.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_definition.cpython-313.pyc",
+      "sha256": "55bd4988f7aa4d31ee98b5a670c45e837f58a9bd6f01fdba039c76cabd76238e",
+      "bytes": 52264,
+      "source_relative_path": "finger_definition.py",
+      "source_sha256": "a0ab9878dbfda35bf4db22d2af422b07b6b4830c809c53b392f51e71974365f6"
+    },
+    {
+      "relative_path": "__pycache__/finger_definition_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_definition_ui.cpython-313.pyc",
+      "sha256": "bf67ad284ea5d41ec30be2a06334d1c90ee78604b91acaf977e7688f79176a42",
+      "bytes": 37114,
+      "source_relative_path": "finger_definition_ui.py",
+      "source_sha256": "627435ee5bbe804b7cae3261533c9c5b64647c2a1b2e78800c78291b27c0c4d7"
+    },
+    {
+      "relative_path": "__pycache__/finger_detect.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_detect.cpython-313.pyc",
+      "sha256": "076e5f00e67e1fa515480710e7c5c231f4debebfe3b6ed4e625de1d79933a46b",
+      "bytes": 19047,
+      "source_relative_path": "finger_detect.py",
+      "source_sha256": "a984c6524b4478ef1ac53247a58df81b452d338263c1d0d9b3a3208e1071171a"
+    },
+    {
+      "relative_path": "__pycache__/finger_flex.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_flex.cpython-313.pyc",
+      "sha256": "5a519bac9e009256997630a551bdd6cfacee0a7c5616fd79ced71e0fcda004f9",
+      "bytes": 40512,
+      "source_relative_path": "finger_flex.py",
+      "source_sha256": "ec4fdc0016b98bcc2ccd909124ddfe1de68259df77f51191faa6896741d88371"
+    },
+    {
+      "relative_path": "__pycache__/finger_internal.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_internal.cpython-313.pyc",
+      "sha256": "dce2df9d52c98fcf48fbca544f8df0f2558fb2293caca73f0d604c2472321a7e",
+      "bytes": 24771,
+      "source_relative_path": "finger_internal.py",
+      "source_sha256": "41d6ca40522608da8931153e65f511a0b25014901529e252126bdbca69e67b40"
+    },
+    {
+      "relative_path": "__pycache__/finger_loop_marks.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_loop_marks.cpython-313.pyc",
+      "sha256": "aa8976379eac46fc317fa250cb9c4cedf5415ddb8db6f0b6134852ab4484293a",
+      "bytes": 58079,
+      "source_relative_path": "finger_loop_marks.py",
+      "source_sha256": "5b7938a05dd988da93f084284634716e41dc6cac486fc8f914c4cd763a8c851d"
+    },
+    {
+      "relative_path": "__pycache__/finger_loop_marks_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_loop_marks_ui.cpython-313.pyc",
+      "sha256": "6d52fa75a81f1d0f2a3dd68f22ef8a38c2ef302580515c77f1699ef5b5673719",
+      "bytes": 16317,
+      "source_relative_path": "finger_loop_marks_ui.py",
+      "source_sha256": "1c6af2c6c2eb60e953a5035fc7e2e5dfad2b8d3fc6f2194dfa86eb15c7f61f45"
+    },
+    {
+      "relative_path": "__pycache__/finger_preview_cache.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_preview_cache.cpython-313.pyc",
+      "sha256": "da23b553da8066e0ae2a4c35de73caefaa5330e02481172a596371151aee9171",
+      "bytes": 5961,
+      "source_relative_path": "finger_preview_cache.py",
+      "source_sha256": "5a8646babddf10a7af64e8beb9ef07fe6af079dafd11b358ae3f6edfd3379d4f"
+    },
+    {
+      "relative_path": "__pycache__/finger_range.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_range.cpython-313.pyc",
+      "sha256": "cf6ff3a17b15fe09dfa42e81ed7355abb8781114e88472a752ac912ac8a4a626",
+      "bytes": 22450,
+      "source_relative_path": "finger_range.py",
+      "source_sha256": "d00ab689a67c02d9bc2e186583f92f298ce0b7a3ce200a444d44a7910e7e0a5d"
+    },
+    {
+      "relative_path": "__pycache__/finger_root.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_root.cpython-313.pyc",
+      "sha256": "289ad1dc43229e4c3e99e8002bd9f9c51624b8efbafdac2fdbc240c92fd63831",
+      "bytes": 37159,
+      "source_relative_path": "finger_root.py",
+      "source_sha256": "1414ca6cb5424e1721220a62007bb3516af43fdeb77b1c27577ee589d786f83e"
+    },
+    {
+      "relative_path": "__pycache__/finger_symmetry.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_symmetry.cpython-313.pyc",
+      "sha256": "f1dd7f2cf9e8223a2dcff1e79c8aab6de5bdc54bf40edcdc06fc49c98ab9e268",
+      "bytes": 7725,
+      "source_relative_path": "finger_symmetry.py",
+      "source_sha256": "afdac9c0d905adf6d7d0e682dadbed8d1f4f75b4dabca87aa0a079c64cea834a"
+    },
+    {
+      "relative_path": "__pycache__/finger_targets.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\finger_targets.cpython-313.pyc",
+      "sha256": "b2ab77b0abff1dae70431d86b778a57abf8dcc7fc3479ea3f96ed7aba2ede17d",
+      "bytes": 30449,
+      "source_relative_path": "finger_targets.py",
+      "source_sha256": "49d235e618bde9cac87231cd92e5b033391087d39e7938976bef503063582785"
+    },
+    {
+      "relative_path": "__pycache__/foot_controls.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\foot_controls.cpython-313.pyc",
+      "sha256": "18b6df5e1acc22d9c16ea94cb1af207a1713f9e22886c58e2bc9c8aebd27f214",
+      "bytes": 101617,
+      "source_relative_path": "foot_controls.py",
+      "source_sha256": "ecce547b474cd3c41f6f414136708be9d0f21a0af3eaa660689352a4635e4e5f"
+    },
+    {
+      "relative_path": "__pycache__/forearm_original_inventory.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_original_inventory.cpython-313.pyc",
+      "sha256": "3dfb5d47af0069a5dae18b1fdf85e1427f69276e92b49459b45d3c0a2eba726e",
+      "bytes": 7488,
+      "source_relative_path": "forearm_original_inventory.py",
+      "source_sha256": "28a86885c5cba5579cd054a41d27933787f33ec0d19cf452f4a858da4ca069ac"
+    },
+    {
+      "relative_path": "__pycache__/forearm_twist.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_twist.cpython-313.pyc",
+      "sha256": "8f66372f37c7b14561012a2ce7d773679a37a668bc880768fcde6f7ed7304a23",
+      "bytes": 131260,
+      "source_relative_path": "forearm_twist.py",
+      "source_sha256": "e8403be47320e95b7b40955e79b89d27e4ac7e39f3565f3fe7cabfe529a2cb14"
+    },
+    {
+      "relative_path": "__pycache__/forearm_twist_cache.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_twist_cache.cpython-313.pyc",
+      "sha256": "3f728827a18bb87e9f58ccdec45acca78a8ff30f79170aa8bfe676200ff2e516",
+      "bytes": 6949,
+      "source_relative_path": "forearm_twist_cache.py",
+      "source_sha256": "dead8b61993a7dbc9962532e91bd2822d38702e4306c41f97141e582ef6805c6"
+    },
+    {
+      "relative_path": "__pycache__/forearm_twist_edit.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_twist_edit.cpython-313.pyc",
+      "sha256": "ee05cbbf1e5b16bd5358baec3752709f0dee84e4e9aaeefd77f16e91c213b5b0",
+      "bytes": 32490,
+      "source_relative_path": "forearm_twist_edit.py",
+      "source_sha256": "b33c4141e2f60231e53b3359ee205d20195d0a8b3ca3b24e5da0b8e1adcf976d"
+    },
+    {
+      "relative_path": "__pycache__/forearm_twist_math.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_twist_math.cpython-313.pyc",
+      "sha256": "7b29e4a8fbdcb56ec60e2d30f62cae78c4478b20207ca2d0b23ac118ef4bf380",
+      "bytes": 16715,
+      "source_relative_path": "forearm_twist_math.py",
+      "source_sha256": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421"
+    },
+    {
+      "relative_path": "__pycache__/forearm_twist_profile.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_twist_profile.cpython-313.pyc",
+      "sha256": "d9952b6cd34296c44ab79fa85684baab60c11355ba5571f537886281825068d8",
+      "bytes": 13475,
+      "source_relative_path": "forearm_twist_profile.py",
+      "source_sha256": "71f9c61af778bb26bddbb23ef334a8dd1a39928a84c5e8fea3145ffc5d1ff947"
+    },
+    {
+      "relative_path": "__pycache__/forearm_twist_symmetry.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_twist_symmetry.cpython-313.pyc",
+      "sha256": "1b014dc21723b3a66f0865c75a292fdadffefe792bf9b772072cc3894f8e0159",
+      "bytes": 15908,
+      "source_relative_path": "forearm_twist_symmetry.py",
+      "source_sha256": "620c7b85ca2352caa5d0391162657ff1f5564d1d57ed0cd6ff34f8105703b6f3"
+    },
+    {
+      "relative_path": "__pycache__/forearm_twist_topology.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\forearm_twist_topology.cpython-313.pyc",
+      "sha256": "75147af232bc3f4bf76a3701d04f01c5375bb91d3cb7d7cf073c1068412667d9",
+      "bytes": 34044,
+      "source_relative_path": "forearm_twist_topology.py",
+      "source_sha256": "91a574cd7f688670c6c0601a19785d76f75595b22609368744c2d4eb6db12c10"
+    },
+    {
+      "relative_path": "__pycache__/generated_names.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\generated_names.cpython-313.pyc",
+      "sha256": "d57f78a4d2d5711060fc3c5f6a1351e589cca260df09758fe4500a642fdedbd8",
+      "bytes": 23492,
+      "source_relative_path": "generated_names.py",
+      "source_sha256": "a1c49790c61c31e915de15b1a4baa76c75be2b490a6d771eca179921fda4d931"
+    },
+    {
+      "relative_path": "__pycache__/hair_bones.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_bones.cpython-313.pyc",
+      "sha256": "4818b0703ca1aafdb586e47f0748077643ea248ebd12449ba9bda1295c8cecea",
+      "bytes": 20724,
+      "source_relative_path": "hair_bones.py",
+      "source_sha256": "bb0c1e43ac592ac0e7b59df42411cf19ed4ed5f650851fdd7b6eef4f3fd60852"
+    },
+    {
+      "relative_path": "__pycache__/hair_bones_rig.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_bones_rig.cpython-313.pyc",
+      "sha256": "0e3ab00eff2ba3c485834436b9d8bab0c468b01aaee7db159292728db590b0c7",
+      "bytes": 71097,
+      "source_relative_path": "hair_bones_rig.py",
+      "source_sha256": "e0fed1d3c6fbdedb4cf8254f265f0f570323fbc74491ed8b90629147274564fe"
+    },
+    {
+      "relative_path": "__pycache__/hair_bones_topology.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_bones_topology.cpython-313.pyc",
+      "sha256": "9adc37d926c5f2c976f601deec98fb21efb44f136a99d272849eac8284cc347d",
+      "bytes": 44219,
+      "source_relative_path": "hair_bones_topology.py",
+      "source_sha256": "8973b7fbdd709641bc1272c49b750dbdce571141ba640ebf137a4f189520228a"
+    },
+    {
+      "relative_path": "__pycache__/hair_motion_lifecycle.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_motion_lifecycle.cpython-313.pyc",
+      "sha256": "9fc8f77ba939a1b66aa95a9fb53931cc33516b25ffda3b311956a3c8e26ea750",
+      "bytes": 19792,
+      "source_relative_path": "hair_motion_lifecycle.py",
+      "source_sha256": "efade4de4db2a3ea4c6568837f80b7f93d132eb3268c4dee4996a6a66914abc8"
+    },
+    {
+      "relative_path": "__pycache__/hair_motion_profiles.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_motion_profiles.cpython-313.pyc",
+      "sha256": "0e512d53fc3e3280c6a61ad067ce5f9c5674709453d1d5e08b62c72f6a1a5e16",
+      "bytes": 23893,
+      "source_relative_path": "hair_motion_profiles.py",
+      "source_sha256": "1aaa883693db6bfd53d9459b24f14f98d5afb9247ee0abd51e59af5bce83cc4d"
+    },
+    {
+      "relative_path": "__pycache__/hair_motion_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_motion_ui.cpython-313.pyc",
+      "sha256": "641f68bb33a9d87b81cd6214594564895107834c9db43576ea43d2a6453fa132",
+      "bytes": 27488,
+      "source_relative_path": "hair_motion_ui.py",
+      "source_sha256": "4ea527ddcfb53f9f4c3cee187227f7403b28b1753f574a3e599bc7605a3daf16"
+    },
+    {
+      "relative_path": "__pycache__/hair_strand_registry.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_strand_registry.cpython-313.pyc",
+      "sha256": "9f1a6fb7b8c600ed1baad4c6c6b427533c9c6ad7dccc38cd861e7abdb53438a8",
+      "bytes": 61692,
+      "source_relative_path": "hair_strand_registry.py",
+      "source_sha256": "a6c6a03e8f4eebeff9349bc44fb0474e4df2d3feb4d5c5a6e7fb4c609239fe2d"
+    },
+    {
+      "relative_path": "__pycache__/hair_wiggle_adapter.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\hair_wiggle_adapter.cpython-313.pyc",
+      "sha256": "dc8faa53452fd58da617ee88c21d064b7c155f362ec0de360e26b09f228b8511",
+      "bytes": 57438,
+      "source_relative_path": "hair_wiggle_adapter.py",
+      "source_sha256": "318f160c97495fa8d295d4f5c8dd1374da44de6571f1289234acc6570bab36fa"
+    },
+    {
+      "relative_path": "__pycache__/limb_fk_visuals.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\limb_fk_visuals.cpython-313.pyc",
+      "sha256": "939b419b14bccf3cc7929f21f837bb06c9a6ac0f4f21185bf89f41cdabec25f1",
+      "bytes": 37693,
+      "source_relative_path": "limb_fk_visuals.py",
+      "source_sha256": "228fbdcc2bd8226a9e2d871a25aff8d86df558098b2dcebba28c7a6ffbd405d6"
+    },
+    {
+      "relative_path": "__pycache__/limb_ik.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\limb_ik.cpython-313.pyc",
+      "sha256": "5dd35559bf1dfcb170740360510db48f05575c980ce9ffadc70eefe8f5d8d851",
+      "bytes": 543348,
+      "source_relative_path": "limb_ik.py",
+      "source_sha256": "68aabcbfcc7010d0b94f096b935c6065f0099e809ad39253abece168453dfcfc"
+    },
+    {
+      "relative_path": "__pycache__/limb_ik_fk.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\limb_ik_fk.cpython-313.pyc",
+      "sha256": "afce266fac8a250106b0a1ce99e9553b9271e455a96627ee8337ff80bebebfeb",
+      "bytes": 65527,
+      "source_relative_path": "limb_ik_fk.py",
+      "source_sha256": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c"
+    },
+    {
+      "relative_path": "__pycache__/limb_ik_fk_batch.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\limb_ik_fk_batch.cpython-313.pyc",
+      "sha256": "862d768869be51b1085f96888c72766b65f4e76e70b9704b5fe59cef0afe0dcb",
+      "bytes": 23848,
+      "source_relative_path": "limb_ik_fk_batch.py",
+      "source_sha256": "4e55f888471ffeb13aa69fe6d444772e08fdbe36c04ca51d48e2ee7deb671669"
+    },
+    {
+      "relative_path": "__pycache__/mesh_mirror.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\mesh_mirror.cpython-313.pyc",
+      "sha256": "40d4e5809d25190f715e7ea827cf8558a312e885e21dadcc1f4af42bbe7896e4",
+      "bytes": 68046,
+      "source_relative_path": "mesh_mirror.py",
+      "source_sha256": "8af288a9a72612a13a3e335397fd1e733173f5632dcc0788eaf384fdd3ef0977"
+    },
+    {
+      "relative_path": "__pycache__/mesh_mirror_match.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\mesh_mirror_match.cpython-313.pyc",
+      "sha256": "16c9d2ad48e1c411f6dd0323c5f6c817e750513474ec3645304ec206c5fcb987",
+      "bytes": 17988,
+      "source_relative_path": "mesh_mirror_match.py",
+      "source_sha256": "36cdab15d711cb050a2f595b41419856fab6ac97fb3ba2e48b5de651481bcee5"
+    },
+    {
+      "relative_path": "__pycache__/mesh_mirror_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\mesh_mirror_ui.cpython-313.pyc",
+      "sha256": "b5387f2769af56eb7e3a1c0d840b0625d283990096e3d7f3536a65e7cf7aa6d6",
+      "bytes": 32979,
+      "source_relative_path": "mesh_mirror_ui.py",
+      "source_sha256": "76c61eacc8823e2f5f0d26a7833dc17afc27cf0e13bb9fcfaabb11c89e1f1d49"
+    },
+    {
+      "relative_path": "__pycache__/native_symmetry_pairs.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\native_symmetry_pairs.cpython-313.pyc",
+      "sha256": "9a9b31667819d745c37d42c4ea7cbf18bb9d74603afee2d6e5bfa37006735188",
+      "bytes": 20067,
+      "source_relative_path": "native_symmetry_pairs.py",
+      "source_sha256": "afcd0c270be48d24f9aef910720dce761d910f76ce2651176d633fd6614f98ec"
+    },
+    {
+      "relative_path": "__pycache__/reference_views.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\reference_views.cpython-313.pyc",
+      "sha256": "34865efc9bbd0e1d3b33f2599554847c31ad2607ece3fc4501dbfac22464a339",
+      "bytes": 72914,
+      "source_relative_path": "reference_views.py",
+      "source_sha256": "abe79849f92e0a5ed86812bedc323aa2d71b830af4807a075c683322a86e94e8"
+    },
+    {
+      "relative_path": "__pycache__/refine_symmetry.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\refine_symmetry.cpython-313.pyc",
+      "sha256": "22a65dac8935bdf939403273f93394dbbf06c455a783b4c1df0d397eba53b4f6",
+      "bytes": 37881,
+      "source_relative_path": "refine_symmetry.py",
+      "source_sha256": "46c6f90fd7d0e3c97924f9b4dc111dcf18d4c82799443d4873609fc3df397a7f"
+    },
+    {
+      "relative_path": "__pycache__/refine_symmetry_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\refine_symmetry_ui.cpython-313.pyc",
+      "sha256": "927f12ca43f39c461d733e08fb47246ab131886c0697a38a98e23be1236dde23",
+      "bytes": 27267,
+      "source_relative_path": "refine_symmetry_ui.py",
+      "source_sha256": "2cea4f60360e07c2f4c313e6234cd28075e224851df57cccf590e71d6f1cfd42"
+    },
+    {
+      "relative_path": "__pycache__/root_control.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\root_control.cpython-313.pyc",
+      "sha256": "0d8d7b27c3df0ebc1f81f15665a73b7cead3b6daee76a195049b2d373a1017de",
+      "bytes": 52569,
+      "source_relative_path": "root_control.py",
+      "source_sha256": "3474e8e9aebd4fd1e07c7fb0dd221f46cc00dba15d7b6d9795217d185beda1d2"
+    },
+    {
+      "relative_path": "__pycache__/selected_bone_weights.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\selected_bone_weights.cpython-313.pyc",
+      "sha256": "beb342a4062e2f52cf7971f3246fe154a0f061836897f90848b5f09a3f08883b",
+      "bytes": 67635,
+      "source_relative_path": "selected_bone_weights.py",
+      "source_sha256": "0f9e3d1498a4414d00c49e9903a9d6b31707260ff1eaf23850dea915c028248a"
+    },
+    {
+      "relative_path": "__pycache__/shape_key_tools.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\shape_key_tools.cpython-313.pyc",
+      "sha256": "f729b198328d4e877d1280077ef6959dc8ee08a2bd6e8eb00e68c8f11daf0491",
+      "bytes": 28223,
+      "source_relative_path": "shape_key_tools.py",
+      "source_sha256": "366a6de1fe55ea5f1d46c57e1227c4f6f250705214869dd64ac7a05639ba8811"
+    },
+    {
+      "relative_path": "__pycache__/skirt.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\skirt.cpython-313.pyc",
+      "sha256": "257415e7fa5eb6a6720ab0c30ca61c7f64339968abc5e9e00bbc23a20a6d6991",
+      "bytes": 55378,
+      "source_relative_path": "skirt.py",
+      "source_sha256": "f2148e1bfcf5534c04b0df7f4e71018a39cdf23d22d020ad919cbd68f91e81ff"
+    },
+    {
+      "relative_path": "__pycache__/skirt_original_mode.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\skirt_original_mode.cpython-313.pyc",
+      "sha256": "917a3a05eef9457bd6af4d62e8c98539dcdb4a033b23dca068836613786b428a",
+      "bytes": 35793,
+      "source_relative_path": "skirt_original_mode.py",
+      "source_sha256": "25924ad231008f3ddd594d65a2912554a14d3da452fbf93eb9aa7fdbdb20a929"
+    },
+    {
+      "relative_path": "__pycache__/skirt_rig.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\skirt_rig.cpython-313.pyc",
+      "sha256": "d9270adf3012f2b1b76a277a9eba4289f7fe3b4f934b117d80d7204fb78ec534",
+      "bytes": 74763,
+      "source_relative_path": "skirt_rig.py",
+      "source_sha256": "f4efa7d31fa707a3c699bb9097ac35f4d401808b41195bd24c3ff9381bf4c3df"
+    },
+    {
+      "relative_path": "__pycache__/skirt_topology.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\skirt_topology.cpython-313.pyc",
+      "sha256": "81913021e8a8d9536038d8e702f793b2f121568178f1a59949ce3fd7ab68c6d7",
+      "bytes": 27957,
+      "source_relative_path": "skirt_topology.py",
+      "source_sha256": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e"
+    },
+    {
+      "relative_path": "__pycache__/skirt_wiggle.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\skirt_wiggle.cpython-313.pyc",
+      "sha256": "91992bd0b4fe501c96c70901c7bba576cb6af303735746b40395d6c89de662a9",
+      "bytes": 64975,
+      "source_relative_path": "skirt_wiggle.py",
+      "source_sha256": "c8ec45787cf1df904a5e7f60216df07456c9bd05e3dd92c3d308fc32c7faec49"
+    },
+    {
+      "relative_path": "__pycache__/skirt_wiggle_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\skirt_wiggle_ui.cpython-313.pyc",
+      "sha256": "fa4f76c0d9ae85537a9fe14974d44fdce8d1dc64d6ad24185622139c03b3b452",
+      "bytes": 18834,
+      "source_relative_path": "skirt_wiggle_ui.py",
+      "source_sha256": "f47329a18631fc80463f64503b660b21043a1c0869ab0864aaa9db47c5e249ca"
+    },
+    {
+      "relative_path": "__pycache__/spine_ik_fk.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\spine_ik_fk.cpython-313.pyc",
+      "sha256": "eea39d4803792e83a1422c4e90c99fc815b7a8eb128cacc15b4715036018337b",
+      "bytes": 59220,
+      "source_relative_path": "spine_ik_fk.py",
+      "source_sha256": "1a05db4e718e6e6251a50253c568b157c0cd350808c908034c7cd0702543eecf"
+    },
+    {
+      "relative_path": "__pycache__/spline_ik_setup.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\spline_ik_setup.cpython-313.pyc",
+      "sha256": "c34e6520c17693eaea893d79c62697694ddc7751afc9621de21329600e665fb5",
+      "bytes": 196664,
+      "source_relative_path": "spline_ik_setup.py",
+      "source_sha256": "92f463ef5fe0eccc768fc71b57f9ba3cbfde86c3a444866bb9e68361a0ad9695"
+    },
+    {
+      "relative_path": "__pycache__/symmetry_pairs.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\symmetry_pairs.cpython-313.pyc",
+      "sha256": "33bcf04909de2e9938f846f64c66946e73c0cc1622639aaac2fae3dd4cada0a2",
+      "bytes": 30982,
+      "source_relative_path": "symmetry_pairs.py",
+      "source_sha256": "d3cdc6c6b333a3581ff8faafa41abcbd3778e1ff3c030d2e7b6e853a2d64967d"
+    },
+    {
+      "relative_path": "__pycache__/topology_symmetry.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\topology_symmetry.cpython-313.pyc",
+      "sha256": "84c580841d1e2f44d54e76e1f61b839400a6d99d2d50b3eb902217e64fbb1f6c",
+      "bytes": 90631,
+      "source_relative_path": "topology_symmetry.py",
+      "source_sha256": "b982af6d6f2bf840a6f25fb7b7f574ae0697abbde750e7c7806734b0b2988539"
+    },
+    {
+      "relative_path": "__pycache__/torso_controls.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\torso_controls.cpython-313.pyc",
+      "sha256": "f2f0dd5361ffaaa64ddcf3fedafe57671283729dc8fefcf22803ca34fedf6e12",
+      "bytes": 38721,
+      "source_relative_path": "torso_controls.py",
+      "source_sha256": "491f114f1fbd15aa29917736c061adc5f7a198e9b791ae5d5e0f2b6ba2078180"
+    },
+    {
+      "relative_path": "__pycache__/torso_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\torso_ui.cpython-313.pyc",
+      "sha256": "7bcd163ae7a5c74649a78dd029eb9a10f74ef94d2a958728a6c66d8551e36b42",
+      "bytes": 12572,
+      "source_relative_path": "torso_ui.py",
+      "source_sha256": "5daf8f5fb65fb99aa94eaadd3487bbe4bd400908d9780bbcdfcf6897dc915835"
+    },
+    {
+      "relative_path": "__pycache__/ui_constants.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\ui_constants.cpython-313.pyc",
+      "sha256": "238ae406b555ee86454143a35a039ac8c51c8668387ffd4dcb7941aa8e38660e",
+      "bytes": 2871,
+      "source_relative_path": "ui_constants.py",
+      "source_sha256": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e"
+    },
+    {
+      "relative_path": "__pycache__/unity_animation.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_animation.cpython-313.pyc",
+      "sha256": "882910010885d17f7ce5dee5b753404ed092ddcabd6d0b133d32fff063ad0629",
+      "bytes": 62625,
+      "source_relative_path": "unity_animation.py",
+      "source_sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d"
+    },
+    {
+      "relative_path": "__pycache__/unity_animation_controls.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_animation_controls.cpython-313.pyc",
+      "sha256": "ce59421671469dcfdbbb1865e7f63e67357671054bb1487cbf78b103b1d9ab3b",
+      "bytes": 26778,
+      "source_relative_path": "unity_animation_controls.py",
+      "source_sha256": "acf81b37e8d89bdaff0a04b8a3a2a244584e6b5d5551c58efb1946b1ece5b3c7"
+    },
+    {
+      "relative_path": "__pycache__/unity_animation_dress.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_animation_dress.cpython-313.pyc",
+      "sha256": "5133ce2d9af63003b1d303d7d760a3e7a5ee37c2a8ec421c8ba4402cd46e9b60",
+      "bytes": 29854,
+      "source_relative_path": "unity_animation_dress.py",
+      "source_sha256": "ecc966ed59063d0514b81da8ebe3031962db6a0fb6e2515da4350f7916deeae6"
+    },
+    {
+      "relative_path": "__pycache__/unity_export.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_export.cpython-313.pyc",
+      "sha256": "2043d43b3c09911b5d9b2aac4c8b1666fd14103187e0c252a634280cb80c1a79",
+      "bytes": 40835,
+      "source_relative_path": "unity_export.py",
+      "source_sha256": "c437a269dfb128a1ed0edc7ae6a3bfd4e548109e44c05a220e2231258c7e20ed"
+    },
+    {
+      "relative_path": "__pycache__/unity_export_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_export_ui.cpython-313.pyc",
+      "sha256": "0391857f787c9f84e2b06048d7de3e83d2a3909ee2edc6171bf9186b6a21a3e0",
+      "bytes": 53812,
+      "source_relative_path": "unity_export_ui.py",
+      "source_sha256": "940086354a5c0ed33502c70b54391e79065317df72debb0cecfe6ff130f78e34"
+    },
+    {
+      "relative_path": "__pycache__/unity_export_worker.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_export_worker.cpython-313.pyc",
+      "sha256": "44556ddb2073bed30cc708d3af9a5fdf4ae515cb60c35dcb4961bd3b253597e5",
+      "bytes": 72946,
+      "source_relative_path": "unity_export_worker.py",
+      "source_sha256": "ade4b7627365371877c76d03edcde1229148671c1e7dfdcfe7f64d708f628622"
+    },
+    {
+      "relative_path": "__pycache__/unity_material_match.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_material_match.cpython-313.pyc",
+      "sha256": "ec2082a24c1c1b17cff4d339f9b87e3afa2e8fb044f1949457cc0d70c9608a92",
+      "bytes": 17589,
+      "source_relative_path": "unity_material_match.py",
+      "source_sha256": "e0376f1fb068e2f743ee110ddab17e71f0aad4b351833b6dd3374963685f3419"
+    },
+    {
+      "relative_path": "__pycache__/unity_material_match_ui.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\unity_material_match_ui.cpython-313.pyc",
+      "sha256": "5c957814be5c0de977f917037fd9b8e9d400a7b55ec19aaa7b0ff76ae6ce717c",
+      "bytes": 17827,
+      "source_relative_path": "unity_material_match_ui.py",
+      "source_sha256": "12221d372c449b670c24fc9fa39928fef7fa4ec3fe60934dddeb0d3e5962b0a5"
+    },
+    {
+      "relative_path": "__pycache__/weight_symmetry.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\weight_symmetry.cpython-313.pyc",
+      "sha256": "f42d8dc49ffdb6c3dbe868eeeec34d248f5374fa269f002ae930d02d5f07160d",
+      "bytes": 82957,
+      "source_relative_path": "weight_symmetry.py",
+      "source_sha256": "06409a3fff8d7db9e0ad778299da5196f48a68ae107d92537c60c34db79e0e8c"
+    },
+    {
+      "relative_path": "__pycache__/widget_collections.cpython-313.pyc",
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\__pycache__\\widget_collections.cpython-313.pyc",
+      "sha256": "f57200bd9e6cd349c5bdd08cd8f9146298a50ef75175d81626e61592cc050525",
+      "bytes": 21274,
+      "source_relative_path": "widget_collections.py",
+      "source_sha256": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18"
+    }
+  ],
+  "observed_context": "Root/Parent report these caches were left by actual prior n11 Blender execution. This SOURCE receipt observes file bytes and exact source-leaf name association; it does not execute or prove semantic equivalence of bytecode. They are not copied into new projections or executed by the SOURCE builder.",
+  "admission_scope": "Only these exact observed cache names/hashes in OLD runtime_draft_10; all pinned source leaves still mandatory; all other old/new projection extras reject."
+}

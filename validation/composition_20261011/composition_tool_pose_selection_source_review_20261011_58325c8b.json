@@ -1,0 +1,735 @@
+{
+  "schema": "x.validation.character-composition-tool-pose-selection-source-review/1",
+  "createdUtc": "2026-10-11T02:50:15.893773+00:00",
+  "reviewer": "/root/export_scale_review",
+  "status": "READY_SOURCE_ONLY",
+  "scope": "Independent read-only source/hash/AST review of three narrow tool compatibility updates against immutable tools_headful_03. No native acceptance or executable fixture approval.",
+  "modules": {
+    "composition_timing_acceptance": {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_timing_acceptance.py",
+        "sha256": "46bf23b458b94ffd95994b4601cf38db9d493cb76e6a45bc987edeb2c1654519",
+        "bytes": 40590
+      },
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+        "sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+        "bytes": 40700
+      },
+      "addedFunctions": [],
+      "removedFunctions": [],
+      "changedFunctions": [
+        "_author_loop"
+      ],
+      "unchangedFunctions": [
+        "_assert_moving",
+        "_assert_strip_clocks",
+        "_compare",
+        "_input_values",
+        "_isolated_a_samples",
+        "_isolated_samples",
+        "_max_error",
+        "_modules",
+        "_numeric_proof",
+        "_open",
+        "_pose",
+        "_published_hold",
+        "_raw_timing",
+        "_reset_clone",
+        "_row",
+        "_sealed_clocks",
+        "_sealed_loop",
+        "_sealed_raise",
+        "_sha",
+        "_write",
+        "a_clock",
+        "author_hold_loop",
+        "b_clock",
+        "measure_registered_raise",
+        "require",
+        "run",
+        "validate_author_config",
+        "validate_config"
+      ],
+      "unchangedFunctionCount": 28,
+      "unchangedFunctionAstProofs": {
+        "_assert_moving": {
+          "baseline_sha256": "61630c5ff3f05b8e18c257cd59fcdab787bf88d8e0cd240c337b18e068dc7771",
+          "current_sha256": "61630c5ff3f05b8e18c257cd59fcdab787bf88d8e0cd240c337b18e068dc7771",
+          "equal": true,
+          "current_lines": [
+            179,
+            186
+          ]
+        },
+        "_assert_strip_clocks": {
+          "baseline_sha256": "aad33eb499854a2320e402d5d86e56ed555e1af024a74a88209b076d090251e2",
+          "current_sha256": "aad33eb499854a2320e402d5d86e56ed555e1af024a74a88209b076d090251e2",
+          "equal": true,
+          "current_lines": [
+            405,
+            437
+          ]
+        },
+        "_compare": {
+          "baseline_sha256": "9b7e5919cc5c931ac50d3ae60ae028b98e608b4b66be1da4fa2df186e30350a2",
+          "current_sha256": "9b7e5919cc5c931ac50d3ae60ae028b98e608b4b66be1da4fa2df186e30350a2",
+          "equal": true,
+          "current_lines": [
+            440,
+            485
+          ]
+        },
+        "_input_values": {
+          "baseline_sha256": "fba49403cfdee101d9e117577d23f01506d3d557720478817316400861fc3606",
+          "current_sha256": "fba49403cfdee101d9e117577d23f01506d3d557720478817316400861fc3606",
+          "equal": true,
+          "current_lines": [
+            167,
+            176
+          ]
+        },
+        "_isolated_a_samples": {
+          "baseline_sha256": "5747c1bb43ec862f867488b526933828abdc162f3d0c9a74ad2cf82311596823",
+          "current_sha256": "5747c1bb43ec862f867488b526933828abdc162f3d0c9a74ad2cf82311596823",
+          "equal": true,
+          "current_lines": [
+            329,
+            362
+          ]
+        },
+        "_isolated_samples": {
+          "baseline_sha256": "bd95f82d423bbe2984f0c1a71806ff336eed31e229651d373af5ce1287a06b55",
+          "current_sha256": "bd95f82d423bbe2984f0c1a71806ff336eed31e229651d373af5ce1287a06b55",
+          "equal": true,
+          "current_lines": [
+            312,
+            326
+          ]
+        },
+        "_max_error": {
+          "baseline_sha256": "23c7bc0e76aa7856049ff552ec432984a321bdedfb4a3a4145d4ac1bb8b8943e",
+          "current_sha256": "23c7bc0e76aa7856049ff552ec432984a321bdedfb4a3a4145d4ac1bb8b8943e",
+          "equal": true,
+          "current_lines": [
+            202,
+            203
+          ]
+        },
+        "_modules": {
+          "baseline_sha256": "a1efdd34ae7a9b4cbaa8264eb4eebffeb564c7f590e1088bbcd107814c7a1fa9",
+          "current_sha256": "a1efdd34ae7a9b4cbaa8264eb4eebffeb564c7f590e1088bbcd107814c7a1fa9",
+          "equal": true,
+          "current_lines": [
+            141,
+            145
+          ]
+        },
+        "_numeric_proof": {
+          "baseline_sha256": "20f88f55cd96ce01f9a79f70e1973e3f3b95978cd63170665aee016edcd03df3",
+          "current_sha256": "20f88f55cd96ce01f9a79f70e1973e3f3b95978cd63170665aee016edcd03df3",
+          "equal": true,
+          "current_lines": [
+            488,
+            495
+          ]
+        },
+        "_open": {
+          "baseline_sha256": "7e6b34c088e12fc7a9ea6c5735644d04248d55c26aa44d34f340c8289e2517b9",
+          "current_sha256": "7e6b34c088e12fc7a9ea6c5735644d04248d55c26aa44d34f340c8289e2517b9",
+          "equal": true,
+          "current_lines": [
+            207,
+            224
+          ]
+        },
+        "_pose": {
+          "baseline_sha256": "896a297eff8655bf6c873a492429a0f36e18b7fb50e994f59c2f24cd03d2705b",
+          "current_sha256": "896a297eff8655bf6c873a492429a0f36e18b7fb50e994f59c2f24cd03d2705b",
+          "equal": true,
+          "current_lines": [
+            189,
+            199
+          ]
+        },
+        "_published_hold": {
+          "baseline_sha256": "6c9f26783fe1a9cde0e8b6ae11a7712c078a371c8c54a11b645cf24b54dc5e17",
+          "current_sha256": "6c9f26783fe1a9cde0e8b6ae11a7712c078a371c8c54a11b645cf24b54dc5e17",
+          "equal": true,
+          "current_lines": [
+            365,
+            402
+          ]
+        },
+        "_raw_timing": {
+          "baseline_sha256": "991f93c12f915cacab67a1b1c2d32dd990be6c95625aaed9f28df4cde2e88df8",
+          "current_sha256": "991f93c12f915cacab67a1b1c2d32dd990be6c95625aaed9f28df4cde2e88df8",
+          "equal": true,
+          "current_lines": [
+            291,
+            302
+          ]
+        },
+        "_reset_clone": {
+          "baseline_sha256": "6fe1425425b2657c1f53457a517e5650fce3628ef4ae53fdabc65e05d724f459",
+          "current_sha256": "6fe1425425b2657c1f53457a517e5650fce3628ef4ae53fdabc65e05d724f459",
+          "equal": true,
+          "current_lines": [
+            305,
+            309
+          ]
+        },
+        "_row": {
+          "baseline_sha256": "39c9b982214d083109113de6fcba5c0b8734848e79638e6ee2c2497d62d79b0a",
+          "current_sha256": "39c9b982214d083109113de6fcba5c0b8734848e79638e6ee2c2497d62d79b0a",
+          "equal": true,
+          "current_lines": [
+            148,
+            164
+          ]
+        },
+        "_sealed_clocks": {
+          "baseline_sha256": "cfdae71fcab94e0eb2590d946944f5e6a8ea7685e8e6397da9fd9f71b8442d0d",
+          "current_sha256": "cfdae71fcab94e0eb2590d946944f5e6a8ea7685e8e6397da9fd9f71b8442d0d",
+          "equal": true,
+          "current_lines": [
+            80,
+            83
+          ]
+        },
+        "_sealed_loop": {
+          "baseline_sha256": "b934a9c0980bb71dcae6af632fb50d4c9f9309cf3a13a2985833034a921d1fcf",
+          "current_sha256": "b934a9c0980bb71dcae6af632fb50d4c9f9309cf3a13a2985833034a921d1fcf",
+          "equal": true,
+          "current_lines": [
+            70,
+            77
+          ]
+        },
+        "_sealed_raise": {
+          "baseline_sha256": "b3b3aca8f9d8451ba44df2d8eb61a3dc9446c712e8535c6d006f9cc6897d88e8",
+          "current_sha256": "b3b3aca8f9d8451ba44df2d8eb61a3dc9446c712e8535c6d006f9cc6897d88e8",
+          "equal": true,
+          "current_lines": [
+            86,
+            92
+          ]
+        },
+        "_sha": {
+          "baseline_sha256": "c902c27ae4936c8d1cff8d06c18ccb979628ba7994ec7a248c8dc839031cf3b1",
+          "current_sha256": "c902c27ae4936c8d1cff8d06c18ccb979628ba7994ec7a248c8dc839031cf3b1",
+          "equal": true,
+          "current_lines": [
+            133,
+            138
+          ]
+        },
+        "_write": {
+          "baseline_sha256": "bd330a40546f08708f4424fc4b5a565a760cadfe63ad1a6d0ca449c60cffa998",
+          "current_sha256": "bd330a40546f08708f4424fc4b5a565a760cadfe63ad1a6d0ca449c60cffa998",
+          "equal": true,
+          "current_lines": [
+            127,
+            130
+          ]
+        },
+        "a_clock": {
+          "baseline_sha256": "1618c5668338af1009e82853ff5b9db87817210491518ef5284c5530e3a02f68",
+          "current_sha256": "1618c5668338af1009e82853ff5b9db87817210491518ef5284c5530e3a02f68",
+          "equal": true,
+          "current_lines": [
+            118,
+            124
+          ]
+        },
+        "author_hold_loop": {
+          "baseline_sha256": "c824940ed7a3ea7fdfef846389b0d96fa088ff72a493ca8cba301cd8c50dfa0d",
+          "current_sha256": "c824940ed7a3ea7fdfef846389b0d96fa088ff72a493ca8cba301cd8c50dfa0d",
+          "equal": true,
+          "current_lines": [
+            498,
+            540
+          ]
+        },
+        "b_clock": {
+          "baseline_sha256": "790ee7c6115b4331cd4dc88b27bbb82033c178a8cb298f992a898c38786d8861",
+          "current_sha256": "790ee7c6115b4331cd4dc88b27bbb82033c178a8cb298f992a898c38786d8861",
+          "equal": true,
+          "current_lines": [
+            95,
+            115
+          ]
+        },
+        "measure_registered_raise": {
+          "baseline_sha256": "690437c78bc126faf36c74c74abdd99a8f990cfb04753c29a7b9e42b7c4d2f44",
+          "current_sha256": "690437c78bc126faf36c74c74abdd99a8f990cfb04753c29a7b9e42b7c4d2f44",
+          "equal": true,
+          "current_lines": [
+            543,
+            551
+          ]
+        },
+        "require": {
+          "baseline_sha256": "77faefdd9bf8850725da1653ed6c7daaf7b95199787d70f75e8d04e416f43256",
+          "current_sha256": "77faefdd9bf8850725da1653ed6c7daaf7b95199787d70f75e8d04e416f43256",
+          "equal": true,
+          "current_lines": [
+            30,
+            32
+          ]
+        },
+        "run": {
+          "baseline_sha256": "fed839ab5a0b81af2b86225ba43e1fa5f36298be58757b3bf6831698aa336e05",
+          "current_sha256": "fed839ab5a0b81af2b86225ba43e1fa5f36298be58757b3bf6831698aa336e05",
+          "equal": true,
+          "current_lines": [
+            554,
+            651
+          ]
+        },
+        "validate_author_config": {
+          "baseline_sha256": "f8775f3cc487dd87945575498555f892d68b521e499ba303a85f83e861ba8e00",
+          "current_sha256": "f8775f3cc487dd87945575498555f892d68b521e499ba303a85f83e861ba8e00",
+          "equal": true,
+          "current_lines": [
+            58,
+            67
+          ]
+        },
+        "validate_config": {
+          "baseline_sha256": "043519b4edc4089c7788589a7fad6ec46900085217f4541d1bd77ca829de34f7",
+          "current_sha256": "043519b4edc4089c7788589a7fad6ec46900085217f4541d1bd77ca829de34f7",
+          "equal": true,
+          "current_lines": [
+            35,
+            55
+          ]
+        }
+      },
+      "nonFunctionTopLevelAstUnchanged": true,
+      "unifiedDiff": "--- D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_timing_acceptance.py\n+++ D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py\n@@ -227,7 +227,7 @@\n def _author_loop(context, row, modules, requested):\n     \"\"\"Three real FK Pose/RNA keys; the packet and sealed DTO are untouched.\"\"\"\n     import bpy\n-    from composition_session_acceptance import _view3d\n+    from composition_session_acceptance import _pose_hidden, _view3d\n     backend, ua = modules['animation_composition'], modules['unity_animation']\n     with _open(context, row, modules) as (session, _item, scope, tracks):\n         before = backend._motion_hash(row.custom_action, row.custom_slot)\n@@ -239,7 +239,7 @@\n             field = ('rotation_quaternion' if bone.rotation_mode == 'QUATERNION' else\n                      'rotation_axis_angle' if bone.rotation_mode == 'AXIS_ANGLE' else 'rotation_euler')\n             path = bone.path_from_id() + '.' + field\n-            if (any(p == path for p, _index in scope.channels) and not bone.bone.hide\n+            if (any(p == path for p, _index in scope.channels) and not _pose_hidden(bone)\n                     and not bone.bone.hide_select and not bone.lock_rotation[0]):\n                 rotation_controls.append((name, field))\n         if requested:\n@@ -254,9 +254,10 @@\n         original = tuple(getattr(row.rig.pose.bones[name], field))\n         keys = []\n         with _view3d(context, row.rig):\n-            for bone in row.rig.data.bones:\n-                bone.select = bone.name == name\n+            selections = [(pb, backend._pose_selection_owner(pb)) for pb in row.rig.pose.bones]\n             row.rig.data.bones.active = row.rig.data.bones[name]\n+            for pb, owner in selections:\n+                owner.select = pb.name == name\n             for fraction in (0., .5, 1.):\n                 raw_frame = start + fraction * (end - start)\n                 scene_frame = row.rig.animation_data.nla_tweak_strip_time_to_scene(raw_frame)\n"
+    },
+    "composition_session_acceptance": {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_session_acceptance.py",
+        "sha256": "fb6fa59eef2930a784061e417eb03608a7e5882e5bc320b71e642cfcac82d07d",
+        "bytes": 48648
+      },
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+        "sha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+        "bytes": 49355
+      },
+      "addedFunctions": [
+        "_pose_hidden"
+      ],
+      "removedFunctions": [],
+      "changedFunctions": [
+        "_positive_a_edit",
+        "_show_control",
+        "_weapon_acceptance_steps",
+        "run_steps"
+      ],
+      "unchangedFunctions": [
+        "_a_only",
+        "_checkpoint",
+        "_current",
+        "_drain",
+        "_error",
+        "_evidence",
+        "_full_stack",
+        "_modules",
+        "_pose",
+        "_require",
+        "_sha",
+        "_view3d",
+        "_weapon_acceptance",
+        "_work_copy",
+        "_write",
+        "checkpoint_state",
+        "run",
+        "visual_guard"
+      ],
+      "unchangedFunctionCount": 18,
+      "unchangedFunctionAstProofs": {
+        "_a_only": {
+          "baseline_sha256": "0a4ae56804ae36fa330ea64d0b378be1d3738c2585c91feff4b1f9cddc202d43",
+          "current_sha256": "0a4ae56804ae36fa330ea64d0b378be1d3738c2585c91feff4b1f9cddc202d43",
+          "equal": true,
+          "current_lines": [
+            88,
+            116
+          ]
+        },
+        "_checkpoint": {
+          "baseline_sha256": "590a581039314d6158939e2b5b438eaf1df00acf17556caa6b048d79c673acda",
+          "current_sha256": "590a581039314d6158939e2b5b438eaf1df00acf17556caa6b048d79c673acda",
+          "equal": true,
+          "current_lines": [
+            235,
+            270
+          ]
+        },
+        "_current": {
+          "baseline_sha256": "99bd5dc12ae2a19157d0fb62f79603027434e11f186d0e9946812a03a5efb14b",
+          "current_sha256": "99bd5dc12ae2a19157d0fb62f79603027434e11f186d0e9946812a03a5efb14b",
+          "equal": true,
+          "current_lines": [
+            51,
+            61
+          ]
+        },
+        "_drain": {
+          "baseline_sha256": "1071c84940241c81b46d4c45a5b27d9cf528b0ea6a289515d64bcc79566a5942",
+          "current_sha256": "1071c84940241c81b46d4c45a5b27d9cf528b0ea6a289515d64bcc79566a5942",
+          "equal": true,
+          "current_lines": [
+            226,
+            232
+          ]
+        },
+        "_error": {
+          "baseline_sha256": "949be0a53ebcc7aa90bee12d4d5864eaa218ad22f355c4e19d75f32916094504",
+          "current_sha256": "949be0a53ebcc7aa90bee12d4d5864eaa218ad22f355c4e19d75f32916094504",
+          "equal": true,
+          "current_lines": [
+            83,
+            85
+          ]
+        },
+        "_evidence": {
+          "baseline_sha256": "a569642aaf38e74a38457b49eaf63e03c281886eac39763cbd683341bd0ae471",
+          "current_sha256": "a569642aaf38e74a38457b49eaf63e03c281886eac39763cbd683341bd0ae471",
+          "equal": true,
+          "current_lines": [
+            31,
+            41
+          ]
+        },
+        "_full_stack": {
+          "baseline_sha256": "07cb5d3a9f84411ff368375da71c9e5b06fff4397934c5ed57860c59c8fa395a",
+          "current_sha256": "07cb5d3a9f84411ff368375da71c9e5b06fff4397934c5ed57860c59c8fa395a",
+          "equal": true,
+          "current_lines": [
+            119,
+            156
+          ]
+        },
+        "_modules": {
+          "baseline_sha256": "04535eeef5098db3c81649e99fa78527fb06c2362cb0ffe5b6bde1102ad59ca9",
+          "current_sha256": "04535eeef5098db3c81649e99fa78527fb06c2362cb0ffe5b6bde1102ad59ca9",
+          "equal": true,
+          "current_lines": [
+            44,
+            48
+          ]
+        },
+        "_pose": {
+          "baseline_sha256": "1960d32d43e1b3ed85435afd859815eaf72adaa1ce1304678ea5ca262bebeba1",
+          "current_sha256": "1960d32d43e1b3ed85435afd859815eaf72adaa1ce1304678ea5ca262bebeba1",
+          "equal": true,
+          "current_lines": [
+            70,
+            80
+          ]
+        },
+        "_require": {
+          "baseline_sha256": "a47aa59c260820b0045e090e45b36bdc693051ec73ae98e4b66c60a840ddbda5",
+          "current_sha256": "a47aa59c260820b0045e090e45b36bdc693051ec73ae98e4b66c60a840ddbda5",
+          "equal": true,
+          "current_lines": [
+            20,
+            22
+          ]
+        },
+        "_sha": {
+          "baseline_sha256": "7e5102f3ca0babb9041fcabcb65aaee5f6a4803dc5cb51543c8d5b071ac97e8b",
+          "current_sha256": "7e5102f3ca0babb9041fcabcb65aaee5f6a4803dc5cb51543c8d5b071ac97e8b",
+          "equal": true,
+          "current_lines": [
+            16,
+            17
+          ]
+        },
+        "_view3d": {
+          "baseline_sha256": "5dfb7e92e694f853575b6f5fc326ca6b5cfda910c0cd6540973e458b9adcb5b6",
+          "current_sha256": "5dfb7e92e694f853575b6f5fc326ca6b5cfda910c0cd6540973e458b9adcb5b6",
+          "equal": true,
+          "current_lines": [
+            160,
+            200
+          ]
+        },
+        "_weapon_acceptance": {
+          "baseline_sha256": "6e92d130182ae2d737d12fcbc897b8b1fd04d269d3b5f46f3a15e6f6ec32c16f",
+          "current_sha256": "6e92d130182ae2d737d12fcbc897b8b1fd04d269d3b5f46f3a15e6f6ec32c16f",
+          "equal": true,
+          "current_lines": [
+            397,
+            398
+          ]
+        },
+        "_work_copy": {
+          "baseline_sha256": "4add4c37d893b50b4fb4f1d209d94b3b93dde8542327aa2a39770d3be27c9151",
+          "current_sha256": "4add4c37d893b50b4fb4f1d209d94b3b93dde8542327aa2a39770d3be27c9151",
+          "equal": true,
+          "current_lines": [
+            203,
+            223
+          ]
+        },
+        "_write": {
+          "baseline_sha256": "bd330a40546f08708f4424fc4b5a565a760cadfe63ad1a6d0ca449c60cffa998",
+          "current_sha256": "bd330a40546f08708f4424fc4b5a565a760cadfe63ad1a6d0ca449c60cffa998",
+          "equal": true,
+          "current_lines": [
+            25,
+            28
+          ]
+        },
+        "checkpoint_state": {
+          "baseline_sha256": "c52d18193b8129916c0f3748439992930db7587a4c2ddac2ce644026b6917508",
+          "current_sha256": "c52d18193b8129916c0f3748439992930db7587a4c2ddac2ce644026b6917508",
+          "equal": true,
+          "current_lines": [
+            304,
+            310
+          ]
+        },
+        "run": {
+          "baseline_sha256": "b6110a7cb1f152590e61123c488861d184186de1938d909fbff79ec0e0a8d1d6",
+          "current_sha256": "b6110a7cb1f152590e61123c488861d184186de1938d909fbff79ec0e0a8d1d6",
+          "equal": true,
+          "current_lines": [
+            736,
+            739
+          ]
+        },
+        "visual_guard": {
+          "baseline_sha256": "0b3e6602b7c5a062a286e8a24edc3269141d624383d4a1f3de4594e5fcaa0d5a",
+          "current_sha256": "0b3e6602b7c5a062a286e8a24edc3269141d624383d4a1f3de4594e5fcaa0d5a",
+          "equal": true,
+          "current_lines": [
+            273,
+            301
+          ]
+        }
+      },
+      "nonFunctionTopLevelAstUnchanged": true,
+      "unifiedDiff": "--- D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_session_acceptance.py\n+++ D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py\n@@ -310,20 +310,30 @@\n     return _checkpoint(context, item, modules, checkpoint['name'], checkpoint['classification'], reference=base)\n \n \n-def _show_control(context, item, scope):\n+def _pose_hidden(pb):\n+    \"\"\"Read the actual Pose visibility API, or its supported legacy owner.\"\"\"\n+    owner = pb if hasattr(pb, 'hide') else pb.bone\n+    hidden = owner.hide\n+    _require(type(hidden) is bool, 'The actual Pose visibility API must return a boolean.')\n+    return hidden\n+\n+\n+def _show_control(context, item, scope, *, backend=None):\n     \"\"\"Select one exact allowed FK control in the owned QA Pose viewport.\"\"\"\n     import bpy\n     names = sorted(set(scope.input_by_native.values()))\n-    names = [name for name in names if not item.rig.pose.bones[name].bone.hide\n+    names = [name for name in names if not _pose_hidden(item.rig.pose.bones[name])\n              and not item.rig.pose.bones[name].bone.hide_select]\n     _require(names, 'No actual visible allowed B control exists for the native screen checkpoint.')\n+    backend = backend or importlib.import_module('character_designer.animation_composition')\n+    selections = [(pb, backend._pose_selection_owner(pb)) for pb in item.rig.pose.bones]\n     context.view_layer.objects.active = item.rig\n     item.rig.select_set(True)\n     if item.rig.mode != 'POSE':\n         _require(bpy.ops.object.mode_set(mode='POSE') == {'FINISHED'}, 'Could not show the actual QA Pose controls.')\n-    for bone in item.rig.data.bones:\n-        bone.select = bone.name == names[0]\n     item.rig.data.bones.active = item.rig.data.bones[names[0]]\n+    for pb, owner in selections:\n+        owner.select = pb.name == names[0]\n \n \n def _weapon_acceptance_steps(context, item, modules, *, checkpoints=False):\n@@ -366,7 +376,7 @@\n     added_counts = {key: len(owned[key]) for key in tables}\n     if checkpoints:\n         scope = backend.validate(context, item.rig)[2]\n-        _show_control(context, item, scope)\n+        _show_control(context, item, scope, backend=backend)\n         yield {**_checkpoint(context, item, modules, 'c_edit_b_weapon', 'C view · Editing B · Upper Body Override'),\n                'weapon_proof': proof, 'allowed_control_names': sorted(set(scope.input_by_native.values()))}\n     _require(bpy.ops.character_designer.composition_weapon('EXEC_DEFAULT', True, remove=True) == {'FINISHED'},\n@@ -415,7 +425,7 @@\n         rotation_path = ('rotation_quaternion' if bone.rotation_mode == 'QUATERNION' else\n                          'rotation_axis_angle' if bone.rotation_mode == 'AXIS_ANGLE' else 'rotation_euler')\n         if (any(path == bone.path_from_id() + '.' + rotation_path for path, _index in curves)\n-                and not bone.bone.hide and not bone.bone.hide_select and not bone.lock_rotation[0]):\n+                and not _pose_hidden(bone) and not bone.bone.hide_select and not bone.lock_rotation[0]):\n             candidates.append((name, rotation_path))\n     requested = config.get('aRotationControl')\n     if requested:\n@@ -427,9 +437,10 @@\n     before_pose = _pose(context, item.rig, lower)\n     draft_before = backend._motion_hash(session['base_edit_action'], session['base_edit_slot'])\n     with _view3d(context, item.rig):\n-        for bone in item.rig.data.bones:\n-            bone.select = bone.name == name\n+        selections = [(pb, backend._pose_selection_owner(pb)) for pb in item.rig.pose.bones]\n         item.rig.data.bones.active = item.rig.data.bones[name]\n+        for pb, owner in selections:\n+            owner.select = pb.name == name\n         _require(bpy.ops.transform.rotate('EXEC_DEFAULT', True, value=.041, orient_axis='X', orient_type='LOCAL') == {'FINISHED'},\n                  'The native full-A Pose transform did not finish.')\n         _require(backend._motion_hash(session['base_edit_action'], session['base_edit_slot']) == draft_before,\n@@ -543,7 +554,7 @@\n         _write(paths['report'], report)\n         if headful:\n             session, _item, scope, _tracks = backend.validate(context, item.rig)\n-            _show_control(context, item, scope)\n+            _show_control(context, item, scope, backend=backend)\n             # The generator returns to the event loop while the actual screen\n             # plays; no synchronous sleeping or simulated frame advancement.\n             _require(not context.window.screen.is_animation_playing, 'Begin the visual playback check paused.')\n@@ -589,7 +600,7 @@\n         if requested:\n             _require(requested in candidates, 'rotationControl is not an exact validated B FK input.')\n             candidates = [requested]\n-        candidates = [name for name in candidates if not item.rig.pose.bones[name].bone.hide\n+        candidates = [name for name in candidates if not _pose_hidden(item.rig.pose.bones[name])\n             and not item.rig.pose.bones[name].bone.hide_select and not item.rig.pose.bones[name].lock_rotation[0]]\n         _require(candidates, 'No visible/selectable unlocked exact B control exists for a real native drag.')\n         bone_name = candidates[0]\n@@ -597,9 +608,10 @@\n         ua._set_frame(context.scene, 1 + seconds[-1] * spec['fps'])\n         context.preferences.edit.use_global_undo = True\n         with _view3d(context, item.rig) as ui_context:\n-            for bone in item.rig.data.bones:\n-                bone.select = bone.name == bone_name\n+            selections = [(pb, backend._pose_selection_owner(pb)) for pb in item.rig.pose.bones]\n             item.rig.data.bones.active = item.rig.data.bones[bone_name]\n+            for pb, owner in selections:\n+                owner.select = pb.name == bone_name\n             before_rotation = tuple(item.rig.pose.bones[bone_name].matrix_basis.to_quaternion())\n             result = bpy.ops.transform.rotate('EXEC_DEFAULT', True, value=.037, orient_axis='X', orient_type='LOCAL')\n             _require(result == {'FINISHED'}, 'The real native B Pose transform operator did not finish.')\n"
+    },
+    "composition_raise_authoring": {
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_raise_authoring.py",
+        "sha256": "491c0dbd4eb813d717d298b03abb99be44087b19a6c5dbf4f5f18ac6fa903533",
+        "bytes": 18183
+      },
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+        "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+        "bytes": 18339
+      },
+      "addedFunctions": [],
+      "removedFunctions": [],
+      "changedFunctions": [
+        "_author",
+        "_rotation_control"
+      ],
+      "unchangedFunctions": [
+        "_created_identity",
+        "_fresh_row",
+        "_key_inputs",
+        "_row_anchor",
+        "_set_inputs",
+        "run",
+        "validate_config"
+      ],
+      "unchangedFunctionCount": 7,
+      "unchangedFunctionAstProofs": {
+        "_created_identity": {
+          "baseline_sha256": "beecdf2087b6ae1f4fa83e6d5e6ad5af507e3a754cfbcd66ad5bf1a8e901ebd5",
+          "current_sha256": "beecdf2087b6ae1f4fa83e6d5e6ad5af507e3a754cfbcd66ad5bf1a8e901ebd5",
+          "equal": true,
+          "current_lines": [
+            82,
+            88
+          ]
+        },
+        "_fresh_row": {
+          "baseline_sha256": "5ed38aa800952bf1785f3cf9a55b4ecdebb400e5b2bd79fa7d0aa4f8e6d16c01",
+          "current_sha256": "5ed38aa800952bf1785f3cf9a55b4ecdebb400e5b2bd79fa7d0aa4f8e6d16c01",
+          "equal": true,
+          "current_lines": [
+            104,
+            125
+          ]
+        },
+        "_key_inputs": {
+          "baseline_sha256": "8085b914140b9c40bcda1c8804d1ad7f1a58d7acb7193718d3e05430fe2bea39",
+          "current_sha256": "8085b914140b9c40bcda1c8804d1ad7f1a58d7acb7193718d3e05430fe2bea39",
+          "equal": true,
+          "current_lines": [
+            59,
+            62
+          ]
+        },
+        "_row_anchor": {
+          "baseline_sha256": "435efdbbbbde2853e37718a64e9c4b34435e5d050b3978f8a10adb92f37acf7f",
+          "current_sha256": "435efdbbbbde2853e37718a64e9c4b34435e5d050b3978f8a10adb92f37acf7f",
+          "equal": true,
+          "current_lines": [
+            91,
+            101
+          ]
+        },
+        "_set_inputs": {
+          "baseline_sha256": "fe1c70a272c30147d5cd69a46618d908c57a231637076d2d722bb141d95c90b1",
+          "current_sha256": "fe1c70a272c30147d5cd69a46618d908c57a231637076d2d722bb141d95c90b1",
+          "equal": true,
+          "current_lines": [
+            46,
+            56
+          ]
+        },
+        "run": {
+          "baseline_sha256": "50ae1a158b36e2bf4df71fc51c7b0d02cdbe79f2d439603c3926f94e4807192d",
+          "current_sha256": "50ae1a158b36e2bf4df71fc51c7b0d02cdbe79f2d439603c3926f94e4807192d",
+          "equal": true,
+          "current_lines": [
+            183,
+            292
+          ]
+        },
+        "validate_config": {
+          "baseline_sha256": "d46ae43487430aba05a9c7ea97e9c4d3d9a0670c3dec6c92d9e92643ab147b9d",
+          "current_sha256": "d46ae43487430aba05a9c7ea97e9c4d3d9a0670c3dec6c92d9e92643ab147b9d",
+          "equal": true,
+          "current_lines": [
+            27,
+            43
+          ]
+        }
+      },
+      "nonFunctionTopLevelAstUnchanged": true,
+      "unifiedDiff": "--- D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\composition_raise_authoring.py\n+++ D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py\n@@ -63,6 +63,7 @@\n \n \n def _rotation_control(rig, scope, requested):\n+    from composition_session_acceptance import _pose_hidden\n     matches = []\n     for name in sorted(set(scope.input_by_native.values())):\n         bone = rig.pose.bones[name]\n@@ -70,7 +71,7 @@\n                  'rotation_axis_angle' if bone.rotation_mode == 'AXIS_ANGLE' else 'rotation_euler')\n         path = bone.path_from_id() + '.' + field\n         if (any(channel == path for channel, _index in scope.channels)\n-                and not bone.bone.hide and not bone.bone.hide_select and not bone.lock_rotation[0]):\n+                and not _pose_hidden(bone) and not bone.bone.hide_select and not bone.lock_rotation[0]):\n             matches.append(name)\n     if requested:\n         matches = [name for name in matches if name == requested]\n@@ -141,9 +142,10 @@\n         before = backend._motion_hash(row.custom_action, row.custom_slot)\n         keys = []\n         with _view3d(context, row.rig):\n-            for bone in row.rig.data.bones:\n-                bone.select = bone.name == name\n+            selections = [(pb, backend._pose_selection_owner(pb)) for pb in row.rig.pose.bones]\n             row.rig.data.bones.active = row.rig.data.bones[name]\n+            for pb, owner in selections:\n+                owner.select = pb.name == name\n             for fraction in (0., .5, 1.):\n                 raw_frame = start + fraction * (end - start)\n                 scene_frame = row.rig.animation_data.nla_tweak_strip_time_to_scene(raw_frame)\n"
+    }
+  },
+  "pins": {
+    "focusedTests": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_tool_pose_selection.py",
+      "sha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+      "bytes": 8630
+    },
+    "sharedProductRuntime": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "bytes": 96417
+    },
+    "sharedProductSourceReview": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005
+    },
+    "immutable03Receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\frozen_tools_receipt.json",
+      "sha256": "0552ee957d58f594580600b187daeef210d8f5d761835c16b05bab0161d57f57",
+      "bytes": 4575
+    },
+    "unchangedNativeHelper": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692
+    }
+  },
+  "unchangedLoaders": {
+    "run_character_composition_first_stage": {
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+        "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+        "bytes": 9852
+      },
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\run_character_composition_first_stage.py",
+        "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+        "bytes": 9852
+      },
+      "byteEqual": true
+    },
+    "run_character_composition_raise_stage": {
+      "current": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+        "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+        "bytes": 20129
+      },
+      "baseline": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_03\\run_character_composition_raise_stage.py",
+        "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+        "bytes": 20129
+      },
+      "byteEqual": true
+    }
+  },
+  "findings": [
+    {
+      "result": "PASS",
+      "subject": "Five selection operations",
+      "evidence": "All five changed loops collect native PoseBone/legacy Bone selection owners with the shared product helper, then set the active bone before writing exact final selected flags. Modern Pose selection is per-object and does not write shared Bone selection; unknown API owner and write failures propagate."
+    },
+    {
+      "result": "PASS",
+      "subject": "Read-only Pose visibility",
+      "evidence": "New session._pose_hidden prioritizes actual PoseBone.hide, otherwise reads actual Bone.hide. The return must be bool, missing/invalid APIs fail, no selection/visibility property is manufactured or changed. All five changed candidate filters call this helper while retaining original hide_select/rotation-lock/scope checks."
+    },
+    {
+      "result": "PASS",
+      "subject": "Compatibility caller shape",
+      "evidence": "session._show_control retains its three positional arguments and adds an optional keyword-only backend. Internal session callers supply the current native backend; the existing Raise caller resolves character_designer.animation_composition lazily. The helper preflights all owners before selection/active mutation."
+    },
+    {
+      "result": "PASS",
+      "subject": "Original proofs retained",
+      "evidence": "53 prior functions are AST-identical across the three files. Full current/visual_guard/checkpoint_state/reference receipt/source-cache protection, Raise _row_anchor/_fresh_row/run, timing _row/_open/_sealed_loop/_sealed_raise/_published_hold/_numeric_proof and existing clocks/native fingerprints/export guards are unchanged. Changed function diffs contain only the recorded selection/visibility/caller updates."
+    },
+    {
+      "result": "PASS",
+      "subject": "Pinned shared dependency",
+      "evidence": "Timing._author_loop and Raise._rotation_control now import _pose_hidden from composition_session_acceptance. The unchanged first-stage and Raise entries already pin all sibling helper paths/hashes before import. Next BG fixture must pin session140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb; sessionChecks=None does not eliminate this real authoring dependency. Old FAF or immutable03 session lacks _pose_hidden and must not be selected."
+    }
+  ],
+  "validation": {
+    "ownerReported": {
+      "focusedTestCount": 9,
+      "focusedTestNames": [
+        "test_real_show_control_selects_exact_pose_without_touching_shared_bones_or_other_rig",
+        "test_real_legacy_bone_api_preserves_exact_active_then_final_flags",
+        "test_existing_three_argument_raise_caller_resolves_official_product_helper",
+        "test_unknown_selection_api_fails_before_native_selection_or_active_mutation",
+        "test_actual_pose_write_failure_propagates_without_legacy_bone_fallback",
+        "test_pose_visibility_overrides_edit_bone_hide_without_changing_either",
+        "test_unknown_or_invalid_visibility_fails_without_manufacturing_hidden_state",
+        "test_actual_show_control_rejects_hidden_pose_even_when_edit_bone_is_visible",
+        "test_actual_raise_candidate_uses_pose_visibility_without_edit_hidden_writes"
+      ],
+      "result": "PASS",
+      "syntaxCompilationSourceFiles": 4,
+      "syntaxCompilation": "PASS",
+      "attribution": "Reported by /root/worklist_review. These tests exercise actual tool/helper behavior for modern/legacy/shared-Bone/other-Rig/visibility/unknown-API/no-write-fallback boundaries. Not rerun by this reviewer."
+    },
+    "reviewerPerformed": {
+      "hashReadback": true,
+      "sourceReview": true,
+      "astComparison": true,
+      "testExecutions": 0,
+      "syntaxCompilationExecutions": 0,
+      "nativeExecutions": 0,
+      "workerExecutions": 0,
+      "sdkProbes": 0,
+      "runtimeMutations": 0,
+      "fixtureGeneration": 0,
+      "projectionBuilds": 0,
+      "deployments": 0,
+      "artistOperations": 0
+    },
+    "remaining": "Root must freeze and independently pin the new tool set and candidate, then run native acceptance only within an explicit granted window. No claim about native transform/keying, save/reopen, Undo, visual pixels, physical export or deployment is made here."
+  }
+}

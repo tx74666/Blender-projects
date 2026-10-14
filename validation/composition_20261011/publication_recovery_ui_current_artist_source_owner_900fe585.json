@@ -1,0 +1,131 @@
+{
+  "schema": "x.validation.character-composition-current-artist-ui-adapter-source-owner/1",
+  "utc": "2026-10-11T14:28:27.484030+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "build_character_composition_publication_recovery_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "900fe585553bddffaf86d1fc543d9e4fc1beb204f25c61efe7acd72b10e0b1b4",
+      "bytes": 52686
+    },
+    "audit_character_composition_publication_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    }
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_publication_recovery_ui_fixture_387d7e58_before_current_artist.py",
+    "sha256": "387d7e58a985739d15b16425bca05054b5dcfaea18417041eef266a046b482a1",
+    "bytes": 49605
+  },
+  "previous_owner_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_ui_keep_open_source_owner_387d7e58.json",
+    "sha256": "2f19ed444a031adf55558ea725d9f736fcfca2de20609cc8e7005ae965c8aa1b",
+    "bytes": 3884
+  },
+  "previous_peer_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_ui_keep_open_peer_source_387d7e58.json",
+    "sha256": "7dc39ded9924e23fbe1e50cd9f44462db7c9e15b50865457589c5d68b42549c7",
+    "bytes": 3949
+  },
+  "actual_frozen11_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_11\\frozen_tools_receipt.json",
+    "sha256": "8d437212c1ad54378a078354f2f32bef5be8aaea207e42f1578e1dc5f1095cec",
+    "bytes": 24421
+  },
+  "historical_frozen11_source_builder": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+    "sha256": "387d7e58a985739d15b16425bca05054b5dcfaea18417041eef266a046b482a1",
+    "bytes": 49605
+  },
+  "delta": {
+    "changed_functions": [
+      "freeze_context",
+      "build_current",
+      "main"
+    ],
+    "unchanged_functions": [
+      "require",
+      "api",
+      "frozen09_record",
+      "freeze",
+      "frozen_api",
+      "build",
+      "context_sources",
+      "pure_workspace"
+    ],
+    "added_functions": [],
+    "top_level_statements_ast_unchanged": true,
+    "full_raw_byte_inverse_equal": true,
+    "encoding_newlines_preserved": "UTF-8/CRLF",
+    "original_freeze_build_functions_unchanged": true
+  },
+  "freeze_contract": {
+    "new_directory": "tools_headful_12",
+    "actual_frozen11_required_sha256": "8d437212c1ad54378a078354f2f32bef5be8aaea207e42f1578e1dc5f1095cec",
+    "all_twelve_raw_tool_payloads_exactly_same_as_frozen11": true,
+    "existing_origin_frozen10_four_context_overrides_eight_unchanged_preserved": true,
+    "new_receipt_predecessor_field": "origin_context_headful_tools_receipt",
+    "new_source_builder_and_owner_peer_binding_required": true,
+    "old_frozen11_temporal_source_inputs_not_rehashed": true,
+    "old_canonical_builder_387_is_historical_receipt_metadata_only": true,
+    "exclusive_new_writes": true
+  },
+  "artist_contract": {
+    "cli_pair": [
+      "--current-artist",
+      "--current-artist-sha256"
+    ],
+    "allowed_only_with": "--build-current",
+    "pair_both_or_neither_required_before_any_generation": true,
+    "api_pair_defaults": [
+      null,
+      null
+    ],
+    "default_checks_historical_E8_actual_file_as_before": true,
+    "explicit_pair_requires_same_resolved_artist_path_as_sealed_n16_audit": true,
+    "explicit_pair_pins_actual_current_sha_in_new_ledger": true,
+    "historical_artist_is_plain_authenticated_n16_audit_record_not_rehashed_against_changed_disk": true,
+    "receipt_fields": [
+      "historical_artist",
+      "current_artist",
+      "current_artist_override_supplied",
+      "historical_artist_is_sealed_ancestry_only"
+    ],
+    "actual_UI_validation_copy_E8_and_qa_seed_C3A_unchanged": true,
+    "no_fixture_field_added_or_artist_operation_performed": true
+  },
+  "preserved_contracts": {
+    "keep_open_strict_bool_and_top_level_quit_false_only": true,
+    "historical_runtime_bridge_and_current_runtime_full_file_set_checks": true,
+    "four_context_source_tools_unchanged": true,
+    "prepared_Source_sealed_routes_and_reference_guards": true,
+    "seed_full_projection_and_profile_guards": true,
+    "final_new_ledger_rehash_and_exclusive_output_guards": true
+  },
+  "validation": {
+    "stdlib_in_memory_compile_passed": true,
+    "ast_and_unchanged_function_text_checks_passed": true,
+    "raw_inverse_check_passed": true,
+    "unchanged_function_count": 8,
+    "assert_nodes": 0,
+    "target_imports": 0,
+    "generator_invocations": 0,
+    "tests_executed": 0,
+    "native_calls": 0,
+    "sdk_calls": 0,
+    "shared_workspace_reads": 0,
+    "artist_file_reads": 0,
+    "fixture_generated": false,
+    "frozen_tools_generated": false
+  },
+  "limits": [
+    "Source-only implementation/compile/AST review; no helper/generator/Blender/GUI/SDK/artist or workspace operation.",
+    "Current artist SHA supplied by Root/Parent must be independently admitted and protected at launch; this Source receipt does not verify current artist bytes.",
+    "Historical n16 completed audit and original failed UI inputs keep their original status and bytes.",
+    "Actual frozen12 and u3 Source generation still require independent peer review and Root authorization."
+  ]
+}

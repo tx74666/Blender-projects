@@ -21,10 +21,146 @@ from . import character_setup
 
 SCHEMA = "cdesigner.unity-character.v1"
 _ACTIVE_JOB = None
+_DRESS_RECORD_KEY = 'character_designer_skirt_v1'
+_DRESS_OWNER_KEY = 'character_designer_skirt_owner'
+_DRESS_SOURCE_KEY = 'character_designer_skirt_source'
+_DRESS_RIG_KEY = 'character_designer_skirt_armature'
+_DRESS_ROLE_KEY = 'character_designer_skirt_surface_role'
+_DRESS_BACKEND = 'ACTUAL_SURFACE_DELTA_V1'
+_DRESS_ROLES = {'CLOTH_PROXY', 'BODY_ATTACHMENT', 'NEUTRAL_RIG',
+                'NEUTRAL_WIRE', 'NEUTRAL_SURFACE', 'TRACKER'}
 
 
 class ExportError(ValueError):
     pass
+
+
+def _dress_record(obj):
+    """Inspect saved metadata only; collect/draw never load surface services."""
+    if obj.type != 'MESH' or _DRESS_RECORD_KEY not in obj:
+        return None
+    try:
+        raw = obj[_DRESS_RECORD_KEY]
+        if type(raw) is not str:
+            raise ValueError()
+        record = json.loads(raw)
+        if type(record) is not dict:
+            raise ValueError()
+        physics = record.get('physics')
+        if physics is None:
+            return None
+        if type(physics) is not dict:
+            raise ValueError()
+        backend = physics.get('backend', 'LEGACY_CAGE')
+        if backend == 'DIRECT_MAIN_CLOTH_V1':
+            raise ExportError(f'{obj.name}: Direct Dress export validation is pending. Keep the editable source; baked vertex physics cannot be returned as a bone-only animation.')
+        if backend == 'LEGACY_CAGE':
+            if 'surface' in physics:
+                raise ValueError()
+            return None
+        if type(backend) is not str or backend != _DRESS_BACKEND:
+            raise ValueError()
+        surface = physics.get('surface')
+        if (type(record.get('version')) is not int or record['version'] != 1 or type(record.get('owner')) is not str
+                or not record['owner'] or type(surface) is not dict
+                or type(surface.get('version')) is not int or surface['version'] != 1
+                or type(surface.get('roles')) is not dict):
+            raise ValueError()
+        inventory = []
+        for role, names in surface['roles'].items():
+            if (role not in _DRESS_ROLES or type(names) is not list
+                    or any(type(name) is not str or not name for name in names)):
+                raise ValueError()
+            inventory.extend(names)
+        if len(inventory) != len(set(inventory)):
+            raise ValueError()
+        colliders = physics.get('colliders')
+        if (type(colliders) is not list or any(type(name) is not str or not name for name in colliders)
+                or len(colliders) != len(set(colliders))):
+            raise ValueError()
+        return record
+    except ExportError:
+        raise
+    except (ValueError, TypeError, KeyError) as exc:
+        raise ExportError(f'{obj.name}: saved Dress surface metadata is invalid; restore its owned setup before export.') from exc
+
+
+def _dress_surface_helper(obj, *, records=None):
+    marked = _DRESS_ROLE_KEY in obj
+    role = obj.get(_DRESS_ROLE_KEY)
+    source = obj.get(_DRESS_SOURCE_KEY)
+    if not marked and (source is None or source is obj or source.type != 'MESH'):
+        return False
+    if (marked and (type(role) is not str or role not in _DRESS_ROLES)
+            or source is None or source is obj or source.type != 'MESH'):
+        raise ExportError(f'{obj.name}: the Dress helper role or source is invalid.')
+    if records is not None and source in records:
+        record = records[source]
+    else:
+        record = _dress_record(source)
+        if records is not None:
+            records[source] = record
+    if not marked and (record is None or obj.name not in record['physics']['colliders']):
+        return False
+    if (record is None or obj.get(_DRESS_OWNER_KEY) != record['owner']
+            or source.get(_DRESS_OWNER_KEY) != record['owner']
+            or marked and obj.name not in record['physics']['surface']['roles'].get(role, ())):
+        raise ExportError(f'{obj.name}: the Dress helper identity is outside its saved owner inventory.')
+    return True
+
+
+def _capture_dress_surfaces(objects):
+    if any(_dress_surface_helper(obj) for obj in objects):
+        raise ExportError('A Dress surface helper is inside the explicit export inventory.')
+    sources = [(obj, record) for obj in objects
+               if (record := _dress_record(obj)) is not None]
+    if not sources:
+        return []
+    try:
+        from . import skirt_surface
+    except ImportError as exc:
+        raise ExportError('Restore the validated Dress surface export service before exporting.') from exc
+    if getattr(skirt_surface, 'BACKEND', None) != _DRESS_BACKEND:
+        raise ExportError('The installed Dress surface export service has a different backend contract.')
+    result = []
+    for source, record in sources:
+        rig = source.get(_DRESS_RIG_KEY)
+        if rig not in objects or rig.type != 'ARMATURE' or _dress_surface_helper(rig):
+            raise ExportError(f'{source.name}: its original Dress skinning rig is outside the export inventory.')
+        try:
+            proof = json.loads(json.dumps(skirt_surface.export_capture(source), allow_nan=False))
+            if (type(proof) is not dict or type(proof.get('version')) is not int or proof['version'] != 1
+                    or proof.get('backend') != _DRESS_BACKEND or proof.get('source') != source.name
+                    or proof.get('owner') != record['owner'] or proof.get('rig') != rig.name):
+                raise ValueError('The surface capture does not match the selected source and rig.')
+        except (ValueError, TypeError) as exc:
+            raise ExportError(f'{source.name}: Dress surface export proof is invalid: {exc}') from exc
+        result.append(proof)
+    return result
+
+
+def _dress_publication(job, result):
+    captured = job.get('dress_surfaces', [])
+    actual = result.get('dress_surfaces', [])
+    expected = [{'source': proof['source'], 'owner': proof['owner'], 'backend': _DRESS_BACKEND,
+                 'static_source_rest': True, 'simulation_baked': False} for proof in captured]
+    if (type(actual) is not list or actual != expected
+            or any(type(item) is not dict or item.get('static_source_rest') is not True
+                   or item.get('simulation_baked') is not False for item in actual)):
+        raise ExportError('The worker did not preserve the captured Dress static export boundary; no files were published.')
+
+
+def _model_snapshot_datablocks(objects, dress_surfaces):
+    """Retain native Dress membership proof without expanding FBX selection."""
+    roots = set(objects)
+    if not dress_surfaces:
+        return roots
+    try:
+        from .dress_export_snapshot import snapshot_scene_roots
+        roots.update(snapshot_scene_roots(dress_surfaces))
+    except (ImportError, ValueError, RuntimeError, ReferenceError) as exc:
+        raise ExportError('The Dress snapshot cannot preserve its native Scene proof: ' + str(exc)) from exc
+    return roots
 
 
 def _hash(path):
@@ -56,8 +192,11 @@ def _binding_armatures(obj):
 def _character_armatures(scene, rig):
     if rig is None or rig.type != 'ARMATURE' or rig.name not in scene.objects:
         raise ExportError('Set the character Main Rig in Character Setup first.')
+    if _dress_surface_helper(rig):
+        raise ExportError('A Dress surface helper cannot be the exported Main Rig.')
     return {rig} | {obj for obj in scene.objects
-                    if obj.type == 'ARMATURE' and _descends(obj.parent, rig)}
+                    if obj.type == 'ARMATURE' and _descends(obj.parent, rig)
+                    and not _dress_surface_helper(obj)}
 
 
 def _helpers(scene, *, candidates=None):
@@ -73,8 +212,11 @@ def _helpers(scene, *, candidates=None):
                 shape = pb.custom_shape
                 if shape is not None and (candidates is None or shape in candidates):
                     shapes.add(shape)
+    dress_records = {}
     for obj in scene.objects if candidates is None else candidates:
         # Ownership roles, not names or visibility: hidden clothes still export.
+        if _dress_surface_helper(obj, records=dress_records):
+            shapes.add(obj)
         roles = [str(obj.get(key, '')).upper() for key in obj.keys()
                  if str(key).startswith('character_designer') and str(key).endswith('role')]
         if any(any(token in role for token in ('WIDGET', 'COLLIDER', 'PROXY', 'GUIDE')) for role in roles):
@@ -159,6 +301,7 @@ def collect_character(context, rig, config, *, _scope=None):
     if not meshes:
         raise ExportError('No bound character meshes found. Enable an Armature binding to the Main Rig first.')
     for obj in meshes:
+        _dress_record(obj)
         if not obj.data.vertices:
             raise ExportError(f'{obj.name}: mesh has no vertices.')
         objects.update(scope['bindings'][obj])
@@ -317,6 +460,12 @@ def begin_export(context, rig, config):
         raise ExportError('A character export is already running.')
     if context.mode not in {'OBJECT', 'POSE'}:
         raise ExportError('Finish Edit Mode before exporting; the current pose is preserved.')
+    # Direct refusal must precede even transient author preview restoration.
+    from . import dress_export_guard
+    try:
+        dress_export_guard.reject_model_sources(collect_character(context, rig, config)['objects'])
+    except (ValueError, TypeError) as error:
+        raise ExportError(str(error)) from error
     from . import hair_wiggle_adapter
     if hair_wiggle_adapter.status(context)['active']:
         try:
@@ -330,6 +479,14 @@ def begin_export(context, rig, config):
     asset_id = config.asset_id or uuid.uuid4().hex
     prior = _previous(directory, filename, asset_id)
     objects = collected['objects']
+    from . import unity_material_match_ui
+    material_matches = unity_material_match_ui.capture(config, objects, directory, asset_id)
+    from . import skirt_wiggle
+    for source in objects:
+        if source.type == 'MESH':
+            skirt_wiggle.suspend(context, source=source,
+                                 reason='Model export paused automatic Dress motion.')
+    dress_surfaces = _capture_dress_surfaces(objects)
     hair_motion = _capture_hair_motion(objects)
     owned_keys = _owned_keys(objects)
     from . import unity_forearm
@@ -344,7 +501,8 @@ def begin_export(context, rig, config):
            'directory': directory, 'filename': filename, 'asset_id': asset_id,
            'prior': prior, 'manifest_hash': _hash(manifest) if manifest.exists() else None,
            'rig': rig, 'config': config, 'started': time.monotonic(), 'process': None,
-           'objects': [obj.name for obj in objects], 'hair_motion': hair_motion}
+           'objects': [obj.name for obj in objects], 'hair_motion': hair_motion,
+           'dress_surfaces': dress_surfaces, 'unity_material_matches': material_matches}
     try:
         specification = {
             'objects': job['objects'], 'rig': rig.name,
@@ -354,6 +512,7 @@ def begin_export(context, rig, config):
             'owned_keys': owned_keys, 'warnings': collected['warnings'],
             'forearm': forearm,
             'hair_motion': hair_motion,
+            'dress_surfaces': dress_surfaces,
             'had_forearm': bool(prior and prior.get('forearm_correction')),
             'simple_materials': sorted({entry.material.name for entry in getattr(config, 'simple_materials', [])
                                         if entry.material is not None and any(
@@ -362,7 +521,8 @@ def begin_export(context, rig, config):
             'image_buffers': _image_buffers(objects, root),
         }
         snapshot = root / 'character.blend'
-        bpy.data.libraries.write(str(snapshot), set(objects), path_remap='ABSOLUTE', fake_user=False, compress=True)
+        bpy.data.libraries.write(str(snapshot), _model_snapshot_datablocks(objects, dress_surfaces),
+                                 path_remap='ABSOLUTE', fake_user=False, compress=True)
         (root / 'job.json').write_text(json.dumps(specification, ensure_ascii=False), encoding='utf-8')
         log = open(root / 'worker.log', 'w', encoding='utf-8')
         job['log'] = log
@@ -403,6 +563,7 @@ def _publish(job, result):
         raise ExportError('The export worker did not produce a valid FBX.')
     if len(files) != len(set(files)):
         raise ExportError('Duplicate output filenames in worker result.')
+    _dress_publication(job, result)
     hair_motion = result.get('hair_motion', {'active': False, 'file': None,
         'simulation_baked': False, 'status': 'No configured Hair motion source in this export.'})
     if (not isinstance(hair_motion, dict) or type(hair_motion.get('active')) is not bool
@@ -431,6 +592,7 @@ def _publish(job, result):
         if target.exists() and (not prior or relative not in prior.get('files', {})):
             raise ExportError(f'{relative} already exists and is not owned by this export.')
     report = {**result, 'schema': SCHEMA, 'asset_id': job['asset_id'], 'hair_motion': hair_motion,
+              'unity_material_matches': job.get('unity_material_matches', []),
               'source_rig': job['rig'].name, 'filename': filename,
               'files': {relative: _hash(_safe_file(stage, relative)) for relative in files},
               'unity_status': 'Exported; Unity import has not been verified.',

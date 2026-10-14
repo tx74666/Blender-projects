@@ -1,0 +1,40 @@
+{
+  "schema": "x.validation.original-clock-numeric-rna-gate-source-peer/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "certify_original_legacy_base_clock.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/certify_original_legacy_base_clock.py",
+      "sha256": "af4076b3a6923e7e8b891c237221e1761fd5056c410b2f905b52fbedda8a8b5c",
+      "bytes": 24901
+    }
+  },
+  "donor": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/certify_original_legacy_base_clock_7d183f8e_before_numeric_type_gate.py",
+    "sha256": "7d183f8eaad413fd30e151cb2fbac9ec339cd619d14b6b58db3ce2f503c518a1",
+    "bytes": 24856
+  },
+  "exact_change": {
+    "before": "if prop.is_array:",
+    "after": "if prop.type in {'BOOLEAN', 'INT', 'FLOAT'} and prop.is_array:",
+    "whole_byte_inverse_exact": true,
+    "occurrences": 1
+  },
+  "checks": {
+    "is_array_access_short_circuited_to_numeric_RNA_only": true,
+    "numeric_array_dimensions_bounded_and_unmodified": true,
+    "nested_declared_array_detach_and_finite_light_plain_unchanged": true,
+    "string_enum_fixed_fields_still_light_plain_not_skipped": true,
+    "all_other_source_bytes_unchanged": true
+  },
+  "blockers": [],
+  "reviewer_counts": {
+    "AST_compile": 0,
+    "tests": 0,
+    "processes": 0,
+    "target_imports": 0,
+    "Blender_SDK_GUI": 0
+  },
+  "native_scope": "No launch performed; actual clock04 requires its own fresh inputs/config/grant."
+}

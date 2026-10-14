@@ -1,0 +1,5687 @@
+{
+  "scope": "PRIVATE_MANUAL_ACTION_EXPECTED_SHEAR_DIAGNOSTIC_ONLY",
+  "errors": [],
+  "diagnostic_complete": true,
+  "expected_worker_shear_refusal": true,
+  "worker_export_succeeded": false,
+  "FBX_write_attempted": false,
+  "FBX_roundtrip_verified": false,
+  "native_component_verified": false,
+  "public_admission_verified": false,
+  "public_export_verified": false,
+  "production_model_binding_verified": false,
+  "Unity_verified": false,
+  "Magica_verified": false,
+  "simulation_baked": false,
+  "vertex_Cloth_carried_by_bones": false,
+  "final_surface_equivalent": false,
+  "export_accepted": false,
+  "current_X_loaded": false,
+  "snapshot_raw_named_weights_Rest_Body12_assets_exact": true,
+  "sampled_source_protected": true,
+  "owned_native_cleanup": true,
+  "private_scene_disposed": true,
+  "pinned_files_unchanged": true,
+  "pins": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\cdesigner-unity-pns-qa\\character.blend": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_plain_native_skin_model_v4_e0b_52_20261007_123727_962_feab010a295d467eae8019cccff98ca8\\result\\report.json": "803b8ec6297eb51f23e4a664e76e21ff354d3d1a97748a826ec41da3bfd67aa9",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py": "1716ff49a231cee8c0663fd17949583eabbfb7ce79791a459682930f40744dcb",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_plain_native_skin_fbx_component52_v3.py": "33a3b0911f4fcd8dda63075fe4f40e173d8eada6e5ae23767962f7e48e78e003",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_direct_save_reopen_snapshot52.py": "4f107e6e47f7a81fbb17adff83940aa4ac61562363815dbd919267caeabf4741",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_direct_cold_install52_v4.py": "4bb8e79fbad87950c75c1999e27d97657733ea42695df8e0f2b3a2ae4f58c536",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\validate_real_dress.py": "613e9d32f3674f1e01d98725a99d1dd70911d22af1526f36a43f442c47649046",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\__init__.py": "b7a2c06c11267ff9baaeb30ebc6add17b044d27f754340f17345dc78d74db336",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\export_fbx_bin.py": "8fd324e4ee0d25cc89cd53507b0f93c057b17b699601ac90f81085d5be09e44a",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\fbx_utils.py": "66a15d79d5eaf490176b439f22fb01963efcd46e06702eff224a84135e636fb3",
+    "D:\\Blender5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\import_fbx.py": "e4e55c2e344959b75d840e20c4d45d079ec8fd4f4bc375491cea76e55cce8013",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_plain_rest_skin_fbx_component52.py": "9b93aab9edde5cbf6065e2e8ab9bf81ef27d07a79cd7cb9b792451f466e8564f",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_export_blender.py": "5d2fc6c7ddeadb8800b5f643ce83f194dd4068f2278ce5144d191e91594687c0",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_private_manual_action_fbx_component52_v2.py": "10bae6fd1a042bce5ca60344371e1e4de54a379518e0fe8d6ba0a02a928ac373",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py": "87a4f850fd31583a55e7f610a46b6d3d35696d7f604986a0db371d3a088fe266",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py": "aa92d856cbbd5df88f05fd700c7ba03c845d25b5941efcf5f23f46138d70a6c5",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_colors.py": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_guard.py": "4655c3a1de51cfd8560d8d084ab70f697bfde8cf8b3e6d5f434b323e314c8193",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py": "a9949be8e5ad42c97fba3bd85c67e4fbb014188c29afe49bc538d2fc8ddd33e2",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_controls.py": "8be7a0247417b5e86b30e5ae49724863167e282b22bf1ebb899916076af61521",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\foot_controls.py": "f949f24175ae70d537bfe74bb6be5c0ea3abe72f62c55b842cedb553b6eeb2c3",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\generated_names.py": "a1c49790c61c31e915de15b1a4baa76c75be2b490a6d771eca179921fda4d931",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_fk_visuals.py": "228fbdcc2bd8226a9e2d871a25aff8d86df558098b2dcebba28c7a6ffbd405d6",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py": "5692ba78ed296ece885be5d519eb0f59152f4915784624c686880eee49d4dbf3",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\root_control.py": "243b62967ee08c61657886ed5cab74ca257b75a13bd6b8dad794e9483560e6af",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py": "be77e6f1fdcd6819ee46a3490515a0791b644900f286f04e287b5704706390e1",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_original_mode.py": "8708cadca4d40f6c8f18c98e626019c2a47079a1f36443edebc666ff24da5ae7",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_physics.py": "2d388f7de87ea4bb02e98f7fd28560003c3212a646682057cfe3ebfa0a3413e2",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_rig.py": "0d56bc969f272cd884d1955a21a1c66a0afbeba2424e68b6b41802c71cf5de4c",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py": "a58d0e542bca195cd1d8e767e23e76809602bfe95b698668a8cc4b4289855c12",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface_direct.py": "e07634927c790323ffa70c19e52320ce0068fbd65e0447770ff515bea3fdd9c3",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_topology.py": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py": "ad2e82fc9200af280befed0c55c745bc0ce3990f0120c638a6e906ae9f0a264f",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_controls.py": "37772c81e8142f5debd9674a6d4c424129a4579eeafbf9cedcef5f718f36b87a",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ui_constants.py": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\verify_private_manual_action_fbx_component52.py": "25e6e3789f44abebdfb2c73c013f912d3833349330abf7a8bcf98322d4037f3a",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_private_manual_action_fbx_component_52_20261007_215111_796_2cf4430baf5b476e8030298b8306d2f1\\result\\report.json": "a55eee8fa3c0458f0d9e227ad52855db605dad478b82653d656f9de9c91c47ce",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_private_manual_action_fbx_component_52_20261007_215111_796_2cf4430baf5b476e8030298b8306d2f1\\result\\cdesigner-action-manual-qa\\animation.blend": "ccd152153e0411c30ebfffce035f5a1b8ba91888a1c831ae4ac52f6e5d5e3691",
+    "D:\\Blender5.2\\5.2\\scripts\\modules\\bpy_extras\\id_map_utils.py": "cb37d61f9ea869f60696831a471bb73876d1156ff816c742cea8284ef1687d24",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_private_manual_action_fbx_component_v2_52_20261008_030559_863_08d4ef178af74bc8a0f85901014c0d06\\result\\report.json": "2cff8bd542ac357826c091d790e10a6285c6d5c398156cdc981a1a5507ff5d97",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_private_manual_action_fbx_component_v2_52_20261008_030559_863_08d4ef178af74bc8a0f85901014c0d06\\result\\cdesigner-action-manual-qa\\animation.blend": "e83ddc978a04484d8f3c6cc263c5d085e5cab1d50bb1682c71046b1d6c363cc8",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\diagnose_private_manual_action_shear52.py": "bc71a9c2c348b63dda88a013d8b5823fce1c858fc320a15f792f41541a89fdb0"
+  },
+  "loaded_input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\dress_automatic_20261005\\actual_private_manual_action_fbx_component_v2_52_20261008_030559_863_08d4ef178af74bc8a0f85901014c0d06\\result\\cdesigner-action-manual-qa\\animation.blend",
+    "sha256": "e83ddc978a04484d8f3c6cc263c5d085e5cab1d50bb1682c71046b1d6c363cc8",
+    "failed_report_sha256": "2cff8bd542ac357826c091d790e10a6285c6d5c398156cdc981a1a5507ff5d97",
+    "parent_PNS_sha256": "ab48a806f8e228f3c878da65bab59fe9cdaff2bcbca037f258cf74cacd88dc71"
+  },
+  "phase": "matrix_diagnostic_captured",
+  "phases": [
+    {
+      "name": "load_fixed_derived_only",
+      "seconds": 1.7176808999938658
+    },
+    {
+      "name": "three_real_QA_frames_before_strip",
+      "seconds": 12.42888849999872
+    },
+    {
+      "name": "unchanged_real_worker_expected_refusal",
+      "seconds": 26.17301939999743
+    },
+    {
+      "name": "matrix_diagnostic_captured",
+      "seconds": 40.025657799997134
+    }
+  ],
+  "snapshot_initial_immutable_digest": "7ce0d09c200290f8db7b03c48927f189230b3369ec9bfbfbbef1c7a9bdbda4e6",
+  "public_admission_refusal": "Dress: Direct Dress export validation is pending; preserve its editable source and vertex physics.",
+  "before_strip_bone": {
+    "name": "SK_Dress_DEF_01_01",
+    "parent": "SK_Dress_Waist",
+    "Rest": [
+      [
+        0.9408307075500488,
+        0.2461284101009369,
+        0.23291778564453125,
+        0.12890870869159698
+      ],
+      [
+        -0.24612602591514587,
+        0.02389795146882534,
+        0.9689427614212036,
+        0.08175861835479736
+      ],
+      [
+        0.23291583359241486,
+        -0.9689422845840454,
+        0.083063505589962,
+        1.2996339797973633
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "length": 0.07866580784320831,
+    "use_connect": false,
+    "use_deform": true,
+    "inherit_scale": "FULL",
+    "use_inherit_rotation": true,
+    "use_local_location": true
+  },
+  "private_adaptations": [
+    {
+      "module": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py",
+      "removed_from_in_memory_copy_only": "try:\n    _direct_export_guard().verify_animation_snapshot(job, bpy.data.objects, bpy.data.objects.get(job.get('rig', '')), bpy.data.actions.get(job.get('action', '')), bpy.data.filepath)\nexcept (ValueError, TypeError) as error:\n    raise AnimationExportError(str(error)) from error",
+      "all_other_worker_AST_unchanged": true
+    },
+    {
+      "module": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py",
+      "function": "_record",
+      "scope": "Only fixed Direct source; real direct.validate, capture, endpoint preflight and strip retained"
+    },
+    {
+      "scope": "Read-only trace stops before the native FBX call if shear unexpectedly disappears",
+      "writer_line": 491,
+      "worker_TRS_threshold_unchanged": 2e-05
+    }
+  ],
+  "source_after_strip": {
+    "Rest": "7511de8262a7db5389f36c056850870c1db11ecd85b191ad6c975ee7880f95f5",
+    "Action": [
+      [
+        "pose.bones[\"SK_Dress_Mid_01\"].location",
+        0,
+        false,
+        "CONSTANT",
+        [
+          [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.6666666269302368,
+              0.0
+            ],
+            [
+              1.3333333730697632,
+              0.0
+            ],
+            "BEZIER"
+          ],
+          [
+            [
+              2.0,
+              0.019999999552965164
+            ],
+            [
+              1.6666666269302368,
+              0.019999999552965164
+            ],
+            [
+              2.3333332538604736,
+              0.019999999552965164
+            ],
+            "BEZIER"
+          ],
+          [
+            [
+              3.0,
+              -0.009999999776482582
+            ],
+            [
+              2.6666667461395264,
+              -0.009999999776482582
+            ],
+            [
+              3.3333332538604736,
+              -0.009999999776482582
+            ],
+            "BEZIER"
+          ]
+        ],
+        []
+      ],
+      [
+        "pose.bones[\"Hips\"].rotation_euler",
+        2,
+        false,
+        "CONSTANT",
+        [
+          [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.6666666269302368,
+              0.0
+            ],
+            [
+              1.3333333730697632,
+              0.0
+            ],
+            "BEZIER"
+          ],
+          [
+            [
+              2.0,
+              0.05999999865889549
+            ],
+            [
+              1.6666666269302368,
+              0.05999999865889549
+            ],
+            [
+              2.3333332538604736,
+              0.05999999865889549
+            ],
+            "BEZIER"
+          ],
+          [
+            [
+              3.0,
+              -0.03500000014901161
+            ],
+            [
+              2.6666667461395264,
+              -0.03500000014901161
+            ],
+            [
+              3.3333332538604736,
+              -0.03500000014901161
+            ],
+            "BEZIER"
+          ]
+        ],
+        []
+      ]
+    ],
+    "constraints": [
+      [
+        "Hips",
+        [
+          [
+            1601894930528,
+            "COPY_TRANSFORMS",
+            "CD Root Follow",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_master"
+          ]
+        ]
+      ],
+      [
+        "spine",
+        [
+          [
+            1601894918240,
+            "COPY_TRANSFORMS",
+            "CD Torso FK",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_torso_1"
+          ]
+        ]
+      ],
+      [
+        "Chest",
+        [
+          [
+            1601894930784,
+            "COPY_TRANSFORMS",
+            "CD Torso FK",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_torso_2"
+          ]
+        ]
+      ],
+      [
+        "UpperChest",
+        [
+          [
+            1601894931296,
+            "COPY_TRANSFORMS",
+            "CD Torso FK",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_torso_3"
+          ]
+        ]
+      ],
+      [
+        "Neck",
+        []
+      ],
+      [
+        "Head",
+        []
+      ],
+      [
+        "eye.L",
+        [
+          [
+            1601894931552,
+            "DAMPED_TRACK",
+            "CD Eye Aim",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_eye.L"
+          ]
+        ]
+      ],
+      [
+        "eye.R",
+        [
+          [
+            1601894931808,
+            "DAMPED_TRACK",
+            "CD Eye Aim",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_eye.R"
+          ]
+        ]
+      ],
+      [
+        "CTRL_eyes",
+        []
+      ],
+      [
+        "CTRL_eye.L",
+        []
+      ],
+      [
+        "CTRL_eye.R",
+        []
+      ],
+      [
+        "Hair Hair 01.01",
+        []
+      ],
+      [
+        "Hair Hair 01.02",
+        []
+      ],
+      [
+        "Hair Hair 01.03",
+        []
+      ],
+      [
+        "Hair Hair 01.04",
+        []
+      ],
+      [
+        "Hair Hair 02.01",
+        []
+      ],
+      [
+        "Hair Hair 02.02",
+        []
+      ],
+      [
+        "Hair Hair 02.03",
+        []
+      ],
+      [
+        "Hair Hair 02.04",
+        []
+      ],
+      [
+        "Hair Hair 03.01",
+        []
+      ],
+      [
+        "Hair Hair 03.02",
+        []
+      ],
+      [
+        "Hair Hair 03.03",
+        []
+      ],
+      [
+        "Hair Hair 03.04",
+        []
+      ],
+      [
+        "Hair Hair 04.01",
+        []
+      ],
+      [
+        "Hair Hair 04.02",
+        []
+      ],
+      [
+        "Hair Hair 04.03",
+        []
+      ],
+      [
+        "Hair Hair 04.04",
+        []
+      ],
+      [
+        "Hair Hair 05.01",
+        []
+      ],
+      [
+        "Hair Hair 05.02",
+        []
+      ],
+      [
+        "Hair Hair 05.03",
+        []
+      ],
+      [
+        "Hair Hair 05.04",
+        []
+      ],
+      [
+        "Hair Hair 06.01",
+        []
+      ],
+      [
+        "Hair Hair 06.02",
+        []
+      ],
+      [
+        "Hair Hair 06.03",
+        []
+      ],
+      [
+        "Hair Hair 06.04",
+        []
+      ],
+      [
+        "Hair Hair 07.01",
+        []
+      ],
+      [
+        "Hair Hair 07.02",
+        []
+      ],
+      [
+        "Hair Hair 07.03",
+        []
+      ],
+      [
+        "Hair Hair 07.04",
+        []
+      ],
+      [
+        "Hair Hair 08.01",
+        []
+      ],
+      [
+        "Hair Hair 08.02",
+        []
+      ],
+      [
+        "Hair Hair 08.03",
+        []
+      ],
+      [
+        "Hair Hair 08.04",
+        []
+      ],
+      [
+        "Hair Hair 09.01",
+        []
+      ],
+      [
+        "Hair Hair 09.02",
+        []
+      ],
+      [
+        "Hair Hair 09.03",
+        []
+      ],
+      [
+        "Hair Hair 09.04",
+        []
+      ],
+      [
+        "Hair Hair 10.01",
+        []
+      ],
+      [
+        "Hair Hair 10.02",
+        []
+      ],
+      [
+        "Hair Hair 10.03",
+        []
+      ],
+      [
+        "Hair Hair 10.04",
+        []
+      ],
+      [
+        "Hair Hair 11.01",
+        []
+      ],
+      [
+        "Hair Hair 11.02",
+        []
+      ],
+      [
+        "Hair Hair 11.03",
+        []
+      ],
+      [
+        "Hair Hair 11.04",
+        []
+      ],
+      [
+        "Hair Hair 12.01",
+        []
+      ],
+      [
+        "Hair Hair 12.02",
+        []
+      ],
+      [
+        "Hair Hair 12.03",
+        []
+      ],
+      [
+        "Hair Hair 12.04",
+        []
+      ],
+      [
+        "Hair Hair 13.01",
+        []
+      ],
+      [
+        "Hair Hair 13.02",
+        []
+      ],
+      [
+        "Hair Hair 13.03",
+        []
+      ],
+      [
+        "Hair Hair 13.04",
+        []
+      ],
+      [
+        "Hair Hair 14.01",
+        []
+      ],
+      [
+        "Hair Hair 14.02",
+        []
+      ],
+      [
+        "Hair Hair 14.03",
+        []
+      ],
+      [
+        "Hair Hair 14.04",
+        []
+      ],
+      [
+        "Hair Hair 15.01",
+        []
+      ],
+      [
+        "Hair Hair 15.02",
+        []
+      ],
+      [
+        "Hair Hair 15.03",
+        []
+      ],
+      [
+        "Hair Hair 15.04",
+        []
+      ],
+      [
+        "Hair Hair 16.01",
+        []
+      ],
+      [
+        "Hair Hair 16.02",
+        []
+      ],
+      [
+        "Hair Hair 16.03",
+        []
+      ],
+      [
+        "Hair Hair 16.04",
+        []
+      ],
+      [
+        "Hair Hair 17.01",
+        []
+      ],
+      [
+        "Hair Hair 17.02",
+        []
+      ],
+      [
+        "Hair Hair 17.03",
+        []
+      ],
+      [
+        "Hair Hair 17.04",
+        []
+      ],
+      [
+        "Hair Hair 18.01",
+        []
+      ],
+      [
+        "Hair Hair 18.02",
+        []
+      ],
+      [
+        "Hair Hair 18.03",
+        []
+      ],
+      [
+        "Hair Hair 18.04",
+        []
+      ],
+      [
+        "Hair Hair 19.01",
+        []
+      ],
+      [
+        "Hair Hair 19.02",
+        []
+      ],
+      [
+        "Hair Hair 19.03",
+        []
+      ],
+      [
+        "Hair Hair 19.04",
+        []
+      ],
+      [
+        "Hair Hair 20.01",
+        []
+      ],
+      [
+        "Hair Hair 20.02",
+        []
+      ],
+      [
+        "Hair Hair 20.03",
+        []
+      ],
+      [
+        "Hair Hair 20.04",
+        []
+      ],
+      [
+        "Hair Hair 21.01",
+        []
+      ],
+      [
+        "Hair Hair 21.02",
+        []
+      ],
+      [
+        "Hair Hair 21.03",
+        []
+      ],
+      [
+        "Hair Hair 21.04",
+        []
+      ],
+      [
+        "Hair Hair 22.01",
+        []
+      ],
+      [
+        "Hair Hair 22.02",
+        []
+      ],
+      [
+        "Hair Hair 22.03",
+        []
+      ],
+      [
+        "Hair Hair 22.04",
+        []
+      ],
+      [
+        "Hair Hair 23.01",
+        []
+      ],
+      [
+        "Hair Hair 23.02",
+        []
+      ],
+      [
+        "Hair Hair 23.03",
+        []
+      ],
+      [
+        "Hair Hair 23.04",
+        []
+      ],
+      [
+        "Hair Hair 24.01",
+        []
+      ],
+      [
+        "Hair Hair 24.02",
+        []
+      ],
+      [
+        "Hair Hair 24.03",
+        []
+      ],
+      [
+        "Hair Hair 24.04",
+        []
+      ],
+      [
+        "Hair Hair 25.01",
+        []
+      ],
+      [
+        "Hair Hair 25.02",
+        []
+      ],
+      [
+        "Hair Hair 25.03",
+        []
+      ],
+      [
+        "Hair Hair 25.04",
+        []
+      ],
+      [
+        "Hair Hair 26.01",
+        []
+      ],
+      [
+        "Hair Hair 26.02",
+        []
+      ],
+      [
+        "Hair Hair 26.03",
+        []
+      ],
+      [
+        "Hair Hair 26.04",
+        []
+      ],
+      [
+        "Hair Hair 27.01",
+        []
+      ],
+      [
+        "Hair Hair 27.02",
+        []
+      ],
+      [
+        "Hair Hair 27.03",
+        []
+      ],
+      [
+        "Hair Hair 27.04",
+        []
+      ],
+      [
+        "Hair Hair 28.01",
+        []
+      ],
+      [
+        "Hair Hair 28.02",
+        []
+      ],
+      [
+        "Hair Hair 28.03",
+        []
+      ],
+      [
+        "Hair Hair 28.04",
+        []
+      ],
+      [
+        "Hair Hair 29.01",
+        []
+      ],
+      [
+        "Hair Hair 29.02",
+        []
+      ],
+      [
+        "Hair Hair 29.03",
+        []
+      ],
+      [
+        "Hair Hair 29.04",
+        []
+      ],
+      [
+        "Hair Hair 30.01",
+        []
+      ],
+      [
+        "Hair Hair 30.02",
+        []
+      ],
+      [
+        "Hair Hair 30.03",
+        []
+      ],
+      [
+        "Hair Hair 30.04",
+        []
+      ],
+      [
+        "Hair Hair 31.01",
+        []
+      ],
+      [
+        "Hair Hair 31.02",
+        []
+      ],
+      [
+        "Hair Hair 31.03",
+        []
+      ],
+      [
+        "Hair Hair 31.04",
+        []
+      ],
+      [
+        "Hair Hair 32.01",
+        []
+      ],
+      [
+        "Hair Hair 32.02",
+        []
+      ],
+      [
+        "Hair Hair 32.03",
+        []
+      ],
+      [
+        "Hair Hair 32.04",
+        []
+      ],
+      [
+        "shoulder.L",
+        []
+      ],
+      [
+        "upper_arm.L",
+        []
+      ],
+      [
+        "forearm.L",
+        [
+          [
+            1601894932576,
+            "IK",
+            "CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77",
+            false,
+            0.0,
+            1601862238080,
+            "CTRL_hand_IK.L"
+          ]
+        ]
+      ],
+      [
+        "hand.L",
+        [
+          [
+            1601894920288,
+            "COPY_ROTATION",
+            "CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77",
+            true,
+            0.0,
+            1601862238080,
+            "CTRL_hand_IK.L"
+          ],
+          [
+            1601894923104,
+            "COPY_ROTATION",
+            "CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_hand_rotation.L"
+          ]
+        ]
+      ],
+      [
+        "f_index.01.L",
+        []
+      ],
+      [
+        "f_index.02.L",
+        []
+      ],
+      [
+        "f_index.03.L",
+        []
+      ],
+      [
+        "thumb.01.L",
+        []
+      ],
+      [
+        "thumb.02.L",
+        []
+      ],
+      [
+        "thumb.03.L",
+        []
+      ],
+      [
+        "f_middle.01.L",
+        []
+      ],
+      [
+        "f_middle.02.L",
+        []
+      ],
+      [
+        "f_middle.03.L",
+        []
+      ],
+      [
+        "f_ring.01.L",
+        []
+      ],
+      [
+        "f_ring.02.L",
+        []
+      ],
+      [
+        "f_ring.03.L",
+        []
+      ],
+      [
+        "f_pinky.01.L",
+        []
+      ],
+      [
+        "f_pinky.02.L",
+        []
+      ],
+      [
+        "f_pinky.03.L",
+        []
+      ],
+      [
+        "shoulder.R",
+        []
+      ],
+      [
+        "upper_arm.R",
+        []
+      ],
+      [
+        "forearm.R",
+        [
+          [
+            1601894933088,
+            "IK",
+            "CDLimbIK_IK_9c08616fb2024757952dbd433048e839",
+            false,
+            0.0,
+            1601862238080,
+            "CTRL_hand_IK.R"
+          ]
+        ]
+      ],
+      [
+        "hand.R",
+        [
+          [
+            1601894922592,
+            "COPY_ROTATION",
+            "CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839",
+            true,
+            0.0,
+            1601862238080,
+            "CTRL_hand_IK.R"
+          ],
+          [
+            1601894923360,
+            "COPY_ROTATION",
+            "CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_hand_rotation.R"
+          ]
+        ]
+      ],
+      [
+        "f_index.01.R",
+        []
+      ],
+      [
+        "f_index.02.R",
+        []
+      ],
+      [
+        "f_index.03.R",
+        []
+      ],
+      [
+        "thumb.01.R",
+        []
+      ],
+      [
+        "thumb.02.R",
+        []
+      ],
+      [
+        "thumb.03.R",
+        []
+      ],
+      [
+        "f_middle.01.R",
+        []
+      ],
+      [
+        "f_middle.02.R",
+        []
+      ],
+      [
+        "f_middle.03.R",
+        []
+      ],
+      [
+        "f_ring.01.R",
+        []
+      ],
+      [
+        "f_ring.02.R",
+        []
+      ],
+      [
+        "f_ring.03.R",
+        []
+      ],
+      [
+        "f_pinky.01.R",
+        []
+      ],
+      [
+        "f_pinky.02.R",
+        []
+      ],
+      [
+        "f_pinky.03.R",
+        []
+      ],
+      [
+        "breast.L",
+        []
+      ],
+      [
+        "breast.R",
+        []
+      ],
+      [
+        "thigh.L",
+        []
+      ],
+      [
+        "shin.L",
+        [
+          [
+            1601894923616,
+            "IK",
+            "CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_foot_ankle.L"
+          ]
+        ]
+      ],
+      [
+        "foot.L",
+        [
+          [
+            1601894933600,
+            "COPY_ROTATION",
+            "CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4",
+            true,
+            0.0,
+            1601862238080,
+            "MCH_foot_ankle.L"
+          ],
+          [
+            1601894924128,
+            "COPY_ROTATION",
+            "CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_foot_auto_rotation.L"
+          ]
+        ]
+      ],
+      [
+        "toe.L",
+        [
+          [
+            1601894941536,
+            "COPY_TRANSFORMS",
+            "CD Toe Bend",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_toe_bend.L"
+          ]
+        ]
+      ],
+      [
+        "MCH_toe_FK_ref.L",
+        []
+      ],
+      [
+        "MCH_toe_auto_ref.L",
+        [
+          [
+            1601894949472,
+            "COPY_TRANSFORMS",
+            "CD Foot Auto Toe Reference",
+            false,
+            1.0,
+            1601862238080,
+            "MCH_toe_IK_ref.L"
+          ]
+        ]
+      ],
+      [
+        "thigh.R",
+        []
+      ],
+      [
+        "shin.R",
+        [
+          [
+            1601894941280,
+            "IK",
+            "CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_foot_ankle.R"
+          ]
+        ]
+      ],
+      [
+        "foot.R",
+        [
+          [
+            1601894936672,
+            "COPY_ROTATION",
+            "CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79",
+            true,
+            0.0,
+            1601862238080,
+            "MCH_foot_ankle.R"
+          ],
+          [
+            1601894946144,
+            "COPY_ROTATION",
+            "CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_foot_auto_rotation.R"
+          ]
+        ]
+      ],
+      [
+        "toe.R",
+        [
+          [
+            1601894941792,
+            "COPY_TRANSFORMS",
+            "CD Toe Bend",
+            false,
+            1.0,
+            1601862238080,
+            "CTRL_toe_bend.R"
+          ]
+        ]
+      ],
+      [
+        "MCH_toe_FK_ref.R",
+        []
+      ],
+      [
+        "MCH_toe_auto_ref.R",
+        [
+          [
+            1601894944864,
+            "COPY_TRANSFORMS",
+            "CD Foot Auto Toe Reference",
+            false,
+            1.0,
+            1601862238080,
+            "MCH_toe_IK_ref.R"
+          ]
+        ]
+      ],
+      [
+        "CTRL_torso_bend",
+        []
+      ],
+      [
+        "MCH_torso_offset_1",
+        [
+          [
+            1601894943584,
+            "COPY_ROTATION",
+            "CD Torso Shared Bend",
+            false,
+            0.3333333432674408,
+            1601862238080,
+            "CTRL_torso_bend"
+          ]
+        ]
+      ],
+      [
+        "CTRL_torso_1",
+        []
+      ],
+      [
+        "MCH_torso_offset_2",
+        [
+          [
+            1601894934112,
+            "COPY_ROTATION",
+            "CD Torso Shared Bend",
+            false,
+            0.3333333432674408,
+            1601862238080,
+            "CTRL_torso_bend"
+          ]
+        ]
+      ],
+      [
+        "CTRL_torso_2",
+        []
+      ],
+      [
+        "MCH_torso_offset_3",
+        [
+          [
+            1601894942560,
+            "COPY_ROTATION",
+            "CD Torso Shared Bend",
+            false,
+            0.3333333432674408,
+            1601862238080,
+            "CTRL_torso_bend"
+          ]
+        ]
+      ],
+      [
+        "CTRL_torso_3",
+        []
+      ],
+      [
+        "SK_Dress_Waist",
+        []
+      ],
+      [
+        "SK_Dress_Mid",
+        []
+      ],
+      [
+        "SK_Dress_Mid_01",
+        []
+      ],
+      [
+        "SK_Dress_Mid_02",
+        []
+      ],
+      [
+        "SK_Dress_Mid_03",
+        []
+      ],
+      [
+        "SK_Dress_Mid_04",
+        []
+      ],
+      [
+        "SK_Dress_Mid_05",
+        []
+      ],
+      [
+        "SK_Dress_Mid_06",
+        []
+      ],
+      [
+        "SK_Dress_Mid_07",
+        []
+      ],
+      [
+        "SK_Dress_Mid_08",
+        []
+      ],
+      [
+        "SK_Dress_Hem",
+        []
+      ],
+      [
+        "SK_Dress_Hem_01",
+        []
+      ],
+      [
+        "SK_Dress_Hem_02",
+        []
+      ],
+      [
+        "SK_Dress_Hem_03",
+        []
+      ],
+      [
+        "SK_Dress_Hem_04",
+        []
+      ],
+      [
+        "SK_Dress_Hem_05",
+        []
+      ],
+      [
+        "SK_Dress_Hem_06",
+        []
+      ],
+      [
+        "SK_Dress_Hem_07",
+        []
+      ],
+      [
+        "SK_Dress_Hem_08",
+        []
+      ],
+      [
+        "SK_Dress_MCH_01_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_01_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_01_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_01_04",
+        [
+          [
+            1601894947168,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896915072,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_01_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_01_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_01_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_01_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_01_01",
+        [
+          [
+            1601894942304,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_01_01"
+          ],
+          [
+            1601894938208,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_01_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_02",
+        [
+          [
+            1601894944352,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_01_02"
+          ],
+          [
+            1601894942048,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_01_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_03",
+        [
+          [
+            1601894943840,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_01_03"
+          ],
+          [
+            1601894936928,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_01_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_01_04",
+        [
+          [
+            1601894935136,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_01_04"
+          ],
+          [
+            1601894935392,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_01_04"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_MCH_02_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_02_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_02_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_02_04",
+        [
+          [
+            1601894935648,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896931392,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_02_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_02_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_02_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_02_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_02_01",
+        [
+          [
+            1601894948448,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_02_01"
+          ],
+          [
+            1601894936416,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_02_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_02",
+        [
+          [
+            1601894942816,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_02_02"
+          ],
+          [
+            1601894938720,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_02_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_03",
+        [
+          [
+            1601894933856,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_02_03"
+          ],
+          [
+            1601894940768,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_02_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_02_04",
+        [
+          [
+            1601894946400,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_02_04"
+          ],
+          [
+            1601894937696,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_02_04"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_MCH_03_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_03_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_03_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_03_04",
+        [
+          [
+            1601894943072,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896916432,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_03_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_03_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_03_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_03_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_03_01",
+        [
+          [
+            1601894940256,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_03_01"
+          ],
+          [
+            1601894944096,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_03_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_02",
+        [
+          [
+            1601894949728,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_03_02"
+          ],
+          [
+            1601894946656,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_03_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_03",
+        [
+          [
+            1601894948960,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_03_03"
+          ],
+          [
+            1601894943328,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_03_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_03_04",
+        [
+          [
+            1601894944608,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_03_04"
+          ],
+          [
+            1601894946912,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_03_04"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_MCH_04_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_04_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_04_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_04_04",
+        [
+          [
+            1601894945120,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896932752,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_04_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_04_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_04_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_04_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_04_01",
+        [
+          [
+            1601894949216,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_04_01"
+          ],
+          [
+            1601894949984,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_04_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_02",
+        [
+          [
+            1601894945376,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_04_02"
+          ],
+          [
+            1601894938464,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_04_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_03",
+        [
+          [
+            1601894934368,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_04_03"
+          ],
+          [
+            1601894939232,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_04_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_04_04",
+        [
+          [
+            1601894945632,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_04_04"
+          ],
+          [
+            1601894934624,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_04_04"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_MCH_05_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_05_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_05_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_05_04",
+        [
+          [
+            1601894935904,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896934112,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_05_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_05_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_05_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_05_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_05_01",
+        [
+          [
+            1601894945888,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_05_01"
+          ],
+          [
+            1601894934880,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_05_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_02",
+        [
+          [
+            1601894947424,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_05_02"
+          ],
+          [
+            1601894947680,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_05_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_03",
+        [
+          [
+            1601894947936,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_05_03"
+          ],
+          [
+            1601894937440,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_05_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_05_04",
+        [
+          [
+            1601894948704,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_05_04"
+          ],
+          [
+            1601894937184,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_05_04"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_MCH_06_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_06_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_06_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_06_04",
+        [
+          [
+            1601894948192,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896942272,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_06_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_06_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_06_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_06_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_06_01",
+        [
+          [
+            1601894936160,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_06_01"
+          ],
+          [
+            1601894940512,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_06_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_02",
+        [
+          [
+            1601894937952,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_06_02"
+          ],
+          [
+            1601894938976,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_06_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_03",
+        [
+          [
+            1601894939488,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_06_03"
+          ],
+          [
+            1601894939744,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_06_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_06_04",
+        [
+          [
+            1601894940000,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_06_04"
+          ],
+          [
+            1601894966112,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_06_04"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_MCH_07_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_07_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_07_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_07_04",
+        [
+          [
+            1601894964320,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896935472,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_07_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_07_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_07_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_07_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_07_01",
+        [
+          [
+            1601894959200,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_07_01"
+          ],
+          [
+            1601894964576,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_07_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_02",
+        [
+          [
+            1601894964832,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_07_02"
+          ],
+          [
+            1601894951008,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_07_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_03",
+        [
+          [
+            1601894964064,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_07_03"
+          ],
+          [
+            1601894952288,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_07_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_07_04",
+        [
+          [
+            1601894957920,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_07_04"
+          ],
+          [
+            1601894961504,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_07_04"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_MCH_08_01",
+        []
+      ],
+      [
+        "SK_Dress_MCH_08_02",
+        []
+      ],
+      [
+        "SK_Dress_MCH_08_03",
+        []
+      ],
+      [
+        "SK_Dress_MCH_08_04",
+        [
+          [
+            1601894953824,
+            "SPLINE_IK",
+            "Skirt manual wire",
+            false,
+            1.0,
+            1601896936832,
+            ""
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_PHYS_08_01",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_08_02",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_08_03",
+        []
+      ],
+      [
+        "SK_Dress_PHYS_08_04",
+        []
+      ],
+      [
+        "SK_Dress_DEF_08_01",
+        [
+          [
+            1601894953312,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_08_01"
+          ],
+          [
+            1601894965088,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_08_01"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_02",
+        [
+          [
+            1601894951776,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_08_02"
+          ],
+          [
+            1601894959456,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_08_02"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_03",
+        [
+          [
+            1601894957408,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_08_03"
+          ],
+          [
+            1601894963040,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_08_03"
+          ]
+        ]
+      ],
+      [
+        "SK_Dress_DEF_08_04",
+        [
+          [
+            1601894959968,
+            "COPY_TRANSFORMS",
+            "Skirt manual pose",
+            false,
+            1.0,
+            1601862238080,
+            "SK_Dress_MCH_08_04"
+          ],
+          [
+            1601894965344,
+            "COPY_ROTATION",
+            "Skirt physics delta",
+            true,
+            0.0,
+            1601862238080,
+            "SK_Dress_PHYS_08_04"
+          ]
+        ]
+      ],
+      [
+        "CTRL_master",
+        []
+      ],
+      [
+        "CTRL_hand_IK.L",
+        []
+      ],
+      [
+        "MCH_hand_rotation.L",
+        []
+      ],
+      [
+        "CTRL_elbow_pole.L",
+        []
+      ],
+      [
+        "MCH_elbow_pole_aim.L",
+        [
+          [
+            1601894954080,
+            "DAMPED_TRACK",
+            "CDLimbIK_POLE_DISPLAY_TRACK_29ed206dfc2042768e1c07044b58cc77",
+            false,
+            1.0,
+            1601862238080,
+            "forearm.L"
+          ]
+        ]
+      ],
+      [
+        "CTRL_hand_IK.R",
+        []
+      ],
+      [
+        "MCH_hand_rotation.R",
+        []
+      ],
+      [
+        "CTRL_elbow_pole.R",
+        []
+      ],
+      [
+        "MCH_elbow_pole_aim.R",
+        [
+          [
+            1601894957664,
+            "DAMPED_TRACK",
+            "CDLimbIK_POLE_DISPLAY_TRACK_9c08616fb2024757952dbd433048e839",
+            false,
+            1.0,
+            1601862238080,
+            "forearm.R"
+          ]
+        ]
+      ],
+      [
+        "CTRL_foot_IK.L",
+        []
+      ],
+      [
+        "CTRL_foot_roll.L",
+        []
+      ],
+      [
+        "MCH_foot_heel.L",
+        []
+      ],
+      [
+        "MCH_foot_tip.L",
+        []
+      ],
+      [
+        "MCH_foot_ball.L",
+        []
+      ],
+      [
+        "MCH_foot_ankle.L",
+        []
+      ],
+      [
+        "MCH_toe_IK_ref.L",
+        []
+      ],
+      [
+        "MCH_toe_space.L",
+        [
+          [
+            1601894966368,
+            "COPY_TRANSFORMS",
+            "CD Foot FK Toe Space",
+            false,
+            1.0,
+            1601862238080,
+            "MCH_toe_FK_ref.L"
+          ],
+          [
+            1601894956640,
+            "COPY_TRANSFORMS",
+            "CD Foot IK Toe Space",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_toe_IK_ref.L"
+          ],
+          [
+            1601894950496,
+            "COPY_TRANSFORMS",
+            "CD Foot Auto Toe Space",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_toe_auto_ref.L"
+          ]
+        ]
+      ],
+      [
+        "CTRL_toe_bend.L",
+        []
+      ],
+      [
+        "CTRL_knee_pole.L",
+        []
+      ],
+      [
+        "MCH_knee_pole_aim.L",
+        [
+          [
+            1601894951264,
+            "DAMPED_TRACK",
+            "CDLimbIK_POLE_DISPLAY_TRACK_91d603ba5a454da3b17753974e882bf4",
+            false,
+            1.0,
+            1601862238080,
+            "shin.L"
+          ]
+        ]
+      ],
+      [
+        "CTRL_foot_IK.R",
+        []
+      ],
+      [
+        "CTRL_foot_roll.R",
+        []
+      ],
+      [
+        "MCH_foot_heel.R",
+        []
+      ],
+      [
+        "MCH_foot_tip.R",
+        []
+      ],
+      [
+        "MCH_foot_ball.R",
+        []
+      ],
+      [
+        "MCH_foot_ankle.R",
+        []
+      ],
+      [
+        "MCH_toe_IK_ref.R",
+        []
+      ],
+      [
+        "MCH_toe_space.R",
+        [
+          [
+            1601894963296,
+            "COPY_TRANSFORMS",
+            "CD Foot FK Toe Space",
+            false,
+            1.0,
+            1601862238080,
+            "MCH_toe_FK_ref.R"
+          ],
+          [
+            1601894962016,
+            "COPY_TRANSFORMS",
+            "CD Foot IK Toe Space",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_toe_IK_ref.R"
+          ],
+          [
+            1601894958432,
+            "COPY_TRANSFORMS",
+            "CD Foot Auto Toe Space",
+            false,
+            0.0,
+            1601862238080,
+            "MCH_toe_auto_ref.R"
+          ]
+        ]
+      ],
+      [
+        "CTRL_toe_bend.R",
+        []
+      ],
+      [
+        "CTRL_knee_pole.R",
+        []
+      ],
+      [
+        "MCH_knee_pole_aim.R",
+        [
+          [
+            1601894956896,
+            "DAMPED_TRACK",
+            "CDLimbIK_POLE_DISPLAY_TRACK_cbf6ac471cc84a4786f9a665e3b87b79",
+            false,
+            1.0,
+            1601862238080,
+            "shin.R"
+          ]
+        ]
+      ],
+      [
+        "MCH_foot_auto_rotation.L",
+        [
+          [
+            1601894963552,
+            "COPY_ROTATION",
+            "CD Foot Auto Rotation",
+            false,
+            1.0,
+            1601862238080,
+            "MCH_foot_ankle.L"
+          ]
+        ]
+      ],
+      [
+        "MCH_foot_auto_rotation.R",
+        [
+          [
+            1601894965600,
+            "COPY_ROTATION",
+            "CD Foot Auto Rotation",
+            false,
+            1.0,
+            1601862238080,
+            "MCH_foot_ankle.R"
+          ]
+        ]
+      ]
+    ],
+    "drivers": [
+      [
+        1601882696576,
+        "pose.bones[\"shin.R\"].constraints[\"CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882696768,
+        "pose.bones[\"foot.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882699072,
+        "pose.bones[\"foot.R\"].constraints[\"CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882699840,
+        "pose.bones[\"forearm.R\"].constraints[\"CDLimbIK_IK_9c08616fb2024757952dbd433048e839\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882693504,
+        "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882697344,
+        "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882697728,
+        "pose.bones[\"shin.L\"].constraints[\"CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882693696,
+        "pose.bones[\"foot.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882699264,
+        "pose.bones[\"foot.L\"].constraints[\"CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882695424,
+        "pose.bones[\"forearm.L\"].constraints[\"CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882698112,
+        "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882698688,
+        "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882698880,
+        "pose.bones[\"CTRL_master\"].scale",
+        false,
+        "SCRIPTED",
+        "max(root_scale,0.001)",
+        [
+          [
+            "root_scale",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_master\"][\"uniform_scale\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882699456,
+        "pose.bones[\"CTRL_master\"].scale",
+        false,
+        "SCRIPTED",
+        "max(root_scale,0.001)",
+        [
+          [
+            "root_scale",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_master\"][\"uniform_scale\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882700032,
+        "pose.bones[\"CTRL_master\"].scale",
+        false,
+        "SCRIPTED",
+        "max(root_scale,0.001)",
+        [
+          [
+            "root_scale",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_master\"][\"uniform_scale\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882695616,
+        "pose.bones[\"MCH_foot_heel.L\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "max(roll,0)",
+        [
+          [
+            "roll",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882693120,
+        "pose.bones[\"MCH_foot_heel.L\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "bank",
+        [
+          [
+            "bank",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[1]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882695808,
+        "pose.bones[\"MCH_foot_ball.L\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "max(min(roll,0),-0.7853981633974483)",
+        [
+          [
+            "roll",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882696000,
+        "pose.bones[\"MCH_foot_tip.L\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "min(roll+0.7853981633974483,0)",
+        [
+          [
+            "roll",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882696192,
+        "pose.bones[\"MCH_toe_space.L\"].constraints[\"CD Foot IK Toe Space\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601882696384,
+        "pose.bones[\"MCH_toe_space.L\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk * auto",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]"
+              ]
+            ]
+          ],
+          [
+            "auto",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "data.bones[\"CTRL_foot_IK.L\"][\"character_designer_limb_ik_auto_align\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894162960,
+        "pose.bones[\"MCH_foot_heel.R\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "max(roll,0)",
+        [
+          [
+            "roll",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894164304,
+        "pose.bones[\"MCH_foot_heel.R\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "bank",
+        [
+          [
+            "bank",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[1]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894166416,
+        "pose.bones[\"MCH_foot_ball.R\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "max(min(roll,0),-0.7853981633974483)",
+        [
+          [
+            "roll",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894163920,
+        "pose.bones[\"MCH_foot_tip.R\"].rotation_euler",
+        false,
+        "SCRIPTED",
+        "min(roll+0.7853981633974483,0)",
+        [
+          [
+            "roll",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894165840,
+        "pose.bones[\"MCH_toe_space.R\"].constraints[\"CD Foot IK Toe Space\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894161040,
+        "pose.bones[\"MCH_toe_space.R\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+        false,
+        "SCRIPTED",
+        "ik_fk * auto",
+        [
+          [
+            "ik_fk",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]"
+              ]
+            ]
+          ],
+          [
+            "auto",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "data.bones[\"CTRL_foot_IK.R\"][\"character_designer_limb_ik_auto_align\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894162768,
+        "pose.bones[\"SK_Dress_DEF_01_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894162192,
+        "pose.bones[\"SK_Dress_DEF_01_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894161232,
+        "pose.bones[\"SK_Dress_DEF_01_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894161616,
+        "pose.bones[\"SK_Dress_DEF_01_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894159888,
+        "pose.bones[\"SK_Dress_DEF_02_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894162384,
+        "pose.bones[\"SK_Dress_DEF_02_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894159696,
+        "pose.bones[\"SK_Dress_DEF_02_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894164112,
+        "pose.bones[\"SK_Dress_DEF_02_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894160656,
+        "pose.bones[\"SK_Dress_DEF_03_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894161424,
+        "pose.bones[\"SK_Dress_DEF_03_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894162000,
+        "pose.bones[\"SK_Dress_DEF_03_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894158544,
+        "pose.bones[\"SK_Dress_DEF_03_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894165648,
+        "pose.bones[\"SK_Dress_DEF_04_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894161808,
+        "pose.bones[\"SK_Dress_DEF_04_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894159120,
+        "pose.bones[\"SK_Dress_DEF_04_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894158736,
+        "pose.bones[\"SK_Dress_DEF_04_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894163152,
+        "pose.bones[\"SK_Dress_DEF_05_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894166032,
+        "pose.bones[\"SK_Dress_DEF_05_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894162576,
+        "pose.bones[\"SK_Dress_DEF_05_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894163536,
+        "pose.bones[\"SK_Dress_DEF_05_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894163344,
+        "pose.bones[\"SK_Dress_DEF_06_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894160080,
+        "pose.bones[\"SK_Dress_DEF_06_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894163728,
+        "pose.bones[\"SK_Dress_DEF_06_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894166224,
+        "pose.bones[\"SK_Dress_DEF_06_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894164496,
+        "pose.bones[\"SK_Dress_DEF_07_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894164688,
+        "pose.bones[\"SK_Dress_DEF_07_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894165264,
+        "pose.bones[\"SK_Dress_DEF_07_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894164880,
+        "pose.bones[\"SK_Dress_DEF_07_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894165072,
+        "pose.bones[\"SK_Dress_DEF_08_01\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894165456,
+        "pose.bones[\"SK_Dress_DEF_08_02\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894158928,
+        "pose.bones[\"SK_Dress_DEF_08_03\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ],
+      [
+        1601894159312,
+        "pose.bones[\"SK_Dress_DEF_08_04\"].constraints[\"Skirt physics delta\"].influence",
+        false,
+        "AVERAGE",
+        "1.0",
+        [
+          [
+            "physics",
+            "SINGLE_PROP",
+            [
+              [
+                1601862238080,
+                "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]"
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  },
+  "strip_receipt": [
+    {
+      "source": "Dress",
+      "owner": "857c5aaad1ac4160953847b083deba20",
+      "backend": "DIRECT_MAIN_CLOTH_V1",
+      "simulation_baked": false,
+      "physics_omitted": true,
+      "manual_original_preserved": true
+    }
+  ],
+  "observed_worker_error": {
+    "error": "AnimationExportError('SK_Dress_DEF_01_01 at sample 1: shear cannot be represented by FBX TRS channels (error 0.000189118).')",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\Validation\\dress_automatic_20261005\\diagnose_private_manual_action_shear52.py\", line 284, in main\n    worker.private_component_export_job(job)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py\", line 458, in private_component_export_job\n    add_channels(export_rig.pose.bones[bone.name].path_from_id() + '.', basis, f'{bone.name} at sample {index}')\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py\", line 439, in add_channels\n    location, rotation, scale = _trs(matrix, label)\n                                ~~~~^^^^^^^^^^^^^^^\n  File \"D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py\", line 210, in _trs\n    raise AnimationExportError(f'{label}: shear cannot be represented by FBX TRS channels (error {error:.6g}).')\nmanual_shear_worker_helpers.AnimationExportError: SK_Dress_DEF_01_01 at sample 1: shear cannot be represented by FBX TRS channels (error 0.000189118).\n"
+  },
+  "actual_bones": {
+    "source": {
+      "name": "SK_Dress_DEF_01_01",
+      "parent": "SK_Dress_Waist",
+      "Rest": [
+        [
+          0.9408307075500488,
+          0.2461284101009369,
+          0.23291778564453125,
+          0.12890870869159698
+        ],
+        [
+          -0.24612602591514587,
+          0.02389795146882534,
+          0.9689427614212036,
+          0.08175861835479736
+        ],
+        [
+          0.23291583359241486,
+          -0.9689422845840454,
+          0.083063505589962,
+          1.2996339797973633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "length": 0.07866580784320831,
+      "use_connect": false,
+      "use_deform": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true
+    },
+    "export": {
+      "name": "SK_Dress_DEF_01_01",
+      "parent": "SK_Dress_Waist",
+      "Rest": [
+        [
+          0.9408307075500488,
+          0.2461284101009369,
+          0.23291778564453125,
+          0.12890870869159698
+        ],
+        [
+          -0.24612602591514587,
+          0.02389795146882534,
+          0.9689427614212036,
+          0.08175861835479736
+        ],
+        [
+          0.23291583359241486,
+          -0.9689422845840454,
+          0.083063505589962,
+          1.2996339797973633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "length": 0.07866580784320831,
+      "use_connect": false,
+      "use_deform": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true
+    },
+    "source_parent": {
+      "name": "SK_Dress_Waist",
+      "parent": "Hips",
+      "Rest": [
+        [
+          1.0,
+          5.417888360170764e-14,
+          -5.960465898624534e-08,
+          5.712728778917153e-08
+        ],
+        [
+          -5.960463056453591e-08,
+          -6.705522537231445e-08,
+          -1.0000001192092896,
+          0.08890476822853088
+        ],
+        [
+          -5.417888360170764e-14,
+          1.0000001192092896,
+          -2.60770320892334e-07,
+          1.2996339797973633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "length": 0.02134239301085472,
+      "use_connect": false,
+      "use_deform": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true
+    },
+    "export_parent": {
+      "name": "SK_Dress_Waist",
+      "parent": "Hips",
+      "Rest": [
+        [
+          1.0,
+          5.417888360170764e-14,
+          -5.960465898624534e-08,
+          5.712728778917153e-08
+        ],
+        [
+          -5.960463056453591e-08,
+          -6.705522537231445e-08,
+          -1.0000001192092896,
+          0.08890476822853088
+        ],
+        [
+          -5.417888360170764e-14,
+          1.0000001192092896,
+          -2.60770320892334e-07,
+          1.2996339797973633
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "length": 0.02134239301085472,
+      "use_connect": false,
+      "use_deform": true,
+      "inherit_scale": "FULL",
+      "use_inherit_rotation": true,
+      "use_local_location": true
+    }
+  },
+  "traceback_failed_basis": {
+    "matrix": [
+      [
+        0.996145486831665,
+        0.08762869238853455,
+        -0.007984045892953873,
+        -2.980232238769531e-07
+      ],
+      [
+        -0.08777669072151184,
+        0.9933508038520813,
+        -0.10143780708312988,
+        7.152557373046875e-07
+      ],
+      [
+        -0.0009556412696838379,
+        0.10160854458808899,
+        0.9948256015777588,
+        -2.2351741790771484e-07
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "determinant": 1.002393126487732,
+    "decomposed_scale": [
+      1.0000057220458984,
+      1.0023716688156128,
+      1.0000156164169312
+    ],
+    "TRS_reconstruction_residual": 0.00018911808729171753,
+    "column_lengths": [
+      1.0000057379061447,
+      1.0023716469362818,
+      1.0000156696887765
+    ],
+    "normalized_column_dots_xy_xz_yz": [
+      7.751131051775856e-07,
+      -9.26646124394219e-08,
+      -0.00037927496335280234
+    ],
+    "maximum_column_nonorthogonality": 0.00037927496335280234
+  },
+  "samples": [
+    {
+      "sample_index": 0,
+      "original_QA_frame": 1,
+      "worker_world": {
+        "matrix": [
+          [
+            0.782315731048584,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.782315731048584,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.782315731048584,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 0.4787912666797638,
+        "decomposed_scale": [
+          0.782315731048584,
+          0.782315731048584,
+          0.782315731048584
+        ],
+        "TRS_reconstruction_residual": 0.0,
+        "column_lengths": [
+          0.782315747990532,
+          0.782315747990532,
+          0.782315747990532
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maximum_column_nonorthogonality": 0.0
+      },
+      "worker_pose": {
+        "matrix": [
+          [
+            0.9408344030380249,
+            0.26395466923713684,
+            0.2125033289194107,
+            0.1289084255695343
+          ],
+          [
+            -0.2461271435022354,
+            0.1012544110417366,
+            0.9639332294464111,
+            0.08175849169492722
+          ],
+          [
+            0.23291689157485962,
+            -0.9592052698135376,
+            0.16023017466068268,
+            1.2996315956115723
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 0.9999980926513672,
+        "decomposed_scale": [
+          0.9999991059303284,
+          0.9999996423721313,
+          0.9999992847442627
+        ],
+        "TRS_reconstruction_residual": 7.748603820800781e-07,
+        "column_lengths": [
+          0.9999991171058095,
+          0.9999996437690517,
+          0.9999993210656126
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          1.0617090506516863e-06,
+          6.258497476112477e-07,
+          1.0803353048793524e-07
+        ],
+        "maximum_column_nonorthogonality": 1.0617090506516863e-06
+      },
+      "worker_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9999984502792358,
+              1.5365486660812167e-13,
+              -5.960465188081798e-08,
+              5.7127188313188526e-08
+            ],
+            [
+              -5.960450977227083e-08,
+              -6.705522537231445e-08,
+              -0.9999992847442627,
+              0.08890470117330551
+            ],
+            [
+              4.1300296516055823e-14,
+              0.9999992847442627,
+              -2.60770320892334e-07,
+              1.2996329069137573
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999970197677612,
+          "decomposed_scale": [
+            0.9999984502792358,
+            0.9999992847442627,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 1.2641156388326635e-07,
+          "column_lengths": [
+            0.9999984502780368,
+            0.9999992847440091,
+            0.9999992847440426
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            1.9895213330228253e-13,
+            -9.237077563967827e-14,
+            -1.9371522341789673e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9371522341789673e-07
+        }
+      },
+      "before_strip_pose": {
+        "matrix": [
+          [
+            0.9408344030380249,
+            0.26395466923713684,
+            0.2125033289194107,
+            0.1289084255695343
+          ],
+          [
+            -0.2461271435022354,
+            0.1012544110417366,
+            0.9639332294464111,
+            0.08175849169492722
+          ],
+          [
+            0.23291689157485962,
+            -0.9592052698135376,
+            0.16023017466068268,
+            1.2996315956115723
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 0.9999980926513672,
+        "decomposed_scale": [
+          0.9999991059303284,
+          0.9999996423721313,
+          0.9999992847442627
+        ],
+        "TRS_reconstruction_residual": 7.748603820800781e-07,
+        "column_lengths": [
+          0.9999991171058095,
+          0.9999996437690517,
+          0.9999993210656126
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          1.0617090506516863e-06,
+          6.258497476112477e-07,
+          1.0803353048793524e-07
+        ],
+        "maximum_column_nonorthogonality": 1.0617090506516863e-06
+      },
+      "before_strip_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9999984502792358,
+              1.5365486660812167e-13,
+              -5.960465188081798e-08,
+              5.7127188313188526e-08
+            ],
+            [
+              -5.960450977227083e-08,
+              -6.705522537231445e-08,
+              -0.9999992847442627,
+              0.08890470117330551
+            ],
+            [
+              4.1300296516055823e-14,
+              0.9999992847442627,
+              -2.60770320892334e-07,
+              1.2996329069137573
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999970197677612,
+          "decomposed_scale": [
+            0.9999984502792358,
+            0.9999992847442627,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 1.2641156388326635e-07,
+          "column_lengths": [
+            0.9999984502780368,
+            0.9999992847440091,
+            0.9999992847440426
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            1.9895213330228253e-13,
+            -9.237077563967827e-14,
+            -1.9371522341789673e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9371522341789673e-07
+        }
+      },
+      "before_strip_source_basis": {
+        "matrix": [
+          [
+            1.0000054836273193,
+            7.450580596923828e-08,
+            1.862645149230957e-08,
+            -3.8743019104003906e-07
+          ],
+          [
+            0.0,
+            0.9968024492263794,
+            -0.07991442084312439,
+            1.430511474609375e-06
+          ],
+          [
+            2.2351741790771484e-08,
+            0.07991490513086319,
+            0.9968017339706421,
+            -2.086162567138672e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0000063180923462,
+        "decomposed_scale": [
+          1.0000054836273193,
+          1.0000007152557373,
+          1.0
+        ],
+        "TRS_reconstruction_residual": 2.1606683731079102e-07,
+        "column_lengths": [
+          1.0000054836122845,
+          1.0000007713676278,
+          1.0000000172294676
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.629197825914104e-08,
+          4.090658358648613e-08,
+          4.246827605088399e-07
+        ],
+        "maximum_column_nonorthogonality": 4.246827605088399e-07,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 2.1606683731079102e-07
+      },
+      "captured_worker_source_basis": {
+        "matrix": [
+          [
+            1.0000054836273193,
+            7.450580596923828e-08,
+            1.862645149230957e-08,
+            -3.8743019104003906e-07
+          ],
+          [
+            0.0,
+            0.9968024492263794,
+            -0.07991442084312439,
+            1.430511474609375e-06
+          ],
+          [
+            2.2351741790771484e-08,
+            0.07991490513086319,
+            0.9968017339706421,
+            -2.086162567138672e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0000063180923462,
+        "decomposed_scale": [
+          1.0000054836273193,
+          1.0000007152557373,
+          1.0
+        ],
+        "TRS_reconstruction_residual": 2.1606683731079102e-07,
+        "column_lengths": [
+          1.0000054836122845,
+          1.0000007713676278,
+          1.0000000172294676
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.629197825914104e-08,
+          4.090658358648613e-08,
+          4.246827605088399e-07
+        ],
+        "maximum_column_nonorthogonality": 4.246827605088399e-07,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 2.1606683731079102e-07
+      },
+      "post_strip_all_source_re_evaluated_pose": {
+        "matrix": [
+          [
+            0.9408344030380249,
+            0.26395466923713684,
+            0.2125033289194107,
+            0.1289084255695343
+          ],
+          [
+            -0.2461271435022354,
+            0.1012544110417366,
+            0.9639332294464111,
+            0.08175849169492722
+          ],
+          [
+            0.23291689157485962,
+            -0.9592052698135376,
+            0.16023017466068268,
+            1.2996315956115723
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 0.9999980926513672,
+        "decomposed_scale": [
+          0.9999991059303284,
+          0.9999996423721313,
+          0.9999992847442627
+        ],
+        "TRS_reconstruction_residual": 7.748603820800781e-07,
+        "column_lengths": [
+          0.9999991171058095,
+          0.9999996437690517,
+          0.9999993210656126
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          1.0617090506516863e-06,
+          6.258497476112477e-07,
+          1.0803353048793524e-07
+        ],
+        "maximum_column_nonorthogonality": 1.0617090506516863e-06
+      },
+      "post_strip_all_source_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9999984502792358,
+              1.5365486660812167e-13,
+              -5.960465188081798e-08,
+              5.7127188313188526e-08
+            ],
+            [
+              -5.960450977227083e-08,
+              -6.705522537231445e-08,
+              -0.9999992847442627,
+              0.08890470117330551
+            ],
+            [
+              4.1300296516055823e-14,
+              0.9999992847442627,
+              -2.60770320892334e-07,
+              1.2996329069137573
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999970197677612,
+          "decomposed_scale": [
+            0.9999984502792358,
+            0.9999992847442627,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 1.2641156388326635e-07,
+          "column_lengths": [
+            0.9999984502780368,
+            0.9999992847440091,
+            0.9999992847440426
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            1.9895213330228253e-13,
+            -9.237077563967827e-14,
+            -1.9371522341789673e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9371522341789673e-07
+        }
+      },
+      "post_strip_all_source_re_evaluated_basis": {
+        "matrix": [
+          [
+            1.0000054836273193,
+            7.450580596923828e-08,
+            1.862645149230957e-08,
+            -3.8743019104003906e-07
+          ],
+          [
+            0.0,
+            0.9968024492263794,
+            -0.07991442084312439,
+            1.430511474609375e-06
+          ],
+          [
+            2.2351741790771484e-08,
+            0.07991490513086319,
+            0.9968017339706421,
+            -2.086162567138672e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0000063180923462,
+        "decomposed_scale": [
+          1.0000054836273193,
+          1.0000007152557373,
+          1.0
+        ],
+        "TRS_reconstruction_residual": 2.1606683731079102e-07,
+        "column_lengths": [
+          1.0000054836122845,
+          1.0000007713676278,
+          1.0000000172294676
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.629197825914104e-08,
+          4.090658358648613e-08,
+          4.246827605088399e-07
+        ],
+        "maximum_column_nonorthogonality": 4.246827605088399e-07,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 2.1606683731079102e-07
+      },
+      "actual_worker_export_basis": {
+        "matrix": [
+          [
+            1.0000054836273193,
+            7.450580596923828e-08,
+            1.862645149230957e-08,
+            -3.8743019104003906e-07
+          ],
+          [
+            0.0,
+            0.9968024492263794,
+            -0.07991442084312439,
+            1.430511474609375e-06
+          ],
+          [
+            2.2351741790771484e-08,
+            0.07991490513086319,
+            0.9968017339706421,
+            -2.086162567138672e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0000063180923462,
+        "decomposed_scale": [
+          1.0000054836273193,
+          1.0000007152557373,
+          1.0
+        ],
+        "TRS_reconstruction_residual": 2.1606683731079102e-07,
+        "column_lengths": [
+          1.0000054836122845,
+          1.0000007713676278,
+          1.0000000172294676
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.629197825914104e-08,
+          4.090658358648613e-08,
+          4.246827605088399e-07
+        ],
+        "maximum_column_nonorthogonality": 4.246827605088399e-07,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 2.1606683731079102e-07
+      },
+      "all_217_pre_strip_vs_worker_pose_maxcomponent": 0.0,
+      "all_217_pre_strip_vs_worker_strict_2e5_pass": true,
+      "all_217_post_strip_re_evaluated_vs_captured_maxcomponent": 0.0,
+      "all_217_post_strip_re_evaluated_vs_captured_strict_2e5_pass": true
+    },
+    {
+      "sample_index": 1,
+      "original_QA_frame": 2,
+      "worker_world": {
+        "matrix": [
+          [
+            0.782315731048584,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.782315731048584,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.782315731048584,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 0.4787912666797638,
+        "decomposed_scale": [
+          0.782315731048584,
+          0.782315731048584,
+          0.782315731048584
+        ],
+        "TRS_reconstruction_residual": 0.0,
+        "column_lengths": [
+          0.782315747990532,
+          0.782315747990532,
+          0.782315747990532
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maximum_column_nonorthogonality": 0.0
+      },
+      "worker_pose": {
+        "matrix": [
+          [
+            0.8937007784843445,
+            0.4062447249889374,
+            0.19231544435024261,
+            0.1234205961227417
+          ],
+          [
+            -0.25210002064704895,
+            0.09899279475212097,
+            0.9626251459121704,
+            0.08121458441019058
+          ],
+          [
+            0.3711373209953308,
+            -0.9109951257705688,
+            0.19078096747398376,
+            1.3071846961975098
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0023844242095947,
+        "decomposed_scale": [
+          0.9999992251396179,
+          1.0023703575134277,
+          1.0000149011611938
+        ],
+        "TRS_reconstruction_residual": 0.00019726157188415527,
+        "column_lengths": [
+          0.9999992176887313,
+          1.00237042584085,
+          1.0000148973249383
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          8.547912197483548e-07,
+          5.811370838089495e-07,
+          -0.00037952878365748446
+        ],
+        "maximum_column_nonorthogonality": 0.00037952878365748446
+      },
+      "worker_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9981989860534668,
+              -0.05980908125638962,
+              -0.00430695666000247,
+              -0.005225036758929491
+            ],
+            [
+              -0.004306957125663757,
+              0.00012885034084320068,
+              -0.9999900460243225,
+              0.08891596645116806
+            ],
+            [
+              0.05980904772877693,
+              0.9982091188430786,
+              -0.0001291707158088684,
+              1.2994765043258667
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999970197677612,
+          "decomposed_scale": [
+            0.9999983906745911,
+            0.9999992847442627,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 2.527376636862755e-07,
+          "column_lengths": [
+            0.9999984314332754,
+            0.9999992995644804,
+            0.9999993293044731
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            1.8741829314410333e-08,
+            -1.09667116713099e-08,
+            -1.9332245887918815e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9332245887918815e-07
+        }
+      },
+      "before_strip_pose": {
+        "matrix": [
+          [
+            0.8937007784843445,
+            0.4062447249889374,
+            0.19231544435024261,
+            0.1234205961227417
+          ],
+          [
+            -0.25210002064704895,
+            0.09899279475212097,
+            0.9626251459121704,
+            0.08121458441019058
+          ],
+          [
+            0.3711373209953308,
+            -0.9109951257705688,
+            0.19078096747398376,
+            1.3071846961975098
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0023844242095947,
+        "decomposed_scale": [
+          0.9999992251396179,
+          1.0023703575134277,
+          1.0000149011611938
+        ],
+        "TRS_reconstruction_residual": 0.00019726157188415527,
+        "column_lengths": [
+          0.9999992176887313,
+          1.00237042584085,
+          1.0000148973249383
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          8.547912197483548e-07,
+          5.811370838089495e-07,
+          -0.00037952878365748446
+        ],
+        "maximum_column_nonorthogonality": 0.00037952878365748446
+      },
+      "before_strip_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9981989860534668,
+              -0.05980908125638962,
+              -0.00430695666000247,
+              -0.005225036758929491
+            ],
+            [
+              -0.004306957125663757,
+              0.00012885034084320068,
+              -0.9999900460243225,
+              0.08891596645116806
+            ],
+            [
+              0.05980904772877693,
+              0.9982091188430786,
+              -0.0001291707158088684,
+              1.2994765043258667
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999970197677612,
+          "decomposed_scale": [
+            0.9999983906745911,
+            0.9999992847442627,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 2.527376636862755e-07,
+          "column_lengths": [
+            0.9999984314332754,
+            0.9999992995644804,
+            0.9999993293044731
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            1.8741829314410333e-08,
+            -1.09667116713099e-08,
+            -1.9332245887918815e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9332245887918815e-07
+        }
+      },
+      "before_strip_source_basis": {
+        "matrix": [
+          [
+            0.996145486831665,
+            0.08762869238853455,
+            -0.007984045892953873,
+            -2.980232238769531e-07
+          ],
+          [
+            -0.08777669072151184,
+            0.9933508038520813,
+            -0.10143780708312988,
+            7.152557373046875e-07
+          ],
+          [
+            -0.0009556412696838379,
+            0.10160854458808899,
+            0.9948256015777588,
+            -2.2351741790771484e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.002393126487732,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0023716688156128,
+          1.0000156164169312
+        ],
+        "TRS_reconstruction_residual": 0.00018911808729171753,
+        "column_lengths": [
+          1.0000057379061447,
+          1.0023716469362818,
+          1.0000156696887765
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.751131051775856e-07,
+          -9.26646124394219e-08,
+          -0.00037927496335280234
+        ],
+        "maximum_column_nonorthogonality": 0.00037927496335280234,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 0.0001830458641052246
+      },
+      "captured_worker_source_basis": {
+        "matrix": [
+          [
+            0.996145486831665,
+            0.08762869238853455,
+            -0.007984045892953873,
+            -2.980232238769531e-07
+          ],
+          [
+            -0.08777669072151184,
+            0.9933508038520813,
+            -0.10143780708312988,
+            7.152557373046875e-07
+          ],
+          [
+            -0.0009556412696838379,
+            0.10160854458808899,
+            0.9948256015777588,
+            -2.2351741790771484e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.002393126487732,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0023716688156128,
+          1.0000156164169312
+        ],
+        "TRS_reconstruction_residual": 0.00018911808729171753,
+        "column_lengths": [
+          1.0000057379061447,
+          1.0023716469362818,
+          1.0000156696887765
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.751131051775856e-07,
+          -9.26646124394219e-08,
+          -0.00037927496335280234
+        ],
+        "maximum_column_nonorthogonality": 0.00037927496335280234,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 0.0001830458641052246
+      },
+      "post_strip_all_source_re_evaluated_pose": {
+        "matrix": [
+          [
+            0.8937007784843445,
+            0.4062447249889374,
+            0.19231544435024261,
+            0.1234205961227417
+          ],
+          [
+            -0.25210002064704895,
+            0.09899279475212097,
+            0.9626251459121704,
+            0.08121458441019058
+          ],
+          [
+            0.3711373209953308,
+            -0.9109951257705688,
+            0.19078096747398376,
+            1.3071846961975098
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0023844242095947,
+        "decomposed_scale": [
+          0.9999992251396179,
+          1.0023703575134277,
+          1.0000149011611938
+        ],
+        "TRS_reconstruction_residual": 0.00019726157188415527,
+        "column_lengths": [
+          0.9999992176887313,
+          1.00237042584085,
+          1.0000148973249383
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          8.547912197483548e-07,
+          5.811370838089495e-07,
+          -0.00037952878365748446
+        ],
+        "maximum_column_nonorthogonality": 0.00037952878365748446
+      },
+      "post_strip_all_source_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9981989860534668,
+              -0.05980908125638962,
+              -0.00430695666000247,
+              -0.005225036758929491
+            ],
+            [
+              -0.004306957125663757,
+              0.00012885034084320068,
+              -0.9999900460243225,
+              0.08891596645116806
+            ],
+            [
+              0.05980904772877693,
+              0.9982091188430786,
+              -0.0001291707158088684,
+              1.2994765043258667
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999970197677612,
+          "decomposed_scale": [
+            0.9999983906745911,
+            0.9999992847442627,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 2.527376636862755e-07,
+          "column_lengths": [
+            0.9999984314332754,
+            0.9999992995644804,
+            0.9999993293044731
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            1.8741829314410333e-08,
+            -1.09667116713099e-08,
+            -1.9332245887918815e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9332245887918815e-07
+        }
+      },
+      "post_strip_all_source_re_evaluated_basis": {
+        "matrix": [
+          [
+            0.996145486831665,
+            0.08762869238853455,
+            -0.007984045892953873,
+            -2.980232238769531e-07
+          ],
+          [
+            -0.08777669072151184,
+            0.9933508038520813,
+            -0.10143780708312988,
+            7.152557373046875e-07
+          ],
+          [
+            -0.0009556412696838379,
+            0.10160854458808899,
+            0.9948256015777588,
+            -2.2351741790771484e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.002393126487732,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0023716688156128,
+          1.0000156164169312
+        ],
+        "TRS_reconstruction_residual": 0.00018911808729171753,
+        "column_lengths": [
+          1.0000057379061447,
+          1.0023716469362818,
+          1.0000156696887765
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.751131051775856e-07,
+          -9.26646124394219e-08,
+          -0.00037927496335280234
+        ],
+        "maximum_column_nonorthogonality": 0.00037927496335280234,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 0.0001830458641052246
+      },
+      "actual_worker_export_basis": {
+        "matrix": [
+          [
+            0.996145486831665,
+            0.08762869238853455,
+            -0.007984045892953873,
+            -2.980232238769531e-07
+          ],
+          [
+            -0.08777669072151184,
+            0.9933508038520813,
+            -0.10143780708312988,
+            7.152557373046875e-07
+          ],
+          [
+            -0.0009556412696838379,
+            0.10160854458808899,
+            0.9948256015777588,
+            -2.2351741790771484e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.002393126487732,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0023716688156128,
+          1.0000156164169312
+        ],
+        "TRS_reconstruction_residual": 0.00018911808729171753,
+        "column_lengths": [
+          1.0000057379061447,
+          1.0023716469362818,
+          1.0000156696887765
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          7.751131051775856e-07,
+          -9.26646124394219e-08,
+          -0.00037927496335280234
+        ],
+        "maximum_column_nonorthogonality": 0.00037927496335280234,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 0.0001830458641052246
+      },
+      "all_217_pre_strip_vs_worker_pose_maxcomponent": 0.0,
+      "all_217_pre_strip_vs_worker_strict_2e5_pass": true,
+      "all_217_post_strip_re_evaluated_vs_captured_maxcomponent": 0.0,
+      "all_217_post_strip_re_evaluated_vs_captured_strict_2e5_pass": true
+    },
+    {
+      "sample_index": 2,
+      "original_QA_frame": 3,
+      "worker_world": {
+        "matrix": [
+          [
+            0.782315731048584,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.782315731048584,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.782315731048584,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 0.4787912666797638,
+        "decomposed_scale": [
+          0.782315731048584,
+          0.782315731048584,
+          0.782315731048584
+        ],
+        "TRS_reconstruction_residual": 0.0,
+        "column_lengths": [
+          0.782315747990532,
+          0.782315747990532,
+          0.782315747990532
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "maximum_column_nonorthogonality": 0.0
+      },
+      "worker_pose": {
+        "matrix": [
+          [
+            0.9575456976890564,
+            0.18485060334205627,
+            0.22128821909427643,
+            0.1318964660167694
+          ],
+          [
+            -0.2426443248987198,
+            0.10205315053462982,
+            0.9647321701049805,
+            0.08208631724119186
+          ],
+          [
+            0.15565544366836548,
+            -0.9780526161193848,
+            0.14258234202861786,
+            1.2950783967971802
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.000588059425354,
+        "decomposed_scale": [
+          0.9999993443489075,
+          1.0005855560302734,
+          1.0000032186508179
+        ],
+        "TRS_reconstruction_residual": 4.673004150390625e-05,
+        "column_lengths": [
+          0.9999993331728142,
+          1.0005855722443455,
+          1.0000031851181328
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          1.0703948814610967e-06,
+          5.234019688565708e-07,
+          -9.376995353164885e-05
+        ],
+        "maximum_column_nonorthogonality": 9.376995353164885e-05
+      },
+      "worker_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9993859529495239,
+              0.03490244597196579,
+              0.002513291547074914,
+              0.0030492357909679413
+            ],
+            [
+              0.0025132924783974886,
+              4.3801963329315186e-05,
+              -0.9999961256980896,
+              0.08890853822231293
+            ],
+            [
+              -0.0349024273455143,
+              0.9993898272514343,
+              -4.414469003677368e-05,
+              1.2995796203613281
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999967813491821,
+          "decomposed_scale": [
+            0.9999983906745911,
+            0.9999991059303284,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 1.5033947420306504e-07,
+          "column_lengths": [
+            0.9999983798184593,
+            0.9999990974013783,
+            0.9999992849894239
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            -5.3968699103007215e-09,
+            6.402857652376712e-09,
+            -1.9952527042872886e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9952527042872886e-07
+        }
+      },
+      "before_strip_pose": {
+        "matrix": [
+          [
+            0.9575456976890564,
+            0.18485060334205627,
+            0.22128821909427643,
+            0.1318964660167694
+          ],
+          [
+            -0.2426443248987198,
+            0.10205315053462982,
+            0.9647321701049805,
+            0.08208631724119186
+          ],
+          [
+            0.15565544366836548,
+            -0.9780526161193848,
+            0.14258234202861786,
+            1.2950783967971802
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.000588059425354,
+        "decomposed_scale": [
+          0.9999993443489075,
+          1.0005855560302734,
+          1.0000032186508179
+        ],
+        "TRS_reconstruction_residual": 4.673004150390625e-05,
+        "column_lengths": [
+          0.9999993331728142,
+          1.0005855722443455,
+          1.0000031851181328
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          1.0703948814610967e-06,
+          5.234019688565708e-07,
+          -9.376995353164885e-05
+        ],
+        "maximum_column_nonorthogonality": 9.376995353164885e-05
+      },
+      "before_strip_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9993859529495239,
+              0.03490244597196579,
+              0.002513291547074914,
+              0.0030492357909679413
+            ],
+            [
+              0.0025132924783974886,
+              4.3801963329315186e-05,
+              -0.9999961256980896,
+              0.08890853822231293
+            ],
+            [
+              -0.0349024273455143,
+              0.9993898272514343,
+              -4.414469003677368e-05,
+              1.2995796203613281
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999967813491821,
+          "decomposed_scale": [
+            0.9999983906745911,
+            0.9999991059303284,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 1.5033947420306504e-07,
+          "column_lengths": [
+            0.9999983798184593,
+            0.9999990974013783,
+            0.9999992849894239
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            -5.3968699103007215e-09,
+            6.402857652376712e-09,
+            -1.9952527042872886e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9952527042872886e-07
+        }
+      },
+      "before_strip_source_basis": {
+        "matrix": [
+          [
+            0.998988687992096,
+            -0.04499146342277527,
+            0.0033544357866048813,
+            -5.662441253662109e-07
+          ],
+          [
+            0.04508884251117706,
+            0.9972061514854431,
+            -0.06874850392341614,
+            1.7881393432617188e-06
+          ],
+          [
+            -0.00025184638798236847,
+            0.06877666711807251,
+            0.9976323843002319,
+            -2.8312206268310547e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0005968809127808,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0005871057510376,
+          1.0000039339065552
+        ],
+        "TRS_reconstruction_residual": 4.6662986278533936e-05,
+        "column_lengths": [
+          1.000005728131424,
+          1.0005871139598008,
+          1.00000399024361
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          -4.118188006389068e-07,
+          2.7939405712202815e-09,
+          -9.34664471881122e-05
+        ],
+        "maximum_column_nonorthogonality": 9.34664471881122e-05,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 4.5493245124816895e-05
+      },
+      "captured_worker_source_basis": {
+        "matrix": [
+          [
+            0.998988687992096,
+            -0.04499146342277527,
+            0.0033544357866048813,
+            -5.662441253662109e-07
+          ],
+          [
+            0.04508884251117706,
+            0.9972061514854431,
+            -0.06874850392341614,
+            1.7881393432617188e-06
+          ],
+          [
+            -0.00025184638798236847,
+            0.06877666711807251,
+            0.9976323843002319,
+            -2.8312206268310547e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0005968809127808,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0005871057510376,
+          1.0000039339065552
+        ],
+        "TRS_reconstruction_residual": 4.6662986278533936e-05,
+        "column_lengths": [
+          1.000005728131424,
+          1.0005871139598008,
+          1.00000399024361
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          -4.118188006389068e-07,
+          2.7939405712202815e-09,
+          -9.34664471881122e-05
+        ],
+        "maximum_column_nonorthogonality": 9.34664471881122e-05,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 4.5493245124816895e-05
+      },
+      "post_strip_all_source_re_evaluated_pose": {
+        "matrix": [
+          [
+            0.9575456976890564,
+            0.18485060334205627,
+            0.22128821909427643,
+            0.1318964660167694
+          ],
+          [
+            -0.2426443248987198,
+            0.10205315053462982,
+            0.9647321701049805,
+            0.08208631724119186
+          ],
+          [
+            0.15565544366836548,
+            -0.9780526161193848,
+            0.14258234202861786,
+            1.2950783967971802
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.000588059425354,
+        "decomposed_scale": [
+          0.9999993443489075,
+          1.0005855560302734,
+          1.0000032186508179
+        ],
+        "TRS_reconstruction_residual": 4.673004150390625e-05,
+        "column_lengths": [
+          0.9999993331728142,
+          1.0005855722443455,
+          1.0000031851181328
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          1.0703948814610967e-06,
+          5.234019688565708e-07,
+          -9.376995353164885e-05
+        ],
+        "maximum_column_nonorthogonality": 9.376995353164885e-05
+      },
+      "post_strip_all_source_parent_poses": {
+        "SK_Dress_Waist": {
+          "matrix": [
+            [
+              0.9993859529495239,
+              0.03490244597196579,
+              0.002513291547074914,
+              0.0030492357909679413
+            ],
+            [
+              0.0025132924783974886,
+              4.3801963329315186e-05,
+              -0.9999961256980896,
+              0.08890853822231293
+            ],
+            [
+              -0.0349024273455143,
+              0.9993898272514343,
+              -4.414469003677368e-05,
+              1.2995796203613281
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "determinant": 0.9999967813491821,
+          "decomposed_scale": [
+            0.9999983906745911,
+            0.9999991059303284,
+            0.9999992847442627
+          ],
+          "TRS_reconstruction_residual": 1.5033947420306504e-07,
+          "column_lengths": [
+            0.9999983798184593,
+            0.9999990974013783,
+            0.9999992849894239
+          ],
+          "normalized_column_dots_xy_xz_yz": [
+            -5.3968699103007215e-09,
+            6.402857652376712e-09,
+            -1.9952527042872886e-07
+          ],
+          "maximum_column_nonorthogonality": 1.9952527042872886e-07
+        }
+      },
+      "post_strip_all_source_re_evaluated_basis": {
+        "matrix": [
+          [
+            0.998988687992096,
+            -0.04499146342277527,
+            0.0033544357866048813,
+            -5.662441253662109e-07
+          ],
+          [
+            0.04508884251117706,
+            0.9972061514854431,
+            -0.06874850392341614,
+            1.7881393432617188e-06
+          ],
+          [
+            -0.00025184638798236847,
+            0.06877666711807251,
+            0.9976323843002319,
+            -2.8312206268310547e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0005968809127808,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0005871057510376,
+          1.0000039339065552
+        ],
+        "TRS_reconstruction_residual": 4.6662986278533936e-05,
+        "column_lengths": [
+          1.000005728131424,
+          1.0005871139598008,
+          1.00000399024361
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          -4.118188006389068e-07,
+          2.7939405712202815e-09,
+          -9.34664471881122e-05
+        ],
+        "maximum_column_nonorthogonality": 9.34664471881122e-05,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 4.5493245124816895e-05
+      },
+      "actual_worker_export_basis": {
+        "matrix": [
+          [
+            0.998988687992096,
+            -0.04499146342277527,
+            0.0033544357866048813,
+            -5.662441253662109e-07
+          ],
+          [
+            0.04508884251117706,
+            0.9972061514854431,
+            -0.06874850392341614,
+            1.7881393432617188e-06
+          ],
+          [
+            -0.00025184638798236847,
+            0.06877666711807251,
+            0.9976323843002319,
+            -2.8312206268310547e-07
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "determinant": 1.0005968809127808,
+        "decomposed_scale": [
+          1.0000057220458984,
+          1.0005871057510376,
+          1.0000039339065552
+        ],
+        "TRS_reconstruction_residual": 4.6662986278533936e-05,
+        "column_lengths": [
+          1.000005728131424,
+          1.0005871139598008,
+          1.00000399024361
+        ],
+        "normalized_column_dots_xy_xz_yz": [
+          -4.118188006389068e-07,
+          2.7939405712202815e-09,
+          -9.34664471881122e-05
+        ],
+        "maximum_column_nonorthogonality": 9.34664471881122e-05,
+        "forward_exact_basis_error": 1.1920928955078125e-07,
+        "forward_TRS_basis_error": 4.5493245124816895e-05
+      },
+      "all_217_pre_strip_vs_worker_pose_maxcomponent": 0.0,
+      "all_217_pre_strip_vs_worker_strict_2e5_pass": true,
+      "all_217_post_strip_re_evaluated_vs_captured_maxcomponent": 0.0,
+      "all_217_post_strip_re_evaluated_vs_captured_strict_2e5_pass": true
+    }
+  ],
+  "captured_vs_recomputed_export_basis_maxcomponent": 0.0,
+  "runtime_closure": [
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_colors.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_guard.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\eye_controls.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\foot_controls.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\generated_names.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_fk_visuals.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\root_control.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_original_mode.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_physics.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_rig.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface_direct.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_topology.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\spine_ik_fk.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\torso_controls.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\ui_constants.py"
+  ],
+  "cleanup": {
+    "success": true,
+    "failures": [],
+    "remaining_owned_ids": {
+      "scenes": [],
+      "objects": [],
+      "collections": [],
+      "meshes": [],
+      "armatures": [],
+      "materials": [],
+      "worlds": [],
+      "node_groups": [],
+      "images": [],
+      "actions": []
+    }
+  },
+  "factory_ID_counts": {
+    "scenes": 1,
+    "objects": 0,
+    "collections": 0,
+    "meshes": 0,
+    "armatures": 0,
+    "materials": 0,
+    "worlds": 0,
+    "node_groups": 0,
+    "images": 0,
+    "actions": 0
+  },
+  "elapsed_seconds": 41.30169019999448
+}

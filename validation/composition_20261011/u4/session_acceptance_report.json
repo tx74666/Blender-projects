@@ -1,0 +1,9 @@
+{
+  "schema": "x.validation.character-composition-session/1",
+  "complete": false,
+  "blender": "5.2.0 LTS",
+  "phases": [],
+  "item_id": "6ce5c78566c9499496ec4c6dab8e4160",
+  "failure_phase": "preflight",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_13\\composition_session_acceptance.py\", line 630, in run_steps\n    base, _base_slot = backend.prepare_reference(context, item)\n                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_14\\character_designer\\animation_composition.py\", line 548, in prepare_reference\n    return find_reference(context, spec)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_14\\character_designer\\animation_composition.py\", line 530, in find_reference\n    raise ValueError('Prepare the exact read-only A reference first; no ambiguous Action was chosen.')\nValueError: Prepare the exact read-only A reference first; no ambiguous Action was chosen.\n"
+}

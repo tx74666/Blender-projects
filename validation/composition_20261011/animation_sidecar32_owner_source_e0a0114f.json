@@ -1,0 +1,241 @@
+{
+  "schema": "x.validation.character-composition-animation-sidecar-bound-source-review/1",
+  "utc": "2026-10-11T10:39:55.655526+00:00",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "release_or_deployment_performed": false,
+  "owner": "/root/worklist_review",
+  "changed_runtime_sources": {
+    "animation_link.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "05a981398b7c4edca7e43de1ac8e7ae8fbabb803dda2e05bed877803bab6f83c",
+      "bytes": 19796
+    },
+    "animation_worklist_collection.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+      "sha256": "e0a0114f9c990bbc9687f982a445e384bf23fd35abc77c24ee7787456638a324",
+      "bytes": 36939
+    },
+    "animation_worklist_new.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_new.py",
+      "sha256": "fa0396f50879f8312442502438286494200986760ec82119fee8deb9b286bbc1",
+      "bytes": 46722
+    }
+  },
+  "changed_tool_sources": {
+    "composition_sync_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "db4d61e9deaa6833137507b49957178bc833bd5b83512fff1f809181ad49ab96",
+      "bytes": 21223
+    }
+  },
+  "preserved_before_runtime_sources": {
+    "animation_link.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_link_aabd94b5_before_sidecar32.py",
+      "sha256": "aabd94b5ce0b2cac63ed88d1f24fab35636e0eb14aacd07de105d7e84ef3fccb",
+      "bytes": 19666
+    },
+    "animation_worklist_collection.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_collection_7e306c7a_before_sidecar32.py",
+      "sha256": "7e306c7af9e3b55aacd84ca5b16a44d3980b459ca905a07111c99132b6b9968f",
+      "bytes": 36915
+    },
+    "animation_worklist_new.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_new_b332692c_before_sidecar32.py",
+      "sha256": "b332692c2119c369916a126ec689b5dbdf68c63c7534f54a07e12bab142a7c9d",
+      "bytes": 46698
+    }
+  },
+  "source_ast_facts": [
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+        "sha256": "05a981398b7c4edca7e43de1ac8e7ae8fbabb803dda2e05bed877803bab6f83c",
+        "bytes": 19796
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_link_aabd94b5_before_sidecar32.py",
+        "sha256": "aabd94b5ce0b2cac63ed88d1f24fab35636e0eb14aacd07de105d7e84ef3fccb",
+        "bytes": 19666
+      },
+      "changed_functions": [],
+      "added_functions": [],
+      "unchanged_function_count": 17,
+      "unchanged_other_function_AST": true,
+      "top_level_delta": "ANIMATION_METADATA_MAX_BYTES=32*1024*1024 only"
+    },
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+        "sha256": "e0a0114f9c990bbc9687f982a445e384bf23fd35abc77c24ee7787456638a324",
+        "bytes": 36939
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_collection_7e306c7a_before_sidecar32.py",
+        "sha256": "7e306c7af9e3b55aacd84ca5b16a44d3980b459ca905a07111c99132b6b9968f",
+        "bytes": 36915
+      },
+      "changed_functions": [
+        "_published_composition"
+      ],
+      "added_functions": [],
+      "unchanged_function_count": 31,
+      "unchanged_other_function_AST": true,
+      "top_level_delta": "none"
+    },
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_new.py",
+        "sha256": "fa0396f50879f8312442502438286494200986760ec82119fee8deb9b286bbc1",
+        "bytes": 46722
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_new_b332692c_before_sidecar32.py",
+        "sha256": "b332692c2119c369916a126ec689b5dbdf68c63c7534f54a07e12bab142a7c9d",
+        "bytes": 46698
+      },
+      "changed_functions": [
+        "publish"
+      ],
+      "added_functions": [],
+      "unchanged_function_count": 17,
+      "unchanged_other_function_AST": true,
+      "top_level_delta": "none"
+    },
+    {
+      "source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+        "sha256": "db4d61e9deaa6833137507b49957178bc833bd5b83512fff1f809181ad49ab96",
+        "bytes": 21223
+      },
+      "preserved_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_sync_acceptance_13184953_before_sidecar32.py",
+        "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+        "bytes": 21115
+      },
+      "changed_functions": [
+        "run_one"
+      ],
+      "added_functions": [],
+      "unchanged_function_count": 11,
+      "unchanged_other_function_AST": true,
+      "top_level_delta": "none"
+    }
+  ],
+  "test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_sidecar_bounds.py",
+    "sha256": "8f205703c3d6afd3a1666c2f6255e7f9572ddf721b93698916fc7b0682259adc",
+    "bytes": 15101
+  },
+  "focused_tests": {
+    "command": [
+      "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_animation_sidecar_bounds.py",
+      "-v"
+    ],
+    "cwd": "D:\\MyRepository\\Blender-addons-by-Randy",
+    "count": 10,
+    "passed": 10,
+    "exit_code": 0,
+    "unittest_elapsed_seconds": 6.949,
+    "exec_wall_seconds": 8.1529608,
+    "test_names": [
+      "test_source_full_410_by_298_numeric_payload_above_1mib_is_accepted",
+      "test_new_full_payload_above_1mib_publishes_actual_manifest_revision",
+      "test_both_sidecar_readers_reject_above_32mib_before_json_parse",
+      "test_source_sha_tamper_rejects_before_json_parse",
+      "test_source_sealed_dto_or_isolation_proof_tamper_rejects_even_with_new_sha",
+      "test_expected_channel_action_slot_or_reference_proof_tamper_rejects",
+      "test_new_fbx_dto_or_export_proof_tamper_retains_revision_zero",
+      "test_shared_sidecar_bound_does_not_enlarge_link_or_new_manifest_1mib",
+      "test_exact_collector_error_is_persisted_not_replaced_by_umbrella",
+      "test_missing_export_result_remains_distinct_and_does_not_call_collector"
+    ],
+    "prior_run": {
+      "failed": 1,
+      "errors": 2,
+      "reason": "Test-only fixture omitted effectiveChannelsSha256; existing Link error text does not spell its numeric limit. Corrected fixtures only, product unchanged.",
+      "final_rerun_passed": true
+    },
+    "existing_pure_module_stubs_reused": true,
+    "actual_candidate_or_Blender_modules_imported": false,
+    "worker_spawned": false,
+    "production_full_numeric_helper_AST_only_executed": true,
+    "bytecode_write_disabled": true,
+    "existing_bytecode_artifacts_removed_or_rewritten": false
+  },
+  "syntax_compile_only_files": [
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_new.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_sidecar_bounds.py"
+  ],
+  "source_contract": {
+    "shared_constant_module": "animation_link.py",
+    "shared_constant": "ANIMATION_METADATA_MAX_BYTES",
+    "animation_sidecar_limit_bytes": 33554432,
+    "Link_and_NewAction_manifest_limit_bytes": 1048576,
+    "complete_fixture_channels": 410,
+    "complete_fixture_samples_per_channel": 298,
+    "full_numeric_fixture_above_1_MiB_accepted_by_SOURCE_and_NEW": true,
+    "above_32_MiB_rejected_before_JSON_parse": true,
+    "existing_SHA_DTO_scope_channel_Action_slot_reference_duration_guards_retained": true,
+    "no_sampling_retime_or_channel_limit_change": true,
+    "collector_exact_error_field": "collection_receipt_error",
+    "missing_result_error_is_distinct": true,
+    "SOURCE_kind_not_inferred_from_sourceOnly": true
+  },
+  "protected_failure_before_source_changes": {
+    "receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15_natural_failure_readback_5a2e5dd7.json",
+      "sha256": "17125fc4cf1f1a4e23549b028f1c0c59155d9d7b8764dca2738fed76895422e1",
+      "bytes": 589022
+    },
+    "actual_exit": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\process_exit.json",
+      "sha256": "a7bf0d54cc83cf2bac30c9ad116d69e2cdaf678474d23392cf00c09e4d58d39f",
+      "bytes": 571
+    },
+    "natural_exit_code": 1,
+    "all_owned_workers_gone": true,
+    "sole_remaining_artist_pid": 27676,
+    "artist_pin": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+      "sha256": "e8d3013ef14e02ed76160a838e7d255490fd1b6ece340e7c3f9e33dc57a3377f",
+      "bytes": 34648532
+    },
+    "artist_unchanged": true,
+    "no_live_CIM_SDK_GUI_queries": true
+  },
+  "untouched_exporters": {
+    "animation_export.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+      "bytes": 11624
+    },
+    "animation_composition_export.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+      "sha256": "562565879a9c4c05356f82c3b0ec45bd567d1311ef58cbde8a20607452079520",
+      "bytes": 47713
+    }
+  },
+  "immutability": {
+    "old_n15_reports_receipts_frozen_runtime12_full13_inputs_modified": false,
+    "failed_Loop_publication_reexported_reset_or_reauthored": false,
+    "existing_candidate_or_source_bytecode_deleted_executed_or_copied": false,
+    "Git_build_deploy_or_scene_save_performed": false
+  },
+  "limits": [
+    "SOURCE patch plus focused pure regression tests only; no native or Unity readback validation performed.",
+    "New projections and bounded existing-publication receipt recovery are Root-owned and not performed by this task."
+  ]
+}

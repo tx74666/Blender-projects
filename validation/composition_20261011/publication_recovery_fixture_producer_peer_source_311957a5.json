@@ -1,0 +1,133 @@
+{
+  "schema": "x.validation.character-composition-publication-recovery-fixture-producer-peer-source-review/1",
+  "utc": "2026-10-11T11:15:22.952343+00:00",
+  "reviewer": "/root/export_scale_review",
+  "source_only": true,
+  "passed": true,
+  "status": "SOURCE_READY; final driver owner/peer pins required by producer before invocation",
+  "native_execution_performed": false,
+  "producer_or_driver_imports_performed": false,
+  "producer_invocations": 0,
+  "tests_rerun": 0,
+  "SDK_GUI_CIM_calls": 0,
+  "source_edits_performed_by_reviewer": false,
+  "producer": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_fixture.py",
+    "sha256": "311957a5e9bcc50b4b06e0fa9b50e1bcbb3503e62a95c00f522a19fa27d23b00",
+    "bytes": 11771
+  },
+  "observed_driver_for_field_API_only": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_publication_recovery.py",
+    "sha256": "17180036cd54f74c11ba33148bd3c0748f291117b888059324758f15670b51d4",
+    "bytes": 48868
+  },
+  "driver_semantic_review_or_final_pin_approval_claimed": false,
+  "syntax_validation": {
+    "AST": true,
+    "in_memory_compile": true,
+    "assert_count": 0
+  },
+  "actual_API_comparison": {
+    "field_count": 16,
+    "fields_exactly_equal_current_driver_literal_FIELDS": true,
+    "fields": [
+      "evidenceDirectory",
+      "failedProtection",
+      "failedSourceEntry",
+      "inheritedNumericReport",
+      "inheritedPhysicalReport",
+      "loopAuthorReport",
+      "nativeFixture",
+      "persistedNumericReport",
+      "publishedLink",
+      "qaSeedFile",
+      "schema",
+      "sidecar_budget_projection_receipt",
+      "tools",
+      "workerJob",
+      "workerResult",
+      "workerSnapshot"
+    ],
+    "config_tools_exact_native_and_continuation_roles": true,
+    "historical_sibling_count": 7,
+    "added_driver_count": 1,
+    "native_fixture_changes_only": [
+      "addonPackage",
+      "runtimeManifest",
+      "runtimeManifestSha256",
+      "evidenceDirectory"
+    ]
+  },
+  "closed_source_findings": {
+    "initial_unbound_review_pass_flags_fixed": "Both final reports must contain exact three-field source_files[run_character_composition_publication_recovery.py] equal to actual requested driver path/SHA/bytes.",
+    "missing_consumed_source_pins_fixed": [
+      "failedSourceEntry111",
+      "failedProtection17125",
+      "full_Source_plan5a773",
+      "reuse_admission84a"
+    ],
+    "missing_new_budget_review_pins_fixed": "Exact named budget review/test/producer and isolated receiver closure/contracts pins are added, without generic recursion."
+  },
+  "admission_and_write_readback": {
+    "exact_old_failed_entry_pin": true,
+    "actual_failure_completed_false_natural_exit1_outer_false_retained": true,
+    "old_1455_inputs_all_rehashed_once_by_producer": true,
+    "override_scope_exact_existing_LoopLink_and_budget_review_source_maps_only": true,
+    "historical_frozen_7_helpers_copied_unchanged": true,
+    "new_167_173_leaf_pins_added": true,
+    "all_output_bytes_encoded_before_first_creation": true,
+    "destination_absent_and_unique_child_paths_required": true,
+    "writes_exclusive_xb_under_fresh_n16_only": true,
+    "postwrite_raw_equals_planned": true,
+    "no_worker_author_export_publication_or_existing_file_write": true,
+    "expected_counts_are_future_requirements_not_actual_acceptance": {
+      "publications_inherited": 3,
+      "publications_executed": 0,
+      "receipt_acceptance_required": 1,
+      "current_UI_imports_required": 2,
+      "current_Loop_import_required": 1
+    },
+    "seed_provisional_until_actual_outer_recovery_natural_exit_closure": true
+  },
+  "actual_budget_projection_readback": {
+    "receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_animation_sidecar_budget_projection_receipt_13_14.json",
+      "sha256": "fbeb346ac463ef18983fec699684d612a01a94af0265003b8881c1e6dbba9d09",
+      "bytes": 62305
+    },
+    "python_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\python_projection.json",
+      "sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+      "bytes": 44600,
+      "file_count": 167,
+      "changed_product_files": [
+        "animation_link.py",
+        "animation_worklist_collection.py",
+        "animation_worklist_new.py"
+      ]
+    },
+    "complete_candidate": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\candidate_projection.json",
+      "sha256": "9bcf6326512b2b146264df165c970bf87508a48d363c7a1fcfa5448e29c2dee1",
+      "bytes": 41551,
+      "file_count": 173,
+      "changed_product_files": [
+        "animation_link.py",
+        "animation_worklist_collection.py",
+        "animation_worklist_new.py",
+        "unity_runtime/Editor/CharacterAnimationReturn.cs"
+      ]
+    },
+    "byte_closure": {
+      "old_product_files": 340,
+      "new_product_files": 340,
+      "changed_product_paths": 7,
+      "unchanged_product_files": 333
+    },
+    "full_raw340_rehash_repeated_by_this_reviewer": false
+  },
+  "limits": [
+    "This reviews fixture producer Source and actual declared field compatibility only. Final recovery driver semantic peer and owner pins remain mandatory and must bind exact driver bytes.",
+    "No n16 fixture generation, archive/native Action inspection, fresh receipt acknowledgement, current UI row import, QA seed or completion occurred in this review."
+  ]
+}

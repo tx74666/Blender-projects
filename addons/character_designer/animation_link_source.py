@@ -6,12 +6,14 @@ Only the imported model receives the already target-evaluated Unity Action.
 
 from dataclasses import dataclass
 import hashlib
+import inspect
+import json
 from pathlib import Path
 import re
 
 import bpy
 
-from . import animation_link, unity_animation
+from . import animation_link, unity_animation, bone_rest_lengths
 
 
 @dataclass
@@ -31,10 +33,21 @@ def _error(message):
     return unity_animation.UnityAnimationError(message)
 
 
-def _import_action(context, rig, packet, start_frame):
+def _import_action(context, rig, packet, start_frame, *, native_timebase=False):
     # A file-only update can precede a saved-session restart. The animation
     # module may still be cached from 0.68.0 when this module is first loaded.
     import_packet = getattr(unity_animation, '_import_package_action', None)
+    if type(native_timebase) is not bool:
+        raise _error('The native import timebase option must be true or false.')
+    if native_timebase:
+        try:
+            parameter = inspect.signature(import_packet).parameters.get('native_timebase')
+        except (TypeError, ValueError):
+            parameter = None
+        if parameter is None or parameter.kind not in {
+                inspect.Parameter.KEYWORD_ONLY, inspect.Parameter.POSITIONAL_OR_KEYWORD}:
+            raise _error('Refresh Character Designer before importing the composition packet on its native clock.')
+        return import_packet(context, rig, packet, start_frame=start_frame, native_timebase=True)
     if import_packet is None:
         return unity_animation.import_test_action(context, rig, packet['_path'], start_frame=start_frame)
     return import_packet(context, rig, packet, start_frame=start_frame)
@@ -85,6 +98,9 @@ def _packet(link):
     names = [bone['name'] for bone in packet['bones']]
     if len(names) != len(set(names)):
         raise _error('The linked model contains ambiguous bone names.')
+    if 'rigging' in packet:
+        from .animation_rigging_contract import validate_capture
+        validate_capture(packet['rigging'], packet=packet)
     return packet, name
 
 
@@ -136,7 +152,8 @@ def _restore_image_settings(image_settings):
             image.alpha_mode = alpha_mode
 
 
-def _import_prepared_source(context, link, packet, export_name, path, digest, *, start_frame=1):
+def _import_prepared_source(context, link, packet, export_name, path, digest, *, start_frame=1,
+                            native_timebase=False):
     """Use this operation's validated Link, packet and model without reparsing.
 
     Callers must have completed load_link, _packet and _source_model. Fresh final
@@ -144,6 +161,8 @@ def _import_prepared_source(context, link, packet, export_name, path, digest, *,
     On failure only this operation's new IDs are removed, and the original scene,
     selection and mode return. No user file or Link manifest is saved here.
     """
+    if type(native_timebase) is not bool:
+        raise _error('The native import timebase option must be true or false.')
     _validate_import_context(context)
     manifest_path = link['_manifest_path']
     saved = _context_state(context)
@@ -198,9 +217,32 @@ def _import_prepared_source(context, link, packet, export_name, path, digest, *,
         rig.select_set(True)
         context.view_layer.objects.active = rig
         context.view_layer.update()
+        # Optional CD metadata belongs to this exact FBX, not to the artist's
+        # current rig. Recover terminal tails before baking the Unity Action;
+        # bind origins, axes, parents and native pose must remain unchanged.
+        try:
+            lengths = bone_rest_lengths.load(path, digest, export_name)
+            bone_rest_lengths.restore(context, rig, lengths, digest, export_name,
+                                      scene.unit_settings.scale_length)
+        except bone_rest_lengths.BoneLengthError as error:
+            raise _error(str(error)) from error
+        if native_timebase and 'rigging' in packet:
+            # The formal Worklist route needs existing Native ARM controls.
+            # Only this freshly imported model is eligible for their setup.
+            # Authenticate its unmodified native skeleton before generating
+            # controls; the enclosing fresh-ID transaction owns rollback.
+            if _sha256(path) != digest:
+                raise _error('The linked model changed before fresh arm setup.')
+            mapping = unity_animation._mapping(rig, packet, scene.unit_settings.scale_length)
+            from .animation_rigging_setup import prepare_fresh_arm_controls
+            proof = prepare_fresh_arm_controls(context, rig, packet, mapping,
+                existing_ids=existing, model_file=path, model_sha256=digest)
+            rig['character_designer_fresh_arm_setup_v1'] = json.dumps(
+                proof, ensure_ascii=False, sort_keys=True, separators=(',', ':'), allow_nan=False)
         # _mapping checks every bind origin and parent; no tolerance relaxation,
         # body-only fallback or X-rest substitution is permitted in this route.
-        result = _import_action(context, rig, packet, start_frame)
+        result = (_import_action(context, rig, packet, start_frame, native_timebase=True)
+                  if native_timebase else _import_action(context, rig, packet, start_frame))
         if result.action[unity_animation.PACKAGE_HASH_KEY] != packet['_sha256'] or _sha256(path) != digest:
             raise _error('A linked input changed during import; the new editing scene was discarded.')
         current_link = animation_link.load_link(manifest_path)
@@ -213,6 +255,7 @@ def _import_prepared_source(context, link, packet, export_name, path, digest, *,
         _restore_context(context, saved, playing=False)
         context.window.scene = scene
         context.view_layer.objects.active = rig
+        rig.show_in_front = True
         return SourceResult(rig, result.action, result.first_frame, result.last_frame,
                             scene, collection, str(path), digest, export_name)
     except Exception:

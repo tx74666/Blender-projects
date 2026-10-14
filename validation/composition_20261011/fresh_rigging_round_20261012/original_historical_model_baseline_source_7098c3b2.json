@@ -1,0 +1,38 @@
+{
+  "schema": "x.validation.original-control-stage-oracle-source-fix/1",
+  "sourceOnly": true,
+  "nativeExecutionPerformed": false,
+  "productSourceChanged": false,
+  "preservationGuardWeakened": false,
+  "createdUtc": "2026-10-12T05:28:53.433Z",
+  "actualSnapshotReceiptSha256": "99b08426346d77908dbed93e518bc0e2370701a0e8ee906df7d36cb072bb2949",
+  "actualRetainedRows": 1,
+  "retainedDeclaredModelSha256": "2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5",
+  "physicalCurrentModelSha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+  "control": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_cosha_control_round.py",
+    "beforeSha256": "ab995e14bbfe4e9d276a0dfb2029ade3c83ec72beaa32d93bc6a3baa9b8adf91",
+    "afterSha256": "7098c3b20a5a115423913ce91268cc4fd9a57adab9973c9c6c2000e2afd2d468",
+    "bytes": 42400,
+    "changedBlock": "            if item.source_file:\n                checked = pin(item.source_file, item.source_hash)\n                files[checked['path']] = checked\n            if item.model_file:\n                # The retained row keeps its historical model SHA. Protect the\n                # current physical file's before/after baseline separately.\n                checked = pin(item.model_file, sha(item.model_file))\n                files[checked['path']] = checked\n"
+  },
+  "refresh": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\refresh_original_artist_runtime_07725.py",
+    "beforeSha256": "96fb812e1ab8fbee9dac76c68268294bc031871080e09473fe668b35df094f26",
+    "afterSha256": "f2fed527fff545885c7ba962bc7c713f0846629865ac4454c1de23fc213730de",
+    "bytes": 28179,
+    "change": "One Controlsha literal only."
+  },
+  "exactInverseVerified": true,
+  "unchanged": "Retained header/row declaredmodelhash fields, source cache declared source hash, all formal Prepare/Attach model admission, full old-state before-after guard.",
+  "syntax": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_historical_model_baseline_syntax.raw.log",
+    "sha256": "16eed7c6822b4172c15838627737c14542a4b192ead9b7059919ff66ef52e1da",
+    "bytes": 144,
+    "exitCode": 0,
+    "targetImports": 0,
+    "tests": 0,
+    "native": 0
+  },
+  "nativeAdmission": "BLOCKED known product D4 original source model2AE vsformalPhysicalF10; do not launchAttach or rebind or alter header/tag to bypass."
+}

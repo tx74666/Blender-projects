@@ -1,0 +1,26 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "resource_token": "X_RECOVERY_GUN_UNDO_07733_01",
+  "owned_pid": 16644,
+  "owned_process_filetime": "134362990599066776",
+  "retained_handle_natural_exit": true,
+  "native_exit_code": 0,
+  "native_exited_utc": "2026-10-12T17:26:28.0403005+00:00",
+  "owned_native_gone": true,
+  "process_termination_performed": false,
+  "GUI": true,
+  "passed": false,
+  "all_owned_activity_closed": true,
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_recovery_gun_undo_07733.py",
+    "sha256": "6d89a1cb652a6aa564a66ab25c73312439dc887f25f44c0326a050305be50d1a",
+    "bytes": 50228
+  },
+  "report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\recovery_gun_undo_07733_01\\original20_recovery_gun_undo_report.json",
+    "sha256": "27a97f201811d3742e3677444a4d68b664294bc71506555b03da94e7138c49cf",
+    "bytes": 21189
+  },
+  "reason": "Fixed no-op numeric gate passed; actual Undo restored baseline DTO in failure readback but cache-only lifecycle check failed. No Gun phase or original integration."
+}

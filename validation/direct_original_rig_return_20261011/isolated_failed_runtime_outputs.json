@@ -1,0 +1,604 @@
+{
+  "schema": "x.validation.direct-original-rig-return/1",
+  "completed": false,
+  "input": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\artist_before_direct_return.blend",
+  "input_sha256": "079d12824d4fc75a2abba00f7bf68d606e07ab558634c0f430acfe1e4c475337",
+  "packet": "D:\\Blender\\Projects\\Character\\Animation\\UnityExports\\CharacterTuning\\20261009-233830-d8fa2427ba96\\Cosha_Walk_N.cdanim.json",
+  "packet_sha256": "e54537cb65ab6b0365b42af0236f645cc0f009e1c10b056d66a13b87e7669c02",
+  "operation": "Disposable backup only; no artist or Unity mutations.",
+  "runtime": {
+    "blender": "5.2.0 LTS",
+    "addon": [
+      0,
+      77,
+      24
+    ],
+    "addon_path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\__init__.py",
+    "module_sha256": {
+      "character_designer.unity_animation": "44c6014ac8c6c46ef4864aa0560d93375f10b99aa0c5d3276122882304ed493f",
+      "character_designer.animation_worklist": "a8ae5490ff75b345a097d640b593c066f6c7b7d32138e050366c608bd0be24fe",
+      "character_designer.animation_worklist_target": "3a3d6220a7308ffc05a3bf952af4476a295219b1314598bcef087967dd9d3920",
+      "character_designer.animation_worklist_fingerprint": "74a49632682def0ec598cb819018d67f217a032bd4253d8a88af50cbf7d63193"
+    }
+  },
+  "isolated_source_cache_root": "D:\\Blender\\Projects\\Character\\X\\validation\\dr24cache",
+  "existing_worklists": [
+    {
+      "scene": "Animation Worklist · Cosha",
+      "item": "Walk_N",
+      "item_id": "8069c6d729ea43e1888db9fd07b9d6da",
+      "source_slot": 929201142,
+      "source_proof": {
+        "schema": "character-designer.animation-worklist-fingerprint/1",
+        "fingerprint_known": true,
+        "fingerprint": "",
+        "action_fingerprint": "9358b82f4207b5ba4c5dfb888490d8f667ffbd9d19aa131add04fcd538ff7c7e",
+        "proof_reason": "Complete selected-slot Action content."
+      },
+      "custom_slot": 929201142,
+      "custom_proof": {
+        "schema": "character-designer.animation-worklist-fingerprint/1",
+        "fingerprint_known": true,
+        "fingerprint": "",
+        "action_fingerprint": "9358b82f4207b5ba4c5dfb888490d8f667ffbd9d19aa131add04fcd538ff7c7e",
+        "proof_reason": "Complete selected-slot Action content."
+      },
+      "entire_action_equal": true,
+      "source_file": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\datafiles\\character_designer\\animation_sources\\d3444e049cfd4afebb343e61e518c768\\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\\8069c6d729ea43e1888db9fd07b9d6da.blend",
+      "source_file_hash": "e5238d1c8bb01cf950c998a0e3dab3f1a2aa54259bf973ae5096a43262664919",
+      "source": "Source · Walk_N",
+      "custom": "Cosha · Walk_N · Custom"
+    }
+  ],
+  "original_assets_before": {
+    "sha256": "a94a10047a9b3d72e25a5ae6b6d23331cc0fe6091da7afb081fe5d5f08926ca3",
+    "component_sha256": {
+      "rest": "e304e6958da8e88ddb4843e02fb91bbb39fd4728dc41c9c6961e54019bd09974",
+      "rig_raw_transform": "8e0052a3dc6a4e6227f408c2a41a2a579b3b0a50f9ca4e67321ec24d9042c43f",
+      "bone_colors_collections_widgets": "97cff5b8e6f57b6e4c85477a333350cf739279da874aa3c2f96c31f0acf6c65a",
+      "collections": "13863761e6c6f5d33214d19bf30c806a48198930e8bd126118c0c83f7a141cf3",
+      "skin_meshes": "244f45e6751cb1005793591339bb36beaeaa4614429feed85feccc51bdba9ed4",
+      "widgets": "62f8492020bf8e346b5806cb2bbc1be9eac088f3e94ff4f3fd1ad67f7e11ceca",
+      "materials": "7178a77d077de3f95352ee29361bb92ab63092aa84c278f4ea67c3fc34ec4d57"
+    },
+    "counts": {
+      "bones": 346,
+      "collections": 5,
+      "skin_meshes": 6,
+      "widgets": 50,
+      "materials": 18
+    },
+    "skin_mesh_summary": {
+      "Cosha": {
+        "vertices": 3658,
+        "shape_keys": 14,
+        "weight_influences": 22900
+      },
+      "Clothes": {
+        "vertices": 101,
+        "shape_keys": 0,
+        "weight_influences": 493
+      },
+      "Stocking": {
+        "vertices": 528,
+        "shape_keys": 0,
+        "weight_influences": 912
+      },
+      "Dress": {
+        "vertices": 800,
+        "shape_keys": 0,
+        "weight_influences": 2440
+      },
+      "Shoes": {
+        "vertices": 28177,
+        "shape_keys": 0,
+        "weight_influences": 91410
+      },
+      "Hair": {
+        "vertices": 5463,
+        "shape_keys": 0,
+        "weight_influences": 8378
+      }
+    }
+  },
+  "adoption_result_type": "Object",
+  "adopted": true,
+  "strict_mapping": {
+    "mapped": 217,
+    "error_metres": 4.2527241368190754e-07
+  },
+  "custom_samples": {
+    "scope": "Every packet sample; exact comparison only for authored Body/Hair/eye/finger bones. Validated static-package Dress remains on original manual/physics solves.",
+    "authored_count": 184,
+    "delegated_count": 33,
+    "sample_count": 59,
+    "matrix_tolerance": 0.0002,
+    "worst": {
+      "index": 31,
+      "packet_time": 0.5166666507720947,
+      "blender_frame": 16.499999523162842,
+      "matrix_error": 7.338821887969971e-06,
+      "max_head_error_mm": 0.0008384551848372439,
+      "worst_bone": "eye.R"
+    },
+    "frames": [
+      {
+        "index": 0,
+        "packet_time": 0.0,
+        "blender_frame": 1.0,
+        "matrix_error": 3.7550926208496094e-06,
+        "max_head_error_mm": 0.0007219378082011495,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 1,
+        "packet_time": 0.01666666753590107,
+        "blender_frame": 1.500000026077032,
+        "matrix_error": 3.822147846221924e-06,
+        "max_head_error_mm": 0.0008706989489640068,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 2,
+        "packet_time": 0.03333333507180214,
+        "blender_frame": 2.000000052154064,
+        "matrix_error": 6.951391696929932e-06,
+        "max_head_error_mm": 0.0006174549268216092,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 3,
+        "packet_time": 0.05000000074505806,
+        "blender_frame": 2.500000022351742,
+        "matrix_error": 3.725290298461914e-06,
+        "max_head_error_mm": 0.0007822133894652606,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 4,
+        "packet_time": 0.06666667014360428,
+        "blender_frame": 3.0000001043081284,
+        "matrix_error": 6.213784217834473e-06,
+        "max_head_error_mm": 0.0009625965594952828,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 5,
+        "packet_time": 0.0833333358168602,
+        "blender_frame": 3.500000074505806,
+        "matrix_error": 3.6954879760742188e-06,
+        "max_head_error_mm": 0.0007337687194067198,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 6,
+        "packet_time": 0.10000000149011612,
+        "blender_frame": 4.000000044703484,
+        "matrix_error": 4.015862941741943e-06,
+        "max_head_error_mm": 0.000893976534522254,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 7,
+        "packet_time": 0.11666666716337204,
+        "blender_frame": 4.500000014901161,
+        "matrix_error": 3.6656856536865234e-06,
+        "max_head_error_mm": 0.000815362143426681,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 8,
+        "packet_time": 0.13333334028720856,
+        "blender_frame": 5.000000208616257,
+        "matrix_error": 4.649162292480469e-06,
+        "max_head_error_mm": 0.0010247460406567592,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 9,
+        "packet_time": 0.15000000596046448,
+        "blender_frame": 5.500000178813934,
+        "matrix_error": 3.5762786865234375e-06,
+        "max_head_error_mm": 0.0007447692937350036,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 10,
+        "packet_time": 0.1666666716337204,
+        "blender_frame": 6.000000149011612,
+        "matrix_error": 3.6656856536865234e-06,
+        "max_head_error_mm": 0.0009251029232103323,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 11,
+        "packet_time": 0.18333333730697632,
+        "blender_frame": 6.5000001192092896,
+        "matrix_error": 3.725290298461914e-06,
+        "max_head_error_mm": 0.0008479598704528904,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 12,
+        "packet_time": 0.20000000298023224,
+        "blender_frame": 7.000000089406967,
+        "matrix_error": 4.023313522338867e-06,
+        "max_head_error_mm": 0.0011353826807205037,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 13,
+        "packet_time": 0.21666666865348816,
+        "blender_frame": 7.500000059604645,
+        "matrix_error": 4.909932613372803e-06,
+        "max_head_error_mm": 0.001068950613794678,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 14,
+        "packet_time": 0.23333333432674408,
+        "blender_frame": 8.000000029802322,
+        "matrix_error": 4.000961780548096e-06,
+        "max_head_error_mm": 0.0009728715260920907,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 15,
+        "packet_time": 0.25,
+        "blender_frame": 8.5,
+        "matrix_error": 3.7848949432373047e-06,
+        "max_head_error_mm": 0.0009810182612450785,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 16,
+        "packet_time": 0.2666666805744171,
+        "blender_frame": 9.000000417232513,
+        "matrix_error": 4.202127456665039e-06,
+        "max_head_error_mm": 0.0008647810297338312,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 17,
+        "packet_time": 0.28333333134651184,
+        "blender_frame": 9.499999940395355,
+        "matrix_error": 3.904104232788086e-06,
+        "max_head_error_mm": 0.0008030830796328368,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 18,
+        "packet_time": 0.30000001192092896,
+        "blender_frame": 10.000000357627869,
+        "matrix_error": 5.543231964111328e-06,
+        "max_head_error_mm": 0.0010860532061289891,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 19,
+        "packet_time": 0.3166666626930237,
+        "blender_frame": 10.49999988079071,
+        "matrix_error": 3.904104232788086e-06,
+        "max_head_error_mm": 0.0007192801467267973,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 20,
+        "packet_time": 0.3333333432674408,
+        "blender_frame": 11.000000298023224,
+        "matrix_error": 3.933906555175781e-06,
+        "max_head_error_mm": 0.0009599971952346012,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 21,
+        "packet_time": 0.3499999940395355,
+        "blender_frame": 11.499999821186066,
+        "matrix_error": 4.410743713378906e-06,
+        "max_head_error_mm": 0.0008566547841909414,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 22,
+        "packet_time": 0.36666667461395264,
+        "blender_frame": 12.000000238418579,
+        "matrix_error": 3.9637088775634766e-06,
+        "max_head_error_mm": 0.0008720860031503773,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 23,
+        "packet_time": 0.38333332538604736,
+        "blender_frame": 12.499999761581421,
+        "matrix_error": 3.814697265625e-06,
+        "max_head_error_mm": 0.0007452070564061395,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 24,
+        "packet_time": 0.4000000059604645,
+        "blender_frame": 13.000000178813934,
+        "matrix_error": 3.725290298461914e-06,
+        "max_head_error_mm": 0.0008670888260588738,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 25,
+        "packet_time": 0.4166666567325592,
+        "blender_frame": 13.499999701976776,
+        "matrix_error": 4.082918167114258e-06,
+        "max_head_error_mm": 0.0009402281431363287,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 26,
+        "packet_time": 0.4333333373069763,
+        "blender_frame": 14.00000011920929,
+        "matrix_error": 3.9637088775634766e-06,
+        "max_head_error_mm": 0.0008232470135885261,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 27,
+        "packet_time": 0.44999998807907104,
+        "blender_frame": 14.499999642372131,
+        "matrix_error": 3.725290298461914e-06,
+        "max_head_error_mm": 0.0008883391952984858,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 28,
+        "packet_time": 0.46666666865348816,
+        "blender_frame": 15.000000059604645,
+        "matrix_error": 6.489455699920654e-06,
+        "max_head_error_mm": 0.000703724987421833,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 29,
+        "packet_time": 0.4833333194255829,
+        "blender_frame": 15.499999582767487,
+        "matrix_error": 4.760921001434326e-06,
+        "max_head_error_mm": 0.000955215573987456,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 30,
+        "packet_time": 0.5,
+        "blender_frame": 16.0,
+        "matrix_error": 3.7848949432373047e-06,
+        "max_head_error_mm": 0.0009681913428023914,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 31,
+        "packet_time": 0.5166666507720947,
+        "blender_frame": 16.499999523162842,
+        "matrix_error": 7.338821887969971e-06,
+        "max_head_error_mm": 0.0008384551848372439,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 32,
+        "packet_time": 0.5333333611488342,
+        "blender_frame": 17.000000834465027,
+        "matrix_error": 5.6549906730651855e-06,
+        "max_head_error_mm": 0.0008161106973079321,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 33,
+        "packet_time": 0.550000011920929,
+        "blender_frame": 17.50000035762787,
+        "matrix_error": 3.814697265625e-06,
+        "max_head_error_mm": 0.0010343166374610826,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 34,
+        "packet_time": 0.5666666626930237,
+        "blender_frame": 17.99999988079071,
+        "matrix_error": 3.7550926208496094e-06,
+        "max_head_error_mm": 0.0008424182067881771,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 35,
+        "packet_time": 0.5833333134651184,
+        "blender_frame": 18.499999403953552,
+        "matrix_error": 6.236135959625244e-06,
+        "max_head_error_mm": 0.0010750803131794476,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 36,
+        "packet_time": 0.6000000238418579,
+        "blender_frame": 19.000000715255737,
+        "matrix_error": 3.814697265625e-06,
+        "max_head_error_mm": 0.001066142678256078,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 37,
+        "packet_time": 0.6166666746139526,
+        "blender_frame": 19.50000023841858,
+        "matrix_error": 4.172325134277344e-06,
+        "max_head_error_mm": 0.0011110362144995457,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 38,
+        "packet_time": 0.6333333253860474,
+        "blender_frame": 19.99999976158142,
+        "matrix_error": 4.716217517852783e-06,
+        "max_head_error_mm": 0.0012411871208523988,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 39,
+        "packet_time": 0.6499999761581421,
+        "blender_frame": 20.499999284744263,
+        "matrix_error": 3.7848949432373047e-06,
+        "max_head_error_mm": 0.00131604019551192,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 40,
+        "packet_time": 0.6666666865348816,
+        "blender_frame": 21.000000596046448,
+        "matrix_error": 3.9637088775634766e-06,
+        "max_head_error_mm": 0.0015975545965657353,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 41,
+        "packet_time": 0.6833333373069763,
+        "blender_frame": 21.50000011920929,
+        "matrix_error": 5.640089511871338e-06,
+        "max_head_error_mm": 0.001470244233701662,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 42,
+        "packet_time": 0.699999988079071,
+        "blender_frame": 21.99999964237213,
+        "matrix_error": 3.993511199951172e-06,
+        "max_head_error_mm": 0.0014970337589033016,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 43,
+        "packet_time": 0.7166666388511658,
+        "blender_frame": 22.499999165534973,
+        "matrix_error": 3.874301910400391e-06,
+        "max_head_error_mm": 0.0014689599546785686,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 44,
+        "packet_time": 0.7333333492279053,
+        "blender_frame": 23.000000476837158,
+        "matrix_error": 4.023313522338867e-06,
+        "max_head_error_mm": 0.001456893357890749,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 45,
+        "packet_time": 0.75,
+        "blender_frame": 23.5,
+        "matrix_error": 3.6954879760742188e-06,
+        "max_head_error_mm": 0.0013779797954992712,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 46,
+        "packet_time": 0.7666666507720947,
+        "blender_frame": 23.999999523162842,
+        "matrix_error": 3.7848949432373047e-06,
+        "max_head_error_mm": 0.0013025524274408935,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 47,
+        "packet_time": 0.7833333611488342,
+        "blender_frame": 24.500000834465027,
+        "matrix_error": 3.6954879760742188e-06,
+        "max_head_error_mm": 0.0012345726707475126,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 48,
+        "packet_time": 0.800000011920929,
+        "blender_frame": 25.00000035762787,
+        "matrix_error": 3.725290298461914e-06,
+        "max_head_error_mm": 0.0010240754595481384,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 49,
+        "packet_time": 0.8166666626930237,
+        "blender_frame": 25.49999988079071,
+        "matrix_error": 3.993511199951172e-06,
+        "max_head_error_mm": 0.0009513723355372801,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 50,
+        "packet_time": 0.8333333134651184,
+        "blender_frame": 25.999999403953552,
+        "matrix_error": 5.949288606643677e-06,
+        "max_head_error_mm": 0.0008004521130579803,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 51,
+        "packet_time": 0.8500000238418579,
+        "blender_frame": 26.500000715255737,
+        "matrix_error": 3.9637088775634766e-06,
+        "max_head_error_mm": 0.0007014633593523395,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 52,
+        "packet_time": 0.8666666746139526,
+        "blender_frame": 27.00000023841858,
+        "matrix_error": 6.582587957382202e-06,
+        "max_head_error_mm": 0.000717744635099337,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 53,
+        "packet_time": 0.8833333253860474,
+        "blender_frame": 27.49999976158142,
+        "matrix_error": 3.993511199951172e-06,
+        "max_head_error_mm": 0.0006121680410067612,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 54,
+        "packet_time": 0.8999999761581421,
+        "blender_frame": 27.999999284744263,
+        "matrix_error": 5.334615707397461e-06,
+        "max_head_error_mm": 0.0006197880012716478,
+        "worst_bone": "eye.L"
+      },
+      {
+        "index": 55,
+        "packet_time": 0.9166666865348816,
+        "blender_frame": 28.500000596046448,
+        "matrix_error": 4.939734935760498e-06,
+        "max_head_error_mm": 0.0006926235405619204,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 56,
+        "packet_time": 0.9333333373069763,
+        "blender_frame": 29.00000011920929,
+        "matrix_error": 4.462897777557373e-06,
+        "max_head_error_mm": 0.0007575632231070612,
+        "worst_bone": "eye.R"
+      },
+      {
+        "index": 57,
+        "packet_time": 0.949999988079071,
+        "blender_frame": 29.49999964237213,
+        "matrix_error": 3.6656856536865234e-06,
+        "max_head_error_mm": 0.0010804385538701739,
+        "worst_bone": "Hair Hair 27.04"
+      },
+      {
+        "index": 58,
+        "packet_time": 0.9666666984558105,
+        "blender_frame": 30.000000953674316,
+        "matrix_error": 3.7550926208496094e-06,
+        "max_head_error_mm": 0.0007219378082011495,
+        "worst_bone": "Hair Hair 27.04"
+      }
+    ]
+  },
+  "error_type": "AssertionError",
+  "error": "Original character assets changed: skin_meshes, rest",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\verify_direct_return_isolated.py\", line 266, in main\n    report['original_assets_while_active'] = require_assets(scene, rig, ua, before, original_data, original_rest, authored)\n                                             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\verify_direct_return_isolated.py\", line 131, in require_assets\n    raise AssertionError('Original character assets changed: ' + ', '.join(changed))\nAssertionError: Original character assets changed: skin_meshes, rest\n",
+  "input_file_unchanged": true,
+  "packet_file_unchanged": true
+}

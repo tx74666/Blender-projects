@@ -1,0 +1,169 @@
+{
+  "schema": "x.validation.character-composition-recovery-ui-launch-source-peer-review/1",
+  "utc": "2026-10-11T12:20:26.315143+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "preflight_u1_publication_recovery.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u1_publication_recovery.py",
+      "sha256": "44ac290ac5235ce2ea625fceb08e340bcb50f2f36b793525b489c7d57eb37026",
+      "bytes": 24052
+    },
+    "launch_u1_publication_recovery_granted.ps1": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_u1_publication_recovery_granted.ps1",
+      "sha256": "61c589510f399a5542ef5ea8f1586b9cd21ad9a7399c2d072b78899b70fc97ed",
+      "bytes": 9457
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u1_publication_recovery_launch_owner_source_44ac290a_61c58951.json",
+    "sha256": "64cbfb69782c20fe15cab0a42cc17782ffe470e0210aa7d616f80be33be16248",
+    "bytes": 9365
+  },
+  "reviewed_API_bindings": {
+    "completed_file_audit": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    },
+    "recovery_UI_adapter": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "775641147dd7ad12cdd68300cee3720e03aa8e6668199febcf2f74bb6406ed9f",
+      "bytes": 25547
+    },
+    "adapter_normalization_Source_peer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_frozen09_row_normalization_peer_source_77564114.json",
+      "sha256": "1367a7ec311b5ad7d238ce9cb28cf374ee2a4cfc044d6b7649faf4e848d2c6e3",
+      "bytes": 7835
+    },
+    "read_only_complete_projection_resolver": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529
+    },
+    "actual_session_witness_Source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+      "bytes": 57217
+    }
+  },
+  "preserved_donor_sources": {
+    "preflight": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u1_n8.py",
+      "sha256": "7ee603b1ae96ca0f48959f5c414f07b512f427e49cd04b54bb7a7d8b01815583",
+      "bytes": 12125
+    },
+    "launcher": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_u1_n8_granted.ps1",
+      "sha256": "c2046ab07a9200831a157dc2dd440d203d63c8bc98babaa8bddf9dee3d31ce0b",
+      "bytes": 9263
+    }
+  },
+  "preserved_initial_preflight": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u1_publication_recovery_47bd0c5d_before_domain_count_fix.py",
+    "sha256": "47bd0c5d8ca3b13bf4b983f5efbab06e9e7c06fda4a51ac959119ff8b7cd56db",
+    "bytes": 22814
+  },
+  "preserved_before_adapter_binding_preflight": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_u1_publication_recovery_40e6c194_before_adapter775_pin.py",
+    "sha256": "40e6c194f6ede071744aa57b4e42a2d102311c888d2601d51bd0e4cb039070a3",
+    "bytes": 24052
+  },
+  "bounded_delta": {
+    "only_new_delta_from_40e6": "ADAPTER_SHA constant3c41 to reviewed77564114",
+    "whole_raw_byte_inverse_exact": true,
+    "all_eight_function_AST_unchanged_from_40e6": true,
+    "top_level_AST_inverse_exact": true,
+    "previous_corrections_from_initial_47bd": [
+      "preflight",
+      "verify_completed_ui"
+    ],
+    "six_other_functions_unchanged_from_initial_47bd": true,
+    "launcher61c_unchanged": true
+  },
+  "reviewed_parent_contract": {
+    "attempt": "u1",
+    "grant_schema": "randomrealm.character-composition-native-window/1",
+    "proof_binding_schema": "randomrealm.character-composition-native-proof-binding/1",
+    "review_schema": "randomrealm.character-composition-recovery-ui-source-review/1",
+    "input_readback_schema": "randomrealm.character-composition-recovery-ui-input-readback/1",
+    "exact_separate_headful_allowed_background_disallowed": true,
+    "explicit_eight_path_sha256_CLI_pairs": [
+      "grant",
+      "proof-binding",
+      "fixture",
+      "source-receipt",
+      "tools-receipt",
+      "completion-closure",
+      "audit-source",
+      "adapter-source"
+    ],
+    "owner_and_recipient_threads_pinned": true,
+    "source_deployment_and_artist_mutation_disallowed": true,
+    "grant_proof_and_review_chain_exact_with_no_self_hash_cycle": true,
+    "every_critical_input_required_in_Parent_readback": true,
+    "unknown_future_input_digests_supplied_explicitly_not_fabricated": true
+  },
+  "pre_spawn_guards": {
+    "honest_completed_n16_recovery_audit_closure_required": true,
+    "three_inherited_publications_zero_exports_and_authors_counts_preserved": true,
+    "exact_current_recovery_seed_UI_rows_and_historical_two_Source_physical_report_required": true,
+    "runtime13_167_and_full14_173_complete_shipped_sets_validated_by_pinned_read_only_release_load_source": true,
+    "no_native_runtime_projection_addon_import_in_preflight": true,
+    "new_adapter775_frozen_api_retains_actual09_ancestry_and_exact_twelve_tool_set": true,
+    "immutable_inputs_outside_mutable_u1_evidence": true,
+    "CONFIG_and_DATAFILES_exact_empty_owned_directories": true,
+    "all_input_hashes_rechecked_at_end": true,
+    "artist_E8_and_sole_artist27676_protected": true,
+    "fresh_RAM_floor_200_MiB_and_near98_percent_serial_reread": true,
+    "exclusive_onceclaim_before_StartProcess": true,
+    "verified_exe006091_and_factory_startup_disable_autoexec_python_exit_code1": true,
+    "headful_child_has_no_background_flag_or_artist_input_file": true,
+    "only_owned_QA_child_environment_profile_changed_and_restored": true,
+    "no_forced_kill_or_automatic_retry": true
+  },
+  "post_exit_guards": {
+    "normal_exit0_actual_owned_PID_and_all_QA_gone_required": true,
+    "remaining_only_original_artist27676_verified_by_launcher_when_invoked": true,
+    "all_immutable_input_hashes_rechecked": true,
+    "session_completed_and_normal_quit_requested_required": true,
+    "initial_Full_Stack_and_EditA_C_unique_phase_proofs_required": true,
+    "strict_integer_native_upper_lower_positive_and_delegated_nonnegative": true,
+    "EditA_domain_counts_equal_initial_Full_Stack": true,
+    "native_equals_upper_plus_lower_and_native_plus_delegated_equals217": true,
+    "full217_Source_mapping_guard_preserved_without_incorrect_full217_witness_requirement": true,
+    "actual_EditA_SoloA_restoredC_returnB_multiple_seek_full_upper_lower_finite_errors_within_point0002": true,
+    "four_Action_hashes_unchanged_during_switch_witness": true,
+    "actual_A_transform_key_commit_lower_delta_positive_and_upperB_unchanged": true,
+    "completed_actual_SDK_checkpoint_review_ACK_and_all_PNG_hashes_required": true,
+    "SourceLink_publication_and_worker_launch_absent_from_UI_session": true
+  },
+  "source_syntax_checks": {
+    "current_Python_in_memory_compile_count": 1,
+    "current_Python_AST_parsed": true,
+    "Python_assert_statement_count": 0,
+    "unchanged_current_PS61c_parser_only_checked_this_review": true,
+    "PowerShell_parser_error_count": 0,
+    "PowerShell_function_names": [
+      "Write-TaskNewJson",
+      "Get-TaskSoleArtist",
+      "Read-TaskPreflight",
+      "Get-TaskMemory"
+    ],
+    "target_modules_imported": 0,
+    "tests_run": 0,
+    "bytecode_written": false
+  },
+  "not_performed": {
+    "preflight_or_launcher_invocation": true,
+    "release_resolver_invocation": true,
+    "adapter_or_audit_or_freezer_invocation": true,
+    "CIM_or_resource_query": true,
+    "native_Blender_or_SDK_or_GUI": true,
+    "UI_fixture_or_profile_generation": true,
+    "Parent_grant_consumption": true
+  },
+  "limits": "Source readiness only. Parent must bind actual generated frozen10/config/source receipt/completed closure and provide a separate fresh headful-only grant plus matching Source/readback proof before any launch. No failed historical run is relabeled; no UI or screenshots were observed in this Source peer.",
+  "owner_prose_note": "The owner retained one historical future3c41-output phrase; actual executable ADAPTER_SHA and paired Source binding are77564114, confirmed exact. This is a provenance wording note, not an executable guard relaxation."
+}

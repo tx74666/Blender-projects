@@ -1,0 +1,120 @@
+{
+  "schema": "x.validation.character-designer-worklist-rigging-token-source-owner/1",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "sdk_execution_performed": false,
+  "release_or_deployment_performed": false,
+  "source_files": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+      "bytes": 40384
+    }
+  },
+  "previous_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_worklist_8eb984d5_before_rigging_token_finish.py",
+    "sha256": "8eb984d505d21be19aba2120d3e883495c03061b7aff6a477d0f57e271545b2b",
+    "bytes": 39866
+  },
+  "changed_existing_functions": [
+    "activate",
+    "add",
+    "adopt_main_rig",
+    "restore_main_rig"
+  ],
+  "added_functions": [
+    "_finish_rig"
+  ],
+  "unchanged_existing_functions": [
+    "_rigging_module",
+    "state",
+    "current",
+    "_idle",
+    "_encoded",
+    "_identity",
+    "_clip_key",
+    "_validate_route",
+    "_fill_catalog",
+    "connect",
+    "refresh",
+    "_fresh_workspace",
+    "_prepared",
+    "_clean_action",
+    "_slot",
+    "_linked_baseline",
+    "_find_owned_rig",
+    "_editing_data",
+    "_capture_rig",
+    "_restore_rig",
+    "_copy_workspace",
+    "_composition_add_route",
+    "_item",
+    "_check_baseline",
+    "_association_record",
+    "_association",
+    "move",
+    "remove",
+    "sync"
+  ],
+  "source_normalization": {
+    "full_module_inverse_ast_equal": true,
+    "all_changed_function_literal_inverse_equal": true,
+    "top_level_ast_unchanged": true,
+    "all_other_existing_functions_source_exact": true,
+    "capture_and_restore_rig_source_exact": true,
+    "all_existing_failure_paths_source_exact": true,
+    "remove_and_sync_source_exact": true
+  },
+  "paired_transactions": [
+    {
+      "capture": "adopt_main_rig._capture_owned",
+      "failure": "_restore_owned_state",
+      "success": "result=adopt; _finish_owned_state; return result"
+    },
+    {
+      "capture": "restore_main_rig._capture_owned",
+      "failure": "_restore_owned_state",
+      "success": "result=restore; _finish_owned_state; return result"
+    },
+    {
+      "capture": "add._capture_rig for existing or reacquired Rig",
+      "failure": "existing _restore_rig and exact new-ID batch_remove unchanged",
+      "success": "_finish_rig at final return after activation/publication/cleanup succeeds",
+      "collection_no_activation": "existing _restore_rig consumes/restores token; final finish must be a native no-op for restored token"
+    },
+    {
+      "capture": "activate._capture_rig for actual owned Rigging",
+      "failure": "existing _restore_rig, selected context/index/side/target restore unchanged",
+      "success": "_finish_rig only after complete SOURCE/CUSTOM activation and source identity checks"
+    }
+  ],
+  "native_api_contract": {
+    "finalize": "_finish_owned_state(context, rig, token)",
+    "token_states": [
+      "pending",
+      "detached",
+      "restored",
+      "finished"
+    ],
+    "none_token": "No native module import or finalize call",
+    "restored_token": "Repeated finish is no-op",
+    "nested_add_activate": "Independent exact registered tokens retain each captured old display until their own success/failure boundary",
+    "failure": "Restore exact old display native IDs and original Scene link; no equal-content replacement",
+    "success": "Remove only token-captured old display through unchanged weapon.remove_context guards; retain new active display",
+    "cleanup_exception": "A native post-deletion cleanup exception must remain a reported failure, never claim recovered identity"
+  },
+  "lightweight_checks": {
+    "compile_source_count": 1,
+    "ast_parse_only": true,
+    "tests_executed": 0,
+    "target_modules_imported": 0,
+    "native_or_blender_or_mathutils_execution": 0,
+    "process_artist_shared_workspace_operations": 0
+  },
+  "validation_limits": [
+    "Native owner implements the exact opaque archive/finalize API independently; this caller receipt proves Source call ordering only.",
+    "No actual success/failure native transaction, weapon display, or artist operation was executed.",
+    "The frozen weapon module and Link/collection/export behavior were not edited."
+  ]
+}

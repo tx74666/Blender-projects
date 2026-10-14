@@ -1,0 +1,51 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "written_utc": "2026-10-13T06:43:19.939Z",
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/verify_original20_saved_artist_readonly_07738h.py",
+    "sha256": "a4e9c6c7fb6053a8c56fbccd2ebdfa23d58b07cd7596b635d2f0cf83a4ad9731",
+    "bytes": 24676
+  },
+  "entry": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_calls_07738h_01/reader_entry.py",
+    "sha256": "de2f13874d17b4b6834d34c50e5c821b86a1ecb0dc5ecc275592a26bf24b01b7",
+    "bytes": 2789
+  },
+  "start": {
+    "schema": "x.validation.process-start/1",
+    "stage": "Reader",
+    "pid": 38376,
+    "process_filetime": "134363473053808860",
+    "started_utc": "2026-10-13T06:41:45.3478661Z",
+    "resource_token": "X_LATEST_SAVED_ORIGINAL_READBACK_07738H_01",
+    "free_mib": 2374.6,
+    "request_sha256": "de2f13874d17b4b6834d34c50e5c821b86a1ecb0dc5ecc275592a26bf24b01b7",
+    "argv": [
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738h_01\\reader_entry.py"
+    ],
+    "retained_handle": true
+  },
+  "end": {
+    "schema": "x.validation.process-end/1",
+    "stage": "Reader",
+    "pid": 38376,
+    "process_filetime": "134363473053808860",
+    "retained_handle_natural_exit": true,
+    "exit_code": 1,
+    "ended_utc": "2026-10-13T06:41:47.9579380Z",
+    "elapsed_seconds": 2.5989217,
+    "owned_process_gone": true,
+    "process_termination_performed": false,
+    "operation_success_inferred": false
+  },
+  "known_failure": "Path representation differs in saved status writer_report field; normalize its exact physical pin.",
+  "artist_file_opened_by_reader": false,
+  "artist_file_saved_or_mutated": false,
+  "resource_returned_to_parent": false
+}

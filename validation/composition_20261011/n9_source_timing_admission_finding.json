@@ -1,0 +1,104 @@
+{
+  "schema": "x.validation.character-composition-source-timing-admission-finding/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "utc": "2026-10-11T04:06:43.414973+00:00",
+  "status": "ACTUAL_SOURCE_TIMING_MISMATCH_NATIVE_ADMISSION_PENDING",
+  "r14_source_constancy_proof": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\r14_hold_source_constancy_proof.json",
+    "sha256": "0106be46f9358748287ad6af45fd6b5b31ec3dba3488ceac8a2986a6d08f5e62",
+    "bytes": 11007
+  },
+  "actual_three_source_headers": [
+    {
+      "work_item_id": "5550ed39-9321-4cd4-b48b-d162a81bce21",
+      "time_mode": "HoldPose",
+      "packet": {
+        "path": "D:\\codex\\CQ\\7d9e502525924ca2840eca8551985077\\CharacterTuning\\20261011-034819-619f9925dc17\\Cosha_HoldPose.cdanim.json",
+        "sha256": "c726f22544d8fe33466f32c4a2d08ae6f208bfd0b541049f45cd24c9baa4a4a2",
+        "bytes": 197426
+      },
+      "actual_packet_sample_rate": 60.0,
+      "actual_sealed_composition_fps": 30.0,
+      "equal": false
+    },
+    {
+      "work_item_id": "5fd05f01-0db3-4888-a95f-629815fb70f4",
+      "time_mode": "HoldPose",
+      "packet": {
+        "path": "D:\\codex\\CQ\\7d9e502525924ca2840eca8551985077\\CharacterTuning\\20261011-034839-e60829acfb70\\Cosha_HoldPose.cdanim.json",
+        "sha256": "218b8fc7195b661ae17fc69a77b8dbd1d531fa00094759f749258e4cad40afe7",
+        "bytes": 197431
+      },
+      "actual_packet_sample_rate": 60.0,
+      "actual_sealed_composition_fps": 30.0,
+      "equal": false
+    },
+    {
+      "work_item_id": "af177471-666d-4fd1-851b-717d14708db9",
+      "time_mode": "HoldLoop",
+      "packet": {
+        "path": "D:\\codex\\CQ\\7d9e502525924ca2840eca8551985077\\CharacterTuning\\20261011-034857-24fad18dda05\\Cosha_Hold.cdanim.json",
+        "sha256": "184a54d4c5e0a7bbee7e8c82e0e0743e4bb136bbaf68503964a78ce0ccae17f0",
+        "bytes": 11191031
+      },
+      "actual_packet_sample_rate": 60.0,
+      "actual_sealed_composition_fps": 30.0,
+      "equal": false
+    }
+  ],
+  "frozen_runtime_sources": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\unity_animation.py",
+      "sha256": "44c6014ac8c6c46ef4864aa0560d93375f10b99aa0c5d3276122882304ed493f",
+      "bytes": 38315
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_worklist.py",
+      "sha256": "fea0c713008ad73a9cca30112054312a28b8cfdebbcfda20d6a38483defbd043",
+      "bytes": 33381
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_composition.py",
+      "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "bytes": 96417
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_composition_export.py",
+      "sha256": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67",
+      "bytes": 44171
+    }
+  ],
+  "source_route": [
+    {
+      "source": "unity_animation.py",
+      "line": 545,
+      "behavior": "Writes imported Action unity_sample_rate directly from packet sampleRate."
+    },
+    {
+      "source": "animation_composition.py",
+      "line": 280,
+      "behavior": "Custom Action is a direct copy of imported baseline."
+    },
+    {
+      "source": "animation_worklist.py",
+      "line": 140,
+      "behavior": "_clean_action deletes preview/session/motion ownership metadata, retaining unity_sample_rate/start/duration."
+    },
+    {
+      "source": "animation_composition_export.py",
+      "line": 122,
+      "behavior": "Requires native Action rate == sealed spec fps before the HoldPose branch returns."
+    },
+    {
+      "source": "animation_composition.py",
+      "line": 1140,
+      "behavior": "B track uses sealed spec frame range and editSpeed; A separately compensates native source sampling rate."
+    }
+  ],
+  "conclusion": "Actual source matrix constancy passed, but all three sealed B sources have sampleRate60 and composition fps30. Under the inspected frozen import/copy/admission route this metadata conflicts with the strict B native timing gate. No native rejection was executed or claimed here.",
+  "next_step": "Prepare genuinely matching B packet/composition sampling under the contract; independently verify the owner route before changing any input, importer or guard.",
+  "native_curves_or_action_metadata_inspected": false,
+  "runtime_or_source_assets_modified": false,
+  "tests_performed": 0
+}

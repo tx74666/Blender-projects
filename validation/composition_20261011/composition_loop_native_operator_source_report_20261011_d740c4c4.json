@@ -1,0 +1,172 @@
+{
+  "schema": "x.validation.character-composition-loop-operator-source-review/1",
+  "source_only": true,
+  "passed": true,
+  "native_execution_performed": false,
+  "addon_import_performed": false,
+  "bpy_import_performed": false,
+  "source_files": {
+    "timing_tool": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "d740c4c453c88599cb55890f9c784c329a53b35160f8f71a25f8ba1eaee58e2b",
+      "bytes": 48928
+    },
+    "focused_tests": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_loop_operator_guards.py",
+      "sha256": "c5a00075e0dd74e2760c308ea3759dc77179875414ef7a542ce8852fbf4e525c",
+      "bytes": 11981
+    },
+    "preserved_failed_tool": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\tools\\composition_timing_acceptance.py",
+      "sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "bytes": 40700
+    }
+  },
+  "failure_evidence": {
+    "loop_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12\\loop_author\\composition_HoldLoop_authoring_report.json",
+      "sha256": "67d00b7fe4529e60eeacd7aff58f40d7a268414b92674ff7b58b80e7e9f50a43",
+      "bytes": 1816
+    },
+    "stderr": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12_stderr.log",
+      "sha256": "267a809ad03eec05169f9e915cac7a6c8f7c8c285f5fd5a84da5b802b02cec19",
+      "bytes": 3126
+    },
+    "root_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n12_natural_failure_readback_916860cd.json",
+      "sha256": "041253e90a8baae9ed715c28b4fde0e002aeea3e57ff595b41911e08011f5ff7",
+      "bytes": 377490
+    }
+  },
+  "actual_failure_limit": "The preserved failure report does not identify the chosen control, exact operator return or visibility/selection state. Effective Collection visibility is a proven source omission, not an asserted actual n12 hidden-bone diagnosis.",
+  "delta": {
+    "changed_functions": [
+      "_author_loop",
+      "author_hold_loop"
+    ],
+    "added_functions": [
+      "_loop_rotation_delta",
+      "_loop_rotation_state",
+      "_loop_select",
+      "_loop_visibility"
+    ],
+    "unchanged_original_function_count": 27,
+    "inverse_normalized_full_module_ast_exact": true,
+    "open_recovery_unchanged": true,
+    "final_eight_authoring_guards_and_return_ast_exact": true,
+    "native_B_C_frame_formula_assignments_ast_exact": true,
+    "no_collection_or_pose_hide_flags_written": true,
+    "no_pose_curve_fallback_or_export_guard_relaxation": true
+  },
+  "diagnostic_contract": {
+    "report_field": "operator_diagnostics",
+    "created_before_author_call": true,
+    "candidate_fields": [
+      "control",
+      "field",
+      "scope_indices",
+      "visibility",
+      "hide_select",
+      "lock_rotation",
+      "eligible"
+    ],
+    "mapped_frame_checks": [
+      "initial_input",
+      0.0,
+      0.5,
+      1.0
+    ],
+    "native_context_checks": [
+      "Scene/window/view_layer",
+      "active Rig/Pose mode",
+      "VIEW_3D/WINDOW/space",
+      "exact selected and active Pose input",
+      "owned EDIT active track",
+      "Full Stack B Tweak Action/slot"
+    ],
+    "operator_fields": [
+      "poll",
+      "result",
+      "exception when raised",
+      "before",
+      "after",
+      "rotation_delta_radians",
+      "minimum_rotation_radians"
+    ],
+    "minimum_rotation_radians": 1e-07,
+    "nonfinite_values_json_safe_but_rejected": true
+  },
+  "pure_test_results": {
+    "test_count": 10,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0,
+    "command": "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -B -m unittest discover -s tests -p test_composition_loop_operator_guards.py -v",
+    "cwd": "D:\\MyRepository\\Blender-addons-by-Randy",
+    "stdout_summary": "Ran 10 tests in 0.177s; OK",
+    "execution_scope": "Only actual helper/report function ASTs execute with pure fake native-equality wrappers and fake report sink. No Blender/add-on imports.",
+    "prior_runs": [
+      {
+        "tests": 9,
+        "exit_code": 1,
+        "failures": 0,
+        "errors": 6,
+        "reason": "Pure Rig fixture omitted its native name; corrected only the fixture."
+      },
+      {
+        "tests": 9,
+        "exit_code": 0,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "tests": 9,
+        "exit_code": 0,
+        "failures": 0,
+        "errors": 0
+      }
+    ]
+  },
+  "source_syntax_checks": {
+    "tool_compiled_in_memory": true,
+    "test_compiled_in_memory": true
+  },
+  "primary_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/animrig/ANIM_armature.hh",
+      "lines": "28-31",
+      "fact": "Pose visibility includes draw-hidden and effective Collection visibility."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/animrig/intern/bone_collections.cc",
+      "lines": "768-777,917-935",
+      "fact": "Unassigned visibility requires no active Solo; otherwise any effectively visible membership."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/makesrna/intern/rna_armature.cc",
+      "lines": "376-380,1897-1903,2181-2189",
+      "fact": "Readonly effective visibility and global Solo flag use the native functions."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/editors/transform/transform_convert_armature.cc",
+      "lines": "1425-1442",
+      "fact": "Only effectively visible selected Pose channels enter transform data."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/editors/transform/transform.cc",
+      "lines": "1952-1956",
+      "fact": "Zero transform data rejects initialization."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/editors/transform/transform_ops.cc",
+      "lines": "481-486",
+      "fact": "Rejected initialization returns CANCELLED."
+    }
+  ],
+  "limitations": [
+    "No native operator or fixture execution.",
+    "All-hidden Scope fails closed with candidate diagnostics; no temporary Collection reveal is implemented.",
+    "Previous n12 tools/runtime/candidates/reports are retained unchanged."
+  ]
+}

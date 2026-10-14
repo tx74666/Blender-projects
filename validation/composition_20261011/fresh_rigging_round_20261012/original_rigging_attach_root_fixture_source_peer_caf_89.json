@@ -1,0 +1,82 @@
+{
+  "schema": "x.validation.original-rigging-attach-root-source-peer/1",
+  "created_utc": "2026-10-12T03:14:28.4369403Z",
+  "status": "CURRENT_CAF_89_FIXTURE_SOURCE_REVIEWED_RUNTIME_D4_E57_UNCHANGED",
+  "passed": false,
+  "scope_verified": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "independent_review": true,
+  "source_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+      "bytes": 43229
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "sha256": "caf15123e39f60a09872e7b8aa23ca1cf490d6ebd8a5fc584a02496a70988684",
+      "bytes": 31447
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach_ui.py",
+      "sha256": "89fe11bb6634e8e8ca0c16c5fcddc93093d7883cdfa70d5525149d1a2faf8bb0",
+      "bytes": 16363
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_editing_data.py",
+      "sha256": "f53bcee59ca3845a0567e414cd024b010d18ba10996777d86e1103033de26f68",
+      "bytes": 14112
+    }
+  ],
+  "prior_source_evidence": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_original_rigging_attach_fixture_source_owner_caf15123.json",
+      "sha256": "93c5d097bac70454af08dab3cd54f668718569be71780ac3e21e527f5471b7e6",
+      "bytes": 4589
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_attach_ui_fixture_source_owner_89fe11bb.json",
+      "sha256": "6cec223ce91c28e80d68cc974a0e6e3a80ce0421bb2bfc4c237195d2315b4184",
+      "bytes": 10503
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_rigging_attach_root_source_peer_d4de_e57.json",
+      "sha256": "7b389f20d7509cbe23611f2dd25881b4cd8cd1365f3167166e2be9c5fe01a4fd",
+      "bytes": 3501
+    }
+  ],
+  "source_review": {
+    "runtime_Core_D4_UI_E57_exact_prior_review": true,
+    "Core_fixture_exact_manifest_basenames_and_Link_adjacent_packet": true,
+    "Core_fake_importer_now_uses_actual_each_Link_path_SHA": true,
+    "UI_fixture_isolates_separate_Composition_renderer_only": true,
+    "complete_Worklist_UI_guards_retained": true,
+    "Core19_and_UI14_all_test_method_suffix_bytes_equal_saved_priors": true,
+    "product_validators_and_Return20_14_unchanged": true,
+    "original_artist_scene_writes": false
+  },
+  "actual_run_counts": {
+    "AST_compile": 0,
+    "Python_product_execution_during_this_source_review": 0,
+    "tests_during_this_source_review": 0,
+    "artist_writes": 0,
+    "worker": 0,
+    "original_SDK": 0,
+    "Blender_native": 0,
+    "build": 0,
+    "deploy": 0
+  },
+  "limits": [
+    "This narrow Source review read actual old/new fixture text, independently compared complete test method suffixes, and checked physical runtime pins. Full inverse proof remains separately owned.",
+    "Runtime prior D4/E57 Source peer retained, this successor updates fixture pins only.",
+    "Earlier actual031038 Core41 and focusedUI14 PASS belong to immutable actual receipts; existingUI68 failed and its setUp correction/retest is pending. No actual full123 PASS or original native acceptance is claimed.",
+    "Any counts here apply only to this Source review, not earlier separately recorded execution."
+  ],
+  "final_destination_existing_X_Rig": true
+}

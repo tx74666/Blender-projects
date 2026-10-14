@@ -1,0 +1,74 @@
+{
+  "schema": "x.validation.metadata-difference-finding/1",
+  "created_utc": "2026-10-12T20:08:48.258Z",
+  "status": "EXACT_RUNTIME_WARNING_IDENTIFIED_QUALIFIED_CONTINUATION_PENDING",
+  "static_diagnostic": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/metadata_reopen_07736_01/close_metadata_diagnostic_report.json",
+    "sha256": "93209b8a1455327acf8ec5bd02ee7810d1007689b7477612996636a284133647",
+    "bytes": 47838
+  },
+  "static_diagnostic_release": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_release_X_METADATA_REOPEN_07736_01.json",
+    "sha256": "8954f8456e4a40be44fc60ed46d5a6e0e48be1cf0692e69ed809556543e6dedc",
+    "bytes": 1255
+  },
+  "live_diagnostic": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/metadata_live_reopen_07736_01/live_close_metadata_diagnostic_report.json",
+    "sha256": "e3c5367d7da16d3b1152588d4bd31931ad5e5771f45b0dec1d47f3a513940dd7",
+    "bytes": 29711
+  },
+  "live_diagnostic_release": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_release_X_METADATA_LIVE_REOPEN_07736_01.json",
+    "sha256": "6050b45f1509f1fcfe0c6650798329897f3caa9995c2abc12a5126d0313db212",
+    "bytes": 1268
+  },
+  "raw_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\metadata_live_reopen_07736_01\\live_D4CB_after_capture_metadata.json",
+    "sha256": "96b2a4f1c6f5ee541f7833d5ac2ba4aee9272d0087c32c5ea5a88307622aab98",
+    "bytes": 768870
+  },
+  "raw_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\metadata_live_reopen_07736_01\\closed_saved_clone_metadata.json",
+    "sha256": "8b1841ebb97c8984188118e04f95ddc3621006f59a73ab86e8537054ce7accf5",
+    "bytes": 768990
+  },
+  "exact_diff": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\metadata_live_reopen_07736_01\\live_metadata_diff.json",
+    "sha256": "f65365b7b9960dc3e0bb4f0ea04a04cde68743cea7860707e85c95e8a70328c6",
+    "bytes": 485
+  },
+  "observed_difference": {
+    "path": [
+      "objects",
+      "Dress_Backup",
+      "modifiers",
+      0,
+      "node_warnings",
+      0
+    ],
+    "kind": "added",
+    "after": {
+      "message": "No Curve Selected",
+      "type": "ERROR"
+    }
+  },
+  "official_sources": [
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/makesrna/intern/rna_modifier.cc#L1845-L1862",
+      "finding": "Node warning collection reads nmd.runtime->eval_log->get_tree_log(...).all_warnings."
+    },
+    {
+      "url": "https://github.com/blender/blender/blob/blender-v5.2-release/source/blender/makesrna/intern/rna_modifier.cc#L7430-L7449",
+      "finding": "NodesModifierWarning is generated during geometry nodes evaluation and has read-only message/type."
+    },
+    {
+      "url": "https://docs.blender.org/api/5.2/bpy.types.NodesModifier.html#bpy.types.NodesModifier.node_warnings",
+      "finding": "node_warnings is a read-only collection."
+    }
+  ],
+  "product_changes": false,
+  "artist_changes": false,
+  "metadata_fields_not_matching_warning_exact": true,
+  "original_failed_test_promoted": false,
+  "next": "Run narrow qualified .36c continuation; retain raw mismatch and all snapshots, permit only measured warning at reopened boundaries."
+}

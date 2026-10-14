@@ -1,0 +1,51 @@
+{
+  "schema": "x.validation.original20-readonly-Body-digest-independent-source-peer/1",
+  "passed": true,
+  "status": "SourceReady_Root_tests_and_native_pending",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "a7fc96e0ad2e12ee8ddf425198fa3edd89006facd3abc906905b50223d7e5adf",
+      "bytes": 35730
+    },
+    "test_original_inputs_contract.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_original_inputs_contract.py",
+      "sha256": "d98d78d7d01fb5bd233479bd1e583f61af95d8e6f0f0013484ce39f724602b50",
+      "bytes": 15200
+    }
+  },
+  "owner_source_report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_readonly_Body_digest_source_owner_a7fc96e0.json",
+    "sha256": "0d9b551126eec303507c97e30019ef1348869cde245aa109eb465c1b04759c73",
+    "bytes": 4618
+  },
+  "source_findings": {
+    "only_properties_digest_changed_product_raw_inverse_E85_exact": true,
+    "ID_header_read_before_items_true_ID_type": true,
+    "stable_type_name_library_no_native_pointer": true,
+    "no_native_ID_reference_or_old_metadata_write": true,
+    "tagged_mapping_and_sequence_prevent_ID_header_impersonation": true,
+    "IDPropertyGroup_and_Array_read_paths_supported": true,
+    "depth_and_per_container_bounds_and_finite_float_guard": true,
+    "unsupported_values_and_non_string_mapping_keys_rejected": true,
+    "unchanged_Armature_owner_recovery_encode_rejection": true,
+    "two_new_test_sources_cover_readonly_headers_actual_encoder_rejection_value_changes_and_nonfinite_unknown": true
+  },
+  "recovery_source": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_composition.py",
+    "sha256": "4a4081287e70050e93a65a138726fdd586d72ab32a90bbfa0e32d7b0cb1a4055",
+    "bytes": 103447
+  },
+  "concrete_source_blockers": [],
+  "execution": {
+    "AST": 0,
+    "compile": 0,
+    "tests": 0,
+    "target_imports": 0,
+    "processes": 0,
+    "native_SDK_GUI": 0
+  },
+  "limits": "Independent Source inspection only. Root owns actual pure runs/build; actual Original20 product entry and native acceptance remain pending."
+}

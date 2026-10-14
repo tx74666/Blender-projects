@@ -1,0 +1,32 @@
+{
+  "schema": "x.validation.original20-source-scope-peer/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "control_weight_paint.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_weight_paint.py",
+      "sha256": "efbaf8227830b48c5744f1c024d0240c147cdc612612a72810eb60b2c01748bc",
+      "bytes": 11482
+    }
+  },
+  "review_scope": "Actual package-agent source-only review of the restricted-context weight-paint unregister guard; native controlled cleanup remains pending.",
+  "review_attribution": {
+    "implementation_owner": "/root/forearm_review",
+    "independent_source_reviewer": "/root/package_prepare",
+    "formal_external_review_file_provided": false
+  },
+  "review_facts": [
+    "Package agent independently read the full884B patch and paint.unregister body: a restricted context with no accessible scene skips workspace restoration and still removes registered classes. Available-scene active-workspace behavior and its existing preservation-on-error branch are unchanged.",
+    "Actual43 receipt9661 executed on .37. Its8 actual unit input files remain byte-exact and do not include init; native/skirt behavior evidence may be referenced unchanged. Oldinit12C4 syntax is verified against frozen R19 only, never relabelled as .38. No new paint unit test was run or claimed; actual new standard native probe remains pending.",
+    "Actual .37 standard02 F076/C1A9 failed at controlled cleanup, despite earlier enable/deferred/disable/cancel substeps. R19 static build PASS does not make this overall native result PASS.",
+    "R20 producer will compile all158 candidate Python leaves and2actual test sources, enforce unregister-only paint AST and version-only init inverse, and perform one official combined freeze/build. This preparation performed no Python/process/test/build/native/SDK/deployment."
+  ],
+  "targeted_pure": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\registration_unit_07737_01\\portable_contracts_receipt.json",
+    "sha256": "9661ee28f81f93b213262947351abe24772c2d7db08299d909097a8aa2f5d8fc",
+    "bytes": 3918
+  },
+  "new_weight_paint_unit_test_performed": false,
+  "native_acceptance": false
+}

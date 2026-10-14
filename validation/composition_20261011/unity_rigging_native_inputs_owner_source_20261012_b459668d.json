@@ -1,0 +1,273 @@
+{
+  "schema": "x.validation.character-designer-native-rigging-inputs-source/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "target_module_imports_performed": false,
+  "deployment_performed": false,
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327
+    }
+  },
+  "changed_runtime_sources": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327
+    }
+  },
+  "scope": "One new canonical native module; no existing runtime source modified by this owner.",
+  "checks": {
+    "ast_parse": true,
+    "in_memory_compile": true,
+    "bare_assert_count": 0,
+    "public_api_present": true,
+    "top_level_function_count": 57,
+    "lines": 1512
+  },
+  "api": {
+    "import_inputs": {
+      "line": 387,
+      "signature": "context, rig, packet, *, base_action, base_slot, work_item_id='', source=False"
+    },
+    "current": {
+      "line": 190,
+      "signature": "rig"
+    },
+    "display_state": {
+      "line": 210,
+      "signature": "rig"
+    },
+    "activate": {
+      "line": 881,
+      "signature": "context, session, *, edit_role='BASE', enabled=False"
+    },
+    "key_current": {
+      "line": 1015,
+      "signature": "context, session"
+    },
+    "capture_inputs": {
+      "line": 1093,
+      "signature": "context, session, *, source_packet_sha256, work_item_id, source_action, source_action_slot"
+    },
+    "base_only": {
+      "line": 1115,
+      "signature": "context, rig, action=None"
+    },
+    "snapshot_base_refs": {
+      "line": 1194,
+      "signature": "rig, action"
+    },
+    "restore_owned": {
+      "line": 1273,
+      "signature": "context, rig"
+    },
+    "input_proof": {
+      "line": 143,
+      "signature": "rig, base_action, base_slot, work_item_id, *, source=False"
+    },
+    "capture_for_action": {
+      "line": 157,
+      "signature": "base_action, base_slot, work_item_id"
+    },
+    "_capture_owned": {
+      "line": 1315,
+      "signature": "context, rig"
+    },
+    "_restore_owned_state": {
+      "line": 1449,
+      "signature": "context, rig, state"
+    },
+    "_finish_owned_state": {
+      "line": 1401,
+      "signature": "context, rig, token"
+    },
+    "register": {
+      "line": 1493,
+      "signature": ""
+    },
+    "unregister": {
+      "line": 1500,
+      "signature": ""
+    }
+  },
+  "public_session_keys": [
+    "capture",
+    "base_action",
+    "base_slot",
+    "input_action",
+    "input_slot",
+    "new_action_id",
+    "work_item_id"
+  ],
+  "persistent_keys": {
+    "session": "character_designer_rigging_session_v1",
+    "custom_capture": "character_designer_rigging_capture_v1"
+  },
+  "ui_cache_only_keys": [
+    "rig",
+    "scene",
+    "base_action",
+    "input_action",
+    "source_read_only",
+    "edit_role",
+    "enabled",
+    "tweak_enabled"
+  ],
+  "input_proof_schema": "cdesigner.rigging-input-proof/1",
+  "input_proof_keys": [
+    "schema",
+    "source_packet_sha256",
+    "work_item_id",
+    "new_action_id",
+    "capture_sha256",
+    "source_read_only",
+    "initial_input_motion",
+    "base_action",
+    "base_slot",
+    "input_action",
+    "input_slot",
+    "input_motion_sha256"
+  ],
+  "input_proof_boundaries": {
+    "channels": 20,
+    "carrier_slot_count": 1,
+    "independent_native_carrier": true,
+    "source_baseline_is_immutable_initial_motion_on_same_custom_owner": true,
+    "source_read_only_has_separate_carrier": true,
+    "never_certifies_unknown_base_action": true,
+    "source_packet_hash_matches_actual_base_action_metadata": true
+  },
+  "wire": {
+    "schema": "cdesigner.two-bone-rigging/1",
+    "binding_order": [
+      "Right",
+      "Left"
+    ],
+    "bindings_and_controls_have_no_side_field": true,
+    "draft_uuid_retains_capture_newActionId_N32": true,
+    "work_id_output_N32": true,
+    "slots_nonboolean_int32_zero_valid": true,
+    "source_clip_is_independent_target_input_not_base_clip": true,
+    "return_controls_only": [
+      "targetPosition",
+      "targetRotation",
+      "hintPosition"
+    ],
+    "return_uses_original_capture_time_grid": true
+  },
+  "preview": {
+    "uses_existing_native_arm_target_pole_and_ori": true,
+    "does_not_create_constraints": true,
+    "base_curves_never_receive_solved_pose": true,
+    "previewEnabled_controls_automatic_preview": true,
+    "partial_weights_or_maintain_offsets_fail_closed": true,
+    "dynamic_left_target_parent_uses_current_original_right_tip": true,
+    "parent_frames_relative_initial_animator_root": true,
+    "quaternion_hemisphere_alignment_changes_only_new_carrier_keys": true,
+    "single_clip_repeat_1_tail_HOLD_inclusive_endpoint": true,
+    "scene_fps_not_written": true,
+    "owned_scene_range_matches_effective_scene_clock": true,
+    "frame_handler_replays_keyed_inputs_only_after_base_evaluation": true,
+    "depsgraph_handler_does_not_replay_unkeyed_drags": true,
+    "handlers_filter_actual_owned_scene_and_stop_on_failed_admission": true,
+    "base_role_covered_controls_locked_and_restored": true
+  },
+  "export_isolation": {
+    "base_only_nest_safe": true,
+    "original_native_state_restored_in_finally": true,
+    "primary_failure_preserved_with_recovery_notes": true,
+    "snapshot_hides_only_owned_session_refs_input_ref_six_array_properties_and_authenticated_weapon_record": true,
+    "snapshot_restores_same_native_ID_references_and_action_motion": true,
+    "no_worker_or_installed_addon_change": true
+  },
+  "weapon_transactions": {
+    "tuple_validate_owned_unpacked": true,
+    "nested_native_IDProperty_groups_detached_before_root_removal": true,
+    "token_states": [
+      "pending",
+      "detached",
+      "restored",
+      "finished"
+    ],
+    "nested_tokens_independent": true,
+    "failed_caller_restores_original_display_IDs_RECORD_and_scene_link": true,
+    "success_releases_only_registered_token_old_display_through_unchanged_remove_context": true,
+    "original_user_map_and_collection_guards_retained": true,
+    "second_store_failure_cleanup_uses_local_successful_display_proof": true,
+    "no_exact_recovery_claim_after_partial_native_removal_failure": true
+  },
+  "lifecycle": {
+    "persistent_native_ID_refs_reacquired_after_load_undo_redo": true,
+    "draw_cache_read_only": true,
+    "register_load_undo_redo_do_not_seek_create_action_or_run_solver": true,
+    "first_owned_seek_or_explicit_activate_restores_saved_preview": true,
+    "saved_drafts_preserved_on_close_unload": true,
+    "trusted_blend_scripts_not_required": true
+  },
+  "pure_recovery_tests": {
+    "test_source": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_animation_rigging_recovery.py",
+      "sha256": "8b647487087bdc5dc0e87133a3e2cdd5fc7faa271421f49d1c660550841e9b6d",
+      "bytes": 19678
+    },
+    "executed_by_this_owner": 0,
+    "peer_reported_test_count": 7,
+    "peer_reported_failures": 0,
+    "peer_reported_errors": 0,
+    "peer_reported_elapsed_seconds": 0.836,
+    "peer": "/root/u4_receipt_review",
+    "native_execution": false,
+    "separate_peer_test_evidence_expected": true
+  },
+  "collaborating_source_pins": {
+    "contract": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_rigging_contract.py",
+      "sha256": "5383376637c41512d32c56399684b94358f5f15fd1cc0b08b97f7ab8b0022dc0",
+      "bytes": 23303
+    },
+    "weapon": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_composition_weapon.py",
+      "sha256": "9551956548f20607331179034b44dc679888fc85da035fe1f6342e37de580d9c",
+      "bytes": 40280
+    },
+    "worklist": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist.py",
+      "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+      "bytes": 40384
+    },
+    "link_source": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485
+    }
+  },
+  "primary_api_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/v5.2.0/source/blender/makesrna/intern/rna_fcurve.cc",
+      "fact": "REPLACE forbids adding a missing key; explicit Save uses default insertion with exact existing-key replacement."
+    },
+    {
+      "url": "https://developer.blender.org/docs/release_notes/5.0/python_api/",
+      "fact": "PoseBone hide/select are per-object Pose properties; existing supported selection helper and full bone display snapshots are used."
+    }
+  ],
+  "native_acceptance_pending": [
+    "actual two-arm native mapping including AutoAlign modes",
+    "base FK keyed-zero versus post-frame preview and depsgraph callback order",
+    "Scene/native clock and inclusive endpoint including fractional FPS",
+    "current RightHand-dependent LeftTarget drag behavior",
+    "SaveRigging keys without base/deform contamination",
+    "same native slots/input motion after save/reopen",
+    "live base export snapshot exclusion and independent Unity apply",
+    "owned weapon preview cleanup under actual native ID users"
+  ],
+  "limitations": [
+    "Source and pure mocks do not prove installed Blender operators or native solver results.",
+    "After reopen the read-only lifecycle registers/reacquires; the first owned seek or explicit Activate applies saved preview keys.",
+    "Malformed foreign graph/session ownership fails closed; no arbitrary ID repair or direct combined-pose fallback."
+  ]
+}

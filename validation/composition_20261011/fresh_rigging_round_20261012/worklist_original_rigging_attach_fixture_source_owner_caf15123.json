@@ -1,0 +1,89 @@
+{
+  "schema": "x.validation.original-attach-test-fixture-source-correction/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": false,
+  "source_scope_verified": true,
+  "status": "minimal_fixture_source_fixed_pending_new_resource_start_and_actual_pure_run",
+  "source_files": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    "test_animation_worklist_rigging_attach.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "sha256": "caf15123e39f60a09872e7b8aa23ca1cf490d6ebd8a5fc584a02496a70988684",
+      "bytes": 31447
+    }
+  },
+  "protected_ui": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+    "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+    "bytes": 43229
+  },
+  "previous_core_owner": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_original_rigging_attach_source_owner_prerun_d4de3eff.json",
+    "sha256": "66abfefb24809500b645f4c01ea1fe0f86a514e897b7adbd7aa442a4276630e0",
+    "bytes": 8302
+  },
+  "previous_test_snapshot": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\test_animation_worklist_rigging_attach_be52410c_before_manifest_fixture_fix.py",
+    "sha256": "be52410c4c954d5ec9b80424b1deb350355230d3db2f3daf19510a2700c95b8f",
+    "bytes": 30907
+  },
+  "actual_prior_failure_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_d4de_022749\\receipt.json",
+    "sha256": "6fc85fe5e306c54525febfc7ada3789b43f3a6f5ef8576d7be373b145a100aeb",
+    "bytes": 8104
+  },
+  "actual_prior_raw_log": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_d4de_022749\\test_animation_worklist_rigging_attach.py.combined.raw.log",
+    "sha256": "c512e6f201eb15a1502cbf36910bb30dd9579bdc097e5b2c6a3e5b282f4d2637",
+    "bytes": 34113
+  },
+  "actual_prior_scope_release": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_release_X_ORIGINAL_RIG_PURE_20261012022749Z.json",
+    "sha256": "26a9f5a4a4b4b0d373c841e660b83825abebf08d29d9980ecd2e4f8f5928f2e1",
+    "bytes": 1547
+  },
+  "actual_prior_failure": {
+    "tests_run": 19,
+    "passed": 0,
+    "failures": 5,
+    "errors": 14,
+    "exit_code": 1,
+    "unstarted_regressions_and_ui": 104,
+    "reason": "Synthetic workspace new_workspace.json was refused by real workspace resolver before intended assertions. Source inspection also found typedLink filename/packet adjacency fixture errors, now corrected before any retry."
+  },
+  "fixture_changes": [
+    "setUp: character_animation_workspace.json exact accepted basename",
+    "setUp: primary actual packet in owned work_1 folder",
+    "add_prepared: one work_N directory per typedLink with exact character_animation_link.json basename",
+    "add_prepared: packet-adjacent file copy for each other synthetic typedLink and actual physical SHA",
+    "packet_for_link: fake importer returns each Link actual sourcePackage resolved path and physical SHA"
+  ],
+  "scope_proof": {
+    "full_raw_inverse_equal_be524": true,
+    "all_19_test_method_bytes_unchanged": true,
+    "product_d4_e57_bytes_unchanged": true,
+    "new_unique_planned": 19,
+    "planned_core_total": 41,
+    "new_schema_guard_unchanged": true,
+    "workspace_link_manifest_guard_not_widened": true,
+    "drift_test_still_changes_actual_current_primary_packet": true,
+    "actual_workspace_validator_filename_and_link_validator_filename_adjacency_inspected": true
+  },
+  "test_result": {
+    "new_fixture_actual_run": 0,
+    "compiled": 0,
+    "actual_passed": 0,
+    "actual_failed": 0,
+    "status": "NEW fresh Root scope required; old022749 token RELEASED, never reused"
+  },
+  "limits": [
+    "Only synthetic fixture path plumbing changed; no runtime or assertion changes.",
+    "No Python subprocess/compile/test/native/SDK/GUI/worker/build/deploy performed by this correction.",
+    "Prior failure/release/rawlogs and prerun66ab remain immutable."
+  ]
+}

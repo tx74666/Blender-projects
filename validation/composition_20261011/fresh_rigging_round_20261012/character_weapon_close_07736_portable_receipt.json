@@ -1,0 +1,65 @@
+{
+  "schema": "x.validation.weapon-close-portable/1",
+  "completed": true,
+  "native_execution_performed": false,
+  "tests_run": 66,
+  "source_files": {
+    "addons/character_designer/animation_composition_weapon.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+      "bytes": 41160
+    },
+    "addons/character_designer/unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b3348175c63cf1d0d29ffb184bd7eb5123c2e4ca274eb5b39893f94658a5019f",
+      "bytes": 109020
+    },
+    "tests/test_character_composition_weapon_ownership.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_weapon_ownership.py",
+      "sha256": "c1203ebdb0f32a933106eea4bad03935a5b13770711cda65fd5f272554d4b7f9",
+      "bytes": 15199
+    },
+    "tests/test_animation_rigging_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+      "sha256": "67b4f45988d9eddab0e54b0eeb886cbc32f41a8d2beb68baf95e49730811524b",
+      "bytes": 70235
+    },
+    "tests/test_animation_rigging_weapon.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_weapon.py",
+      "sha256": "5e79a45de2186a66a7dd11a5701ab6be1514e00fbaed20585a6127b92fc174a1",
+      "bytes": 10858
+    }
+  },
+  "runs": [
+    {
+      "groups": [
+        "test_character_composition_weapon_ownership"
+      ],
+      "tests_run": 20,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "unittest_elapsed_seconds": 0.525,
+      "actual_tool_chunk_id": "9c848e",
+      "evidence": "Actual prior tool output; these runtime and test source files unchanged since that run."
+    },
+    {
+      "groups": [
+        "test_animation_rigging_recovery",
+        "test_animation_rigging_weapon"
+      ],
+      "tests_run": 46,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 3.038665600000968,
+      "log": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_portable.log",
+        "sha256": "776cedb05fe2526a0767fc91f826cfa93a6145eaaf4d5f5503e039fe2c41b32e",
+        "bytes": 9388
+      }
+    }
+  ],
+  "python": "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "no_bytecode": true
+}

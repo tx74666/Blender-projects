@@ -1,0 +1,35 @@
+{
+  "schema": "x.validation.original20-source-scope-peer/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "0ca35e2e44bea9ed1007bf9024cfadb50b0e6a8ada2a702a84de43f30c484cd9",
+      "bytes": 109885
+    },
+    "skirt_wiggle.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_wiggle.py",
+      "sha256": "81b0f0c42cfb8c4d3854c81e7da4a351d47e42b18929467d3e4864982bb13c25",
+      "bytes": 41965
+    }
+  },
+  "review_scope": "Actual independent package-agent source-only review of restricted registration and failed Dress initialization cleanup; no .37 native acceptance.",
+  "review_attribution": {
+    "implementation_owner": "/root/forearm_review",
+    "independent_source_reviewer": "/root/package_prepare",
+    "formal_external_review_file_provided": false
+  },
+  "review_facts": [
+    "Package agent independently read the complete patch, register/deferred callback/cancel/unregister paths and skirt cleanup, plus the actual43 receipt and full raw log. Registration retains generation only, cleans timer ownership on failure, calls the same full _reacquire after restriction, and stale generations return without mutation. Failed never-started Dress adapter skips suspend; active or partial sessions still suspend and errors propagate.",
+    "Package agent physically hashed all190 canonical shipped files using official exclusions: only init, native and skirt differ, other187 exact, no added/deleted payloads. Existing weapon/backend/Body/Gun numeric and Close implementation bytes remain exact .36.",
+    "Producer will enforce changed function/module AST scope and version-only init inverse while performing actual compile during its eventual single combined capture/build. This source preparation did not execute the producer or repeat43 tests."
+  ],
+  "targeted_pure": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\registration_unit_07737_01\\portable_contracts_receipt.json",
+    "sha256": "9661ee28f81f93b213262947351abe24772c2d7db08299d909097a8aa2f5d8fc",
+    "bytes": 3918
+  },
+  "native_acceptance": false
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "x.validation.character-composition-raise-stage-completed-source-peer-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer": "/root/worklist_review",
+  "source_files": {
+    "run_character_composition_raise_stage.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+      "bytes": 24737
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\raise_stage_completed_source_owner_77161b99.json",
+    "sha256": "f8b59416eb89b556167d8a3a301b5cbfe1d39b63143e89f08e0a53e06873a11e",
+    "bytes": 5106
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_raise_stage_701357fc_before_n16_completion_pins.py",
+    "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+    "bytes": 20129
+  },
+  "actual_sealed_json_inputs_read": {
+    "n16/completion_closure.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\completion_closure.json",
+      "sha256": "9810dbf836d11a85e412a1e2632fa97026aaf37509b6de098e9af74f22ad083d",
+      "bytes": 3280
+    },
+    "n16/actual_completed_file_audit.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\actual_completed_file_audit.json",
+      "sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3",
+      "bytes": 771503
+    },
+    "n16/publication_recovery_native_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\publication_recovery_native_report.json",
+      "sha256": "be09e217d29ae49c11720bea568afe6fa1454e52d6110a877a2104b649541347",
+      "bytes": 1590520
+    },
+    "n16/native_fixture.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\native_fixture.json",
+      "sha256": "292e5659669becff3ffcde4b3f9469b42f626e0a57fd3ba11c6cc4a12521c013",
+      "bytes": 2601
+    },
+    "n16/process_exit.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\process_exit.json",
+      "sha256": "149e6a63615599b57e93e8eb77cb28cd6cb7172df74c12dfb1017a49c055e7fe",
+      "bytes": 571
+    },
+    "n15/initial_workspace.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\initial_workspace.json",
+      "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+      "bytes": 35156
+    }
+  },
+  "source_delta": {
+    "changed_existing_functions": [
+      "validate_config",
+      "run"
+    ],
+    "added_functions": [
+      "validate_source_completion"
+    ],
+    "unchanged_function_AST_and_text": [
+      "require",
+      "_sha",
+      "_absolute",
+      "_id",
+      "validate_catalog_extension",
+      "main"
+    ],
+    "top_level_inverse_AST_exact": true,
+    "FIELDS_only_three_explicit_pins_added": true,
+    "post_admission_run_tail_and_main_text_exact": true,
+    "validate_catalog_extension_routes_window_Rig_guards_unchanged": true,
+    "new_completion_snapshot_pins_outside_mutable_evidence_required": true,
+    "final_immutable_input_guard_unchanged_and_new_pins_covered": true
+  },
+  "completion_chain": {
+    "actual_audit_closure_shared_provenance_exact": [
+      "config",
+      "source_entry",
+      "python_projection",
+      "full_projection",
+      "artist",
+      "sidecar_budget_projection_receipt",
+      "process_exit",
+      "launch_receipt",
+      "pid"
+    ],
+    "exact_three_field_pin_shapes_verified": true,
+    "actual_n16_exit_field_names_and_values_verified": true,
+    "actual_completed_native_report_seed_runtime_chain_verified": true,
+    "historical_BCBB_snapshot_equals_seed_and_source_fixture": true,
+    "historical_snapshot_mutation_or_seed_receipt_rewrite": false,
+    "immutable_inputs_ledger_traversed": false,
+    "shared_workspace_read_or_hashed": false
+  },
+  "validation": {
+    "compile_source_only": 1,
+    "AST_parse_readback": true,
+    "target_imports": 0,
+    "helper_invocations": 0,
+    "tests": 0,
+    "native_calls": 0,
+    "OS_queries": 0,
+    "shared_workspace_reads": 0
+  },
+  "limits": "Source READY only. Existing native window/Rig context guard intentionally unchanged and remains subject to the separate actual probe/context task. Real prepared Raise inputs, fresh grant, native authoring and publication remain pending."
+}

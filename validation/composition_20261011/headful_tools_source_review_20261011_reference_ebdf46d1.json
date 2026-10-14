@@ -1,0 +1,49 @@
+{
+  "schema": "x.validation.character-composition-headful-tools-review/1",
+  "date": "2026-10-11",
+  "source_only": true,
+  "status": "READY_FOR_ROOT_OWNED_NEW_SNAPSHOT",
+  "manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_headful_reference_ebdf46d1.json",
+    "sha256": "f1a2d7168e527791cac4b3aa670dcd1c590a44761eb84165d5915a2b21fe22a4",
+    "bytes": 8206
+  },
+  "review": {
+    "reviewer": "/root/export_scale_review",
+    "status": "READY",
+    "exact_manifest_entries_verified": 13,
+    "hash_and_byte_count_mismatches": [],
+    "scope": "Narrow actual visual_guard reference-receipt reader update and new immutable tools pins.",
+    "result": "Official reference_receipt accessor receives exact native rig and complete SHA; missing proof rejects; malformed or wrong-SHA error propagates. Existing readonly Action motion hash, exact cache-file SHA and linked native cache path guards remain.",
+    "tests_rerun_by_reviewer": false
+  },
+  "pure_checks": {
+    "new_focused_tests_passed": 3,
+    "prior_unchanged_tests_passed": 44,
+    "full_current_suite_rerun": false,
+    "command": "Python312 -m unittest test_character_composition_ui_fixture.SessionVisualGuardReceiptTests",
+    "compile_passed": true,
+    "compiled_in_this_change": [
+      "composition_session_acceptance.py",
+      "test_character_composition_ui_fixture.py"
+    ],
+    "coverage": "Actual visual_guard accessor-only read; missing/malformed reference proof, changed protected cache/library and readonly Action corruption fail."
+  },
+  "native": {
+    "executed_by_this_change": false,
+    "pixels_captured": false,
+    "undo_reopen_verified": false,
+    "normal_process_exit_verified": false,
+    "artist_mutated": false,
+    "config_generated": false,
+    "runtime_or_projection_changed_by_this_tool_update": false,
+    "build_deploy_sync_performed": false
+  },
+  "immutability": {
+    "prior_tools_headful_01_preserved": true,
+    "prior_n3_and_execution_snapshots_preserved": true,
+    "builder_339c2dd1_unchanged": true,
+    "report_creation": "New exclusive file; no previous manifest/report replacement."
+  },
+  "admission": "Root must freeze NEW matching tool/runtime accessor snapshot and use actual successful next stage receipt/config pins. Existing failed n3 and tools_headful_01 cannot be substituted for the new admitted UI process. Actual native UI/Undo/save/reopen/pixels and natural process exit remain pending root."
+}

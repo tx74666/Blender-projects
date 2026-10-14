@@ -1,0 +1,35 @@
+{
+  "schema": "x.validation.r9-static-process/1",
+  "mode": "AST_SOURCE_ONLY",
+  "executable": "C:/Users/Randy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "argv": [
+    "-B",
+    "-c",
+    "import ast,hashlib;from pathlib import Path;p=Path(\"D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r9.py\");r=p.read_bytes();assert hashlib.sha256(r).hexdigest()==\"5f3b6c8acf631b4e4061c5f909ca4e3ec497173f7ba102a5165a31ac0addea18\";compile(ast.parse(r,filename=str(p)),str(p),\"exec\");print(\"AST_COMPILE_PASS producer5F3B target_imports=0 tests=0 native=0\")"
+  ],
+  "cwd": "D:/MyRepository/Blender-addons-by-Randy",
+  "pid": 71952,
+  "started_utc": "2026-10-12T11:55:37.949Z",
+  "ended_utc": "2026-10-12T11:55:38.145Z",
+  "process_exit_code": 0,
+  "signal": null,
+  "launch_error": null,
+  "retained_child_exit_observed": {
+    "code": 0,
+    "signal": null,
+    "utc": "2026-10-12T11:55:38.145Z"
+  },
+  "retained_child_close_observed": true,
+  "natural_exit_verified": true,
+  "process_termination_performed": false,
+  "fresh_memory": {
+    "utc": "2026-10-12T11:55:37.948Z",
+    "free_MiB": 1997.78125,
+    "total_MiB": 16158.7578125,
+    "used_percent": 87.6365419100807
+  },
+  "native_execution_performed": false,
+  "SDK": 0,
+  "GUI": false,
+  "artist_writes": 0
+}

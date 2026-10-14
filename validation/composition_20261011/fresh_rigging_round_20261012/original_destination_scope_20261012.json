@@ -1,0 +1,511 @@
+{
+  "schema": "x.validation.original-rig-final-destination-scope/1",
+  "source_only": true,
+  "native_compatibility_verified": false,
+  "final_destination": {
+    "artist_file": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "expected_scene": "Scene",
+    "expected_rig": "CoshaRig",
+    "required_change": "Animation and authenticated bone control inputs only; retain the artist's existing file and Rig.",
+    "preserved_design": [
+      "mesh objects",
+      "modifier stacks",
+      "materials",
+      "weights",
+      "author Shape Keys",
+      "Rest skeleton",
+      "bone colors",
+      "bone collections",
+      "controller widgets",
+      "existing control graph",
+      "Forearm calibration",
+      "Dress design"
+    ],
+    "independent_scene_role": "Isolated validation only; it cannot replace the artist file or count as original-Rig acceptance.",
+    "latest_human_correction": "The existing Blender file contains modifiers and design work; the animation must be applied there."
+  },
+  "protected_artist_after_failed_test": {
+    "disk_sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "pid": 27676,
+    "creation_filetime": "134359355330496074",
+    "has_unsaved_content": true,
+    "latest_memory_snapshot_pending": false,
+    "runtime_version_pending_actual_read": false,
+    "runtime_version_actual": [
+      0,
+      77,
+      24
+    ],
+    "latest_live_backup": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z\\artist_latest_before_rigging.blend",
+      "sha256": "1c1984156b3d7637596382ff12359f3460f51b4b6216cd088f9dd97c1cd4bf41",
+      "bytes": 34688918,
+      "receipt_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012051330Z\\artist_latest_snapshot_receipt.json",
+      "receipt_sha256": "99b08426346d77908dbed93e518bc0e2370701a0e8ee906df7d36cb072bb2949",
+      "receipt_bytes": 6210450,
+      "completed": true,
+      "backup_verified": true,
+      "metadata_preservation_verified": true,
+      "full_preservation_verified": false,
+      "original_artist_saved": false,
+      "original_artist_disk_unchanged": true
+    },
+    "prior_live_backup": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012044302Z\\artist_latest_before_rigging.blend",
+      "sha256": "2b27ed03a9b67a84a5216c113463831bc354c67db376cc79cff75b172ca6d5b0",
+      "bytes": 34689883,
+      "receipt_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_latest_X_LATEST_ORIGINAL_SAVECOPY_20261012044302Z\\artist_latest_snapshot_receipt.json",
+      "receipt_sha256": "143d4ba39ce7d3900dcf1019a4326adafe4d24e7bae5847526c1f83410c7ba50",
+      "receipt_bytes": 6134139,
+      "completed": true,
+      "backup_verified": true,
+      "original_artist_saved": false,
+      "original_artist_disk_unchanged": true,
+      "full_preservation_verified": false,
+      "metadata_preservation_verified": false,
+      "metadata_gate": "Worklist Unknown RNA items shadow; modifier IDProperty capability error. Backup retained, new corrected metadata tuple pending."
+    }
+  },
+  "current_workspace_readonly_evidence": {
+    "path": "D:\\Codex\\CQ\\5a70f3e5ddf24e3c903e8eba784170a9\\CharacterTuning\\Workspaces\\RandomRealm2 [16c8d53bf513]\\Cosha.Player [697cd144dee8]\\character_animation_workspace.json",
+    "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+    "workspaceId": "973dbf63-39f7-46cd-ae0e-5d23eb8c74d4",
+    "targetGuid": "697cd144dee805449a9dbe39352aa229",
+    "projectId": "16c8d53b-f513-46c0-9778-4789d512ea56",
+    "baseControllerGuid": "4c9fd1476736cb8498afee4edfc47b3d",
+    "avatarGuid": "874ce658cb6c4b54a8203998231760cd",
+    "avatarHash": "8ef337a02f6306d5125f3dcae346e4e2",
+    "modelFile": "D:\\Unity Projects\\RandomRealm2\\Assets\\Art\\Character\\Cosha\\Cosha.fbx",
+    "modelSha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+    "meaning": "The current old-workspace model hash equals the formal 22e model hash. The proven Connect conflict is the different target/workspace identity, not a proven current model mismatch."
+  },
+  "formal_22e_retained": {
+    "targetGuid": "3207a6768cff4594fb4b180b85f70a37",
+    "workItemId": "31c3a6b3-372a-43e9-8132-011a63a0c2b4",
+    "identity_mutations_authorized": false,
+    "isolated_R5_native_result": "FAIL at add_activate; edit, Undo, reopen, reference and physical Sync were not reached.",
+    "failed_test_cleanup_receipt": "resource_release_X_COSHA_CONTROLS_R5_202610112351Z.json",
+    "failed_test_cleanup_receipt_sha256": "15926680c930f98dc45cce5191bc1c92bfa39fb817d204a1d9bbed232da24ea0"
+  },
+  "minimum_supported_route_candidate": {
+    "status": "HISTORICAL_SAME_HEADER_ROUTE_NOT_SELECTED_697_HAS_NO_NATIVE_RIGGING",
+    "Unity_requirement": "A genuine existing 697 owner prepares a separate new Rigging work item in the same authenticated workspace/header; retain each old clip/manifest and do not repurpose the 22e 3207 work item.",
+    "Blender_existing_operations": [
+      "Refresh or Connect same identity",
+      "ensure_active or public Main Rig adoption",
+      "Add the newly prepared catalog row",
+      "Activate Custom",
+      "edit/key native Target and Hint",
+      "save and reopen validation",
+      "single authenticated Sync and actual Collect",
+      "apply passed changes to current artist and save"
+    ],
+    "guard": "Original native Rest, scale, complete control graph and packet mapping must pass before import. The fresh ARM setup helper must never target the artist Rig.",
+    "old_rows": "Retain old identities, source caches, Action IDs/slots and edits. A new prepare request does not authorize reassigning an old row.",
+    "no_new_cross_workspace_framework": true,
+    "Parent_actual_Source_owner_result": "697 is the prior Composition QA prefab and has no RigBuilder/TwoBoneIK/Rig1. The formal 3207 character has the two-arm Rig and Controls AOC. Re-Prepare on 697 cannot establish formal 3207 acceptance, and copying Rigging into 697 to evade identity is not the selected route.",
+    "next_Source_question": "Find the minimum explicit single typed Link/Action attachment to the original Main Rig for formal 3207, while all old worklist rows/header/manifests remain intact; examine existing Link/manual Rigging APIs and exact adoption/UI guards before designing any extension."
+  },
+  "next_narrow_validation": {
+    "first": "AwaitBuildingnativeheavy END/freshboundedgrant; firstformalF10 control/Return validation and separate minimaloriginal legacyclock/currentmotion certificate. Originalartist finalintegration remainsrequired.",
+    "before_after": "Reuse prior original preservation oracle and extend only where required to cover the user's modifiers/design; compare assets and original records before and after the animation operation.",
+    "functional": [
+      "strict original mapping",
+      "separate BASE and input motion",
+      "native Target/Hint response",
+      "Undo and Redo",
+      "save and reopen",
+      "same-controls reference switch",
+      "Restore Main Rig and re-adopt",
+      "physical Return and actual Unity Collect"
+    ],
+    "repair_decision": "Only a concrete native gate failure involving Rest, weights or controller structure requires a separate repair choice. Do not make these changes to pass a guard.",
+    "heavy_resource_state": "X0SDK/native/GUI/worker. Root Character owns next SDK build/native scheduling; Source serializer repair and syntax-only check done."
+  },
+  "historical_baseline": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\README_delivery_07724.md",
+    "use": "Prior original Scene/Rig preservation and recovery evidence provides the baseline and oracle; it is not a current .77.25/Rigging PASS."
+  },
+  "selected_original_rig_route": {
+    "status": "ORIGINAL20_CONTROLS_ONLY_SOURCE_READY_CLOCK_AND_NATIVE_PENDING",
+    "api": "unity_animation_original_inputs.import_inputs(context, rig, prepared_report_file, sha, clock_certificate_file, sha)",
+    "destination": "Current original X.blend Scene/CoshaRig; only independent new Source20/Custom20 Target/Hint curves with separately certified legacy Body reference.",
+    "old_assets": "Preserve original mesh/modifiers/materials/weights/ShapeKeys/Rest/colors/bone collections/widgets/controllers/Forearm/Dress, saved main setup, old Worklist/header/catalog/rows/Actions/cache.",
+    "ordinary_model_guard": "Retain D4 physical2AE versus F10 rejection; no retagging legacy Body or replacement Rig.",
+    "fresh_scene_delivery": false
+  },
+  "latest_source_ready": {
+    "core_sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+    "UI_sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+    "core_new_unique_planned": 19,
+    "UI_new_unique_planned": 14,
+    "core_total_planned": 41,
+    "UI_total_planned": 82,
+    "actual_current_pure_run": 123,
+    "actual_native_run": 0,
+    "core_owner": "worklist_original_rigging_attach_fixture_source_owner_caf15123.json",
+    "UI_owner": "worklist_rigging_attach_ui_fixture_source_owner_89fe11bb.json",
+    "Root_source_peer": "original_rigging_attach_root_fixture_source_peer_caf_89.json",
+    "snapshot_Source_sha256": "6df88f6e605a2a4e96eb1d3f261ed456dbe150c3e54a0d1e68f0f5aa962ff971",
+    "snapshot_caller_Source_sha256": "c1c1ae1b6b2c4e51791bdd28661824f8b2aac24eb56edbb20ecebacfbf734cac",
+    "snapshot_creator_requirement": "Before passing a fresh START exact SHA to the reviewed caller, Root independently verifies exact schema/token, actual Boolean false flags, explicit UTC and current Parent resource ACK.",
+    "clone_control_Source_sha256": "7098c3b20a5a115423913ce91268cc4fd9a57adab9973c9c6c2000e2afd2d468",
+    "clone_control_syntax_and_native_pending": true,
+    "R7_capture_build_deploy_pending": false,
+    "R7_deploy_pending": true,
+    "current_actual_pure_passed": 123,
+    "current_actual_core_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_caf_032040\\receipt.json",
+      "sha256": "2cf99421ddb20f48dcefb74279ce36f7dfd8484ab4ea1a336b06a2797101bd0a",
+      "bytes": 15507
+    },
+    "current_actual_UI_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_ui_d064_032040\\receipt.json",
+      "sha256": "292705305638ac83f66767c07d92159ecca0784348374d569039259acef97fbd",
+      "bytes": 11713
+    },
+    "R7_manifest": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4a5a35bb\\python_projection.json",
+      "sha256": "c15737192050944b27d88e9c65119331fbba8cd0de18d629b07365fbc0d83cb4",
+      "bytes": 20891
+    },
+    "R7_actual_build_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4a5a35bb\\unified_package_receipt.json",
+      "sha256": "ee1ba3c25373f01d8ce1772b25df858c749fbe8bdf6d9e5d32ed3387d20bd54e",
+      "bytes": 18208,
+      "native_acceptance": false
+    },
+    "clone_control_syntax_verified": true,
+    "snapshot_actual_failure_and_correction": {
+      "failed_source_sha256": "803088d42e1b239b7cc5c6753120ae9707e0a8d3b5e003f474bdbd3a0df28862",
+      "failed_actual_scope": "X_LATEST_ORIGINAL_SAVECOPY_20261012035159Z",
+      "failed_before_save": true,
+      "actual_diagnostic_scope": "X_ORIGINAL_CONTEXT_READONLY_20261012041327Z",
+      "diagnostic_report_sha256": "c851b4d90136dbc298b3d603cb35852ff0f4dcf4747734c943ff48873580f43b",
+      "actual_cause": "ViewLayer Python wrappers is:false while nativepointer and ==true. All true original Scene/Rig/setup/local/member requirements actualpass.",
+      "artist_rig_repair_required": false,
+      "Source_fix": "Only ViewLayer nonzero nativepointer equality; all other original requirements exact.",
+      "fixed_Source_actual_SDK_execution": 1,
+      "artist_dirty_current": true,
+      "current_context_unchanged": true
+    },
+    "original_clone_native_pending": true,
+    "snapshot_idprops_source_fix": {
+      "snapshotSha256": "6df88f6e605a2a4e96eb1d3f261ed456dbe150c3e54a0d1e68f0f5aa962ff971",
+      "callerSha256": "c1c1ae1b6b2c4e51791bdd28661824f8b2aac24eb56edbb20ecebacfbf734cac",
+      "controlSha256": "ab995e14bbfe4e9d276a0dfb2029ade3c83ec72beaa32d93bc6a3baa9b8adf91",
+      "refreshSha256": "96fb812e1ab8fbee9dac76c68268294bc031871080e09473fe668b35df094f26",
+      "ownerSha256": "29bd7a2a8945f3134e1c848161cf77771cbe94c9a056cd718443a9fafa68673d",
+      "peerSha256": "7f6bbceef405b55376e25fe66d92fe6c3ae24f156e3feb157ec1aa00c02b3319",
+      "syntaxLogSha256": "1ea51087a6d0b14cec93f016655c6e361855ad07ddd4360197bf187cd2e47ed4",
+      "actualSdkExecution": 1,
+      "pending": "Isolated originalclone full preservation/control/recovery; separate physicalSync/UnityApply/finalartist operations remain pending."
+    },
+    "actual_original_worklist_rows": 1,
+    "direct_ready_argv": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_cosha_control_direct_cli_ready_99b08426.json",
+      "sha256": "7b2e139f03c25c216b7d534e9c2b48d775fede53799a7181f89de9dca943261c",
+      "bytes": 6933,
+      "nativeExecuted": false
+    },
+    "native_original_admission_blocker": {
+      "original_model_sha256": "2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5",
+      "formal_model_sha256": "f10e4aae3eb3ff63d187277538fe06aa997fd4fbf5765159beb80499e5f41635",
+      "original_base_packet_sha256": "e54537cb65ab6b0365b42af0236f645cc0f009e1c10b056d66a13b87e7669c02",
+      "input_packet_sha256": "bffbbf00c3bcdfccc1a8bc1995aadeb188afb9f1d643bc78f1a34c8bb5cf7c4f",
+      "base_native_clock_marker_present": false,
+      "scene_fps": 30,
+      "scene_fps_base": 1,
+      "current_curves_observed": false,
+      "controls_only_proposal": "Separate immutable old Base/input provenance and certified clocks; preserve all old actions/headers/assets, dedicated20inputcarrier/pureReturn14; existingplainD4/native/BodySyncguardsunchanged."
+    },
+    "sealed_packet_skeletal_lineage": {
+      "bones": 218,
+      "rest_components": 3488,
+      "frame_count": 59,
+      "pose_components": 205792,
+      "float32_rest_exact": true,
+      "float32_pose_exact": true,
+      "bone_metadata_exact": true,
+      "avatar_same": true,
+      "controller_same": false,
+      "full_geometry_or_weights_proven": false,
+      "current_original_custom_interpolation_proven": false
+    },
+    "first_F10_independent_validation": {
+      "argv_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\official_cosha_r7_direct_argv_source.json",
+      "argv_sha256": "9de6c44a34fd02f60952afd587b9ed4a932bdf6874d9deada108b4b20593cdc0",
+      "argv_bytes": 10235,
+      "argv_count": 39,
+      "source_harness_sha256": "cfaa6dc580d69dbdc7c752078752f2a3cbe89f33ec02a60c5186a196fba4cdcb",
+      "native_executed": false,
+      "qualification": "Firstvalidationonly; doesnotcompleteoriginalX/CoshaRig integration."
+    },
+    "clock_certificate_source": {
+      "script": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\certify_original_legacy_base_clock.py",
+        "sha256": "af4076b3a6923e7e8b891c237221e1761fd5056c410b2f905b52fbedda8a8b5c",
+        "bytes": 24901
+      },
+      "owner": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_legacy_base_clock_source_owner_af4076b3.json",
+        "sha256": "23f39679c0dc21ef84dfa4614b343c911e8c74b44d955438542d2dafcb35d581",
+        "bytes": 13652
+      },
+      "peer": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_clock_numeric_rna_gate_peer_af4076b3.json",
+        "sha256": "7a47fff9e99dcafbbe81f3043fe0df3df58188372d0b78d7bfb477c774808897",
+        "bytes": 1573
+      },
+      "native_executed": true,
+      "native_result": "ACTUAL_CLOCK30_PASS",
+      "actual_report": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\clock_original_04\\original_legacy_base_clock_report.json",
+        "sha256": "9ef154439cba0e5523c5e9100ccf7584b624e76b5a8554426a78fe5a50f5a81c",
+        "bytes": 169668
+      },
+      "actual_release": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_ORIGINAL_CLOCK_202610120859Z.json",
+        "sha256": "dd7c4aa296e2156c921f6ee04bff956e4e3af7c8adc98ee10ea7b30b56aa3f06",
+        "bytes": 10372
+      },
+      "natural_exit": true,
+      "native_exit_code": 0,
+      "rate": 30,
+      "source_curve_count": 1896,
+      "Source30_candidate_mismatches": 0,
+      "packet60_all_source_curves_match": false,
+      "context_and_pose_restored": true,
+      "raw_asset_data_unchanged": true,
+      "input_files_unchanged": true,
+      "runtime_world_and_model_equivalence": "Unknown; no runtime registered",
+      "original_disk_unchanged": true,
+      "legacy_duration": 0.9666666984558105,
+      "input_duration": 0.9666667,
+      "f32_duration_equal": true,
+      "launcher": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\launch_original_clock_create_empty_profile.ps1",
+        "sha256": "4a2b44cae2a7f8d730ea79390c8324357131e0b241d47d6bcc352444b0b4e437",
+        "bytes": 3880
+      },
+      "launcher_peer": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_clock_empty_profile_launcher_peer_4a2b44ca.json",
+        "sha256": "7dd2016110a566244674b2a81b40f1935b98ad5104e459e617ae949f50508c4a",
+        "bytes": 3259
+      },
+      "all_owned_activity_closed": true
+    },
+    "original20_product": {
+      "status": "SOURCE_FROZEN_NATIVE_PENDING",
+      "candidate_version": "0.77.26",
+      "native_module": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_original_inputs.py",
+        "sha256": "e85aa5eac255d2fb1d244dabedb378f541a294c218031f94793bd0f7e42a1f56",
+        "bytes": 34657
+      },
+      "owner": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012\\original20_controls_source_owner_e85aa5ea.json",
+        "sha256": "1ebc873a9e53187f5f7d7e3559c751f4e9d3116dcbebd4768218bd9f1026d15d",
+        "bytes": 8803
+      },
+      "C5_sha256": "3ef897863611f8be69be7234aa92b39e0f8239fff9d7843547f2677bfd616da1",
+      "UI_sha256": "505d36d9747c3e965d29494f85b0fbb42e8e290d41ca927d265b8a6288ea3f82",
+      "worklist_UI_sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+      "init_sha256": "00eebd08f4a271242df3ed2da3b280f2bf3ae268457f3742ef85b0b8096293ca",
+      "tests_source_sha256": "0c775a25c3ba66879de2c7540934447fff6dc729be0f5262f314a550603337ba",
+      "tests_executed": true,
+      "ordinary_guards_kept": true,
+      "old_Body_tags_row_header_curve_mutations": false,
+      "native_executed": true,
+      "deployed": false,
+      "artist_saved": false,
+      "peer": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original20_controls_source_peer_e85aa5ea.json",
+        "sha256": "61caac5f0d30d21a33c1d9c2ae48044d9061adeb25d90514e2aead7f812bc97f",
+        "bytes": 5112
+      },
+      "clone_harness": {
+        "source": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_controls.py",
+          "sha256": "9d68dbbab9c779d9f4aff619b3899374b9b61a66166af24e2786aeddde191ddb",
+          "bytes": 20939
+        },
+        "owner": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_controls_source_owner_9d68dbba.json",
+          "sha256": "48deed07ef50e6531c206f7d3fa08f604a6565378492f533f87d7b5d6b1840eb",
+          "bytes": 8556
+        },
+        "peer": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_controls_source_peer_9d68dbba.json",
+          "sha256": "4c9dbde3b4e9805b7dd14ef0f821a9126d7512d1eb9790d1a5b5d0280122c37d",
+          "bytes": 4942
+        },
+        "native_executed": false,
+        "syntax_pending": true,
+        "edit_key_restore_source_revision_pending": true,
+        "next_source": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_original20_controls.py",
+          "sha256": "753f25f209772c348907e78eed1950010b6d396dbdccc344c0345708cefd3be5",
+          "bytes": 28824
+        },
+        "inventory_diagnostic_only": true,
+        "ast_pending": true
+      },
+      "source_syntax": {
+        "raw_log": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original20_syntax_af_e85.raw.log",
+          "sha256": "3e49ed121ccc8c36ae48f746c5676e0c49d1ab04529fbf005c82c51e8a88def3",
+          "bytes": 838
+        },
+        "actual_files": 7,
+        "passed": true,
+        "target_imports": 0,
+        "tests": 0,
+        "native": 0
+      },
+      "actual_current_pure": {
+        "receipt": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_original20_r8_02\\receipt.json",
+          "sha256": "fdb15f6ef8a795eb3eff9fbd7012df5e173cbad6616a4a5804fbd177a62a4550",
+          "bytes": 2753
+        },
+        "raw_log": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_original20_r8_02\\raw.log",
+          "sha256": "26b9165ae6f7e3fb28131f3420ca905af80ea6dd52cd84e902ca4ee31db73079",
+          "bytes": 29933
+        },
+        "passed": true,
+        "tests_run": 162,
+        "skipped": 0,
+        "source_pre_post_unchanged": true
+      },
+      "package": {
+        "manifest": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_7398435c\\python_projection.json",
+          "sha256": "3ff8b790d8f585daf1490d36088118db0bb549fd499b3c698652f76f41f4c730",
+          "bytes": 21061
+        },
+        "receipt": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_7398435c\\unified_package_receipt.json",
+          "sha256": "d30e626b1837fa51c679b6f5affceeb7d6584e499bd1c93d8fda179a1dc20cb4",
+          "bytes": 85819
+        },
+        "archive": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_7398435c\\character_designer-0.77.26.zip",
+          "sha256": "8c4e319f9bb575facec3d0f95417c8ccf5b26b3c2819a0bf56a6446bd7f99c7f",
+          "bytes": 1451777
+        },
+        "static_release": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_R8_STATIC_BUILD_202610120930Z.json",
+          "sha256": "b27e47b725e65b189ed42cbc08165ac1ebc0410677614325180bdbfbcb8018c5",
+          "bytes": 8016
+        },
+        "version": "0.77.26",
+        "file_count": 190,
+        "python_count": 158,
+        "deployed": false
+      },
+      "native_result": "FAIL_LOADED_SNAPSHOT_ACTION_INVENTORY_BEFORE_INPUT20",
+      "actual_native01": {
+        "report": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_original20_r8_01\\original20_controls_report.json",
+          "sha256": "31bdd9c86ad6cb91b12b56613a0f2228ab43acbc0146bc86bcbb1bbbc06ab7ff",
+          "bytes": 6107
+        },
+        "release": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\resource_release_X_ORIGINAL20_NATIVE_202610120950Z.json",
+          "sha256": "0aeed0c1adad8e4f7ec92d12c8ff9f8b45d4d663330e310ab41443e00c38716b",
+          "bytes": 5649
+        },
+        "completed": false,
+        "native_exit_code": 0,
+        "normal_closed": true,
+        "exit0_not_acceptance": true,
+        "original_retained": true,
+        "original_unchanged": true,
+        "new20_created": false,
+        "edit_key_publication_save_performed": false
+      }
+    },
+    "actual_validation_applies_to": "123 pure PASS applies to frozen R7/D4/E57 source only; new Original20 implementation has not run tests or native."
+  },
+  "last_source_update": "2026-10-12T10:07:20.372Z",
+  "historical_ordinary_original_mapping_candidate": {
+    "status": "ORIGINAL_REQUIRED_LEGACY_BASE_CLOCK_AND_CONTROLS_ONLY_OWNER_PENDING",
+    "api": "attach_prepared_rigging_work(context, workspace_path, work_item_id=None)",
+    "destination": "Current original Scene/CoshaRig, latest unsaved contents backed up first.",
+    "single_new_row": "Actual formal 3207 typed Rigging work 31c3a6b3372a43e98132011a63a0c2b4; use existing paired row workspace fields, retain old global header/catalog/rows/Actions/cache/Links.",
+    "mapping_guard": "Physical model identity equals original adoption source, full validated mapped-name set exact; no repair or fresh rig setup.",
+    "UI": "Add Prepared Animation plus existing selected-row controls, save, Sync and Restore.",
+    "ordinary_new_animation": "Both paired prechecks exclude genuine new_animation rows, preserving actual _register_origin/new-schema route; forged flag remains refused by real new schema.",
+    "fresh_scene_delivery": false
+  },
+  "Pose_preservation_20261012": {
+    "completed": true,
+    "release": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_release_X_POSE_PRESERVE_202610121046Z.json",
+      "sha256": "b8bdd7652db1fb4ad1c8ac796a52783482a5404a40c31299675e5f5d42afa3c3",
+      "bytes": 3943
+    },
+    "readback_report": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/Pose-preservation_02_readback/Pose_library_readback_report.json",
+      "sha256": "26123aaff8dd5a83e00611ae52ca1aa1e4bb30db69294b99dfb1f5a9d6391aa2",
+      "bytes": 495682
+    },
+    "artist_saved": false,
+    "original_file_unchanged": true,
+    "only_Pose_no_objects": true,
+    "final_artist_Pose_retention_pending": true
+  },
+  "native20_qualified_saved_baseline_next": {
+    "harness": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls.py",
+      "sha256": "3931ee99bb7f1cf0ac0791688f4960eaa0f7d53f4aaae5819879ad6e408ec5ff",
+      "bytes": 30824
+    },
+    "source_owner": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_qualified_helper_binding_owner_source_3931ee99.json",
+      "sha256": "f7c4eb6768d13aa264959b612dfc81b488a9f9f8a723102fd64d49fe24a28a7b",
+      "bytes": 1651
+    },
+    "source_peer": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_qualified10_source_peer_3931ee99.json",
+      "sha256": "f2a6805f710e6973df524f15eeaaa09c78083027fdf8f946032dd34f63466653",
+      "bytes": 2154
+    },
+    "source_argv": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_r8_headful_direct_argv_3931ee99_round02.json",
+      "sha256": "c41c6a90f9a426ab28fd800f0a59dd11da759ffacfdb3215294067108b39b979",
+      "bytes": 9330
+    },
+    "syntax": {
+      "status": "ACTUAL_ROOT_PYTHON_AST_PASS",
+      "source_sha256": "3931ee99bb7f1cf0ac0791688f4960eaa0f7d53f4aaae5819879ad6e408ec5ff",
+      "tool_output_chunk_id": "bd76b9",
+      "python_exit": 0,
+      "native_or_sdk": false
+    },
+    "actual_saved_actions": 10,
+    "original_live_actions_at_old_snapshot": 11,
+    "Pose_saved_in_old_seed": false,
+    "current_native_started": false,
+    "resource_state": "Building temporary heavy/sharedGUI lease after Pose actualEND; await actualEND restore"
+  },
+  "original_artist_refresh26_next": {
+    "source": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726.py",
+      "sha256": "a933a4f502208fe60f1453b7d125321698ccd02bfd1da20c0530bc6e69601b61",
+      "bytes": 31283
+    },
+    "source_only": true,
+    "AST_performed": false,
+    "SDK_or_deployment_performed": false,
+    "current_live_version": "0.77.24",
+    "candidate": "0.77.26",
+    "candidate_files": 190,
+    "rollback_files": 159,
+    "requires_actual_3931_native20_success_and_matching_retained_handle_release": true,
+    "preserves_current_state_signature_and_99B_1C_binding": true,
+    "Pose_final_retention_flag_pending": true
+  }
+}

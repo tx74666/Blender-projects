@@ -1,0 +1,56 @@
+{
+  "schema": "x.validation.original20-source-scope/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "fa60bf9a7b9392d37c3042a26a6a1855d2acd317aa6f91810403362705527eb6",
+      "bytes": 36867
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "0e27de995a95b6dc32285dc90f908166d71af6d5ccaa97d9455c11c4720c8e81",
+      "bytes": 104771
+    },
+    "forearm_twist.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist.py",
+      "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+      "bytes": 97739
+    },
+    "animation_original_inputs_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_original_inputs_ui.py",
+      "sha256": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+      "bytes": 15250
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/animation_worklist_ui.py",
+      "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+      "bytes": 43636
+    }
+  },
+  "review_facts": [
+    "Package agent read the complete native diff against frozen .30: only official display synchronization in _apply and _restore_preview_mode; original hide flags preserved through force_flags=False.",
+    "Package agent read the complete original-input backend diff against frozen .30: view_body rejects busy/suspended or foreign-scene calls and skips only already-authenticated BASE activation before replacing the reference.",
+    "Forearm54C3, GunUI38A3 and Worklist24BA are physically identical to frozen R12; their existing R12 reviews are inherited, not rerun.",
+    "Actual targeted regression suite ran recovery17/reference20/sampling6/original_contract8/view_body7 =58, plus ten-file syntax.",
+    "Full physical map has190 files/158 Python; exactly native/original_inputs/init differ from R12."
+  ],
+  "comparison_baseline": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_815751c3/python_projection.json",
+    "sha256": "eb5425a2900a3d856e38a6d40573f7f838c300e2f729e42f8c8165a181df267b",
+    "bytes": 21060
+  },
+  "historical_owner": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r12_current_source_owner.json",
+    "sha256": "10f57acc04b2fd750382f0cf2d1bd16f762350fa245830f207afde70261587f1",
+    "bytes": 1968
+  },
+  "targeted_pure": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/pure_original20_r13_01/receipt.json",
+    "sha256": "d3a84c4423affd9ac2c4c651e404065e79ee72bdae705f340e6229ecead26d2f",
+    "bytes": 2373
+  },
+  "native_acceptance": false
+}

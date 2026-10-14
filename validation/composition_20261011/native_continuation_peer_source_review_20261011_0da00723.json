@@ -1,0 +1,180 @@
+{
+  "schema": "x.validation.character-composition-continuation-peer-source/1",
+  "utc": "2026-10-11T06:46:43.518418+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "status": "SOURCE_ONLY_READY_NO_NEW_NATIVE_ACCEPTANCE",
+  "source_files": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "0da0072321607a2e5e31974a8bc4889d04fcb670430b8cebf0dd7443e231f2f9",
+      "bytes": 25540
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_continuation.py",
+      "sha256": "5af30b5f11935e13614d0825d8730ac426bba2fe81a54f52731697ee6e96bfd8",
+      "bytes": 9118
+    }
+  ],
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_continuation_source_report_20261011_0da00723.json",
+    "sha256": "d1e953f6a5f15f8d9c4a710a74077ec3839e71bd1dd66c803545dada885949b6",
+    "bytes": 6070
+  },
+  "preserved_default_native_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\tools\\verify_character_composition_native.py",
+    "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+    "bytes": 52692
+  },
+  "native_seam": {
+    "signature": "run(config, report, *, after_numeric=None, cases_runner=None)",
+    "default": "_run_fresh_cases",
+    "inverse_normalized_source_exact": true,
+    "other_function_AST_equal": true,
+    "other_function_count": 21,
+    "default_numeric_function_bodies_unchanged": true
+  },
+  "source_checks": {
+    "in_memory_syntax_sources": 3,
+    "source_functions_imported_or_invoked": 0,
+    "tests_executed": 0,
+    "native_executions": 0,
+    "bare_assert_admission_gates": 0,
+    "independent_inverse_normalized_native_source_exact": true,
+    "independent_other_native_function_AST_count": 21,
+    "independent_other_native_function_AST_equal": true,
+    "independent_native_top_level_AST_equal": true,
+    "continuation_sibling_tool_path_precedes_driver_import": true
+  },
+  "owner_test_attribution": {
+    "regressions_authored": 11,
+    "regressions_executed": 0,
+    "compiled_in_memory_only": true
+  },
+  "actual_immutable_failed_evidence": {
+    "numeric_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11\\composition_native_report.json",
+      "sha256": "c5d1170c43848b5d6ccb607953c7dad0cecbeb52291a81b2d490ead3020dfb6c",
+      "bytes": 1544723
+    },
+    "failure_readback": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n11_natural_failure_readback_c5d1170c.json",
+      "sha256": "2291e1e7360b8431eafb0d2fd86b12eafe486d96a2760b58051867468a0a6189",
+      "bytes": 42810
+    },
+    "completed": false,
+    "numeric_completed": true,
+    "worker_launch_performed": false,
+    "fresh_workspace_cleanup": "historical_native_state_and_rows_restored",
+    "numeric_cases": 12,
+    "reference_labels": [
+      "a1",
+      "a2"
+    ],
+    "fresh_packet_proofs": 2,
+    "fresh_associations": 2,
+    "source_rehash_count": 28,
+    "effective_channels": 410,
+    "samples_per_channel": 4,
+    "times_seconds": [
+      0.0,
+      0.0111111117,
+      0.0222222234,
+      0.0333333351
+    ],
+    "all_actual_times_and_samples_finite_nonboolean_numbers": true
+  },
+  "serializer_delta_source_check": {
+    "owner_source_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_owner_source_2dd2173e.json",
+      "sha256": "c8ddda33148e625367b1f995e29635892ee0200858711c8d8a29e097d2c02c25",
+      "bytes": 5638
+    },
+    "peer_source_report": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_peer_source_review_2dd2173e.json",
+      "sha256": "0c7b66cff0e3b6f87fd93828bcbc55a1122aa71b21a3028d598c92eb4976acf1",
+      "bytes": 25273
+    },
+    "old_exporter": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\character_designer\\animation_composition_export.py",
+      "sha256": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67",
+      "bytes": 44171
+    },
+    "current_exporter": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+      "sha256": "2dd2173ec604918328b25945f22916d96ce8039a322c7ed034ee65f686b69984",
+      "bytes": 47158
+    },
+    "owner_and_peer_numeric_reuse_delta_and_changed_source_maps_exact": true,
+    "added_helpers": [
+      "_snapshot_editor_state",
+      "_prepare_snapshot_editor"
+    ],
+    "changed_original_function": "begin_isolated_export",
+    "other_original_functions_AST_unchanged": 26,
+    "top_level_AST_unchanged": true,
+    "remove_exact_one_call_immediately_before_libraries_write_restores_begin_AST": true,
+    "continuation_rechecks_complete_python167_and_full173_file_maps_only_exporter_changed_and_embedded8_unchanged": true
+  },
+  "API_and_raw_JSON_review": [
+    {
+      "lines": "115-147",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "fact": "Actual immutable report flags and literal cleanup string match; exact a1/a2 x two object cases x three seeks admitted. Explicit 410 x 4 nonboolean finite checks precede reuse."
+    },
+    {
+      "lines": "150-200",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "fact": "Rehashes exact failed report/readback, its artifact and 28 source inputs; same models/packets/DTOs/times/object motions required. Actual serializer owner/peer receipt schema/three-field pins and full candidate map agree; default-native inverse must be byte-text exact after newline normalization."
+    },
+    {
+      "lines": "203-230",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "fact": "Standalone sibling import directory is set before importing driver701. Existing driver validate_config and physical/timing APIs match. Physical two SOURCE publications, actual Loop authoring, independent Loop physical publication and copy-only QA seed run only through explicit callback in new evidence."
+    },
+    {
+      "lines": "231-297",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "fact": "Original per-Add native Action/slot/row anchors protect both imports. Each variant has a unique fresh row, complete native217 Rest/model/packet/spec/association proof, official activation/enter, and copied native filter exactly217. Full effective_values, full b_fingerprint and full composition_export are compared against that variant old proof, including A before/after hashes and slot."
+    },
+    {
+      "lines": "278-306",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "fact": "Per-variant try/finally requests official session exit and restores captured rig/context/index. Existing unchanged native fresh_main_rig_scene encloses imports/isolation/physical callback/seed and attempts historical recovery on exceptions. New completed=True is assigned only after native.run exact outer recovery succeeds."
+    },
+    {
+      "lines": "341-450,545-643",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "fact": "Unchanged official pre-copy FK match/fresh Scene adoption scope retains exact historical recovery checks; default _run_fresh_cases remains unchanged. cases_runner only selects the explicit alternate callback."
+    },
+    {
+      "lines": "285,186",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "fact": "Actual signatures run(context,config,foreground_report,*,before_worker=None) and run_one(context,row,evidence_directory,independent_expected,*,before_worker=None) match calls."
+    },
+    {
+      "lines": "498",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "fact": "Actual author_hold_loop(context,config) returns numeric_proof with authorization; the existing physical run_one API remeasures independently before worker."
+    },
+    {
+      "lines": "1573-1595",
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "fact": "Actual isolated_sync commits the owned B draft, leaves Tweak, yields isolate_export inputs, and restores prior owned edit role in finally. No active-session ensure_active shortcut was introduced."
+    }
+  ],
+  "limitations": [
+    "Reviewer executed no tests, addon/source function imports, Blender, worker, SDK, GUI, CIM or fixture generator.",
+    "Source readiness does not establish the serializer fix or new attempt native/physical success; a separate fresh authorized process and actual completion receipts remain required.",
+    "The twelve old numerical cases are reused explicitly, not rerun or relabeled as an old completed attempt. Fresh full isolation of both variants must succeed before reuse is recorded.",
+    "Historical complete out-of-mask Custom Action hash is not present in c5d. Scoped B export values/fingerprints are exact against old evidence; complete new-attempt native Action content is protected by immediate original Add anchors.",
+    "Recovery paths are source-covered try/finally and fail closed. This source review has not observed recovery under new runtime exceptions.",
+    "No prior report, projection, failed n11 evidence, product source or immutable fixture was modified by this review."
+  ]
+}

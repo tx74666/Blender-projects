@@ -1,0 +1,445 @@
+{
+  "runtime": [
+    0,
+    77,
+    9
+  ],
+  "source": "D:\\Blender\\Projects\\Character\\X\\validation\\arm_flat_fix_20261009\\candidate",
+  "checkpoint": "D:\\Blender\\Projects\\Character\\X\\validation\\arm_flat_fix_20261009\\X_before_arm_flat_fix.blend",
+  "cases": [
+    {
+      "label": "normal_ik",
+      "side": "L",
+      "mode": "IK",
+      "tagged": true,
+      "result": {
+        "bones": 4,
+        "modes": {
+          "ARM/L": "IK"
+        }
+      },
+      "drag": [
+        {
+          "clear_controls": false,
+          "retract": 0.02,
+          "posterior_dot": 0.9817360693860735,
+          "radial_ratio": 0.1017088472696546,
+          "direction": [
+            0.0010671885684132576,
+            0.9817359447479248,
+            0.1902456283569336
+          ]
+        },
+        {
+          "clear_controls": false,
+          "retract": 0.15,
+          "posterior_dot": 0.9817361903146207,
+          "radial_ratio": 0.3088004518937821,
+          "direction": [
+            0.0010701627470552921,
+            0.9817360639572144,
+            0.19024519622325897
+          ]
+        },
+        {
+          "clear_controls": false,
+          "retract": 0.3,
+          "posterior_dot": 0.9817362001378456,
+          "radial_ratio": 0.5071132562894318,
+          "direction": [
+            0.001083770883269608,
+            0.9817360639572144,
+            0.19024468958377838
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.02,
+          "posterior_dot": 0.9836571841879049,
+          "radial_ratio": 0.06930847059216878,
+          "direction": [
+            0.13142485916614532,
+            0.9836570620536804,
+            0.1230701208114624
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.15,
+          "posterior_dot": 0.9836571281412034,
+          "radial_ratio": 0.2948248979337691,
+          "direction": [
+            0.1314295530319214,
+            0.9836570024490356,
+            0.12306632846593857
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.3,
+          "posterior_dot": 0.9836570746811049,
+          "radial_ratio": 0.49226629658176024,
+          "direction": [
+            0.13143543899059296,
+            0.9836569428443909,
+            0.12305990606546402
+          ]
+        }
+      ],
+      "errors": {
+        "upper_arm.L": {
+          "position": 5.3726900748371916e-08,
+          "rotation": 0.025109610589763885,
+          "matrix": 0.02172309160232544
+        },
+        "forearm.L": {
+          "position": 0.00749916308655745,
+          "rotation": 0.029308462002556684,
+          "matrix": 0.025356166064739227
+        },
+        "hand.L": {
+          "position": 5.960930120637897e-07,
+          "rotation": 2.827577101981249e-06,
+          "matrix": 1.8738210201263428e-06
+        }
+      },
+      "fingers_checked": 30,
+      "passed": true
+    },
+    {
+      "label": "mirrored_ik",
+      "side": "R",
+      "mode": "IK",
+      "tagged": true,
+      "result": {
+        "bones": 4,
+        "modes": {
+          "ARM/R": "IK"
+        }
+      },
+      "drag": [
+        {
+          "clear_controls": false,
+          "retract": 0.02,
+          "posterior_dot": 0.9817354135374501,
+          "radial_ratio": 0.10169091098849893,
+          "direction": [
+            -0.0010668332688510418,
+            0.9817352890968323,
+            0.1902492344379425
+          ]
+        },
+        {
+          "clear_controls": false,
+          "retract": 0.15,
+          "posterior_dot": 0.9817353554479951,
+          "radial_ratio": 0.3087928539174775,
+          "direction": [
+            -0.0010693658841773868,
+            0.9817352294921875,
+            0.19024953246116638
+          ]
+        },
+        {
+          "clear_controls": false,
+          "retract": 0.3,
+          "posterior_dot": 0.9817353653620842,
+          "radial_ratio": 0.5071068105820055,
+          "direction": [
+            -0.0010833266424015164,
+            0.9817352294921875,
+            0.19024913012981415
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.02,
+          "posterior_dot": 0.9836560523435764,
+          "radial_ratio": 0.06928725575316798,
+          "direction": [
+            -0.13143040239810944,
+            0.9836559295654297,
+            0.12307311594486237
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.15,
+          "posterior_dot": 0.9836559951727395,
+          "radial_ratio": 0.2948180031521047,
+          "direction": [
+            -0.13143284618854523,
+            0.9836558699607849,
+            0.12307114899158478
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.3,
+          "posterior_dot": 0.9836560610929155,
+          "radial_ratio": 0.49225938253541407,
+          "direction": [
+            -0.1314389556646347,
+            0.9836559295654297,
+            0.12306448817253113
+          ]
+        }
+      ],
+      "errors": {
+        "upper_arm.R": {
+          "position": 2.0116567611694336e-06,
+          "rotation": 0.024901670117212192,
+          "matrix": 0.021662741899490356
+        },
+        "forearm.R": {
+          "position": 0.007437300443799187,
+          "rotation": 0.029066340543280757,
+          "matrix": 0.025285504758358
+        },
+        "hand.R": {
+          "position": 5.497296674757217e-07,
+          "rotation": 2.065243455351749e-06,
+          "matrix": 4.0531158447265625e-06
+        }
+      },
+      "fingers_checked": 30,
+      "passed": true
+    },
+    {
+      "label": "normal_fk",
+      "side": "L",
+      "mode": "FK",
+      "tagged": true,
+      "result": {
+        "bones": 4,
+        "modes": {
+          "ARM/L": "FK"
+        }
+      },
+      "drag": [],
+      "errors": {
+        "upper_arm.L": {
+          "position": 8.971687092477304e-08,
+          "rotation": 3.7252905205065316e-08,
+          "matrix": 1.1920928955078125e-07
+        },
+        "forearm.L": {
+          "position": 1.9097336557472194e-07,
+          "rotation": 1.3697725766040539e-07,
+          "matrix": 1.695007085800171e-07
+        },
+        "hand.L": {
+          "position": 2.6656007498500226e-07,
+          "rotation": 1.831179859979142e-07,
+          "matrix": 2.384185791015625e-07
+        }
+      },
+      "fingers_checked": 30,
+      "passed": true
+    },
+    {
+      "label": "mirrored_fk",
+      "side": "R",
+      "mode": "FK",
+      "tagged": true,
+      "result": {
+        "bones": 4,
+        "modes": {
+          "ARM/R": "FK"
+        }
+      },
+      "drag": [],
+      "errors": {
+        "upper_arm.R": {
+          "position": 1.2489448945403256e-07,
+          "rotation": 1.0536712127723509e-08,
+          "matrix": 1.1920928955078125e-07
+        },
+        "forearm.R": {
+          "position": 1.978265948198997e-07,
+          "rotation": 1.044068917032343e-07,
+          "matrix": 1.7881393432617188e-07
+        },
+        "hand.R": {
+          "position": 3.40125328615705e-07,
+          "rotation": 3.120431214124768e-07,
+          "matrix": 2.384185791015625e-07
+        }
+      },
+      "fingers_checked": 30,
+      "passed": true
+    },
+    {
+      "label": "untagged_ik_exact",
+      "side": "L",
+      "mode": "IK",
+      "tagged": false,
+      "result": {
+        "bones": 4,
+        "modes": {
+          "ARM/L": "IK"
+        }
+      },
+      "drag": [],
+      "errors": {
+        "upper_arm.L": {
+          "position": 8.024520884654677e-08,
+          "rotation": 4.66233829329795e-06,
+          "matrix": 4.718080163002014e-06
+        },
+        "forearm.L": {
+          "position": 1.375131763393166e-06,
+          "rotation": 5.459567673994847e-06,
+          "matrix": 6.018206477165222e-06
+        },
+        "hand.L": {
+          "position": 2.457562461863554e-07,
+          "rotation": 1.728952137510816e-07,
+          "matrix": 1.3336539268493652e-06
+        }
+      },
+      "fingers_checked": 30,
+      "passed": true
+    },
+    {
+      "label": "tagged_original_exact",
+      "side": "L",
+      "mode": "ORIGINAL",
+      "tagged": true,
+      "result": {
+        "bones": 4,
+        "modes": {
+          "LEG/L": "IK",
+          "LEG/R": "IK",
+          "ARM/L": "IK",
+          "ARM/R": "IK"
+        }
+      },
+      "drag": [],
+      "errors": {
+        "upper_arm.L": {
+          "position": 1.812804499357408e-07,
+          "rotation": 1.430239813063475e-07,
+          "matrix": 2.980232238769531e-07
+        },
+        "forearm.L": {
+          "position": 3.2236140449023154e-07,
+          "rotation": 5.294632316958864e-08,
+          "matrix": 2.980232238769531e-07
+        },
+        "hand.L": {
+          "position": 3.217581343902526e-07,
+          "rotation": 1.469129997246784e-07,
+          "matrix": 4.76837158203125e-07
+        }
+      },
+      "fingers_checked": 30,
+      "passed": true
+    },
+    {
+      "label": "both_arms_atomic",
+      "side": "L",
+      "mode": "IK",
+      "tagged": true,
+      "result": {
+        "bones": 8,
+        "modes": {
+          "ARM/L": "IK",
+          "ARM/R": "IK"
+        }
+      },
+      "drag": [
+        {
+          "clear_controls": false,
+          "retract": 0.02,
+          "posterior_dot": 0.9817360693860735,
+          "radial_ratio": 0.1017088472696546,
+          "direction": [
+            0.0010671885684132576,
+            0.9817359447479248,
+            0.1902456283569336
+          ]
+        },
+        {
+          "clear_controls": false,
+          "retract": 0.15,
+          "posterior_dot": 0.9817361903146207,
+          "radial_ratio": 0.3088004518937821,
+          "direction": [
+            0.0010701627470552921,
+            0.9817360639572144,
+            0.19024519622325897
+          ]
+        },
+        {
+          "clear_controls": false,
+          "retract": 0.3,
+          "posterior_dot": 0.9817362001378456,
+          "radial_ratio": 0.5071132562894318,
+          "direction": [
+            0.001083770883269608,
+            0.9817360639572144,
+            0.19024468958377838
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.02,
+          "posterior_dot": 0.9836571841879049,
+          "radial_ratio": 0.06930847059216878,
+          "direction": [
+            0.13142485916614532,
+            0.9836570620536804,
+            0.1230701208114624
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.15,
+          "posterior_dot": 0.9836571281412034,
+          "radial_ratio": 0.2948248979337691,
+          "direction": [
+            0.1314295530319214,
+            0.9836570024490356,
+            0.12306632846593857
+          ]
+        },
+        {
+          "clear_controls": true,
+          "retract": 0.3,
+          "posterior_dot": 0.9836570746811049,
+          "radial_ratio": 0.49226629658176024,
+          "direction": [
+            0.13143543899059296,
+            0.9836569428443909,
+            0.12305990606546402
+          ]
+        }
+      ],
+      "errors": {
+        "upper_arm.L": {
+          "position": 5.3726900748371916e-08,
+          "rotation": 0.025109610589763885,
+          "matrix": 0.02172309160232544
+        },
+        "forearm.L": {
+          "position": 0.00749916308655745,
+          "rotation": 0.029308462002556684,
+          "matrix": 0.025356166064739227
+        },
+        "hand.L": {
+          "position": 5.960930120637897e-07,
+          "rotation": 2.827577101981249e-06,
+          "matrix": 1.8738210201263428e-06
+        }
+      },
+      "fingers_checked": 30,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "files_unchanged": {
+    "D:\\Blender\\Projects\\Character\\X\\X.blend": true,
+    "D:\\Blender\\Projects\\Character\\X\\validation\\arm_flat_fix_20261009\\X_before_arm_flat_fix.blend": true
+  }
+}

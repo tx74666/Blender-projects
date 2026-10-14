@@ -1,0 +1,124 @@
+{
+  "schema": "x.validation.fresh-arm-rigging-setup-owner-source/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_setup.py",
+      "sha256": "e5ae7c4df9bb30f4e55719285cb7721963a3ab798c7225c806a436837559df93",
+      "bytes": 13772
+    },
+    "test_animation_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_setup.py",
+      "sha256": "4a253d9cad67d0423e27f7ff3538aa066d10c47a5bb4f22d7c1bf3e990a9245c",
+      "bytes": 12803
+    }
+  },
+  "changed_runtime_sources": {
+    "animation_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_setup.py",
+      "sha256": "e5ae7c4df9bb30f4e55719285cb7721963a3ab798c7225c806a436837559df93",
+      "bytes": 13772
+    }
+  },
+  "new_files_only": true,
+  "existing_product_files_edited_by_owner": [],
+  "public_api": "prepare_fresh_arm_controls(context, rig, packet, mapping, *, existing_ids, model_file, model_sha256)",
+  "call_site_required_boundary": "Only the authenticated prepared-source importer, after fresh unique FBX/full-native-bone/terminal-tail and controls=None mapping admission, before first native-clock base import. Existing original-Rig routes must not call it.",
+  "ownership": {
+    "existing_ids": "actual pre-import set(bpy.data.user_map())",
+    "scene_rig_armature_data": "all must be outside that original set; single owning Scene and single-user local data",
+    "failure_cleanup": "existing outer prepared-source importer restores prior context/image settings and batch removes only all newly created nonembedded IDs",
+    "settings": "every touched WindowManager edit-buffer field restored independently; restoration errors attach to the primary exception or prevent a success return",
+    "shared_resources": "pre-existing global Body collection/shape names rejected, not reused or removed"
+  },
+  "source_behavior": [
+    "Full contract capture validated against packet and exact complete native bone indices.",
+    "Only producer binding indices Right/Left and exact root/mid/tip paths populate manual arm fields; no Human mapping or detector chain inference.",
+    "Read-only public analyze_armature supplies current Rest stamp; public limb_ik_build_arm invoked once with Stable ROLL_DECOUPLED and existing native defaults.",
+    "Source Rest/data/raw mapping equality required after build; no direct-preroll, rest repair, pose bend fabrication or tolerance change.",
+    "Exactly ARM R and L inventory, existing public switch_limb FK with keyframe=False/sync_display=False, then unchanged native binding admission for real Target/Pole/solver/wrist/weights/offsets.",
+    "No Action created, no Base or input curves written; model and packet bytes rehashed before success."
+  ],
+  "syntax": {
+    "files_parsed_compiled_in_memory": 2,
+    "real_bpy_imports": 0,
+    "addon_registration": 0,
+    "native_operations": 0
+  },
+  "pure_test_results": {
+    "test_count": 8,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds_reported_by_unittest": 0.227,
+    "command": "C:/Program Files/Python312/python.exe -B -m unittest discover -s tests -p test_animation_rigging_setup.py -v",
+    "cwd": "D:\\MyRepository\\Blender-addons-by-Randy",
+    "summary": "Ran 8 tests in 0.227s; OK",
+    "actual_wrapper_source_with_fake_native_APIs": true,
+    "real_Blender_or_numpy_imports": 0
+  },
+  "initial_test_fixture_failure": {
+    "test_count": 8,
+    "errors": 7,
+    "elapsed_seconds": 0.188,
+    "cause": "Fake PoseBone dict iteration yielded names instead of native collection values; only fixture iteration was corrected before final pass."
+  },
+  "meaningful_test_guards": [
+    "Binding manual chain overrides detector guesses and original setup buffer restores.",
+    "Old Rig rejected before public setup.",
+    "Partial weight rejected before edit-buffer mutation.",
+    "Packet/native index swap rejected before build.",
+    "Old widget identity unchanged; no sharing.",
+    "Public CANCELLED propagates actual status and restores settings.",
+    "Original Rest delta rejects without repair or success.",
+    "Unchanged native binding rejection propagates without fallback."
+  ],
+  "unchanged_api_evidence": {
+    "limb_ik.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+      "sha256": "68aabcbfcc7010d0b94f096b935c6065f0099e809ad39253abece168453dfcfc",
+      "bytes": 450542
+    },
+    "limb_ik_fk.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik_fk.py",
+      "sha256": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c",
+      "bytes": 47570
+    },
+    "unity_animation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327
+    },
+    "animation_rigging_contract.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_contract.py",
+      "sha256": "bff52cbe97530662fcee5e4ca248c1fe09e781f73588627cecda62c777d3c179",
+      "bytes": 23545
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "c563543dc6c540aa7f8c97f0f8e5913ff1df2a5377bbbe118e9a1c21b8cd5708",
+      "bytes": 14481
+    },
+    "widget_collections.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\widget_collections.py",
+      "sha256": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18",
+      "bytes": 13252
+    }
+  },
+  "native_pending_limits": [
+    "No Blender/SDK/GUI/worker/native execution or package deployment.",
+    "Historical QA923 Cosha packet bend geometry is not proof of newly imported model/Pose/tail continuity.",
+    "Existing public strict deform/direct-parent/zero-length/disconnected/opposite-side/helper/straight-chain gates may reject the real fresh model; no fallback is permitted.",
+    "Public build calibrates its own solver in the future real resource window; pure wrappers cannot prove installed binary behavior.",
+    "Only authentic future importer before-set can establish freshness; this helper is not a general artist-rig operator.",
+    "No Human/torso/leg setup, arbitrary-mask or base/combined bake expansion."
+  ],
+  "peer_status": "worklist_review bounded Source read found no concrete blocker; exact independent peer receipt pending owner pin."
+}

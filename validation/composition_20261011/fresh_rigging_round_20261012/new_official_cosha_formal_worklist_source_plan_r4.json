@@ -1,0 +1,204 @@
+{
+  "schema": "x.validation.new-official-cosha-formal-worklist-source-plan/1",
+  "status": "SOURCE_PLAN_ONLY_PREPARE_AND_HUMAN_CHOICE_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "product_or_harness_modified": false,
+  "work_item_created": false,
+  "human_selected_new_rig": false,
+  "original_X_rig_passed": false,
+  "physical_return_verified": false,
+  "source_files_read": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+      "bytes": 40384
+    },
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485
+    },
+    "animation_workspace.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_workspace.py",
+      "sha256": "58569e35850419236e6f1152b976ce28806c420a9e88cbb8faa31387da04957b",
+      "bytes": 16323
+    },
+    "animation_link.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "364307151184fc9a3b934f03cc4269609365491a7fabeb06c36ccd87e6455aaa",
+      "bytes": 21500
+    },
+    "unity_animation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    "unity_animation_controls.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_controls.py",
+      "sha256": "acf81b37e8d89bdaff0a04b8a3a2a244584e6b5d5551c58efb1946b1ece5b3c7",
+      "bytes": 18492
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327
+    },
+    "limb_ik.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+      "sha256": "68aabcbfcc7010d0b94f096b935c6065f0099e809ad39253abece168453dfcfc",
+      "bytes": 450542
+    },
+    "animation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation.py",
+      "sha256": "21bc2bdd62ab6cba661c31a0006319e487047385fcb7a3381f3943bf6be2b05a",
+      "bytes": 37862
+    }
+  },
+  "source_package_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_f9e41c12\\python_projection.json",
+    "sha256": "ac12952c816f17ae86ac732ab18f4dcb5dc37dfa68aa39be600b27ef1d6b362f",
+    "bytes": 20959
+  },
+  "prepare_boundary": {
+    "source": "Parent reported actual ee38 Prepare failed on the weapon-context temporary path before typed Link/full-packet publication. Controls assets were retained and a narrow Parent fix is pending. This task did not read or run that Prepare.",
+    "actual_new_typed_link_available_to_this_plan": false,
+    "actual_new_packet_available_to_this_plan": false,
+    "no_old_Link_or_WorkID_or_workspace_reused": true
+  },
+  "future_explicit_inputs": [
+    "successful actual Prepare workspace index path/SHA and workspace identity",
+    "typed character_animation_link.json path/SHA and real workItemId",
+    "full source packet path/SHA with exact base identity and optional Rigging capture",
+    "modelFile path/SHA from the same workspace and typed Link",
+    "matching optional model Rest-length metadata if supplied by the real model export",
+    "optional weaponPreview captured context/model paths and full SHA pins only when published successfully",
+    "fresh official package/isolated profiles/native launch grant after resource coordination"
+  ],
+  "fresh_connect_add_route": [
+    {
+      "api": "worklist.connect(context, actual_workspace_path)",
+      "source": "animation_worklist.py:99-112",
+      "guard": "Initial saved.rig/items are empty; load_workspace validates schema/identity/catalog. No old X Scene or row is cleared/reconnected."
+    },
+    {
+      "api": "worklist.add(context, actual_row_key, activate_new=True)",
+      "source": "animation_worklist.py:365-497",
+      "guard": "Use workspace.row_key(real prepared row), never a guessed clip key or packet draft UUID. _prepared validates row/Link provenance and reads exact model/full packet."
+    },
+    {
+      "api": "source._import_prepared_source(...,native_timebase=True) only for packet.rigging",
+      "source": "animation_worklist.py:404-419; animation_link_source.py:154-246",
+      "guard": "When no owned Rig is present, import the actual FBX into a new Scene; base Action is imported on the packet clock. This is a newly imported Rig, not the original X Rig."
+    },
+    {
+      "api": "worklist destination state and Source/Custom baseline construction",
+      "source": "animation_worklist.py:420-482",
+      "guard": "The newly imported Scene receives the workspace via _copy_workspace. Local Custom and immutable linked Source cache use actual slots and exact packet/model pins."
+    },
+    {
+      "api": "native.import_inputs before row publication",
+      "source": "animation_worklist.py:467-470; unity_animation_rigging.py:387-410",
+      "guard": "Actual WorkID is passed separately from capture.newActionId. Base package SHA/selected slot/native sampleRate are exact. No foreign carrier or generic base-to-Target reconstruction is accepted."
+    },
+    {
+      "api": "worklist.activate(context,actual_item_id,CUSTOM)",
+      "source": "animation_worklist.py:584-670",
+      "guard": "Use the actual returned row ID. Existing target/Source-cache/slot/route guards remain; active Rigging uses the same authenticated packet and base/Target carrier ownership."
+    }
+  ],
+  "model_import_invariants": [
+    {
+      "source": "animation_link_source.py:63-77",
+      "proof": "Exact existing FBX path equals Link.modelFile; raw hash equals modelSha256 and workspace modelSha256. No source-model replacement."
+    },
+    {
+      "source": "animation_link_source.py:80-103",
+      "proof": "Full packet raw SHA equals Link.sourcePackageSha256; targetGuid/clipGuid/localId exact; unique named unweighted hierarchy root; unique native bone names; complete Rigging capture validates."
+    },
+    {
+      "source": "animation_link_source.py:178-205",
+      "proof": "One new native Scene/collection; actual FBX import FINISHED; exactly one Armature; root name exact or native collision suffix; imported bone-name set exactly equals full packet native skeleton."
+    },
+    {
+      "source": "animation_link_source.py:207-231; unity_animation.py:121-232",
+      "proof": "Only imported wrapper parenting is detached preserving native world matrix and skin bindings. Matching Rest-length metadata is validated. Strict positive uniform scale/no shear, recognized constraints/drivers, exact parent graph, verified 3D bind positions and original Rest tolerance remain."
+    },
+    {
+      "source": "animation_link_source.py:232-246",
+      "proof": "Model/full-packet/Link identities are rechecked after import; binding is to the actual returned native Action/Rig, not X metadata."
+    }
+  ],
+  "critical_controller_gap": {
+    "automatic_Body_Setup_performed_by_Add": false,
+    "source": "animation_link_source.py:189-194 imports use_custom_props=False; no Body Setup/controller generation occurs anywhere in _import_prepared_source. unity_animation_controls.py:155-156 returns None for an unconstrained native skeleton.",
+    "ordinary_base_route": "A plain native FK skeleton may import valid base animation when all exact model/Rest checks pass. That is not dual-arm Target/Hint acceptance.",
+    "rigging_route": "unity_animation_rigging._binding_plan:294-326 requires limb_ik inventory with actual owned ARM R/L chain + Target/Pole, supported wrist calibration, exact weights 0/1 and no maintained-offset fallback. limb_ik.py:3168-3204 returns rigs={} when the authentic native registry is absent.",
+    "prediction_limit": "The new actual model and packet are not published to this plan. No actual import failure is claimed. Source alone establishes that Add does not manufacture the required native controls; a standard stripped FBX skeleton cannot be presumed ready."
+  },
+  "conditional_existing_two_step_route": {
+    "implemented_here": false,
+    "requires_explicit_human_new_workflow_choice_and_Parent_native_scope": true,
+    "steps": [
+      {
+        "api": "character_designer.animation_link_import / source.import_source",
+        "source": "animation.py:268-296; animation_link_source.py:134-141",
+        "purpose": "Official separate model import can expose a real complete source Rig for explicit new-character setup before Worklist Add. It imports base only; it does not create the Rigging carrier or prove new Target/Hint editing. Its ordinary Action clock is not the later Rigging native-clock proof."
+      },
+      {
+        "api": "character_designer.animation_restore if an ordinary preview is active",
+        "source": "animation.py:672; unity_animation.py:649",
+        "purpose": "Finish the genuine existing preview/recovery before authoring control setup; do not manually remove recovery properties."
+      },
+      {
+        "api": "character_designer.limb_ik_analyze then explicit Build Arm Rig as selected by human",
+        "source": "limb_ik.py:590-606; 7121-7132",
+        "purpose": "Existing public controls can establish a real native arm inventory on the new model. This is a separately authorized model-setup operation, not an automatic Add fallback or a claim of solver/Unity parity. Exact chain, Target/Pole, FK switch, wrist calibration and Rest must actually validate."
+      },
+      {
+        "api": "worklist.connect on the new source Scene, then public worklist.add/activate",
+        "source": "animation_worklist.py:209-219; 381-469; 584-670",
+        "purpose": "Reuse only the actual imported Rig whose saved source model SHA and exact typed Link match. If native/source/slot/import constraints reject, retain the precise error; do not synthesize known ownership or relax collection rules."
+      }
+    ],
+    "readiness_not_claimed": "This two-step UI/API route has not been executed. Source import/built controls/current Action recovery refs, model inventory and packet clock must all be verified in the actual fresh process before it is considered usable."
+  },
+  "failure_boundaries": [
+    {
+      "phase": "workspace_connect",
+      "evidence": "Exact raw workspace pin/parsed identity/empty initial saved state; preserve error/status and no row added."
+    },
+    {
+      "phase": "prepared_route_model_packet",
+      "evidence": "Link/workspace/WorkID/model/full-packet pins and exact parser/route error; no guessed replacement."
+    },
+    {
+      "phase": "native_FBX_and_Rest",
+      "evidence": "Actual operator result, imported Armature inventory, model/Rest-length/source checks and complete new-ID/Scene cleanup result; original Scene/selection/image settings preserved."
+    },
+    {
+      "phase": "native_arm_Rigging_admission",
+      "evidence": "Actual limb inventory/chain/Target/Pole/slot/clock and exact exception. Add has not yet published a row. Do not label successful base import as full Add success."
+    },
+    {
+      "phase": "optional_weapon_preview",
+      "evidence": "Only after actual published weaponContext/model bindings exist, validate real capture/rendered geometry/mount/source SHA and ownership. Missing temporary context remains a real rejection; no fabricated gun display."
+    },
+    {
+      "phase": "row_publication_or_Custom_activate",
+      "evidence": "Actual row/item ID, Source cache SHA/native slots/Link identity/owned carrier and successful public Activate. On failure capture rollback errors separately; no same-grant retry."
+    }
+  ],
+  "rollback_sources": {
+    "source_import": "animation_link_source.py:247-258 restores prior native context/image settings and removes only newly created IDs.",
+    "worklist_Add": "animation_worklist.py:498-537 restores caller state, removes only this Add new Scene/IDs/row/cache and re-raises.",
+    "Activate": "animation_worklist.py:652-670 restores its captured owned preview/context on failure.",
+    "evidence_rule": "Record actual exception, input pins, phase, before/after original-X protection and rollback outcome; no inferred PASS or complete cleanup if a rollback error occurs."
+  },
+  "boundaries": [
+    "No user choice is inferred; this is conditional Source planning for a possible independent official Cosha workspace.",
+    "No original X Rig or old nine-row worklist is modified, shared/rebound, cleared or claimed accepted.",
+    "No new Link, WorkID, packet, workspace, metadata, model repair, controller construction, native process, worker, SDK build or deployment is performed.",
+    "No combination is baked into the base; Target/Hint input source and native carrier remain separate, and physical Return/Unity Apply are another actual validation stage."
+  ]
+}

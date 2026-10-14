@@ -1,0 +1,13 @@
+{
+  "schema": "x.validation.character-composition-source-invalidated/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "deployment_performed": false,
+  "artist_mutated": false,
+  "unexecuted_config_sha256": "e7ec6eb5ecd4eaf72486d3f2dbd49e2f2b4d36f62ddb56538790fe7cc44c2e0e",
+  "unexecuted_entry_sha256": "9b0a384d8c40008673a8d4fb6b2fbd6da57af1599741174a3a27289cbb5aa1ea",
+  "native_source_sha256": "009b345e84a25fa867be4a4adc5ce379fa8f195d7cb6a224399a90cf2fbebbd5",
+  "reason": "Final independent native-QA source audit found that B baselines were captured only after the second row addition. A coherent same-ID Action/content replacement during that addition could become the new baseline. Each successful import must capture an immutable original B anchor before the next mutation, and every reacquired row must authenticate against it.",
+  "replacement_attempt": "n7",
+  "replacement_pending": true
+}

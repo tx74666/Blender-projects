@@ -1,0 +1,82 @@
+{
+  "schema": "x.validation.character-composition-current-ui-keep-open-independent-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer": "/root/rig_controls_review",
+  "source_files": {
+    "build_character_composition_publication_recovery_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "387d7e58a985739d15b16425bca05054b5dcfaea18417041eef266a046b482a1",
+      "bytes": 49605
+    },
+    "audit_character_composition_publication_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_ui_keep_open_source_owner_387d7e58.json",
+    "sha256": "2f19ed444a031adf55558ea725d9f736fcfca2de20609cc8e7005ae965c8aa1b",
+    "bytes": 3884
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_publication_recovery_ui_fixture_d77db899_before_keep_open.py",
+    "sha256": "d77db89939b00678bb11580e89e665d1a964658974575edd18d6c014be25cad6",
+    "bytes": 48853
+  },
+  "previous_owner_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_current_ui_adapter_source_owner_d77db899.json",
+    "sha256": "d6c4174851e999ce7e6ad4396bdfe82bb16e498f36bc9a10dc13e3534c6a1ab4",
+    "bytes": 6917
+  },
+  "previous_peer_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_current_ui_adapter_peer_source_d77db899.json",
+    "sha256": "629b215eeee206064ef888fe562611b080457a8a312fb9f2f2024e15ea89e1c7",
+    "bytes": 9203
+  },
+  "delta": {
+    "changed_functions": [
+      "build_current",
+      "main"
+    ],
+    "unchanged_functions": [
+      "api",
+      "build",
+      "context_sources",
+      "freeze",
+      "freeze_context",
+      "frozen09_record",
+      "frozen_api",
+      "pure_workspace",
+      "require"
+    ],
+    "unchanged_function_count": 9,
+    "added_functions": [],
+    "top_level_ast_unchanged": true,
+    "full_raw_byte_inverse_equal": true
+  },
+  "findings": [
+    "Exact boolean API option defaults False and is checked before calling the admission API or any writes.",
+    "CLI store_true option is rejected unless --build-current is selected; neither freeze path gains keep-open behavior.",
+    "True changes only the already existing top-level quitOnCompletion to literal False, explicitly admitted to the config delta set only for this option.",
+    "False retains parent quitOnCompletion and original fixture-field equality; sessionConfig/headful options and helper/source/runtime/current-workspace admission remain unchanged.",
+    "The Source receipt records the exact keep_open_for_sync boolean; the option does not run Sync, waive any grant, or itself establish native exit/acceptance.",
+    "Full raw inverse to the reviewed d77 baseline proves no other code/output path/guard changes; all nine other function bodies and top-level AST remain exact."
+  ],
+  "validation": {
+    "AST_compile_checks": 1,
+    "target_imports": 0,
+    "generator_invocations": 0,
+    "tests_run": 0,
+    "native_calls": 0,
+    "sdk_calls": 0,
+    "shared_workspace_reads": 0,
+    "fixture_generated": false
+  },
+  "limitations": [
+    "Bounded new Source delta review only; historical admission invariants are inherited from the pinned d77 owner/peer, not rerun.",
+    "No fixture generation, launch, resource check, native/UI/SDK call or workspace read performed. A fresh launch grant and actual acceptance remain separate."
+  ]
+}

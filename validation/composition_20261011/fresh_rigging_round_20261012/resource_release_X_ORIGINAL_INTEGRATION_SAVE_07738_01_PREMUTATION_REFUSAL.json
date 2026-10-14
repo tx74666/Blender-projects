@@ -1,0 +1,53 @@
+{
+  "schema": "x.validation.known-premutation-refusal/1",
+  "request": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_calls_07738_01/integration_request.py",
+    "sha256": "fd1a118c99b42c4f6afa432965cdbb75594369fbb6ee2f1590135906a0bc2b6c",
+    "bytes": 4336
+  },
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/integrate_original20_saved_artist_07738d.py",
+    "sha256": "4cbb74ddcb39d25a9aa954d234a5cbbea2884ec5901cac66ca284b9547f583ce",
+    "bytes": 43487
+  },
+  "response": {
+    "status": "error",
+    "message": "Code execution error: Use a new empty persistent ROUND integration report directory."
+  },
+  "start": {
+    "schema": "x.validation.process-start/1",
+    "stage": "Integration",
+    "pid": 29832,
+    "process_filetime": "134363146146507709",
+    "started_utc": "2026-10-12T21:36:54.6179125Z",
+    "resource_token": "X_ORIGINAL_INTEGRATION_SAVE_07738_01",
+    "free_mib": 1067.9,
+    "request_sha256": "fd1a118c99b42c4f6afa432965cdbb75594369fbb6ee2f1590135906a0bc2b6c",
+    "argv": [
+      "-B",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\call_original20_artist_sdk_long.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738_01\\integration_request.py",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738_01\\integration_caller",
+      "9877",
+      "fd1a118c99b42c4f6afa432965cdbb75594369fbb6ee2f1590135906a0bc2b6c"
+    ],
+    "retained_handle": true
+  },
+  "end": {
+    "schema": "x.validation.process-end/1",
+    "stage": "Integration",
+    "pid": 29832,
+    "process_filetime": "134363146146507709",
+    "retained_handle_natural_exit": true,
+    "exit_code": 1,
+    "ended_utc": "2026-10-12T21:37:27.6318728Z",
+    "elapsed_seconds": 32.9995438,
+    "owned_process_gone": true,
+    "process_termination_performed": false,
+    "operation_success_inferred": false
+  },
+  "cause": "Root omitted required precreated empty report directory; source guard at line350 precedes report write and artist mutation try.",
+  "scene_mutation_started": false,
+  "save_attempted": false,
+  "unknown_sdk_outcome": false
+}

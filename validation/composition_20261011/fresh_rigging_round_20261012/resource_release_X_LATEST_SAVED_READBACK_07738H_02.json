@@ -1,0 +1,78 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "written_utc": "2026-10-13T07:00:23.696Z",
+  "resource_owner": "X",
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/verify_original20_saved_artist_readonly_07738h2.py",
+    "sha256": "78991de1fc35fa6dc3610ea38d08c73f3b0ef875152a7a3b7d30d3be4ae211b7",
+    "bytes": 25237
+  },
+  "entry": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original_artist_calls_07738h_02/reader_entry.py",
+    "sha256": "0a08f5203347308a195346cfd9cc15a99c72e0e07438a33d81b60eeb3220d09c",
+    "bytes": 2785
+  },
+  "launcher": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/launch_original_artist_07738h2_stages.ps1",
+    "sha256": "dc444d07535ebd7c5e53a43ca2f092673a9c6989aca8dc80a65dbfa51cc3785e",
+    "bytes": 7152
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/original20_artist_saved_readback_07738h_02/original20_artist_saved_readback_report.json",
+    "sha256": "69d68f4b0c9369dc2549bd81a77baf59a5b88c6f359e559a0162cd1db526b9ce",
+    "bytes": 1113769
+  },
+  "start": {
+    "schema": "x.validation.process-start/1",
+    "stage": "Reader",
+    "pid": 41024,
+    "process_filetime": "134363478138868435",
+    "started_utc": "2026-10-13T06:50:13.8570329Z",
+    "resource_token": "X_LATEST_SAVED_ORIGINAL_READBACK_07738H_02",
+    "free_mib": 2623.1,
+    "request_sha256": "0a08f5203347308a195346cfd9cc15a99c72e0e07438a33d81b60eeb3220d09c",
+    "argv": [
+      "--background",
+      "--factory-startup",
+      "--disable-autoexec",
+      "--python-exit-code",
+      "1",
+      "--python",
+      "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_artist_calls_07738h_02\\reader_entry.py"
+    ],
+    "retained_handle": true
+  },
+  "end": {
+    "schema": "x.validation.process-end/1",
+    "stage": "Reader",
+    "pid": 41024,
+    "process_filetime": "134363478138868435",
+    "retained_handle_natural_exit": true,
+    "exit_code": 0,
+    "ended_utc": "2026-10-13T06:51:13.3705323Z",
+    "elapsed_seconds": 59.5041097,
+    "owned_process_gone": true,
+    "process_termination_performed": false,
+    "operation_success_inferred": false
+  },
+  "saved_artist": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_current_backup": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/artist_current_saved_resume_20261013_01/artist_current_saved_before_readback.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "strict_saved_readback_completed": true,
+  "historical_writer_completed_remains_false": true,
+  "same_process_live_post_save_full_guard_claimed": false,
+  "source_Library_absent_after_reload_allowed_only_exact_unused_Pose_source": true,
+  "original_work_window_preserved": true,
+  "current_original_pid": 36396,
+  "current_original_filetime": "134363465953148764",
+  "reader_original_file_saved_or_mutated": false,
+  "resource_returned_to_parent": true,
+  "next": "Parent uses fresh Unity baseline for remaining Collect/Preview/Apply/Undo; X will run no additional Blender/SDK/heavy work."
+}

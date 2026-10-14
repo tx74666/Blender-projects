@@ -1,0 +1,46 @@
+{
+  "schema": "x.validation.character-composition-headful-tools-review/1",
+  "date": "2026-10-11",
+  "source_only": true,
+  "status": "READY_FOR_ROOT_OWNED_NATIVE",
+  "manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_headful_7eaaa038.json",
+    "sha256": "813b2cc1d5c36ffea208237a4afd4572e8d9302b675b08d845c0653cee8652d5",
+    "bytes": 7021
+  },
+  "review": {
+    "reviewer": "/root/export_scale_review",
+    "scope": "Read-only independent review of exact tools startup rollback, native-state screenshot guards and explicit normal quit completion.",
+    "result": "READY",
+    "exact_manifest_entries_verified": 13,
+    "hash_and_byte_count_mismatches": [],
+    "startup": "Registration/report/timer are one transaction; original error retained; exact owned timer and recorded temporary classes cleaned; iterator closed/controller reset; protection guard rerun and secondary failures recorded.",
+    "normal_quit": "Explicit headful-only quitOnCompletion boolean; durable completed acceptance/report first;3-second event-loop grace; guard rerun before only normal SDK quit. Startup/session/Cancel/timeout/guard/schedule/quit failures never force exit."
+  },
+  "pure_checks": {
+    "passed": true,
+    "ui_tests": 44,
+    "command": "Python312 -m unittest discover -s tests -p test_character_composition_ui*.py",
+    "compile_passed": true,
+    "compiled_tools": [
+      "composition_ui_checkpoints.py",
+      "composition_session_acceptance.py",
+      "run_character_composition_ui_fixture.py"
+    ]
+  },
+  "native": {
+    "executed_by_this_change": false,
+    "pixels_captured": false,
+    "undo_reopen_verified": false,
+    "normal_process_exit_verified": false,
+    "artist_mutated": false,
+    "build_deploy_sync_performed": false,
+    "frozen_product_or_projection_changed": false,
+    "pending": "Root must execute exact admitted owned headful process, review real native pixels, verify save/reopen/Undo/timers and actual natural process exit."
+  },
+  "operational": {
+    "current_canonical_numeric_helper": "525991102e8e4d0a7cd6efc19758b80d5a00b6bb5454a4395f37b77e0884a56c",
+    "previous_n1_toolset": "Historical immutable execution snapshot; its earlier native e0299 pin is not overwritten by this manifest.",
+    "first_ui": "Holds/A only from unchanged seed/workspace before Parent Collect/Prepare; actual Raise belongs independently admitted later genuine NEW seed."
+  }
+}

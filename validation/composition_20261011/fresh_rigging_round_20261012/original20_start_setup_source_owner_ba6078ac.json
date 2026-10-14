@@ -1,0 +1,85 @@
+{
+  "schema": "x.validation.original20-start-synchronous-setup-source-owner/1",
+  "status": "SOURCE_READY_PURE_AND_NATIVE_PENDING",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_original_inputs.py",
+      "sha256": "ba6078acafc2e735452dab776787f7b88720c7751837d55d620cddad56b7ef5e",
+      "bytes": 36357
+    },
+    "test_original_inputs_contract.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/tests/test_original_inputs_contract.py",
+      "sha256": "6f344cc095ce15e74514904fe0a79ab23e70ba250ca80fded87abc5c391b4bfd",
+      "bytes": 22455
+    }
+  },
+  "prior_sources": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unity_animation_original_inputs_a7fc96e0_before_setup_busy_Forearm_outer.py",
+      "sha256": "a7fc96e0ad2e12ee8ddf425198fa3edd89006facd3abc906905b50223d7e5adf",
+      "bytes": 35730
+    },
+    "test_original_inputs_contract.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/test_original_inputs_contract_d98d78d7_before_setup_busy_Forearm_outer.py",
+      "sha256": "d98d78d7d01fb5bd233479bd1e583f61af95d8e6f0f0013484ce39f724602b50",
+      "bytes": 15200
+    }
+  },
+  "authorized_scope": {
+    "Root_reported_prior_owned_Native07_natural_END": "2026-10-12 13:18:02Z, natural0/gone; completedfalse.",
+    "canonical_changed_function": "_start only",
+    "native_file_and_native_tests_owned_by_Rig_agent_not_changed": true,
+    "Forearm_source_and_record_oracle_calibration_modifiers_weights_targets_not_changed": true,
+    "init_and_version_owned_by_Root_not_changed": true
+  },
+  "implementation": {
+    "prewrite_reentrant_or_suspended_entry_refused": true,
+    "_session_still_existing_readonly_constructor": true,
+    "setup_busy_boundary": "First existing native._store → weapon.add_rigging_context → final existing native._store.",
+    "own_pointer_membership_preserved_in_setup_finally": true,
+    "busy_restored_before_existing_activate": true,
+    "outer_existing_official_Forearm_defer_covers_full_try_and_original_except": true,
+    "nested_native_Forearm_scopes_coalesce_by_previous_busy": true,
+    "old_except_body_unchanged_except_indentation": true,
+    "no_long_lived_cache_or_new_helper_or_weakening": true,
+    "full_original_entry_exit_validation_retained": true
+  },
+  "source_checks": {
+    "full_backend_raw_inverse_equal_A7": true,
+    "all_other_functions_and_top_level_text_unchanged": true,
+    "old_seven_tests_raw_inverse_exact": true,
+    "new_test_only_addition_plus_three_import_changes": true,
+    "AST_performed": false,
+    "compile_performed": false,
+    "target_imports": 0,
+    "tests_executed": 0,
+    "subprocesses_started": 0,
+    "Native_SDK_GUI_calls": 0,
+    "package_build_or_install_or_deploy": false,
+    "artist_workspace_writes": false
+  },
+  "pure_case_source": {
+    "existing_cases": 7,
+    "added_cases": 1,
+    "planned_total": 8,
+    "executed": false,
+    "test_name": "test_start_setup_blocks_actual_handlers_and_restores_busy_before_activation_and_rollback",
+    "actual_extracted_functions": [
+      "_start",
+      "native._frame",
+      "native._depsgraph",
+      "Forearm defer_runtime"
+    ],
+    "fake_native_boundary": "Geometry and activation/close are explicit observation/fault stubs; no native solve/ownership/asset acceptance inferred.",
+    "subcases": [
+      "Success: first/second store and weapon callbacks run actual native handlers; no current/decode/hash read occurs while setup_busy; activate sees cleared own busy; one final IK refresh.",
+      "Second-store failure: setup finally restores own busy before unchanged rollback; weapon/session/prior/display cleanups occur before one final FK refresh.",
+      "Activation failure: nested official defer does not publish partial IK; unchanged rollback restores prior before one final FK refresh.",
+      "Already busy/suspended entry refuses before session/writes and preserves existing membership/depth."
+    ]
+  },
+  "pending": "Root executes the relevant portable pure checks after native-owner Source final, then builds approved .29; native callback performance and final Forearm state still require separately authorized actual validation."
+}

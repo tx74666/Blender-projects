@@ -1,0 +1,131 @@
+--- D:\Blender\Projects\Character\X\validation\composition_20261011\fresh_rigging_round_20261012\package_0fa9adfa\source\character_designer\unity_animation_rigging.py
++++ D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\unity_animation_rigging.py
+@@ -37,6 +37,11 @@
+ _SUSPENDED = {}
+ _HANDLER_ERRORS = {}
+ _OWNED_TOKENS = {}
++_REACQUIRE_PENDING = {}
++# Retain the owned timer handle/generation across an in-place module reload so
++# register/unregister can cancel the previous callback before admitting IDs.
++_REACQUIRE_TIMER = globals().get('_REACQUIRE_TIMER')
++_REACQUIRE_GENERATION = globals().get('_REACQUIRE_GENERATION', 0)
+ 
+ 
+ def _require(condition, message):
+@@ -212,6 +217,8 @@
+ def display_state(rig):
+     """Cheap UI-only view of an already authenticated in-process session."""
+     if rig is None or SESSION_KEY not in rig:
++        return None
++    if rig.as_pointer() in _REACQUIRE_PENDING or rig.as_pointer() in _HANDLER_ERRORS:
+         return None
+     session = _CACHE.get(rig.as_pointer())
+     if not session or session.get('rig') is not rig:
+@@ -1886,11 +1893,51 @@
+     _consume_token(rig, state, 'restored')
+ 
+ 
++def _cancel_reacquire():
++    global _REACQUIRE_TIMER, _REACQUIRE_GENERATION
++    _REACQUIRE_GENERATION += 1
++    timer, _REACQUIRE_TIMER = _REACQUIRE_TIMER, None
++    _REACQUIRE_PENDING.clear()
++    if timer is not None and bpy.app.timers.is_registered(timer):
++        bpy.app.timers.unregister(timer)
++
++
++def _deferred_reacquire(generation):
++    """One read-only retry after lifecycle evaluation settles; never poll."""
++    global _REACQUIRE_TIMER
++    if generation != _REACQUIRE_GENERATION:
++        return None
++    pending = tuple(_REACQUIRE_PENDING.items())
++    _REACQUIRE_PENDING.clear()
++    _REACQUIRE_TIMER = None
++    for pointer, (name, payload) in pending:
++        try:
++            rig = bpy.data.objects.get(name)
++            if (rig is None or rig.as_pointer() != pointer
++                    or rig.get(SESSION_KEY) != payload):
++                # A newer explicit operation owns this state now. The stale
++                # admission may neither evict its cache nor replace its error.
++                continue
++            session = current(rig)
++            _validate_preview_reference(session, files=True)
++            _HANDLER_ERRORS.pop(pointer, None)
++            if session['enabled']:
++                _handlers()
++        except Exception as error:
++            _CACHE.pop(pointer, None)
++            first = _HANDLER_ERRORS.get(pointer, 'Lifecycle admission failed.')
++            _HANDLER_ERRORS[pointer] = first + '; deferred lifecycle admission: ' + str(error)
++    _remove_handlers_if_idle()
++    return None
++
++
+ @bpy.app.handlers.persistent
+ def _reacquire(_unused=None):
+     # Fresh IDs after load/Undo/Redo are admitted read-only. Registration never
+     # executes a solver, a stored script, or a frame evaluation. The first
+     # owned seek/explicit Activate restores the committed preview inputs.
++    global _REACQUIRE_TIMER
++    _cancel_reacquire()
+     _CACHE.clear()
+     _BUSY.clear()
+     _SUSPENDED.clear()
+@@ -1905,11 +1952,37 @@
+             if session['enabled']:
+                 _handlers()
+         except Exception as error:
+-            _HANDLER_ERRORS[rig.as_pointer()] = str(error)
++            pointer = rig.as_pointer()
++            _CACHE.pop(pointer, None)
++            _HANDLER_ERRORS[pointer] = str(error)
++            # Scalars only: the callback reacquires the current native ID and
++            # repeats every identity, transform, NLA/Tweak and file check.
++            payload = rig[SESSION_KEY]
++            if isinstance(payload, str):
++                _REACQUIRE_PENDING[pointer] = (rig.name, payload)
+     _remove_handlers_if_idle()
++    if _REACQUIRE_PENDING:
++        generation = _REACQUIRE_GENERATION
++        _REACQUIRE_TIMER = lambda generation=generation: _deferred_reacquire(generation)
++        try:
++            bpy.app.timers.register(_REACQUIRE_TIMER, first_interval=0., persistent=False)
++        except Exception as error:
++            for pointer in _REACQUIRE_PENDING:
++                _HANDLER_ERRORS[pointer] += '; cannot schedule lifecycle admission: ' + str(error)
++            _REACQUIRE_PENDING.clear()
++            _REACQUIRE_TIMER = None
+ 
+ 
+ def register():
++    # In-place reload replaces function objects. Remove only this module's old
++    # registrations before admitting fresh IDs or installing its new callbacks.
++    for collection, callback in ((bpy.app.handlers.load_post, _reacquire),
++            (bpy.app.handlers.undo_post, _reacquire), (bpy.app.handlers.redo_post, _reacquire),
++            (bpy.app.handlers.frame_change_post, _frame), (bpy.app.handlers.depsgraph_update_post, _depsgraph)):
++        for previous in tuple(collection):
++            if (previous is not callback and getattr(previous, '__module__', None) == __name__
++                    and getattr(previous, '__name__', None) == callback.__name__):
++                collection.remove(previous)
+     for collection in (bpy.app.handlers.load_post, bpy.app.handlers.undo_post, bpy.app.handlers.redo_post):
+         if _reacquire not in collection:
+             collection.append(_reacquire)
+@@ -1919,11 +1992,14 @@
+ def unregister():
+     # Persistent ownership and saved input Actions remain available for an
+     # explicit reactivation. No artist state is changed during module unload.
++    _cancel_reacquire()
+     for collection, callback in ((bpy.app.handlers.load_post, _reacquire),
+             (bpy.app.handlers.undo_post, _reacquire), (bpy.app.handlers.redo_post, _reacquire),
+             (bpy.app.handlers.frame_change_post, _frame), (bpy.app.handlers.depsgraph_update_post, _depsgraph)):
+-        if callback in collection:
+-            collection.remove(callback)
++        for previous in tuple(collection):
++            if (previous is callback or (getattr(previous, '__module__', None) == __name__
++                    and getattr(previous, '__name__', None) == callback.__name__)):
++                collection.remove(previous)
+     _CACHE.clear()
+     _BUSY.clear()
+     _SUSPENDED.clear()

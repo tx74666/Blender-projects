@@ -1,0 +1,51 @@
+{
+  "schema": "x.validation.character-composition-first-stage-report/1",
+  "completed": false,
+  "config": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\first_stage_config.json",
+  "config_sha256": "1dc524c9305a98e8a43369696f2ece20246631ccd31d187df9bd4e37807fd84d",
+  "resource_checks": [
+    {
+      "phase": "before_native_numeric",
+      "available_bytes": 1954623488,
+      "total_bytes": 16943685632,
+      "used_percent": 88,
+      "minimum_available_bytes": 209715200
+    }
+  ],
+  "numeric": {
+    "schema": "x.validation.character-composition-native/1",
+    "completed": false,
+    "fixture": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\native_fixture.json",
+    "fixture_sha256": "ff1ae478e41cf2909c038baea3e4320db595218f2f280b7bc8420ad13be13fe8",
+    "initial_workspace_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\initial_workspace.json",
+      "sha256": "8ec5adb1609a9cc48d0da54c50b0d7c4a4e8b8632d77662b1302b57a477b122e"
+    },
+    "runtime": {
+      "package": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer",
+      "manifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\python_projection.json",
+      "manifest_sha256": "0cc92b42ac34c43d17c1d00b64c304a1306215c82384fc3dfbb5505988bad962",
+      "files": 167
+    },
+    "original_after_historical_restore": true,
+    "fresh_workspace_scene": {
+      "name": "Composition QA · Fresh Workspace",
+      "target_guid": "4925d3edceb94a540818298698a4120e",
+      "historical_target_guid": "3207a6768cff4594fb4b180b85f70a37",
+      "same_native_rig_object": true,
+      "historical_rig_scene_names": [
+        "Scene"
+      ],
+      "official_original_owner_transition": true,
+      "official_fresh_adoption": true
+    },
+    "phase_seconds": {
+      "connect_composition_library": 0.006355899997288361,
+      "import_b_variant_1": 2.8605680000036955
+    },
+    "fresh_workspace_cleanup": "historical_native_state_and_rows_restored"
+  },
+  "error_type": "ValueError",
+  "error": "Direct upperbody editing requires an exact FK limb; match FK first.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\tools\\run_character_composition_first_stage.py\", line 174, in main\n    run(config, report)\n    ~~~^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\tools\\run_character_composition_first_stage.py\", line 153, in run\n    native.run(fixture, report['numeric'], after_numeric=after_numeric)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\tools\\verify_character_composition_native.py\", line 472, in run\n    _run_fresh_cases(config, report, workspace_path, rig, qa_scene, preservation,\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                     prior_actions, qa_assets, specs, after_numeric)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\tools\\verify_character_composition_native.py\", line 514, in _run_fresh_cases\n    item = phase(report, 'import_b_variant_' + str(index + 1),\n                 lambda: composition.add_work_item(bpy.context, rows[0].clip_key, activate_new=False))\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\tools\\verify_character_composition_native.py\", line 346, in phase\n    return operation()\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n1\\tools\\verify_character_composition_native.py\", line 515, in <lambda>\n    lambda: composition.add_work_item(bpy.context, rows[0].clip_key, activate_new=False))\n            ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer\\animation_composition.py\", line 264, in add_work_item\n    _service('animation_composition_export').resolve_scope(context, rig, link['composition'], packet)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer\\animation_composition_controls.py\", line 326, in resolve_scope\n    _require(fk.mode_for_rig(rig, record) == 'FK',\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n             'Direct upperbody editing requires an exact FK limb; match FK first.')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_05\\character_designer\\animation_composition_controls.py\", line 32, in _require\n    raise ValueError(message)\nValueError: Direct upperbody editing requires an exact FK limb; match FK first.\n"
+}

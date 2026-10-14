@@ -1,0 +1,76 @@
+{
+  "schema": "x.validation.original20-source-scope/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "unity_animation_original_inputs.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_original_inputs.py",
+      "sha256": "f2f6e1693c7fab0cb8ffaa479a3af19f5c4392f66119844183c32a61f91b1473",
+      "bytes": 37288
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "0ca35e2e44bea9ed1007bf9024cfadb50b0e6a8ada2a702a84de43f30c484cd9",
+      "bytes": 109885
+    },
+    "forearm_twist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+      "bytes": 97739
+    },
+    "animation_original_inputs_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_original_inputs_ui.py",
+      "sha256": "38a370bbcd37b3e7e39b02a0c9697cf460e4344ebbef622efd9144f12fd88426",
+      "bytes": 15250
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "24bae694878e88ef9dda1b9eaf5e69e702756beb4ee42eb1f561194e990a4067",
+      "bytes": 43636
+    },
+    "animation_composition_weapon.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+      "bytes": 41160
+    },
+    "skirt_wiggle.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_wiggle.py",
+      "sha256": "81b0f0c42cfb8c4d3854c81e7da4a351d47e42b18929467d3e4864982bb13c25",
+      "bytes": 41965
+    },
+    "control_weight_paint.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\control_weight_paint.py",
+      "sha256": "efbaf8227830b48c5744f1c024d0240c147cdc612612a72810eb60b2c01748bc",
+      "bytes": 11482
+    }
+  },
+  "comparison_baseline": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4dff2238\\python_projection.json",
+    "sha256": "eb0534299f9db2b5b589466d806416ce209b16020d28190aebf2e890fc776dae",
+    "bytes": 21061
+  },
+  "implementation_scope": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\restricted_registration_07738_runtime.patch",
+    "sha256": "c2287f948119394964f9f232deef8bb2ed428ddd45c49c44f1720efbe30f3c82",
+    "bytes": 884
+  },
+  "targeted_pure": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\registration_unit_07737_01\\portable_contracts_receipt.json",
+    "sha256": "9661ee28f81f93b213262947351abe24772c2d7db08299d909097a8aa2f5d8fc",
+    "bytes": 3918
+  },
+  "review_attribution": {
+    "implementation_owner": "/root/forearm_review",
+    "independent_source_reviewer": "/root/package_prepare",
+    "formal_external_review_file_provided": false
+  },
+  "review_facts": [
+    "Owner confirms canonical frozen: only init version37->38 and control_weight_paint.unregister scene-availability guard changed from frozen R19. Native0CA3/skirt81B0 and all remaining188 payloads are byte-exact. Owner source audit of the reachable exception-cleanup chain found no additional current-path gap; not a native result.",
+    "Package agent independently read the full884B patch and paint.unregister body: a restricted context with no accessible scene skips workspace restoration and still removes registered classes. Available-scene active-workspace behavior and its existing preservation-on-error branch are unchanged.",
+    "Actual43 receipt9661 executed on .37. Its8 actual unit input files remain byte-exact and do not include init; native/skirt behavior evidence may be referenced unchanged. Oldinit12C4 syntax is verified against frozen R19 only, never relabelled as .38. No new paint unit test was run or claimed; actual new standard native probe remains pending.",
+    "Actual .37 standard02 F076/C1A9 failed at controlled cleanup, despite earlier enable/deferred/disable/cancel substeps. R19 static build PASS does not make this overall native result PASS.",
+    "R20 producer will compile all158 candidate Python leaves and2actual test sources, enforce unregister-only paint AST and version-only init inverse, and perform one official combined freeze/build. This preparation performed no Python/process/test/build/native/SDK/deployment."
+  ],
+  "native_acceptance": false
+}

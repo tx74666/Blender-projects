@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "task": "Read-only diagnosis of current Walk_N hand deformation reported to recover after Alt+R",
+  "scene": "Animation Worklist · Cosha",
+  "rig": "CoshaRig.001",
+  "action": "Cosha · Walk_N · Custom",
+  "frame": 1,
+  "checks": {
+    "all_current_bones_match_packet": true,
+    "parent_mismatches": [],
+    "packet_sha_matches_action": true,
+    "max_pose_head_error_mm": 0.0010774478227657221,
+    "max_pose_axis_angle_degrees": 0.000235314948178555,
+    "pose_change_during_inspection": 0.0,
+    "rest_change_during_inspection": 0.0,
+    "artist_blend_saved": false,
+    "artist_pose_or_action_edited": false
+  },
+  "findings": [
+    "Current frame bone pose agrees with the saved Unity output packet; no large CD action import distortion at this frame.",
+    "Current 300 finger channels are identical to Source and current pose channels; no NLA or finger constraints.",
+    "Finger scale is approximately one, which does not exclude rotational skinning deformation.",
+    "Linear mixed-weight skinning reproduces evaluated hand vertices; mixed finger joint rotations can shrink local directions.",
+    "No cross-finger, opposite-side, shin or foot influence found on thumb-dominant vertices."
+  ],
+  "limits": [
+    "Alt+R recovery is the artist report and provided comparison image; the agent did not clear the live pose.",
+    "Comparison is restricted to current Blender frame 1 and saved Unity packet time 0; live Unity mesh deformation and whole clip are not verified.",
+    "Pose agreement and skinning agreement do not establish that Avatar mapping, finger reference pose or artistic weights are correct.",
+    "Bone tail reconstruction and posed mesh deformation are distinct issues."
+  ],
+  "recommended_repair_order": [
+    "Review and correct hand/finger pose on Custom while retaining the body animation and Source reference.",
+    "Inspect joint skin weights against the corrected pose if mesh collapse remains.",
+    "If the same problem recurs across clips, validate Cosha Avatar finger mapping and reference pose in Unity.",
+    "Do not shorten rest bones or indiscriminately clear all animation channels as a repair for this posed mesh symptom."
+  ],
+  "evidence": [
+    "current_full.json",
+    "unity_packet_first_frame_full_comparison.json",
+    "hand_skinning_full_evidence.json",
+    "state_after_inspection.json"
+  ]
+}

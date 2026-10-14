@@ -1,0 +1,114 @@
+{
+  "schema": "x.validation.character-composition-raise-stage-completed-source-review/1",
+  "utc": "2026-10-11T13:04:17.444957+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "run_character_composition_raise_stage.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+      "bytes": 24737
+    }
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_raise_stage_701357fc_before_n16_completion_pins.py",
+    "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+    "bytes": 20129
+  },
+  "actual_sealed_json_inputs_read": {
+    "n16/completion_closure.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\completion_closure.json",
+      "sha256": "9810dbf836d11a85e412a1e2632fa97026aaf37509b6de098e9af74f22ad083d",
+      "bytes": 3280
+    },
+    "n16/actual_completed_file_audit.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\actual_completed_file_audit.json",
+      "sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3",
+      "bytes": 771503
+    },
+    "n16/publication_recovery_native_report.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\publication_recovery_native_report.json",
+      "sha256": "be09e217d29ae49c11720bea568afe6fa1454e52d6110a877a2104b649541347",
+      "bytes": 1590520
+    },
+    "n16/native_fixture.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\native_fixture.json",
+      "sha256": "292e5659669becff3ffcde4b3f9469b42f626e0a57fd3ba11c6cc4a12521c013",
+      "bytes": 2601
+    },
+    "n16/process_exit.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\process_exit.json",
+      "sha256": "149e6a63615599b57e93e8eb77cb28cd6cb7172df74c12dfb1017a49c055e7fe",
+      "bytes": 571
+    },
+    "n15/initial_workspace.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\initial_workspace.json",
+      "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+      "bytes": 35156
+    }
+  },
+  "source_delta": {
+    "changed_existing_functions": [
+      "validate_config",
+      "run"
+    ],
+    "added_functions": [
+      "validate_source_completion"
+    ],
+    "all_other_existing_functions_AST_and_text_exact": [
+      "require",
+      "_sha",
+      "_absolute",
+      "_id",
+      "validate_catalog_extension",
+      "main"
+    ],
+    "new_required_PIN_FIELDS_two_key_values": [
+      "initialWorkspaceSnapshot",
+      "sourceCompletionClosure",
+      "sourceCompletedFileAudit"
+    ],
+    "new_pins_outside_mutable_evidence": true,
+    "old_numeric_initial_workspace_snapshot_fallback_removed": true,
+    "window_Rig_membership_guard_unchanged": true,
+    "validate_catalog_extension_whole_function_unchanged": true,
+    "sealed_source_route_ID_packet_model_full217_controls_native_flow_unchanged": true,
+    "existing_final_pinned_guard_covers_all_new_read_pins": true
+  },
+  "completed_source_admission": {
+    "n16_closure_sha256": "9810dbf836d11a85e412a1e2632fa97026aaf37509b6de098e9af74f22ad083d",
+    "completed_file_audit_sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3",
+    "numeric_report_sha256": "be09e217d29ae49c11720bea568afe6fa1454e52d6110a877a2104b649541347",
+    "snapshot_sha256_equals_source_fixture_and_seed_receipt": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+    "QA_seed_sha256": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0",
+    "runtime_projection_sha256": "1479dd8dcbcbb08a27cfbb383110957f4dffd0114bc097e2c9f79ce382bc38fb",
+    "mutual_provenance_equal_fields": [
+      "config",
+      "source_entry",
+      "python_projection",
+      "full_projection",
+      "artist",
+      "sidecar_budget_projection_receipt",
+      "process_exit",
+      "launch_receipt",
+      "pid"
+    ],
+    "actual_n16_natural_exit_nonforced_all_workers_gone_required": true,
+    "audit_seed_receipt_equals_numeric_seed": true,
+    "source_audit_immutable_inputs_never_traversed_or_rehashed": true,
+    "mutable_shared_workspace_not_read_or_hashed_by_completion_admission": true,
+    "historical_snapshot_only_explicit_actual_archive_file": true
+  },
+  "validation": {
+    "stdlib_AST_parse_and_in_memory_compile": true,
+    "asserts": 0,
+    "target_module_imports": 0,
+    "pure_helper_or_driver_invocations": 0,
+    "tests": 0,
+    "native_calls": 0,
+    "OS_queries": 0,
+    "shared_workspace_reads": 0
+  },
+  "limits": "Source-only completed-proof compatibility. No Raise fixture fabricated, generated or launched. Real Raise Prepare outputs and future native window/Rig admission remain pending; tinyprobe8faa unchanged."
+}

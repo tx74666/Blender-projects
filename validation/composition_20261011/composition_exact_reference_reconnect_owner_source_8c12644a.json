@@ -1,0 +1,184 @@
+{
+  "schema": "x.validation.character-composition-exact-reference-reconnect-source-owner/1",
+  "utc": "2026-10-11T15:23:06.894294+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "8c12644a9a5f625cb3a4c73f91d3ca2f1dd69f748fdae608a2daaa54ba665685",
+      "bytes": 103413
+    }
+  },
+  "changed_runtime_sources": {
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "8c12644a9a5f625cb3a4c73f91d3ca2f1dd69f748fdae608a2daaa54ba665685",
+      "bytes": 103413
+    }
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_composition_805a457e_before_exact_reference_reconnect.py",
+    "sha256": "805a457ee482d4ee0c7bc01673cb22630f07429e63f854521ae839c0133b65bb",
+    "bytes": 99303
+  },
+  "previous_owner_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_explicit_save_pose_owner_source_805a457e.json",
+    "sha256": "1348246e8882f1d63a707cdc9987f3034c97a0616be072a944805e64a852df6d",
+    "bytes": 5899
+  },
+  "previous_peer_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_explicit_save_pose_peer_source_805a457e.json",
+    "sha256": "6cf34e50dc463f58a6384baf2df5a01e2730f7b58baacd96a46433bd7e2ac1b5",
+    "bytes": 7937
+  },
+  "actual_root_probe": {
+    "pin": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\a_reference_readback_probe_01.json",
+      "sha256": "00b99266edfe13b4cb8c60a15a4e300ddda8ed10ea01578172ef41d620dae7ca",
+      "bytes": 2289
+    },
+    "native_execution_attribution": "Root-authorized prepatch probe only; not executed by this Source implementation.",
+    "pid": 75832,
+    "candidate_count": 0,
+    "owned_reference_actions": [],
+    "cache_hash_equal": true,
+    "available_action_names": [
+      "Reference · Walk_N"
+    ],
+    "packet_sha256": "a385606b99c14b261f3d506e0bfc22f3a75a071f09474564563c514633a318df",
+    "cache_sha256": "b8eb415124ae19558d1ac347e59ce9bbb8cee1626513d8e47fb667dd31a5675c"
+  },
+  "delta": {
+    "changed_existing_functions": [
+      "prepare_reference",
+      "begin_sync"
+    ],
+    "added_function": "_reconnect_reference",
+    "unchanged_existing_function_count": 62,
+    "unchanged_existing_functions": [
+      "_host",
+      "_service",
+      "active",
+      "item_spec",
+      "bind_item",
+      "_require_native_action_timebase",
+      "_packet_for_item",
+      "item_fingerprint",
+      "composition_metadata",
+      "_library_state",
+      "connect_library",
+      "refresh_configuration",
+      "add_work_item",
+      "_prepared_reference_entry",
+      "create_reference_work_copy",
+      "reference_receipt_key",
+      "reference_receipt",
+      "find_reference",
+      "_plain",
+      "_encode",
+      "_decode",
+      "_store",
+      "_load",
+      "_slot",
+      "_bag",
+      "_curves",
+      "_motion_hash",
+      "_curve_payload",
+      "_write_curve",
+      "_constant_curve",
+      "_channel_rows",
+      "_frame_range",
+      "_following_hold",
+      "_assert_hold_constant",
+      "_editing_action",
+      "_layout",
+      "_pose_selection_owner",
+      "_prior",
+      "_nla_context",
+      "_tweak",
+      "_track",
+      "_owned_tracks",
+      "validate",
+      "enter",
+      "_restrict_selection",
+      "_restore_prior",
+      "commit",
+      "_commit_base",
+      "set_edit_target",
+      "capture_hold_pose",
+      "set_solo",
+      "resume",
+      "exit",
+      "isolated_sync",
+      "_export_session",
+      "_poll_sync",
+      "cancel_sync",
+      "load_weapon",
+      "remove_weapon",
+      "register_b",
+      "register_runtime",
+      "unregister_runtime"
+    ],
+    "find_reference_exact_text_and_ast_unchanged": true,
+    "resume_exact_text_and_ast_unchanged": true,
+    "all_top_level_statements_exact_ast_unchanged": true,
+    "full_raw_byte_inverse_equal": true,
+    "no_UI_or_tool_or_exporter_source_change": true
+  },
+  "contract": {
+    "write_entry": "Existing explicit prepare_reference; receipt present and zero exact-packet matching Actions only.",
+    "read_only_lookup_silent_linking": false,
+    "existing_valid_candidate_and_multi_rejection_path_unchanged": true,
+    "any_existing_same_packet_proof_prevents_reconnect": true,
+    "malformed_receipt_or_existing_proof_fails_closed": true,
+    "prelink_checks": [
+      "original packet path/fullSHA/clipGuid/localId",
+      "receipt schema/full packet SHA",
+      "original absolute nonsymlink cache path/fullSHA",
+      "native packet rate finite 1..240 exactly receipt rate",
+      "recorded positive integer slot",
+      "complete recorded motion SHA"
+    ],
+    "linked_payload": "Only available.actions exact unique one, from the authenticated original cache; no guessed display name.",
+    "native_load_options": {
+      "link": true,
+      "selected_actions": "exact unique available.actions",
+      "objects_or_scenes_selected": false
+    },
+    "after_link": "Original unchanged find_reference verifies full library/cache ownership/slot/motion/native timebase; return must be the newly linked exact Action.",
+    "action_ownership_gate": "All Action pointers after load must equal original set plus this exact new linked Action.",
+    "failure_cleanup": "Only Action pointers absent from before and whose actual library path equals this cache; never remove shared preexisting Actions.",
+    "receipt_cache_packet_artist_mutation": false,
+    "begin_sync_delta": "Move the single existing session=_export_session(context,item) after route/DTO/model admission and before collector.item_fingerprint; no duplicate call.",
+    "explicit_Sync_after_closed_reopen_prepares_before_readonly_metadata": true,
+    "no_Resume_change_or_load_handler": true,
+    "no_Prepare_rebake_resample_key_authoring_or_new_cache": true
+  },
+  "validation": {
+    "stdlib_in_memory_compile_passed": true,
+    "AST_and_unchanged_function_text_checks_passed": true,
+    "full_raw_byte_inverse_check_passed": true,
+    "target_imports": 0,
+    "tests_executed": 0,
+    "native_calls": 0,
+    "sdk_calls": 0,
+    "shared_workspace_reads": 0,
+    "current_artist_reads": 0,
+    "deployment": false,
+    "release": false,
+    "git_operations": false
+  },
+  "proposed_focused_tests_not_executed": [
+    "Exact retained cache with zero candidates reconnects via explicit prepare only and unchanged finder verifies it.",
+    "Changed cache, ambiguous cache Actions or existing invalid same-packet ownership reject without link.",
+    "Postlink full-proof failure removes only newly owned cache Actions and retains any preexisting shared Action.",
+    "Closed explicit begin_sync invokes the existing export-session preparation once before collector proof."
+  ],
+  "limits": [
+    "Source-only patch and compile/AST review; native linking/resumed UI/core Sync acceptance remains pending one fresh authorized QA run.",
+    "The prepatch probe is actual Root evidence and does not imply this new code passed native.",
+    "Historical receipts, caches, packets, failed reports, projections, artist and workspaces were not modified."
+  ]
+}

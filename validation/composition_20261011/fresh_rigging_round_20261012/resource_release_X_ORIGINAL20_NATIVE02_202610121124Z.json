@@ -1,0 +1,52 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "passed": false,
+  "resource_token": "X_ORIGINAL20_NATIVE02_202610121124Z",
+  "owned_pid": 38524,
+  "owned_process_filetime": "134362778614598749",
+  "retained_handle_natural_exit": true,
+  "native_exit_code": 0,
+  "native_exited_utc": "2026-10-12T11:24:38.6285439+00:00",
+  "owned_native_gone": true,
+  "process_termination_performed": false,
+  "GUI": true,
+  "all_owned_activity_closed": true,
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/validate_original20_controls.py",
+    "sha256": "3931ee99bb7f1cf0ac0791688f4960eaa0f7d53f4aaae5819879ad6e408ec5ff",
+    "bytes": 30824
+  },
+  "report": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/native_original20_r8_02/original20_controls_report.json",
+    "sha256": "4915dc759a75d02f5fce3aba3dc627628490ac1e3d1f3ba13c8e7f610bad2323",
+    "bytes": 11088
+  },
+  "start": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/resource_start_X_ORIGINAL20_NATIVE02_202610121124Z.json",
+    "sha256": "033f0ee03ef70ab956cfca9f5b37c1a28e2ada7ddac61b1a38807e6f8c38747e",
+    "bytes": 4716
+  },
+  "launch": {
+    "resource_token": "X_ORIGINAL20_NATIVE02_202610121124Z",
+    "actual_started_utc": "2026-10-12T11:24:21.4845629+00:00",
+    "owned_pid": 38524,
+    "owned_process_filetime": "134362778614598749",
+    "retained_handle_acquired": true,
+    "background": false,
+    "GUI": true,
+    "fresh_memory_MiB": 1341.1,
+    "artist_process_filetime": "134359355330496074"
+  },
+  "original_artist": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "3cd5619d70e8b4e21c2483884a04d352a2405f0eab02f00d34d306c81c5aa4b0",
+    "bytes": 34682050
+  },
+  "artist_saved": false,
+  "SDK": 0,
+  "Unity": 0,
+  "no_real20_edit_or_key_or_publication_or_save": true,
+  "actual_failure": "KeyError: 'composition_catalog'",
+  "qualification": "Native exit0 is natural process shutdown only; report FAIL before public Input20. Legacy receipt lacks composition_catalog key. Rig/data/rawRest, saved10 Actions/slots, skins/material/group/ShapeKey domains and old Worklist rows passed before this schema-key failure."
+}

@@ -1,0 +1,215 @@
+{
+  "schema": "x.validation.character-composition-tools-source/1",
+  "date": "2026-10-11",
+  "source_only": true,
+  "native_pending": true,
+  "native_pending_scope": "Next n8 matched background and headful tools need actual root-owned execution. Actual failed n7 and all prior tools/candidates remain historical. No native/pixels/artist mutation was performed by this source fix.",
+  "native_execution_performed": false,
+  "artist_mutated": false,
+  "build_deploy_sync_performed": false,
+  "projection_change_performed": false,
+  "tools": {
+    "run_character_composition_first_stage": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage.py",
+      "sha256": "701532d2fcc8024850811cd41e40c2b5dbd43e912ed95ab5f76824f6722521e6",
+      "bytes": 9852
+    },
+    "verify_character_composition_native": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+      "bytes": 52692
+    },
+    "composition_sync_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_sync_acceptance.py",
+      "sha256": "1318495399016458a913427de70b2195c983054ac72c7a0d3c1126da15c14afb",
+      "bytes": 21115
+    },
+    "composition_timing_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_timing_acceptance.py",
+      "sha256": "58325c8b4256585a12370aa10a059eabb1d80c74fe3d2eb4b2fbb97fecf0cb06",
+      "bytes": 40700
+    },
+    "composition_session_acceptance": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "140b47ac160fbe2679e2ccbcdbfae7b4d79f756adb8bad38a7943c84c7b245eb",
+      "bytes": 49355
+    },
+    "composition_raise_authoring": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_authoring.py",
+      "sha256": "e8cbbe9696f7899c67543f70785f0bd02e3f3ac0cd15daa5225fc2c87c8420f1",
+      "bytes": 18339
+    },
+    "run_character_composition_raise_stage": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "701357fcba359a0f842771c8e8338dea2d7cb3b6d328cfd7bd614e98d90a08e5",
+      "bytes": 20129
+    },
+    "run_character_composition_ui_fixture": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773
+    },
+    "composition_ui_checkpoints": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b",
+      "bytes": 20498
+    },
+    "release_projection": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+      "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+      "bytes": 7529
+    }
+  },
+  "api_audit": {
+    "headful": "start(context, iterator, options, evidence, *, finished, pin_guard, state_reader); unchanged public API. Real SDK screenshots, fresh native identity/playing/paused-frame guards and explicit acknowledgement.",
+    "startup_rollback": "One transaction spans recorded class registration, global controller, initial report, exact owned persistent timer. Failure preserves original exception; cleans every recorded class/owned timer, closes iterator, clears controller, verifies protected inputs and retains failure report without completion callback.",
+    "normal_quit": "UI fixture optional top-level quitOnCompletion bool defaults false and true requires headful checkpoints. After completed acceptance/saves/reopens/guards/durable report, schedule_completion_quit waits 3 seconds, reruns protection guard and calls only bpy.ops.wm.quit_blender. Failed checkpoints/guards/timers stay open. Report records request; root independently verifies actual process exit.",
+    "session": "Synchronous/headful session APIs unchanged. visual_guard now uses runtime reference_receipt(rig, full_sha), explicitly rejects None and propagates malformed identity errors; exact readonly Action motion hash, cache-file SHA and native linked-library path guards remain. No direct raw64-SHA IDProperty indexing or fallback.",
+    "physical": "Current canonical physical helper retains exact public manifest IDs and complete foreground_one native/provenance/effective proof. Current native helper pin is read directly, replacing earlier a6e source manifest only for new tool snapshots.",
+    "required_runtime_reference_accessor": {
+      "names": [
+        "reference_receipt_key",
+        "reference_receipt"
+      ],
+      "lookup_sha": "Complete64hex SHA passed unchanged to official accessor; lossless encoded59-byte key under runtime ownership.",
+      "missing_receipt": "Reject; accessor returns None only for missing encoded key.",
+      "malformed_or_wrong_sha": "Strict runtime ValueError propagates; no tool fallback."
+    },
+    "native_import_anchor": "Each genuine Add immediately captures original native/public IDs, full row/spec/route, exact Custom Action pointer+slot and known complete fingerprint before another mutation. Every lookup after growth, activation, isolated evaluation and Exit compares that original anchor. Official current workspace/route/baseline/_association_record/get_link and full217 strict mapping remain mandatory; coherent same-ID Action/content rebind cannot reset the baseline.",
+    "native_proof_signature": "fresh_association_proof(context,rig,item_id,links,worklist,expected_model_sha256,*,anchor,fingerprint); capture_import_anchor(context,rig,item_id,worklist,fingerprint); reacquire_work_item(context,rig,item_id,worklist,*,anchor=None,fingerprint=None). UI anchors before activate and uses mandatory keywords; no legacy fallback.",
+    "session_collection_lifetime": "Before Create A Work Copy, retain original B Custom+Source identities/slots, exact full row/spec and motion hash. Reacquire unique plain A/B IDs after growth and verify original B before baseline or editing. _current rejects zero/duplicate rows; Undo/reopen paths reacquire native IDs.",
+    "raise_author_lifetime": "Peer-owned Raise author491c anchors registered template/native inputs before row creation and validates original Action/content across register; peer reports ten focused tests+compile PASS and independent source review.",
+    "pose_selection": "Five tool writes resolve all authentic selection owners from validated rig.pose.bones through product._pose_selection_owner(pb), then set the active native Bone before exact final selection flags. Modern per-object PoseBone.select is preferred; legacy Bone.select must already exist. Unknown APIs and real write failures propagate; no synthetic field or catch-and-fallback writes. _show_control preserves three positional arguments with optional backend keyword.",
+    "pose_visibility": "Five tool admission filters use shared session._pose_hidden(pb): modern PoseBone.hide if present, otherwise direct real legacy Bone.hide; missing/nonboolean API rejects. Accessor is read-only; no visibility/hidden/color/collection changes. hide_select remains the existing Bone selection lock.",
+    "background_dependency": "composition_timing_acceptance._author_loop imports _pose_hidden from NEW composition_session_acceptance140b; Raise _rotation_control imports it too. n8 background must freeze current140b session rather than historicalfaf. Native fixture sessionChecks remains None and never runs the intentional session/edit/save/reopen generator."
+  },
+  "ordered_prerequisites": [
+    "Root freezes matched NEW tools with timing58325/session140b/Raiseauthore8cb and product783b; old03/427/n7/nativece4 snapshots remain immutable.",
+    "Background n8 must contain currentsession140b for readonly _pose_hidden even with sessionChecks=None. Match all6 background source files from this ten-tool manifest.",
+    "Use actual successful granted foreground/numeric/three SOURCE publications/QA seed/historical cleanup and external natural-exit/worker absence receipts before a separate headful process. Failedn7 cannot seed UI.",
+    "New headful snapshot must keep UI729/nativece4/checkpoints7eaaa plus updatedsession140b and matched product783b; Parent Collect/Prepare cannot mutate its pinned workspace before UI.",
+    "Root owns native grant, release/deploy and candidate validation. Source-only candidates08/09 are actual pinned artifacts, not native success."
+  ],
+  "pure_validation": {
+    "current_tool_focused_tests_passed": 9,
+    "current_tool_compile_passed": true,
+    "product_peer_focused_tests_passed": 8,
+    "product_peer_test_owner": "/root/rig_controls_review",
+    "product_tests_rerun_by_manifest_owner": false,
+    "historical_native_anchor_tests_passed": 4,
+    "historical_ui_anchor_lifetime_tests_passed": 5,
+    "historical_raise_anchor_tests_passed": 10,
+    "historical_ui_tests_passed": 47,
+    "historical_tests_repeated_for_this_fix": false,
+    "whole_current_suite_rerun": false,
+    "tests_pins": {
+      "test_character_composition_ui_checkpoints": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_checkpoints.py",
+        "sha256": "4cbe5c713c77597ef5d6b914b62ed1618e55212dfad91c7b1a2e53d55d52506c",
+        "bytes": 17110
+      },
+      "test_character_composition_ui_fixture": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_ui_fixture.py",
+        "sha256": "eece84ad6d152542af0aa95f091189cde10456c8c8573ba63d4b0d434daa2351",
+        "bytes": 26964
+      },
+      "test_character_composition_native_fixture": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_native_fixture.py",
+        "sha256": "74a740960813c0df841d0dc2affea22c1aeeebae1d4b61930352a95310c21e97",
+        "bytes": 18159
+      },
+      "test_composition_raise_authoring": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_raise_authoring.py",
+        "sha256": "dc07e6d9f1617fe42d7af2c5481890ae96b42ebc48e397a5b9d9544fb3f8f70e",
+        "bytes": 15159
+      },
+      "test_character_composition_selection": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_selection.py",
+        "sha256": "430a60b47dc0d887ae5968fab5c039c9f82f81a53380c0633b72bbe7be0bc329",
+        "bytes": 13199
+      },
+      "test_composition_tool_pose_selection": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_composition_tool_pose_selection.py",
+        "sha256": "a5762b315db806dbe9703539c78f19252d23ab479d995cab931b408a058fce2a",
+        "bytes": 8630
+      }
+    },
+    "compiled_in_this_change": [
+      "composition_timing_acceptance.py",
+      "composition_session_acceptance.py",
+      "composition_raise_authoring.py",
+      "test_composition_tool_pose_selection.py"
+    ],
+    "coverage": "Actual shared product owner and actual _show_control with separate PoseBone/sharedBone/other Rig; active-before-final flags, new/legacy API, no synthetic fields, write failure no fallback, modern Pose visibility versus Edit Bone hide, hidden control rejection and actual Raise candidate admission. No native work."
+  },
+  "handoff": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_ui_fixture_handoff_20261011.md",
+    "sha256": "0a1c3027563606cce99a0ff1e211933ebe56434484b1744fd6ef2f3e2dc00632",
+    "bytes": 14668
+  },
+  "remaining": "Root-owned matched n8 background/tool snapshots, explicit native window, actual successful receipts and separate headful/NEW Raise validation; no native/pixels/config generation/runtime edits/deploy/Sync performed by this tool fix.",
+  "excluded": "Mutable artist inputs/models/prepared packets/workspaces and saved scenes excluded. Only explicit canonical product source and actual root-owned08/09 projection JSON receipts are added as declared source-only pins.",
+  "supersedes": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_source_manifest_20261011_headful_import_anchor_ce4be885.json",
+    "sha256": "427a20e66f19425644d89c401e2eab1e798b7a2d5555c83d0fd4c53caf7c91cb",
+    "bytes": 11021,
+    "preserved": true
+  },
+  "runtime_or_projection_changed_by_this_tool_update": false,
+  "source_reports": {
+    "native_helper": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_helper_source_report_20261011_ce4be885.json",
+      "sha256": "8458b693f1465d65edd39eca3790aab196ccd963e3a212b5e30c3876118ec3be",
+      "bytes": 3482
+    }
+  },
+  "independent_review": {
+    "reviewer": "/root/export_scale_review",
+    "product_status": "READY",
+    "product_review": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+      "bytes": 29005
+    },
+    "tool_delta_review_status": "REQUESTED",
+    "scope": "Product783b exact independent source review retained. Three new tool deltas and complete manifest exact readback requested separately; no reviewer tests assumed."
+  },
+  "product_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+    "sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+    "bytes": 96417
+  },
+  "historical_product_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_07\\character_designer\\animation_composition.py",
+    "sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+    "bytes": 95834,
+    "classification": "Historical failedn7 product; not the new snapshot source"
+  },
+  "product_handoff": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_pose_selection_compatibility_20261011.md",
+    "sha256": "45fc298437ffa9006b5fe6a59879da6cd17a773c273a0f1171cfcc5f85640ce9",
+    "bytes": 2139
+  },
+  "root_owned_candidate_projection_pins": {
+    "python_projection": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\python_projection.json",
+      "sha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "bytes": 23988
+    },
+    "complete_candidate": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_09\\candidate_projection.json",
+      "sha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "bytes": 23581
+    },
+    "projection_receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\pose_selection_projection_receipt_08_09.json",
+      "sha256": "0996a8e3f33d59cee51591f63ac064c0db1a068dafa52320850c455a9d4d3b59",
+      "bytes": 2055
+    }
+  },
+  "product_independent_source_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+    "sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a",
+    "bytes": 29005
+  }
+}

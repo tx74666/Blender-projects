@@ -1,0 +1,73 @@
+{
+  "schema": "x.validation.character-composition-linked-archive-fake-user-source-finding/1",
+  "utc": "2026-10-11T11:39:54.443305+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "snapshot_exporter": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer\\animation_composition_export.py",
+      "sha256": "562565879a9c4c05356f82c3b0ec45bd567d1311ef58cbde8a20607452079520",
+      "bytes": 47713
+    },
+    "snapshot_worker": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer\\animation_composition_export_worker.py",
+      "sha256": "e98cd3202ad18f47a2f53e1e9d6999dd023089a11d73ab6950229516c33c5741",
+      "bytes": 7242
+    },
+    "frozen_recovery_driver": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\tools\\run_character_composition_publication_recovery.py",
+      "sha256": "a21e531819225c4990242351ee9a2e84646cd8ac8a6714c5cd845c4a56f61fcf",
+      "bytes": 51225
+    }
+  },
+  "scope": "Targeted fake-user contribution question only; no wider library instantiation review.",
+  "local_source_facts": {
+    "copy_helper": {
+      "name": "_copy_selected_action",
+      "line": 302,
+      "creates_disposable_action_copy": true,
+      "sets_use_fake_user_explicitly_false": true
+    },
+    "snapshot_writer": {
+      "line": 757,
+      "keywords": [
+        "path_remap",
+        "compress"
+      ],
+      "does_not_request_fake_user_true": true
+    },
+    "worker": "Reads the archived isolated Action and binds it only in its disposable export process; it does not create this snapshot Action or write a new archive.",
+    "recovery": "Links only the exact archived Action with libraries.load(link=True); it is used as a read-only transfer source, not bound to the fresh rig. Cleanup retains strict archive.users==0 before native removal."
+  },
+  "official_primary_source": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/blenloader/intern/readfile.cc",
+      "ref": "blender-v5.2-release",
+      "commit_sha": null,
+      "commit_limit": "Version branch source was read; no exact branch commit or installed binary commit was newly pinned by this reviewer.",
+      "function": "direct_link_id_common",
+      "lines": "2107-2112",
+      "finding": "When id->lib is set, Blender clears ID_FLAG_FAKEUSER and initializes id->us to ID_FAKE_USERS(id). This excludes an inherited fake-user contribution on the linked Action."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/python/intern/bpy_library_write.cc",
+      "ref": "blender-v5.2-release",
+      "lines": "38-39,78,129-133",
+      "finding": "write defaults fake_user=False; SET_FAKE_USER is added only when explicitly requested."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/python/intern/bpy_library_load.cc",
+      "ref": "blender-v5.2-release",
+      "lines": "317-320,421-425",
+      "finding": "load defaults set_fake=False and rejects set_fake=True for link=True."
+    }
+  ],
+  "conclusion": "No definite fake-user cleanup blocker was found in the reviewed SOURCE chain. The archive.users==0 predicate remains an actual native gate, not a claimed observed result.",
+  "limits": [
+    "No blend/archive was opened or linked by this reviewer.",
+    "No use_fake_user/users native values were measured or asserted.",
+    "No imports, native, SDK, GUI, CIM, tests, source edits or execution of preflight/launcher occurred.",
+    "The current n16 reviewed files and fixtures remain unchanged."
+  ]
+}

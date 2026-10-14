@@ -1,0 +1,88 @@
+{
+  "schema": "x.validation.rigging-reference-and-harness-source-peer/1",
+  "created_utc": "2026-10-11T23:27:47.199681+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "status": "SOURCE_PEER_CLOSED_NATIVE_PENDING",
+  "source_pins": {
+    "native": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "c5f2aa055c43d97afbe057498041e5a01d59002ebb99c271f1438f5d03a150ea",
+      "bytes": 98837
+    },
+    "reference_test": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_reference.py",
+      "sha256": "4b89ca819c495ebd4096c80091da39d64cf9f49cc6794c40d1e517ae10ac5709",
+      "bytes": 31363
+    },
+    "reference_owner": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_source_owner_c5f2aa05.json",
+      "sha256": "8c632d2fc1d1f603ff955aff6b9ed1e8a57fdad44462d2e1878a7ded2afd7506",
+      "bytes": 9787
+    },
+    "current_recovery": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\recovery_current_native_c5f2aa05\\receipt.json",
+      "sha256": "c426850bd7c1458c5bc5051ddf10f16390949ea0cdfc24dfebab362110e055ea",
+      "bytes": 2565
+    },
+    "control_harness": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_round.py",
+      "sha256": "cfaa6dc580d69dbdc7c752078752f2a3cbe89f33ec02a60c5186a196fba4cdcb",
+      "bytes": 45017
+    },
+    "control_owner": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_round_owner_source_cfaa6dc5.json",
+      "sha256": "8156277e3a176a75a815552e362fb2288274ba3c2aebe573d9e1b7792c655106",
+      "bytes": 4729
+    },
+    "single_sync_harness": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_single_sync.py",
+      "sha256": "0854aa755b0e50438d0be054f885aa57f68f67862e8de97f6e3b86f56f8f325b",
+      "bytes": 16150
+    },
+    "single_sync_peer": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\new_official_cosha_single_sync_peer_0854aa75.json",
+      "sha256": "ba96abeb20149c3239db8c5c102bad79d49b2bdc9d5971a1527c9d6d313d6155",
+      "bytes": 2550
+    }
+  },
+  "existing_native_functions_changed": [
+    "_make_tracks",
+    "_reacquire",
+    "_tracks",
+    "_validate",
+    "activate"
+  ],
+  "unchanged_native_functions_verified": [
+    "base_only",
+    "capture_inputs",
+    "snapshot_base_refs",
+    "_restore_owned_state",
+    "_apply",
+    "_binding_plan"
+  ],
+  "reference_pure_tests_actual_owner": 20,
+  "current_recovery_pure_tests_actual_root": 12,
+  "corrected_actual_issue": "Reference root guard now reads actual weighted:false; prior skinWeighted fixture/code mismatch was corrected before freezing.",
+  "timing_review_correction": "4b7 already assigned scene_start before track creation; this was not a timing bug. New changed-start token recovery coverage passed.",
+  "harness_source_scope": [
+    "New official FBX public Setup/Add/Activate, explicit four Target/Hint transforms and save, real Undo/Redo across callbacks, independent save/reopen.",
+    "Readonly Walk Right reference selects normalized BASE strip and measures real lower-leg/foot pose differences while twenty inputs and local Return remain exact.",
+    "Physical single/manual Sync uses the actual successful saved trial, public row Sync and exact-job poll takeover; naturally exited worker archive, published FBX/Return14 and Collect receipt are required."
+  ],
+  "runtime_operations": {
+    "blender": 0,
+    "native": 0,
+    "gui": 0,
+    "sdk": 0,
+    "worker": 0,
+    "deployment": 0,
+    "artist_mutation_or_save": 0
+  },
+  "limitations": [
+    "Only actual AST/fake RNA suites and Source peer checks have completed.",
+    "No native model Setup/Add/Undo/reopen or physical worker/pair/Unity Apply success is claimed.",
+    "The independent new Cosha trial is not original X Rig acceptance.",
+    "Canonical Source, frozen package, installed copy and currently loaded artist session are separate states."
+  ]
+}

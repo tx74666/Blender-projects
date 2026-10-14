@@ -1,0 +1,75 @@
+{
+  "schema": "x.validation.original-snapshot-viewlayer-pointer-source/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "snapshot_latest_original_artist.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\snapshot_latest_original_artist.py",
+      "sha256": "ffd7dec0a8428072e9cf2da4cbe3c0a69534db0d545052c0f70b3d6ee9c76302",
+      "bytes": 15639
+    },
+    "run_latest_original_snapshot.ps1": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\run_latest_original_snapshot.ps1",
+      "sha256": "7f8f20af98a853595fe197d2b9f2d71be9a4d9be4771c70d2440131f89d051eb",
+      "bytes": 8638
+    }
+  },
+  "prior_sources": {
+    "snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\snapshot_latest_original_artist_803088d4_before_viewlayer_pointer.py",
+      "sha256": "803088d42e1b239b7cc5c6753120ae9707e0a8d3b5e003f474bdbd3a0df28862",
+      "bytes": 15576
+    },
+    "caller": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\run_latest_original_snapshot_1c046a73_before_viewlayer_pointer.ps1",
+      "sha256": "1c046a73e463bc158f6deee6fbe71a9e94218725f946f0c58d65b0cbee9229e8",
+      "bytes": 8638
+    }
+  },
+  "historical_readonly_diagnostic": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_context_X_ORIGINAL_CONTEXT_READONLY_20261012041327Z.json",
+    "sha256": "c851b4d90136dbc298b3d603cb35852ff0f4dcf4747734c943ff48873580f43b",
+    "bytes": 8934
+  },
+  "diagnostic_facts": {
+    "viewlayer_native_pointer": 2082725413456,
+    "python_is": false,
+    "native_pointer_equal": true,
+    "original_context_unchanged": true,
+    "diagnostic_save_calls": 0,
+    "performed_by_this_source_change": false
+  },
+  "change": {
+    "snapshot_function": "original_context",
+    "snapshot_line": 132,
+    "before": "ctx.view_layer is window.view_layer",
+    "after": "ctx.view_layer.as_pointer() != 0 and ctx.view_layer.as_pointer() == window.view_layer.as_pointer()",
+    "scene_python_is_unchanged": true,
+    "rig_and_owner_conditions_unchanged": true,
+    "snapshot_full_raw_inverse_equal_803": true,
+    "caller_expected_hash_literals_changed": 2,
+    "caller_full_raw_inverse_equal_1c": true,
+    "caller_cli_sdk_request_and_dynamic_parameters_unchanged": true,
+    "all_other_source_bytes_unchanged": true
+  },
+  "execution_counts": {
+    "sdk": 0,
+    "python": 0,
+    "compile": 0,
+    "ast": 0,
+    "tests": 0,
+    "native": 0,
+    "artist_reads": 0,
+    "artist_writes": 0,
+    "workspace_reads": 0,
+    "deploy": 0
+  },
+  "limits": [
+    "This receipt verifies the narrow Source change and literal raw-byte inverse only.",
+    "The pinned native diagnostic is historical evidence; this task performed no native or SDK action.",
+    "No SaveCopy result, runtime success or next resource grant is inferred.",
+    "Original failed artifacts and full 803/1c Source snapshots are retained unchanged."
+  ]
+}

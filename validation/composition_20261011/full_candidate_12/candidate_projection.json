@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "module": "character_designer",
+  "version": "0.77.25",
+  "source_root": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_12\\character_designer",
+  "files": {
+    "__init__.py": "c8d612988159e83a3332c35245970cc07ad4f0a9b8704ef466e43c819c066861",
+    "animation.py": "21bc2bdd62ab6cba661c31a0006319e487047385fcb7a3381f3943bf6be2b05a",
+    "animation_composition.py": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+    "animation_composition_contract.py": "2d286b46f29e4777c9c11f43b680f9f132f408a0e910169f031516c85135a4d9",
+    "animation_composition_controls.py": "aff2415b44acf440bb1c97f63eb8ed5af622b5d7f5a597a9d68b945d572e6b42",
+    "animation_composition_export.py": "2dd2173ec604918328b25945f22916d96ce8039a322c7ed034ee65f686b69984",
+    "animation_composition_export_worker.py": "e98cd3202ad18f47a2f53e1e9d6999dd023089a11d73ab6950229516c33c5741",
+    "animation_composition_ui.py": "dec613ae44ccaf8644f339b6bc5072372adaa08d66e3049851807e1433c9c3a8",
+    "animation_composition_weapon.py": "ab32c558406b7924f551667126f0532a12f5c72a0d59fce946fc6d2ad14dc9ec",
+    "animation_composition_weapon_geometry.py": "396e43238695d241ea5e37035dd098e365edb3a5c7cea888e505359696ffdbda",
+    "animation_export.py": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+    "animation_export_worker.py": "b2668e204e4e75e71af165e3427eed8a3e2387c2dd2635cbd757d27d748a97be",
+    "animation_link.py": "aabd94b5ce0b2cac63ed88d1f24fab35636e0eb14aacd07de105d7e84ef3fccb",
+    "animation_link_source.py": "9aaa032749a86ec808523697c8a85679dce0134e60dfb640331bd41f53859998",
+    "animation_retarget.py": "f98f84c2bcec2402586c5704fd531de23069465f7adf26524eb201c6811bd28c",
+    "animation_runtime.py": "1a42593c14bb61e33de16c25b3dc107dcf9ef65ef1034b5ea248f4e35a28a59d",
+    "animation_worklist.py": "fea0c713008ad73a9cca30112054312a28b8cfdebbcfda20d6a38483defbd043",
+    "animation_worklist_collection.py": "7e306c7af9e3b55aacd84ca5b16a44d3980b459ca905a07111c99132b6b9968f",
+    "animation_worklist_fingerprint.py": "74a49632682def0ec598cb819018d67f217a032bd4253d8a88af50cbf7d63193",
+    "animation_worklist_new.py": "b332692c2119c369916a126ec689b5dbdf68c63c7534f54a07e12bab142a7c9d",
+    "animation_worklist_queue.py": "12f936ac57ce6981d8988932cf4f05a2cdfdc8567b7d5842b92a79069187650b",
+    "animation_worklist_target.py": "ce7aa98f40ebd5bc9af02f38b2362f1f6d4f1af1ca4cb5fa53ac913f7e3d4fa1",
+    "animation_worklist_ui.py": "77d40e3dc4eaa579d75b1d4470ec303cc528db6809b59e729b8804f93be1ae6a",
+    "animation_workspace.py": "58569e35850419236e6f1152b976ce28806c420a9e88cbb8faa31387da04957b",
+    "ATTRIBUTION.md": "97ec7c9849e1deb302527a172de5ff0c833b600f0099ea6d7ffd05133134cb3a",
+    "body_calibration.py": "8310159a27ccd0d501161fbf4aa24dd0cf57f1fec3e761be6e13094f713552e0",
+    "body_calibration_display.py": "bc96daee9eac162de5aa2912f94aa8b9393e80f8ffce10c24001d705c6c6be7c",
+    "body_calibration_hands.py": "cd2dd840a5b9944763efb84ed9e806909bd0b13abc93b2e1b02990368e121f2a",
+    "body_calibration_math.py": "6db2702e866ce955b3501a505e4525df3e74f8c00885c733b0d562bae627308e",
+    "body_calibration_overlay.py": "05b700219ad7f5ce17e4fdee386a9da78ef590f8439b038b4736b108a2957dac",
+    "body_calibration_ui.py": "86d14dae2ba9d2e58b91915dbfbbc6200f3f06a112b33300992fd7561f30a058",
+    "body_controls_ui.py": "4f7a8c3b5ff181be6b3828d5ad603de353b2313aff00245cce13ef7eb7bb0458",
+    "body_detail_visuals.py": "ce2466388ca1d49c6fda435a600bc5513e296485b097b4c0675405110d35b87d",
+    "body_original_mode.py": "e419bc7f221de3746295a705f4806dab6b91aaecd1efe0d1d9b8f71d087a5c2f",
+    "body_rest_resync.py": "41d048dbb8892d8d1baea2f90d3335a7dc29ebb3124e9b220be6048687301c03",
+    "body_setup.py": "87f1ac03a7c8e48865f9583d0a1f52b6b612d072e44f75f32c7b5af68223935c",
+    "body_setup_plan.py": "85f29265e648ea047c060e7314d0bc307c8ad2aa7b279799f5f0e9b16e9c9916",
+    "body_setup_removal.py": "53d4c1485c8b70918cd887689c5762b7cd0e6563565dcd65e88c65b2a902da0d",
+    "body_setup_transaction.py": "13d5b4c489d6ead3d9b40d8468d9019f8422ba37f35328917decc755a231f4a3",
+    "body_setup_ui.py": "bc3bcd8ed76449063c2649801777bf5908228cf46e78b21540f008254582051f",
+    "bone_collections.py": "c4f2814eb4981e032f5343ae01e4fc16f1536247ea7d1a4e9ee4d91292795452",
+    "bone_color_palette.py": "c0fb02f35bd9f1eaaf75307bad71d537180c82ad7f1b52e43ca1d75359e0629d",
+    "bone_display.py": "dba2df867ae94fae4f95ab5b4159b4058c95a657c8bee300da5d7185787b64f3",
+    "bone_display_sync.py": "79c2f3c09978944a3f1cd2d4b4303ff9f9abda75848248222f44cffa4487a3a9",
+    "bone_rest_lengths.py": "074f3806c7cd8290446e869379ef1ca43de065247262d2757eee637ed5358e03",
+    "character_setup.py": "8e6a2f3b7cdb2470d45ed0441a589d35ed2ec5ddea7ea828a0c5b0222d5677f9",
+    "control_colors.py": "bf3668a58a1e5ac0290c1d2ced32ea4d8e32491eb90c2ee62c39a8f62dbdbcbf",
+    "control_pose_assets.py": "19b51c76bc9998fe94a47f035b14f43ffb4ea5869d4efc5a82b9742150cba3d6",
+    "control_pose_capture.py": "461ddba7fe2f6bc71038f01364f6d90f34d0b5f96ecb3c2a536952aaa9db569a",
+    "control_pose_mirror.py": "22bbffeb16469ee212c5d7dda08b09bda6f8500b3900fff31a7226e9c8d0e968",
+    "control_weight_paint.py": "339a5ade54c73892e7a5aa02da1a38e562b107610cfc1a8620edd1b00fcc1eda",
+    "curve_tools.py": "ed25cb3c8b230c6a6cf1a0799f5875ee73dc711b5f32f818eae858f5e0c0335a",
+    "delta_symmetry.py": "73ec541ad3d727965d7585d9ba77b56b0e91be80f3197892b0b0740a8b5bb282",
+    "eye_controls.py": "ffd8e0218141fd613e5eb3534db939c2786afc5f0f10d5618ab64120c3fb23e9",
+    "eye_ui.py": "346f3c4a6f7067844124ab5d5891bfe84493f6c5e91523648c8f5a904da13001",
+    "finger_bank.py": "3f8e5e452c50bd87b61500ec337913c0d909d4168d2830d5defbdd2206774c92",
+    "finger_bank_ui.py": "9f6033db46f68e8e214d9f9836c63773b36bdb56efeacb16088ea10a6f3fece2",
+    "finger_bone_mirror.py": "3956599bac6762f5088d6a92dd7465ec65b63d938f414272c9e8a1458b314fc3",
+    "finger_bone_tools.py": "8f9a8d95511a4b8714b6e20645e07da49fba161be56ac574c35fc81dcb193b8a",
+    "finger_bones.py": "fd8f4e7e78364c789f2f8fbaf7fb72c2035e79f3f04ba9a7e152402f151a4613",
+    "finger_chain.py": "ffc27af7094d5c91f6be86ae365e52ec541587cd2e15dd81fc79367dc3228d6f",
+    "finger_definition.py": "a0ab9878dbfda35bf4db22d2af422b07b6b4830c809c53b392f51e71974365f6",
+    "finger_definition_ui.py": "627435ee5bbe804b7cae3261533c9c5b64647c2a1b2e78800c78291b27c0c4d7",
+    "finger_detect.py": "a984c6524b4478ef1ac53247a58df81b452d338263c1d0d9b3a3208e1071171a",
+    "finger_flex.py": "ec4fdc0016b98bcc2ccd909124ddfe1de68259df77f51191faa6896741d88371",
+    "finger_internal.py": "41d6ca40522608da8931153e65f511a0b25014901529e252126bdbca69e67b40",
+    "finger_loop_marks.py": "5b7938a05dd988da93f084284634716e41dc6cac486fc8f914c4cd763a8c851d",
+    "finger_loop_marks_ui.py": "1c6af2c6c2eb60e953a5035fc7e2e5dfad2b8d3fc6f2194dfa86eb15c7f61f45",
+    "finger_mirror_sync.py": "296caca0ef8eb790a7929e6264ee35f54fbed0c7e15404521008f866450a71d3",
+    "finger_preview_cache.py": "5a8646babddf10a7af64e8beb9ef07fe6af079dafd11b358ae3f6edfd3379d4f",
+    "finger_range.py": "d00ab689a67c02d9bc2e186583f92f298ce0b7a3ce200a444d44a7910e7e0a5d",
+    "finger_root.py": "1414ca6cb5424e1721220a62007bb3516af43fdeb77b1c27577ee589d786f83e",
+    "finger_symmetry.py": "afdac9c0d905adf6d7d0e682dadbed8d1f4f75b4dabca87aa0a079c64cea834a",
+    "finger_targets.py": "49d235e618bde9cac87231cd92e5b033391087d39e7938976bef503063582785",
+    "foot_controls.py": "ecce547b474cd3c41f6f414136708be9d0f21a0af3eaa660689352a4635e4e5f",
+    "forearm_original_inventory.py": "28a86885c5cba5579cd054a41d27933787f33ec0d19cf452f4a858da4ca069ac",
+    "forearm_twist.py": "e8403be47320e95b7b40955e79b89d27e4ac7e39f3565f3fe7cabfe529a2cb14",
+    "forearm_twist_cache.py": "dead8b61993a7dbc9962532e91bd2822d38702e4306c41f97141e582ef6805c6",
+    "forearm_twist_edit.py": "b33c4141e2f60231e53b3359ee205d20195d0a8b3ca3b24e5da0b8e1adcf976d",
+    "forearm_twist_math.py": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421",
+    "forearm_twist_profile.py": "71f9c61af778bb26bddbb23ef334a8dd1a39928a84c5e8fea3145ffc5d1ff947",
+    "forearm_twist_symmetry.py": "620c7b85ca2352caa5d0391162657ff1f5564d1d57ed0cd6ff34f8105703b6f3",
+    "forearm_twist_topology.py": "91a574cd7f688670c6c0601a19785d76f75595b22609368744c2d4eb6db12c10",
+    "generated_names.py": "a1c49790c61c31e915de15b1a4baa76c75be2b490a6d771eca179921fda4d931",
+    "hair_bones.py": "bb0c1e43ac592ac0e7b59df42411cf19ed4ed5f650851fdd7b6eef4f3fd60852",
+    "hair_bones_binding.py": "758ecb71bc8503f435251f2f3cdc7a0e8f70d175ef4b1921d53bdc825b58cf84",
+    "hair_bones_groups.py": "ab025f084ec6a95f2ec976981577f7f8c373d3c8b99e1252330cb43edeaf4109",
+    "hair_bones_mirror.py": "6bc3dd91faeefb73f5d30608dab28a54f057596bf4b62607d4ae449c5cb473cc",
+    "hair_bones_rig.py": "e0fed1d3c6fbdedb4cf8254f265f0f570323fbc74491ed8b90629147274564fe",
+    "hair_bones_topology.py": "8973b7fbdd709641bc1272c49b750dbdce571141ba640ebf137a4f189520228a",
+    "hair_bones_variants.py": "aa985d12e5a5235a1f964b3ed1b74c55074acb4729443a339f15e62fb5b2921c",
+    "hair_motion_export.py": "c7d9396e5d3531c9ccc3bc79777a8183357c11125d8032cc3af43c35b3f91bcb",
+    "hair_motion_lifecycle.py": "efade4de4db2a3ea4c6568837f80b7f93d132eb3268c4dee4996a6a66914abc8",
+    "hair_motion_profiles.py": "1aaa883693db6bfd53d9459b24f14f98d5afb9247ee0abd51e59af5bce83cc4d",
+    "hair_motion_ui.py": "4ea527ddcfb53f9f4c3cee187227f7403b28b1753f574a3e599bc7605a3daf16",
+    "hair_strand_registry.py": "a6c6a03e8f4eebeff9349bc44fb0474e4df2d3feb4d5c5a6e7fb4c609239fe2d",
+    "hair_wiggle_adapter.py": "318f160c97495fa8d295d4f5c8dd1374da44de6571f1289234acc6570bab36fa",
+    "head_neck_visuals.py": "443535a0d1e052b44cfbd53ffae49b628958b00c418ca8ead8ca2390a1c77caf",
+    "limb_fk_visuals.py": "228fbdcc2bd8226a9e2d871a25aff8d86df558098b2dcebba28c7a6ffbd405d6",
+    "limb_ik.py": "68aabcbfcc7010d0b94f096b935c6065f0099e809ad39253abece168453dfcfc",
+    "limb_ik_fk.py": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c",
+    "limb_ik_fk_batch.py": "4e55f888471ffeb13aa69fe6d444772e08fdbe36c04ca51d48e2ee7deb671669",
+    "mesh_mirror.py": "8af288a9a72612a13a3e335397fd1e733173f5632dcc0788eaf384fdd3ef0977",
+    "mesh_mirror_match.py": "36cdab15d711cb050a2f595b41419856fab6ac97fb3ba2e48b5de651481bcee5",
+    "mesh_mirror_ui.py": "76c61eacc8823e2f5f0d26a7833dc17afc27cf0e13bb9fcfaabb11c89e1f1d49",
+    "native_symmetry_pairs.py": "afcd0c270be48d24f9aef910720dce761d910f76ce2651176d633fd6614f98ec",
+    "quick_bind.py": "7716119b8f01dcdc18ead144c4d1bd253ac12f4dbe35506f3bb52d8157f2ad92",
+    "quick_bind_parenting.py": "8ee81ec458893cb7637d1179ee0f09855daf69f7f365c76e625a1a22b2f50708",
+    "README.md": "08db1a1963d445d72e88557c7932c59a16dad42d768d7a6acd520f4206968a2a",
+    "reference_views.py": "abe79849f92e0a5ed86812bedc323aa2d71b830af4807a075c683322a86e94e8",
+    "refine_symmetry.py": "46c6f90fd7d0e3c97924f9b4dc111dcf18d4c82799443d4873609fc3df397a7f",
+    "refine_symmetry_ui.py": "2cea4f60360e07c2f4c313e6234cd28075e224851df57cccf590e71d6f1cfd42",
+    "root_control.py": "3474e8e9aebd4fd1e07c7fb0dd221f46cc00dba15d7b6d9795217d185beda1d2",
+    "selected_bone_weights.py": "0f9e3d1498a4414d00c49e9903a9d6b31707260ff1eaf23850dea915c028248a",
+    "shape_key_tools.py": "366a6de1fe55ea5f1d46c57e1227c4f6f250705214869dd64ac7a05639ba8811",
+    "skirt.py": "f2148e1bfcf5534c04b0df7f4e71018a39cdf23d22d020ad919cbd68f91e81ff",
+    "skirt_name_records.py": "5e88e396e8d6e3172d48fc344b92538ce4a6c69141a53034d37eff7546dbff9f",
+    "skirt_names.py": "c174c42b7a68f9e116e6c4c15d51ef310d3d9fb1f1cc5b0a9aea3b009bc3b3c7",
+    "skirt_original_mode.py": "25924ad231008f3ddd594d65a2912554a14d3da452fbf93eb9aa7fdbdb20a929",
+    "skirt_physics.py": "01f52e9b3ff73b3a8839ed67b171f4a797477511f515e8e31cf97a902ed35750",
+    "skirt_rig.py": "f4efa7d31fa707a3c699bb9097ac35f4d401808b41195bd24c3ff9381bf4c3df",
+    "skirt_shared_rig.py": "bb3b9e0f2babbbe30891f2d31572c2d1a5256b25aacb377beb328b17e9e453e2",
+    "skirt_topology.py": "c6a1dd310a6968aa825f4281c3ff07386c9da0c763b732e31893fac30d3a511e",
+    "skirt_wiggle.py": "c8ec45787cf1df904a5e7f60216df07456c9bd05e3dd92c3d308fc32c7faec49",
+    "skirt_wiggle_ui.py": "f47329a18631fc80463f64503b660b21043a1c0869ab0864aaa9db47c5e249ca",
+    "spine_ik_fk.py": "1a05db4e718e6e6251a50253c568b157c0cd350808c908034c7cd0702543eecf",
+    "spline_ik_setup.py": "92f463ef5fe0eccc768fc71b57f9ba3cbfde86c3a444866bb9e68361a0ad9695",
+    "symmetry_pairs.py": "d3cdc6c6b333a3581ff8faafa41abcbd3778e1ff3c030d2e7b6e853a2d64967d",
+    "topology_symmetry.py": "b982af6d6f2bf840a6f25fb7b7f574ae0697abbde750e7c7806734b0b2988539",
+    "torso_controls.py": "491f114f1fbd15aa29917736c061adc5f7a198e9b791ae5d5e0f2b6ba2078180",
+    "torso_ui.py": "5daf8f5fb65fb99aa94eaadd3487bbe4bd400908d9780bbcdfcf6897dc915835",
+    "ui_constants.py": "17faafd78eac7429b05a59decf947d21ffacba029056c7cab9aff240e13f013e",
+    "unity_animation.py": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+    "unity_animation_controls.py": "acf81b37e8d89bdaff0a04b8a3a2a244584e6b5d5551c58efb1946b1ece5b3c7",
+    "unity_animation_dress.py": "ecc966ed59063d0514b81da8ebe3031962db6a0fb6e2515da4350f7916deeae6",
+    "unity_diagnostics.py": "ac74dbc156989067e0f6b6789fc76ab7894ce290678ef2ae3158d798625c689c",
+    "unity_export.py": "c437a269dfb128a1ed0edc7ae6a3bfd4e548109e44c05a220e2231258c7e20ed",
+    "unity_export_ui.py": "940086354a5c0ed33502c70b54391e79065317df72debb0cecfe6ff130f78e34",
+    "unity_export_worker.py": "ade4b7627365371877c76d03edcde1229148671c1e7dfdcfe7f64d708f628622",
+    "unity_forearm.py": "9d90bf781675c9b6afd2161a8836a8780169ec92395eff683332d93537006aca",
+    "unity_material_match.py": "e0376f1fb068e2f743ee110ddab17e71f0aad4b351833b6dd3374963685f3419",
+    "unity_material_match_ui.py": "12221d372c449b670c24fc9fa39928fef7fa4ec3fe60934dddeb0d3e5962b0a5",
+    "unity_materials.py": "5f06562b3af5c5c34e41a6d9d4a4d49f203d9678396a1f28713e0811778c805b",
+    "unity_runtime/ANIMATION.md": "ac884c2cf7b21303aac9c82e5c849cd4b7ba199ebec2aa973b98ded43fd82790",
+    "unity_runtime/Editor/CharacterAnimationCompositionJson.cs": "edd476dc61756d74626340d7e0613d4fa2a7f564d25fcba99f9ec974ea0a1568",
+    "unity_runtime/Editor/CharacterAnimationCompositionJson.cs.meta": "1d811a88a300af520711f3cd0c2650a343829990d035cf236efb2ba08fa50f56",
+    "unity_runtime/Editor/CharacterAnimationPreviewRenderer.cs": "d8f977100bf86824336fd3067d3a79698dbd7c223b4a0a420cc1b50ac9af0bf6",
+    "unity_runtime/Editor/CharacterAnimationReadableMesh.cs": "a759f52f2d8e803f2ddfc57cd988bb9bc885a224dafb8ef75cd507a388e1bc53",
+    "unity_runtime/Editor/CharacterAnimationReturn.cs": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5",
+    "unity_runtime/Editor/CharacterAnimationTransfer.cs": "68246cf6c2fafdbbe6554920f42e303269d50c1f734f6e42b9bad224cb8d1cae",
+    "unity_runtime/Editor/CharacterAnimationValidation.cs": "43e7006c3885360275e786b3105916177c7842278ed44efabdc21ae1b19c1591",
+    "unity_runtime/Editor/CharacterAnimationWeaponContext.cs": "78b777a6219392d993e297d91e30de24af19434ab91279bf05575d1eaeefc472",
+    "unity_runtime/Editor/CharacterAnimationWeaponContext.cs.meta": "606ee13c0826a1ae8ee753693ca9e0a46795c4dbf802239e7e47c6ba84342b47",
+    "unity_runtime/Editor/CharacterAnimationWindow.cs": "8a964524488ef712f2e11b5e92eedf491ec1db6f582e8c07e8a8deb0a7501ceb",
+    "unity_runtime/Editor/CharacterDesigner.Unity.Editor.asmdef": "0ca1b70d1736c7b307b554375ab95b89881a2b8eeb322323cba37bece2386eca",
+    "unity_runtime/Editor/CharacterMaterialMatching.cs": "eef2b86e950752a7232162aa58bbd8d2e3628d44fb5c6ea600e5581846dfcbb7",
+    "unity_runtime/Editor/CharacterMaterialMatchingVerification.cs": "735301c94d3ae4d4a01f8d9d0750c2a18462247c6d800b29f46deb8d1be5f83b",
+    "unity_runtime/Editor/ForearmCorrectionExportValidation.cs": "648a8aed75f75ec80e23a68b0d00c466deaa2fe6244576c388e9b4506e5c0417",
+    "unity_runtime/Editor/ForearmCorrectionImporter.cs": "906fa8c3f9a21e2321cc0fa15d1701091b3b3176dd4a249ffdb8e24be017364d",
+    "unity_runtime/Editor/ForearmCorrectionImportValidation.cs": "6913448ceb34c3282ed5e4aff9062b970050d9c87180220f6646e6b7ed3fef1e",
+    "unity_runtime/Editor/ForearmCorrectionMathValidation.cs": "41c8c5fb94de5486b4b93c956e79033a9dd21b99a4d016df0849829f42187801",
+    "unity_runtime/Editor/ForearmCorrectionRuntimeValidation.cs": "e4bc5a9712124b67997e7d9e9d7bd58b006b3b046be3f2c7c122f189aef23fe4",
+    "unity_runtime/README.md": "3d7353fef26187d68d9ebe82da30866bc6b15e476015387dd6ee7fe9df0781eb",
+    "unity_runtime/Runtime/CharacterAnimationComposition.cs": "5404e1c823a2fc22a7b000066012d2d966478cb0658c6570472997c0201a0bc6",
+    "unity_runtime/Runtime/CharacterAnimationComposition.cs.meta": "57ef2da117918983353fb9238c71db036ba8bf1a4f605dc5ce7318444d086ae9",
+    "unity_runtime/Runtime/CharacterDesigner.Unity.Runtime.asmdef": "795159ea1083023dd9bc7e207808aa9f1d049d2fdac89c165a158b87e5170a07",
+    "unity_runtime/Runtime/ForearmCorrection.cs": "caef1ec7531a80009f9bfa163528b2986059c234cedc6b9034eea7c366ea4117",
+    "unity_runtime/Runtime/ForearmCorrectionData.cs": "cde82ed8015ef42fc7124856add8531638ba0f689bb6e53271432807376003e7",
+    "unity_runtime/Runtime/ForearmCorrectionMath.cs": "6b9f6aeee33765197e1ca193c24f9afcd7d5892fcf7bd4b2f03d42073996effb",
+    "unity_runtime/Tests/PlayMode/CharacterDesigner.Unity.PlayModeTests.asmdef": "9dc640bd4e0a96b195eec03492e4b792d1c47bdcfb9e93b3a8a199a345b5965c",
+    "unity_runtime/Tests/PlayMode/ForearmCorrectionPlayModeTests.cs": "265d912ae88ace529dc2ec1f122b7805a583f46004d09e7d55b48d1ab65abff6",
+    "weight_symmetry.py": "06409a3fff8d7db9e0ad778299da5196f48a68ae107d92537c60c34db79e0e8c",
+    "widget_collections.py": "c97e2c884703f2a8a3d4a061352324e769eb63b42163651619eaf3998bbd9a18"
+  },
+  "source_provenance": {
+    "purpose": "source-only complete package candidate",
+    "complete_release": false,
+    "native_validation": "pending",
+    "python_projection": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_11\\python_projection.json",
+    "python_projection_sha256": "5c1f5da5b46bf4f888f8ab226a86295775dae9020bd2af8d07f78e9336c1ae69",
+    "embedded_overlay_manifest": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\embedded-unity-candidate-r6.json",
+    "embedded_overlay_manifest_sha256": "c3e7742ac5068f2aafb7f9937a59a866bad7f719c92a3bcb7a45154e7d73e85c",
+    "canonical_embedded_overlays": {
+      "unity_runtime/Runtime/CharacterAnimationComposition.cs": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs",
+        "sha256": "5404e1c823a2fc22a7b000066012d2d966478cb0658c6570472997c0201a0bc6"
+      },
+      "unity_runtime/Runtime/CharacterAnimationComposition.cs.meta": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs.meta",
+        "sha256": "57ef2da117918983353fb9238c71db036ba8bf1a4f605dc5ce7318444d086ae9"
+      },
+      "unity_runtime/Editor/CharacterAnimationCompositionJson.cs": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs",
+        "sha256": "edd476dc61756d74626340d7e0613d4fa2a7f564d25fcba99f9ec974ea0a1568"
+      },
+      "unity_runtime/Editor/CharacterAnimationCompositionJson.cs.meta": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs.meta",
+        "sha256": "1d811a88a300af520711f3cd0c2650a343829990d035cf236efb2ba08fa50f56"
+      },
+      "unity_runtime/Editor/CharacterAnimationWeaponContext.cs": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs",
+        "sha256": "78b777a6219392d993e297d91e30de24af19434ab91279bf05575d1eaeefc472"
+      },
+      "unity_runtime/Editor/CharacterAnimationWeaponContext.cs.meta": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs.meta",
+        "sha256": "606ee13c0826a1ae8ee753693ca9e0a46795c4dbf802239e7e47c6ba84342b47"
+      },
+      "unity_runtime/Editor/CharacterAnimationTransfer.cs": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationTransfer.cs",
+        "sha256": "68246cf6c2fafdbbe6554920f42e303269d50c1f734f6e42b9bad224cb8d1cae"
+      },
+      "unity_runtime/Editor/CharacterAnimationReturn.cs": {
+        "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+        "sha256": "85e6232cf5652e96629fdbcff192a1156503a092453826a4a0f5a6818aabe1a5"
+      }
+    },
+    "previous_projection": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_11\\candidate_projection.json",
+    "previous_projection_sha256": "12ee822739fe467db86eee44f861f70d006d219957bd249f8d179e41d2415d7d",
+    "reference_cache_key_fix": {
+      "kind": "lossless full SHA256 reference receipt IDProperty key with unconditional admission and exact transaction rollback",
+      "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "before_sha256": "2e824713c61e5858874ffcb4ba217854559486ff8ab12a79116a1af03c46bd1a",
+      "after_sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "native_failure_attempt": "n3",
+      "native_validation": "pending",
+      "only_product_file_changed": "animation_composition.py",
+      "invalidated_source_only_candidate": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\reference_cache_fix_06_07_source_invalidated.json",
+      "invalidated_source_only_candidate_sha256": "a521f39df92cbac638883572e9d8656346e8b330dbdd804d1fa11af6b9d242ff"
+    },
+    "pose_selection_compatibility": {
+      "kind": "PoseBone selection compatibility preserving selected flags independently of active bone and original context mode",
+      "canonical_source": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "before_sha256": "3f317b20aba7e4276b6e7e6fc50f1ef6cdef9e842cd18bc261d8135bc58eb5e2",
+      "after_sha256": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "native_failure_attempt": "n7",
+      "native_validation": "pending",
+      "only_product_file_changed": "animation_composition.py",
+      "failed_native_receipt": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n7\\natural_exit_receipt.json",
+      "failed_native_receipt_sha256": "2af2118d439b971368157b0b31076952ffd7e363a80212b46d818d5c5e7130ce",
+      "independent_source_review": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_pose_selection_source_review_20261011_783b296d.json",
+      "independent_source_review_sha256": "42fdb27c136efda28057ac9ba6954e8f56998eb3f07757cb01f8e03f8497143a"
+    },
+    "composition_native_timebase": {
+      "kind": "Explicit native packet timebase for Composition B, protected A import and A Work Copy export, plus exact owned native NLA strip selection",
+      "default_unity_preview_scene_clock_preserved": true,
+      "artist_scene_clock_not_changed_by_import": true,
+      "changed_runtime_sources": {
+        "unity_animation.py": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+          "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+          "bytes": 41190
+        },
+        "animation_link_source.py": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+          "sha256": "9aaa032749a86ec808523697c8a85679dce0134e60dfb640331bd41f53859998",
+          "bytes": 12785
+        },
+        "animation_composition.py": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+          "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+          "bytes": 99028
+        },
+        "animation_export.py": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+          "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+          "bytes": 10708
+        }
+      },
+      "before_sha256": {
+        "animation_composition.py": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+        "animation_export.py": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+        "animation_link_source.py": "cce7fddb3839ff82ba352d78bcddb98a3847d01264de484499ae62a752481965",
+        "unity_animation.py": "44c6014ac8c6c46ef4864aa0560d93375f10b99aa0c5d3276122882304ed493f"
+      },
+      "independent_source_review": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_nla_track_identity_peer_source_review_20261011_1861bcf7.json",
+        "sha256": "d36c5a58e232acf6123fc3cf2bcb37c73c7da0b306f9b8fb88351153b7e68762",
+        "bytes": 11395
+      },
+      "minimal_export_projection": {
+        "preserved_frozen_parent_sha256": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+        "projected_source": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+          "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+          "bytes": 10708
+        },
+        "canonical_source": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+          "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+          "bytes": 11624
+        },
+        "unchanged_other_functions": true,
+        "new_clock_helper_ast_equal": true,
+        "only_clock_statements_added": true,
+        "default_scene_clock_preserved": true,
+        "unrelated_canonical_changes_preserved": true,
+        "canonical_before_clock_sha256": "9c8e638cfd8408fe729103efe232ed23c334b2a879e9c226376057b22d5b28cf",
+        "frozen_parent_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_export.py",
+        "unchanged_other_function_count": 7,
+        "strict_reverse_ast_verified": "Remove the new frame_fps assignment and restore exactly fps expression plus two job dictionary values; begin_export becomes AST-identical to frozen9c7ef.",
+        "excluded_unrelated_work": "Existing canonical Dress admission/snapshot imports and code were not copied into the approved minimal projected exporter."
+      },
+      "canonical_export_source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+        "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+        "bytes": 11624
+      },
+      "focused_pure_test_report": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_native_import_timebase_source_report_20261011_nla_track_identity_1861bcf7.json",
+        "sha256": "c90821e26da37cb379020e207fbbf1fd128644ac55101fa8dbed0cdb12aa4acb",
+        "bytes": 10977
+      },
+      "native_validation": "pending"
+    },
+    "composition_snapshot_serializer": {
+      "kind": "Exact disposable editor RNA snapshot cleanup",
+      "changed_runtime_sources": {
+        "animation_composition_export.py": {
+          "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_export.py",
+          "sha256": "2dd2173ec604918328b25945f22916d96ce8039a322c7ed034ee65f686b69984",
+          "bytes": 47158
+        }
+      },
+      "before_sha256": {
+        "animation_composition_export.py": "82298a4a1a9a03f2d36bea52a79e41959f99d3ffd83bc17d81326272d08d3a67"
+      },
+      "owner_source_report": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_owner_source_2dd2173e.json",
+        "sha256": "c8ddda33148e625367b1f995e29635892ee0200858711c8d8a29e097d2c02c25",
+        "bytes": 5638
+      },
+      "independent_source_review": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_peer_source_review_2dd2173e.json",
+        "sha256": "0c7b66cff0e3b6f87fd93828bcbc55a1122aa71b21a3028d598c92eb4976acf1",
+        "bytes": 25273
+      },
+      "focused_pure_test_report": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_snapshot_serializer_owner_source_2dd2173e.json",
+        "sha256": "c8ddda33148e625367b1f995e29635892ee0200858711c8d8a29e097d2c02c25",
+        "bytes": 5638
+      },
+      "numeric_reuse_delta": {
+        "old_projection": {
+          "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\python_projection.json",
+          "sha256": "a7c660d546bcc6f2b0720750eb03279b62a24f968967a385746c6f13effeb150"
+        },
+        "changed_functions": {
+          "animation_composition_export.py": [
+            "begin_isolated_export"
+          ]
+        },
+        "added_functions": {
+          "animation_composition_export.py": [
+            "_snapshot_editor_state",
+            "_prepare_snapshot_editor"
+          ]
+        },
+        "serialization_only": true
+      },
+      "independent_ast_normalization": {
+        "normalized_full_module_ast_equal": true,
+        "unchanged_existing_function_count": 26,
+        "added_helpers": [
+          "_snapshot_editor_state",
+          "_prepare_snapshot_editor"
+        ],
+        "removed_serializer_call_count": 1
+      },
+      "producer": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\freeze_composition_snapshot_serializer.py",
+        "sha256": "58ee34cba6171f8ca17de1c6a3321f8a98bcae76ca83449d5c759843a50417ad",
+        "bytes": 11994
+      },
+      "native_validation": "pending"
+    }
+  }
+}

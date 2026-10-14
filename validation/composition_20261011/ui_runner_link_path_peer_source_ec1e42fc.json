@@ -1,0 +1,63 @@
+{
+  "schema": "x.validation.character-composition-ui-link-path-independent-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer": "/root/rig_controls_review",
+  "source_files": {
+    "run_character_composition_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "ec1e42fcadbb0b7c0ccf587b0cfaf73b115050de7d12503e4f2391f24df944c3",
+      "bytes": 34257
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\ui_runner_link_path_source_owner_ec1e42fc.json",
+    "sha256": "fcf88c4cf3ce4a8b9c2d95ec4359c3f94dd76358eb968f2c4839fda809a4378c",
+    "bytes": 2639
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_ui_fixture_a88c413a_before_link_path_case.py",
+    "sha256": "a88c413ab89be39bcdf675228170a6f1439734c5b818651ccffcb956ffa5ec8f",
+    "bytes": 34229
+  },
+  "previous_owner_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\ui_runner_current_runtime_source_owner_a88c413a.json",
+    "sha256": "5068455b07509482a587863b1e49af2d8a50b6e2f8cb72ec4031b2a03e3084f8",
+    "bytes": 3453
+  },
+  "previous_peer_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\ui_runner_current_runtime_peer_source_a88c413a.json",
+    "sha256": "53c50b0b9b5f5e0e535064faa9d61def3801557335b853c447805dd89c4c4221",
+    "bytes": 6138
+  },
+  "delta": {
+    "changed_function": "run",
+    "line": 391,
+    "occurrence_count": 1,
+    "full_raw_byte_inverse_equal": true,
+    "all_other_bytes_unchanged": true,
+    "unchanged_function_count": 14,
+    "top_level_ast_unchanged": true
+  },
+  "findings": [
+    "The sole delta compares resolved Path objects instead of raw path spelling for the current selected prepared Link route. Windows Path equality handles case spelling while referring to the resolved path.",
+    "Existing clip presence and needsRebuild checks remain in the same short-circuit guard. Missing/invalid linkManifest still fails closed; no fallback route is introduced.",
+    "The next load_link, full worklist._validate_route, exact model pin, baseline, work ID/positive HoldPose/source-kind checks and all217 scope proof remain byte-identical.",
+    "Full raw inverse proves no context lifecycle, checkpoint, worker, publication, source identity, evidence path or native tolerance changes."
+  ],
+  "validation": {
+    "AST_compile_checks": 1,
+    "target_imports": 0,
+    "tests_run": 0,
+    "native_calls": 0,
+    "sdk_calls": 0,
+    "shared_workspace_reads": 0,
+    "artist_reads": 0,
+    "fixture_generated": false,
+    "frozen_tools_generated": false
+  },
+  "limitations": [
+    "Bounded one-comparison Source review only; no native acceptance, fixture generation or future launch grant inferred."
+  ]
+}

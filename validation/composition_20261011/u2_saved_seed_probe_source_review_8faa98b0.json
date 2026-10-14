@@ -1,0 +1,64 @@
+{
+  "schema": "x.validation.character-composition-saved-seed-probe-source-review/1",
+  "utc": "2026-10-11T12:55:57.763264+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "probe_u2_saved_qa_seed_inventory.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\probe_u2_saved_qa_seed_inventory.py",
+      "sha256": "8faa98b002081914ff7d57423553d8fbf1bd78ee838bca4e18b632ee59ebedc4",
+      "bytes": 13738
+    }
+  },
+  "historical_source_snapshot": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\probe_u2_saved_qa_seed_inventory_279f9688_before_safe_context.py",
+    "sha256": "279f9688be559f7a653c0ca5dde2404b3a00f31e65659a6b414b389591b553b5",
+    "bytes": 10890
+  },
+  "historical_source_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_saved_seed_probe_source_review_279f9688.json",
+    "sha256": "6df29631e1eed02b3125b55e8d05647e5a8f4a54cd102682e6c2df25d27b90a7",
+    "bytes": 4819
+  },
+  "source_delta": {
+    "changed_functions": [
+      "inventory",
+      "run"
+    ],
+    "added_functions": [
+      "read_field"
+    ],
+    "unchanged_functions": [
+      "require",
+      "pin",
+      "identity",
+      "main"
+    ],
+    "top_level_AST_unchanged": true,
+    "safe_context_readback": "window,scene,view_layer,mode,active_object,window_manager,windows independently read; null view_layer skips active read; exceptions are field_errors, never silent missing values",
+    "runner_clause_readback": "five separate clauses; getter errors preserved in runner_gate_clause_errors with None for unproved values",
+    "new_static_fields": [
+      "Scene.users",
+      "Scene.use_fake_user",
+      "Scene.master_collection",
+      "Rig.data",
+      "Rig.users_collection"
+    ],
+    "context_switch": "Same scoped override and exact QA Scene setter; reports setter errors and null layer; update attempted only if layer exists, then post snapshot remains available",
+    "adoption_reader": "Unchanged; actual frozen target._load keys independently confirmed by Rig peer",
+    "normal_quit_and_exclusive_output": "unchanged"
+  },
+  "input_limits": "No workspace reads or input/projection/seed/profile mutations; historical279f input pins are Source-read ancestry, no fresh native observation. No missing membership or linked-name hypothesis asserted as fact.",
+  "validation": {
+    "AST_parse_and_in_memory_compile": true,
+    "assert_count": 0,
+    "candidate_imports": 0,
+    "probe_invocations": 0,
+    "tests": 0,
+    "native_calls": 0,
+    "OS_queries": 0
+  },
+  "probe_invocation_allowed_by_this_source_report": false,
+  "requires_separate_fresh_Parent_grant": true
+}

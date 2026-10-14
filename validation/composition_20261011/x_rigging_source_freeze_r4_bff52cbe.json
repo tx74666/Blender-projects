@@ -1,0 +1,421 @@
+{
+  "schema": "cdesigner.x-rigging-source-freeze/1",
+  "created_utc": "2026-10-11T21:38:14.732355+00:00",
+  "status": "SOURCE_FROZEN_NATIVE_PENDING",
+  "canonical_repository": "D:\\MyRepository\\Blender-addons-by-Randy",
+  "source_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "659c6e8e6ddfd5f0e5179e8a3dcaf77c7714369daa1d432a99bd9bf22f32e9be",
+      "bytes": 15476,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "364307151184fc9a3b934f03cc4269609365491a7fabeb06c36ccd87e6455aaa",
+      "bytes": 21500,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_contract.py",
+      "sha256": "bff52cbe97530662fcee5e4ca248c1fe09e781f73588627cecda62c777d3c179",
+      "bytes": 23545,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+      "bytes": 40384,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+      "sha256": "8f3119ebdc89c0b783ce7fab58a4586b19d4f59d915e299ba521a071fae86c8c",
+      "bytes": 45560,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "9551956548f20607331179034b44dc679888fc85da035fe1f6342e37de580d9c",
+      "bytes": 40280,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_export.py",
+      "sha256": "d236f82007007297b768cde2d0428afdd63c3a6b36aa3d19e5fcf4635470846d",
+      "bytes": 13090,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_contract.py",
+      "sha256": "5823df371bfa47f44d46e55426b7cabb5525ac6e96e1e2724842455fac8d69ad",
+      "bytes": 30589,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_weapon.py",
+      "sha256": "5e79a45de2186a66a7dd11a5701ab6be1514e00fbaed20585a6127b92fc174a1",
+      "bytes": 10858,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+      "sha256": "8b647487087bdc5dc0e87133a3e2cdd5fc7faa271421f49d1c660550841e9b6d",
+      "bytes": 19678,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_collection.py",
+      "sha256": "f74ac93f0c9cf5bdaf2fe96b7ee0ec9552f03e4f141500c7f39bc996ffddcbc1",
+      "bytes": 14155,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_collection.py",
+      "sha256": "a30e2db2fa865be8d94dd5e8150203f4918da9aa8eeb80c5b564d499c8cc73d2",
+      "bytes": 53268,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_weapon_ownership.py",
+      "sha256": "e9f5d313f6aaa557ac22641f3653c09d1563cb5399a0f1ef873a96353ba1e35b",
+      "bytes": 12233,
+      "syntax": "PASS"
+    }
+  ],
+  "wire": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\generic-rigging-design\\WIRE_FIXTURE_R3.json",
+    "sha256": "edc33c5d581a9fd79faaf4b49c69e81bd729b2adf983dd328e7a045933d46517",
+    "validation": "validate_capture + validate_export + build_export PASS",
+    "capture_fields": 22,
+    "weapon_preview_fields": 10,
+    "return_fields": 14,
+    "base_slot": 4,
+    "input_slot": 7,
+    "binding_sha256": "f92703dbdb8e10779e08434134fc7cca69d39d633dfccb48746a4aa087b92e73",
+    "capture_sha256": "6305c933c6e6cfe2de66347eaa3bcbecefd101061153ef47484684db45bd1af8",
+    "illustrative_placeholder": true,
+    "native_acceptance": false,
+    "evidence_scope": "Historical R3 illustrative validation; not rerun by r4 producer."
+  },
+  "pure_tests": [
+    {
+      "file": "test_animation_rigging_contract.py",
+      "tests": 32,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\transform_colon_contract_source_receipt.json",
+        "sha256": "fb0e118d5ec9f0b3c459c85b7ed7f08f34885d87e8e7aa3c565b8f7b34637a6f",
+        "bytes": 7404
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "current bff52 contract: 27 existing plus 5 new tests; actual four packets PASS"
+    },
+    {
+      "file": "test_animation_rigging_export.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_link.py",
+      "tests": 16,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_worklist.py",
+      "tests": 15,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_link_source_images.py",
+      "tests": 6,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_worklist_target.py",
+      "tests": 45,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_worklist_rigging_collection.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_worklist_collection.py",
+      "tests": 48,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_rigging_weapon.py",
+      "tests": 10,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_character_composition_weapon_sources.py",
+      "tests": 8,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_character_composition_weapon_ownership.py",
+      "tests": 13,
+      "result": "PASS",
+      "native": false,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    },
+    {
+      "file": "test_animation_rigging_recovery.py",
+      "tests": 7,
+      "result": "PASS",
+      "native": false,
+      "runner": "delegated source reviewer",
+      "seconds": 0.836,
+      "provenance": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+        "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+        "bytes": 8645
+      },
+      "executions_by_this_producer": 0,
+      "evidence_scope": "Historical exact unchanged Source tests; not rerun by this producer"
+    }
+  ],
+  "pure_tests_total": 222,
+  "bridge_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\root_rigging_export_link_source_receipt_659c6e8e.json",
+    "sha256": "36626a4b6248e04dc0f72711c352828390295a1c2199ee43bd7e66624add0556"
+  },
+  "boundaries": {
+    "blender_native_calls": 0,
+    "sdk_calls": 0,
+    "gui_calls": 0,
+    "export_workers": 0,
+    "deployment_operations": 0,
+    "artist_scene_writes": 0,
+    "unity_csharp_writes": 0,
+    "git_commit_push_pr_release_operations": 0
+  },
+  "pending_native": [
+    "Use the original Rig and original display settings: colors, collections and controls preserved.",
+    "Verify base editing plus actual source-local Target/Hint preview, current Right-hand parent for Left Target, and exact 20 control curves in independent carrier.",
+    "Verify base-only physical worker snapshot and frozen sidecar identities/slots, Target-only changes recognized by Sync, source read-only enforcement.",
+    "Verify actual weapon surface/Socket transform/scale, native rollback/commit cleanup, Save/Undo/Redo/reopen without extra Actions or leaked display IDs.",
+    "Complete Unity owned Base+independent Target apply and repeat, then save artist blend with success proof and normally close task test scenes."
+  ],
+  "separate_parent_owned": [
+    "animation_worklist_ui.py",
+    "control_pose_capture.py",
+    "__init__.py and version/release packaging",
+    "Unity C# and actual Unity native validation"
+  ],
+  "limitations": [
+    "Pure fault tests mock formula and complete admission boundaries; no Blender solver or native user-map acceptance.",
+    "Prior u7 external-reference removal failure remains an explicit native acceptance item; remove_context guard unchanged.",
+    "R3 fixture is illustrative with placeholder identities/matrices; it is not a captured native character or weapon.",
+    "Include Fingers behavior was explained, not changed.",
+    "No deployment, release build, artist save or native/worker operation by this X source phase.",
+    "R4 changes only legal Transform-colon path admission; no protocol fields or version change.",
+    "Soldier literal-root mapping remains a separately recorded native-pending boundary."
+  ],
+  "source_only": true,
+  "native_execution_performed": false,
+  "previous_source_freeze": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r3_b459668d.json",
+    "sha256": "c30d8b46c3d60723d64393740324f7c27dbcbf633c489c25c90cdae65e67ad6e",
+    "bytes": 8645
+  },
+  "contract_fix_source_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\transform_colon_contract_source_receipt.json",
+    "sha256": "fb0e118d5ec9f0b3c459c85b7ed7f08f34885d87e8e7aa3c565b8f7b34637a6f",
+    "bytes": 7404
+  },
+  "source_delta": {
+    "source_pins_changed": [
+      "animation_rigging_contract.py",
+      "test_animation_rigging_contract.py"
+    ],
+    "source_pins_unchanged": 13,
+    "runtime_payload_changed": [
+      "animation_rigging_contract.py"
+    ],
+    "other_186_runtime_files_unchanged": true
+  },
+  "syntax_compilation": {
+    "fifteen_source_files": 15,
+    "result": "PASS",
+    "target_imports_executed": false
+  },
+  "contract_actual_packet_validation": [
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\TwoArmComposition\\923c041bf09342249800cd4454c884d5\\Cosha.Player\\Walk_N\\rigging\\Cosha_Walk_N.cdanim.json",
+      "sha256": "a9e74810c510080b09f7acc830c6531d2143fa0c61447c2d1a1caadc56a60d43",
+      "bytes": 2338484,
+      "character": "Cosha.Player",
+      "clip": "Walk_N",
+      "result": "PASS",
+      "validation": "validate_capture(packet.rigging, packet=packet)",
+      "seconds": 0.009438499982934445,
+      "input_field_count": 21,
+      "normalized_field_count": 21,
+      "bindings_sha256": "f92703dbdb8e10779e08434134fc7cca69d39d633dfccb48746a4aa087b92e73",
+      "frames": 59,
+      "capture_sha256": "45397c9d8d1994151f48c72742c1e4efa7813d19cb75addc54e4f8e59dfc48e8",
+      "colon_transform_names_present": false,
+      "weapon_preview_present": false
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\TwoArmComposition\\923c041bf09342249800cd4454c884d5\\Cosha.Player\\Walk Right\\rigging\\Cosha_Walk Right.cdanim.json",
+      "sha256": "230b9a0f460fd11c0dd93d1e63b55754916418e7d97c8ec7ecdd10b1d2833e7a",
+      "bytes": 2422708,
+      "character": "Cosha.Player",
+      "clip": "Walk Right",
+      "result": "PASS",
+      "validation": "validate_capture(packet.rigging, packet=packet)",
+      "seconds": 0.013505300041288137,
+      "input_field_count": 21,
+      "normalized_field_count": 21,
+      "bindings_sha256": "f92703dbdb8e10779e08434134fc7cca69d39d633dfccb48746a4aa087b92e73",
+      "frames": 61,
+      "capture_sha256": "49c5c229c54677dace038830b65016389250c112b133a235e9003f8d848abd00",
+      "colon_transform_names_present": false,
+      "weapon_preview_present": false
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\TwoArmComposition\\923c041bf09342249800cd4454c884d5\\Soldier 4.0\\Walk_N\\rigging\\Soldier 4.0_Walk_N.cdanim.json",
+      "sha256": "954bbb00d81ae25d733f826aafa3e7712ee7a1a28d77d4e1a642d9ca99de2e5e",
+      "bytes": 736273,
+      "character": "Soldier 4.0",
+      "clip": "Walk_N",
+      "result": "PASS",
+      "validation": "validate_capture(packet.rigging, packet=packet)",
+      "seconds": 0.020166700007393956,
+      "input_field_count": 21,
+      "normalized_field_count": 21,
+      "bindings_sha256": "bfafbec2996bca9fe6548a4bd07357dff7b60860a4165e234a9a6e70637c38c5",
+      "frames": 59,
+      "capture_sha256": "e5f81578c44afb2c4de718b557269d409c94e84adfc211fa6249434eda36fc4a",
+      "colon_transform_names_present": true,
+      "weapon_preview_present": false
+    },
+    {
+      "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\TwoArmComposition\\923c041bf09342249800cd4454c884d5\\Soldier 4.0\\Walk Right\\rigging\\Soldier 4.0_Walk Right.cdanim.json",
+      "sha256": "ce6c1181b3877ed5e8d6c71e0de1be6d64ca2e8b2e5c40b5c26e26278908c20f",
+      "bytes": 770680,
+      "character": "Soldier 4.0",
+      "clip": "Walk Right",
+      "result": "PASS",
+      "validation": "validate_capture(packet.rigging, packet=packet)",
+      "seconds": 0.013886699976865202,
+      "input_field_count": 21,
+      "normalized_field_count": 21,
+      "bindings_sha256": "bfafbec2996bca9fe6548a4bd07357dff7b60860a4165e234a9a6e70637c38c5",
+      "frames": 61,
+      "capture_sha256": "6cb795e6f6b32f30dc70172027311f6b251ae01ccd397659a4065cab226ec6e0",
+      "colon_transform_names_present": true,
+      "weapon_preview_present": false
+    }
+  ],
+  "root_additional_recheck": {
+    "tests": 21,
+    "result": "PASS",
+    "seconds": 0.601,
+    "files": [
+      "test_animation_rigging_export.py",
+      "test_animation_rigging_weapon.py"
+    ],
+    "evidence": "Root reported actual tool stdout in this task; no durable raw log was saved.",
+    "raw_log": null,
+    "unique_tests_added": 0,
+    "executed_by_this_producer": false
+  }
+}

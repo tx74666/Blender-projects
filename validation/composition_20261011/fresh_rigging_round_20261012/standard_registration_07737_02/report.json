@@ -1,0 +1,163 @@
+{
+  "schema": "x.validation.standard-registration-lifecycle/1",
+  "completed": false,
+  "passed": false,
+  "pid": 4728,
+  "native_execution_performed": true,
+  "scene_opened_or_saved": false,
+  "artist_opened": false,
+  "Body_Gun_or_animation_protocol_retested": false,
+  "runtime_source_mutated": false,
+  "in_memory_failure_injection_performed": true,
+  "scope": "Factory blank standard addon_utils.enable: deferred admission, ordinary disable, immediate cancellation and controlled initialization cleanup only.",
+  "natural_exit_verified": false,
+  "natural_exit_external_retained_handle_required": true,
+  "source_inputs": {
+    "source": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737b.py",
+      "sha256": "35045b62f161f298b6f7bdcb5c066f9c261c868a8232f5c43551a664a03fc89e",
+      "bytes": 18567
+    },
+    "package_manifest": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4dff2238\\python_projection.json",
+      "sha256": "eb0534299f9db2b5b589466d806416ce209b16020d28190aebf2e890fc776dae",
+      "bytes": 21061
+    }
+  },
+  "package_manifest_version": "0.77.37",
+  "package_manifest_file_count": 190,
+  "stage": "failure_cleanup",
+  "operations": [
+    {
+      "operation": "standard restricted addon_utils.enable",
+      "started_utc": "2026-10-12T21:00:47.216835+00:00",
+      "completed": true,
+      "ended_utc": "2026-10-12T21:00:49.232184+00:00",
+      "elapsed_seconds": 2.0143978999985848
+    },
+    {
+      "operation": "standard disable after deferred registration",
+      "started_utc": "2026-10-12T21:00:49.602878+00:00",
+      "completed": true,
+      "ended_utc": "2026-10-12T21:00:49.716578+00:00",
+      "elapsed_seconds": 0.11324709999826155
+    },
+    {
+      "operation": "standard enable then immediate disable before next tick",
+      "started_utc": "2026-10-12T21:00:49.806326+00:00",
+      "completed": true,
+      "ended_utc": "2026-10-12T21:00:49.850469+00:00",
+      "elapsed_seconds": 0.04365999999936321
+    },
+    {
+      "operation": "standard enable controlled failure after native registration",
+      "started_utc": "2026-10-12T21:00:50.212045+00:00",
+      "completed": true,
+      "ended_utc": "2026-10-12T21:00:50.239940+00:00",
+      "elapsed_seconds": 0.027237800000875723
+    }
+  ],
+  "standard_enable_returned_module_before_deferred_admission": true,
+  "deferred_admission_observations": [
+    {
+      "observed_utc": "2026-10-12T21:00:49.398499+00:00",
+      "elapsed_since_enable_seconds": 0.09213720000116155,
+      "expected_timer_id": 2317059435840,
+      "actual_timer_id": 2317059435840,
+      "same_pending_timer": true,
+      "actual_timer_registered": true,
+      "expected_timer_registered": true,
+      "generation_at_enable": 1,
+      "actual_generation": 1,
+      "pending": {},
+      "handler_errors": {},
+      "cache_keys": [],
+      "lifecycle_callback_counts": {
+        "load_post": 1,
+        "undo_post": 1,
+        "redo_post": 1
+      },
+      "manual_callback_or_current_invoked": false
+    },
+    {
+      "observed_utc": "2026-10-12T21:00:49.602309+00:00",
+      "elapsed_since_enable_seconds": 0.29594820000056643,
+      "expected_timer_id": 2317059435840,
+      "actual_timer_id": null,
+      "same_pending_timer": false,
+      "actual_timer_registered": false,
+      "expected_timer_registered": false,
+      "generation_at_enable": 1,
+      "actual_generation": 2,
+      "pending": {},
+      "handler_errors": {},
+      "cache_keys": [],
+      "lifecycle_callback_counts": {
+        "load_post": 1,
+        "undo_post": 1,
+        "redo_post": 1
+      },
+      "manual_callback_or_current_invoked": false
+    }
+  ],
+  "actual_deferred_registration_admission_once": true,
+  "deferred_admission_witness": {
+    "generation_at_enable": 1,
+    "generation_after_timer": 2,
+    "manual_callback_or_current_invoked": false
+  },
+  "cleanup_witnesses": [
+    {
+      "boundary": "normal_disable",
+      "registered_owned_classes": [],
+      "owned_handlers": [],
+      "owned_timers": [],
+      "properties": {
+        "Scene": [],
+        "Object": [],
+        "WindowManager": []
+      },
+      "pending_registration_timer": false,
+      "pending_reacquisition": false
+    },
+    {
+      "boundary": "immediate_disable",
+      "registered_owned_classes": [],
+      "owned_handlers": [],
+      "owned_timers": [],
+      "properties": {
+        "Scene": [],
+        "Object": [],
+        "WindowManager": []
+      },
+      "pending_registration_timer": false,
+      "pending_reacquisition": false
+    },
+    {
+      "boundary": "next_tick_after_immediate_disable",
+      "registered_owned_classes": [],
+      "owned_handlers": [],
+      "owned_timers": [],
+      "properties": {
+        "Scene": [],
+        "Object": [],
+        "WindowManager": []
+      },
+      "pending_registration_timer": false,
+      "pending_reacquisition": false
+    }
+  ],
+  "standard_disable_cleanup_verified": true,
+  "immediate_disable_cancels_without_late_admission": true,
+  "handled_errors": [
+    {
+      "phase": "failure_cleanup",
+      "type": "AttributeError",
+      "message": "'_RestrictContext' object has no attribute 'scene'",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4dff2238\\source\\character_designer\\__init__.py\", line 8962, in register\n    register_rigging_runtime()\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737b.py\", line 217, in injected_registration\n    raise RuntimeError(INJECTED)\nRuntimeError: Owned .37 probe: fail after restricted Rigging timer registration.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Blender5.2\\5.2\\scripts\\modules\\addon_utils.py\", line 543, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4dff2238\\source\\character_designer\\__init__.py\", line 8995, in register\n    control_weight_paint.unregister()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4dff2238\\source\\character_designer\\control_weight_paint.py\", line 255, in unregister\n    if active(bpy.context):\n       ~~~~~~^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_4dff2238\\source\\character_designer\\control_weight_paint.py\", line 11, in active\n    return context.scene.get(SESSION)\n           ^^^^^^^^^^^^^\nAttributeError: '_RestrictContext' object has no attribute 'scene'\n"
+    }
+  ],
+  "error": "RuntimeError: Failure cleanup masked the exact original injected error.",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737b.py\", line 273, in tick\n    state['phase'] = phases[state['phase']]()\n                     ~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737b.py\", line 228, in failure_cleanup\n    require(len(errors) == 1 and errors[0]['type'] == 'RuntimeError' and errors[0]['message'] == INJECTED\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        and '_RestrictContext' not in errors[0]['traceback'], 'Failure cleanup masked the exact original injected error.')\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\validate_standard_registration_07737b.py\", line 24, in require\n    raise RuntimeError(message)\nRuntimeError: Failure cleanup masked the exact original injected error.\n",
+  "input_files_unchanged": true
+}

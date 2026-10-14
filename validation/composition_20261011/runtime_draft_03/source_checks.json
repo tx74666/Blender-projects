@@ -1,0 +1,41 @@
+{
+  "schema": "x.validation.composition-draft03-source-checks/1",
+  "native": false,
+  "runtimeManifest": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_03\\python_projection.json",
+  "runtimeManifestSha256": "30b002a8dc23ec1c1ab61262f18d75937725eef0f53206bb6e21bf143dabbcf5",
+  "preparedRouteReport": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\prepared_add_route_report.json",
+  "preparedRouteReportSha256": "400e8195170b51f2ab672b8be976dec1498f9668c80c3fffe38f7ea26b5c9c7b",
+  "testedRuntimeEqualsFrozen": true,
+  "focusedTests": {
+    "prepared_add": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_prepared_add.py",
+      "sha256": "ec160b0a2d424f8453a424a83552817abf3a665669f684f8e4ed22136c32194a",
+      "passed": true,
+      "count": 19,
+      "command": "python -m unittest discover -s tests -p test_character_composition_prepared_add.py -q"
+    },
+    "canonical_collection": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_collection.py",
+      "sha256": "64905debd3e6e52e8433227a76166e903c53bfbfae87347825ef7c9ae81c3689",
+      "passed": true,
+      "count": 48,
+      "command": "python -m unittest discover -s tests -p test_animation_worklist_collection.py -q"
+    },
+    "canonical_worklist": {
+      "passed": true,
+      "count": 15,
+      "command": "python -m unittest discover -s tests -p test_animation_worklist.py -q"
+    },
+    "staged_collection_new": {
+      "passed": true,
+      "count": 92,
+      "command": "python -m unittest -q test_collection_legacy_regression test_collection_composition test_new_action_legacy_regression test_new_action_composition"
+    },
+    "canonical_new_templates": {
+      "passed": true,
+      "count": 12,
+      "command": "python -m unittest discover -s tests -p test_character_composition_new_templates.py -q"
+    }
+  },
+  "limits": "Pure/mocked native boundaries; does not prove Blender, FBX or Unity. Previous draft02 pure report remains historical and is not relabeled."
+}

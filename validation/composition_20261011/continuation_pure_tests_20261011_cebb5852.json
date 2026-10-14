@@ -1,0 +1,52 @@
+{
+  "schema": "x.validation.character-composition-continuation-pure-tests/1",
+  "utc": "2026-10-11T06:39:36.556991+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "files": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_first_stage_continuation.py",
+      "sha256": "cebb5852d67b9c976c763ac37acbfe810c70134268d843afea87ae624ebc873b",
+      "bytes": 25479
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_continuation.py",
+      "sha256": "5af30b5f11935e13614d0825d8730ac426bba2fe81a54f52731697ee6e96bfd8",
+      "bytes": 9118
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\native_continuation_source_report_20261011_cebb5852.json",
+      "sha256": "371669040dec7ef02394b90adfc4c9da8f144b62191e7f3f63ffd42aa5609a1c",
+      "bytes": 5637
+    }
+  ],
+  "pure_test_results": {
+    "test_count": 11,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 0.491
+  },
+  "command": [
+    "Python",
+    "-B",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_continuation.py"
+  ],
+  "covers": [
+    "shared numeric AST change rejected",
+    "extra snapshot launch changes rejected",
+    "wrong helper/call placement/review rejected",
+    "complete12case410x4 acceptance",
+    "Boolean/string/nonfinite/three-sample numeric rejection"
+  ],
+  "limitations": [
+    "Synthetic Source-only admission tests do not execute Blender, callbacks, restoration, physical export or native seed saving.",
+    "The earlier owner receipt remains immutable with its accurately recorded zero tests at authorship."
+  ]
+}

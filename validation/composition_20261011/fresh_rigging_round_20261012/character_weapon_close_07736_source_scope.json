@@ -1,0 +1,70 @@
+{
+  "schema": "x.validation.weapon-close-source-scope/1",
+  "source_scope_verified": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_composition_weapon.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "881dc4bfd28e0830628835e3329f77e72f458b0c2ae139033c0ecc618ffa47a1",
+      "bytes": 41160
+    },
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b3348175c63cf1d0d29ffb184bd7eb5123c2e4ca274eb5b39893f94658a5019f",
+      "bytes": 109020
+    },
+    "test_character_composition_weapon_ownership.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_weapon_ownership.py",
+      "sha256": "c1203ebdb0f32a933106eea4bad03935a5b13770711cda65fd5f272554d4b7f9",
+      "bytes": 15199
+    },
+    "test_animation_rigging_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+      "sha256": "67b4f45988d9eddab0e54b0eeb886cbc32f41a8d2beb68baf95e49730811524b",
+      "bytes": 70235
+    }
+  },
+  "function_scope": {
+    "animation_composition_weapon.py": {
+      "changed_existing": [
+        "remove_context"
+      ],
+      "added": [
+        "validate_removal"
+      ],
+      "removed": [],
+      "all_other_functions_AST_exact": true,
+      "module_AST_exact": true,
+      "frozen_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_cd043f92\\source\\character_designer\\animation_composition_weapon.py",
+        "sha256": "9551956548f20607331179034b44dc679888fc85da035fe1f6342e37de580d9c",
+        "bytes": 40280
+      }
+    },
+    "unity_animation_rigging.py": {
+      "changed_existing": [
+        "restore_owned"
+      ],
+      "added": [],
+      "removed": [],
+      "all_other_functions_AST_exact": true,
+      "module_AST_exact": true,
+      "frozen_before": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_cd043f92\\source\\character_designer\\unity_animation_rigging.py",
+        "sha256": "77397546086392365428bcb3d87a48139aa2f36fb540e4479ec21d86109d4faf",
+        "bytes": 108776
+      }
+    }
+  },
+  "syntax_files_pass": 4,
+  "runtime_diff": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_runtime.patch",
+    "sha256": "ab8ebdad141507b571c78ce627c2d7412490e812edd8fc68e723fe60fa20f952",
+    "bytes": 4074
+  },
+  "portable_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\character_weapon_close_07736_portable_receipt.json",
+    "sha256": "59ec56c0800316af57f8c9fc572a0db2dec77aa93632973317e66f11ebd223fe",
+    "bytes": 2687
+  }
+}

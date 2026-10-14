@@ -1,0 +1,137 @@
+{
+  "schema": "x.validation.worklist-rigging-editing-data-source-peer/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "80af33958b6326b59f5c2864a560f94e1c24a2b6d3e38f34117b2d75357689f6",
+      "bytes": 41107
+    },
+    "test_animation_worklist_rigging_editing_data.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_editing_data.py",
+      "sha256": "f53bcee59ca3845a0567e414cd024b010d18ba10996777d86e1103033de26f68",
+      "bytes": 14112
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_editing_data_source_owner_80af3395.json",
+    "sha256": "8e8796ebcf9943225dc05b4f6a9471441da2ecff02ea3f90370f38161f4bce4d",
+    "bytes": 6787
+  },
+  "prior_source_snapshot": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\animation_worklist_bcddead3_before_rigging_translation_scope.py",
+    "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+    "bytes": 40384
+  },
+  "changed_runtime_functions": [
+    "_editing_data",
+    "add"
+  ],
+  "unchanged_existing_functions": 32,
+  "unchanged_function_text_and_AST": true,
+  "full_raw_inverse_equal": true,
+  "top_level_AST_unchanged": true,
+  "syntax": {
+    "AST": "PASS",
+    "compile_count": 2,
+    "target_addon_imports": 0
+  },
+  "independent_source_findings": {
+    "strict_mapping_after_preview_restore_before_data_copy": true,
+    "translation_domain_matches_existing_bake_authored_names": true,
+    "translation_domain": "mapping.controls.mapped_names - mapping.controls.delegated_names",
+    "control_names_excluded_by_existing_build_plan": true,
+    "delegated_static_dress_flags_preserved": true,
+    "generated_MCH_connect_parent_Rest_inheritance_preserved": true,
+    "Rigging_only_packet_call": true,
+    "ordinary_omitted_default_byte_equivalent": true,
+    "outer_Add_failure_cleanup_unchanged": true,
+    "inventory_mapping_swap_guards_unchanged": true,
+    "source_cache_route_unchanged": true
+  },
+  "read_only_dependency_pins": {
+    "unity_animation.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    "unity_animation_controls.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_controls.py",
+      "sha256": "acf81b37e8d89bdaff0a04b8a3a2a244584e6b5d5551c58efb1946b1ece5b3c7",
+      "bytes": 18492
+    },
+    "limb_ik.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+      "sha256": "68aabcbfcc7010d0b94f096b935c6065f0099e809ad39253abece168453dfcfc",
+      "bytes": 450542
+    },
+    "animation_worklist_target.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "ce7aa98f40ebd5bc9af02f38b2362f1f6d4f1af1ca4cb5fa53ac913f7e3d4fa1",
+      "bytes": 39004
+    },
+    "animation_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_setup.py",
+      "sha256": "e5ae7c4df9bb30f4e55719285cb7721963a3ab798c7225c806a436837559df93",
+      "bytes": 13772
+    }
+  },
+  "owner_test_attribution": {
+    "new_pure_reported_passes": 7,
+    "ordinary_reported_passes": 15,
+    "new_pure_log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_editing_data_pure_02.log",
+      "sha256": "954bbc1859d58607c50edd3f736a36faa2e907b725ef0273d0496e8dccd2e766",
+      "bytes": 1524
+    },
+    "ordinary_log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_editing_ordinary_regression_01.log",
+      "sha256": "cf89083073ada9a2105ec8ddc45ef0e1c97e50d7b13fdb1f5a17593c7ca515e8",
+      "bytes": 2728
+    },
+    "reviewer_test_executions": 0,
+    "mocked_mapping_is_not_native_solver_or_FBX_proof": true
+  },
+  "final_destination": "Existing original X.blend/Rig, preserving artist modifiers/design/colors/groups/controllers; independent scene is only an isolated test.",
+  "existing_Rig_integration_barriers": [
+    {
+      "source": "animation_worklist.py:99-104",
+      "barrier": "Old worklist rows/rig and another workspace or model identity cannot be silently reassigned."
+    },
+    {
+      "source": "animation_worklist_target.py:620-667",
+      "barrier": "Explicit Use Main Rig requires actual local original Scene/ViewLayer/Rig, same row owners, prepared catalog and strict mapping for every prepared clip."
+    },
+    {
+      "source": "unity_animation_controls.py:76-165",
+      "barrier": "Existing full native control/constraint/driver graph must validate; extra unsupported artist constraints are rejected, never deleted to pass."
+    },
+    {
+      "source": "unity_animation_rigging.py:297-323",
+      "barrier": "Actual original ARM Right/Left chains, same solver Target, wrist mapping, supported 0/1 weights and no maintained offsets must be established."
+    },
+    {
+      "source": "animation_worklist_target.py:87-118,356-376,586-617",
+      "barrier": "Capture and recovery protect original data/Rest/actions/display/locks/control state; managed translation copies must preserve all generated mechanism structure and validated source provenance."
+    },
+    {
+      "source": "animation_rigging_setup.py:prepare_fresh_arm_controls",
+      "barrier": "Fresh-only setup wrapper is not an Original Rig repair/adoption route and must never be invoked on an existing artist Rig."
+    }
+  ],
+  "unverified": [
+    "Fresh native Add after this Source fix",
+    "Original X actual inventory/Rest/mapping compatibility and preserved full artist assets",
+    "Native editing/Undo/reopen/physicalSync/UnityApply"
+  ],
+  "reviewer_boundaries": {
+    "native_calls": 0,
+    "test_execution": 0,
+    "target_imports": 0,
+    "product_edits": 0,
+    "artist_reads_or_writes": 0,
+    "build_deploy_calls": 0
+  }
+}

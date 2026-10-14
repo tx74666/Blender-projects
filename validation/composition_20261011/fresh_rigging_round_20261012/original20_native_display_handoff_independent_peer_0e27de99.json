@@ -1,0 +1,38 @@
+{
+  "schema": "x.validation.original20-native-display-handoff-independent-source-peer/1",
+  "status": "SourceReady_NativePending",
+  "passed": true,
+  "source_only": true,
+  "source_scope_verified": true,
+  "native_execution_performed": false,
+  "tests_executed_by_this_review": 0,
+  "created_utc": "2026-10-12T16:12:03.037310+00:00",
+  "review_scope": "Independent read-only review of the actual two-function native display handoff diff against frozen .30. No backend FA60 or test_view_body review is included.",
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/unity_animation_rigging.py",
+      "sha256": "0e27de995a95b6dc32285dc90f908166d71af6d5ccaa97d9455c11c4720c8e81",
+      "bytes": 104771
+    }
+  },
+  "comparison_baseline": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_815751c3/source/character_designer/unity_animation_rigging.py",
+    "sha256": "69bcc032fb890ecc005f75f9562df63625cb871386708dc0d29656354fd5c9f6",
+    "bytes": 104329
+  },
+  "checks": {
+    "AST_definition_diff_is_only_apply_and_restore_preview_mode": true,
+    "apply_handoff_occurs_after_both_arm_modes_and_target_writes": true,
+    "original20_uses_official_two_arm_display_handoff_force_flags_false": true,
+    "ordinary_apply_display_flags_and_order_unchanged": true,
+    "mode_restore_handoff_after_unkeyed_control_bases_restored_and_update": true,
+    "mode_restore_noop_return_unchanged": true,
+    "official_display_authenticates_owned_rings_and_managed_Body_membership": true,
+    "official_display_preserves_collection_eyes_solo_and_rolls_back_failure": true,
+    "existing_sync_before_restrict_order_does_not_conflict_with_POLE_LINE_membership": true,
+    "sampling_remains_curve_evaluation_without_frame_seek": true,
+    "existing_close_restores_saved_native_FK_display_and_managed_Body": true,
+    "preservation_oracle_not_relaxed": true
+  },
+  "limits": "Source review only. Native11 actual mismatch is diagnosed; a successful successor native run, original save and independent readback remain required. Other-agent pure test results are not asserted as tests run by this reviewer."
+}

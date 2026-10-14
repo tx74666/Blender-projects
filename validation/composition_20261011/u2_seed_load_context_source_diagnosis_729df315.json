@@ -1,0 +1,186 @@
+{
+  "schema": "x.validation.character-composition-seed-load-context-source-diagnosis/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "actual_failure_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2\\composition_ui_run_report.json",
+    "sha256": "3a453f7ba7058a893f112df866ad72ea5f247644576beb869b801af6870932a7",
+    "bytes": 2233
+  },
+  "actual_stderr": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\u2_stderr.log",
+    "sha256": "3d692bdb2cd3f4f234f8272b710a99cc820102e990cb43af8a0aea24bd92f8db",
+    "bytes": 1644
+  },
+  "actual_native_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\publication_recovery_native_report.json",
+    "sha256": "be09e217d29ae49c11720bea568afe6fa1454e52d6110a877a2104b649541347",
+    "bytes": 1590520
+  },
+  "immutable_seed_file_pin_only": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\qa_seed.blend",
+    "sha256": "c3a54a5e8166e390f6b722e2b9a011a5e3ef9f37fd341c6d369e3fc843730ab0",
+    "bytes": 39960623
+  },
+  "reviewed_source_files": {
+    "native": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\verify_character_composition_native.py",
+      "sha256": "1ebf29f7ac4358884a3861164aa0e9894db37da57f74fe64a5ef3493b650ad32",
+      "bytes": 52884
+    },
+    "runner": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\run_character_composition_ui_fixture.py",
+      "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+      "bytes": 24773
+    },
+    "session": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\tools_headful_10\\composition_session_acceptance.py",
+      "sha256": "47cd966e74c50188ddbebd1efe8b915dd9df645184ee7409bf657e756cee6fb3",
+      "bytes": 57217
+    },
+    "Object_users_scene_implementation": {
+      "path": "D:\\Blender5.2\\5.2\\scripts\\modules\\_bpy_types.py",
+      "sha256": "2cf02a4ba02f01f7ccac59b99b7d8404b6868cae25bee91abba1c1a17aef8bb5",
+      "bytes": 56833
+    }
+  },
+  "failure_boundary": {
+    "actual_completed": false,
+    "error": "The exact original native Rig must retain both pinned original and QA Scene memberships.",
+    "runner_line": 259,
+    "load_call_line": 256,
+    "guard_conjunction": [
+      "named QA Scene exists",
+      "named native Rig exists",
+      "Rig name belongs to QA scene.objects",
+      "sorted native Rig users_scene equals receipt rigSceneNames",
+      "bpy.context.window is not None"
+    ],
+    "individual_native_values_persisted": false,
+    "asserted_scene_loss_or_membership_loss": false,
+    "source_scope_and_composition_session_not_entered": true
+  },
+  "receipt_data_consistency": {
+    "scene_name": "Composition QA · Fresh Workspace",
+    "rig_name": "CoshaRig",
+    "expected_rig_scene_names": [
+      "Composition QA · Fresh Workspace",
+      "Scene"
+    ],
+    "config_scene_name_equal": true,
+    "config_rig_name_equal": true,
+    "scene_punctuation_codepoint": "U+00B7 in the native source literal and both JSON values; console replacement glyph is output encoding only.",
+    "native_seed_loaded_or_decoded_by_reviewer": false
+  },
+  "save_and_scope_chain": [
+    {
+      "source": "verify_character_composition_native.py",
+      "lines": "387-403",
+      "fact": "The existing native Scene is copied, renamed and assigned to the window; current QA worklist rows are cleared on the copied Scene and official adoption is proven."
+    },
+    {
+      "source": "verify_character_composition_native.py",
+      "lines": "517-523",
+      "fact": "Before save, the active idle QA owner and native Rig memberships equal all historical Scene names plus the QA Scene; target.ensure_active is called."
+    },
+    {
+      "source": "verify_character_composition_native.py",
+      "lines": "530-541",
+      "fact": "Receipt names and memberships are captured before copy=True save; FINISHED, nonempty file and full file SHA are verified, without reopening the seed."
+    },
+    {
+      "source": "verify_character_composition_native.py",
+      "lines": "405-450",
+      "fact": "Outer recovery restores protected artist data and historical rows, then removes the in-memory QA Scene. This occurs after the isolated save and does not mutate the saved seed bytes."
+    }
+  ],
+  "official_installed_commit_source": [
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/windowmanager/intern/wm_files.cc",
+      "lines": "2992-3019,3039-3042",
+      "fact": "open_mainfile EXEC delegates the file read wrapper and returns FINISHED on successful read; load_ui sets the G_FILE_NO_UI flag."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/windowmanager/intern/wm_files.cc",
+      "lines": "1027-1069",
+      "fact": "WM_file_read calls wm_file_read_post and its callback wrapper before returning success."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/windowmanager/intern/wm_files.cc",
+      "lines": "783-823",
+      "fact": "For headful data load, read-post clears CTX window; the post wrapper only installs a temporary first window and restores null on exit. This makes an immediate nonnull context-window assumption unsafe."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/blenkernel/intern/blendfile.cc",
+      "lines": "914-934,966-1000",
+      "fact": "load_ui=False reuses WindowManager/workspace/screen data and remaps their references, while selecting Scene/view-layer from loaded data. No general deletion of the QA Scene is implied."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/blenkernel/intern/scene.cc",
+      "lines": "1485-1497",
+      "fact": "Scene ID type is NEVER_UNUSED."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/blender/blender/fbe6228777e7/source/blender/blenloader/intern/writefile.cc",
+      "lines": "1493-1525",
+      "fact": "Normal local-ID write omits zero-user IDs but asserts NEVER_UNUSED IDs do not have zero users. This does not prove a dropped QA Scene here."
+    }
+  ],
+  "Object_users_scene": {
+    "installed_source_lines": "299-312",
+    "fact": "The property directly iterates bpy.data.scenes and checks native Object membership in each Scene objects collection; it is not an evaluated-depsgraph membership cache.",
+    "view_layer_update_as_membership_repair_supported": false
+  },
+  "same_lifecycle_followups": {
+    "session_source": "composition_session_acceptance.py",
+    "open_mainfile_lines": [
+      783,
+      822
+    ],
+    "current_helper_lines": "51-61",
+    "fact": "The helper synchronously reopens active/closed isolated files, then uses _current which takes bpy.context but does not explicitly reacquire a loaded headful window. Any future narrow fix must consider both reopen boundaries without changing scene/row/Action/Scope guards."
+  },
+  "minimal_future_readonly_probe": {
+    "fresh_explicit_headful_grant_required": true,
+    "BG_probe_cannot_test_this_window_clearing_path": true,
+    "inputs": [
+      "exact installed executable SHA",
+      "exact immutable seed path/SHA C3A",
+      "exact runner/native/session Source pins",
+      "explicit expected QA sceneName/rigName/rigSceneNames and original sceneName"
+    ],
+    "operation": "Factory headful, disable-autoexec, open only immutable QA seed with use_scripts=False/load_ui=False; immediately emit separate native facts. No addon import/register, frame set, motion evaluation, transform, save, source publication or artist load.",
+    "immediate_fields": [
+      "bpy.app.background/version/build_hash",
+      "bpy.data.filepath and opened seed SHA",
+      "literal operator return",
+      "each guard subexpression separately",
+      "all loaded Scene names/native pointers/users/use_fake_user/library/master collection pointer",
+      "CoshaRig Object/data native pointers and library",
+      "per Scene native object lookup/pointer equality and Rig collection memberships",
+      "direct users_scene list",
+      "bpy.context.window pointer-or-null/context.scene/view_layer",
+      "WindowManager windows list with native pointer/scene/screen and VIEW_3D WINDOW-region inventory"
+    ],
+    "optional_readonly_override": "If a unique real loaded headful window exists, read context.scene/window and all unchanged membership facts within temp_override(window=that exact window). No fallback to an arbitrary scene or first unrelated window.",
+    "output_boundary": "A new root-level probe JSON/log outside every mutable UI evidence directory; keep seed, failed u2 and all current Sources unchanged.",
+    "acceptance": "A null immediate context.window with all four data membership predicates true and a unique loaded window would distinguish context lifecycle from missing Scene/data. Any missing Scene or membership remains a strict failure requiring direct seed inventory proof."
+  },
+  "proposed_narrow_fix_condition": {
+    "code_changes_authorized_or_performed": false,
+    "condition": "Only after independently observed data membership and window inventory: reacquire the exact owned loaded headful window/context, then run the existing full guard; do not remove the window or membership clauses and do not add fake Scene ownership."
+  },
+  "review_actions": {
+    "local_Source_and_bounded_JSON_reads": true,
+    "official_exact_commit_source_browsed": true,
+    "blend_file_hash_only": true,
+    "target_module_imports": 0,
+    "tests_or_native_runs": 0,
+    "CIM_or_resource_queries": 0,
+    "SDK_or_GUI_calls": 0,
+    "Source_mutations": 0,
+    "writes": "Only this exclusive Source diagnosis JSON."
+  },
+  "limitations": "The actual failed report records only the compound assertion. Official headful context clearing is a concrete source defect in the immediate assumption, but the exact failed predicate has not been measured from the now-exited u2 process."
+}

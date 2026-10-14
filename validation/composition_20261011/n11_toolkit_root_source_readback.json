@@ -1,0 +1,74 @@
+{
+  "schema": "x.validation.character-composition-n11-toolkit-root-source-readback/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "toolkit": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_runtime10_first_stage_fixture_r3.py",
+      "sha256": "5d76b77c14cdb2be9219d93566b50d6e253a2e0c333372e5f3a96695df2b1e4c",
+      "reviewed_parent": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_runtime09_first_stage_fixture_r2.py",
+        "sha256": "a53efe134e3342b914f6046fec6764a848a0548a8a2f4beb32fd57adf8b55747"
+      },
+      "normalized_ast_equal": true
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_first_stage_granted_r4.py",
+      "sha256": "bd5f6ada3e8d57e3bd7baa3b68ab57bbad54ca505ec5a1a333bbff4eb83ec8cb",
+      "reviewed_parent": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\preflight_first_stage_granted_r3.py",
+        "sha256": "fc3082d38214d80a6f8be2f259ffd13ce71f5d7302bd25b5b1dc7f019b9af15e"
+      },
+      "normalized_ast_equal": true
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_completed_first_stage_r4.py",
+      "sha256": "c3bed53a9cf536e2519f39910825b350de3fa2034d6cc42ccc781bcf23114091",
+      "reviewed_parent": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_completed_first_stage_r3.py",
+        "sha256": "841edca5c81de11033874e1c635d39a472f6fa17441c646e489b20b74f598c5e"
+      },
+      "normalized_ast_equal": true
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_first_stage_completion_r5.py",
+      "sha256": "e4ec3d4a1af681ea65e424cffdbe453896077e2bbe5c4ae6880e36fd7bbfbdb4",
+      "reviewed_parent": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_first_stage_completion_r4.py",
+        "sha256": "ff9d3daf749d2030913968234afba1413215869f687766c0edda74ca13bbc6d7"
+      },
+      "normalized_ast_equal": true
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_first_stage_granted_r5.ps1",
+      "sha256": "bf579f7ce4367fc04ac3b34c7a12155e62ddf70251b64594bfad4a72aedafa15",
+      "reviewed_parent": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\launch_first_stage_granted_r4.ps1",
+        "sha256": "5876e981cce4799acb20295e6a2d49125dd3b1d2fa053c4a7d85f754063c85be"
+      },
+      "normalized_bytes_equal": true
+    }
+  ],
+  "projections": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\python_projection.json",
+      "sha256": "a7c660d546bcc6f2b0720750eb03279b62a24f968967a385746c6f13effeb150",
+      "actual_product_delta_vs_n10": [
+        "animation_composition.py"
+      ],
+      "file_count": 167
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_11\\candidate_projection.json",
+      "sha256": "12ee822739fe467db86eee44f861f70d006d219957bd249f8d179e41d2415d7d",
+      "actual_product_delta_vs_n10": [
+        "animation_composition.py"
+      ],
+      "file_count": 173
+    }
+  ],
+  "reviewer_test_executions": 0,
+  "reviewer_tool_imports_or_invocations": 0,
+  "source_normalization_notes": "First Root AST comparison lacked the runtime10/full11 prose literals and rejected before any output; complete actual unified diffs were then inspected and these declared string substitutions added. No source changes or runtime test was inferred from normalization."
+}

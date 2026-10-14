@@ -1,0 +1,198 @@
+{
+  "schema": "x.validation.unified-r10-postbuild-readback/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "independent_review": false,
+  "created_utc": "2026-10-12T13:00:49.522Z",
+  "output_pins": {
+    "producer": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r10.py",
+      "sha256": "831dfde9121b762e815821fd94c43b66c79f45980d3d7ccf2ca9e46d1e5674d1",
+      "bytes": 31490
+    },
+    "argv": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/prepare_unified_package_r10_direct_argv.json",
+      "sha256": "9b7c640414cf3cdc943b4255104bbdb72e69ffb3c1b01139e2535041a9a562ae",
+      "bytes": 3877
+    },
+    "admission": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/unified_r10_final_source_admission_d685_bae80eb8.json",
+      "sha256": "fd4bc46572e1bf2fa79e5922884e7be78a5a32d60cc37dd67537444a990b2f91",
+      "bytes": 8223
+    },
+    "manifest": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_bae80eb8/python_projection.json",
+      "sha256": "6abc02f6e39879474a89952e654741127ae3967bfc4ad74b551daa7d1983cf01",
+      "bytes": 21065
+    },
+    "freeze": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\x_rigging_source_freeze_r10_d6851b82.json",
+      "sha256": "b52d4ac3d46dbb81fe23972cf373774b1b1351bf4de11f6a349a3e095a6ddd15",
+      "bytes": 35423
+    },
+    "receipt": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_bae80eb8/unified_package_receipt.json",
+      "sha256": "1dbc92b31a4dadf3b8e8510200786f449a244f1282a5266b605794e28da54084",
+      "bytes": 86618
+    },
+    "official_build_log": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_bae80eb8/official_build_log.json",
+      "sha256": "ce1e4a96d255393990f7fa62c8608003bfc14f5c865112f10220a0437d043b2d",
+      "bytes": 618
+    },
+    "dist_zip": {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/dist/character_designer-0.77.28.zip",
+      "sha256": "98b5d7f7d6ed8f742ce1624470d8e4330d09a1455b7a9189a7ed610a0abae53b",
+      "bytes": 1452387
+    },
+    "frozen_zip": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_bae80eb8/character_designer-0.77.28.zip",
+      "sha256": "98b5d7f7d6ed8f742ce1624470d8e4330d09a1455b7a9189a7ed610a0abae53b",
+      "bytes": 1452387
+    }
+  },
+  "version": "0.77.28",
+  "file_count": 190,
+  "python_file_count": 158,
+  "source_bytes": 5649659,
+  "complete_frozen_map_sha256": "bae80eb8dced31a3b891c99d9181b835a634367fa6589c6e941e977d1b49bd8c",
+  "complete_canonical_map_sha256": "bae80eb8dced31a3b891c99d9181b835a634367fa6589c6e941e977d1b49bd8c",
+  "manifest_full_set_equals_frozen_and_canonical": true,
+  "no_unlisted_shipped_files": true,
+  "all_source_hashes_equal_manifest": true,
+  "dist_and_frozen_archive_hash_and_bytes_equal": true,
+  "official_exit_code": 0,
+  "official_command": [
+    "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-B",
+    "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_releases.py",
+    "--module",
+    "character_designer",
+    "--projection",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_bae80eb8\\python_projection.json"
+  ],
+  "zip_proof": {
+    "owner": "Actual831D producer --build-and-verify; this postreadback does not claim a second independent ZIP parser.",
+    "evidence": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/package_bae80eb8/unified_package_receipt.json",
+      "sha256": "1dbc92b31a4dadf3b8e8510200786f449a244f1282a5266b605794e28da54084",
+      "bytes": 86618
+    },
+    "exact_190_payload": "PASS",
+    "testzip": "PASS",
+    "duplicates": 0,
+    "directories": 0,
+    "all_payload_bytes_equal_manifest": true
+  },
+  "postbuild_physical_gates_passed": {
+    "canonical190": true,
+    "actual_pure_inputs": true,
+    "provenance_admission_logs": true,
+    "all_owner_and_peer_pins": true
+  },
+  "old_dist_zip_count": 253,
+  "old_dist_zip_unchanged": true,
+  "current_actual_pure_tests": 165,
+  "historical_R7_unique_cases": 302,
+  "all_cumulative_cases_run_against_current_candidate": false,
+  "tests_executed_by_producer": 0,
+  "process_evidence": {
+    "ast": {
+      "stdout": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/ast.stdout.log",
+        "sha256": "d3107a7f833acea61518adecd17a1adc91cb6f7fc176b24e7e6aad7aecd1f6e1",
+        "bytes": 65
+      },
+      "stderr": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/ast.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "process": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/ast.process.json",
+        "sha256": "f7c287f04630321765fe773ad8e3d54b40a4328f24755fbb3df23d8a426b2bc5",
+        "bytes": 1370
+      }
+    },
+    "inspect": {
+      "stdout": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/inspect.stdout.log",
+        "sha256": "b946c7b24cd6538ef3ca9877df3a7e956c543e1624db5577316407cbd698cc96",
+        "bytes": 1627
+      },
+      "stderr": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/inspect.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "process": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/inspect.process.json",
+        "sha256": "df4db2c98e608829e573a3e3abb39f705f778f02e227362c64261d28625b7f40",
+        "bytes": 1358
+      }
+    },
+    "capture": {
+      "stdout": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/capture.stdout.log",
+        "sha256": "f0205533ca2daadcd5d83c87434e205e19e95fd9446e7991d216ad1defc44d7f",
+        "bytes": 681
+      },
+      "stderr": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/capture.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "process": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/capture.process.json",
+        "sha256": "565265a3b94ad161ece929dd7d4acd32d1b74b14f83f3212d88f6080543c8224",
+        "bytes": 1349
+      }
+    },
+    "build": {
+      "stdout": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/build.stdout.log",
+        "sha256": "577c2986bcb31a4e4a6c30190aebc2d71e369ae45586e58d8b69844da187e3dd",
+        "bytes": 1008
+      },
+      "stderr": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/build.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "process": {
+        "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/r10_static_build_01/build.process.json",
+        "sha256": "b70044c1c5e20f4fc4282243c4599a05f6c356adf1795f191b5ea6330d9c581a",
+        "bytes": 1366
+      }
+    }
+  },
+  "all_four_owned_python_processes_natural_exit0": true,
+  "official_builder_synchronous_subprocess_returned_exit0": true,
+  "execution_counts": {
+    "AST_processes": 1,
+    "producer_processes": 3,
+    "official_builds": 1,
+    "new_payload_files_captured": 190,
+    "tests": 0,
+    "Blender": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "deployment": 0,
+    "artist_writes": 0,
+    "Git": 0
+  },
+  "limitations": [
+    "Same-provider Source postreadback, not independent review.",
+    "Original20 native acceptance and actual artist integration remain pending; old failednative logs preserved."
+  ],
+  "runtime_R9_deltas": {
+    "added": [],
+    "replaced": [
+      "__init__.py",
+      "unity_animation_rigging.py"
+    ],
+    "deleted": [],
+    "other188_exact": true
+  }
+}

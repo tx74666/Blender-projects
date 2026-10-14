@@ -1,0 +1,95 @@
+{
+  "schema": "x.validation.unified-r7-final-source-admission/1",
+  "created_utc": "2026-10-12T03:27:02.6371489Z",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "final_source_stable": true,
+  "final_destination_existing_X_Rig": true,
+  "current_sources": {
+    "animation_worklist.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    "animation_worklist_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+      "bytes": 43229
+    },
+    "test_animation_worklist_rigging_editing_data.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_editing_data.py",
+      "sha256": "f53bcee59ca3845a0567e414cd024b010d18ba10996777d86e1103033de26f68",
+      "bytes": 14112
+    },
+    "test_animation_worklist_rigging_attach.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach.py",
+      "sha256": "caf15123e39f60a09872e7b8aa23ca1cf490d6ebd8a5fc584a02496a70988684",
+      "bytes": 31447
+    },
+    "test_animation_worklist_rigging_attach_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach_ui.py",
+      "sha256": "89fe11bb6634e8e8ca0c16c5fcddc93093d7883cdfa70d5525149d1a2faf8bb0",
+      "bytes": 16363
+    }
+  },
+  "source_owners": {
+    "core": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_original_rigging_attach_fixture_source_owner_caf15123.json",
+      "sha256": "93c5d097bac70454af08dab3cd54f668718569be71780ac3e21e527f5471b7e6",
+      "bytes": 4589
+    },
+    "ui": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_attach_ui_fixture_source_owner_89fe11bb.json",
+      "sha256": "6cec223ce91c28e80d68cc974a0e6e3a80ce0421bb2bfc4c237195d2315b4184",
+      "bytes": 10503
+    }
+  },
+  "source_peers": {
+    "root": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_rigging_attach_root_fixture_source_peer_caf_89.json",
+      "sha256": "5417951946063d0b0f8dc35bc0da447582e97a45c8338ce74eda22d72b52febe",
+      "bytes": 3989
+    },
+    "parent": {
+      "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\generic-rigging-design\\source-peer-r7\\x-core-d4de-caf15123-schema1.json",
+      "sha256": "31953e2656972927f89be3c229c618849308bde7b0ed167f433d808a9a6719b5",
+      "bytes": 3744
+    }
+  },
+  "pure_receipts": {
+    "core": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_core_caf_032040\\receipt.json",
+      "sha256": "2cf99421ddb20f48dcefb74279ce36f7dfd8484ab4ea1a336b06a2797101bd0a",
+      "bytes": 15507
+    },
+    "ui": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\pure_ui_d064_032040\\receipt.json",
+      "sha256": "292705305638ac83f66767c07d92159ecca0784348374d569039259acef97fbd",
+      "bytes": 11713
+    }
+  },
+  "unique_cases": {
+    "historical_R5": 262,
+    "historical_80af_editing": 7,
+    "actual_final_Attach": 19,
+    "actual_final_UI": 14,
+    "regression_unique_additions": 0,
+    "cumulative_total": 302,
+    "all_cumulative_cases_run_against_current_candidate": false
+  },
+  "current_actual_tests": 123,
+  "current_actual_passed": 123,
+  "current_actual_failed": 0,
+  "source_candidate_version": "0.77.25",
+  "artist_original_saved": false,
+  "original_Rig_acceptance": false,
+  "physical_Return_acceptance": false,
+  "Unity_Apply_acceptance": false,
+  "limits": [
+    "Source admission binds independently reviewed current fixtures and actualserial123 PASS. Owner/source flags are not native acceptance.",
+    "Failed prior native and priorpure attempts remain immutable.",
+    "No package AST/capture/build/deploy/install or artist snapshot has been performed by this admission write. Separate fresh scopes remain required.",
+    "Final artist data uses prepared31c initial Input20; QA .005 control-test offsets do not transfer to artist."
+  ]
+}

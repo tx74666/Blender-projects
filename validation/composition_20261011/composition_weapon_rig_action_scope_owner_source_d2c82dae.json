@@ -1,0 +1,56 @@
+{
+  "schema": "x.validation.character-composition-weapon-rig-action-scope-source-owner/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "composition_session_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "d2c82daee0cb6d89845deef4e9afd595c7add8850410fe81a3fb2c3fd673dc29",
+      "bytes": 61748
+    }
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_session_acceptance_5abcb688_before_rig_action_scope.py",
+    "sha256": "5abcb6889759ab905689bd547a3b17ca72b9eb44472220e8021eabc8a6132e49",
+    "bytes": 60440
+  },
+  "source_delta": {
+    "changed_functions": [
+      "_weapon_acceptance_steps"
+    ],
+    "unchanged_functions_text_and_ast_equal": 24,
+    "top_level_ast_unchanged": true,
+    "single_function_raw_byte_inverse_equal": true,
+    "added_functions": [],
+    "added_imports": []
+  },
+  "content_fingerprint_scope": {
+    "references": "Session A reference/A workcopy when present, B Source/Custom/draft, current Rig Action and all Rig NLA CLIP Action references",
+    "deduplication": "native Action pointer plus native slot handle",
+    "full_content_fingerprints_retained": true,
+    "unrelated_global_action_content_hashing_removed": true
+  },
+  "global_ownership_guards": {
+    "original_before_actions_id_set_preserved": true,
+    "all_action_pointer_and_slot_pointer_handle_inventory_exact_after_load": true,
+    "all_action_pointer_and_slot_pointer_handle_inventory_exact_after_remove": true
+  },
+  "unchanged_guards": [
+    "captured geometry/source/context/counts/placed-surface proof",
+    "Rig Rest, artist state, NLA layout, assets and owned ID cleanup",
+    "SaveReopen and plain reopen seams",
+    "all other Session phases and checkpoints"
+  ],
+  "validation": {
+    "source_compile_passed": 1,
+    "target_imports": 0,
+    "tests_executed": 0,
+    "native_executions": 0,
+    "sdk_executions": 0,
+    "resource_queries": 0,
+    "workspace_or_artist_reads": 0,
+    "product_source_writes": 0
+  },
+  "native_acceptance": "pending; Source-only change"
+}

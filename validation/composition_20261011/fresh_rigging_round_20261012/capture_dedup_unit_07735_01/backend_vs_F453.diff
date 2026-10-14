@@ -1,0 +1,25 @@
+--- D:\Blender\Projects\Character\X\validation\composition_20261011\fresh_rigging_round_20261012\package_0fa9adfa\source\character_designer\unity_animation_original_inputs.py
++++ D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\unity_animation_original_inputs.py
+@@ -491,13 +491,19 @@
+ 
+ 
+ def capture_inputs(context, session):
+-    pair = validate_session(session, files=True)
+-    return native.capture_inputs(context, session, source_packet_sha256=pair['packet']['sha256'], work_item_id=pair['work_item_id'],
++    pair = session['original_inputs']
++    # Native capture authenticates the complete live pair through _validate.
++    # Retain all file pins before returning, without scanning dense Body twice.
++    dto = native.capture_inputs(context, session, source_packet_sha256=pair['packet']['sha256'], work_item_id=pair['work_item_id'],
+         source_action=pair['source_action'], source_action_slot=pair['source_slot'])
++    _validate_pair_files(pair)
++    return dto
+ 
+ 
+ def publish_inputs(context, rig, filepath):
+-    session = _active(context, rig); pair = validate_session(session, files=True); dto = capture_inputs(context, session)
++    session = _active(context, rig)
++    dto = capture_inputs(context, session)
++    pair = session['original_inputs']
+     result_path = Path(filepath).resolve(); publication_path = result_path.with_name(result_path.stem + '.publication.json')
+     _require(result_path.suffix.lower() == '.json' and result_path.parent.is_dir() and not result_path.exists() and not publication_path.exists(),
+              'Choose two new owned JSON output files; never overwrite original/prepared evidence.')

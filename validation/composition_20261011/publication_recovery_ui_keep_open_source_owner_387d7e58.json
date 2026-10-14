@@ -1,0 +1,92 @@
+{
+  "schema": "x.validation.character-composition-current-ui-keep-open-source-owner/1",
+  "utc": "2026-10-11T14:20:06.787128+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "build_character_composition_publication_recovery_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_character_composition_publication_recovery_ui_fixture.py",
+      "sha256": "387d7e58a985739d15b16425bca05054b5dcfaea18417041eef266a046b482a1",
+      "bytes": 49605
+    },
+    "audit_character_composition_publication_recovery.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\audit_character_composition_publication_recovery.py",
+      "sha256": "1d77c43b10f614ca8d0709a23d8d09d81d7fab9676d9d803f5e7cb85488399e9",
+      "bytes": 30893
+    }
+  },
+  "historical_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\build_character_composition_publication_recovery_ui_fixture_d77db899_before_keep_open.py",
+    "sha256": "d77db89939b00678bb11580e89e665d1a964658974575edd18d6c014be25cad6",
+    "bytes": 48853
+  },
+  "previous_owner_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_current_ui_adapter_source_owner_d77db899.json",
+    "sha256": "d6c4174851e999ce7e6ad4396bdfe82bb16e498f36bc9a10dc13e3534c6a1ab4",
+    "bytes": 6917
+  },
+  "previous_peer_review": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\publication_recovery_current_ui_adapter_peer_source_d77db899.json",
+    "sha256": "629b215eeee206064ef888fe562611b080457a8a312fb9f2f2024e15ea89e1c7",
+    "bytes": 9203
+  },
+  "delta": {
+    "changed_functions": [
+      "build_current",
+      "main"
+    ],
+    "unchanged_functions": [
+      "require",
+      "api",
+      "frozen09_record",
+      "freeze",
+      "frozen_api",
+      "build",
+      "context_sources",
+      "freeze_context",
+      "pure_workspace"
+    ],
+    "added_functions": [],
+    "top_level_statements_ast_unchanged": true,
+    "full_raw_byte_inverse_equal": true,
+    "newline_encoding_preserved": "UTF-8/CRLF",
+    "old_freeze_build_functions_unchanged": true
+  },
+  "contract": {
+    "cli_option": "--keep-open-for-sync",
+    "cli_allowed_only_with": "--build-current",
+    "api_parameter": "keep_open_for_sync",
+    "api_parameter_default": false,
+    "api_requires_exact_bool": true,
+    "true_changes_only_existing_top_level_config_field": "quitOnCompletion",
+    "true_field_value": false,
+    "default_preserves_parent_quitOnCompletion": true,
+    "allowed_delta_includes_quitOnCompletion_only_when_option_true": true,
+    "headfulCheckpoints_options_unchanged_except_preexisting_reviewed_helper_override": true,
+    "receipt_declares_boolean": "keep_open_for_sync",
+    "no_new_fixture_fields": true,
+    "current_runtime_and_historical_source_bridge_unchanged": true,
+    "all_existing_admission_and_exclusive_output_guards_unchanged": true
+  },
+  "validation": {
+    "stdlib_in_memory_compile_passed": true,
+    "ast_comparison_passed": true,
+    "raw_inverse_check_passed": true,
+    "unchanged_function_count": 9,
+    "assert_nodes": 0,
+    "target_module_imports": 0,
+    "generator_invocations": 0,
+    "tests_executed": 0,
+    "native_calls": 0,
+    "sdk_calls": 0,
+    "shared_workspace_reads": 0,
+    "fixture_generated": false,
+    "frozen_tools_generated": false
+  },
+  "limits": [
+    "Source-only change and compile/AST review; no builder, freeze, Blender, SDK, GUI or workspace operation was executed.",
+    "Keeping the owned QA window open is explicit fixture behavior; a fresh Parent launch grant and actual runtime acceptance remain required.",
+    "The option performs no Sync or publication itself. Historical fixture/reports and frozen inputs are preserved."
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "schema": "x.validation.character-composition-explicit-save-pose-source/1",
+  "created_utc": "2026-10-11T14:02:10.873809+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "805a457ee482d4ee0c7bc01673cb22630f07429e63f854521ae839c0133b65bb",
+      "bytes": 99303
+    },
+    "animation_composition_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_ui.py",
+      "sha256": "ee6fb51a5880d243d868863110e8c49040af0015abf8a838fa0d1d4a8659bdf8",
+      "bytes": 17542
+    }
+  },
+  "previous_sources": {
+    "animation_composition.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_composition_1861bcf7_before_explicit_save_pose.py",
+      "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+      "bytes": 99028
+    },
+    "animation_composition_ui.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_composition_ui_dec613ae_before_explicit_save_pose.py",
+      "sha256": "dec613ae44ccaf8644f339b6bc5072372adaa08d66e3049851807e1433c9c3a8",
+      "bytes": 16699
+    }
+  },
+  "changed_functions": {
+    "animation_composition.py": [
+      "capture_hold_pose",
+      "begin_sync"
+    ],
+    "animation_composition_ui.py": [
+      "CHARACTERDESIGNER_OT_composition_capture_hold.poll",
+      "CHARACTERDESIGNER_OT_composition_sync.poll"
+    ]
+  },
+  "visible_text_changes": {
+    "operator_id": "character_designer.composition_capture_hold",
+    "label": "Save Pose",
+    "undo_options_preserved": [
+      "REGISTER",
+      "UNDO"
+    ]
+  },
+  "independent_source_normalization": {
+    "runtime_whole_module_inverse_ast_exact": true,
+    "ui_whole_module_inverse_ast_exact": true,
+    "unchanged_runtime_function_count": 62,
+    "unchanged_runtime_functions": [
+      "_host",
+      "_service",
+      "active",
+      "item_spec",
+      "bind_item",
+      "_require_native_action_timebase",
+      "_packet_for_item",
+      "item_fingerprint",
+      "composition_metadata",
+      "_library_state",
+      "connect_library",
+      "refresh_configuration",
+      "add_work_item",
+      "_prepared_reference_entry",
+      "create_reference_work_copy",
+      "reference_receipt_key",
+      "reference_receipt",
+      "find_reference",
+      "prepare_reference",
+      "_plain",
+      "_encode",
+      "_decode",
+      "_store",
+      "_load",
+      "_slot",
+      "_bag",
+      "_curves",
+      "_motion_hash",
+      "_curve_payload",
+      "_write_curve",
+      "_constant_curve",
+      "_channel_rows",
+      "_frame_range",
+      "_following_hold",
+      "_assert_hold_constant",
+      "_editing_action",
+      "_layout",
+      "_pose_selection_owner",
+      "_prior",
+      "_nla_context",
+      "_tweak",
+      "_track",
+      "_owned_tracks",
+      "validate",
+      "enter",
+      "_restrict_selection",
+      "_restore_prior",
+      "commit",
+      "_commit_base",
+      "set_edit_target",
+      "set_solo",
+      "resume",
+      "exit",
+      "isolated_sync",
+      "_export_session",
+      "_poll_sync",
+      "cancel_sync",
+      "load_weapon",
+      "remove_weapon",
+      "register_b",
+      "register_runtime",
+      "unregister_runtime"
+    ],
+    "no_added_runtime_functions": true,
+    "generic_worklist_ui_unchanged": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "77d40e3dc4eaa579d75b1d4470ec303cc528db6809b59e729b8804f93be1ae6a",
+      "bytes": 34647
+    },
+    "commit_exit_isolated_sync_seek_collection_loop_raise_unchanged": true,
+    "all_existing_native_clock_receipt_transaction_and_nla_guards_unchanged": true
+  },
+  "behavior": {
+    "capture_admission": "Validated Edit B HoldPose with actual native Tweak; otherwise Resume Editing error.",
+    "explicit_sync": "Only active exact Edit B HoldPose and collection=False captures before existing commit.",
+    "capture_domain": "Existing direct local scope.channels values; finite admission and curve rollback unchanged.",
+    "sync_poll": "Active A or foreign selected item/native Rig disables the dedicated Sync B operator.",
+    "closed_and_collection_routes": "Existing commit/export behavior preserved; no implicit pose capture."
+  },
+  "focused_test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_save_pose.py",
+    "sha256": "3474454baf3e185b3df5896c86b98d9b4c2a89d25d1fe1aa5b3dad422ac9c626",
+    "bytes": 11600
+  },
+  "pure_test_results": {
+    "test_count": 14,
+    "exit_code": 0,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds_reported": 0.961,
+    "stdout_summary": "Ran 14 tests in 0.961s; OK"
+  },
+  "actual_test_command": "& 'C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe' -B 'D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_save_pose.py' -v",
+  "test_scope": [
+    "Actual capture source on fake exact local scope, key equality, finite values, partial-write rollback.",
+    "Actual begin_sync source stopped before filesystem/worker preflight; explicit/collection/mode/owner gates.",
+    "Actual UI poll source on plain session metadata; Undoable operator identity preserved."
+  ],
+  "source_compile_count": 3,
+  "limitations": [
+    "No add-on or bpy imports; pure fixtures do not establish native Pose/NLA/Undo/UI acceptance.",
+    "Sync operator remains REGISTER only; only Save Pose retains its existing native Undo option.",
+    "No build/projection/deployment/native/SDK/GUI/artist save/current workspace mutation performed."
+  ]
+}

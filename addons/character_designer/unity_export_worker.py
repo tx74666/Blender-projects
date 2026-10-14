@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import importlib
+import importlib.util
 import json
 from array import array
 from pathlib import Path
@@ -26,10 +27,122 @@ CONTROL_OWNERS = {
     'spine_ik_fk', 'root_control',
 }
 SUPPORTED_MODIFIERS = {'MIRROR', 'SUBSURF', 'SOLIDIFY', 'TRIANGULATE', 'NODES'}
+_DRESS_RECORD_KEY = 'character_designer_skirt_v1'
+_DRESS_OWNER_KEY = 'character_designer_skirt_owner'
+_DRESS_RIG_KEY = 'character_designer_skirt_armature'
+_DRESS_ROLE_KEY = 'character_designer_skirt_surface_role'
+_DRESS_BACKEND = 'ACTUAL_SURFACE_DELTA_V1'
 
 
 class ExportError(ValueError):
     pass
+
+
+def _direct_export_guard():
+    name = '_cdesigner_direct_export_guard_v1'
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, Path(__file__).with_name('dress_export_guard.py'))
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        sys.modules[name] = module
+    return sys.modules[name]
+
+
+def _dress_backend_source(obj):
+    """Light snapshot inventory; no proof imports for legacy or normal meshes."""
+    if obj.type != 'MESH' or _DRESS_RECORD_KEY not in obj:
+        return False
+    try:
+        raw = obj[_DRESS_RECORD_KEY]
+        if type(raw) is not str:
+            raise ValueError()
+        record = json.loads(raw)
+        if type(record) is not dict:
+            raise ValueError()
+        physics = record.get('physics')
+        if physics is None:
+            return False
+        if type(physics) is not dict:
+            raise ValueError()
+        backend = physics.get('backend', 'LEGACY_CAGE')
+        if backend == 'DIRECT_MAIN_CLOTH_V1':
+            raise ExportError(f'{obj.name}: Direct Dress export validation is pending; this worker cannot publish its vertex physics as skeletal animation.')
+        if backend == 'LEGACY_CAGE':
+            if 'surface' in physics:
+                raise ValueError()
+            return False
+        if type(backend) is not str or backend != _DRESS_BACKEND:
+            raise ValueError()
+        return True
+    except ExportError:
+        raise
+    except (ValueError, TypeError, KeyError) as exc:
+        raise ExportError(f'{obj.name}: saved Dress backend metadata is invalid.') from exc
+
+
+def _dress_services():
+    package_name = '_cdesigner_model_export_services'
+    if package_name not in sys.modules:
+        package = types.ModuleType(package_name)
+        package.__path__ = [str(Path(__file__).parent)]
+        sys.modules[package_name] = package
+    try:
+        service = importlib.import_module(package_name + '.skirt_surface')
+    except ImportError as exc:
+        raise ExportError('Restore the validated Dress surface service before exporting this snapshot.') from exc
+    if getattr(service, 'BACKEND', None) != _DRESS_BACKEND:
+        raise ExportError('The snapshot Dress export service has a different backend contract.')
+    return service
+
+
+def _capture_dress_snapshot(job, objects):
+    """Validate all sources before animation, constraints or modifiers change."""
+    if any(_DRESS_ROLE_KEY in obj for obj in objects):
+        raise ExportError('A Dress physics helper is inside the explicit FBX object inventory.')
+    sources = [obj for obj in objects if _dress_backend_source(obj)]
+    captured = job.get('dress_surfaces', [])
+    if type(captured) is not list or len(captured) != len(sources):
+        raise ExportError('The snapshot Dress surface inventory differs from its captured proof.')
+    if not sources:
+        return []
+    service = _dress_services()
+    result = []
+    for source, proof in zip(sources, captured):
+        rig = source.get(_DRESS_RIG_KEY)
+        if (type(proof) is not dict or type(proof.get('version')) is not int or proof['version'] != 1
+                or proof.get('backend') != _DRESS_BACKEND or proof.get('source') != source.name
+                or type(proof.get('owner')) is not str or not proof['owner']
+                or proof['owner'] != source.get(_DRESS_OWNER_KEY)
+                or rig not in objects or rig.type != 'ARMATURE' or proof.get('rig') != rig.name):
+            raise ExportError('The snapshot Dress source or original rig differs from the captured proof.')
+        try:
+            service.validate_snapshot(source, proof)
+            detached = json.loads(json.dumps(proof, allow_nan=False))
+            physics = json.loads(source[_DRESS_RECORD_KEY])['physics']
+            helpers = set(physics['colliders']) | {
+                name for names in physics['surface']['roles'].values() for name in names}
+            if helpers & {obj.name for obj in objects}:
+                raise ValueError('An owned surface helper or collider is inside the FBX object inventory.')
+        except (ValueError, TypeError, KeyError) as exc:
+            raise ExportError(f'{source.name}: snapshot Dress surface proof is invalid: {exc}') from exc
+        result.append((source, detached))
+    return result
+
+
+def _strip_dress_snapshot(captured):
+    """Strip only proven owned position overlays in this disposable snapshot."""
+    if not captured:
+        return []
+    service = _dress_services()
+    result = []
+    for source, proof in captured:
+        try:
+            service.strip_export_snapshot(source, proof)
+        except ValueError as exc:
+            raise ExportError(f'{source.name}: the owned Dress overlay could not be stripped: {exc}') from exc
+        result.append({'source': proof['source'], 'owner': proof['owner'], 'backend': _DRESS_BACKEND,
+                       'static_source_rest': True, 'simulation_baked': False})
+    return result
 
 
 def _warn(warnings, message):
@@ -114,6 +227,45 @@ def _shape_inputs(obj, owned_names):
     return basis, result
 
 
+def _dispose_evaluation_copy(temporary, data, copied_key):
+    """Release only captured evaluation IDs, including a detached copied Key."""
+    failures = []
+    for block, collection, object_block in ((temporary, bpy.data.objects, True), (data, bpy.data.meshes, False)):
+        if block is None:
+            continue
+        try:
+            if collection.get(block.name) != block:
+                raise ExportError('An evaluation ID was replaced; its replacement was preserved.')
+            if object_block:
+                collection.remove(block, do_unlink=True)
+            elif block.users == 0:
+                collection.remove(block)
+            else:
+                raise ExportError('An evaluation Mesh acquired an outside user; it was preserved.')
+        except ReferenceError:
+            pass  # Native removal already disposed of this captured ID.
+        except Exception as error:
+            failures.append(str(error))
+    if copied_key is not None:
+        name, pointer = copied_key
+        try:
+            key = bpy.data.shape_keys.get(name)
+            if key is not None:
+                if (key.as_pointer() != pointer or key.library or key.override_library
+                        or bpy.data.user_map(subset={key}).get(key, set())):
+                    raise ExportError('The copied evaluation Key changed or acquired an outside user; it was preserved.')
+                # Blender 5.1 can retain a phantom user after native clearing.
+                # Exact identity and native references, never orphan searches,
+                # prove whether this one captured copied Key can be removed.
+                bpy.data.batch_remove(ids=(key,))
+                if bpy.data.shape_keys.get(name) is not None:
+                    raise ExportError('Blender did not remove the captured evaluation Key.')
+        except Exception as error:
+            failures.append(str(error))
+    if failures:
+        raise ExportError('Export evaluation cleanup needs recovery: ' + '; '.join(failures))
+
+
 def _bake_mesh(context, obj, owned_names, warnings, forearm=None):
     """Evaluate each artist delta with the same modifier stack, keeping weights."""
     basis, shapes = _shape_inputs(obj, owned_names)
@@ -142,26 +294,48 @@ def _bake_mesh(context, obj, owned_names, warnings, forearm=None):
     armatures = [modifier for modifier in obj.modifiers if modifier.type == 'ARMATURE' and modifier.show_viewport]
     if len(armatures) > 1:
         raise ExportError(f'{obj.name}: more than one active Armature modifier needs an explicit combined skinning setup.')
-    temporary = obj.copy()
-    temporary.data = obj.data.copy()
-    temporary.name = '.CDesigner Export Evaluation'
-    # Snapshot ownership must never make the calibration handler claim this
-    # disposable evaluation object if another add-on is present in the worker.
-    for name in tuple(temporary.keys()):
-        if name.startswith('character_designer_'):
-            del temporary[name]
-    context.scene.collection.objects.link(temporary)
-    _clear_animation(temporary)
-    _clear_animation(temporary.data.shape_keys)
-    if temporary.data.shape_keys:
-        temporary.shape_key_clear()
-    for modifier in tuple(temporary.modifiers):
-        if modifier.type == 'ARMATURE' or not modifier.show_viewport:
-            temporary.modifiers.remove(modifier)
-    for constraint in tuple(temporary.constraints):
-        temporary.constraints.remove(constraint)
-    base_mesh = None
+    temporary, owned_data, copied_key, base_mesh = None, None, None, None
     try:
+        temporary = obj.copy()
+        data = obj.data.copy()
+        if data == obj.data or data.library or data.override_library:
+            raise ExportError('Export evaluation requires an independent local Mesh copy.')
+        owned_data = data
+        key, original_key = data.shape_keys, obj.data.shape_keys
+        if key is not None:
+            if original_key is None or key == original_key or key.library or key.override_library:
+                raise ExportError('Export evaluation requires an independent local Key copy.')
+            copied_key = (key.name, key.as_pointer())
+            if (bpy.data.shape_keys.get(key.name) != key
+                    or bpy.data.user_map(subset={key}).get(key, set()) != {data}):
+                raise ExportError('The copied evaluation Key has unexpected native users; preserve it.')
+        temporary.data = data
+        if data.users != 1:
+            raise ExportError('The evaluation Mesh copy has unexpected users; preserve it.')
+        temporary.name = '.CDesigner Export Evaluation'
+        # Snapshot ownership must never make the calibration handler claim this
+        # disposable evaluation object if another add-on is present in the worker.
+        for name in tuple(temporary.keys()):
+            if name.startswith('character_designer_'):
+                del temporary[name]
+        context.scene.collection.objects.link(temporary)
+        _clear_animation(temporary)
+        _clear_animation(key)
+        if key is not None:
+            # The worker also runs as a standalone file without add-on registration.
+            spec = importlib.util.spec_from_file_location('cdesigner_mesh_copy', Path(__file__).with_name('mesh_copy.py'))
+            mesh_copy = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mesh_copy)
+            mesh_copy.clear_copied_shape_keys(obj, temporary)
+            # The helper proved that this exact copied Key is gone. Later
+            # exported Keys may legitimately reuse its native display name.
+            copied_key = None
+        for modifier in tuple(temporary.modifiers):
+            if modifier.type == 'ARMATURE' or not modifier.show_viewport:
+                temporary.modifiers.remove(modifier)
+        for constraint in tuple(temporary.constraints):
+            temporary.constraints.remove(constraint)
+
         def evaluate(coordinates):
             temporary.data.vertices.foreach_set('co', coordinates)
             temporary.data.update()
@@ -196,7 +370,6 @@ def _bake_mesh(context, obj, owned_names, warnings, forearm=None):
         expected = _topology(base_mesh)
         correction = None
         if forearm is not None:
-            import importlib.util
             spec = importlib.util.spec_from_file_location('cdesigner_unity_forearm', Path(__file__).with_name('unity_forearm.py'))
             module = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(module)
@@ -234,12 +407,11 @@ def _bake_mesh(context, obj, owned_names, warnings, forearm=None):
                 'skinned': bool(armatures), 'disabled_skinning': disabled_skinning,
                 **({'forearm': correction} if correction else {})}
     finally:
-        data = temporary.data
-        bpy.data.objects.remove(temporary, do_unlink=True)
-        if data.users == 0:
-            bpy.data.meshes.remove(data)
-        if base_mesh is not None and base_mesh.users == 0:
-            bpy.data.meshes.remove(base_mesh)
+        try:
+            _dispose_evaluation_copy(temporary, owned_data, copied_key)
+        finally:
+            if base_mesh is not None and base_mesh.users == 0:
+                bpy.data.meshes.remove(base_mesh)
 
 
 def _is_control(bone):
@@ -302,8 +474,8 @@ def _clean_skeleton(context, obj, objects):
     context.view_layer.objects.active = obj
     bpy.ops.object.mode_set(mode='EDIT')
     try:
-        matrices = {bone.name: bone.matrix.copy() for bone in obj.data.edit_bones if bone.name in names}
-        lengths = {bone.name: bone.length for bone in obj.data.edit_bones if bone.name in names}
+        geometry = {bone.name: (bone.head.copy(), bone.tail.copy(), bone.roll)
+                    for bone in obj.data.edit_bones if bone.name in names}
         parents = {}
         for name in names:
             parent = obj.data.edit_bones[name].parent
@@ -319,8 +491,17 @@ def _clean_skeleton(context, obj, objects):
                 obj.data.edit_bones.remove(bone)
         for name in names:
             bone = obj.data.edit_bones[name]
-            bone.matrix = matrices[name]
-            bone.length = lengths[name]
+            # Parenting uses Armature-space geometry. Avoid decomposing the
+            # bone's own matrix back into an axis/roll: native matrix/roll
+            # roundtrips can reverse its roll by pi. Restore only
+            # native geometry fields that actually changed during filtering.
+            head, tail, roll = geometry[name]
+            if bone.head != head:
+                bone.head = head
+            if bone.tail != tail:
+                bone.tail = tail
+            if bone.roll != roll:
+                bone.roll = roll
     finally:
         bpy.ops.object.mode_set(mode='OBJECT')
     obj.data.pose_position = 'REST'
@@ -703,6 +884,11 @@ def _export_textures(objects, stage, warnings):
 
 
 def export_job(job):
+    # Admission precedes directories and all native snapshot mutations.
+    try:
+        _direct_export_guard().reject_model_snapshot(job, bpy.data.objects)
+    except (ValueError, TypeError) as error:
+        raise ExportError(str(error)) from error
     stage = Path(job['stage']).resolve()
     stage.mkdir(parents=True, exist_ok=True)
     filename = job['filename']
@@ -719,6 +905,8 @@ def export_job(job):
     if main not in objects or main.type != 'ARMATURE':
         raise ExportError('The selected Main Rig is not in the export snapshot.')
     warnings = list(job.get('warnings', []))
+    dress_capture = _capture_dress_snapshot(job, objects)
+    dress_info = _strip_dress_snapshot(dress_capture)
     _disable_hair_simulation()
     hair_capture = _capture_hair_snapshot(job, objects)
     _restore_image_buffers(job)
@@ -792,7 +980,6 @@ def export_job(job):
     context.view_layer.update()
     simple_materials = []
     if job.get('simple_materials'):
-        import importlib.util
         spec = importlib.util.spec_from_file_location('cdesigner_unity_materials', Path(__file__).with_name('unity_materials.py'))
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
@@ -814,6 +1001,18 @@ def export_job(job):
     )
     if 'FINISHED' not in exported or not (stage / filename).is_file():
         raise ExportError('Blender did not complete the FBX export.')
+    length_spec = importlib.util.spec_from_file_location(
+        'cdesigner_bone_rest_lengths', Path(__file__).with_name('bone_rest_lengths.py'))
+    length_module = importlib.util.module_from_spec(length_spec)
+    length_spec.loader.exec_module(length_module)
+    try:
+        bone_lengths = length_module.capture(main,
+            hashlib.sha256((stage / filename).read_bytes()).hexdigest(), scene.unit_settings.scale_length)
+    except length_module.BoneLengthError as error:
+        # Model export still supports older non-uniform or reflected rigs.
+        # Such exports keep legacy import behavior rather than guessing lengths.
+        bone_lengths = None
+        _warn(warnings, 'Terminal bone length recovery was not exported: ' + str(error))
     files.insert(0, filename)
     hair_info = {'active': False, 'file': None, 'simulation_baked': False,
                  'status': 'No configured Hair motion source in this export.'}
@@ -851,9 +1050,11 @@ def export_job(job):
                                    else 'Correction removed; Unity companion will restore the plain runtime prefab.')}
     return {'ok': True, 'files': files, 'warnings': warnings,
             'hair_motion': hair_info,
+            'dress_surfaces': dress_info,
             'simple_materials': simple_materials,
             **({'forearm_correction': forearm_info} if forearm_info else {}),
             'objects': [obj.name for obj in objects], 'rigs': rigs,
+            **({'bone_rest_lengths': bone_lengths} if bone_lengths is not None else {}),
             'source_rigs': source_rigs, 'accessory_bone_mapping': accessory_mapping,
             'meshes': mesh_results, 'shape_keys': {name: info['shape_keys'] for name, info in mesh_results.items()},
             'materials': materials, 'origin': list(origin), 'unit_scale': scene.unit_settings.scale_length}

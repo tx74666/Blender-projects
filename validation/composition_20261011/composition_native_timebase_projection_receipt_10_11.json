@@ -1,0 +1,121 @@
+{
+  "schema": "x.validation.character-composition-native-timebase-projections/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "release_or_deployment_performed": false,
+  "fix": {
+    "kind": "Explicit native packet timebase for Composition B, protected A import and A Work Copy export, plus exact owned native NLA strip selection",
+    "default_unity_preview_scene_clock_preserved": true,
+    "artist_scene_clock_not_changed_by_import": true,
+    "changed_runtime_sources": {
+      "unity_animation.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+        "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+        "bytes": 41190
+      },
+      "animation_link_source.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+        "sha256": "9aaa032749a86ec808523697c8a85679dce0134e60dfb640331bd41f53859998",
+        "bytes": 12785
+      },
+      "animation_composition.py": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+        "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+        "bytes": 99028
+      },
+      "animation_export.py": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+        "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+        "bytes": 10708
+      }
+    },
+    "before_sha256": {
+      "animation_composition.py": "783b296dc635b9172fa7ebb7acbdc7aa6b436e1a2a88a76b53e71e08a65dfc5a",
+      "animation_export.py": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+      "animation_link_source.py": "cce7fddb3839ff82ba352d78bcddb98a3847d01264de484499ae62a752481965",
+      "unity_animation.py": "44c6014ac8c6c46ef4864aa0560d93375f10b99aa0c5d3276122882304ed493f"
+    },
+    "independent_source_review": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_nla_track_identity_peer_source_review_20261011_1861bcf7.json",
+      "sha256": "d36c5a58e232acf6123fc3cf2bcb37c73c7da0b306f9b8fb88351153b7e68762",
+      "bytes": 11395
+    },
+    "minimal_export_projection": {
+      "preserved_frozen_parent_sha256": "9c7ef264cbe13eec00e393f974865f173f31d20ccadce5ecba8f058bbd4d83c4",
+      "projected_source": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\projected_animation_export_native_timebase.py",
+        "sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b",
+        "bytes": 10708
+      },
+      "canonical_source": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+        "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+        "bytes": 11624
+      },
+      "unchanged_other_functions": true,
+      "new_clock_helper_ast_equal": true,
+      "only_clock_statements_added": true,
+      "default_scene_clock_preserved": true,
+      "unrelated_canonical_changes_preserved": true,
+      "canonical_before_clock_sha256": "9c8e638cfd8408fe729103efe232ed23c334b2a879e9c226376057b22d5b28cf",
+      "frozen_parent_path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\character_designer\\animation_export.py",
+      "unchanged_other_function_count": 7,
+      "strict_reverse_ast_verified": "Remove the new frame_fps assignment and restore exactly fps expression plus two job dictionary values; begin_export becomes AST-identical to frozen9c7ef.",
+      "excluded_unrelated_work": "Existing canonical Dress admission/snapshot imports and code were not copied into the approved minimal projected exporter."
+    },
+    "canonical_export_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+      "bytes": 11624
+    },
+    "focused_pure_test_report": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\docs\\composition_native_import_timebase_source_report_20261011_nla_track_identity_1861bcf7.json",
+      "sha256": "c90821e26da37cb379020e207fbbf1fd128644ac55101fa8dbed0cdb12aa4acb",
+      "bytes": 10977
+    },
+    "native_validation": "pending"
+  },
+  "previous_projections": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_08\\python_projection.json",
+      "sha256": "20c0999f276c6258a77f2b3d17eda52ef2236e409073fb5a883ca622e39e78e0",
+      "bytes": 23988
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_09\\candidate_projection.json",
+      "sha256": "18dd5a276be6f30318aeb5777df4dccdf5ef28ac57852920bd0e739bde22dc59",
+      "bytes": 23581
+    }
+  ],
+  "python_projection": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_10\\python_projection.json",
+    "sha256": "a7c660d546bcc6f2b0720750eb03279b62a24f968967a385746c6f13effeb150",
+    "bytes": 31012,
+    "file_count": 167,
+    "changed_product_files": [
+      "animation_composition.py",
+      "animation_export.py",
+      "animation_link_source.py",
+      "unity_animation.py"
+    ]
+  },
+  "complete_candidate": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_11\\candidate_projection.json",
+    "sha256": "12ee822739fe467db86eee44f861f70d006d219957bd249f8d179e41d2415d7d",
+    "bytes": 27839,
+    "file_count": 173,
+    "changed_product_files": [
+      "animation_composition.py",
+      "animation_export.py",
+      "animation_link_source.py",
+      "unity_animation.py"
+    ]
+  },
+  "embedded_overlay_manifest": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\embedded-unity-candidate-r6.json",
+    "sha256": "c3e7742ac5068f2aafb7f9937a59a866bad7f719c92a3bcb7a45154e7d73e85c",
+    "bytes": 3120
+  },
+  "embedded_overlay_count": 8,
+  "embedded_overlays_unchanged": true
+}

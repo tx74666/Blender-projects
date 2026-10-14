@@ -1,0 +1,223 @@
+{
+  "schema": "cdesigner.x-rigging-source-freeze/1",
+  "created_utc": "2026-10-11T20:37:43.979348+00:00",
+  "status": "SOURCE_FROZEN_NATIVE_PENDING",
+  "canonical_repository": "D:\\MyRepository\\Blender-addons-by-Randy",
+  "source_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+      "sha256": "659c6e8e6ddfd5f0e5179e8a3dcaf77c7714369daa1d432a99bd9bf22f32e9be",
+      "bytes": 15476,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "364307151184fc9a3b934f03cc4269609365491a7fabeb06c36ccd87e6455aaa",
+      "bytes": 21500,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_contract.py",
+      "sha256": "5383376637c41512d32c56399684b94358f5f15fd1cc0b08b97f7ab8b0022dc0",
+      "bytes": 23303,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+      "bytes": 40384,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_collection.py",
+      "sha256": "8f3119ebdc89c0b783ce7fab58a4586b19d4f59d915e299ba521a071fae86c8c",
+      "bytes": 45560,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+      "sha256": "9551956548f20607331179034b44dc679888fc85da035fe1f6342e37de580d9c",
+      "bytes": 40280,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_export.py",
+      "sha256": "d236f82007007297b768cde2d0428afdd63c3a6b36aa3d19e5fcf4635470846d",
+      "bytes": 13090,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_contract.py",
+      "sha256": "8761e4ca7903444f3b748381038917d91827ecedbb0e0ee56a6a089e5764edb9",
+      "bytes": 25341,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_weapon.py",
+      "sha256": "5e79a45de2186a66a7dd11a5701ab6be1514e00fbaed20585a6127b92fc174a1",
+      "bytes": 10858,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_recovery.py",
+      "sha256": "8b647487087bdc5dc0e87133a3e2cdd5fc7faa271421f49d1c660550841e9b6d",
+      "bytes": 19678,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_collection.py",
+      "sha256": "f74ac93f0c9cf5bdaf2fe96b7ee0ec9552f03e4f141500c7f39bc996ffddcbc1",
+      "bytes": 14155,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_collection.py",
+      "sha256": "a30e2db2fa865be8d94dd5e8150203f4918da9aa8eeb80c5b564d499c8cc73d2",
+      "bytes": 53268,
+      "syntax": "PASS"
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_weapon_ownership.py",
+      "sha256": "e9f5d313f6aaa557ac22641f3653c09d1563cb5399a0f1ef873a96353ba1e35b",
+      "bytes": 12233,
+      "syntax": "PASS"
+    }
+  ],
+  "wire": {
+    "path": "D:\\Unity Projects\\RandomRealm2\\.codex\\task-staging\\character-composition-20261011\\generic-rigging-design\\WIRE_FIXTURE_R3.json",
+    "sha256": "edc33c5d581a9fd79faaf4b49c69e81bd729b2adf983dd328e7a045933d46517",
+    "validation": "validate_capture + validate_export + build_export PASS",
+    "capture_fields": 22,
+    "weapon_preview_fields": 10,
+    "return_fields": 14,
+    "base_slot": 4,
+    "input_slot": 7,
+    "binding_sha256": "f92703dbdb8e10779e08434134fc7cca69d39d633dfccb48746a4aa087b92e73",
+    "capture_sha256": "6305c933c6e6cfe2de66347eaa3bcbecefd101061153ef47484684db45bd1af8",
+    "illustrative_placeholder": true,
+    "native_acceptance": false
+  },
+  "pure_tests": [
+    {
+      "file": "test_animation_rigging_contract.py",
+      "tests": 27,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_rigging_export.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_link.py",
+      "tests": 16,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist.py",
+      "tests": 15,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_link_source_images.py",
+      "tests": 6,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist_target.py",
+      "tests": 45,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist_rigging_collection.py",
+      "tests": 11,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_worklist_collection.py",
+      "tests": 48,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_rigging_weapon.py",
+      "tests": 10,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_character_composition_weapon_sources.py",
+      "tests": 8,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_character_composition_weapon_ownership.py",
+      "tests": 13,
+      "result": "PASS",
+      "native": false
+    },
+    {
+      "file": "test_animation_rigging_recovery.py",
+      "tests": 7,
+      "result": "PASS",
+      "native": false,
+      "runner": "delegated source reviewer",
+      "seconds": 0.836
+    }
+  ],
+  "pure_tests_total": 217,
+  "bridge_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\root_rigging_export_link_source_receipt_659c6e8e.json",
+    "sha256": "36626a4b6248e04dc0f72711c352828390295a1c2199ee43bd7e66624add0556"
+  },
+  "boundaries": {
+    "blender_native_calls": 0,
+    "sdk_calls": 0,
+    "gui_calls": 0,
+    "export_workers": 0,
+    "deployment_operations": 0,
+    "artist_scene_writes": 0,
+    "unity_csharp_writes": 0,
+    "git_commit_push_pr_release_operations": 0
+  },
+  "pending_native": [
+    "Use the original Rig and original display settings: colors, collections and controls preserved.",
+    "Verify base editing plus actual source-local Target/Hint preview, current Right-hand parent for Left Target, and exact 20 control curves in independent carrier.",
+    "Verify base-only physical worker snapshot and frozen sidecar identities/slots, Target-only changes recognized by Sync, source read-only enforcement.",
+    "Verify actual weapon surface/Socket transform/scale, native rollback/commit cleanup, Save/Undo/Redo/reopen without extra Actions or leaked display IDs.",
+    "Complete Unity owned Base+independent Target apply and repeat, then save artist blend with success proof and normally close task test scenes."
+  ],
+  "separate_parent_owned": [
+    "animation_worklist_ui.py",
+    "control_pose_capture.py",
+    "__init__.py and version/release packaging",
+    "Unity C# and actual Unity native validation"
+  ],
+  "limitations": [
+    "Pure fault tests mock formula and complete admission boundaries; no Blender solver or native user-map acceptance.",
+    "Prior u7 external-reference removal failure remains an explicit native acceptance item; remove_context guard unchanged.",
+    "R3 fixture is illustrative with placeholder identities/matrices; it is not a captured native character or weapon.",
+    "Include Fingers behavior was explained, not changed.",
+    "No deployment, release build, artist save or native/worker operation by this X source phase."
+  ]
+}

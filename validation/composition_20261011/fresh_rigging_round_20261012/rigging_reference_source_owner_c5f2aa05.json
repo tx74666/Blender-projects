@@ -1,0 +1,190 @@
+{
+  "schema": "x.validation.rigging-preview-reference-source-owner/1",
+  "status": "SOURCE_PURE_PASS_NATIVE_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "owner_scope": [
+    "addons/character_designer/unity_animation_rigging.py",
+    "tests/test_animation_rigging_reference.py"
+  ],
+  "source_files": {
+    "unity_animation_rigging.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "c5f2aa055c43d97afbe057498041e5a01d59002ebb99c271f1438f5d03a150ea",
+      "bytes": 98837
+    },
+    "test_animation_rigging_reference.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_reference.py",
+      "sha256": "4b89ca819c495ebd4096c80091da39d64cf9f49cc6794c40d1e517ae10ac5709",
+      "bytes": 31363
+    }
+  },
+  "prior_native_pin": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_f9e41c12\\source\\character_designer\\unity_animation_rigging.py",
+    "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+    "bytes": 78327
+  },
+  "apply_unchanged": true,
+  "apply_ast_sha256": "88deaa41b48fa79ec76705133248475188daf3322f158b3411739afacdf3e4c4",
+  "changed_existing_functions": [
+    "_validate",
+    "_tracks",
+    "_make_tracks",
+    "activate",
+    "_reacquire"
+  ],
+  "new_functions": [
+    "_reference_file_sha",
+    "_preview_reference_seal",
+    "_validate_preview_reference",
+    "_reference_model_identity",
+    "_reference_admission",
+    "_preview_base_timing",
+    "_assign_preview_base",
+    "prepare_preview_reference",
+    "set_preview_reference"
+  ],
+  "syntax": {
+    "ast_parse": "PASS",
+    "in_memory_compile": "PASS",
+    "target_imports": 0
+  },
+  "test_result": {
+    "file": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_rigging_reference.py",
+    "total": 20,
+    "new_added": 20,
+    "passed": 20,
+    "failed": 0,
+    "duration_seconds": 2.892,
+    "log_pin": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_09.log",
+      "sha256": "980f696abbc7fd1a5357dfb84541c2e1f7f749b23db4eb83348d6bf3b86bbd74",
+      "bytes": 3836
+    },
+    "kind": "Actual AST functions with fake RNA plus real temporary-file byte pins; no native solver/operator/model proof.",
+    "prior_attempt_logs": [
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure.log",
+        "sha256": "92b55eab68da69b329d91aeafbc79768053b0737bda0ffc24c055462da7ede9c",
+        "bytes": 22977
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_02.log",
+        "sha256": "824428fe8eea9b4460e5de77a1c9c7c2f1dc02ecb2eddd66e4f7ec0edabb0690",
+        "bytes": 24409
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_03.log",
+        "sha256": "02dd9aef337a17b2adb615cb54cf07515bde37dcc041624c27c1f5b6cfc1a566",
+        "bytes": 3269
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_04.log",
+        "sha256": "ce5024a17a91e417236b7238e7a9b0655da5a16e41720850aa686c855d9f5e10",
+        "bytes": 2114
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_05.log",
+        "sha256": "94ecce1aa9749970c74aa63fefee7acd70d100f331d2955c71c37c2f3233e031",
+        "bytes": 4410
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_06.log",
+        "sha256": "71286574b976398329705aa2fae96ca62264140cbc75922ea0ec814fc291c089",
+        "bytes": 4438
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_07.log",
+        "sha256": "86b70740e595400d3f8cfcf87c8a0666b2b64930cfd20200b9fdcee8213186c7",
+        "bytes": 3280
+      },
+      {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_pure_08.log",
+        "sha256": "86439211a722a377bc31fe8672004e11e6a7b368740bc247976a34dab8256481",
+        "bytes": 3476
+      }
+    ],
+    "prior_attempt_note": "Fixture additions corrected missing NLA pointer API, parent import module, bone_display and scene preview/tool fields. The final Source also adds the authorized public import and immutable original reference seal; earlier passes do not prove final Source. Root peer found the actual weighted:false root schema differed from the initial fake skinWeighted fixture; corrected Source and real-schema regression pass on the new bytes. Prior 4b7 execution remains historical.",
+    "revision_added": 2
+  },
+  "current_recovery_result": {
+    "status": "not_executed_by_owner",
+    "tests": 12,
+    "owner": "Root schedules separately on these new native bytes"
+  },
+  "public_api": {
+    "prepare_preview_reference": "(context, session, reference_packet_file, reference_packet_sha256, *, model_file, model_sha256) -> (reference_action, reference_slot_handle)",
+    "set_preview_reference": "(context, session, reference_action=None, reference_slot=None, *, reference_packet_file=None, reference_packet_sha256=None, model_file=None, model_sha256=None) -> session",
+    "restore_formal_base": "set_preview_reference(context, session)"
+  },
+  "guards": [
+    "Enabled owned Custom BASE, no Tweak/export; actual linked model pin and formal source association.",
+    "Full actual reference packet SHA/native clock/unique root/full Rest-ControlPlan and unchanged exact two-arm plan.",
+    "Reference is a separate public-prepared native Action/slot with sealed original curve proof; no reference Rigging/weapon carrier or solver import.",
+    "Only preview BASE strip changes with normalized phase and inclusive HOLD endpoint; formal base/input WorkID, draft UUID, capture and twenty curves stay unchanged.",
+    "Reference BASE Tweak is forbidden; independent BaseOnly and physical export remain on the original formal base.",
+    "Native-ID serializer and rollback track recreation retain preview reference; load/Undo reauthentication is read-only and never invokes a solver.",
+    "Failed import clears only its proven new Action/data; foreign/shared or edited recovery IDs are retained with primary error notes."
+  ],
+  "boundaries": {
+    "Blender": 0,
+    "SDK": 0,
+    "GUI": 0,
+    "worker": 0,
+    "deployment": 0,
+    "artist_writes": 0,
+    "held_harness_or_freeze_edits": 0
+  },
+  "limits": [
+    "Pure tests cannot prove actual FBX Rest/tail geometry, NLA operator semantics, native Undo/Redo or model/QA packet compatibility.",
+    "QA923 WalkRight is only an explicitly admitted preview source. Its packet cannot replace the formal prepared WorkID/Link/base/source hash.",
+    "Root must run current recovery12 and stage fresh package before any separately authorized native validation."
+  ],
+  "previous_owner_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\rigging_reference_source_owner_4b7c38fe.json",
+    "sha256": "1f52888bf3b33c9a9ccb0c4e33da3491ed569122675dc7e3226c19bac3cf3ebf",
+    "bytes": 7020
+  },
+  "peer_findings": {
+    "actual_bug": "Root uses weighted:false. skinWeighted was wrong and blocked actual packet admission; now strict weighted is False.",
+    "timing_correction": "Root peer withdrew timing bug: exact 4b7 already assigned scene_start before its track loop. A redundant tail assignment is removed; changed-start token restore coverage verifies the existing boundary.",
+    "current_recovery12": "Root passed 12 on prior 4b7 bytes. Root must execute once on these new bytes before R5."
+  },
+  "actual_packet_root_readonly_audit": [
+    {
+      "packet": {
+        "path": "D:\\Codex\\TA\\22e9216461994547ba6f06c17ba6d108\\CharacterTuning\\20261011-224149-293c0624f002\\Cosha_Walk_N.cdanim.json",
+        "sha256": "bffbbf00c3bcdfccc1a8bc1995aadeb188afb9f1d643bc78f1a34c8bb5cf7c4f",
+        "bytes": 2340227
+      },
+      "root": {
+        "name": "CoshaRig",
+        "path": "CoshaRig",
+        "parent": -1,
+        "restSource": "hierarchy",
+        "weighted": false
+      },
+      "native_mapping_verified": false
+    },
+    {
+      "packet": {
+        "path": "D:\\Unity Projects\\RandomRealm2\\Logs\\CharacterTuning\\TwoArmComposition\\923c041bf09342249800cd4454c884d5\\Cosha.Player\\Walk Right\\rigging\\Cosha_Walk Right.cdanim.json",
+        "sha256": "230b9a0f460fd11c0dd93d1e63b55754916418e7d97c8ec7ecdd10b1d2833e7a",
+        "bytes": 2422708
+      },
+      "root": {
+        "name": "CoshaRig",
+        "path": "CoshaRig",
+        "parent": -1,
+        "restSource": "hierarchy",
+        "weighted": false
+      },
+      "native_mapping_verified": false
+    }
+  ],
+  "prior_candidate_exact_copy": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\reference_prior_4b7c38fe\\unity_animation_rigging.py",
+    "sha256": "4b7c38fe25a8da0883fbf6232537c43a7506aea2ff2246888758deaeb2c56904",
+    "bytes": 98876
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "x.validation.prepared-rigging-attach-ui-source-owner/1",
+  "created_utc": "2026-10-12T01:40:46.5398796Z",
+  "owner": "/root/u4_receipt_review",
+  "status": "SOURCE_READY_PURE_CHECKS_PENDING",
+  "ownership": {
+    "writer_complete": true,
+    "canonical_scope": [
+      "addons/character_designer/animation_worklist_ui.py",
+      "tests/test_animation_worklist_rigging_attach_ui.py"
+    ],
+    "other_canonical_files_edited": [],
+    "root_handoff": "Root accepted e57 UI / d7 focused tests as unchanged Source scope; return slot for R7 prep, tests and compile remain HOLD under Building human priority."
+  },
+  "source_files": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+      "bytes": 43229
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach_ui.py",
+      "sha256": "d7f6444b640f8d057aa8657f32a50653832b092a0223bb2ba4e4a690151fabd9",
+      "bytes": 16155
+    }
+  ],
+  "immutable_final_source_snapshots": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_ui_attach_source_e57c2f51.py",
+      "sha256": "e57c2f51b072ca1aa949d80fcec57265a91edf053f60bc34a9d5e396c0c44a9c",
+      "bytes": 43229
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_ui_attach_tests_d7f6444b.py",
+      "sha256": "d7f6444b640f8d057aa8657f32a50653832b092a0223bb2ba4e4a690151fabd9",
+      "bytes": 16155
+    }
+  ],
+  "baseline_ui": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_ui_before_single_prepared_attach_2fe53037.py",
+    "sha256": "2fe530371d479d180f787c91772adfb77f32eaacfac64f31d2807cc53cd15ac3",
+    "bytes": 40668
+  },
+  "earlier_test_drafts": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_attach_ui_test_draft_d2a71263.py",
+      "sha256": "d2a7126348d50c2b44aa7ebe83e9385fbea328e86042beb2d477ffdaf531e7eb",
+      "bytes": 14875
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_attach_ui_test_draft_8eac7f1e.py",
+      "sha256": "8eac7f1eb9d7c729620660377416803f58719cbe81965d70fe6e88f464640c4c",
+      "bytes": 14971
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\worklist_rigging_attach_ui_test_draft_ee881953.py",
+      "sha256": "ee8819532f7166f0b3ed5886e5f343e624c94e705a104c68f83a2e7a99c40bf8",
+      "bytes": 15261
+    }
+  ],
+  "draft_preservation": "Earlier test bytes reconstructed by reversing only the known fixture/coverage edits; each exact SHA and byte count checked against earlier observations. All remain unexecuted.",
+  "observed_dependencies": {
+    "existing_ui_test_bootstrap": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_ui.py",
+      "sha256": "c30dbe9ef756c85444f2a80cc8cccfde33a9af1fde73ce5862d542269ca2df1c",
+      "bytes": 66049
+    },
+    "core_api_source": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "d4de3eff83abd01e74ec7c92a67ea62be0314cda757cc83ac2663e9308b13aad",
+      "bytes": 53135
+    },
+    "core_api_source_is_frozen_by_this_owner": false
+  },
+  "api": {
+    "operator": "character_designer.worklist_add_prepared_animation",
+    "label": "Add Prepared Animation",
+    "attach_call": "attach_prepared_rigging_work(context, filepath)",
+    "work_item_id": "Omitted; backend requires exactly one actual request-matched typed Rigging work item.",
+    "edit_key_gate": "validate_rigging_entry(context, item, session) raises before activate or key_current; return value is not consumed.",
+    "file_selection": "Explicit workspace JSON or readable workspace entry, preserved verbatim; no Connect, Refresh, Adopt, old-catalog selection or WorkID guess.",
+    "cached_display_eligibility": "Saved workspace, same settings.rig and setup Main Rig, local Armature native ID in current Scene, existing adoption record; actual inputs reauthenticated only in execute."
+  },
+  "minimum_diff": {
+    "method": "Read-only normalized Source-text top-level block comparison, not AST execution",
+    "new_blocks": [
+      "_prepared_rigging_target",
+      "CHARACTERDESIGNER_OT_worklist_add_prepared_animation"
+    ],
+    "changed_existing_blocks": [
+      "_run_rigging",
+      "draw_worklist",
+      "WORKLIST_CLASSES"
+    ],
+    "removed_blocks": [],
+    "net_added_lines": 52,
+    "all_other_existing_top_level_functions_and_classes_text_equal": true,
+    "imports_and_property_groups_changed": false,
+    "compile_or_ast_execution_performed": false
+  },
+  "pending_pure_checks": {
+    "status": "NOT_RUN_SHARED_HOLD",
+    "focused_test_file": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_rigging_attach_ui.py",
+    "focused_cases_prepared": 14,
+    "existing_ui_test_file": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_worklist_ui.py",
+    "existing_cases_prepared": 68,
+    "total_cases_pending": 82,
+    "new_unique_cases_prepared": 14,
+    "new_unique_cases_executed": 0,
+    "execution_count": 0,
+    "result": null,
+    "log": null,
+    "go_requirement": "Root followup GO after fresh actual shared-resource scope; core tests before UI, serial Python, fresh available RAM at least 200 MiB and slow down near 98 percent.",
+    "coverage": [
+      "poll/draw perform no data-file I/O or backend authentication",
+      "same adopted Main Rig only; foreign Scene/local-ID/idle checks",
+      "explicit filepath and readable entry preserved; omitted WorkID backend route",
+      "UI keeps cached old workspace/catalog/Rig/9rows; no reconnect/adoption dispatch",
+      "ordinary/ambiguous/stale backend rejection feedback",
+      "validate before Edit Base/Edit Controls/Save Controls native mutation",
+      "Source/foreign/stale-session and stale-selection refusals",
+      "reacquired RNA row wrapper passed to backend by stable item ID"
+    ]
+  },
+  "limits": {
+    "native_execution": false,
+    "blender_or_sdk_or_gui_calls": 0,
+    "worker_starts": 0,
+    "build_or_deploy_or_install": 0,
+    "artist_or_workspace_or_publication_writes": 0,
+    "git_operations": 0,
+    "version_bump": false,
+    "package_capture_or_r6_run": false,
+    "solver_or_original_rig_acceptance_proven": false
+  },
+  "preserved": "Prior R5/canonical80af/package/freezes/failure evidence retained; only Source evidence copies added. These two-file UI changes require a successor freeze, not the held only80af R6 package."
+}

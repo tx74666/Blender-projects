@@ -1,0 +1,50 @@
+{
+  "schema": "x.validation.character-composition-native-helper-source/1",
+  "date": "2026-10-11",
+  "source_only": true,
+  "background_source_status": "READY",
+  "tool": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\verify_character_composition_native.py",
+    "sha256": "ce4be885e95ef720f617712ca1bacc0347872a2a1542ade6cf8f9e86d6d34632",
+    "bytes": 52692
+  },
+  "test": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_native_fixture.py",
+    "sha256": "74a740960813c0df841d0dc2affea22c1aeeebae1d4b61930352a95310c21e97",
+    "bytes": 18159
+  },
+  "historical_frozen_tool": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n5\\tools\\verify_character_composition_native.py",
+    "sha256": "50de12f44258bb8c656ca769f25b6ee5fb8256ba690d1f229a3492758e832926",
+    "bytes": 48250
+  },
+  "supersedes_source_report": "native_helper_source_report_20261011_009b345e.json",
+  "diagnosis": "CollectionProperty row aliases can become invalid after later Add. The original imported native Action/content must also remain anchored before any next mutation; later coherent replacement is not a new baseline.",
+  "change": "Each genuine Add return immediately captures original plain native/public IDs, full spec and route fields, exact Custom Action pointer/slot and known complete fingerprint. Every post-growth, post-activate, isolated-evaluation and postExit fresh row lookup must match that immutable original anchor. Official current workspace/route/baseline and _association_record/get_link identity/native binding proofs remain mandatory.",
+  "strict_mapping": "Existing full217 exact native Scope/Rest/parent/size/control proof unchanged. Empty identity, unknown fingerprints, duplicate/missing rows, Action/content replacement and coherent matched-association rebind reject.",
+  "unchanged_API_AST": [
+    "validate_fixture",
+    "validate_variant_specs",
+    "runtime_projection",
+    "load_helper",
+    "save_qa_seed",
+    "fresh_main_rig_scene"
+  ],
+  "focused_validation": {
+    "tests_passed": 4,
+    "compile_passed": true,
+    "full_suite_repeated": false,
+    "coverage": "Actual canonical _item/_association_record boundaries; stale old alias resolves only by original unique native ID; empty current identity rejects; exact Action/slot/model/full identity/current prepared route checks; coherent same-ID in-place content or replacement Action plus matched rig association cannot reset original Add anchor."
+  },
+  "independent_core_review": {
+    "reviewer": "/root/export_scale_review",
+    "status": "READY",
+    "scope": "Exact final source/test hashes and per-Add anchors plus all reacquisition callsites rechecked read-only; tests not rerun by reviewer."
+  },
+  "new_API": "capture_import_anchor(context,rig,item_id,worklist,fingerprint); fresh_association_proof(context,rig,item_id,links,worklist,expected_model_sha256,*,anchor,fingerprint); reacquire_work_item(context,rig,item_id,worklist,*,anchor=None,fingerprint=None)",
+  "immutable_policy": "ce4be885 is final for the next root-owned background snapshot; old50de/009b attempts and source reports preserved. No further native helper edits pending.",
+  "native_executed_by_this_fix": false,
+  "fixture_generated": false,
+  "product_or_projection_modified": false,
+  "remaining": "Root owns new n7 candidate/config and explicit Parent native grant. Headful caller/session/Raise source freeze proceeds separately."
+}

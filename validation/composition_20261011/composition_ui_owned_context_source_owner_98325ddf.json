@@ -1,0 +1,112 @@
+{
+  "acceptance": "SOURCE_READY_NATIVE_PENDING: actual saved-seed entry/Continue/capture/reopens/normal exit require a fresh explicitly owned headful grant.",
+  "added_top_definitions": [
+    "owned_scene_context",
+    "validate_reopen_boundary"
+  ],
+  "before_source": {
+    "bytes": 20498,
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_ui_checkpoints_7eaaa038_before_owned_window_context.py",
+    "sha256": "7eaaa038ee91365704616abc198298a07b16d83973c7aa3052a90ba5782e635b"
+  },
+  "changed_top_definitions": [
+    "schedule_completion_quit",
+    "Controller",
+    "start"
+  ],
+  "context_boundaries": {
+    "continue_capture_stop_finished": "Fresh scopes; existing original protection bodies retained. Finished is called within valid stop scope.",
+    "missing_context_failure": "Report completed=False/native_pending=True with error/traceback; native generator cleanup and finished callback deferred rather than invoked in unadmitted context.",
+    "normal_quit": "Fresh timer scope plus completed/nonpending+pin_guard. FINISHED is recorded only as operator return; process_exit_verified remains False awaiting real OS closure.",
+    "ordinary_tick_guard_next_capture": "Inside freshly reacquired owned Scene scope; all overrides close when next yields an ordinary checkpoint or reopen command.",
+    "plain_controller_scene_name": true,
+    "reopen": "Only after old owned override exits; open_mainfile use_scripts=False/load_ui=False, no new RNA getters in that tick. Next persistent tick enters fresh scope and pin_guard before generator continues _current.",
+    "seam_visual_checkpoint_or_ack": false
+  },
+  "controller_methods": {
+    "added": [
+      "_capture_owned",
+      "_continue_owned",
+      "_reopen",
+      "_stop_owned",
+      "_tick_owned"
+    ],
+    "changed": [
+      "__init__",
+      "request_continue",
+      "capture",
+      "tick",
+      "stop"
+    ],
+    "inverse_tick_body_AST_exact": true,
+    "original_continue_capture_stop_bodies_exact": {
+      "capture": true,
+      "request_continue": true,
+      "stop": true
+    },
+    "unchanged": [
+      "persist",
+      "verify_captures",
+      "fresh_state",
+      "prepare_view"
+    ]
+  },
+  "interfaces": {
+    "owned_scene_context": "owned_scene_context(scene_name): exact existing sibling owned CONFIG/DATAFILES + actual resource roots, non-background, unique actual WM window and exact local Scene; current ViewLayer verified; QA window.scene retained; no Window/Scene stored across scope exit.",
+    "quit_optional_keyword": "schedule_completion_quit(bpy, report, path, pin_guard, *, scene_name=None)",
+    "reopen_exact_fields": [
+      "schema",
+      "phase",
+      "path",
+      "sha256",
+      "sceneName"
+    ],
+    "reopen_path_guard": "Exact direct owned evidence child, absolute path, <260 UTF16 units, existing file and full SHA; same admitted QA Scene.",
+    "reopen_phases": {
+      "active_save_reopen": "composition_active_session.blend",
+      "commit_close_and_closed_reopen": "composition_closed_session.blend"
+    },
+    "reopen_schema": "x.validation.character-composition-ui-reopen-boundary/1",
+    "start_public_signature_unchanged": true
+  },
+  "native_execution_performed": false,
+  "normalized_module_inverse_AST_equal": true,
+  "original_source_receipt": {
+    "bytes": 791,
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_ui_context_original_source_7eaaa038.json",
+    "sha256": "a83b03f5cdc1ff5384437b1f6633e925e32bab3e354ffb59a9f51ff79854b6bd"
+  },
+  "owner": "/root/rig_controls_review",
+  "passed": true,
+  "preserved_guards": [
+    "All exact screenshot SHA/readback/semantic-state/deadline safeguards remain unchanged.",
+    "No autoexec or rig_ui script execution; no visibility, curve, model, artist, packet or runtime changes.",
+    "No completion or process-exit claims are manufactured."
+  ],
+  "schema": "x.validation.character-composition-ui-owned-window-context-source-review/1",
+  "source_files": {
+    "composition_ui_checkpoints.py": {
+      "bytes": 28709,
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "98325ddfc8c7903bc0d11f2dd78a8b62cf9457a2fc6d398ab06c6ff524a51be7"
+    }
+  },
+  "source_only": true,
+  "source_validation": {
+    "AST_parse_and_in_memory_compile": "PASS",
+    "bare_assert_count": 0,
+    "compile_checks_performed": 2,
+    "current_workspace_JSON_reads": 0,
+    "native_SDK_GUI_execution": 0,
+    "resource_process_queries": 0,
+    "target_module_imports": 0,
+    "tests_run": 0
+  },
+  "unchanged_top_definitions": [
+    "require",
+    "validate_options",
+    "capture_path",
+    "owned_profile",
+    "_persist"
+  ]
+}

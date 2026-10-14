@@ -1,0 +1,2822 @@
+{
+  "filepath": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "dirty": true,
+  "scene": "Animation Worklist · Cosha",
+  "frame": 18,
+  "object": "CoshaRig.001",
+  "mode": "POSE",
+  "blender_version": "5.2.0 LTS",
+  "addon_version": [
+    0,
+    77,
+    22
+  ],
+  "addon_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+  "module_sha256": {
+    "character_designer.limb_ik": "5692ba78ed296ece885be5d519eb0f59152f4915784624c686880eee49d4dbf3",
+    "character_designer.limb_ik_fk": "9a2a3a3f43f3a4bf136bd42a5735521c26b167d4bc9b0268629bd128ddb4319c",
+    "character_designer.unity_animation": "7296db378c8c892b179dbf67d5bb308f04a367e2ef41369fb5f224f07da42a36"
+  },
+  "scenes": [
+    {
+      "name": "Animation Worklist · Cosha",
+      "unit_scale": 1.0,
+      "rigs": [
+        "CoshaRig.001"
+      ],
+      "settings": {
+        "character_designer_setup": {
+          "rig": "None"
+        },
+        "character_designer_animation_worklist": {
+          "rig": "CoshaRig.001"
+        },
+        "character_designer_mesh_mirror": {},
+        "character_designer_refine_symmetry": {},
+        "character_designer_finger_definition": {},
+        "character_designer_finger_flex": {}
+      }
+    },
+    {
+      "name": "Scene",
+      "unit_scale": 1.0,
+      "rigs": [
+        "CoshaRig",
+        "Strap2.001"
+      ],
+      "settings": {
+        "character_designer_setup": {
+          "rig": "CoshaRig"
+        },
+        "character_designer_animation_worklist": {
+          "rig": "None"
+        },
+        "character_designer_mesh_mirror": {},
+        "character_designer_refine_symmetry": {},
+        "character_designer_finger_definition": {},
+        "character_designer_finger_flex": {}
+      }
+    }
+  ],
+  "switches": [
+    {
+      "bone": "CTRL_hand_IK.L",
+      "ik_fk": 1.0,
+      "version": 1
+    },
+    {
+      "bone": "CTRL_hand_IK.R",
+      "ik_fk": 1.0,
+      "version": 1
+    },
+    {
+      "bone": "CTRL_foot_IK.L",
+      "ik_fk": 1.0,
+      "version": 1
+    },
+    {
+      "bone": "CTRL_foot_IK.R",
+      "ik_fk": 1.0,
+      "version": 1
+    }
+  ],
+  "constraints": [
+    {
+      "bone": "Hips",
+      "name": "CD Root Follow",
+      "type": "COPY_TRANSFORMS",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_master",
+      "registry": null
+    },
+    {
+      "bone": "spine",
+      "name": "CD Torso FK",
+      "type": "COPY_TRANSFORMS",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_torso_1",
+      "registry": null
+    },
+    {
+      "bone": "Chest",
+      "name": "CD Torso FK",
+      "type": "COPY_TRANSFORMS",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_torso_2",
+      "registry": null
+    },
+    {
+      "bone": "UpperChest",
+      "name": "CD Torso FK",
+      "type": "COPY_TRANSFORMS",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_torso_3",
+      "registry": null
+    },
+    {
+      "bone": "eye.L",
+      "name": "CD Eye Aim",
+      "type": "DAMPED_TRACK",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_eye.L",
+      "registry": null
+    },
+    {
+      "bone": "eye.R",
+      "name": "CD Eye Aim",
+      "type": "DAMPED_TRACK",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_eye.R",
+      "registry": null
+    },
+    {
+      "bone": "forearm.L",
+      "name": "CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77",
+      "type": "IK",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_hand_IK.L",
+      "registry": {
+        "CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.L",
+            "forearm.L",
+            "hand.L"
+          ],
+          "display": "MCH_elbow_pole_aim.L",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.L",
+          "rig_id": "29ed206dfc2042768e1c07044b58cc77",
+          "role": "IK",
+          "side": "L",
+          "target": "CTRL_hand_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "hand.L",
+      "name": "CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_hand_IK.L",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.L",
+            "forearm.L",
+            "hand.L"
+          ],
+          "display": "MCH_elbow_pole_aim.L",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.L",
+          "rig_id": "29ed206dfc2042768e1c07044b58cc77",
+          "role": "AUTO_OFFSET_ROTATION",
+          "rotation_space": "PARENT_DELTA",
+          "side": "L",
+          "target": "CTRL_hand_IK.L",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.L",
+            "forearm.L",
+            "hand.L"
+          ],
+          "display": "MCH_elbow_pole_aim.L",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.L",
+          "rig_id": "29ed206dfc2042768e1c07044b58cc77",
+          "role": "END_ROTATION",
+          "side": "L",
+          "target": "CTRL_hand_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "hand.L",
+      "name": "CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_hand_rotation.L",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.L",
+            "forearm.L",
+            "hand.L"
+          ],
+          "display": "MCH_elbow_pole_aim.L",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.L",
+          "rig_id": "29ed206dfc2042768e1c07044b58cc77",
+          "role": "AUTO_OFFSET_ROTATION",
+          "rotation_space": "PARENT_DELTA",
+          "side": "L",
+          "target": "CTRL_hand_IK.L",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.L",
+            "forearm.L",
+            "hand.L"
+          ],
+          "display": "MCH_elbow_pole_aim.L",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.L",
+          "rig_id": "29ed206dfc2042768e1c07044b58cc77",
+          "role": "END_ROTATION",
+          "side": "L",
+          "target": "CTRL_hand_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "forearm.R",
+      "name": "CDLimbIK_IK_9c08616fb2024757952dbd433048e839",
+      "type": "IK",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_hand_IK.R",
+      "registry": {
+        "CDLimbIK_IK_9c08616fb2024757952dbd433048e839": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.R",
+            "forearm.R",
+            "hand.R"
+          ],
+          "display": "MCH_elbow_pole_aim.R",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.R",
+          "rig_id": "9c08616fb2024757952dbd433048e839",
+          "role": "IK",
+          "side": "R",
+          "target": "CTRL_hand_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "hand.R",
+      "name": "CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_hand_IK.R",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.R",
+            "forearm.R",
+            "hand.R"
+          ],
+          "display": "MCH_elbow_pole_aim.R",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.R",
+          "rig_id": "9c08616fb2024757952dbd433048e839",
+          "role": "AUTO_OFFSET_ROTATION",
+          "rotation_space": "PARENT_DELTA",
+          "side": "R",
+          "target": "CTRL_hand_IK.R",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.R",
+            "forearm.R",
+            "hand.R"
+          ],
+          "display": "MCH_elbow_pole_aim.R",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.R",
+          "rig_id": "9c08616fb2024757952dbd433048e839",
+          "role": "END_ROTATION",
+          "side": "R",
+          "target": "CTRL_hand_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "hand.R",
+      "name": "CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_hand_rotation.R",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.R",
+            "forearm.R",
+            "hand.R"
+          ],
+          "display": "MCH_elbow_pole_aim.R",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.R",
+          "rig_id": "9c08616fb2024757952dbd433048e839",
+          "role": "AUTO_OFFSET_ROTATION",
+          "rotation_space": "PARENT_DELTA",
+          "side": "R",
+          "target": "CTRL_hand_IK.R",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.R",
+            "forearm.R",
+            "hand.R"
+          ],
+          "display": "MCH_elbow_pole_aim.R",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.R",
+          "rig_id": "9c08616fb2024757952dbd433048e839",
+          "role": "END_ROTATION",
+          "side": "R",
+          "target": "CTRL_hand_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "shin.L",
+      "name": "CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4",
+      "type": "IK",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_ankle.L",
+      "registry": {
+        "CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.L",
+            "shin.L",
+            "foot.L"
+          ],
+          "display": "MCH_knee_pole_aim.L",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.L",
+          "rig_id": "91d603ba5a454da3b17753974e882bf4",
+          "role": "IK",
+          "side": "L",
+          "target": "CTRL_foot_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "foot.L",
+      "name": "CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_ankle.L",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.L",
+            "shin.L",
+            "foot.L"
+          ],
+          "display": "MCH_knee_pole_aim.L",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.L",
+          "rig_id": "91d603ba5a454da3b17753974e882bf4",
+          "role": "AUTO_OFFSET_ROTATION",
+          "side": "L",
+          "target": "CTRL_foot_IK.L",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.L",
+            "shin.L",
+            "foot.L"
+          ],
+          "display": "MCH_knee_pole_aim.L",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.L",
+          "rig_id": "91d603ba5a454da3b17753974e882bf4",
+          "role": "END_ROTATION",
+          "side": "L",
+          "target": "CTRL_foot_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "foot.L",
+      "name": "CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_auto_rotation.L",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.L",
+            "shin.L",
+            "foot.L"
+          ],
+          "display": "MCH_knee_pole_aim.L",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.L",
+          "rig_id": "91d603ba5a454da3b17753974e882bf4",
+          "role": "AUTO_OFFSET_ROTATION",
+          "side": "L",
+          "target": "CTRL_foot_IK.L",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.L",
+            "shin.L",
+            "foot.L"
+          ],
+          "display": "MCH_knee_pole_aim.L",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.L",
+          "rig_id": "91d603ba5a454da3b17753974e882bf4",
+          "role": "END_ROTATION",
+          "side": "L",
+          "target": "CTRL_foot_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "toe.L",
+      "name": "CD Toe Bend",
+      "type": "COPY_TRANSFORMS",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_toe_bend.L",
+      "registry": null
+    },
+    {
+      "bone": "MCH_toe_auto_ref.L",
+      "name": "CD Foot Auto Toe Reference",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_IK_ref.L",
+      "registry": null
+    },
+    {
+      "bone": "shin.R",
+      "name": "CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79",
+      "type": "IK",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_ankle.R",
+      "registry": {
+        "CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.R",
+            "shin.R",
+            "foot.R"
+          ],
+          "display": "MCH_knee_pole_aim.R",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.R",
+          "rig_id": "cbf6ac471cc84a4786f9a665e3b87b79",
+          "role": "IK",
+          "side": "R",
+          "target": "CTRL_foot_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "foot.R",
+      "name": "CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_ankle.R",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.R",
+            "shin.R",
+            "foot.R"
+          ],
+          "display": "MCH_knee_pole_aim.R",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.R",
+          "rig_id": "cbf6ac471cc84a4786f9a665e3b87b79",
+          "role": "AUTO_OFFSET_ROTATION",
+          "side": "R",
+          "target": "CTRL_foot_IK.R",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.R",
+            "shin.R",
+            "foot.R"
+          ],
+          "display": "MCH_knee_pole_aim.R",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.R",
+          "rig_id": "cbf6ac471cc84a4786f9a665e3b87b79",
+          "role": "END_ROTATION",
+          "side": "R",
+          "target": "CTRL_foot_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "foot.R",
+      "name": "CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79",
+      "type": "COPY_ROTATION",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_auto_rotation.R",
+      "registry": {
+        "CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.R",
+            "shin.R",
+            "foot.R"
+          ],
+          "display": "MCH_knee_pole_aim.R",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.R",
+          "rig_id": "cbf6ac471cc84a4786f9a665e3b87b79",
+          "role": "AUTO_OFFSET_ROTATION",
+          "side": "R",
+          "target": "CTRL_foot_IK.R",
+          "version": 1
+        },
+        "CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.R",
+            "shin.R",
+            "foot.R"
+          ],
+          "display": "MCH_knee_pole_aim.R",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.R",
+          "rig_id": "cbf6ac471cc84a4786f9a665e3b87b79",
+          "role": "END_ROTATION",
+          "side": "R",
+          "target": "CTRL_foot_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "toe.R",
+      "name": "CD Toe Bend",
+      "type": "COPY_TRANSFORMS",
+      "mute": true,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_toe_bend.R",
+      "registry": null
+    },
+    {
+      "bone": "MCH_toe_auto_ref.R",
+      "name": "CD Foot Auto Toe Reference",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_IK_ref.R",
+      "registry": null
+    },
+    {
+      "bone": "MCH_torso_offset_1",
+      "name": "CD Torso Shared Bend",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.3333333432674408,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_torso_bend",
+      "registry": null
+    },
+    {
+      "bone": "MCH_torso_offset_2",
+      "name": "CD Torso Shared Bend",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.3333333432674408,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_torso_bend",
+      "registry": null
+    },
+    {
+      "bone": "MCH_torso_offset_3",
+      "name": "CD Torso Shared Bend",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.3333333432674408,
+      "target": "CoshaRig",
+      "subtarget": "CTRL_torso_bend",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_01_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_01",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_01_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_01_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_01_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_01_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_01_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_01_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_01_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_01_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_01_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_02_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_02",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_02_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_02_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_02_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_02_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_02_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_02_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_02_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_02_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_02_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_03_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_03",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_03_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_03_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_03_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_03_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_03_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_03_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_03_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_03_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_03_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_04_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_04",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_04_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_04_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_04_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_04_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_04_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_04_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_04_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_04_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_04_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_05_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_05",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_05_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_05_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_05_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_05_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_05_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_05_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_05_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_05_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_05_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_06_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_06",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_06_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_06_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_06_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_06_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_06_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_06_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_06_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_06_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_06_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_07_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_07",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_07_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_07_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_07_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_07_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_07_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_07_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_07_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_07_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_07_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_MCH_08_04",
+      "name": "Skirt manual wire",
+      "type": "SPLINE_IK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "SK_Dress_Wire_08",
+      "subtarget": null,
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_01",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_08_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_01",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_08_01",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_02",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_08_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_02",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_08_02",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_03",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_08_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_03",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_08_03",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_04",
+      "name": "Skirt manual pose",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_MCH_08_04",
+      "registry": null
+    },
+    {
+      "bone": "SK_Dress_DEF_08_04",
+      "name": "Skirt physics delta",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 0.0,
+      "target": "CoshaRig",
+      "subtarget": "SK_Dress_PHYS_08_04",
+      "registry": null
+    },
+    {
+      "bone": "MCH_elbow_pole_aim.L",
+      "name": "CDLimbIK_POLE_DISPLAY_TRACK_29ed206dfc2042768e1c07044b58cc77",
+      "type": "DAMPED_TRACK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "forearm.L",
+      "registry": {
+        "CDLimbIK_POLE_DISPLAY_TRACK_29ed206dfc2042768e1c07044b58cc77": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.L",
+            "forearm.L",
+            "hand.L"
+          ],
+          "display": "MCH_elbow_pole_aim.L",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.L",
+          "rig_id": "29ed206dfc2042768e1c07044b58cc77",
+          "role": "POLE_DISPLAY_TRACK",
+          "side": "L",
+          "target": "CTRL_hand_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "MCH_elbow_pole_aim.R",
+      "name": "CDLimbIK_POLE_DISPLAY_TRACK_9c08616fb2024757952dbd433048e839",
+      "type": "DAMPED_TRACK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "forearm.R",
+      "registry": {
+        "CDLimbIK_POLE_DISPLAY_TRACK_9c08616fb2024757952dbd433048e839": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "upper_arm.R",
+            "forearm.R",
+            "hand.R"
+          ],
+          "display": "MCH_elbow_pole_aim.R",
+          "kind": "ARM",
+          "owner": "limb_ik",
+          "pole": "CTRL_elbow_pole.R",
+          "rig_id": "9c08616fb2024757952dbd433048e839",
+          "role": "POLE_DISPLAY_TRACK",
+          "side": "R",
+          "target": "CTRL_hand_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "MCH_toe_space.L",
+      "name": "CD Foot FK Toe Space",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_FK_ref.L",
+      "registry": null
+    },
+    {
+      "bone": "MCH_toe_space.L",
+      "name": "CD Foot IK Toe Space",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_IK_ref.L",
+      "registry": null
+    },
+    {
+      "bone": "MCH_toe_space.L",
+      "name": "CD Foot Auto Toe Space",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_auto_ref.L",
+      "registry": null
+    },
+    {
+      "bone": "MCH_knee_pole_aim.L",
+      "name": "CDLimbIK_POLE_DISPLAY_TRACK_91d603ba5a454da3b17753974e882bf4",
+      "type": "DAMPED_TRACK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "shin.L",
+      "registry": {
+        "CDLimbIK_POLE_DISPLAY_TRACK_91d603ba5a454da3b17753974e882bf4": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.L",
+            "shin.L",
+            "foot.L"
+          ],
+          "display": "MCH_knee_pole_aim.L",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.L",
+          "rig_id": "91d603ba5a454da3b17753974e882bf4",
+          "role": "POLE_DISPLAY_TRACK",
+          "side": "L",
+          "target": "CTRL_foot_IK.L",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "MCH_toe_space.R",
+      "name": "CD Foot FK Toe Space",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_FK_ref.R",
+      "registry": null
+    },
+    {
+      "bone": "MCH_toe_space.R",
+      "name": "CD Foot IK Toe Space",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_IK_ref.R",
+      "registry": null
+    },
+    {
+      "bone": "MCH_toe_space.R",
+      "name": "CD Foot Auto Toe Space",
+      "type": "COPY_TRANSFORMS",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_toe_auto_ref.R",
+      "registry": null
+    },
+    {
+      "bone": "MCH_knee_pole_aim.R",
+      "name": "CDLimbIK_POLE_DISPLAY_TRACK_cbf6ac471cc84a4786f9a665e3b87b79",
+      "type": "DAMPED_TRACK",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "shin.R",
+      "registry": {
+        "CDLimbIK_POLE_DISPLAY_TRACK_cbf6ac471cc84a4786f9a665e3b87b79": {
+          "armature_id": "38d4e948797040e89ed456bf4bd7e54c",
+          "chain": [
+            "thigh.R",
+            "shin.R",
+            "foot.R"
+          ],
+          "display": "MCH_knee_pole_aim.R",
+          "kind": "LEG",
+          "owner": "limb_ik",
+          "pole": "CTRL_knee_pole.R",
+          "rig_id": "cbf6ac471cc84a4786f9a665e3b87b79",
+          "role": "POLE_DISPLAY_TRACK",
+          "side": "R",
+          "target": "CTRL_foot_IK.R",
+          "version": 1
+        }
+      }
+    },
+    {
+      "bone": "MCH_foot_auto_rotation.L",
+      "name": "CD Foot Auto Rotation",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_ankle.L",
+      "registry": null
+    },
+    {
+      "bone": "MCH_foot_auto_rotation.R",
+      "name": "CD Foot Auto Rotation",
+      "type": "COPY_ROTATION",
+      "mute": false,
+      "influence": 1.0,
+      "target": "CoshaRig",
+      "subtarget": "MCH_foot_ankle.R",
+      "registry": null
+    }
+  ],
+  "drivers": [
+    {
+      "path": "pose.bones[\"shin.R\"].constraints[\"CDLimbIK_IK_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"foot.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"foot.R\"].constraints[\"CDLimbIK_END_ROTATION_cbf6ac471cc84a4786f9a665e3b87b79\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"forearm.R\"].constraints[\"CDLimbIK_IK_9c08616fb2024757952dbd433048e839\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_9c08616fb2024757952dbd433048e839\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"hand.R\"].constraints[\"CDLimbIK_END_ROTATION_9c08616fb2024757952dbd433048e839\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_hand_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"shin.L\"].constraints[\"CDLimbIK_IK_91d603ba5a454da3b17753974e882bf4\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"foot.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_91d603ba5a454da3b17753974e882bf4\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"foot.L\"].constraints[\"CDLimbIK_END_ROTATION_91d603ba5a454da3b17753974e882bf4\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"forearm.L\"].constraints[\"CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_AUTO_OFFSET_ROTATION_29ed206dfc2042768e1c07044b58cc77\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"hand.L\"].constraints[\"CDLimbIK_END_ROTATION_29ed206dfc2042768e1c07044b58cc77\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_hand_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "max(root_scale,0.001)",
+      "variables": [
+        {
+          "name": "root_scale",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 1,
+      "mute": false,
+      "valid": true,
+      "expression": "max(root_scale,0.001)",
+      "variables": [
+        {
+          "name": "root_scale",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"CTRL_master\"].scale",
+      "index": 2,
+      "mute": false,
+      "valid": true,
+      "expression": "max(root_scale,0.001)",
+      "variables": [
+        {
+          "name": "root_scale",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_master\"][\"uniform_scale\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_heel.L\"].rotation_euler",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "max(roll,0)",
+      "variables": [
+        {
+          "name": "roll",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_heel.L\"].rotation_euler",
+      "index": 1,
+      "mute": false,
+      "valid": true,
+      "expression": "bank",
+      "variables": [
+        {
+          "name": "bank",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[1]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_ball.L\"].rotation_euler",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "max(min(roll,0),-0.7853981633974483)",
+      "variables": [
+        {
+          "name": "roll",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_tip.L\"].rotation_euler",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "min(roll+0.7853981633974483,0)",
+      "variables": [
+        {
+          "name": "roll",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.L\"].rotation_euler[0]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_toe_space.L\"].constraints[\"CD Foot IK Toe Space\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_toe_space.L\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk * auto",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.L\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        },
+        {
+          "name": "auto",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "data.bones[\"CTRL_foot_IK.L\"][\"character_designer_limb_ik_auto_align\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_heel.R\"].rotation_euler",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "max(roll,0)",
+      "variables": [
+        {
+          "name": "roll",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_heel.R\"].rotation_euler",
+      "index": 1,
+      "mute": false,
+      "valid": true,
+      "expression": "bank",
+      "variables": [
+        {
+          "name": "bank",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[1]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_ball.R\"].rotation_euler",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "max(min(roll,0),-0.7853981633974483)",
+      "variables": [
+        {
+          "name": "roll",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_foot_tip.R\"].rotation_euler",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "min(roll+0.7853981633974483,0)",
+      "variables": [
+        {
+          "name": "roll",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_roll.R\"].rotation_euler[0]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_toe_space.R\"].constraints[\"CD Foot IK Toe Space\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"MCH_toe_space.R\"].constraints[\"CD Foot Auto Toe Space\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "ik_fk * auto",
+      "variables": [
+        {
+          "name": "ik_fk",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"CTRL_foot_IK.R\"][\"ik_fk\"]",
+              "bone": ""
+            }
+          ]
+        },
+        {
+          "name": "auto",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "data.bones[\"CTRL_foot_IK.R\"][\"character_designer_limb_ik_auto_align\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_01_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_01_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_01_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_01_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_02_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_02_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_02_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_02_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_03_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_03_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_03_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_03_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_04_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_04_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_04_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_04_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_05_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_05_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_05_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_05_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_06_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_06_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_06_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_06_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_07_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_07_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_07_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_07_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_08_01\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_08_02\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_08_03\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pose.bones[\"SK_Dress_DEF_08_04\"].constraints[\"Skirt physics delta\"].influence",
+      "index": 0,
+      "mute": false,
+      "valid": true,
+      "expression": "1.0",
+      "variables": [
+        {
+          "name": "physics",
+          "type": "SINGLE_PROP",
+          "targets": [
+            {
+              "id": "CoshaRig",
+              "path": "pose.bones[\"SK_Dress_Waist\"][\"physics_influence\"]",
+              "bone": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "original_mode": {
+    "active": true,
+    "saved_muted_constraint_count": 20,
+    "rest_unchanged": true,
+    "native_rest_bones": 184,
+    "complete_owned_inventory_valid": true,
+    "limbs": 4
+  },
+  "mapping": {
+    "compatible": false,
+    "error_type": "UnityAnimationError",
+    "error": "Character controls did not pass ownership validation: Owned constraint 'CDLimbIK_IK_29ed206dfc2042768e1c07044b58cc77' on 'forearm.L' was disabled or had its influence edited."
+  },
+  "state_unchanged": true,
+  "state_signature": "5a01f9e5d0d2de5f015bf8c9b0c149364275c3bbc877cd2c05d19e99930d7565"
+}

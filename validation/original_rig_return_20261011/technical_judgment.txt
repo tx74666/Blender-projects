@@ -1,0 +1,116 @@
+2026-10-11 — X / Character Designer 动画接回方案
+
+技术判断：沿用原 Scene 和 CoshaRig，把动画包转换到原来的控制通道。
+通常不需要再导入网格，也不需要保留第二套骨架。
+
+本次已经验证：
+原 Rig 的 Original 模式记录有效；隔离副本能正常返回控制器模式，Rest 没有改变。
+217 根动画骨头的父子关系都匹配，骨位最大差约 0.000425 毫米。
+之前的 1.278 倍差异来自跨 Scene 读取未更新的矩阵；实际缩放仍为 0.782，
+正确更新原 Scene 后尺寸匹配，不需要缩放原模型或放宽尺寸保护。
+当前真正阻碍是动画匯入器不认识原 Rig 的裙子控制图，以及 Worklist 缺少
+直接选用 Main Rig 和完整恢复原状态的流程。
+
+实现范围：先接回这段 Walk 的身体／头发动画，保留原裙子控制与物理系统。
+这段动画的 33 根裙子骨头在全部 59 个采样中没有独立运动；其他带有独立
+裙子动画的包必须另行处理。先提供可编辑的 FK 动画，不能声称完整 IK 动画
+转换、脊柱 IK／FK 关键帧切换已实现。
+
+这里保存的是完成验证的判断和可审查方案；回匯功能尚未改写或部署。
+原 artist 文件仍保持打开时的未保存状态，本任务没有改动它；测试另存为隔离文件。
+旧的 X 对话已按用户要求归档，这个新对话继续接手同一个工作目录。
+
+以下为实现与验收细节。
+
+Decision
+Use the existing artist Scene and CoshaRig as the editing target. A verified animation
+package can be converted into Actions for that rig: another mesh, permanent skeleton,
+or animation Scene is not intrinsically required. Keep the original mesh, Rest data,
+weights, Shape Keys, materials, control objects, Bone Collections and colors.
+Do not attach the imported .001 Action directly; its channels use the imported Rest basis.
+
+Actual findings
+The artist is Blender 5.2.0 LTS / loaded CD 0.77.22. Its Original editing session is
+active; exact read-only validation passed for its saved Rest and owned control graph.
+The 20 saved source-constraint mute states explain the earlier ownership error.
+Normal IK/FK switching already supports driven influence values and is not the cause.
+
+The packet retains CoshaRig's object scale 0.782315731048584. The live raw Object
+channels still have that exact scale and historical translation. While the Animation
+Worklist Scene is active, the original Scene's rig.matrix_world is cached identity;
+it differs from the actual raw-channel transform. This stale cross-Scene matrix
+explains the earlier 1.278256336084934 head fit. It is not an actual model size change.
+In the isolated original Scene with a correct dependency-graph update, the fit is
+1.0000000570695797, all 217 native parents match, and maximum bind-head error is
+0.0004252724 mm. The unchanged strict size guard would pass. No scale compatibility
+exception, model rescaling or scene-unit change is required for this current packet.
+The packet's associated old model hash differs from the current production model;
+that remains a separate source/version check for any future Unity Sync.
+
+Official Original return succeeded in the isolated snapshot. All Armature Rest data
+and control graph configuration were preserved except precisely recorded Original
+mute-state restoration; maximum native pose matrix-element error was 0.0001991610,
+within the audit's 0.0004 bound. Actual build_plan and _mapping then stop on the
+unrecognized 'Skirt manual wire' constraint on SK_Dress_MCH_01_04. No Action was
+imported, no size guard was bypassed, and Blender confirmed the isolated save FINISHED.
+
+All 59 packet samples contain 184 authored Body/Hair bones and 33 generated weighted
+Dress outputs. The Dress channels remain at parent-local bind within float precision
+(1,947 comparisons, maximum matrix element difference 2.4271413e-6). For this packet,
+retain the artist's Dress controls/physics and import the authored Body/Hair animation.
+This route must explicitly record the split; live Dress physics is not exact packet
+Dress playback. Future packets with independent Dress motion must be rejected until
+a separate Dress control bake exists.
+
+Implementation scope selected
+1. Add a Worklist entry that selects the Scene's existing Main Rig. Run complete
+   compatibility preflight before adopting it or assigning an Action. The current
+   Worklist otherwise imports a new Scene and exposes no natural Main Rig selection.
+2. Handle active Original sessions through the official transaction, after exact
+   saved Rest/control validation. Persist recovery of Original state and the artist's
+   prior Action, slot, NLA state, armature data, control properties, context and links.
+   Stop on unsupported Rest edits; no automatic Rest resync/model repair is included.
+3. Run compatibility in the rig's actual Scene with an updated dependency graph; never
+   treat an inactive Scene's cached world matrix as current. Retain all strict size,
+   full bind/parent and control checks. The current packet needs no scale exception.
+   Current Unity Sync must independently resolve superseded model hashes; current disk
+   assets are not evidence of the package's historical source version.
+4. Add complete exact ownership validation for shared Dress graph, manual Spline IK
+   wires/hooks and physics drivers. Validate that Dress relations do not override
+   imported Body/Hair channels. No blanket prefix-based constraint/driver exceptions.
+   Detect active/baked cache state; do not silently clear or accept stale cloth cache.
+5. Use the existing isolated control solver to bake FK motion to the original rig.
+   Create immutable Source and editable Custom Actions. Preserve original collections,
+   colors, shapes, constraints and drivers. Change use_connect only when sampled joint
+   translation requires it, retaining full prior data and persistent Restore ownership.
+6. Verify all 59 Body/Hair sample matrices, root displacement, and source immutability;
+   verify Rest, mesh coordinates, weights, Shape Keys and materials are unchanged.
+   Verify complete restoration and save/reopen recovery before applying in the artist.
+   Then save the authorized artist Scene and verify Blender reports success.
+
+Editing boundary
+Existing code supplies exact FK animation on supported original control graphs.
+Limb IK/FK matching can key pose-preserving switches, but animated spine switching
+is explicitly guarded out. Full-clip IK conversion and unrestricted spine animation
+switching must not be advertised as already supported.
+
+Evidence
+live_control_graph.json — current artist read-only state and Original validation.
+snapshot_receipt.json — isolated Scene snapshot, hash, artist unchanged proof.
+isolated_return_report.json — official Original return and actual mapping audit.
+export_scale_provenance.json — full source hashes and historical scale evidence.
+inactive_scene_transform_check.json — live raw channels versus cached matrix proof.
+dress_packet_static_proof.json — all 59 samples and each Dress bone comparison.
+artist_post_validation.json — separate live artist context/rig signature verification.
+pinned_runtime_receipt.json — fixed released 0.77.22 runtime; artist was not refreshed.
+
+Delivery limits
+This is a validated technical decision and implementation specification, not a completed
+Worklist feature. This task has not edited or deployed canonical plugin sources, changed
+the artist scene, repaired a model, operated Unity, deleted the existing animation Scene,
+committed or pushed. Test scenes remain isolated. During the audit, another deployment
+changed disk CD to 0.77.23; the artist stayed loaded at 0.77.22, so tests were pinned to
+the verified 0.77.22 archive instead of mixing versions.
+
+Old chat X (01a124c2-95d6-7140-a2c5-3c42e17d14e7) was archived at the user's explicit
+request on 2026-10-11. This successor chat continues in the same project directory.

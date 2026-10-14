@@ -1,0 +1,113 @@
+{
+  "schema": "x.validation.character-composition-raise-completed-source-contract-check/1",
+  "passed": true,
+  "cases": [
+    {
+      "name": "actual_sealed_n16_contract",
+      "passed": true
+    },
+    {
+      "name": "incomplete_closure",
+      "passed": true,
+      "rejected": "Only the actual fully recovered natural-exit n16 completion may seed Raise."
+    },
+    {
+      "name": "failed_completed_file_audit",
+      "passed": true,
+      "rejected": "Only the actual fully recovered natural-exit n16 completion may seed Raise."
+    },
+    {
+      "name": "nonzero_natural_exit",
+      "passed": true,
+      "rejected": "The pinned actual n16 process exit must be natural, recovered and fully closed."
+    },
+    {
+      "name": "forced_exit",
+      "passed": true,
+      "rejected": "The pinned actual n16 process exit must be natural, recovered and fully closed."
+    },
+    {
+      "name": "workers_not_gone",
+      "passed": true,
+      "rejected": "The pinned actual n16 process exit must be natural, recovered and fully closed."
+    },
+    {
+      "name": "numeric_not_completed",
+      "passed": true,
+      "rejected": "The completed-file audit must pin these exact numeric, QA seed and runtime bytes."
+    },
+    {
+      "name": "wrong_source_runtime",
+      "passed": true,
+      "rejected": "The completed-file audit must pin these exact numeric, QA seed and runtime bytes."
+    },
+    {
+      "name": "wrong_seed_file",
+      "passed": true,
+      "rejected": "The completed-file audit must pin these exact numeric, QA seed and runtime bytes."
+    },
+    {
+      "name": "wrong_numeric_file",
+      "passed": true,
+      "rejected": "The completed-file audit must pin these exact numeric, QA seed and runtime bytes."
+    },
+    {
+      "name": "rewritten_historical_workspace_sha",
+      "passed": true,
+      "rejected": "The explicit initial workspace snapshot must retain the actual pre-Collect bytes."
+    },
+    {
+      "name": "wrong_closure_pin",
+      "passed": true,
+      "rejected": "Use the actual completed n16 numeric/seed/runtime and sealed closure/audit pins."
+    }
+  ],
+  "case_count": 12,
+  "source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+    "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+    "bytes": 24737
+  },
+  "producer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\check_raise_completed_source_contract.py",
+    "sha256": "d35e158aab4afe8530868c107c323f8da91a8f92d9c113408e04bf1b25a2f5cd"
+  },
+  "actual_sealed_inputs": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\completion_closure.json",
+      "sha256": "9810dbf836d11a85e412a1e2632fa97026aaf37509b6de098e9af74f22ad083d",
+      "bytes": 3280
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\actual_completed_file_audit.json",
+      "sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3",
+      "bytes": 771503
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\publication_recovery_native_report.json",
+      "sha256": "be09e217d29ae49c11720bea568afe6fa1454e52d6110a877a2104b649541347",
+      "bytes": 1590520
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\native_fixture.json",
+      "sha256": "292e5659669becff3ffcde4b3f9469b42f626e0a57fd3ba11c6cc4a12521c013",
+      "bytes": 2601
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\process_exit.json",
+      "sha256": "149e6a63615599b57e93e8eb77cb28cd6cb7172df74c12dfb1017a49c055e7fe",
+      "bytes": 571
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\initial_workspace.json",
+      "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+      "bytes": 35156
+    }
+  ],
+  "shared_workspace_read": false,
+  "immutable_ledger_traversal": false,
+  "target_module_imports": 0,
+  "native_execution": false,
+  "raise_fixture_created": false,
+  "seconds": 0.375
+}

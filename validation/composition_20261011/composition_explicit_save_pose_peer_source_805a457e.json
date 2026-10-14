@@ -1,0 +1,182 @@
+{
+  "schema": "x.validation.character-composition-explicit-save-pose-independent-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer": "/root/worklist_review",
+  "source_files": {
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "805a457ee482d4ee0c7bc01673cb22630f07429e63f854521ae839c0133b65bb",
+      "bytes": 99303
+    },
+    "animation_composition_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_ui.py",
+      "sha256": "ee6fb51a5880d243d868863110e8c49040af0015abf8a838fa0d1d4a8659bdf8",
+      "bytes": 17542
+    }
+  },
+  "changed_runtime_sources": {
+    "animation_composition.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition.py",
+      "sha256": "805a457ee482d4ee0c7bc01673cb22630f07429e63f854521ae839c0133b65bb",
+      "bytes": 99303
+    },
+    "animation_composition_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_ui.py",
+      "sha256": "ee6fb51a5880d243d868863110e8c49040af0015abf8a838fa0d1d4a8659bdf8",
+      "bytes": 17542
+    }
+  },
+  "previous_sources": {
+    "animation_composition.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_composition_1861bcf7_before_explicit_save_pose.py",
+      "sha256": "1861bcf7136e389da2cd2c40af57e7c5ea33c9bd8b9b90bf0557b8f649584ea5",
+      "bytes": 99028
+    },
+    "animation_composition_ui.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\animation_composition_ui_dec613ae_before_explicit_save_pose.py",
+      "sha256": "dec613ae44ccaf8644f339b6bc5072372adaa08d66e3049851807e1433c9c3a8",
+      "bytes": 16699
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\composition_explicit_save_pose_owner_source_805a457e.json",
+    "sha256": "1348246e8882f1d63a707cdc9987f3034c97a0616be072a944805e64a852df6d",
+    "bytes": 5899
+  },
+  "focused_test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_character_composition_save_pose.py",
+    "sha256": "3474454baf3e185b3df5896c86b98d9b4c2a89d25d1fe1aa5b3dad422ac9c626",
+    "bytes": 11600
+  },
+  "generic_worklist_ui_unchanged": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+    "sha256": "77d40e3dc4eaa579d75b1d4470ec303cc528db6809b59e729b8804f93be1ae6a",
+    "bytes": 34647
+  },
+  "changed_functions": {
+    "animation_composition.py": [
+      "capture_hold_pose",
+      "begin_sync"
+    ],
+    "animation_composition_ui.py": [
+      "CHARACTERDESIGNER_OT_composition_capture_hold.poll",
+      "CHARACTERDESIGNER_OT_composition_sync.poll"
+    ]
+  },
+  "independent_source_normalization": {
+    "runtime_whole_module_inverse_ast_exact": true,
+    "ui_whole_module_inverse_ast_exact": true,
+    "unchanged_runtime_function_count": 62,
+    "unchanged_runtime_functions_AST_and_text": [
+      "_host",
+      "_service",
+      "active",
+      "item_spec",
+      "bind_item",
+      "_require_native_action_timebase",
+      "_packet_for_item",
+      "item_fingerprint",
+      "composition_metadata",
+      "_library_state",
+      "connect_library",
+      "refresh_configuration",
+      "add_work_item",
+      "_prepared_reference_entry",
+      "create_reference_work_copy",
+      "reference_receipt_key",
+      "reference_receipt",
+      "find_reference",
+      "prepare_reference",
+      "_plain",
+      "_encode",
+      "_decode",
+      "_store",
+      "_load",
+      "_slot",
+      "_bag",
+      "_curves",
+      "_motion_hash",
+      "_curve_payload",
+      "_write_curve",
+      "_constant_curve",
+      "_channel_rows",
+      "_frame_range",
+      "_following_hold",
+      "_assert_hold_constant",
+      "_editing_action",
+      "_layout",
+      "_pose_selection_owner",
+      "_prior",
+      "_nla_context",
+      "_tweak",
+      "_track",
+      "_owned_tracks",
+      "validate",
+      "enter",
+      "_restrict_selection",
+      "_restore_prior",
+      "commit",
+      "_commit_base",
+      "set_edit_target",
+      "set_solo",
+      "resume",
+      "exit",
+      "isolated_sync",
+      "_export_session",
+      "_poll_sync",
+      "cancel_sync",
+      "load_weapon",
+      "remove_weapon",
+      "register_b",
+      "register_runtime",
+      "unregister_runtime"
+    ],
+    "no_added_runtime_functions": true,
+    "no_top_level_runtime_or_UI_delta": true,
+    "operator_id_and_REGISTER_UNDO_preserved": true,
+    "commit_exit_isolated_sync_native_timing_scope_receipt_and_default_export_paths_unchanged": true
+  },
+  "review_findings": {
+    "Save_Pose": "Existing validate requires owned EditB HoldPose before the additional native use_tweak_mode gate. Without live Tweak, Resume Editing error precedes local value reads/curve writes. Existing direct local scope.channels, nonbool finite values, exact owned draft/slot, constant endpoint writes and rollback remain unchanged; no C/world matrix bake is added.",
+    "explicit_Sync_B": "Only an already active validated exact item and EditB session can reach the new capture. collectionFalse and HoldPose are both required; capture completes before existing commit. Capture failure prevents commit/export preflight. Closed sessions, collections, Loop, Raise and generic commit/exit do not receive auto-capture.",
+    "UI": "SavePose poll requires active EditB HoldPose and native Tweak; SyncB active poll requires the exact EditB item/native Rig. EditA or foreign selecteditem/Rig disables dedicated Sync; closed existing availability remains. Operator identity and SavePose Undo options retained; Sync remains REGISTER only.",
+    "boundaries": "No selection/visibility/timing tolerance/workspace/collector/exporter/scene/Source/readonlyA changes. Native control capture and Undo will need a genuine current-runtime owned UI test; owner pure tests do not prove that native boundary."
+  },
+  "owner_reported_pure_tests": {
+    "passed": 14,
+    "elapsed_seconds": 0.961,
+    "test_names_source_read": [
+      "test_unkeyed_local_controls_become_equal_keys_on_exact_scope",
+      "test_paused_or_absent_native_tweak_rejects_before_read_or_write",
+      "test_a_loop_and_raise_reject_before_control_reads",
+      "test_bool_and_nonfinite_control_reject_before_curve_mutation",
+      "test_partial_curve_failure_restores_exact_previous_curve_payload",
+      "test_explicit_active_b_hold_captures_before_commit_and_publication",
+      "test_collection_loop_raise_and_closed_sync_never_auto_capture",
+      "test_edit_a_or_foreign_selected_item_rejects_before_mutation",
+      "test_capture_failure_prevents_commit_and_publication",
+      "test_save_pose_requires_b_hold_and_live_native_tweak",
+      "test_sync_b_rejects_a_foreign_item_and_foreign_rig",
+      "test_closed_composition_sync_keeps_existing_availability",
+      "test_corrupt_recovery_metadata_disables_buttons",
+      "test_save_pose_keeps_operator_identity_and_undo"
+    ],
+    "reviewer_rerun": false,
+    "test_source_scope": "AST-extracted actual capture and begin_sync/UI poll, plain fixtures only. Meaningful exact-scope finite/value/rollback/ownership/default-route tests read by reviewer."
+  },
+  "validation": {
+    "in_memory_compile_checks": 3,
+    "AST_full_inverse_and_source_readback": "PASS",
+    "exact_pin_checks": 7,
+    "target_module_imports": 0,
+    "tests_run_by_reviewer": 0,
+    "native_SDK_GUI_execution": 0,
+    "shared_workspace_reads": 0,
+    "process_resource_queries": 0,
+    "projection_build_deployment_or_fixture_generation": false
+  },
+  "status": "SOURCE_READY_NATIVE_PENDING",
+  "concrete_source_blockers": []
+}

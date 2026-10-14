@@ -1,0 +1,351 @@
+test_activate_changed_workspace_rejects_before_any_native_transaction (test_animation_worklist_rigging_attach.AttachTests.test_activate_changed_workspace_rejects_before_any_native_transaction) ... ERROR
+test_activate_missing_capture_rejects_before_preview_close_or_action_assignment (test_animation_worklist_rigging_attach.AttachTests.test_activate_missing_capture_rejects_before_preview_close_or_action_assignment) ... ERROR
+test_actual_registered_new_origin_keeps_paired_body_activate_and_new_sync_routes (test_animation_worklist_rigging_attach.AttachTests.test_actual_registered_new_origin_keeps_paired_body_activate_and_new_sync_routes) ... ERROR
+test_actual_typed_link_route_target_mismatch_is_nonmutating (test_animation_worklist_rigging_attach.AttachTests.test_actual_typed_link_route_target_mismatch_is_nonmutating) ... FAIL
+test_add_preserves_old_nine_rows_header_actions_and_uses_new_cache_owner (test_animation_worklist_rigging_attach.AttachTests.test_add_preserves_old_nine_rows_header_actions_and_uses_new_cache_owner) ... ERROR
+test_closed_sync_missing_both_rigging_tags_rejects_before_ordinary_worker_fallback (test_animation_worklist_rigging_attach.AttachTests.test_closed_sync_missing_both_rigging_tags_rejects_before_ordinary_worker_fallback) ... ERROR
+test_current_request_requires_one_ready_rigging_work_not_choose_first (test_animation_worklist_rigging_attach.AttachTests.test_current_request_requires_one_ready_rigging_work_not_choose_first) ... ERROR
+test_distinct_rna_wrappers_of_the_same_native_row_validate_without_python_identity (test_animation_worklist_rigging_attach.AttachTests.test_distinct_rna_wrappers_of_the_same_native_row_validate_without_python_identity) ... ERROR
+test_empty_request_and_ordinary_packet_cannot_attach (test_animation_worklist_rigging_attach.AttachTests.test_empty_request_and_ordinary_packet_cannot_attach) ... FAIL
+test_existing_preserved_work_id_cannot_be_reassigned_to_the_new_workspace (test_animation_worklist_rigging_attach.AttachTests.test_existing_preserved_work_id_cannot_be_reassigned_to_the_new_workspace) ... FAIL
+test_forged_new_animation_flag_on_typed_rigging_link_still_rejects_real_new_schema_gate (test_animation_worklist_rigging_attach.AttachTests.test_forged_new_animation_flag_on_typed_rigging_link_still_rejects_real_new_schema_gate) ... ERROR
+test_input_import_failure_retains_original_rows_header_context_and_actions (test_animation_worklist_rigging_attach.AttachTests.test_input_import_failure_retains_original_rows_header_context_and_actions) ... FAIL
+test_original_adoption_model_and_mapping_domain_reject_before_import (test_animation_worklist_rigging_attach.AttachTests.test_original_adoption_model_and_mapping_domain_reject_before_import) ... ERROR
+test_paired_ordinary_packet_does_not_require_a_rigging_capture (test_animation_worklist_rigging_attach.AttachTests.test_paired_ordinary_packet_does_not_require_a_rigging_capture) ... ERROR
+test_per_item_route_uses_its_actual_target_keeps_legacy_global_target_guard (test_animation_worklist_rigging_attach.AttachTests.test_per_item_route_uses_its_actual_target_keeps_legacy_global_target_guard) ... ERROR
+test_prepared_packet_changed_during_input_import_rolls_back_only_new_ids (test_animation_worklist_rigging_attach.AttachTests.test_prepared_packet_changed_during_input_import_rolls_back_only_new_ids) ... FAIL
+test_public_attach_uses_actual_add_then_the_existing_activation_entry (test_animation_worklist_rigging_attach.AttachTests.test_public_attach_uses_actual_add_then_the_existing_activation_entry) ... ERROR
+test_validate_rigging_entry_exact_current_owner_slots_packet_and_capture (test_animation_worklist_rigging_attach.AttachTests.test_validate_rigging_entry_exact_current_owner_slots_packet_and_capture) ... ERROR
+test_validate_rigging_entry_foreign_row_source_side_or_half_workspace_pair_reject (test_animation_worklist_rigging_attach.AttachTests.test_validate_rigging_entry_foreign_row_source_side_or_half_workspace_pair_reject) ... ERROR
+
+======================================================================
+ERROR: test_activate_changed_workspace_rejects_before_any_native_transaction (test_animation_worklist_rigging_attach.AttachTests.test_activate_changed_workspace_rejects_before_any_native_transaction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 391, in test_activate_changed_workspace_rejects_before_any_native_transaction
+    item = self.add_actual(); self.record['targetGuid'] = 'c' * 32; self.write_workspace()
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_c23e95549af148cf822a39bfe7c32308.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_activate_missing_capture_rejects_before_preview_close_or_action_assignment (test_animation_worklist_rigging_attach.AttachTests.test_activate_missing_capture_rejects_before_preview_close_or_action_assignment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 382, in test_activate_missing_capture_rejects_before_preview_close_or_action_assignment
+    item = self.add_actual(); del item.custom_action[CAPTURE]
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_cbc086a2780149baab88e451f5400850.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_actual_registered_new_origin_keeps_paired_body_activate_and_new_sync_routes (test_animation_worklist_rigging_attach.AttachTests.test_actual_registered_new_origin_keeps_paired_body_activate_and_new_sync_routes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 444, in test_actual_registered_new_origin_keeps_paired_body_activate_and_new_sync_routes
+    catalog = self.workspace.load_workspace(self.manifest)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_6e6a4fba34cf4189b93cc55b8964c309.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_add_preserves_old_nine_rows_header_actions_and_uses_new_cache_owner (test_animation_worklist_rigging_attach.AttachTests.test_add_preserves_old_nine_rows_header_actions_and_uses_new_cache_owner)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 316, in test_add_preserves_old_nine_rows_header_actions_and_uses_new_cache_owner
+    item = self.add_actual()
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_644de9952b3e44128a397cd4ef9b5f50.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_closed_sync_missing_both_rigging_tags_rejects_before_ordinary_worker_fallback (test_animation_worklist_rigging_attach.AttachTests.test_closed_sync_missing_both_rigging_tags_rejects_before_ordinary_worker_fallback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 422, in test_closed_sync_missing_both_rigging_tags_rejects_before_ordinary_worker_fallback
+    item = self.add_actual(); self.saved.active_index = 9
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_ddcccb64562d462883c8fbd1d3f2a2ae.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_current_request_requires_one_ready_rigging_work_not_choose_first (test_animation_worklist_rigging_attach.AttachTests.test_current_request_requires_one_ready_rigging_work_not_choose_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 266, in test_current_request_requires_one_ready_rigging_work_not_choose_first
+    self.assertEqual(self.prepared()['clip']['workItemId'], self.work_id)
+                     ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_c014d0c927ba42cd945c0b749bfbe3b0.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_distinct_rna_wrappers_of_the_same_native_row_validate_without_python_identity (test_animation_worklist_rigging_attach.AttachTests.test_distinct_rna_wrappers_of_the_same_native_row_validate_without_python_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 410, in test_distinct_rna_wrappers_of_the_same_native_row_validate_without_python_identity
+    item = self.add_actual(); self.saved.active_index = 9
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_57de116c9ef143d8aa289d52140122ab.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_forged_new_animation_flag_on_typed_rigging_link_still_rejects_real_new_schema_gate (test_animation_worklist_rigging_attach.AttachTests.test_forged_new_animation_flag_on_typed_rigging_link_still_rejects_real_new_schema_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 464, in test_forged_new_animation_flag_on_typed_rigging_link_still_rejects_real_new_schema_gate
+    item = self.add_actual(); self.saved.active_index = 9; item.new_animation = True
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_ee553d15bdc949a281912c4611ce7ae2.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_original_adoption_model_and_mapping_domain_reject_before_import (test_animation_worklist_rigging_attach.AttachTests.test_original_adoption_model_and_mapping_domain_reject_before_import)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 294, in test_original_adoption_model_and_mapping_domain_reject_before_import
+    prepared = self.prepared(); original_header = self.header()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_abb2359f79dc4ad8be8d377799c3b6da.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_paired_ordinary_packet_does_not_require_a_rigging_capture (test_animation_worklist_rigging_attach.AttachTests.test_paired_ordinary_packet_does_not_require_a_rigging_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 434, in test_paired_ordinary_packet_does_not_require_a_rigging_capture
+    item = self.add_actual(); self.saved.active_index = 9
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_5cab5997a82042d0a4ec73b3ef9f35be.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_per_item_route_uses_its_actual_target_keeps_legacy_global_target_guard (test_animation_worklist_rigging_attach.AttachTests.test_per_item_route_uses_its_actual_target_keeps_legacy_global_target_guard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 371, in test_per_item_route_uses_its_actual_target_keeps_legacy_global_target_guard
+    item = self.add_actual(); record = self.worklist._fresh_workspace(self.saved, item)
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_6e7ce80ba1014b4f951fe02825f44502.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_public_attach_uses_actual_add_then_the_existing_activation_entry (test_animation_worklist_rigging_attach.AttachTests.test_public_attach_uses_actual_add_then_the_existing_activation_entry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 333, in test_public_attach_uses_actual_add_then_the_existing_activation_entry
+    item = self.worklist.attach_prepared_rigging_work(self.context, str(self.manifest))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 251, in attach_prepared_rigging_work
+    prepared = _attached_context(state(context), workspace_path, work_item_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_ddabd2edc3cd439db736318936dde350.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_validate_rigging_entry_exact_current_owner_slots_packet_and_capture (test_animation_worklist_rigging_attach.AttachTests.test_validate_rigging_entry_exact_current_owner_slots_packet_and_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 399, in test_validate_rigging_entry_exact_current_owner_slots_packet_and_capture
+    item = self.add_actual(); self.saved.active_index = 9
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_00ee284d16b641f5b5d5771b08ee9da5.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+ERROR: test_validate_rigging_entry_foreign_row_source_side_or_half_workspace_pair_reject (test_animation_worklist_rigging_attach.AttachTests.test_validate_rigging_entry_foreign_row_source_side_or_half_workspace_pair_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 476, in test_validate_rigging_entry_foreign_row_source_side_or_half_workspace_pair_reject
+    item = self.add_actual(); valid = self.session(item)
+           ^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 254, in add_actual
+    prepared = self.prepared()
+               ^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 210, in prepared
+    return self.worklist._attached_context(self.saved, str(self.manifest), None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_worklist.py", line 196, in _attached_context
+    record = workspace.load_workspace(bpy.path.abspath(workspace_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MyRepository\Blender-addons-by-Randy\addons\character_designer\animation_workspace.py", line 332, in load_workspace
+    raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
+_attach_source_75940bf26f65478181b336a76fd42641.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+======================================================================
+FAIL: test_actual_typed_link_route_target_mismatch_is_nonmutating (test_animation_worklist_rigging_attach.AttachTests.test_actual_typed_link_route_target_mismatch_is_nonmutating)
+----------------------------------------------------------------------
+_attach_source_0979c1ceda9d47d2891c05b8005993ad.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 289, in test_actual_typed_link_route_target_mismatch_is_nonmutating
+    with self.assertRaisesRegex(ValueError, 'disagree'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "disagree" does not match "Choose character_animation_workspace.json or a readable .workspace.json entry."
+
+======================================================================
+FAIL: test_empty_request_and_ordinary_packet_cannot_attach (test_animation_worklist_rigging_attach.AttachTests.test_empty_request_and_ordinary_packet_cannot_attach)
+----------------------------------------------------------------------
+_attach_source_2b31fd0e22194b9a9af2a122ac6f9ac9.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 276, in test_empty_request_and_ordinary_packet_cannot_attach
+    with self.assertRaisesRegex(ValueError, 'unique current'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "unique current" does not match "Choose character_animation_workspace.json or a readable .workspace.json entry."
+
+======================================================================
+FAIL: test_existing_preserved_work_id_cannot_be_reassigned_to_the_new_workspace (test_animation_worklist_rigging_attach.AttachTests.test_existing_preserved_work_id_cannot_be_reassigned_to_the_new_workspace)
+----------------------------------------------------------------------
+_attach_source_9456e6fa777b458b97113801587b7ade.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 342, in test_existing_preserved_work_id_cannot_be_reassigned_to_the_new_workspace
+    with self.assertRaisesRegex(ValueError, 'another preserved row'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "another preserved row" does not match "Choose character_animation_workspace.json or a readable .workspace.json entry."
+
+======================================================================
+FAIL: test_input_import_failure_retains_original_rows_header_context_and_actions (test_animation_worklist_rigging_attach.AttachTests.test_input_import_failure_retains_original_rows_header_context_and_actions)
+----------------------------------------------------------------------
+_attach_source_d713bbf93a5540c38ebda837a8127d6f.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 364, in test_input_import_failure_retains_original_rows_header_context_and_actions
+    self.assertRaisesRegex(ValueError, 'input boundary'):
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "input boundary" does not match "Choose character_animation_workspace.json or a readable .workspace.json entry."
+
+======================================================================
+FAIL: test_prepared_packet_changed_during_input_import_rolls_back_only_new_ids (test_animation_worklist_rigging_attach.AttachTests.test_prepared_packet_changed_during_input_import_rolls_back_only_new_ids)
+----------------------------------------------------------------------
+_attach_source_d13fc9f9d96240b0990bcad3f6632082.animation_workspace.AnimationWorkspaceError: Choose character_animation_workspace.json or a readable .workspace.json entry.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\MyRepository\Blender-addons-by-Randy\tests\test_animation_worklist_rigging_attach.py", line 353, in test_prepared_packet_changed_during_input_import_rolls_back_only_new_ids
+    with patch.object(self.native, 'import_inputs', side_effect=drift), self.assertRaisesRegex(ValueError, 'changed'):
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "changed" does not match "Choose character_animation_workspace.json or a readable .workspace.json entry."
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.140s
+
+FAILED (failures=5, errors=14)

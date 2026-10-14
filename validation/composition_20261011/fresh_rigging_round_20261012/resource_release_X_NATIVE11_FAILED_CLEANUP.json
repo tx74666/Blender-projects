@@ -1,0 +1,33 @@
+{
+  "schema": "x.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "resource_token": "X_ORIGINAL20_NATIVE11_CURRENT",
+  "passed": false,
+  "completed": false,
+  "report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_original20_r12_11\\original20_controls_report.json",
+    "sha256": "d32702ba6211e78e608671d942e341966e66dc00687b368935508d3965a0fff8",
+    "bytes": 13357
+  },
+  "error": "AssertionError: FK ring native display does not follow official current limb mode: upper_arm.L",
+  "owned_pid": 21716,
+  "owned_process_filetime": "134362940825736221",
+  "native_exit_code": -1,
+  "native_exited_utc": "2026-10-12T16:06:16.6775135+00:00",
+  "owned_native_gone": true,
+  "retained_handle_natural_exit": false,
+  "process_termination_performed": true,
+  "cleanup": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_original20_r12_11_caller\\owned_failed_cleanup.json",
+    "sha256": "3fa92d6660175f6de62f346d918cecacfda51c608a36dffa59dabba2d5c63b63",
+    "bytes": 420
+  },
+  "raw_launcher_observation": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\native_original20_r12_11_caller\\native_end_observation.json",
+    "sha256": "a815f6f0b8203653a6638f1fa9e0d304be23e967b4d3158bf04c792c4cdedd2d",
+    "bytes": 351
+  },
+  "raw_launcher_flags_overridden": "Launcher hardcodes natural exit true and termination false. Actual verified task-owned failed process cleanup is recorded; this was NOT natural exit and NOT a PASS.",
+  "original_artist_written": false,
+  "GUI_released": true
+}

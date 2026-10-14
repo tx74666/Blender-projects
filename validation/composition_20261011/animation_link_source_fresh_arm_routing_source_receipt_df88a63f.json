@@ -1,0 +1,112 @@
+{
+  "schema": "x.validation.animation-link-source-fresh-arm-routing-pure/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "animation_link_source.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "c563543dc6c540aa7f8c97f0f8e5913ff1df2a5377bbbe118e9a1c21b8cd5708",
+      "bytes": 14481
+    },
+    "test_animation_link_source_rigging_setup.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_link_source_rigging_setup.py",
+      "sha256": "df88a63fa225905f1f90fb330bab166e27fb2306f88a4be0cb120f529dc51c8c",
+      "bytes": 14228
+    }
+  },
+  "owned_changes": [
+    "tests/test_animation_link_source_rigging_setup.py"
+  ],
+  "runtime_modified_by_this_agent": false,
+  "tested_runtime_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+    "sha256": "c563543dc6c540aa7f8c97f0f8e5913ff1df2a5377bbbe118e9a1c21b8cd5708",
+    "bytes": 14481
+  },
+  "setup_boundary_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_rigging_setup.py",
+    "sha256": "e5ae7c4df9bb30f4e55719285cb7721963a3ab798c7225c806a436837559df93",
+    "bytes": 13772
+  },
+  "existing_image_test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_animation_link_source_images.py",
+    "sha256": "3c84104fb08a10d4ad9ce2122dd43733ad981d6ed5c59019b86f8aec7903a5d3",
+    "bytes": 4325
+  },
+  "actual_test_results": {
+    "exit_code": 0,
+    "new_routing_tests": 7,
+    "existing_image_tests": 6,
+    "total": 13,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds_reported_by_unittest": 0.096,
+    "command": [
+      "C:\\Users\\Randy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_animation_link_source_*.py",
+      "-v"
+    ],
+    "cwd": "D:\\MyRepository\\Blender-addons-by-Randy",
+    "raw_log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\link_source_rigging_setup_pure_20261012.log",
+      "sha256": "15c45208d27216a680a3b9408b0db77e132b16f0a141b1951fdaadc75bd3a393",
+      "bytes": 2746
+    },
+    "initial_test_failures": 0,
+    "tests": [
+      "test_native_rigging_rest_model_mapping_setup_base_and_link_order",
+      "test_mapping_rejection_never_builds_or_imports_base_and_cleans_only_new_ids",
+      "test_setup_rejection_including_partial_new_widget_uses_outer_cleanup",
+      "test_actual_model_digest_tamper_rejects_before_mapping_or_setup",
+      "test_no_rigging_native_clock_route_retains_legacy_base_path",
+      "test_scene_clock_route_with_rigging_does_not_run_fresh_setup",
+      "test_final_link_identity_change_rejects_and_cleans_setup_and_base_ids"
+    ]
+  },
+  "test_execution_boundary": {
+    "real_importer_function_AST_extracted_and_executed": true,
+    "real_image_restoration_helper_executed": true,
+    "full_target_module_import": false,
+    "actual_setup_entry_import_is_fake_module_and_mock": true,
+    "real_Blender_or_numpy_imports": 0,
+    "native_operator_calls": 0,
+    "FBX_parse_or_body_solver_or_worker_executed": false,
+    "only_standard_library_and_fake_native_IDs": true,
+    "real_model_SHA_tamper_fixture_uses_owned_temp_bytes": true,
+    "base_and_mapping_are_mocked_boundary_APIs_not_fake_solvers": true
+  },
+  "meaningful_verified_behavior": [
+    "Native-clock Rigging routing completes actual importer rest-metadata restore then raw model SHA then strict mapping then setup then base then final model/Link proof then actual bind.",
+    "The setup receives the exact actual-function pre-import existing ID inventory, actual new fake Rig, passed packet/mapping/model pin; it never receives the original fake artist Rig.",
+    "Hidden proof JSON is the exact returned setup proof; no physics claim is made for the mock sentinel.",
+    "Strict mapping failure invokes no setup/base/bind and outer cleanup removes only new nonembedded IDs.",
+    "Setup failure after a partial fresh widget invokes no base/bind and outer cleanup includes that widget without deleting any original ID.",
+    "Actual temporary-model raw SHA tamper rejects before mapping/setup/base.",
+    "Final Link identity change after setup/base prevents bind and removes all new setup/base IDs.",
+    "On all four failures original Scene/active Rig/property marker and original image colorspace/alpha are restored; original Action remains in user_map.",
+    "No-rigging with native_timebase=True retains the original native-clock base path and does not setup.",
+    "Rigging with native_timebase=False retains original Scene-clock base path with no native keyword/setup and no hidden setup proof."
+  ],
+  "syntax": {
+    "parsed_compiled_in_memory_files": 3,
+    "target_imports": 0
+  },
+  "bytecode": {
+    "python_B_disabled_writes": true,
+    "cache_tree_rehashed": false,
+    "cache_deletion_or_repair_performed": false
+  },
+  "boundaries": [
+    "Only the new test file and this exclusive receipt/log were written. No product, held harness, old Source freeze, package, workspace, Link or asset was modified.",
+    "Fake native ID fixtures validate routing and transaction semantics; no real FBX, Blender Body Setup, Target/Hint motion, physics, native success, Unity or SDK result is claimed.",
+    "R5 freeze/build was not executed; Root must coordinate the complete new source package after all Source reviews are closed."
+  ]
+}

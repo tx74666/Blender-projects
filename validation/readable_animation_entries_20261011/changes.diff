@@ -1,0 +1,168 @@
+--- 0.77.20/__init__.py
++++ 0.77.21/__init__.py
+@@ -1,7 +1,7 @@
+ bl_info = {
+     "name": "Character Designer",
+     "author": "Randy & Codex",
+-    "version": (0, 77, 20),
++    "version": (0, 77, 21),
+     "blender": (4, 0, 0),
+     "location": "View3D > Sidebar > Character Designer",
+     "description": "Personal modeling, rig-setup, and generic reference-view tools.",
+--- 0.77.20/animation_worklist_ui.py
++++ 0.77.21/animation_worklist_ui.py
+@@ -275,7 +275,7 @@
+ class CHARACTERDESIGNER_OT_worklist_connect(Operator):
+     bl_idname = 'character_designer.worklist_connect'
+     bl_label = 'Connect Workspace'
+-    bl_description = 'Open the animation workspace metadata exported by Unity'
++    bl_description = 'Open a Unity animation workspace or a readable .workspace.json entry'
+     bl_options = {'REGISTER'}
+     filepath: StringProperty(subtype='FILE_PATH')
+     filter_glob: StringProperty(default='character_animation_workspace.json;*.json', options={'HIDDEN'})
+@@ -287,11 +287,26 @@
+     def invoke(self, context, _event):
+         if not self.filepath:
+             settings = _state(context)
+-            if settings.workspace_path:
+-                self.filepath = settings.workspace_path
++            saved_path = settings.workspace_path
++            source = Path(saved_path) if saved_path else None
++            if (source is not None and source.name == 'character_animation_workspace.json'
++                    and len(source.parents) >= 5 and source.parents[2].name == 'Workspaces'
++                    and source.parents[3].name == 'CharacterTuning'):
++                exchange = source.parents[4]
+             else:
+                 from .animation import unity_exchange_folder
+-                self.filepath = str(Path(unity_exchange_folder(context)) / 'character_animation_workspace.json')
++                exchange = Path(unity_exchange_folder(context))
++            entries = exchange / 'Animations'
++            try:
++                has_entries = entries.is_dir()
++            except OSError:
++                has_entries = False
++            if has_entries:
++                self.filepath = str(entries) + '/'
++            elif saved_path:
++                self.filepath = saved_path
++            else:
++                self.filepath = str(exchange / 'character_animation_workspace.json')
+         context.window_manager.fileselect_add(self)
+         return {'RUNNING_MODAL'}
+ 
+--- 0.77.20/animation_workspace.py
++++ 0.77.21/animation_workspace.py
+@@ -1,7 +1,8 @@
+ """Metadata-only character worklist shared with Unity Character Tuning.
+ 
+ Parsing and identity comparisons do not inspect the filesystem. Loading reads
+-only this bounded index; selected-item operations own Link/packet validation.
++only the bounded index and, when chosen, its explicit readable reference;
++selected-item operations own Link/packet validation.
+ This module neither imports Blender nor owns client selections or edits.
+ """
+ 
+@@ -16,6 +17,8 @@
+ 
+ SCHEMA = 'randomrealm.animation-workspace/1'
+ MANIFEST_NAME = 'character_animation_workspace.json'
++REFERENCE_SCHEMA = 'cdesigner.animation-workspace-reference/1'
++REFERENCE_SUFFIX = '.workspace.json'
+ MAX_BYTES = 1024 * 1024
+ NOT_PREPARED = 'NOT_PREPARED'
+ LINK_AVAILABLE = 'LINK_AVAILABLE'
+@@ -205,8 +208,8 @@
+     return result
+ 
+ 
+-def parse_workspace(raw):
+-    """Parse at most 1 MiB of UTF-8 JSON, retaining unknown metadata fields."""
++def _decode_json(raw):
++    """Decode bounded UTF-8 JSON with the same strictness for both file types."""
+     try:
+         if isinstance(raw, str):
+             raw = raw.encode('utf-8')
+@@ -224,18 +227,77 @@
+         raise
+     except (ValueError, TypeError, UnicodeError, RecursionError) as exc:
+         raise AnimationWorkspaceError('The animation workspace is not valid UTF-8 JSON.') from exc
+-    return _validate(record)
++    return record
++
++
++def parse_workspace(raw):
++    """Parse at most 1 MiB of UTF-8 JSON, retaining unknown metadata fields."""
++    return _validate(_decode_json(raw))
++
++
++def _uuid(value, label):
++    try:
++        if not isinstance(value, str):
++            raise ValueError('not text')
++        return uuid.UUID(value).hex
++    except (ValueError, AttributeError, TypeError) as exc:
++        raise AnimationWorkspaceError(label + ' must be a valid UUID.') from exc
++
++
++def _parse_reference(raw):
++    record = _decode_json(raw)
++    if not isinstance(record, dict) or record.get('schema') != REFERENCE_SCHEMA:
++        raise AnimationWorkspaceError('Unsupported workspace entry schema.')
++    _uuid(record.get('workspaceId'), 'Entry workspaceId')
++    _uuid(record.get('projectId'), 'Entry projectId')
++    _hex(record.get('targetGuid'), 32, 'Entry targetGuid')
++    _text(record.get('targetName'), 'Entry targetName')
++    source = _absolute_path(record.get('workspaceManifest'), 'Entry workspaceManifest')
++    if Path(source).name != MANIFEST_NAME:
++        raise AnimationWorkspaceError('The workspace entry must point directly to ' + MANIFEST_NAME + '; reference chains are not supported.')
++    return record
++
++
++def _read_bytes(path):
++    with path.open('rb') as stream:
++        return stream.read(MAX_BYTES + 1)
++
++
++def _load_reference(path):
++    try:
++        reference = _parse_reference(_read_bytes(path))
++    except (AnimationWorkspaceError, OSError, TypeError, ValueError) as exc:
++        raise AnimationWorkspaceError('The workspace entry could not be read: ' + str(exc)) from exc
++    source = Path(reference['workspaceManifest']).absolute()
++    try:
++        # Always parse an actual index, never call load_workspace recursively.
++        record = parse_workspace(_read_bytes(source))
++    except (AnimationWorkspaceError, OSError, TypeError, ValueError) as exc:
++        raise AnimationWorkspaceError('The workspace entry source is unavailable: ' + str(exc)) from exc
++    try:
++        matches = (_uuid(reference['workspaceId'], 'Entry workspaceId') ==
++                   _uuid(record.get('workspaceId'), 'Source workspaceId') and
++                   _uuid(reference['projectId'], 'Entry projectId') ==
++                   _uuid(record.get('projectId'), 'Source projectId') and
++                   _hex(reference['targetGuid'], 32, 'Entry targetGuid') ==
++                   _hex(record.get('targetGuid'), 32, 'Source targetGuid'))
++    except AnimationWorkspaceError as exc:
++        raise AnimationWorkspaceError('The workspace entry source identity changed: ' + str(exc)) from exc
++    if not matches:
++        raise AnimationWorkspaceError('The workspace entry source identity changed. Choose the matching workspace entry.')
++    # Labels and entry paths never replace the live catalog or its real path.
++    return {**record, '_manifest_path': str(source)}
+ 
+ 
+ def load_workspace(path):
+-    """Read only the index, never a model, Link manifest, or animation packet."""
++    """Read an index or explicit reference, never models, Links or packets."""
+     try:
+         path = Path(path).absolute()
+         if path.name != MANIFEST_NAME:
+-            raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + '.')
+-        with path.open('rb') as stream:
+-            raw = stream.read(MAX_BYTES + 1)
+-        record = parse_workspace(raw)
++            if path.name.lower().endswith(REFERENCE_SUFFIX):
++                return _load_reference(path)
++            raise AnimationWorkspaceError('Choose ' + MANIFEST_NAME + ' or a readable ' + REFERENCE_SUFFIX + ' entry.')
++        record = parse_workspace(_read_bytes(path))
+     except AnimationWorkspaceError:
+         raise
+     except (OSError, TypeError, ValueError) as exc:

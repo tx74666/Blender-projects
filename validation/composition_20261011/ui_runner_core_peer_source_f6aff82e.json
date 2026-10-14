@@ -1,0 +1,141 @@
+{
+  "schema": "x.validation.character-composition-core-ui-independent-source-review/1",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "reviewer": "/root/worklist_review",
+  "source_files": {
+    "run_character_composition_ui_fixture.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_ui_fixture.py",
+      "sha256": "f6aff82e6b74cc391b5e0c3026066b03e064608e57bcc52de2defbed836233d4",
+      "bytes": 33329
+    }
+  },
+  "owner_source_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\ui_runner_core_source_owner_f6aff82e.json",
+    "sha256": "ee8ef722bc4e6d97fdb527e37befdaa40425c4c3a8a9ff1c5b76715f64fe9ea0",
+    "bytes": 5302
+  },
+  "historical_held_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_ui_fixture_9106b1a5_before_core_catalog.py",
+    "sha256": "9106b1a56fe37e2c091131f9c5cfe770fce3b7ec39818741286c401159409f8c",
+    "bytes": 30900
+  },
+  "historical_held_owner": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\ui_runner_owned_context_source_owner_9106b1a5.json",
+    "sha256": "582c6615e3802cfb89790df8d87b421d387b3229c804e9976908a802888a9878",
+    "bytes": 4490
+  },
+  "original_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\run_character_composition_ui_fixture_729df315_before_owned_scene_context.py",
+    "sha256": "729df3152233172c0ed72f67e39801e7f2c58c4ea6be7197e04c96ab548d2b07",
+    "bytes": 24773
+  },
+  "paired_sources": {
+    "composition_session_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "91255f9fe392a284fac332d8135e3deaa82b560b57b5a72a7e4f4eceb9dd604e",
+      "bytes": 58352
+    },
+    "composition_ui_checkpoints.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_ui_checkpoints.py",
+      "sha256": "98325ddfc8c7903bc0d11f2dd78a8b62cf9457a2fc6d398ab06c6ff524a51be7",
+      "bytes": 28709
+    },
+    "run_character_composition_raise_stage.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+      "bytes": 24737
+    }
+  },
+  "owner_contract_input_pins_verified": {
+    "pure_frozen_workspace_module": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer\\animation_workspace.py",
+      "sha256": "58569e35850419236e6f1152b976ce28806c420a9e88cbb8faa31387da04957b",
+      "bytes": 16323
+    },
+    "pure_frozen_composition_contract": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_13\\character_designer\\animation_composition_contract.py",
+      "sha256": "2d286b46f29e4777c9c11f43b680f9f132f408a0e910169f031516c85135a4d9",
+      "bytes": 10340
+    },
+    "historical_snapshot": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n15\\initial_workspace.json",
+      "sha256": "bcbbe8ee33e29ea328fa515f7eba7bc3552bf01aa5a58985198a59a3eed146b9",
+      "bytes": 35156
+    },
+    "reviewed_stage_route_fields_AST_only": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\run_character_composition_raise_stage.py",
+      "sha256": "77161b99de9d63ecc698fd00bdb1f037525c1073f9e69b7f6efc0690e1580dfc",
+      "bytes": 24737
+    },
+    "sealed_completed_audit": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\n16\\actual_completed_file_audit.json",
+      "sha256": "9f1a88b8c8738571931e4dd3a02ed0a786352ce2b5b9f1e446c0d957209d98a3",
+      "bytes": 771503
+    }
+  },
+  "independent_source_evidence": {
+    "unchanged_function_AST_and_text_to_729_and_9106": [
+      "_absolute",
+      "_activate_selected",
+      "_checkpoint_api",
+      "_id",
+      "_pin_model",
+      "_sha",
+      "claim_evidence",
+      "main",
+      "require",
+      "select_native_row",
+      "validate_reports"
+    ],
+    "changed_existing_functions": [
+      "validate_fixture",
+      "run"
+    ],
+    "added_pure_function": [
+      "validate_core_catalog"
+    ],
+    "full_held_to_core_inverse_AST_equal": true,
+    "module_top_level_held_to_core_AST_exact": true,
+    "six_original_native_admission_require_statements_AST_exact_in_owned_scope": true,
+    "synchronous_tail_AST_exact_to_original729": true,
+    "main_and_validate_reports_original_AST_and_text_exact": true,
+    "all_admission_asserts": 0,
+    "actual_sealed_audit_publications_contract": "list of3 dictionaries each work_item_id; actual source fields match runner access"
+  },
+  "review_findings": {
+    "proof_pins": "Four exact two-field absolute pins outside mutable evidence. Current workspace path is exactly seed.workspacePath; historical BCBB remains explicit archived bytes tied to completed source validation, without live-file old-hash substitution.",
+    "completed_source": "Pinned771 pure Stage validates actual n16 closure/audit/numeric/seed/nativeFixture/runtime/process-exit chain. Temporal immutable-input ledgers are not replayed as current workspace admission.",
+    "core_None": "Explicit None accepts full identical workspace identity and all unique historical prepared keys, matching route identity, every Stage ROUTE_FIELDS field and sealed composition. Exactly3 protected Source WorkItem IDs must be represented. Current prepared count+keyset must equal historical; no prepared additions admitted.",
+    "real_Raise": "Explicit real separate ID retains unchanged Stage.validate_catalog_extension path; Source core approval does not invent a Raise ID or prove actual Raise.",
+    "native_admission": "Both actual seeded positive-duration HoldPose rows retain route/Link/baseline/spec/packet and217native scope proofs. Selected native model, fresh association anchors and runtime projection guards remain strict.",
+    "context_lifetime": "Initial immutable-seed open occurs outside owned override. Scene/Rig admission and start use fresh owned_scene_context. Guard/state_reader use plain selectedID and reacquire context; native aliases are explicitly discarded before deferred callbacks. Synchronous helper.run remains outside any wrapper that could span save/load.",
+    "quit_and_completion": "Completion callback is only reached through admitted Controller stop; genuine completed session needed; explicit normal quit uses plainScene name. Source review provides no natural OS exit or screenshot acceptance."
+  },
+  "owner_reported_contracts": {
+    "passed": 6,
+    "negative_case_names": [
+      "sealed_spec_changed",
+      "source_packet_hash_changed",
+      "model_identity_changed",
+      "prepared_source_removed",
+      "unrelated_prepared_source_added"
+    ],
+    "reviewer_rerun": false,
+    "prior_harness_ImportError": "Standalone workspace parse lacked its relative package namespace; ImportError before contracts/output. Fixed only stdlib review namespace, not candidate Source."
+  },
+  "validation": {
+    "in_memory_compile_checks": 3,
+    "AST_source_readback": "PASS",
+    "exact_initial_pin_checks": 13,
+    "target_module_imports": 0,
+    "pure_contract_reruns": 0,
+    "native_SDK_GUI_execution": 0,
+    "shared_workspace_reads": 0,
+    "process_resource_queries": 0,
+    "fixture_generation": false
+  },
+  "concrete_source_blockers": [],
+  "status": "SOURCE_READY_NATIVE_PENDING"
+}

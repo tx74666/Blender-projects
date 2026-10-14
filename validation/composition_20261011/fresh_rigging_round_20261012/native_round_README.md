@@ -1,0 +1,24 @@
+# Isolated native control/save round
+
+This directory contains source preparation only. `native_round.py` has not been run. A fresh Parent resource window and an explicitly owned headful Blender process are required before execution. Start a fresh factory process with auto-execution disabled; do not attach the driver to the artist process. The driver registers one complete, hash-pinned Character Designer package and records its actual module paths and hashes.
+
+Required driver arguments are `--script-sha256`, `--isolated-clone` and its SHA, `--actualpacket` and its SHA, `--prepared-link` and its SHA, `--source-freeze` and its SHA, `--package-manifest` and its SHA, `--protected-artist` and its SHA, `--addon-root`, `--output-root`, `--scene-name`, `--rig-name`, `--work-item-id`, and `--confirm-isolated-headful`. Pass them after Blender's `--` separator. The package manifest uses the existing release projection schema, with `files` values containing SHA strings. The Source freeze/init constants must match the final reviewed package before launch.
+
+The isolated clone must be an independently pinned `.blend` inside this directory, outside the fresh output child. It must contain the authenticated adopted original native Rig in the named local Scene, with no prior Composition/import/Rigging preview or Tweak session. The artist file remains outside this scope and is only hash-checked. The prepared typed Link must supply the real Unity WorkID and bind the complete packet; neither the packet draft UUID nor the Unity QA directory UUID is a WorkID. The driver creates no Link, workspace, publication, cache library, model repair, or input identity.
+
+Before launch the external owner creates only empty `CONFIG` and `DATAFILES` directories in a new output child and sets the corresponding Blender profile environment variables to them. The script rejects other pre-existing files. All generated scenes and reports remain in this child; saved files are opened only after the old Window override has ended. The next timer tick reacquires the exact actual Window, Scene, Rig and Action IDs.
+
+The planned native checks are:
+
+- Import the base on its authenticated packet clock, restore the temporary import preview, bind the exact new base Action and slot, and import the original two-arm inputs without changing the capture or packet SHA.
+- Move each actual Target and Hint with the real native transform operator, verify finite nonzero motion with Auto Key off, and explicitly save the input keys through `key_current`. Validate a local Return DTO containing the twenty input curve components while proving the base keys unchanged.
+- Run nested `base_only` and snapshot reference isolation without a worker or file publication. Check original native controls, constraints, colors and collection presentation after owned close/rollback. Preserve exact base/input native identity through that transaction.
+- Use real Undo and Redo in separate timer ticks. Read callback-populated cache before manual activation, authenticate fresh IDs, require Undo to change saved input curves and Redo to restore their exact motion hash and Return DTO.
+- Check read-only native Source input rejection and Custom draft reuse. This local carrier test is not a linked Worklist Source test.
+- Save BASE-role preview with `enabled=True` and transient Tweak off. Reopen and verify saved role, ownership, input keys and the five callbacks before any manual seek or Activate. The load callback is read-only; the later explicit seek/Tweak resume is recorded separately. Check inclusive source endpoints, close, save again and reopen the closed state.
+
+Optional `weaponPreview` stays in the complete authenticated capture. The native importer can load its real captured display; the driver checks its owning geometry proof and transaction identity without changing the existing remove guard. Human weapon appearance, socket alignment, screenshots and UI button acceptance are not claimed by this script.
+
+Completion here means native control/save and local Return DTO checks only. It does not mean physical FBX export, Worklist Sync, Unity application, base-leg key editing, gameplay RigBuilder behavior, new shoulder/chest inputs, arbitrary masks, or a multi-layer protocol. UI controls and screenshots need the separate manual window segment. Physical export/Return application follows the separate `physical_return_recipe.md` with a real prepared identity and another admitted resource phase.
+
+`--quit-on-completion` only requests the normal native quit operator in a fresh owning Window scope. Its return cannot prove process exit. The external owner must verify natural exit, all owned workers gone, final immutable input/artist hashes, and the actual report. Failures leave the isolated process for the owner; the driver never grants itself a retry or force-closes the artist.

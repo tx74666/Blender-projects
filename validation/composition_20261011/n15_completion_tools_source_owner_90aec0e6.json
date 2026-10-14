@@ -1,0 +1,77 @@
+{
+  "schema": "x.validation.character-composition-completion-tools-source-owner/1",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": true,
+  "source_files": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_loop_tail_completed_r8.py",
+      "sha256": "90aec0e63e023909ffb47e6a3e1e04e64dfaa8e13be1c0be5a8641ce56db44a7",
+      "bytes": 61172
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_loop_tail_completion_r9.py",
+      "sha256": "1e13f577d8c40266b0801feb3995fb02bdd9c3fc33e45e26832493a662298677",
+      "bytes": 8590
+    }
+  ],
+  "predecessor_files": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\audit_loop_tail_completed_r7.py",
+      "sha256": "75aad92885f9306283863912c5c45b4803fa0ec0c54a7b940d5783ab01385068",
+      "bytes": 57493
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\record_loop_tail_completion_r8.py",
+      "sha256": "a0b43a2cb5c32df96ae798876d86c58084b040868719a9186a1f1124cc139992",
+      "bytes": 8511
+    }
+  ],
+  "audit_changed_functions": [
+    "physical_tail_reuse",
+    "numeric_reuse",
+    "audit"
+  ],
+  "audit_added_functions": [
+    "range_fix_reuse"
+  ],
+  "audit_unchanged_functions": [
+    "require",
+    "sha",
+    "load",
+    "pin",
+    "uid",
+    "passed",
+    "numeric_payload",
+    "pid_absent",
+    "loop_operator_proof",
+    "main"
+  ],
+  "writer_changed_functions": [
+    "record"
+  ],
+  "writer_unchanged_functions": [
+    "require",
+    "sha",
+    "proof",
+    "main"
+  ],
+  "checks": {
+    "pure_range_checker_uses_approved_frozen_source": true,
+    "original_serializer_proof_and_separate_precision_proof_retained": true,
+    "precision_receipt_exact_and_complete_pair": true,
+    "historical_superseded_exporter_proven_by_immutable_leaf": true,
+    "n14_actual_failed_phase_and_partial_operator_retained": true,
+    "natural_exit0_success_remains_required": true,
+    "actual_loop_operator_proof_unchanged": true,
+    "actual_process_checks_unchanged": true,
+    "writer_current_attempt_and_logs": true,
+    "writer_exact_auditor_binding": true,
+    "record_only_no_native_launch": true
+  },
+  "auditor_or_writer_invoked": false,
+  "candidate_or_acceptance_modules_imported": false,
+  "limits": [
+    "Source closure only; no completed native evidence or completion artifact is generated."
+  ]
+}

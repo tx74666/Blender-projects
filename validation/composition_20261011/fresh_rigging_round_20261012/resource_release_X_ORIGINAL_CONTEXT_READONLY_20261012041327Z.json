@@ -1,0 +1,64 @@
+{
+  "schema": "x.validation.resource-release/1",
+  "status": "ACTUAL_RELEASE",
+  "scope": "latest-original-context-readonly",
+  "token": "X_ORIGINAL_CONTEXT_READONLY_20261012041327Z",
+  "owner": "Root",
+  "owner_thread": "01a12751-d08f-7630-b790-18db26fe3186",
+  "parent_thread": "01a12305-aada-7273-b72c-54a41aad77e4",
+  "actual_end_utc": "2026-10-12T04:14:15.7771858Z",
+  "release_document_written_utc": "2026-10-12T04:16:26.9784484Z",
+  "passed": true,
+  "SDK_requests": 1,
+  "caller_direct_exec_exit": 0,
+  "caller_naturally_completed": true,
+  "SDK_status": "success",
+  "artifacts": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_context_X_ORIGINAL_CONTEXT_READONLY_20261012041327Z.json",
+      "sha256": "c851b4d90136dbc298b3d603cb35852ff0f4dcf4747734c943ff48873580f43b",
+      "bytes": 8934
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_context_X_ORIGINAL_CONTEXT_READONLY_20261012041327Z.json.sdk_response.json",
+      "sha256": "f0d9f37faa44ebf699e3c5e541271502782a59c54a74cbfbf8cba8f4711a4cbe",
+      "bytes": 7137
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\original_context_X_ORIGINAL_CONTEXT_READONLY_20261012041327Z.json.request_attempted.json",
+      "sha256": "3302dc7a99aae6bd1e7a848a51f6ae22c613e6c3e33a7719345895c9671b020d",
+      "bytes": 118
+    }
+  ],
+  "actual_cause": "ViewLayer wrappers compare is:false despite equal native pointer; every actual original Rig/setup/local/Scene/viewlayer owner condition is true.",
+  "original_current_context_unchanged": true,
+  "original_dirty_before_after": true,
+  "frame_before_after": 1,
+  "mode_before_after": "POSE",
+  "selected_before_after": "CoshaRig",
+  "original_disk_unchanged": true,
+  "original_pid": 27676,
+  "original_creation_filetime": 134359355330496074,
+  "source_sha256": "3a9f4952d1834a3aefbee4581929b6dd0ac7e4b21a8f0a7ec210014b11e30f6d",
+  "command_sha256": "2fb66effadc7a5d63d67dd3c1039e8f16a829d97e777b4bc54006980ecbd70ba",
+  "save_calls": 0,
+  "state_assignments": 0,
+  "context_overrides": 1,
+  "scene_switches": 0,
+  "frame_evaluations": 0,
+  "candidate_imports": 0,
+  "workers": 0,
+  "new_Blender_calls": 0,
+  "GUI_Unity_calls": 0,
+  "forced_termination_performed": false,
+  "second_SDK_calls": 0,
+  "memory": {
+    "availableMiB": 1335.5,
+    "usedPercent": 91.74
+  },
+  "limits": [
+    "Diagnostic only, no backup generated, no Rig or artist mutation.",
+    "No fullgeometry/materials/controller preservation or OriginalClone/Return/native integration acceptance inferred.",
+    "Old failedSavecopy803 evidence retained; fixSource and actual retry require separatefreshSavecopy scope."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "x.validation.original-artist-runtime-refresh-source-owner/1",
+  "status": "SOURCE_READY_NATIVE_PENDING",
+  "source_only": true,
+  "native_execution_performed": false,
+  "passed": false,
+  "source_scope_verified": true,
+  "source_files": {
+    "refresh_original_artist_runtime_07726.py": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726.py",
+      "sha256": "a933a4f502208fe60f1453b7d125321698ccd02bfd1da20c0530bc6e69601b61",
+      "bytes": 31283
+    }
+  },
+  "readme": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07726_README.md",
+    "sha256": "9cdf99b19c5ff2f237e731ce6a4a02eb541b7c9574c737d60f57a999d9aabe6c",
+    "bytes": 2758
+  },
+  "immutable_ancestor": {
+    "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/refresh_original_artist_runtime_07725.py",
+    "sha256": "f2fed527fff545885c7ba962bc7c713f0846629865ac4454c1de23fc213730de",
+    "bytes": 28179
+  },
+  "minimal_delta": [
+    "Candidate version .26 / full190",
+    "Replace ordinaryAttach/control+singleSync/FBX gates with actualOriginal20 report/source+retainedEND/ReturnPublication domain",
+    "Keep exact .24 source/state/snapshot/dependency/rollback159 protection",
+    "Correct report old9 label to actual rows; publicUI/Undo/modelUnknown remain explicit"
+  ],
+  "unchanged_protection_functions": {
+    "rollback_copy": true,
+    "project_old": true,
+    "idle": true,
+    "action_contents": true,
+    "capture": true,
+    "check_capture": true,
+    "clear_cd": true,
+    "loaded_sources": true
+  },
+  "existing_known_helpers": {
+    "snapshot": {
+      "path": "D:/Blender/Projects/Character/X/validation/composition_20261011/fresh_rigging_round_20261012/snapshot_latest_original_artist.py",
+      "sha256": "6df88f6e605a2a4e96eb1d3f261ed456dbe150c3e54a0d1e68f0f5aa962ff971",
+      "bytes": 16039
+    },
+    "verifier": {
+      "path": "D:/Blender/Projects/Character/X/validation/direct_original_rig_return_20261011/verify_addon_refresh_isolated.py",
+      "sha256": "f220d2f398e16a190715fd28a9c161207bcbeaf05946ff9d516038408ba2bf32",
+      "bytes": 14318
+    }
+  },
+  "known_API_blockers": [],
+  "actual_acceptance_artifacts_pending": true,
+  "execution_counts": {
+    "processes": 0,
+    "AST": 0,
+    "tests": 0,
+    "SDK": 0,
+    "Blender": 0,
+    "GUI": 0,
+    "deployment": 0,
+    "artist_save": 0
+  },
+  "created_utc": "2026-10-12T10:57:45.881Z"
+}

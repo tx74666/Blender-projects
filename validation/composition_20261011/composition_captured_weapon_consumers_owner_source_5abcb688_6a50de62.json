@@ -1,0 +1,151 @@
+{
+  "schema": "x.validation.character-composition-captured-weapon-qa-consumers-source-owner/1",
+  "utc": "2026-10-11T16:03:24.595793+00:00",
+  "passed": true,
+  "source_only": true,
+  "native_execution_performed": false,
+  "source_files": {
+    "composition_session_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_session_acceptance.py",
+      "sha256": "5abcb6889759ab905689bd547a3b17ca72b9eb44472220e8021eabc8a6132e49",
+      "bytes": 60440
+    },
+    "composition_raise_ui_acceptance.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\composition_raise_ui_acceptance.py",
+      "sha256": "6a50de62287c95d0d5fb0da006e932ae6f1454f1944031e91fc4cfdec252c310",
+      "bytes": 24583
+    }
+  },
+  "historical_sources": {
+    "composition_session_acceptance.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_session_acceptance_91255f9f_before_captured_weapon_consumer.py",
+      "sha256": "91255f9fe392a284fac332d8135e3deaa82b560b57b5a72a7e4f4eceb9dd604e",
+      "bytes": 58352
+    },
+    "composition_raise_ui_acceptance.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\.codex\\task-staging\\character-composition-20261011\\composition_raise_ui_acceptance_d052331d_before_captured_weapon_consumer.py",
+      "sha256": "d052331d4687d995e4d6b0f0706727758a1cce61926ddec4affb4e28e4df6d6d",
+      "bytes": 22436
+    }
+  },
+  "parent_owned_product_contract": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_composition_weapon.py",
+    "sha256": "6087933435ab15836de533541e158de77376b3c66ed02df5ce5a21c5536766d2",
+    "bytes": 28089
+  },
+  "delta": {
+    "composition_session_acceptance.py": {
+      "changed_function": "_weapon_acceptance_steps",
+      "unchanged_function_count": 24,
+      "unchanged_functions": [
+        "_sha",
+        "_require",
+        "_write",
+        "_evidence",
+        "_modules",
+        "_current",
+        "_pose",
+        "_error",
+        "_a_only",
+        "_full_stack",
+        "_c_native_domains",
+        "_edit_a_c_witness",
+        "_view3d",
+        "_work_copy",
+        "_drain",
+        "_checkpoint",
+        "visual_guard",
+        "checkpoint_state",
+        "_pose_hidden",
+        "_show_control",
+        "_weapon_acceptance",
+        "_positive_a_edit",
+        "run_steps",
+        "run"
+      ],
+      "added_functions": [],
+      "top_level_statements_ast_unchanged": true,
+      "full_raw_byte_inverse_equal": true,
+      "only_old_weapon_assertion_block_replaced": true,
+      "new_native_geometry_locals_discarded_before_any_yield": true
+    },
+    "composition_raise_ui_acceptance.py": {
+      "changed_function": "_steps",
+      "unchanged_function_count": 11,
+      "unchanged_functions": [
+        "require",
+        "checkpoint_times",
+        "_plain",
+        "_hash",
+        "_modules",
+        "_current",
+        "action_proofs",
+        "assert_actions",
+        "portable_rig",
+        "guard",
+        "run_steps"
+      ],
+      "added_functions": [],
+      "top_level_statements_ast_unchanged": true,
+      "full_raw_byte_inverse_equal": true,
+      "only_old_weapon_assertion_block_replaced": true,
+      "new_native_geometry_locals_discarded_before_any_yield": true
+    }
+  },
+  "consumer_contract": {
+    "actual_fbx_import_expected": false,
+    "captured_unity_geometry_expected": true,
+    "validated_original_context_called": "weapon.validate_context(spec)",
+    "original_source_and_context_sha_guards_retained": true,
+    "captured_renderers": "document.meshes where enabled and activeInPrefab",
+    "expected_counts": [
+      "captured_renderer_count = active renderer count",
+      "captured_vertex_count = sum original vertexCount validated against renderedVertices",
+      "captured_triangle_count = sum len(original triangles)//3"
+    ],
+    "counts_require_positive_exact_int_not_bool": true,
+    "proof_counts_equal_original_context_and_actual_native_mesh_counts": true,
+    "each_original_renderer_path_vertex_triangle_count_matches_owned_native_mesh": true,
+    "native_polygons_all_triangles": true,
+    "displayed_native_meshes_unique_and_exact_record_owned_mesh_assets": true,
+    "placed_surface_proved_expected": true,
+    "placed_surface_and_bounds_error_policy": "finite numeric nonbool 0..2e-5 metres, the existing product default",
+    "placed_distinct_vertices": "exact int 4..captured_vertex_count",
+    "prefab_scale_applied_once_expected": true,
+    "automatic_hand_ik_expected": false,
+    "existing_grip_targets_and_truthful_limitation_checks_retained": true,
+    "original_ID_ownership_Asset_Action_Rest_NLA_artist_unit_preservation_checks_retained": true
+  },
+  "preserved_boundaries": {
+    "no_product_source_edit": true,
+    "no_new_helper_abstraction_or_tool": true,
+    "all_other_phases_and_checkpoints_unchanged": true,
+    "selection_and_transforms_unchanged": true,
+    "UndoRedo_save_resume_failure_sync_positive_A_and_exit_guards_unchanged": true,
+    "two_plain_headful_reopen_seams_unchanged": true,
+    "background_reopen_behavior_unchanged": true,
+    "no_timing_tolerance_change": true,
+    "no_new_matrices_or_numeric_tests": true
+  },
+  "validation": {
+    "Session_initial_SHA_confirmed_91255_before_any_write": true,
+    "Raise_initial_SHA_confirmed_d0523_before_any_write": true,
+    "product_contract_exact_608793": true,
+    "stdlib_in_memory_compile_count": 2,
+    "AST_and_unchanged_text_checks_passed": true,
+    "full_raw_inverse_checks_passed": true,
+    "target_imports": 0,
+    "tests_executed": 0,
+    "native_calls": 0,
+    "sdk_calls": 0,
+    "shared_workspace_reads": 0,
+    "artist_reads": 0,
+    "projection_or_fixture_generation": false,
+    "deployment": false
+  },
+  "limits": [
+    "Source-only alignment to Parent-owned captured Unity geometry implementation; no native or Raise execution was performed.",
+    "Historical frozen helpers and failed reports keep their original bytes/status.",
+    "Native mesh/context verification runs only in a fresh authorized QA operation; this Source report does not claim actual new consumer acceptance."
+  ]
+}

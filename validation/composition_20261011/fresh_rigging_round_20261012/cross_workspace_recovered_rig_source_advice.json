@@ -1,0 +1,114 @@
+{
+  "schema": "x.validation.cross-workspace-source-advice/1",
+  "date": "2026-10-12",
+  "status": "READ_ONLY_SOURCE_ADVICE_NOT_IMPLEMENTED",
+  "source_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist.py",
+      "sha256": "bcddead36b21313b9a7991c6c1da784b582a29380cc8ed0c184b941b7e284c53",
+      "bytes": 40384
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "ce7aa98f40ebd5bc9af02f38b2362f1f6d4f1af1ca4cb5fa53ac913f7e3d4fa1",
+      "bytes": 39004
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_ui.py",
+      "sha256": "2fe530371d479d180f787c91772adfb77f32eaacfac64f31d2807cc53cd15ac3",
+      "bytes": 40668
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_workspace.py",
+      "sha256": "58569e35850419236e6f1152b976ce28806c420a9e88cbb8faa31387da04957b",
+      "bytes": 16323
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link.py",
+      "sha256": "364307151184fc9a3b934f03cc4269609365491a7fabeb06c36ccd87e6455aaa",
+      "bytes": 21500
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_link_source.py",
+      "sha256": "bbf0b65c8095df31f92ba378284f98a4d0be7d80835d6b2362cfe4402ded3b2d",
+      "bytes": 13485
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation_rigging.py",
+      "sha256": "b459668d166ef0b20b488414f3ae115aa53dd4bbeaec0645aea4ebba2e64d04d",
+      "bytes": 78327
+    }
+  ],
+  "reviewers": [
+    "root",
+    "worklist_review",
+    "u4_receipt_review"
+  ],
+  "trigger": "Only after actual formal admission fails for the original adopted Scene/Rig versus actual prepared workspace/model identity. Old/new GUID assumptions are not actual admission evidence.",
+  "findings": [
+    {
+      "entry": "animation_worklist.connect",
+      "line": 99,
+      "fact": "A different full workspace identity is rejected while saved.items or saved.rig exists."
+    },
+    {
+      "entry": "animation_worklist_target.restore_main_rig",
+      "line": 737,
+      "fact": "Validates the old owner and restores artist native state; keeps old rows, Actions, saved.rig and workspace, so it does not unlock another workspace."
+    },
+    {
+      "entry": "animation_worklist_target._validate_record",
+      "line": 586,
+      "fact": "Main Rig is owned by exact Scene/view layer/workspace with authenticated recovery/current Rest and allowed Worklist Actions."
+    },
+    {
+      "entry": "animation_worklist_target._store/adopt_main_rig",
+      "line": 685,
+      "fact": "Adopting a shared Rig in another Scene stores a new global Rig owner; old Scene cannot be treated as concurrently preserved or admitted."
+    },
+    {
+      "entry": "animation_worklist.add",
+      "line": 479,
+      "fact": "Writes the global Rig source_model_sha256 marker, which is outside target._metadata_keys restoration list."
+    },
+    {
+      "entry": "animation_link.bind_action",
+      "line": 180,
+      "fact": "Binds actual packet Action/slot and physical FBX model path/hash; rejects duplicate Rig association IDs or a Link already owned by another Rig."
+    }
+  ],
+  "existing_public_routes": {
+    "same_original_scene_keep_nine_rows_to_new_identity": "No complete public migration/fork entry exists.",
+    "restore_then_connect_same_scene": "Still rejected; original worklist rows and Rig ownership remain.",
+    "empty_scene_import_actual_model": "Existing new-model import route is legal but uses a new imported Rig; it does not prove original Rig controls/colors or formal reuse.",
+    "empty_scene_share_restored_rig": "Not a complete isolation route: one global owner/Link/model marker and action-motion references affect both Scenes. It cannot satisfy unchanged old owner protection."
+  },
+  "minimal_new_public_entry_proposal": {
+    "name": "worklist.fork_recovered_rig(context, source_rig, workspace_path, prepared_work_item_id, destination_scene_name)",
+    "implemented": false,
+    "stages": [
+      "Preserve actual failure report and immutable full old clone/worklist/artist evidence.",
+      "In the owned clone and original owning context, use public Restore Main Rig and authenticate successful recovery.",
+      "Create a distinct owned Scene and a complete independent native-ID fork of the recovered original Rig, data and necessary controller/constraint/skin dependencies; this is not an empty imported Rig.",
+      "Authenticate old Scene, nine rows, all original Actions/slots/motion hashes and old Rig native graph unchanged by fork construction.",
+      "Remap or remove legacy Scene/Rig/Action-session/Link identity references only on new owned IDs; do not edit original IDs or invent new WorkIDs.",
+      "Prove fork structural Rest/skin/constraints/controllers/colors/collections equivalent and no foreign mutable dependency points back to original Rig.",
+      "Select authenticated fork as Main Rig in its empty new worklist, then public Connect -> Use Main Rig -> Add -> Activate with actual prepared inputs.",
+      "Strict actual packet/model/bone-parent/bindpose/scale mapping remains authoritative; mismatch fails without repair.",
+      "Only after real tests use official Sync/worker and independent Unity Base/Target Apply; fork success does not itself prove formal original Scene/Rig integration."
+    ],
+    "rollback": "Remove only this operation newly created IDs/Scene after ownership proof, preserve original state and actual failure evidence.",
+    "scope": "Separate Source implementation and fresh native stage, after actual failure and coordination; no automatic fallback in held formal harness."
+  },
+  "boundaries": {
+    "product_source_edits": 0,
+    "held_harness_edits": 0,
+    "freeze_edits": 0,
+    "native": 0,
+    "sdk": 0,
+    "gui": 0,
+    "worker": 0,
+    "deployment": 0,
+    "artist_writes": 0
+  }
+}

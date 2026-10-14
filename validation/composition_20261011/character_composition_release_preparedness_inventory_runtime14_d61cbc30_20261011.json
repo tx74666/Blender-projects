@@ -1,0 +1,403 @@
+{
+  "schema": "x.validation.character-composition-release-preparedness-source-inventory/1",
+  "utc": "2026-10-11T14:35:49.833216+00:00",
+  "source_only": true,
+  "native_execution_performed": false,
+  "runtime14_projection": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\runtime_draft_14\\python_projection.json",
+    "sha256": "d61cbc30a554f13faac171fd8cd509e9c9f83198fbd68e2b08472b4d8a10edaf",
+    "bytes": 20283
+  },
+  "historical_full_candidate14_projection": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\candidate_projection.json",
+    "sha256": "9bcf6326512b2b146264df165c970bf87508a48d363c7a1fcfa5448e29c2dee1",
+    "bytes": 41551
+  },
+  "canonical_package_root": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer",
+  "canonical_version": "0.77.25",
+  "counts": {
+    "canonical_shippable": 183,
+    "runtime14": 167,
+    "common_equal": 155,
+    "common_differing": 12,
+    "canonical_extras": 16,
+    "canonical_missing_approved": 0,
+    "historical_full_candidate14": 173,
+    "historical_full_candidate14_extras": 6
+  },
+  "canonical_differing_common_leaves": {
+    "animation_export.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export.py",
+        "sha256": "ec4f40beebe786623b680b1f579afdcf5ba967a345ba7f05212ae76f58d0a5c2",
+        "bytes": 11624
+      },
+      "runtime14_sha256": "db4261888d98e23b68a68fcc9e8ec1e45e253d2b522669510aa1f1f67ba6d69b"
+    },
+    "animation_export_worker.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_export_worker.py",
+        "sha256": "87a4f850fd31583a55e7f610a46b6d3d35696d7f604986a0db371d3a088fe266",
+        "bytes": 28660
+      },
+      "runtime14_sha256": "b2668e204e4e75e71af165e3427eed8a3e2387c2dd2635cbd757d27d748a97be"
+    },
+    "skirt.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt.py",
+        "sha256": "492e5ada03c84ea4b99ec3f5f061bffd727442687e8bd88a7ae84ba3f0c6ee22",
+        "bytes": 54001
+      },
+      "runtime14_sha256": "f2148e1bfcf5534c04b0df7f4e71018a39cdf23d22d020ad919cbd68f91e81ff"
+    },
+    "skirt_original_mode.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_original_mode.py",
+        "sha256": "d382e40c2be9771dd0ae6ac2bf7b3b668108535c8f930e2695702ee19d7e25ff",
+        "bytes": 25846
+      },
+      "runtime14_sha256": "25924ad231008f3ddd594d65a2912554a14d3da452fbf93eb9aa7fdbdb20a929"
+    },
+    "skirt_physics.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_physics.py",
+        "sha256": "4a033b3bae40c3dba52cb4a522173c3a7532c84ca5c04ee55ad712af98a406d1",
+        "bytes": 48081
+      },
+      "runtime14_sha256": "01f52e9b3ff73b3a8839ed67b171f4a797477511f515e8e31cf97a902ed35750"
+    },
+    "skirt_rig.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_rig.py",
+        "sha256": "81076d8614987009d1423964a7b512bb46cc8af829cbf65175bc63cbd93fd740",
+        "bytes": 50953
+      },
+      "runtime14_sha256": "f4efa7d31fa707a3c699bb9097ac35f4d401808b41195bd24c3ff9381bf4c3df"
+    },
+    "skirt_shared_rig.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_shared_rig.py",
+        "sha256": "d09a0376af140e97709f6aba3cd8749b4159295dc6f7f094ba47fe03c2f93e97",
+        "bytes": 43671
+      },
+      "runtime14_sha256": "bb3b9e0f2babbbe30891f2d31572c2d1a5256b25aacb377beb328b17e9e453e2"
+    },
+    "unity_export.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export.py",
+        "sha256": "c6f6429911bb7484d088aaa6d066492ebc6d6d8faa2e552ce7d05ecdd27ed9f0",
+        "bytes": 35161
+      },
+      "runtime14_sha256": "c437a269dfb128a1ed0edc7ae6a3bfd4e548109e44c05a220e2231258c7e20ed"
+    },
+    "unity_export_worker.py": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_export_worker.py",
+        "sha256": "ef1f801e65b476cf6fc5950879b94efd18e44c75654809e0925e843ef8ca6095",
+        "bytes": 56036
+      },
+      "runtime14_sha256": "ade4b7627365371877c76d03edcde1229148671c1e7dfdcfe7f64d708f628622"
+    },
+    "unity_runtime/Editor/CharacterAnimationReturn.cs": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+        "sha256": "488337f0f7f62ef7cd0c41a2a7d1af4058d13c75383b9e83277f4b52ab4fa208",
+        "bytes": 51650
+      },
+      "runtime14_sha256": "4b5ceb26d45e90b77af10d7bf80024190a3e0108c257b388e0e29421cda02285"
+    },
+    "unity_runtime/Editor/CharacterAnimationTransfer.cs": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationTransfer.cs",
+        "sha256": "68246cf6c2fafdbbe6554920f42e303269d50c1f734f6e42b9bad224cb8d1cae",
+        "bytes": 41455
+      },
+      "runtime14_sha256": "b812b67323fe0eabe9e9cfd84fc1554a744fb446a8eb3aed7eca8698147116db"
+    },
+    "unity_runtime/Runtime/ForearmCorrection.cs": {
+      "canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrection.cs",
+        "sha256": "8b037d347b1788da0469c4c5b75aba856af86b3d7df491cf1cec4d83779bfdd2",
+        "bytes": 38388
+      },
+      "runtime14_sha256": "caef1ec7531a80009f9bfa163528b2986059c234cedc6b9034eea7c366ea4117"
+    }
+  },
+  "canonical_extra_leaves": {
+    "dress_export_guard.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_guard.py",
+      "sha256": "4655c3a1de51cfd8560d8d084ab70f697bfde8cf8b3e6d5f434b323e314c8193",
+      "bytes": 10625
+    },
+    "dress_export_snapshot.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py",
+      "sha256": "a9949be8e5ad42c97fba3bd85c67e4fbb014188c29afe49bc538d2fc8ddd33e2",
+      "bytes": 14752
+    },
+    "dress_plain_native_skin.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_plain_native_skin.py",
+      "sha256": "8e2477f7cb5756ee0b479d7749344cbaa41b6a838d85f3f20792240cd54e6980",
+      "bytes": 9543
+    },
+    "dress_standard_parent_candidate.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_standard_parent_candidate.py",
+      "sha256": "100c487aace09d9846b19bc60a3fe96497bfeaf3dfa83d1a22f6907683d12780",
+      "bytes": 6898
+    },
+    "mesh_copy.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_copy.py",
+      "sha256": "a43aabff39a1ed9525df53352b859943a5571edeb30405d34338a5bebf264150",
+      "bytes": 1781
+    },
+    "skirt_motion_profiles.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py",
+      "sha256": "be77e6f1fdcd6819ee46a3490515a0791b644900f286f04e287b5704706390e1",
+      "bytes": 9342
+    },
+    "skirt_motion_tuning.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_tuning.py",
+      "sha256": "fa9c7d3b05c0ca6989b61387edb0ab52a9ffe4525c8c14f199222e101966f2e1",
+      "bytes": 22286
+    },
+    "skirt_motion_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_ui.py",
+      "sha256": "d4d6ab9173c11778447752215c75a6993438bf76fb494933047381f08c683430",
+      "bytes": 15159
+    },
+    "skirt_surface.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py",
+      "sha256": "a58d0e542bca195cd1d8e767e23e76809602bfe95b698668a8cc4b4289855c12",
+      "bytes": 108097
+    },
+    "skirt_surface_direct.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface_direct.py",
+      "sha256": "7ac0faf70d4cd8db6bec4bbf3c71aad4187b8b295aed542bc09534bd59dda0f5",
+      "bytes": 66702
+    },
+    "unity_runtime/Editor/CharacterAnimationCompositionJson.cs": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs",
+      "sha256": "1bdcf64c5eccab9e9f640c0415697f31eb1e9c02b14120bf75e248c52a91d2b5",
+      "bytes": 4011
+    },
+    "unity_runtime/Editor/CharacterAnimationCompositionJson.cs.meta": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs.meta",
+      "sha256": "1d811a88a300af520711f3cd0c2650a343829990d035cf236efb2ba08fa50f56",
+      "bytes": 240
+    },
+    "unity_runtime/Editor/CharacterAnimationWeaponContext.cs": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs",
+      "sha256": "78b777a6219392d993e297d91e30de24af19434ab91279bf05575d1eaeefc472",
+      "bytes": 36684
+    },
+    "unity_runtime/Editor/CharacterAnimationWeaponContext.cs.meta": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs.meta",
+      "sha256": "606ee13c0826a1ae8ee753693ca9e0a46795c4dbf802239e7e47c6ba84342b47",
+      "bytes": 60
+    },
+    "unity_runtime/Runtime/CharacterAnimationComposition.cs": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs",
+      "sha256": "a751cf3d41dc6d10d41cb21103e38971b950cc7967b3a2a544ae8b930399f8b2",
+      "bytes": 16360
+    },
+    "unity_runtime/Runtime/CharacterAnimationComposition.cs.meta": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs.meta",
+      "sha256": "57ef2da117918983353fb9238c71db036ba8bf1a4f605dc5ce7318444d086ae9",
+      "bytes": 60
+    }
+  },
+  "canonical_missing_approved_leaves": {},
+  "six_historical_full_candidate14_extras": {
+    "unity_runtime/Editor/CharacterAnimationCompositionJson.cs": {
+      "historical_full_candidate14": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs",
+        "sha256": "edd476dc61756d74626340d7e0613d4fa2a7f564d25fcba99f9ec974ea0a1568",
+        "bytes": 2256
+      },
+      "current_canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs",
+        "sha256": "1bdcf64c5eccab9e9f640c0415697f31eb1e9c02b14120bf75e248c52a91d2b5",
+        "bytes": 4011
+      },
+      "current_matches_historical": false
+    },
+    "unity_runtime/Editor/CharacterAnimationCompositionJson.cs.meta": {
+      "historical_full_candidate14": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs.meta",
+        "sha256": "1d811a88a300af520711f3cd0c2650a343829990d035cf236efb2ba08fa50f56",
+        "bytes": 240
+      },
+      "current_canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationCompositionJson.cs.meta",
+        "sha256": "1d811a88a300af520711f3cd0c2650a343829990d035cf236efb2ba08fa50f56",
+        "bytes": 240
+      },
+      "current_matches_historical": true
+    },
+    "unity_runtime/Editor/CharacterAnimationWeaponContext.cs": {
+      "historical_full_candidate14": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs",
+        "sha256": "78b777a6219392d993e297d91e30de24af19434ab91279bf05575d1eaeefc472",
+        "bytes": 36684
+      },
+      "current_canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs",
+        "sha256": "78b777a6219392d993e297d91e30de24af19434ab91279bf05575d1eaeefc472",
+        "bytes": 36684
+      },
+      "current_matches_historical": true
+    },
+    "unity_runtime/Editor/CharacterAnimationWeaponContext.cs.meta": {
+      "historical_full_candidate14": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs.meta",
+        "sha256": "606ee13c0826a1ae8ee753693ca9e0a46795c4dbf802239e7e47c6ba84342b47",
+        "bytes": 60
+      },
+      "current_canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationWeaponContext.cs.meta",
+        "sha256": "606ee13c0826a1ae8ee753693ca9e0a46795c4dbf802239e7e47c6ba84342b47",
+        "bytes": 60
+      },
+      "current_matches_historical": true
+    },
+    "unity_runtime/Runtime/CharacterAnimationComposition.cs": {
+      "historical_full_candidate14": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs",
+        "sha256": "5404e1c823a2fc22a7b000066012d2d966478cb0658c6570472997c0201a0bc6",
+        "bytes": 16281
+      },
+      "current_canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs",
+        "sha256": "a751cf3d41dc6d10d41cb21103e38971b950cc7967b3a2a544ae8b930399f8b2",
+        "bytes": 16360
+      },
+      "current_matches_historical": false
+    },
+    "unity_runtime/Runtime/CharacterAnimationComposition.cs.meta": {
+      "historical_full_candidate14": {
+        "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\full_candidate_14\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs.meta",
+        "sha256": "57ef2da117918983353fb9238c71db036ba8bf1a4f605dc5ce7318444d086ae9",
+        "bytes": 60
+      },
+      "current_canonical": {
+        "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\CharacterAnimationComposition.cs.meta",
+        "sha256": "57ef2da117918983353fb9238c71db036ba8bf1a4f605dc5ce7318444d086ae9",
+        "bytes": 60
+      },
+      "current_matches_historical": true
+    }
+  },
+  "canonical_extras_outside_historical_full_candidate14": {
+    "dress_export_guard.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_guard.py",
+      "sha256": "4655c3a1de51cfd8560d8d084ab70f697bfde8cf8b3e6d5f434b323e314c8193",
+      "bytes": 10625
+    },
+    "dress_export_snapshot.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_export_snapshot.py",
+      "sha256": "a9949be8e5ad42c97fba3bd85c67e4fbb014188c29afe49bc538d2fc8ddd33e2",
+      "bytes": 14752
+    },
+    "dress_plain_native_skin.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_plain_native_skin.py",
+      "sha256": "8e2477f7cb5756ee0b479d7749344cbaa41b6a838d85f3f20792240cd54e6980",
+      "bytes": 9543
+    },
+    "dress_standard_parent_candidate.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\dress_standard_parent_candidate.py",
+      "sha256": "100c487aace09d9846b19bc60a3fe96497bfeaf3dfa83d1a22f6907683d12780",
+      "bytes": 6898
+    },
+    "mesh_copy.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\mesh_copy.py",
+      "sha256": "a43aabff39a1ed9525df53352b859943a5571edeb30405d34338a5bebf264150",
+      "bytes": 1781
+    },
+    "skirt_motion_profiles.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_profiles.py",
+      "sha256": "be77e6f1fdcd6819ee46a3490515a0791b644900f286f04e287b5704706390e1",
+      "bytes": 9342
+    },
+    "skirt_motion_tuning.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_tuning.py",
+      "sha256": "fa9c7d3b05c0ca6989b61387edb0ab52a9ffe4525c8c14f199222e101966f2e1",
+      "bytes": 22286
+    },
+    "skirt_motion_ui.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_motion_ui.py",
+      "sha256": "d4d6ab9173c11778447752215c75a6993438bf76fb494933047381f08c683430",
+      "bytes": 15159
+    },
+    "skirt_surface.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface.py",
+      "sha256": "a58d0e542bca195cd1d8e767e23e76809602bfe95b698668a8cc4b4289855c12",
+      "bytes": 108097
+    },
+    "skirt_surface_direct.py": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\skirt_surface_direct.py",
+      "sha256": "7ac0faf70d4cd8db6bec4bbf3c71aad4187b8b295aed542bc09534bd59dda0f5",
+      "bytes": 66702
+    }
+  },
+  "save_pose_sources_match_runtime14": true,
+  "current_parent_cs_overlay_inventory": {
+    "unity_runtime/Editor/CharacterAnimationReturn.cs": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationReturn.cs",
+      "sha256": "488337f0f7f62ef7cd0c41a2a7d1af4058d13c75383b9e83277f4b52ab4fa208",
+      "bytes": 51650
+    },
+    "unity_runtime/Editor/CharacterAnimationTransfer.cs": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Editor\\CharacterAnimationTransfer.cs",
+      "sha256": "68246cf6c2fafdbbe6554920f42e303269d50c1f734f6e42b9bad224cb8d1cae",
+      "bytes": 41455
+    },
+    "unity_runtime/Runtime/ForearmCorrection.cs": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_runtime\\Runtime\\ForearmCorrection.cs",
+      "sha256": "8b037d347b1788da0469c4c5b75aba856af86b3d7df491cf1cec4d83779bfdd2",
+      "bytes": 38388
+    }
+  },
+  "parent_final_compile_and_validation_verified": false,
+  "archive": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\dist\\character_designer-0.77.25.zip",
+    "exists": false,
+    "comparison_performed": false,
+    "same_version_conflict_observed": false
+  },
+  "release_builder_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\build_releases.py",
+    "sha256": "30759e923bde1da595f5cd9f67dd9d6f866ebb2866eb4c5f5b1747628e2872c1",
+    "bytes": 2845
+  },
+  "shippable_resolver_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tools\\release_projection.py",
+    "sha256": "052e6c765c95ba46d480bf1eeca1e1dccb7685c77a4e756202ce409d20713106",
+    "bytes": 7529
+  },
+  "observations": [
+    "build_releases.py uses dist/character_designer-{source.version}.zip and rejects an existing archive whose payload differs; no conflicting .77.25 archive currently exists.",
+    "Whole canonical183 would add ten unrelated Dress/skirt files and nine differing Python leaves relative to tested runtime14.",
+    "Final approved full release can start from the reviewed167 runtime14 leaves, add the six separately admitted CSharp/meta leaves, and overlay only Parent-final-approved CSharp bytes. Current CSharp inventory alone is not compile/contract acceptance."
+  ],
+  "recommended_next_steps": [
+    "Wait for Parent final Return/Transfer/Forearm and six CSharp/meta source pins plus final compile/contract evidence.",
+    "Create a separate complete173 approved projection retaining runtime14 Python bytes and existing protected worker/export baselines; do not package whole canonical183 implicitly.",
+    "At separately authorized build time recheck archive absence/content and manifest/version; use projection-bound module build, then separately authorized deployment/check on the actual Blender target."
+  ],
+  "validation": {
+    "approved_runtime14_complete167_raw_leaves_rehashed": true,
+    "historical_full_candidate14_six_extra_raw_leaves_rehashed": true,
+    "canonical_source_inventory_read": true,
+    "target_imports": 0,
+    "tests_run": 0,
+    "native_calls": 0,
+    "builds": 0,
+    "deployments": 0,
+    "shared_workspace_reads": 0,
+    "artist_reads": 0
+  },
+  "limits": [
+    "Current canonical source inventory only. Parent owns CSharp work and may change files after this read.",
+    "No source files, projections, release archives, workspaces or artist data were changed; only this exclusive inventory report was created.",
+    "No final release/native/GUI approval is inferred."
+  ]
+}
