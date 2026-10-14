@@ -1,3 +1,4171 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a905c0ef0a4d6be55f7b14329e0634fa84620ad23c9e83f4273e6bfa655d0dba
-size 127402594
+{
+  "schema": "x.validation.original-leave-asset-transition-summary/1",
+  "completed": true,
+  "input": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\artist_before_direct_return.blend",
+  "input_sha256": "079d12824d4fc75a2abba00f7bf68d606e07ab558634c0f430acfe1e4c475337",
+  "through": "leave",
+  "scope": "Disposable Blender process and full backup only. No artist or Unity mutation; no saves.",
+  "transitions": {
+    "validate": {
+      "asset_component_changes": [],
+      "skin_membership_before": [
+        "Clothes",
+        "Cosha",
+        "Dress",
+        "Hair",
+        "Shoes",
+        "Stocking"
+      ],
+      "skin_membership_after": [
+        "Clothes",
+        "Cosha",
+        "Dress",
+        "Hair",
+        "Shoes",
+        "Stocking"
+      ],
+      "mesh_content_field_differences": [],
+      "rest_field_differences": [],
+      "mesh_raw_components": {
+        "Clothes": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "718d11aa2f75cd8d7f4e28530445775531af6a227b9a5e6d78d726df19404f4d",
+            "object_pointer": "f3923f40e65fe8f4f3e40e34fef018df5b951d4e8721d2e70af6e21b9051598b",
+            "data_id": "81f52dc21f66c71fcafb94419298f3c2f8580ab3e347d10e48810b17ab703d45",
+            "data_pointer": "746d03e874a92e06efd6c4d8a86414cab66d77866a384d1c53d4a11ab41a9be0",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "d741d387a59552cfd7e4e5359ced6765dacbebc57725e6c7d80db11bb3457441",
+            "edges": "4490e4b268b4c52cfc7cd1cc683841e480716cc052509b3b7112a9487dd9adc7",
+            "loops": "13fafa45e03113465b137e582b5a836fd36541548b956907a64eb35336281a0d",
+            "polygons": "46c623144da96db1f54554c61d08a9da34359589fd41872439498b4f36b35241",
+            "weights_ordered": "b0a62b039e96197392df02435d9bf9b6d539597f23d12c01a0288a73cf57a535",
+            "materials": "ee862d034548b413ab6d1dd8113898755d3ff6d3026faa873c6aad70fe8c9d60",
+            "material_slots": "02346275662ddda8e211c48f54426139abab3bbb23941b53d331ca983d126e86",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "718d11aa2f75cd8d7f4e28530445775531af6a227b9a5e6d78d726df19404f4d",
+            "object_pointer": "f3923f40e65fe8f4f3e40e34fef018df5b951d4e8721d2e70af6e21b9051598b",
+            "data_id": "81f52dc21f66c71fcafb94419298f3c2f8580ab3e347d10e48810b17ab703d45",
+            "data_pointer": "746d03e874a92e06efd6c4d8a86414cab66d77866a384d1c53d4a11ab41a9be0",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "d741d387a59552cfd7e4e5359ced6765dacbebc57725e6c7d80db11bb3457441",
+            "edges": "4490e4b268b4c52cfc7cd1cc683841e480716cc052509b3b7112a9487dd9adc7",
+            "loops": "13fafa45e03113465b137e582b5a836fd36541548b956907a64eb35336281a0d",
+            "polygons": "46c623144da96db1f54554c61d08a9da34359589fd41872439498b4f36b35241",
+            "weights_ordered": "b0a62b039e96197392df02435d9bf9b6d539597f23d12c01a0288a73cf57a535",
+            "materials": "ee862d034548b413ab6d1dd8113898755d3ff6d3026faa873c6aad70fe8c9d60",
+            "material_slots": "02346275662ddda8e211c48f54426139abab3bbb23941b53d331ca983d126e86",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Cosha": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "35b3247f475739e6e1492387da376ecd5e604d3385e8440db71041c63ff58a9f",
+            "object_pointer": "4b3487dcab405c8308462f6304bc6cedaca04329c6fa6196e3ba5505a6080dd2",
+            "data_id": "7548a1f874028529154df52b9b417da635e128e5ef9930363382a0114f6d9b0a",
+            "data_pointer": "2b1fd331882d687f1d8688691b148d2cfddabe2c29c4187c88b2fb428c86189d",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "60629caa2188e7f21a4dbc28385c5aea87eee36f9ab477b9cf41984cfde7c420",
+            "vertices": "43763dc473fd40a7c1ec7db0173bf8061fae94e97f8fec1b9c82973460b1c5a6",
+            "edges": "19b5df0213c253998a45f1c8b98824b5768d0388bde38378cc19fe688d548aa0",
+            "loops": "7258d624998bbb5f0ec7631a30dfa5fcba2e6baadd5fe5870219691f9e2b41f5",
+            "polygons": "a387867f323f29abd95992e9b4df6e0d75772026df4a471d788d73b3276c6ac5",
+            "weights_ordered": "50c43bdbeade9d096ec42a8c77056e0ea4bc1c7613c78b19eef65cb01a3707cd",
+            "materials": "e0d1150d113c026bd6286fd5373a604889ee9f9f71c4cf57da9bc0335da3a649",
+            "material_slots": "f94c0d05348f1100ecbe28004e88faa6d81276ea55b357ec4232951ef8609256",
+            "shape_keys": "19aa3a93e815e1bc5f1e9af97d0efd1be5a70089a2d53c7574b1207b35945e4c"
+          },
+          "component_after_sha256": {
+            "object_id": "35b3247f475739e6e1492387da376ecd5e604d3385e8440db71041c63ff58a9f",
+            "object_pointer": "4b3487dcab405c8308462f6304bc6cedaca04329c6fa6196e3ba5505a6080dd2",
+            "data_id": "7548a1f874028529154df52b9b417da635e128e5ef9930363382a0114f6d9b0a",
+            "data_pointer": "2b1fd331882d687f1d8688691b148d2cfddabe2c29c4187c88b2fb428c86189d",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "60629caa2188e7f21a4dbc28385c5aea87eee36f9ab477b9cf41984cfde7c420",
+            "vertices": "43763dc473fd40a7c1ec7db0173bf8061fae94e97f8fec1b9c82973460b1c5a6",
+            "edges": "19b5df0213c253998a45f1c8b98824b5768d0388bde38378cc19fe688d548aa0",
+            "loops": "7258d624998bbb5f0ec7631a30dfa5fcba2e6baadd5fe5870219691f9e2b41f5",
+            "polygons": "a387867f323f29abd95992e9b4df6e0d75772026df4a471d788d73b3276c6ac5",
+            "weights_ordered": "50c43bdbeade9d096ec42a8c77056e0ea4bc1c7613c78b19eef65cb01a3707cd",
+            "materials": "e0d1150d113c026bd6286fd5373a604889ee9f9f71c4cf57da9bc0335da3a649",
+            "material_slots": "f94c0d05348f1100ecbe28004e88faa6d81276ea55b357ec4232951ef8609256",
+            "shape_keys": "19aa3a93e815e1bc5f1e9af97d0efd1be5a70089a2d53c7574b1207b35945e4c"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Dress": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "967eae28e1dfb81c1b3a686325453d30f00531a97e000659405118eed8a4af5f",
+            "object_pointer": "5099cd7edd1f963c20bd064d69bc656367e4948634c96dfa07516b08ce22b724",
+            "data_id": "0216df5391156d835f0ba569a241aed452d504e47478fa1756ce733015b438c4",
+            "data_pointer": "abae0a77faa66eee156ba364ffa39b430f624b3c6ae4bccd4d826c6ac2c974ef",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "d418a3d2dfc1927775d60d2334111630257a1724a39a1c65b45150e44399538c",
+            "vertex_groups": "005a247d62d4ccb591b98817871c9e618bd8504b2359a3a29f68cdfae3cbfed9",
+            "vertices": "e3f2b108646caa7706f4fc7e65768479b07ce1934e7caf6a1e261e3fd78dfe29",
+            "edges": "dd751854f84b6dd51b2c63f0bf1bf8123b1b7f1b5655fa52d2948a630a4fb6c9",
+            "loops": "b461a5a8c585a307358d0b42388a01198fd8f926e23db625e04c51a23ad3899d",
+            "polygons": "9f59a2ac6ae5d019ff6ba874162d1296bb44691b73b3487121be651aa51a6f37",
+            "weights_ordered": "406afc2b833179124cb1aa5ae09676b5363fe72db27abb93949a6f65dbc4ca75",
+            "materials": "5f472638497deb743e2e9090caf58567fb48c2f64a49b1f7966136e6e9955870",
+            "material_slots": "d0fcc625630b99985bb91d293d0905dc5a10e617771c509a49a392946ea6d713",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "967eae28e1dfb81c1b3a686325453d30f00531a97e000659405118eed8a4af5f",
+            "object_pointer": "5099cd7edd1f963c20bd064d69bc656367e4948634c96dfa07516b08ce22b724",
+            "data_id": "0216df5391156d835f0ba569a241aed452d504e47478fa1756ce733015b438c4",
+            "data_pointer": "abae0a77faa66eee156ba364ffa39b430f624b3c6ae4bccd4d826c6ac2c974ef",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "d418a3d2dfc1927775d60d2334111630257a1724a39a1c65b45150e44399538c",
+            "vertex_groups": "005a247d62d4ccb591b98817871c9e618bd8504b2359a3a29f68cdfae3cbfed9",
+            "vertices": "e3f2b108646caa7706f4fc7e65768479b07ce1934e7caf6a1e261e3fd78dfe29",
+            "edges": "dd751854f84b6dd51b2c63f0bf1bf8123b1b7f1b5655fa52d2948a630a4fb6c9",
+            "loops": "b461a5a8c585a307358d0b42388a01198fd8f926e23db625e04c51a23ad3899d",
+            "polygons": "9f59a2ac6ae5d019ff6ba874162d1296bb44691b73b3487121be651aa51a6f37",
+            "weights_ordered": "406afc2b833179124cb1aa5ae09676b5363fe72db27abb93949a6f65dbc4ca75",
+            "materials": "5f472638497deb743e2e9090caf58567fb48c2f64a49b1f7966136e6e9955870",
+            "material_slots": "d0fcc625630b99985bb91d293d0905dc5a10e617771c509a49a392946ea6d713",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Hair": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "1103d26dcbf477e3b665a03b6f7cb91371dc397808c09221c23d5bf66e91b678",
+            "object_pointer": "c2c8f40fd923267ec6f2181e0ed7f40471419f3f7e7e81e8f809bf87faf62597",
+            "data_id": "5bb4b939845075849de0fad5a1baa637d43dabd595ce883dfc75d91e7f67af85",
+            "data_pointer": "348d7d9d56a93f0edc0155eb7923bee3268e18ea98cf55f7ad2fe04005d57c49",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "32661db0c11a3a1e7253c57cb2345eecf560b30934acf711740229c001ffc658",
+            "vertex_groups": "cd3f990b064e894865dd2844f2351a6658f5245deebf206b1f76ea72d238da2d",
+            "vertices": "d75af6866b0e1e3a7954de0af292f446c1598be6e0dccacd1e387be5ff76522b",
+            "edges": "0c1b41a65b0dead176c2e507cb52a8161f8c2440bd40ad5f12b3639b6a00ca5b",
+            "loops": "a5e8b21b3e773b978927e5a1e188aa3981096a720a4719a74b8d05a77d2db2fa",
+            "polygons": "278e030d4ea238eb01feeb9e4ed2e4dadd83ec677c822902467515b22204e984",
+            "weights_ordered": "4d09ac1120b9eff06bb18a16ed2971fa9c26eb6ac192e7ebe4e6434d90b0560b",
+            "materials": "77d20c991039d68841599c50adc6c0047090b3b2ce46112d156378df6df1e75b",
+            "material_slots": "5edd555ffcdd2d91b3508fa465b4dd09e28fba6aba8316670a66e6371caf09ab",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "1103d26dcbf477e3b665a03b6f7cb91371dc397808c09221c23d5bf66e91b678",
+            "object_pointer": "c2c8f40fd923267ec6f2181e0ed7f40471419f3f7e7e81e8f809bf87faf62597",
+            "data_id": "5bb4b939845075849de0fad5a1baa637d43dabd595ce883dfc75d91e7f67af85",
+            "data_pointer": "348d7d9d56a93f0edc0155eb7923bee3268e18ea98cf55f7ad2fe04005d57c49",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "32661db0c11a3a1e7253c57cb2345eecf560b30934acf711740229c001ffc658",
+            "vertex_groups": "cd3f990b064e894865dd2844f2351a6658f5245deebf206b1f76ea72d238da2d",
+            "vertices": "d75af6866b0e1e3a7954de0af292f446c1598be6e0dccacd1e387be5ff76522b",
+            "edges": "0c1b41a65b0dead176c2e507cb52a8161f8c2440bd40ad5f12b3639b6a00ca5b",
+            "loops": "a5e8b21b3e773b978927e5a1e188aa3981096a720a4719a74b8d05a77d2db2fa",
+            "polygons": "278e030d4ea238eb01feeb9e4ed2e4dadd83ec677c822902467515b22204e984",
+            "weights_ordered": "4d09ac1120b9eff06bb18a16ed2971fa9c26eb6ac192e7ebe4e6434d90b0560b",
+            "materials": "77d20c991039d68841599c50adc6c0047090b3b2ce46112d156378df6df1e75b",
+            "material_slots": "5edd555ffcdd2d91b3508fa465b4dd09e28fba6aba8316670a66e6371caf09ab",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Shoes": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "b5623c1c685bd9a9a145af12ad83706dfa3f1fef86f74330404ab2c0a4934c39",
+            "object_pointer": "c781852ae6620cba302d5d1cde6e34b268337d173671c52839c4ad8f8da767e2",
+            "data_id": "72b9ce0d207bf74885b0ab71d22a43369c6879bc6036af323c2c3038ec98499f",
+            "data_pointer": "21fbf77e7f46fafba5ade702f58b476ed7a8dd580dc358e5d7db3bef73b3de05",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "a590bc8f206bea8e0cf1136350a5d894888bf77d7c07c8c70efbe188eda3671c",
+            "vertices": "f9841bcb4f69ec58684df97f8496c96fefd941d35529f565495eca0373b82099",
+            "edges": "aedafc9ae4ede50c91abc11d121512ce40ef0456749db8aecd03489739bfde48",
+            "loops": "da4123b3653fc0705893cfdcd2d05355c08ac8ad41c046413de1fc647f2edc6a",
+            "polygons": "c02d9d704199d3c04cd11cd3a7c9a412be4eb09999fcb164a5d567466b477170",
+            "weights_ordered": "3cc20129a93f0b23ab8df54ad6a6184a235953eb49007bd3762a53dc0a8fa081",
+            "materials": "008a2a53c258d443a2bfb6a6186966a96ee418708908d914e21d899b7a3e6503",
+            "material_slots": "ccd84e08968e2ccaf4250d5721a093418a16826d6c34421a370bfe3f5f17fcdf",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "b5623c1c685bd9a9a145af12ad83706dfa3f1fef86f74330404ab2c0a4934c39",
+            "object_pointer": "c781852ae6620cba302d5d1cde6e34b268337d173671c52839c4ad8f8da767e2",
+            "data_id": "72b9ce0d207bf74885b0ab71d22a43369c6879bc6036af323c2c3038ec98499f",
+            "data_pointer": "21fbf77e7f46fafba5ade702f58b476ed7a8dd580dc358e5d7db3bef73b3de05",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "a590bc8f206bea8e0cf1136350a5d894888bf77d7c07c8c70efbe188eda3671c",
+            "vertices": "f9841bcb4f69ec58684df97f8496c96fefd941d35529f565495eca0373b82099",
+            "edges": "aedafc9ae4ede50c91abc11d121512ce40ef0456749db8aecd03489739bfde48",
+            "loops": "da4123b3653fc0705893cfdcd2d05355c08ac8ad41c046413de1fc647f2edc6a",
+            "polygons": "c02d9d704199d3c04cd11cd3a7c9a412be4eb09999fcb164a5d567466b477170",
+            "weights_ordered": "3cc20129a93f0b23ab8df54ad6a6184a235953eb49007bd3762a53dc0a8fa081",
+            "materials": "008a2a53c258d443a2bfb6a6186966a96ee418708908d914e21d899b7a3e6503",
+            "material_slots": "ccd84e08968e2ccaf4250d5721a093418a16826d6c34421a370bfe3f5f17fcdf",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Stocking": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "e72314005d4a97df2b8236ae31840e9ea069dd7df742c15d75ff92bda72cfd4a",
+            "object_pointer": "02895f638c5dab4d687463802ecfff14a6ceb1ed06b07b64653de5152006b159",
+            "data_id": "2c3b34707ebc9fe0ad84d019e29409f64121baeddb0f5580b99fc5bcf374f3b1",
+            "data_pointer": "2c0da6e5564cb42a90b92827bbe755a07d7535b947feb1811c61c688920fb1e7",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "11a966ddef4015fc2fc8398e75b60d64b2289f07ee9fd74b75df194fd8104634",
+            "edges": "b5d97d7a7c5fe70f77a5354ef82103c36fcb3d8a637f57b978268969bc86707e",
+            "loops": "42e1546d2b2fcc15273944cc35a7ea3a0203cea84d187c87f67fcdff6263e1f5",
+            "polygons": "48b1ca34966d0c2a37e89c706880ac5cc37d8e84cc65204a4d589a0fa8f882a0",
+            "weights_ordered": "97628ea235f8077dfea6496f62eb048c02e30f4c803a549acdd30680d8f9f228",
+            "materials": "6d1bc5cb81e06abb2e943faf87642f1ee3bdcfabd3dff74b52275c44aedf578c",
+            "material_slots": "760769a5f46336b4ff9fd70764e3582616032d13e8e83f45c70adf61f88bee74",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "e72314005d4a97df2b8236ae31840e9ea069dd7df742c15d75ff92bda72cfd4a",
+            "object_pointer": "02895f638c5dab4d687463802ecfff14a6ceb1ed06b07b64653de5152006b159",
+            "data_id": "2c3b34707ebc9fe0ad84d019e29409f64121baeddb0f5580b99fc5bcf374f3b1",
+            "data_pointer": "2c0da6e5564cb42a90b92827bbe755a07d7535b947feb1811c61c688920fb1e7",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "11a966ddef4015fc2fc8398e75b60d64b2289f07ee9fd74b75df194fd8104634",
+            "edges": "b5d97d7a7c5fe70f77a5354ef82103c36fcb3d8a637f57b978268969bc86707e",
+            "loops": "42e1546d2b2fcc15273944cc35a7ea3a0203cea84d187c87f67fcdff6263e1f5",
+            "polygons": "48b1ca34966d0c2a37e89c706880ac5cc37d8e84cc65204a4d589a0fa8f882a0",
+            "weights_ordered": "97628ea235f8077dfea6496f62eb048c02e30f4c803a549acdd30680d8f9f228",
+            "materials": "6d1bc5cb81e06abb2e943faf87642f1ee3bdcfabd3dff74b52275c44aedf578c",
+            "material_slots": "760769a5f46336b4ff9fd70764e3582616032d13e8e83f45c70adf61f88bee74",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        }
+      }
+    },
+    "leave": {
+      "asset_component_changes": [
+        "skin_meshes"
+      ],
+      "skin_membership_before": [
+        "Clothes",
+        "Cosha",
+        "Dress",
+        "Hair",
+        "Shoes",
+        "Stocking"
+      ],
+      "skin_membership_after": [
+        "Clothes",
+        "Cosha",
+        "Dress",
+        "Hair",
+        "Shoes",
+        "Stocking"
+      ],
+      "mesh_content_field_differences": [
+        {
+          "path": "/mesh_content_full/Cosha/shape_keys/12/geometry/sha256",
+          "before": "7dc5f052dc808be7afe0d634b3ebe1db7b8e18e4f0219b12bf3d26cc77f7a3e8",
+          "after": "d68ad484bfc0ef05456f7d67edc9e0e244bcc0d962139e7adda47c97d67deb4a"
+        },
+        {
+          "path": "/mesh_content_full/Cosha/shape_keys/13/geometry/sha256",
+          "before": "c772e1fe769a0508a3f44f2a14120300e164f8496d70610a863719e78cb71c26",
+          "after": "3aef6b70a997b8c17b1fdfdb392a13a14649d36172f8457ed547ac04c51518aa"
+        }
+      ],
+      "rest_field_differences": [],
+      "mesh_raw_components": {
+        "Clothes": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "718d11aa2f75cd8d7f4e28530445775531af6a227b9a5e6d78d726df19404f4d",
+            "object_pointer": "f3923f40e65fe8f4f3e40e34fef018df5b951d4e8721d2e70af6e21b9051598b",
+            "data_id": "81f52dc21f66c71fcafb94419298f3c2f8580ab3e347d10e48810b17ab703d45",
+            "data_pointer": "746d03e874a92e06efd6c4d8a86414cab66d77866a384d1c53d4a11ab41a9be0",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "d741d387a59552cfd7e4e5359ced6765dacbebc57725e6c7d80db11bb3457441",
+            "edges": "4490e4b268b4c52cfc7cd1cc683841e480716cc052509b3b7112a9487dd9adc7",
+            "loops": "13fafa45e03113465b137e582b5a836fd36541548b956907a64eb35336281a0d",
+            "polygons": "46c623144da96db1f54554c61d08a9da34359589fd41872439498b4f36b35241",
+            "weights_ordered": "b0a62b039e96197392df02435d9bf9b6d539597f23d12c01a0288a73cf57a535",
+            "materials": "ee862d034548b413ab6d1dd8113898755d3ff6d3026faa873c6aad70fe8c9d60",
+            "material_slots": "02346275662ddda8e211c48f54426139abab3bbb23941b53d331ca983d126e86",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "718d11aa2f75cd8d7f4e28530445775531af6a227b9a5e6d78d726df19404f4d",
+            "object_pointer": "f3923f40e65fe8f4f3e40e34fef018df5b951d4e8721d2e70af6e21b9051598b",
+            "data_id": "81f52dc21f66c71fcafb94419298f3c2f8580ab3e347d10e48810b17ab703d45",
+            "data_pointer": "746d03e874a92e06efd6c4d8a86414cab66d77866a384d1c53d4a11ab41a9be0",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "d741d387a59552cfd7e4e5359ced6765dacbebc57725e6c7d80db11bb3457441",
+            "edges": "4490e4b268b4c52cfc7cd1cc683841e480716cc052509b3b7112a9487dd9adc7",
+            "loops": "13fafa45e03113465b137e582b5a836fd36541548b956907a64eb35336281a0d",
+            "polygons": "46c623144da96db1f54554c61d08a9da34359589fd41872439498b4f36b35241",
+            "weights_ordered": "b0a62b039e96197392df02435d9bf9b6d539597f23d12c01a0288a73cf57a535",
+            "materials": "ee862d034548b413ab6d1dd8113898755d3ff6d3026faa873c6aad70fe8c9d60",
+            "material_slots": "02346275662ddda8e211c48f54426139abab3bbb23941b53d331ca983d126e86",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Cosha": {
+          "changed_fields": [
+            "shape_keys"
+          ],
+          "component_before_sha256": {
+            "object_id": "35b3247f475739e6e1492387da376ecd5e604d3385e8440db71041c63ff58a9f",
+            "object_pointer": "4b3487dcab405c8308462f6304bc6cedaca04329c6fa6196e3ba5505a6080dd2",
+            "data_id": "7548a1f874028529154df52b9b417da635e128e5ef9930363382a0114f6d9b0a",
+            "data_pointer": "2b1fd331882d687f1d8688691b148d2cfddabe2c29c4187c88b2fb428c86189d",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "60629caa2188e7f21a4dbc28385c5aea87eee36f9ab477b9cf41984cfde7c420",
+            "vertices": "43763dc473fd40a7c1ec7db0173bf8061fae94e97f8fec1b9c82973460b1c5a6",
+            "edges": "19b5df0213c253998a45f1c8b98824b5768d0388bde38378cc19fe688d548aa0",
+            "loops": "7258d624998bbb5f0ec7631a30dfa5fcba2e6baadd5fe5870219691f9e2b41f5",
+            "polygons": "a387867f323f29abd95992e9b4df6e0d75772026df4a471d788d73b3276c6ac5",
+            "weights_ordered": "50c43bdbeade9d096ec42a8c77056e0ea4bc1c7613c78b19eef65cb01a3707cd",
+            "materials": "e0d1150d113c026bd6286fd5373a604889ee9f9f71c4cf57da9bc0335da3a649",
+            "material_slots": "f94c0d05348f1100ecbe28004e88faa6d81276ea55b357ec4232951ef8609256",
+            "shape_keys": "19aa3a93e815e1bc5f1e9af97d0efd1be5a70089a2d53c7574b1207b35945e4c"
+          },
+          "component_after_sha256": {
+            "object_id": "35b3247f475739e6e1492387da376ecd5e604d3385e8440db71041c63ff58a9f",
+            "object_pointer": "4b3487dcab405c8308462f6304bc6cedaca04329c6fa6196e3ba5505a6080dd2",
+            "data_id": "7548a1f874028529154df52b9b417da635e128e5ef9930363382a0114f6d9b0a",
+            "data_pointer": "2b1fd331882d687f1d8688691b148d2cfddabe2c29c4187c88b2fb428c86189d",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "60629caa2188e7f21a4dbc28385c5aea87eee36f9ab477b9cf41984cfde7c420",
+            "vertices": "43763dc473fd40a7c1ec7db0173bf8061fae94e97f8fec1b9c82973460b1c5a6",
+            "edges": "19b5df0213c253998a45f1c8b98824b5768d0388bde38378cc19fe688d548aa0",
+            "loops": "7258d624998bbb5f0ec7631a30dfa5fcba2e6baadd5fe5870219691f9e2b41f5",
+            "polygons": "a387867f323f29abd95992e9b4df6e0d75772026df4a471d788d73b3276c6ac5",
+            "weights_ordered": "50c43bdbeade9d096ec42a8c77056e0ea4bc1c7613c78b19eef65cb01a3707cd",
+            "materials": "e0d1150d113c026bd6286fd5373a604889ee9f9f71c4cf57da9bc0335da3a649",
+            "material_slots": "f94c0d05348f1100ecbe28004e88faa6d81276ea55b357ec4232951ef8609256",
+            "shape_keys": "946bef79af9e457eef81ed5e9959cf219694632dabd7fc0853b941011808f425"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": false,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": [
+            "/mesh_raw_full/Cosha/shape_keys"
+          ]
+        },
+        "Dress": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "967eae28e1dfb81c1b3a686325453d30f00531a97e000659405118eed8a4af5f",
+            "object_pointer": "5099cd7edd1f963c20bd064d69bc656367e4948634c96dfa07516b08ce22b724",
+            "data_id": "0216df5391156d835f0ba569a241aed452d504e47478fa1756ce733015b438c4",
+            "data_pointer": "abae0a77faa66eee156ba364ffa39b430f624b3c6ae4bccd4d826c6ac2c974ef",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "d418a3d2dfc1927775d60d2334111630257a1724a39a1c65b45150e44399538c",
+            "vertex_groups": "005a247d62d4ccb591b98817871c9e618bd8504b2359a3a29f68cdfae3cbfed9",
+            "vertices": "e3f2b108646caa7706f4fc7e65768479b07ce1934e7caf6a1e261e3fd78dfe29",
+            "edges": "dd751854f84b6dd51b2c63f0bf1bf8123b1b7f1b5655fa52d2948a630a4fb6c9",
+            "loops": "b461a5a8c585a307358d0b42388a01198fd8f926e23db625e04c51a23ad3899d",
+            "polygons": "9f59a2ac6ae5d019ff6ba874162d1296bb44691b73b3487121be651aa51a6f37",
+            "weights_ordered": "406afc2b833179124cb1aa5ae09676b5363fe72db27abb93949a6f65dbc4ca75",
+            "materials": "5f472638497deb743e2e9090caf58567fb48c2f64a49b1f7966136e6e9955870",
+            "material_slots": "d0fcc625630b99985bb91d293d0905dc5a10e617771c509a49a392946ea6d713",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "967eae28e1dfb81c1b3a686325453d30f00531a97e000659405118eed8a4af5f",
+            "object_pointer": "5099cd7edd1f963c20bd064d69bc656367e4948634c96dfa07516b08ce22b724",
+            "data_id": "0216df5391156d835f0ba569a241aed452d504e47478fa1756ce733015b438c4",
+            "data_pointer": "abae0a77faa66eee156ba364ffa39b430f624b3c6ae4bccd4d826c6ac2c974ef",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "d418a3d2dfc1927775d60d2334111630257a1724a39a1c65b45150e44399538c",
+            "vertex_groups": "005a247d62d4ccb591b98817871c9e618bd8504b2359a3a29f68cdfae3cbfed9",
+            "vertices": "e3f2b108646caa7706f4fc7e65768479b07ce1934e7caf6a1e261e3fd78dfe29",
+            "edges": "dd751854f84b6dd51b2c63f0bf1bf8123b1b7f1b5655fa52d2948a630a4fb6c9",
+            "loops": "b461a5a8c585a307358d0b42388a01198fd8f926e23db625e04c51a23ad3899d",
+            "polygons": "9f59a2ac6ae5d019ff6ba874162d1296bb44691b73b3487121be651aa51a6f37",
+            "weights_ordered": "406afc2b833179124cb1aa5ae09676b5363fe72db27abb93949a6f65dbc4ca75",
+            "materials": "5f472638497deb743e2e9090caf58567fb48c2f64a49b1f7966136e6e9955870",
+            "material_slots": "d0fcc625630b99985bb91d293d0905dc5a10e617771c509a49a392946ea6d713",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Hair": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "1103d26dcbf477e3b665a03b6f7cb91371dc397808c09221c23d5bf66e91b678",
+            "object_pointer": "c2c8f40fd923267ec6f2181e0ed7f40471419f3f7e7e81e8f809bf87faf62597",
+            "data_id": "5bb4b939845075849de0fad5a1baa637d43dabd595ce883dfc75d91e7f67af85",
+            "data_pointer": "348d7d9d56a93f0edc0155eb7923bee3268e18ea98cf55f7ad2fe04005d57c49",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "32661db0c11a3a1e7253c57cb2345eecf560b30934acf711740229c001ffc658",
+            "vertex_groups": "cd3f990b064e894865dd2844f2351a6658f5245deebf206b1f76ea72d238da2d",
+            "vertices": "d75af6866b0e1e3a7954de0af292f446c1598be6e0dccacd1e387be5ff76522b",
+            "edges": "0c1b41a65b0dead176c2e507cb52a8161f8c2440bd40ad5f12b3639b6a00ca5b",
+            "loops": "a5e8b21b3e773b978927e5a1e188aa3981096a720a4719a74b8d05a77d2db2fa",
+            "polygons": "278e030d4ea238eb01feeb9e4ed2e4dadd83ec677c822902467515b22204e984",
+            "weights_ordered": "4d09ac1120b9eff06bb18a16ed2971fa9c26eb6ac192e7ebe4e6434d90b0560b",
+            "materials": "77d20c991039d68841599c50adc6c0047090b3b2ce46112d156378df6df1e75b",
+            "material_slots": "5edd555ffcdd2d91b3508fa465b4dd09e28fba6aba8316670a66e6371caf09ab",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "1103d26dcbf477e3b665a03b6f7cb91371dc397808c09221c23d5bf66e91b678",
+            "object_pointer": "c2c8f40fd923267ec6f2181e0ed7f40471419f3f7e7e81e8f809bf87faf62597",
+            "data_id": "5bb4b939845075849de0fad5a1baa637d43dabd595ce883dfc75d91e7f67af85",
+            "data_pointer": "348d7d9d56a93f0edc0155eb7923bee3268e18ea98cf55f7ad2fe04005d57c49",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "32661db0c11a3a1e7253c57cb2345eecf560b30934acf711740229c001ffc658",
+            "vertex_groups": "cd3f990b064e894865dd2844f2351a6658f5245deebf206b1f76ea72d238da2d",
+            "vertices": "d75af6866b0e1e3a7954de0af292f446c1598be6e0dccacd1e387be5ff76522b",
+            "edges": "0c1b41a65b0dead176c2e507cb52a8161f8c2440bd40ad5f12b3639b6a00ca5b",
+            "loops": "a5e8b21b3e773b978927e5a1e188aa3981096a720a4719a74b8d05a77d2db2fa",
+            "polygons": "278e030d4ea238eb01feeb9e4ed2e4dadd83ec677c822902467515b22204e984",
+            "weights_ordered": "4d09ac1120b9eff06bb18a16ed2971fa9c26eb6ac192e7ebe4e6434d90b0560b",
+            "materials": "77d20c991039d68841599c50adc6c0047090b3b2ce46112d156378df6df1e75b",
+            "material_slots": "5edd555ffcdd2d91b3508fa465b4dd09e28fba6aba8316670a66e6371caf09ab",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Shoes": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "b5623c1c685bd9a9a145af12ad83706dfa3f1fef86f74330404ab2c0a4934c39",
+            "object_pointer": "c781852ae6620cba302d5d1cde6e34b268337d173671c52839c4ad8f8da767e2",
+            "data_id": "72b9ce0d207bf74885b0ab71d22a43369c6879bc6036af323c2c3038ec98499f",
+            "data_pointer": "21fbf77e7f46fafba5ade702f58b476ed7a8dd580dc358e5d7db3bef73b3de05",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "a590bc8f206bea8e0cf1136350a5d894888bf77d7c07c8c70efbe188eda3671c",
+            "vertices": "f9841bcb4f69ec58684df97f8496c96fefd941d35529f565495eca0373b82099",
+            "edges": "aedafc9ae4ede50c91abc11d121512ce40ef0456749db8aecd03489739bfde48",
+            "loops": "da4123b3653fc0705893cfdcd2d05355c08ac8ad41c046413de1fc647f2edc6a",
+            "polygons": "c02d9d704199d3c04cd11cd3a7c9a412be4eb09999fcb164a5d567466b477170",
+            "weights_ordered": "3cc20129a93f0b23ab8df54ad6a6184a235953eb49007bd3762a53dc0a8fa081",
+            "materials": "008a2a53c258d443a2bfb6a6186966a96ee418708908d914e21d899b7a3e6503",
+            "material_slots": "ccd84e08968e2ccaf4250d5721a093418a16826d6c34421a370bfe3f5f17fcdf",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "b5623c1c685bd9a9a145af12ad83706dfa3f1fef86f74330404ab2c0a4934c39",
+            "object_pointer": "c781852ae6620cba302d5d1cde6e34b268337d173671c52839c4ad8f8da767e2",
+            "data_id": "72b9ce0d207bf74885b0ab71d22a43369c6879bc6036af323c2c3038ec98499f",
+            "data_pointer": "21fbf77e7f46fafba5ade702f58b476ed7a8dd580dc358e5d7db3bef73b3de05",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "a590bc8f206bea8e0cf1136350a5d894888bf77d7c07c8c70efbe188eda3671c",
+            "vertices": "f9841bcb4f69ec58684df97f8496c96fefd941d35529f565495eca0373b82099",
+            "edges": "aedafc9ae4ede50c91abc11d121512ce40ef0456749db8aecd03489739bfde48",
+            "loops": "da4123b3653fc0705893cfdcd2d05355c08ac8ad41c046413de1fc647f2edc6a",
+            "polygons": "c02d9d704199d3c04cd11cd3a7c9a412be4eb09999fcb164a5d567466b477170",
+            "weights_ordered": "3cc20129a93f0b23ab8df54ad6a6184a235953eb49007bd3762a53dc0a8fa081",
+            "materials": "008a2a53c258d443a2bfb6a6186966a96ee418708908d914e21d899b7a3e6503",
+            "material_slots": "ccd84e08968e2ccaf4250d5721a093418a16826d6c34421a370bfe3f5f17fcdf",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        },
+        "Stocking": {
+          "changed_fields": [],
+          "component_before_sha256": {
+            "object_id": "e72314005d4a97df2b8236ae31840e9ea069dd7df742c15d75ff92bda72cfd4a",
+            "object_pointer": "02895f638c5dab4d687463802ecfff14a6ceb1ed06b07b64653de5152006b159",
+            "data_id": "2c3b34707ebc9fe0ad84d019e29409f64121baeddb0f5580b99fc5bcf374f3b1",
+            "data_pointer": "2c0da6e5564cb42a90b92827bbe755a07d7535b947feb1811c61c688920fb1e7",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "11a966ddef4015fc2fc8398e75b60d64b2289f07ee9fd74b75df194fd8104634",
+            "edges": "b5d97d7a7c5fe70f77a5354ef82103c36fcb3d8a637f57b978268969bc86707e",
+            "loops": "42e1546d2b2fcc15273944cc35a7ea3a0203cea84d187c87f67fcdff6263e1f5",
+            "polygons": "48b1ca34966d0c2a37e89c706880ac5cc37d8e84cc65204a4d589a0fa8f882a0",
+            "weights_ordered": "97628ea235f8077dfea6496f62eb048c02e30f4c803a549acdd30680d8f9f228",
+            "materials": "6d1bc5cb81e06abb2e943faf87642f1ee3bdcfabd3dff74b52275c44aedf578c",
+            "material_slots": "760769a5f46336b4ff9fd70764e3582616032d13e8e83f45c70adf61f88bee74",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "component_after_sha256": {
+            "object_id": "e72314005d4a97df2b8236ae31840e9ea069dd7df742c15d75ff92bda72cfd4a",
+            "object_pointer": "02895f638c5dab4d687463802ecfff14a6ceb1ed06b07b64653de5152006b159",
+            "data_id": "2c3b34707ebc9fe0ad84d019e29409f64121baeddb0f5580b99fc5bcf374f3b1",
+            "data_pointer": "2c0da6e5564cb42a90b92827bbe755a07d7535b947feb1811c61c688920fb1e7",
+            "parent": "b6f30cf546a5e7e123016a03a555dc6115c3c30fe3d1f95799e7e651960329ba",
+            "parent_type": "7c27a43bc837945f5355f34cf681a225e57420ddbd3a0a6e69ce858feee8b669",
+            "parent_bone": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+            "armature_modifiers": "f3871e827c6000f5e0735c56cbd30634488cfdcc105eceb3130a4cde864e3cd9",
+            "vertex_groups": "0c0b54df7aaf837cca8b05028d2bf6a64437674f470e878ab89c8dde60d33323",
+            "vertices": "11a966ddef4015fc2fc8398e75b60d64b2289f07ee9fd74b75df194fd8104634",
+            "edges": "b5d97d7a7c5fe70f77a5354ef82103c36fcb3d8a637f57b978268969bc86707e",
+            "loops": "42e1546d2b2fcc15273944cc35a7ea3a0203cea84d187c87f67fcdff6263e1f5",
+            "polygons": "48b1ca34966d0c2a37e89c706880ac5cc37d8e84cc65204a4d589a0fa8f882a0",
+            "weights_ordered": "97628ea235f8077dfea6496f62eb048c02e30f4c803a549acdd30680d8f9f228",
+            "materials": "6d1bc5cb81e06abb2e943faf87642f1ee3bdcfabd3dff74b52275c44aedf578c",
+            "material_slots": "760769a5f46336b4ff9fd70764e3582616032d13e8e83f45c70adf61f88bee74",
+            "shape_keys": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "immutable_coordinates_exact": true,
+          "shape_key_geometry_and_metadata_exact": true,
+          "topology_exact": true,
+          "material_assignments_exact": true,
+          "weight_order_changed_vertices": [],
+          "weight_values_changed_vertices": [],
+          "weights_equal_by_group_identity_and_exact_value": true,
+          "changed_component_paths": []
+        }
+      }
+    }
+  },
+  "runtime": {
+    "blender": "5.2.0 LTS",
+    "addon": [
+      0,
+      77,
+      24
+    ],
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\direct_original_rig_return_20261011\\release_07724\\character_designer\\__init__.py",
+    "source_sha256": {
+      "character_designer": "5819b27c93b59fbf087c12187d1cc380151de803cc9dde160cf4396953e595a1",
+      "character_designer.unity_animation": "44c6014ac8c6c46ef4864aa0560d93375f10b99aa0c5d3276122882304ed493f",
+      "character_designer.body_original_mode": "e419bc7f221de3746295a705f4806dab6b91aaecd1efe0d1d9b8f71d087a5c2f"
+    }
+  },
+  "original_rest_validation_passed": true,
+  "input_file_unchanged": true,
+  "phases": {
+    "before": {
+      "frame": 46.0,
+      "original_mode_active": true,
+      "rig_data_id": [
+        "metarig",
+        null
+      ],
+      "rig_data_pointer": 2482143825552,
+      "asset_snapshot": {
+        "sha256": "a94a10047a9b3d72e25a5ae6b6d23331cc0fe6091da7afb081fe5d5f08926ca3",
+        "component_sha256": {
+          "rest": "e304e6958da8e88ddb4843e02fb91bbb39fd4728dc41c9c6961e54019bd09974",
+          "rig_raw_transform": "8e0052a3dc6a4e6227f408c2a41a2a579b3b0a50f9ca4e67321ec24d9042c43f",
+          "bone_colors_collections_widgets": "97cff5b8e6f57b6e4c85477a333350cf739279da874aa3c2f96c31f0acf6c65a",
+          "collections": "13863761e6c6f5d33214d19bf30c806a48198930e8bd126118c0c83f7a141cf3",
+          "skin_meshes": "244f45e6751cb1005793591339bb36beaeaa4614429feed85feccc51bdba9ed4",
+          "widgets": "62f8492020bf8e346b5806cb2bbc1be9eac088f3e94ff4f3fd1ad67f7e11ceca",
+          "materials": "7178a77d077de3f95352ee29361bb92ab63092aa84c278f4ea67c3fc34ec4d57"
+        },
+        "counts": {
+          "bones": 346,
+          "collections": 5,
+          "skin_meshes": 6,
+          "widgets": 50,
+          "materials": 18
+        },
+        "skin_mesh_summary": {
+          "Cosha": {
+            "vertices": 3658,
+            "shape_keys": 14,
+            "weight_influences": 22900
+          },
+          "Clothes": {
+            "vertices": 101,
+            "shape_keys": 0,
+            "weight_influences": 493
+          },
+          "Stocking": {
+            "vertices": 528,
+            "shape_keys": 0,
+            "weight_influences": 912
+          },
+          "Dress": {
+            "vertices": 800,
+            "shape_keys": 0,
+            "weight_influences": 2440
+          },
+          "Shoes": {
+            "vertices": 28177,
+            "shape_keys": 0,
+            "weight_influences": 91410
+          },
+          "Hair": {
+            "vertices": 5463,
+            "shape_keys": 0,
+            "weight_influences": 8378
+          }
+        }
+      },
+      "mesh_content_full": {
+        "Clothes": {
+          "object_id": [
+            "Clothes",
+            null
+          ],
+          "data_id": [
+            "Vert.002",
+            null
+          ],
+          "vertices": {
+            "count": 101,
+            "sha256": "4fe006a867fa54ecc7eefe5bbc4798e9c29484f2ec93b73c455960c0c2fcef2d"
+          },
+          "edges": {
+            "count": 176,
+            "sha256": "72863761dec375e15be1790b668ca4f56fb0618fc29057b61528b450511e5497"
+          },
+          "loops": {
+            "count": 300,
+            "sha256": "438acd1fcbdf3290ff2ccbbdb5834032d3bd40fc677b619d0e2db00649528f45"
+          },
+          "polygons": {
+            "count": 75,
+            "sha256": "45ecaab5d15fcfbd935025f7b79c3835dae6ccf789f9c9fa5ce718caaa1b4972"
+          },
+          "weights": {
+            "sha256": "58de72938a209e10024b2c67d9f303290d3e51c8d4434eda2aeb241d8f25fbd7",
+            "influences": 493,
+            "groups": [
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "ClothBlack",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "ClothBlack",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Cosha": {
+          "object_id": [
+            "Cosha",
+            null
+          ],
+          "data_id": [
+            "Mesh.002",
+            null
+          ],
+          "vertices": {
+            "count": 3658,
+            "sha256": "e52f10ff99a50563707bcd324dc800a41e8f775d8e8cfd47f962882f61a586f8"
+          },
+          "edges": {
+            "count": 7228,
+            "sha256": "43b18fbbf9c82faa9a4e8d7465af30e6fc694207e3190a65cecd6dc98d705bfe"
+          },
+          "loops": {
+            "count": 14312,
+            "sha256": "faa4787b00eabf857c657281774676b97f7b8c9ee446d14c107a39fc8f67aa81"
+          },
+          "polygons": {
+            "count": 3584,
+            "sha256": "e04d093a639b2618178b88173ac091f3bad5d73429e43c9ce67ed091e5cf771d"
+          },
+          "weights": {
+            "sha256": "4596b7ee039fa8b731887b741e5517448c5fb449b978a7d0a03ae2ee592fbd40",
+            "influences": 22900,
+            "groups": [
+              "root.x",
+              "foot.l",
+              "toes_01.l",
+              "thigh_twist.l",
+              "foot.r",
+              "toes_01.r",
+              "thigh_twist.r",
+              "spine_01.x",
+              "spine_02.x",
+              "shoulder.r",
+              "hand.r",
+              "c_arm_twist_offset.r",
+              "hand.l",
+              "shoulder.l",
+              "c_arm_twist_offset.l",
+              "neck.x",
+              "c_spine_02_bend.x",
+              "spine_03.x",
+              "c_spine_03_bend.x",
+              "c_spine_01_bend.x",
+              "head.x",
+              "leg_stretch.l",
+              "leg_twist.l",
+              "leg_stretch.r",
+              "leg_twist.r",
+              "thigh_stretch.l",
+              "thigh_stretch.r",
+              "arm_stretch.l",
+              "arm_stretch.r",
+              "forearm_stretch.l",
+              "forearm_twist.l",
+              "forearm_stretch.r",
+              "forearm_twist.r",
+              "Hips",
+              "spine",
+              "Chest",
+              "spine.003",
+              "spine.004",
+              "Neck",
+              "Head",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "heel.02.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R",
+              "heel.02.R",
+              "UpperChest",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "thumb.03.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "eye.L",
+              "eye.R"
+            ]
+          },
+          "materials": [
+            [
+              "Nipple",
+              null
+            ],
+            [
+              "Nipple-Outer",
+              null
+            ],
+            [
+              "ShoeWhite",
+              null
+            ],
+            [
+              "Cosha_Eye",
+              null
+            ],
+            [
+              "Purple",
+              null
+            ],
+            [
+              "Red",
+              null
+            ],
+            [
+              "Skin",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Nipple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Nipple-Outer",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeWhite",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Cosha_Eye",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Red",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Skin",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": [
+            {
+              "name": "Basis",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "e52f10ff99a50563707bcd324dc800a41e8f775d8e8cfd47f962882f61a586f8"
+              }
+            },
+            {
+              "name": "Eye_Close_L",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "dfa388142dd1c6a74ae44b34c221c8cda6dd9729ba512e10506062f23fcfdaf5"
+              }
+            },
+            {
+              "name": "Eye_Close_R",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "940da1cc282b6dc6122d953dafa61c5e02651033316acc0d259068dfc6e68476"
+              }
+            },
+            {
+              "name": "Mouth_Smile",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "4fc69bdd76beaf06704e857511b33f00a0612a96fa4130efae2c4bb6852f1d7d"
+              }
+            },
+            {
+              "name": "Mouth_Happy",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "afff2ce97e043274a1536365e8aab6ce7dbdca605b6d785ef112c3757bfdcf79"
+              }
+            },
+            {
+              "name": "Mouth_Open_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "Mouth_O_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "Eye_Angry_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "99dfe0c91e7b9d62519585295d14d7fa086e22b0bf2b1426f51c7aa0265ddedb"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "545efa4cd5ad078d46544d65f802cc2b0dd6d7031f7090d1a7f6f438e443f0ad"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L.001",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "d56389b4fa6096eb0ec2c0c83af9f6d52c76dda95b6b24d80804064475c9625d"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R.001",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "77b9ecd2974eea3574ec2059faa798bfcbbfd957c849518ae024868abc78f6ff"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L.002",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "7dc5f052dc808be7afe0d634b3ebe1db7b8e18e4f0219b12bf3d26cc77f7a3e8"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R.002",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "c772e1fe769a0508a3f44f2a14120300e164f8496d70610a863719e78cb71c26"
+              }
+            }
+          ]
+        },
+        "Dress": {
+          "object_id": [
+            "Dress",
+            null
+          ],
+          "data_id": [
+            "Circle.002",
+            null
+          ],
+          "vertices": {
+            "count": 800,
+            "sha256": "96da896f0a80167680d7a22433479aa7fa8eb5a7d686b7b9dff13345a42c0681"
+          },
+          "edges": {
+            "count": 1520,
+            "sha256": "909ca4a8d670604b55cb6875a532a1eff9a067ec817f54959e726e26993a7ab6"
+          },
+          "loops": {
+            "count": 2880,
+            "sha256": "efcd8181d4a1300147cb4e20aa63774986026491c5a926ff29bf093c3762f3ff"
+          },
+          "polygons": {
+            "count": 720,
+            "sha256": "ca51a8c0ba2680fe553fb3a8f8a327de0509ffc6b118ff1683a17deb3eedaf69"
+          },
+          "weights": {
+            "sha256": "9c6c8f9111b27d7ea8679401054e905ae37aca35ef5fa8a7c617083cfe7b4a52",
+            "influences": 2440,
+            "groups": [
+              "SK_Dress_DEF_01_01",
+              "SK_Dress_DEF_01_02",
+              "SK_Dress_DEF_01_03",
+              "SK_Dress_DEF_01_04",
+              "SK_Dress_DEF_02_01",
+              "SK_Dress_DEF_02_02",
+              "SK_Dress_DEF_02_03",
+              "SK_Dress_DEF_02_04",
+              "SK_Dress_DEF_03_01",
+              "SK_Dress_DEF_03_02",
+              "SK_Dress_DEF_03_03",
+              "SK_Dress_DEF_03_04",
+              "SK_Dress_DEF_04_01",
+              "SK_Dress_DEF_04_02",
+              "SK_Dress_DEF_04_03",
+              "SK_Dress_DEF_04_04",
+              "SK_Dress_DEF_05_01",
+              "SK_Dress_DEF_05_02",
+              "SK_Dress_DEF_05_03",
+              "SK_Dress_DEF_05_04",
+              "SK_Dress_DEF_06_01",
+              "SK_Dress_DEF_06_02",
+              "SK_Dress_DEF_06_03",
+              "SK_Dress_DEF_06_04",
+              "SK_Dress_DEF_07_01",
+              "SK_Dress_DEF_07_02",
+              "SK_Dress_DEF_07_03",
+              "SK_Dress_DEF_07_04",
+              "SK_Dress_DEF_08_01",
+              "SK_Dress_DEF_08_02",
+              "SK_Dress_DEF_08_03",
+              "SK_Dress_DEF_08_04",
+              "SK_Dress_Waist"
+            ]
+          },
+          "materials": [
+            [
+              "Purple",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Hair": {
+          "object_id": [
+            "Hair",
+            null
+          ],
+          "data_id": [
+            "Hair3_Centerline.001",
+            null
+          ],
+          "vertices": {
+            "count": 5463,
+            "sha256": "f4aed2266ad15520fa2819cb547cbd617d56614ec8197c71e95bc718c4284a2c"
+          },
+          "edges": {
+            "count": 10554,
+            "sha256": "dc88499a3a12cd45f4db0487717896a1fc350a48547f3f6f3fd3e30302f7ae33"
+          },
+          "loops": {
+            "count": 20376,
+            "sha256": "01b34d6798aca2bb91ecf59af0d5879009498fa6d424edc44c3e65522cbc016c"
+          },
+          "polygons": {
+            "count": 5111,
+            "sha256": "2c35af072e6ca556cb7b5f02a1a7f43d9c8812362303e701e4ab4a77644514de"
+          },
+          "weights": {
+            "sha256": "9b4917f105f3b2c19e12a09ddb0bff6c63e649421b52da3157556c19e374c4e6",
+            "influences": 8378,
+            "groups": [
+              "Head",
+              "Hair Hair 01.01",
+              "Hair Hair 01.02",
+              "Hair Hair 01.03",
+              "Hair Hair 01.04",
+              "Hair Hair 02.01",
+              "Hair Hair 02.02",
+              "Hair Hair 02.03",
+              "Hair Hair 02.04",
+              "Hair Hair 03.01",
+              "Hair Hair 03.02",
+              "Hair Hair 03.03",
+              "Hair Hair 03.04",
+              "Hair Hair 04.01",
+              "Hair Hair 04.02",
+              "Hair Hair 04.03",
+              "Hair Hair 04.04",
+              "Hair Hair 05.01",
+              "Hair Hair 05.02",
+              "Hair Hair 05.03",
+              "Hair Hair 05.04",
+              "Hair Hair 06.01",
+              "Hair Hair 06.02",
+              "Hair Hair 06.03",
+              "Hair Hair 06.04",
+              "Hair Hair 07.01",
+              "Hair Hair 07.02",
+              "Hair Hair 07.03",
+              "Hair Hair 07.04",
+              "Hair Hair 08.01",
+              "Hair Hair 08.02",
+              "Hair Hair 08.03",
+              "Hair Hair 08.04",
+              "Hair Hair 09.01",
+              "Hair Hair 09.02",
+              "Hair Hair 09.03",
+              "Hair Hair 09.04",
+              "Hair Hair 10.01",
+              "Hair Hair 10.02",
+              "Hair Hair 10.03",
+              "Hair Hair 10.04",
+              "Hair Hair 11.01",
+              "Hair Hair 11.02",
+              "Hair Hair 11.03",
+              "Hair Hair 11.04",
+              "Hair Hair 12.01",
+              "Hair Hair 12.02",
+              "Hair Hair 12.03",
+              "Hair Hair 12.04",
+              "Hair Hair 13.01",
+              "Hair Hair 13.02",
+              "Hair Hair 13.03",
+              "Hair Hair 13.04",
+              "Hair Hair 14.01",
+              "Hair Hair 14.02",
+              "Hair Hair 14.03",
+              "Hair Hair 14.04",
+              "Hair Hair 15.01",
+              "Hair Hair 15.02",
+              "Hair Hair 15.03",
+              "Hair Hair 15.04",
+              "Hair Hair 16.01",
+              "Hair Hair 16.02",
+              "Hair Hair 16.03",
+              "Hair Hair 16.04",
+              "Hair Hair 17.01",
+              "Hair Hair 17.02",
+              "Hair Hair 17.03",
+              "Hair Hair 17.04",
+              "Hair Hair 18.01",
+              "Hair Hair 18.02",
+              "Hair Hair 18.03",
+              "Hair Hair 18.04",
+              "Hair Hair 19.01",
+              "Hair Hair 19.02",
+              "Hair Hair 19.03",
+              "Hair Hair 19.04",
+              "Hair Hair 20.01",
+              "Hair Hair 20.02",
+              "Hair Hair 20.03",
+              "Hair Hair 20.04",
+              "Hair Hair 21.01",
+              "Hair Hair 21.02",
+              "Hair Hair 21.03",
+              "Hair Hair 21.04",
+              "Hair Hair 22.01",
+              "Hair Hair 22.02",
+              "Hair Hair 22.03",
+              "Hair Hair 22.04",
+              "Hair Hair 23.01",
+              "Hair Hair 23.02",
+              "Hair Hair 23.03",
+              "Hair Hair 23.04",
+              "Hair Hair 24.01",
+              "Hair Hair 24.02",
+              "Hair Hair 24.03",
+              "Hair Hair 24.04",
+              "Hair Hair 25.01",
+              "Hair Hair 25.02",
+              "Hair Hair 25.03",
+              "Hair Hair 25.04",
+              "Hair Hair 26.01",
+              "Hair Hair 26.02",
+              "Hair Hair 26.03",
+              "Hair Hair 26.04",
+              "Hair Hair 27.01",
+              "Hair Hair 27.02",
+              "Hair Hair 27.03",
+              "Hair Hair 27.04",
+              "Hair Hair 28.01",
+              "Hair Hair 28.02",
+              "Hair Hair 28.03",
+              "Hair Hair 28.04",
+              "Hair Hair 29.01",
+              "Hair Hair 29.02",
+              "Hair Hair 29.03",
+              "Hair Hair 29.04",
+              "Hair Hair 30.01",
+              "Hair Hair 30.02",
+              "Hair Hair 30.03",
+              "Hair Hair 30.04",
+              "Hair Hair 31.01",
+              "Hair Hair 31.02",
+              "Hair Hair 31.03",
+              "Hair Hair 31.04",
+              "Hair Hair 32.01",
+              "Hair Hair 32.02",
+              "Hair Hair 32.03",
+              "Hair Hair 32.04"
+            ]
+          },
+          "materials": [
+            [
+              "Purple",
+              null
+            ],
+            [
+              "Blu",
+              null
+            ],
+            [
+              "Purple2",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Blu",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple2",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Shoes": {
+          "object_id": [
+            "Shoes",
+            null
+          ],
+          "data_id": [
+            "Plane.007",
+            null
+          ],
+          "vertices": {
+            "count": 28177,
+            "sha256": "2a301beadc4f932097b0a04993064f0d6d16ac3d18bcc2089c88887073d2ba33"
+          },
+          "edges": {
+            "count": 56045,
+            "sha256": "72c04ee0fa138ecf342dc1aee898a353ea1b28bf94cb7019d4297ba7d0013652"
+          },
+          "loops": {
+            "count": 111520,
+            "sha256": "afd6d1accf4241d2eb88a05d1c817c6e3d227c7ec977a476df73969ab9193c7c"
+          },
+          "polygons": {
+            "count": 27878,
+            "sha256": "6202ebb044adea7c8c6231c2d96b25cc323f690da513753e15a307bbb7786380"
+          },
+          "weights": {
+            "sha256": "77e5a043a45afaa581b379b11982392cdbfd39c7cb047e17e840c2c7427999d7",
+            "influences": 91410,
+            "groups": [
+              "Tips",
+              "Valleys",
+              "DEF_Strap_01.L",
+              "DEF_Strap_02.L",
+              "DEF_Strap_05.R",
+              "DEF_Strap_04.R",
+              "DEF_Strap_03.L",
+              "DEF_Strap_C",
+              "DEF_Strap_06.R",
+              "DEF_Strap_04.L",
+              "DEF_Strap_05.L",
+              "DEF_Strap_06.L",
+              "DEF_Strap_01.R",
+              "DEF_Strap_03.R",
+              "DEF_Strap_02.R",
+              "UnPin",
+              "Face1",
+              "Stable",
+              "Wrap1",
+              "Sole",
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "Crystal_Blue",
+              null
+            ],
+            [
+              "ShoeBlack",
+              null
+            ],
+            [
+              "ShoePurple",
+              null
+            ],
+            [
+              "ShoeWhite",
+              null
+            ],
+            [
+              "Nipple",
+              null
+            ],
+            [
+              "Purple",
+              null
+            ],
+            [
+              "ShoeGray",
+              null
+            ],
+            [
+              "Leather",
+              null
+            ],
+            [
+              "Crystals_Mat",
+              null
+            ],
+            null
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Crystal_Blue",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeBlack",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoePurple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeWhite",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Nipple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeGray",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Leather",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Crystals_Mat",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              null
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Stocking": {
+          "object_id": [
+            "Stocking",
+            null
+          ],
+          "data_id": [
+            "Vert.006",
+            null
+          ],
+          "vertices": {
+            "count": 528,
+            "sha256": "77f4c62680406a18c71e7f5081af451aa781eb47ff6c5ef62296baeebd53936d"
+          },
+          "edges": {
+            "count": 1031,
+            "sha256": "ea70c2317eaf232bad590427bf571fd0b0e2a29d47eac609ef70061ef50d2bce"
+          },
+          "loops": {
+            "count": 2018,
+            "sha256": "bdce9b121db31fbb5a76977a8d4c584a06969c42ea68c9100f37dd2492681a96"
+          },
+          "polygons": {
+            "count": 504,
+            "sha256": "6a2f928166cfb49973427f271130b44a80e932aacc8ce0834f65787bad373a33"
+          },
+          "weights": {
+            "sha256": "9f4c6c15381d7d0c4b9ea16637af1b0048e8c1b1f5262b4bc2780916831b30a8",
+            "influences": 912,
+            "groups": [
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "Stocking Main",
+              null
+            ],
+            [
+              "Stocking Black",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Stocking Main",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Stocking Black",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        }
+      }
+    },
+    "after_validate": {
+      "frame": 46.0,
+      "original_mode_active": true,
+      "rig_data_id": [
+        "metarig",
+        null
+      ],
+      "rig_data_pointer": 2482143825552,
+      "asset_snapshot": {
+        "sha256": "a94a10047a9b3d72e25a5ae6b6d23331cc0fe6091da7afb081fe5d5f08926ca3",
+        "component_sha256": {
+          "rest": "e304e6958da8e88ddb4843e02fb91bbb39fd4728dc41c9c6961e54019bd09974",
+          "rig_raw_transform": "8e0052a3dc6a4e6227f408c2a41a2a579b3b0a50f9ca4e67321ec24d9042c43f",
+          "bone_colors_collections_widgets": "97cff5b8e6f57b6e4c85477a333350cf739279da874aa3c2f96c31f0acf6c65a",
+          "collections": "13863761e6c6f5d33214d19bf30c806a48198930e8bd126118c0c83f7a141cf3",
+          "skin_meshes": "244f45e6751cb1005793591339bb36beaeaa4614429feed85feccc51bdba9ed4",
+          "widgets": "62f8492020bf8e346b5806cb2bbc1be9eac088f3e94ff4f3fd1ad67f7e11ceca",
+          "materials": "7178a77d077de3f95352ee29361bb92ab63092aa84c278f4ea67c3fc34ec4d57"
+        },
+        "counts": {
+          "bones": 346,
+          "collections": 5,
+          "skin_meshes": 6,
+          "widgets": 50,
+          "materials": 18
+        },
+        "skin_mesh_summary": {
+          "Cosha": {
+            "vertices": 3658,
+            "shape_keys": 14,
+            "weight_influences": 22900
+          },
+          "Clothes": {
+            "vertices": 101,
+            "shape_keys": 0,
+            "weight_influences": 493
+          },
+          "Stocking": {
+            "vertices": 528,
+            "shape_keys": 0,
+            "weight_influences": 912
+          },
+          "Dress": {
+            "vertices": 800,
+            "shape_keys": 0,
+            "weight_influences": 2440
+          },
+          "Shoes": {
+            "vertices": 28177,
+            "shape_keys": 0,
+            "weight_influences": 91410
+          },
+          "Hair": {
+            "vertices": 5463,
+            "shape_keys": 0,
+            "weight_influences": 8378
+          }
+        }
+      },
+      "mesh_content_full": {
+        "Clothes": {
+          "object_id": [
+            "Clothes",
+            null
+          ],
+          "data_id": [
+            "Vert.002",
+            null
+          ],
+          "vertices": {
+            "count": 101,
+            "sha256": "4fe006a867fa54ecc7eefe5bbc4798e9c29484f2ec93b73c455960c0c2fcef2d"
+          },
+          "edges": {
+            "count": 176,
+            "sha256": "72863761dec375e15be1790b668ca4f56fb0618fc29057b61528b450511e5497"
+          },
+          "loops": {
+            "count": 300,
+            "sha256": "438acd1fcbdf3290ff2ccbbdb5834032d3bd40fc677b619d0e2db00649528f45"
+          },
+          "polygons": {
+            "count": 75,
+            "sha256": "45ecaab5d15fcfbd935025f7b79c3835dae6ccf789f9c9fa5ce718caaa1b4972"
+          },
+          "weights": {
+            "sha256": "58de72938a209e10024b2c67d9f303290d3e51c8d4434eda2aeb241d8f25fbd7",
+            "influences": 493,
+            "groups": [
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "ClothBlack",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "ClothBlack",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Cosha": {
+          "object_id": [
+            "Cosha",
+            null
+          ],
+          "data_id": [
+            "Mesh.002",
+            null
+          ],
+          "vertices": {
+            "count": 3658,
+            "sha256": "e52f10ff99a50563707bcd324dc800a41e8f775d8e8cfd47f962882f61a586f8"
+          },
+          "edges": {
+            "count": 7228,
+            "sha256": "43b18fbbf9c82faa9a4e8d7465af30e6fc694207e3190a65cecd6dc98d705bfe"
+          },
+          "loops": {
+            "count": 14312,
+            "sha256": "faa4787b00eabf857c657281774676b97f7b8c9ee446d14c107a39fc8f67aa81"
+          },
+          "polygons": {
+            "count": 3584,
+            "sha256": "e04d093a639b2618178b88173ac091f3bad5d73429e43c9ce67ed091e5cf771d"
+          },
+          "weights": {
+            "sha256": "4596b7ee039fa8b731887b741e5517448c5fb449b978a7d0a03ae2ee592fbd40",
+            "influences": 22900,
+            "groups": [
+              "root.x",
+              "foot.l",
+              "toes_01.l",
+              "thigh_twist.l",
+              "foot.r",
+              "toes_01.r",
+              "thigh_twist.r",
+              "spine_01.x",
+              "spine_02.x",
+              "shoulder.r",
+              "hand.r",
+              "c_arm_twist_offset.r",
+              "hand.l",
+              "shoulder.l",
+              "c_arm_twist_offset.l",
+              "neck.x",
+              "c_spine_02_bend.x",
+              "spine_03.x",
+              "c_spine_03_bend.x",
+              "c_spine_01_bend.x",
+              "head.x",
+              "leg_stretch.l",
+              "leg_twist.l",
+              "leg_stretch.r",
+              "leg_twist.r",
+              "thigh_stretch.l",
+              "thigh_stretch.r",
+              "arm_stretch.l",
+              "arm_stretch.r",
+              "forearm_stretch.l",
+              "forearm_twist.l",
+              "forearm_stretch.r",
+              "forearm_twist.r",
+              "Hips",
+              "spine",
+              "Chest",
+              "spine.003",
+              "spine.004",
+              "Neck",
+              "Head",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "heel.02.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R",
+              "heel.02.R",
+              "UpperChest",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "thumb.03.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "eye.L",
+              "eye.R"
+            ]
+          },
+          "materials": [
+            [
+              "Nipple",
+              null
+            ],
+            [
+              "Nipple-Outer",
+              null
+            ],
+            [
+              "ShoeWhite",
+              null
+            ],
+            [
+              "Cosha_Eye",
+              null
+            ],
+            [
+              "Purple",
+              null
+            ],
+            [
+              "Red",
+              null
+            ],
+            [
+              "Skin",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Nipple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Nipple-Outer",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeWhite",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Cosha_Eye",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Red",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Skin",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": [
+            {
+              "name": "Basis",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "e52f10ff99a50563707bcd324dc800a41e8f775d8e8cfd47f962882f61a586f8"
+              }
+            },
+            {
+              "name": "Eye_Close_L",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "dfa388142dd1c6a74ae44b34c221c8cda6dd9729ba512e10506062f23fcfdaf5"
+              }
+            },
+            {
+              "name": "Eye_Close_R",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "940da1cc282b6dc6122d953dafa61c5e02651033316acc0d259068dfc6e68476"
+              }
+            },
+            {
+              "name": "Mouth_Smile",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "4fc69bdd76beaf06704e857511b33f00a0612a96fa4130efae2c4bb6852f1d7d"
+              }
+            },
+            {
+              "name": "Mouth_Happy",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "afff2ce97e043274a1536365e8aab6ce7dbdca605b6d785ef112c3757bfdcf79"
+              }
+            },
+            {
+              "name": "Mouth_Open_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "Mouth_O_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "Eye_Angry_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "99dfe0c91e7b9d62519585295d14d7fa086e22b0bf2b1426f51c7aa0265ddedb"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "545efa4cd5ad078d46544d65f802cc2b0dd6d7031f7090d1a7f6f438e443f0ad"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L.001",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "d56389b4fa6096eb0ec2c0c83af9f6d52c76dda95b6b24d80804064475c9625d"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R.001",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "77b9ecd2974eea3574ec2059faa798bfcbbfd957c849518ae024868abc78f6ff"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L.002",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "7dc5f052dc808be7afe0d634b3ebe1db7b8e18e4f0219b12bf3d26cc77f7a3e8"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R.002",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "c772e1fe769a0508a3f44f2a14120300e164f8496d70610a863719e78cb71c26"
+              }
+            }
+          ]
+        },
+        "Dress": {
+          "object_id": [
+            "Dress",
+            null
+          ],
+          "data_id": [
+            "Circle.002",
+            null
+          ],
+          "vertices": {
+            "count": 800,
+            "sha256": "96da896f0a80167680d7a22433479aa7fa8eb5a7d686b7b9dff13345a42c0681"
+          },
+          "edges": {
+            "count": 1520,
+            "sha256": "909ca4a8d670604b55cb6875a532a1eff9a067ec817f54959e726e26993a7ab6"
+          },
+          "loops": {
+            "count": 2880,
+            "sha256": "efcd8181d4a1300147cb4e20aa63774986026491c5a926ff29bf093c3762f3ff"
+          },
+          "polygons": {
+            "count": 720,
+            "sha256": "ca51a8c0ba2680fe553fb3a8f8a327de0509ffc6b118ff1683a17deb3eedaf69"
+          },
+          "weights": {
+            "sha256": "9c6c8f9111b27d7ea8679401054e905ae37aca35ef5fa8a7c617083cfe7b4a52",
+            "influences": 2440,
+            "groups": [
+              "SK_Dress_DEF_01_01",
+              "SK_Dress_DEF_01_02",
+              "SK_Dress_DEF_01_03",
+              "SK_Dress_DEF_01_04",
+              "SK_Dress_DEF_02_01",
+              "SK_Dress_DEF_02_02",
+              "SK_Dress_DEF_02_03",
+              "SK_Dress_DEF_02_04",
+              "SK_Dress_DEF_03_01",
+              "SK_Dress_DEF_03_02",
+              "SK_Dress_DEF_03_03",
+              "SK_Dress_DEF_03_04",
+              "SK_Dress_DEF_04_01",
+              "SK_Dress_DEF_04_02",
+              "SK_Dress_DEF_04_03",
+              "SK_Dress_DEF_04_04",
+              "SK_Dress_DEF_05_01",
+              "SK_Dress_DEF_05_02",
+              "SK_Dress_DEF_05_03",
+              "SK_Dress_DEF_05_04",
+              "SK_Dress_DEF_06_01",
+              "SK_Dress_DEF_06_02",
+              "SK_Dress_DEF_06_03",
+              "SK_Dress_DEF_06_04",
+              "SK_Dress_DEF_07_01",
+              "SK_Dress_DEF_07_02",
+              "SK_Dress_DEF_07_03",
+              "SK_Dress_DEF_07_04",
+              "SK_Dress_DEF_08_01",
+              "SK_Dress_DEF_08_02",
+              "SK_Dress_DEF_08_03",
+              "SK_Dress_DEF_08_04",
+              "SK_Dress_Waist"
+            ]
+          },
+          "materials": [
+            [
+              "Purple",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Hair": {
+          "object_id": [
+            "Hair",
+            null
+          ],
+          "data_id": [
+            "Hair3_Centerline.001",
+            null
+          ],
+          "vertices": {
+            "count": 5463,
+            "sha256": "f4aed2266ad15520fa2819cb547cbd617d56614ec8197c71e95bc718c4284a2c"
+          },
+          "edges": {
+            "count": 10554,
+            "sha256": "dc88499a3a12cd45f4db0487717896a1fc350a48547f3f6f3fd3e30302f7ae33"
+          },
+          "loops": {
+            "count": 20376,
+            "sha256": "01b34d6798aca2bb91ecf59af0d5879009498fa6d424edc44c3e65522cbc016c"
+          },
+          "polygons": {
+            "count": 5111,
+            "sha256": "2c35af072e6ca556cb7b5f02a1a7f43d9c8812362303e701e4ab4a77644514de"
+          },
+          "weights": {
+            "sha256": "9b4917f105f3b2c19e12a09ddb0bff6c63e649421b52da3157556c19e374c4e6",
+            "influences": 8378,
+            "groups": [
+              "Head",
+              "Hair Hair 01.01",
+              "Hair Hair 01.02",
+              "Hair Hair 01.03",
+              "Hair Hair 01.04",
+              "Hair Hair 02.01",
+              "Hair Hair 02.02",
+              "Hair Hair 02.03",
+              "Hair Hair 02.04",
+              "Hair Hair 03.01",
+              "Hair Hair 03.02",
+              "Hair Hair 03.03",
+              "Hair Hair 03.04",
+              "Hair Hair 04.01",
+              "Hair Hair 04.02",
+              "Hair Hair 04.03",
+              "Hair Hair 04.04",
+              "Hair Hair 05.01",
+              "Hair Hair 05.02",
+              "Hair Hair 05.03",
+              "Hair Hair 05.04",
+              "Hair Hair 06.01",
+              "Hair Hair 06.02",
+              "Hair Hair 06.03",
+              "Hair Hair 06.04",
+              "Hair Hair 07.01",
+              "Hair Hair 07.02",
+              "Hair Hair 07.03",
+              "Hair Hair 07.04",
+              "Hair Hair 08.01",
+              "Hair Hair 08.02",
+              "Hair Hair 08.03",
+              "Hair Hair 08.04",
+              "Hair Hair 09.01",
+              "Hair Hair 09.02",
+              "Hair Hair 09.03",
+              "Hair Hair 09.04",
+              "Hair Hair 10.01",
+              "Hair Hair 10.02",
+              "Hair Hair 10.03",
+              "Hair Hair 10.04",
+              "Hair Hair 11.01",
+              "Hair Hair 11.02",
+              "Hair Hair 11.03",
+              "Hair Hair 11.04",
+              "Hair Hair 12.01",
+              "Hair Hair 12.02",
+              "Hair Hair 12.03",
+              "Hair Hair 12.04",
+              "Hair Hair 13.01",
+              "Hair Hair 13.02",
+              "Hair Hair 13.03",
+              "Hair Hair 13.04",
+              "Hair Hair 14.01",
+              "Hair Hair 14.02",
+              "Hair Hair 14.03",
+              "Hair Hair 14.04",
+              "Hair Hair 15.01",
+              "Hair Hair 15.02",
+              "Hair Hair 15.03",
+              "Hair Hair 15.04",
+              "Hair Hair 16.01",
+              "Hair Hair 16.02",
+              "Hair Hair 16.03",
+              "Hair Hair 16.04",
+              "Hair Hair 17.01",
+              "Hair Hair 17.02",
+              "Hair Hair 17.03",
+              "Hair Hair 17.04",
+              "Hair Hair 18.01",
+              "Hair Hair 18.02",
+              "Hair Hair 18.03",
+              "Hair Hair 18.04",
+              "Hair Hair 19.01",
+              "Hair Hair 19.02",
+              "Hair Hair 19.03",
+              "Hair Hair 19.04",
+              "Hair Hair 20.01",
+              "Hair Hair 20.02",
+              "Hair Hair 20.03",
+              "Hair Hair 20.04",
+              "Hair Hair 21.01",
+              "Hair Hair 21.02",
+              "Hair Hair 21.03",
+              "Hair Hair 21.04",
+              "Hair Hair 22.01",
+              "Hair Hair 22.02",
+              "Hair Hair 22.03",
+              "Hair Hair 22.04",
+              "Hair Hair 23.01",
+              "Hair Hair 23.02",
+              "Hair Hair 23.03",
+              "Hair Hair 23.04",
+              "Hair Hair 24.01",
+              "Hair Hair 24.02",
+              "Hair Hair 24.03",
+              "Hair Hair 24.04",
+              "Hair Hair 25.01",
+              "Hair Hair 25.02",
+              "Hair Hair 25.03",
+              "Hair Hair 25.04",
+              "Hair Hair 26.01",
+              "Hair Hair 26.02",
+              "Hair Hair 26.03",
+              "Hair Hair 26.04",
+              "Hair Hair 27.01",
+              "Hair Hair 27.02",
+              "Hair Hair 27.03",
+              "Hair Hair 27.04",
+              "Hair Hair 28.01",
+              "Hair Hair 28.02",
+              "Hair Hair 28.03",
+              "Hair Hair 28.04",
+              "Hair Hair 29.01",
+              "Hair Hair 29.02",
+              "Hair Hair 29.03",
+              "Hair Hair 29.04",
+              "Hair Hair 30.01",
+              "Hair Hair 30.02",
+              "Hair Hair 30.03",
+              "Hair Hair 30.04",
+              "Hair Hair 31.01",
+              "Hair Hair 31.02",
+              "Hair Hair 31.03",
+              "Hair Hair 31.04",
+              "Hair Hair 32.01",
+              "Hair Hair 32.02",
+              "Hair Hair 32.03",
+              "Hair Hair 32.04"
+            ]
+          },
+          "materials": [
+            [
+              "Purple",
+              null
+            ],
+            [
+              "Blu",
+              null
+            ],
+            [
+              "Purple2",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Blu",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple2",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Shoes": {
+          "object_id": [
+            "Shoes",
+            null
+          ],
+          "data_id": [
+            "Plane.007",
+            null
+          ],
+          "vertices": {
+            "count": 28177,
+            "sha256": "2a301beadc4f932097b0a04993064f0d6d16ac3d18bcc2089c88887073d2ba33"
+          },
+          "edges": {
+            "count": 56045,
+            "sha256": "72c04ee0fa138ecf342dc1aee898a353ea1b28bf94cb7019d4297ba7d0013652"
+          },
+          "loops": {
+            "count": 111520,
+            "sha256": "afd6d1accf4241d2eb88a05d1c817c6e3d227c7ec977a476df73969ab9193c7c"
+          },
+          "polygons": {
+            "count": 27878,
+            "sha256": "6202ebb044adea7c8c6231c2d96b25cc323f690da513753e15a307bbb7786380"
+          },
+          "weights": {
+            "sha256": "77e5a043a45afaa581b379b11982392cdbfd39c7cb047e17e840c2c7427999d7",
+            "influences": 91410,
+            "groups": [
+              "Tips",
+              "Valleys",
+              "DEF_Strap_01.L",
+              "DEF_Strap_02.L",
+              "DEF_Strap_05.R",
+              "DEF_Strap_04.R",
+              "DEF_Strap_03.L",
+              "DEF_Strap_C",
+              "DEF_Strap_06.R",
+              "DEF_Strap_04.L",
+              "DEF_Strap_05.L",
+              "DEF_Strap_06.L",
+              "DEF_Strap_01.R",
+              "DEF_Strap_03.R",
+              "DEF_Strap_02.R",
+              "UnPin",
+              "Face1",
+              "Stable",
+              "Wrap1",
+              "Sole",
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "Crystal_Blue",
+              null
+            ],
+            [
+              "ShoeBlack",
+              null
+            ],
+            [
+              "ShoePurple",
+              null
+            ],
+            [
+              "ShoeWhite",
+              null
+            ],
+            [
+              "Nipple",
+              null
+            ],
+            [
+              "Purple",
+              null
+            ],
+            [
+              "ShoeGray",
+              null
+            ],
+            [
+              "Leather",
+              null
+            ],
+            [
+              "Crystals_Mat",
+              null
+            ],
+            null
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Crystal_Blue",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeBlack",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoePurple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeWhite",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Nipple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeGray",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Leather",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Crystals_Mat",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              null
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Stocking": {
+          "object_id": [
+            "Stocking",
+            null
+          ],
+          "data_id": [
+            "Vert.006",
+            null
+          ],
+          "vertices": {
+            "count": 528,
+            "sha256": "77f4c62680406a18c71e7f5081af451aa781eb47ff6c5ef62296baeebd53936d"
+          },
+          "edges": {
+            "count": 1031,
+            "sha256": "ea70c2317eaf232bad590427bf571fd0b0e2a29d47eac609ef70061ef50d2bce"
+          },
+          "loops": {
+            "count": 2018,
+            "sha256": "bdce9b121db31fbb5a76977a8d4c584a06969c42ea68c9100f37dd2492681a96"
+          },
+          "polygons": {
+            "count": 504,
+            "sha256": "6a2f928166cfb49973427f271130b44a80e932aacc8ce0834f65787bad373a33"
+          },
+          "weights": {
+            "sha256": "9f4c6c15381d7d0c4b9ea16637af1b0048e8c1b1f5262b4bc2780916831b30a8",
+            "influences": 912,
+            "groups": [
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "Stocking Main",
+              null
+            ],
+            [
+              "Stocking Black",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Stocking Main",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Stocking Black",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        }
+      }
+    },
+    "after_leave": {
+      "frame": 46.0,
+      "original_mode_active": false,
+      "rig_data_id": [
+        "metarig",
+        null
+      ],
+      "rig_data_pointer": 2482143825552,
+      "asset_snapshot": {
+        "sha256": "098f09db9f8f0e031ae6ae71f7421aee0486b47e3b558a953809994a59692269",
+        "component_sha256": {
+          "rest": "e304e6958da8e88ddb4843e02fb91bbb39fd4728dc41c9c6961e54019bd09974",
+          "rig_raw_transform": "8e0052a3dc6a4e6227f408c2a41a2a579b3b0a50f9ca4e67321ec24d9042c43f",
+          "bone_colors_collections_widgets": "97cff5b8e6f57b6e4c85477a333350cf739279da874aa3c2f96c31f0acf6c65a",
+          "collections": "13863761e6c6f5d33214d19bf30c806a48198930e8bd126118c0c83f7a141cf3",
+          "skin_meshes": "3a740a3ce02197771ed513993a3bd3217cffdb5e814f7039c82c424569f55727",
+          "widgets": "62f8492020bf8e346b5806cb2bbc1be9eac088f3e94ff4f3fd1ad67f7e11ceca",
+          "materials": "7178a77d077de3f95352ee29361bb92ab63092aa84c278f4ea67c3fc34ec4d57"
+        },
+        "counts": {
+          "bones": 346,
+          "collections": 5,
+          "skin_meshes": 6,
+          "widgets": 50,
+          "materials": 18
+        },
+        "skin_mesh_summary": {
+          "Cosha": {
+            "vertices": 3658,
+            "shape_keys": 14,
+            "weight_influences": 22900
+          },
+          "Clothes": {
+            "vertices": 101,
+            "shape_keys": 0,
+            "weight_influences": 493
+          },
+          "Stocking": {
+            "vertices": 528,
+            "shape_keys": 0,
+            "weight_influences": 912
+          },
+          "Dress": {
+            "vertices": 800,
+            "shape_keys": 0,
+            "weight_influences": 2440
+          },
+          "Shoes": {
+            "vertices": 28177,
+            "shape_keys": 0,
+            "weight_influences": 91410
+          },
+          "Hair": {
+            "vertices": 5463,
+            "shape_keys": 0,
+            "weight_influences": 8378
+          }
+        }
+      },
+      "mesh_content_full": {
+        "Clothes": {
+          "object_id": [
+            "Clothes",
+            null
+          ],
+          "data_id": [
+            "Vert.002",
+            null
+          ],
+          "vertices": {
+            "count": 101,
+            "sha256": "4fe006a867fa54ecc7eefe5bbc4798e9c29484f2ec93b73c455960c0c2fcef2d"
+          },
+          "edges": {
+            "count": 176,
+            "sha256": "72863761dec375e15be1790b668ca4f56fb0618fc29057b61528b450511e5497"
+          },
+          "loops": {
+            "count": 300,
+            "sha256": "438acd1fcbdf3290ff2ccbbdb5834032d3bd40fc677b619d0e2db00649528f45"
+          },
+          "polygons": {
+            "count": 75,
+            "sha256": "45ecaab5d15fcfbd935025f7b79c3835dae6ccf789f9c9fa5ce718caaa1b4972"
+          },
+          "weights": {
+            "sha256": "58de72938a209e10024b2c67d9f303290d3e51c8d4434eda2aeb241d8f25fbd7",
+            "influences": 493,
+            "groups": [
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "ClothBlack",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "ClothBlack",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Cosha": {
+          "object_id": [
+            "Cosha",
+            null
+          ],
+          "data_id": [
+            "Mesh.002",
+            null
+          ],
+          "vertices": {
+            "count": 3658,
+            "sha256": "e52f10ff99a50563707bcd324dc800a41e8f775d8e8cfd47f962882f61a586f8"
+          },
+          "edges": {
+            "count": 7228,
+            "sha256": "43b18fbbf9c82faa9a4e8d7465af30e6fc694207e3190a65cecd6dc98d705bfe"
+          },
+          "loops": {
+            "count": 14312,
+            "sha256": "faa4787b00eabf857c657281774676b97f7b8c9ee446d14c107a39fc8f67aa81"
+          },
+          "polygons": {
+            "count": 3584,
+            "sha256": "e04d093a639b2618178b88173ac091f3bad5d73429e43c9ce67ed091e5cf771d"
+          },
+          "weights": {
+            "sha256": "4596b7ee039fa8b731887b741e5517448c5fb449b978a7d0a03ae2ee592fbd40",
+            "influences": 22900,
+            "groups": [
+              "root.x",
+              "foot.l",
+              "toes_01.l",
+              "thigh_twist.l",
+              "foot.r",
+              "toes_01.r",
+              "thigh_twist.r",
+              "spine_01.x",
+              "spine_02.x",
+              "shoulder.r",
+              "hand.r",
+              "c_arm_twist_offset.r",
+              "hand.l",
+              "shoulder.l",
+              "c_arm_twist_offset.l",
+              "neck.x",
+              "c_spine_02_bend.x",
+              "spine_03.x",
+              "c_spine_03_bend.x",
+              "c_spine_01_bend.x",
+              "head.x",
+              "leg_stretch.l",
+              "leg_twist.l",
+              "leg_stretch.r",
+              "leg_twist.r",
+              "thigh_stretch.l",
+              "thigh_stretch.r",
+              "arm_stretch.l",
+              "arm_stretch.r",
+              "forearm_stretch.l",
+              "forearm_twist.l",
+              "forearm_stretch.r",
+              "forearm_twist.r",
+              "Hips",
+              "spine",
+              "Chest",
+              "spine.003",
+              "spine.004",
+              "Neck",
+              "Head",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "heel.02.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R",
+              "heel.02.R",
+              "UpperChest",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "thumb.03.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "eye.L",
+              "eye.R"
+            ]
+          },
+          "materials": [
+            [
+              "Nipple",
+              null
+            ],
+            [
+              "Nipple-Outer",
+              null
+            ],
+            [
+              "ShoeWhite",
+              null
+            ],
+            [
+              "Cosha_Eye",
+              null
+            ],
+            [
+              "Purple",
+              null
+            ],
+            [
+              "Red",
+              null
+            ],
+            [
+              "Skin",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Nipple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Nipple-Outer",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeWhite",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Cosha_Eye",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Red",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Skin",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": [
+            {
+              "name": "Basis",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "e52f10ff99a50563707bcd324dc800a41e8f775d8e8cfd47f962882f61a586f8"
+              }
+            },
+            {
+              "name": "Eye_Close_L",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "dfa388142dd1c6a74ae44b34c221c8cda6dd9729ba512e10506062f23fcfdaf5"
+              }
+            },
+            {
+              "name": "Eye_Close_R",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "940da1cc282b6dc6122d953dafa61c5e02651033316acc0d259068dfc6e68476"
+              }
+            },
+            {
+              "name": "Mouth_Smile",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "4fc69bdd76beaf06704e857511b33f00a0612a96fa4130efae2c4bb6852f1d7d"
+              }
+            },
+            {
+              "name": "Mouth_Happy",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "afff2ce97e043274a1536365e8aab6ce7dbdca605b6d785ef112c3757bfdcf79"
+              }
+            },
+            {
+              "name": "Mouth_Open_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "Mouth_O_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "Eye_Angry_WIP",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "6a4ab27b2229cda2a68c0ece8786436732967c37e9cd9f56c6e58f3a0038c200"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "99dfe0c91e7b9d62519585295d14d7fa086e22b0bf2b1426f51c7aa0265ddedb"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "545efa4cd5ad078d46544d65f802cc2b0dd6d7031f7090d1a7f6f438e443f0ad"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L.001",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "d56389b4fa6096eb0ec2c0c83af9f6d52c76dda95b6b24d80804064475c9625d"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R.001",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "77b9ecd2974eea3574ec2059faa798bfcbbfd957c849518ae024868abc78f6ff"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.L.002",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "d68ad484bfc0ef05456f7d67edc9e0e244bcc0d962139e7adda47c97d67deb4a"
+              }
+            },
+            {
+              "name": "CD Forearm Twist.R.002",
+              "relative": "Basis",
+              "vertex_group": "",
+              "slider_min": 0.0,
+              "slider_max": 1.0,
+              "geometry": {
+                "count": 3658,
+                "sha256": "3aef6b70a997b8c17b1fdfdb392a13a14649d36172f8457ed547ac04c51518aa"
+              }
+            }
+          ]
+        },
+        "Dress": {
+          "object_id": [
+            "Dress",
+            null
+          ],
+          "data_id": [
+            "Circle.002",
+            null
+          ],
+          "vertices": {
+            "count": 800,
+            "sha256": "96da896f0a80167680d7a22433479aa7fa8eb5a7d686b7b9dff13345a42c0681"
+          },
+          "edges": {
+            "count": 1520,
+            "sha256": "909ca4a8d670604b55cb6875a532a1eff9a067ec817f54959e726e26993a7ab6"
+          },
+          "loops": {
+            "count": 2880,
+            "sha256": "efcd8181d4a1300147cb4e20aa63774986026491c5a926ff29bf093c3762f3ff"
+          },
+          "polygons": {
+            "count": 720,
+            "sha256": "ca51a8c0ba2680fe553fb3a8f8a327de0509ffc6b118ff1683a17deb3eedaf69"
+          },
+          "weights": {
+            "sha256": "9c6c8f9111b27d7ea8679401054e905ae37aca35ef5fa8a7c617083cfe7b4a52",
+            "influences": 2440,
+            "groups": [
+              "SK_Dress_DEF_01_01",
+              "SK_Dress_DEF_01_02",
+              "SK_Dress_DEF_01_03",
+              "SK_Dress_DEF_01_04",
+              "SK_Dress_DEF_02_01",
+              "SK_Dress_DEF_02_02",
+              "SK_Dress_DEF_02_03",
+              "SK_Dress_DEF_02_04",
+              "SK_Dress_DEF_03_01",
+              "SK_Dress_DEF_03_02",
+              "SK_Dress_DEF_03_03",
+              "SK_Dress_DEF_03_04",
+              "SK_Dress_DEF_04_01",
+              "SK_Dress_DEF_04_02",
+              "SK_Dress_DEF_04_03",
+              "SK_Dress_DEF_04_04",
+              "SK_Dress_DEF_05_01",
+              "SK_Dress_DEF_05_02",
+              "SK_Dress_DEF_05_03",
+              "SK_Dress_DEF_05_04",
+              "SK_Dress_DEF_06_01",
+              "SK_Dress_DEF_06_02",
+              "SK_Dress_DEF_06_03",
+              "SK_Dress_DEF_06_04",
+              "SK_Dress_DEF_07_01",
+              "SK_Dress_DEF_07_02",
+              "SK_Dress_DEF_07_03",
+              "SK_Dress_DEF_07_04",
+              "SK_Dress_DEF_08_01",
+              "SK_Dress_DEF_08_02",
+              "SK_Dress_DEF_08_03",
+              "SK_Dress_DEF_08_04",
+              "SK_Dress_Waist"
+            ]
+          },
+          "materials": [
+            [
+              "Purple",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Hair": {
+          "object_id": [
+            "Hair",
+            null
+          ],
+          "data_id": [
+            "Hair3_Centerline.001",
+            null
+          ],
+          "vertices": {
+            "count": 5463,
+            "sha256": "f4aed2266ad15520fa2819cb547cbd617d56614ec8197c71e95bc718c4284a2c"
+          },
+          "edges": {
+            "count": 10554,
+            "sha256": "dc88499a3a12cd45f4db0487717896a1fc350a48547f3f6f3fd3e30302f7ae33"
+          },
+          "loops": {
+            "count": 20376,
+            "sha256": "01b34d6798aca2bb91ecf59af0d5879009498fa6d424edc44c3e65522cbc016c"
+          },
+          "polygons": {
+            "count": 5111,
+            "sha256": "2c35af072e6ca556cb7b5f02a1a7f43d9c8812362303e701e4ab4a77644514de"
+          },
+          "weights": {
+            "sha256": "9b4917f105f3b2c19e12a09ddb0bff6c63e649421b52da3157556c19e374c4e6",
+            "influences": 8378,
+            "groups": [
+              "Head",
+              "Hair Hair 01.01",
+              "Hair Hair 01.02",
+              "Hair Hair 01.03",
+              "Hair Hair 01.04",
+              "Hair Hair 02.01",
+              "Hair Hair 02.02",
+              "Hair Hair 02.03",
+              "Hair Hair 02.04",
+              "Hair Hair 03.01",
+              "Hair Hair 03.02",
+              "Hair Hair 03.03",
+              "Hair Hair 03.04",
+              "Hair Hair 04.01",
+              "Hair Hair 04.02",
+              "Hair Hair 04.03",
+              "Hair Hair 04.04",
+              "Hair Hair 05.01",
+              "Hair Hair 05.02",
+              "Hair Hair 05.03",
+              "Hair Hair 05.04",
+              "Hair Hair 06.01",
+              "Hair Hair 06.02",
+              "Hair Hair 06.03",
+              "Hair Hair 06.04",
+              "Hair Hair 07.01",
+              "Hair Hair 07.02",
+              "Hair Hair 07.03",
+              "Hair Hair 07.04",
+              "Hair Hair 08.01",
+              "Hair Hair 08.02",
+              "Hair Hair 08.03",
+              "Hair Hair 08.04",
+              "Hair Hair 09.01",
+              "Hair Hair 09.02",
+              "Hair Hair 09.03",
+              "Hair Hair 09.04",
+              "Hair Hair 10.01",
+              "Hair Hair 10.02",
+              "Hair Hair 10.03",
+              "Hair Hair 10.04",
+              "Hair Hair 11.01",
+              "Hair Hair 11.02",
+              "Hair Hair 11.03",
+              "Hair Hair 11.04",
+              "Hair Hair 12.01",
+              "Hair Hair 12.02",
+              "Hair Hair 12.03",
+              "Hair Hair 12.04",
+              "Hair Hair 13.01",
+              "Hair Hair 13.02",
+              "Hair Hair 13.03",
+              "Hair Hair 13.04",
+              "Hair Hair 14.01",
+              "Hair Hair 14.02",
+              "Hair Hair 14.03",
+              "Hair Hair 14.04",
+              "Hair Hair 15.01",
+              "Hair Hair 15.02",
+              "Hair Hair 15.03",
+              "Hair Hair 15.04",
+              "Hair Hair 16.01",
+              "Hair Hair 16.02",
+              "Hair Hair 16.03",
+              "Hair Hair 16.04",
+              "Hair Hair 17.01",
+              "Hair Hair 17.02",
+              "Hair Hair 17.03",
+              "Hair Hair 17.04",
+              "Hair Hair 18.01",
+              "Hair Hair 18.02",
+              "Hair Hair 18.03",
+              "Hair Hair 18.04",
+              "Hair Hair 19.01",
+              "Hair Hair 19.02",
+              "Hair Hair 19.03",
+              "Hair Hair 19.04",
+              "Hair Hair 20.01",
+              "Hair Hair 20.02",
+              "Hair Hair 20.03",
+              "Hair Hair 20.04",
+              "Hair Hair 21.01",
+              "Hair Hair 21.02",
+              "Hair Hair 21.03",
+              "Hair Hair 21.04",
+              "Hair Hair 22.01",
+              "Hair Hair 22.02",
+              "Hair Hair 22.03",
+              "Hair Hair 22.04",
+              "Hair Hair 23.01",
+              "Hair Hair 23.02",
+              "Hair Hair 23.03",
+              "Hair Hair 23.04",
+              "Hair Hair 24.01",
+              "Hair Hair 24.02",
+              "Hair Hair 24.03",
+              "Hair Hair 24.04",
+              "Hair Hair 25.01",
+              "Hair Hair 25.02",
+              "Hair Hair 25.03",
+              "Hair Hair 25.04",
+              "Hair Hair 26.01",
+              "Hair Hair 26.02",
+              "Hair Hair 26.03",
+              "Hair Hair 26.04",
+              "Hair Hair 27.01",
+              "Hair Hair 27.02",
+              "Hair Hair 27.03",
+              "Hair Hair 27.04",
+              "Hair Hair 28.01",
+              "Hair Hair 28.02",
+              "Hair Hair 28.03",
+              "Hair Hair 28.04",
+              "Hair Hair 29.01",
+              "Hair Hair 29.02",
+              "Hair Hair 29.03",
+              "Hair Hair 29.04",
+              "Hair Hair 30.01",
+              "Hair Hair 30.02",
+              "Hair Hair 30.03",
+              "Hair Hair 30.04",
+              "Hair Hair 31.01",
+              "Hair Hair 31.02",
+              "Hair Hair 31.03",
+              "Hair Hair 31.04",
+              "Hair Hair 32.01",
+              "Hair Hair 32.02",
+              "Hair Hair 32.03",
+              "Hair Hair 32.04"
+            ]
+          },
+          "materials": [
+            [
+              "Purple",
+              null
+            ],
+            [
+              "Blu",
+              null
+            ],
+            [
+              "Purple2",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Blu",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple2",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Shoes": {
+          "object_id": [
+            "Shoes",
+            null
+          ],
+          "data_id": [
+            "Plane.007",
+            null
+          ],
+          "vertices": {
+            "count": 28177,
+            "sha256": "2a301beadc4f932097b0a04993064f0d6d16ac3d18bcc2089c88887073d2ba33"
+          },
+          "edges": {
+            "count": 56045,
+            "sha256": "72c04ee0fa138ecf342dc1aee898a353ea1b28bf94cb7019d4297ba7d0013652"
+          },
+          "loops": {
+            "count": 111520,
+            "sha256": "afd6d1accf4241d2eb88a05d1c817c6e3d227c7ec977a476df73969ab9193c7c"
+          },
+          "polygons": {
+            "count": 27878,
+            "sha256": "6202ebb044adea7c8c6231c2d96b25cc323f690da513753e15a307bbb7786380"
+          },
+          "weights": {
+            "sha256": "77e5a043a45afaa581b379b11982392cdbfd39c7cb047e17e840c2c7427999d7",
+            "influences": 91410,
+            "groups": [
+              "Tips",
+              "Valleys",
+              "DEF_Strap_01.L",
+              "DEF_Strap_02.L",
+              "DEF_Strap_05.R",
+              "DEF_Strap_04.R",
+              "DEF_Strap_03.L",
+              "DEF_Strap_C",
+              "DEF_Strap_06.R",
+              "DEF_Strap_04.L",
+              "DEF_Strap_05.L",
+              "DEF_Strap_06.L",
+              "DEF_Strap_01.R",
+              "DEF_Strap_03.R",
+              "DEF_Strap_02.R",
+              "UnPin",
+              "Face1",
+              "Stable",
+              "Wrap1",
+              "Sole",
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "Crystal_Blue",
+              null
+            ],
+            [
+              "ShoeBlack",
+              null
+            ],
+            [
+              "ShoePurple",
+              null
+            ],
+            [
+              "ShoeWhite",
+              null
+            ],
+            [
+              "Nipple",
+              null
+            ],
+            [
+              "Purple",
+              null
+            ],
+            [
+              "ShoeGray",
+              null
+            ],
+            [
+              "Leather",
+              null
+            ],
+            [
+              "Crystals_Mat",
+              null
+            ],
+            null
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Crystal_Blue",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeBlack",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoePurple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeWhite",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Nipple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Purple",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "ShoeGray",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Leather",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Crystals_Mat",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              null
+            ]
+          ],
+          "shape_keys": []
+        },
+        "Stocking": {
+          "object_id": [
+            "Stocking",
+            null
+          ],
+          "data_id": [
+            "Vert.006",
+            null
+          ],
+          "vertices": {
+            "count": 528,
+            "sha256": "77f4c62680406a18c71e7f5081af451aa781eb47ff6c5ef62296baeebd53936d"
+          },
+          "edges": {
+            "count": 1031,
+            "sha256": "ea70c2317eaf232bad590427bf571fd0b0e2a29d47eac609ef70061ef50d2bce"
+          },
+          "loops": {
+            "count": 2018,
+            "sha256": "bdce9b121db31fbb5a76977a8d4c584a06969c42ea68c9100f37dd2492681a96"
+          },
+          "polygons": {
+            "count": 504,
+            "sha256": "6a2f928166cfb49973427f271130b44a80e932aacc8ce0834f65787bad373a33"
+          },
+          "weights": {
+            "sha256": "9f4c6c15381d7d0c4b9ea16637af1b0048e8c1b1f5262b4bc2780916831b30a8",
+            "influences": 912,
+            "groups": [
+              "Hips",
+              "spine",
+              "Chest",
+              "UpperChest",
+              "Neck",
+              "Head",
+              "eye.L",
+              "eye.R",
+              "shoulder.L",
+              "upper_arm.L",
+              "forearm.L",
+              "hand.L",
+              "f_index.01.L",
+              "f_index.02.L",
+              "f_index.03.L",
+              "thumb.01.L",
+              "thumb.02.L",
+              "thumb.03.L",
+              "f_middle.01.L",
+              "f_middle.02.L",
+              "f_middle.03.L",
+              "f_ring.01.L",
+              "f_ring.02.L",
+              "f_ring.03.L",
+              "f_pinky.01.L",
+              "f_pinky.02.L",
+              "f_pinky.03.L",
+              "shoulder.R",
+              "upper_arm.R",
+              "forearm.R",
+              "hand.R",
+              "f_index.01.R",
+              "f_index.02.R",
+              "f_index.03.R",
+              "thumb.01.R",
+              "thumb.02.R",
+              "thumb.03.R",
+              "f_middle.01.R",
+              "f_middle.02.R",
+              "f_middle.03.R",
+              "f_ring.01.R",
+              "f_ring.02.R",
+              "f_ring.03.R",
+              "f_pinky.01.R",
+              "f_pinky.02.R",
+              "f_pinky.03.R",
+              "breast.L",
+              "breast.R",
+              "thigh.L",
+              "shin.L",
+              "foot.L",
+              "toe.L",
+              "thigh.R",
+              "shin.R",
+              "foot.R",
+              "toe.R"
+            ]
+          },
+          "materials": [
+            [
+              "Stocking Main",
+              null
+            ],
+            [
+              "Stocking Black",
+              null
+            ]
+          ],
+          "material_slots": [
+            [
+              "DATA",
+              [
+                "Stocking Main",
+                null
+              ]
+            ],
+            [
+              "DATA",
+              [
+                "Stocking Black",
+                null
+              ]
+            ]
+          ],
+          "shape_keys": []
+        }
+      }
+    }
+  },
+  "source_schema": "x.validation.original-leave-asset-transition/1",
+  "raw_evidence": {
+    "availability": "Local archive only; raw data is excluded from Git upload",
+    "original": {
+      "sha256": "a905c0ef0a4d6be55f7b14329e0634fa84620ad23c9e83f4273e6bfa655d0dba",
+      "bytes": 127402594
+    },
+    "original_report_path": "validation/direct_original_rig_return_20261011/original_leave_asset_transition.json",
+    "archive_path": ".validation-archives/a905c0ef0a4d6be55f7b14329e0634fa84620ad23c9e83f4273e6bfa655d0dba/original_leave_asset_transition.json.xz",
+    "archive_format": "xz",
+    "omitted_phase_fields": {
+      "before": {
+        "rest_full": {
+          "source_json_pointer": "/phases/before/rest_full",
+          "serialized_field_bytes": 375958,
+          "serialized_field_sha256": "52f4a3989551e46e47c1b5984309e03c0e6fce8733b3e55f18b110ce14bf1be0",
+          "digest_format": "Exact UTF-8 field block including indent and separator"
+        },
+        "mesh_raw_full": {
+          "source_json_pointer": "/phases/before/mesh_raw_full",
+          "serialized_field_bytes": 42042356,
+          "serialized_field_sha256": "bb4664e463b84b74d7106860b1fff0bc8ab85aacd8b53ff303f16128ca3e4683",
+          "digest_format": "Exact UTF-8 field block including indent and separator"
+        }
+      },
+      "after_validate": {
+        "rest_full": {
+          "source_json_pointer": "/phases/after_validate/rest_full",
+          "serialized_field_bytes": 375958,
+          "serialized_field_sha256": "52f4a3989551e46e47c1b5984309e03c0e6fce8733b3e55f18b110ce14bf1be0",
+          "digest_format": "Exact UTF-8 field block including indent and separator"
+        },
+        "mesh_raw_full": {
+          "source_json_pointer": "/phases/after_validate/mesh_raw_full",
+          "serialized_field_bytes": 42042356,
+          "serialized_field_sha256": "bb4664e463b84b74d7106860b1fff0bc8ab85aacd8b53ff303f16128ca3e4683",
+          "digest_format": "Exact UTF-8 field block including indent and separator"
+        }
+      },
+      "after_leave": {
+        "rest_full": {
+          "source_json_pointer": "/phases/after_leave/rest_full",
+          "serialized_field_bytes": 375958,
+          "serialized_field_sha256": "52f4a3989551e46e47c1b5984309e03c0e6fce8733b3e55f18b110ce14bf1be0",
+          "digest_format": "Exact UTF-8 field block including indent and separator"
+        },
+        "mesh_raw_full": {
+          "source_json_pointer": "/phases/after_leave/mesh_raw_full",
+          "serialized_field_bytes": 42042359,
+          "serialized_field_sha256": "67c56f51dcfbff7dfcd726af7e3b3d4dd71747a6aa3ea3041a9bd7d28e007920",
+          "digest_format": "Exact UTF-8 field block including indent and separator"
+        }
+      }
+    },
+    "changed_component_paths_scope": "Phase-relative paths inside the original archived report",
+    "transition_phases": {
+      "validate": [
+        "before",
+        "after_validate"
+      ],
+      "leave": [
+        "before",
+        "after_leave"
+      ]
+    },
+    "restore": "Use Python lzma.open(archive_path, \"rb\") and copy to a NEW file; verify original.sha256 and bytes.",
+    "archive": {
+      "sha256": "f6e9fdec7578d701ea8bd7682a43f5b6eba3be2fb05af9d6864363390be7e14d",
+      "bytes": 7097544
+    },
+    "archive_round_trip_verified": true
+  }
+}
