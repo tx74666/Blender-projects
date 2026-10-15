@@ -1,0 +1,118 @@
+{
+  "schema": "x.playback-handoff-round4-current/2",
+  "date_local": "2026-10-15",
+  "objective": "Determine actual playback costs and adopt worthwhile verified optimizations while preserving the artist model and outputs.",
+  "state": "COMPLETE",
+  "goal_complete": true,
+  "handoff": {
+    "source_thread_id": "01a12751-d08f-7630-b790-18db26fe3186",
+    "source_thread_name": "X",
+    "archived": true,
+    "archive_evidence": "set_thread_archived returned archived=true in this chat",
+    "current_thread_id": "01a13b17-8547-7c60-bda1-8a2843a51b46",
+    "current_thread_name": "X",
+    "previous_summary": "../round3/current_work.json",
+    "previous_summary_is_historical": true,
+    "original20_complete": true,
+    "human_recovery_authorized": true
+  },
+  "user_observation": {
+    "fps": [
+      4.5,
+      10,
+      30
+    ],
+    "exact_mutation": "Native Delete Cosha, then Delete Shoes; Ctrl Z restores afterward.",
+    "limits": "Human FPS report. Private native deletion probes use fresh input copies rather than a live artist Undo comparison. No deletion was adopted."
+  },
+  "live_closeout": {
+    "pid": 24416,
+    "blender": "5.2.0 LTS",
+    "executable": "D:/Blender5.2/blender.exe",
+    "character_designer": "0.77.41",
+    "artist_path": "D:/Blender/Projects/Character/X/X.blend",
+    "final_sha256": "ad5bf8ecbfe45d1ca9041c2d3608f0defe68c605e8ad10cd87a95bc946d5ae92",
+    "final_bytes": 34845822,
+    "native_save_result": [
+      "FINISHED"
+    ],
+    "final_dirty": false,
+    "external_file_pin_matches": true,
+    "frame": 21,
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "playing": false,
+    "shading": "MATERIAL",
+    "sidebar": true,
+    "original_Hair_console_text_retained_unsubmitted": true,
+    "save_receipt": "final_save_07741_20261014T193850Z_78209ee53556/final_save_receipt.json",
+    "limits": "State observed at closeout; no saved-file independent reopen in this round."
+  },
+  "adopted": {
+    "addon": "0.77.41 per-proof current Rest snapshot reuse and per-call exact ordered weight Matrix reuse",
+    "deployed": "Blender5.2 and X; 190 files each, check different=0",
+    "refresh_receipt": "refresh_07741_20261014T184749Z_eb541cbd852e/refresh_receipt.json",
+    "refresh_all_12_components_exact": true,
+    "scene_change": "Shoes.Mirror.use_mirror_merge true -> false; Mirror and Armature remain enabled",
+    "adoption_receipt": "adopt_shoes_merge_20261014T192131Z_a2027c58a0ed/adoption_receipt.json",
+    "only_intended_scene_property_changed": true,
+    "private_30_frame_complete_outputs_exact": true
+  },
+  "evidence": {
+    "input_copy": "input_saved_20261015.blend",
+    "input_sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "input_bytes": 34691613,
+    "delete_probe": "native_delete_report_20261015.json",
+    "shoes_modifier_probe": "native_shoes_modifiers_report_20261015.json",
+    "shoes_merge_exact_and_ABBA": "native_shoes_merge_report_20261015.json",
+    "current_window_version_comparison": "current_window_summary.json",
+    "live_samples": "live_measurement_summary.json",
+    "accepted_live_samples": 25,
+    "failed_live_samples_retained_and_excluded": 1,
+    "last_helper_close": "response_close_1792006009918049900.json",
+    "failed_guard_receipts_retained": true
+  },
+  "findings": {
+    "dominant": [
+      "Cosha Forearm corrective preparation and matrix calculation",
+      "Shoes Mirror and Armature native evaluation",
+      "Material viewport and drawing overhead"
+    ],
+    "delete_probe_medians_ms": [
+      131.475,
+      44.044,
+      9.489
+    ],
+    "version_background_ABBA_observed_percent": 5.3,
+    "merge_background_ABBA_observed_percent": 4.0756,
+    "final_material_frame_change_hz": 4.406863218558092,
+    "final_solid_frame_change_hz": 5.62720169235889,
+    "limits": "Background evaluation is not GUI FPS; component/round gains are not additive. Version GUI samples were sequential across time and shared load. Merge GUI samples overlap prior .41 samples. No fixed FPS gain, future-edit equivalence or model simplification claimed."
+  },
+  "resources": {
+    "owned_native_GUI_heavy_work_finished": true,
+    "owned_helpers_released": true,
+    "owned_background_processes_remaining": 0,
+    "observed_Blender_processes": [
+      24416
+    ],
+    "Character_END_sent": true,
+    "Character_thread_id": "01a12305-aada-7273-b72c-54a41aad77e4",
+    "Unity_untouched": true
+  },
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "model_source": "Current task local thread index observed 2026-10-14; earlier source runs retain unrecorded metadata where applicable.",
+  "git": "No staging, commit or push performed by this task.",
+  "records": {
+    "delivery": "README_delivery_07741_20261015.md",
+    "existing_ledger": "D:/Codex/資料庫/电脑与工作环境/Blender性能優化台帳.md",
+    "same_playback_entry_updated": true,
+    "existing_release": "D:/MyRepository/Blender-addons-by-Randy/docs/releases/CharacterDesigner_0.77.41_playback_candidate_20261014.md",
+    "release_deployment_and_save_state_updated": true,
+    "closeout_observation": "closeout_native_observation_20261015.json"
+  },
+  "pending": [],
+  "next_investigation_trigger": "Changed rig/Rest/weights/mesh or new playback regression. If Forearm remains dominant, measure inverse attempts, inclusive cost and unique exact linear matrices before proposing another per-call cache. Re-enable and revalidate Mirror merge if later shoe edits need seam welding."
+}

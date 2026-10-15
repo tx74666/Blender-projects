@@ -1,0 +1,30 @@
+{
+  "schema": "x.pc2-factory-source-preparation/1",
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_pc2_factory_001.py",
+    "sha256": "71ad83108122388a536a44a36007840068ba15fcb03aaaecafe148ca12e39440",
+    "bytes": 15003
+  },
+  "no_native_run_by_child": true,
+  "no_old_bone_or_witness_dependencies": true,
+  "pure_checks": "Compile and PC2 header/payload exact decode plus malformed/truncation/version/count/nonfinite and vector RMS checks PASS. No cache/report generated.",
+  "scope": "Three integer samples, two normal modes, 12 visits; no full actor/subframe/GUI FPS proof. Static custom Float3 normal transport is not animated-normal caching.",
+  "arguments": [
+    "D:/Blender5.2/blender.exe",
+    "--background",
+    "--factory-startup",
+    "-t",
+    "1",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_pc2_factory_001.py",
+    "--",
+    "--artist",
+    "D:/Blender/Projects/Character/X/X.blend",
+    "--cache-dir",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\pc2_factory_cache_001",
+    "--report",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_pc2_factory_report_001.json"
+  ]
+}

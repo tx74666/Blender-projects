@@ -1,0 +1,34 @@
+{
+  "schema": "x.protected-refresh-v3-source-checks/1",
+  "date_local": "2026-10-15",
+  "source_only": true,
+  "failed_v2_source_preserved": {
+    "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/round4/protected_refresh_07741_v2.py",
+    "sha256": "88b75d97b40140dc8addfeac9351555f7147e46f939bbf9244fc177d950b2677",
+    "receipt": "refresh_07741_20261014T183957Z_7cc06514d987/refresh_receipt.json"
+  },
+  "source_pins": {
+    "protected_refresh_07741_v3.py": "069fe18afcb46a11b6faf63dac3846281dde3c4c0fbc9da90d3c50f105a71eef",
+    "install_refresh_07741_v3.py": "cb166ef68441a62b2385a0a07aa8ad2bd7e23dd9d9ccdec592e12f6af6c31dd3",
+    "final_save_07741_v3.py": "dbb73ca8ce7254230d7cbbfd6648b69d1b113ab9884318565d368ff9e4a05f74",
+    "install_final_save_07741_v3.py": "148aed631c5b8d40e32b2f5deaabd72f8d7ee7b40087748b4f27b83d356d7617"
+  },
+  "change_scope": "Only explicit exact mathutils Vector/Matrix/Quaternion/Euler/Color sequence-protocol serialization with type/dimensions and Euler order; existing scalar float_hex and rejection policy retained. Independent v3 paths/namespaces/pins.",
+  "pure_fakeclass_checks": {
+    "five_explicit_math_types_without_iter_pass": true,
+    "Matrix_rows_recurse_as_typed_Vector_and_dimensions_pass": true,
+    "Euler_order_and_Quaternion_component_order_retained": true,
+    "signed_zero_and_exact_float_hex_retained": true,
+    "NaN_Infinity_ragged_matrix_unknown_pure_sequence_rejected": true,
+    "RNA_and_PG_is_array_list_sequence_conversion_without_iter_pass": true,
+    "four_AST_compile_and_three_source_pin_dependencies_pass": true,
+    "final_capture_whitelist_complete": true,
+    "independent_review_passed": true
+  },
+  "native_bpy_or_mathutils_execution_performed": false,
+  "canonical_or_deployment_modified_by_this_fix": false,
+  "limits": [
+    "Fake sequence classes prove serializer control flow, not native Blender capture acceptance; a future native receipt is still required.",
+    "No rounding, repr serialization, generic len/getitem admission, solver/reacquire fallback or scene rollback."
+  ]
+}

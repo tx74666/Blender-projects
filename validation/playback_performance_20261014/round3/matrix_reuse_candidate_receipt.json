@@ -1,0 +1,38 @@
+{
+  "schema": "x.matrix-reuse-candidate/1",
+  "state": "CANDIDATE_PENDING_NATIVE_ABBA",
+  "scope": "same _calculate_records call fixed transforms and rows; ordered normalized weights after every existing check; no inverse or cross-frame caching",
+  "tests": {
+    "ast_stub": "7 PASS (0.030s), production extracted functions; not native mathutils proof",
+    "syntax": "4 files PASS",
+    "native_math": "16 test methods prepared; not run by this agent"
+  },
+  "baseline_pins": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\baseline_07740\\matrix_reuse_baseline_pins.json",
+  "candidate_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "sha256": "405fa224c266cde83e4d453790832b8d2b9667e091af5d0ebcf756fde690cce8",
+      "bytes": 11747
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "d7a28470d61b74b1f2d4f146135bf14424e1633c0a88ded706c1e6be5adc1b10",
+      "bytes": 98909
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_forearm_twist_follow_math_blender.py",
+      "sha256": "962bb4a056cecc2ed5a1f784191afab116f860951bebeb019874f0b818b65398",
+      "bytes": 25290
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_forearm_twist_blend_cache.py",
+      "sha256": "01226257f88b9c7b12f9ef3b1ed359bdb9248d978f1a62caee2d58064d03ae8c",
+      "bytes": 6796
+    }
+  ],
+  "limits": [
+    "No Blender, GUI, deployment or artist save run by this agent",
+    "Pending native exact tuple/float32 regression and same-model paired timings",
+    "Baseline A/B must swap runtime _calculate_records and math helpers together; old corrected_vertex has no _blend_cache keyword"
+  ]
+}

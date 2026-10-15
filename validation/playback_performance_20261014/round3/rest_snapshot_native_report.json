@@ -1,0 +1,1859 @@
+{
+  "schema": "x.native-rest-current-snapshot-differential/1",
+  "completed": true,
+  "blender": "5.2.0 LTS",
+  "no_scene_save": true,
+  "no_addon_registration": true,
+  "artist_file_opened": false,
+  "baseline_pins": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\baseline_07740\\unity_animation.py",
+      "sha256": "c8db791e3077c439552211d5fef3770a59c9630340528ef451ecdea5b7f697b4",
+      "bytes": 43840
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\baseline_07740\\animation_worklist_target.py",
+      "sha256": "55b1dad8c9bfd6986a34b5e4cfc6c120dba80fedb2c76f09d613ad80b17a57fd",
+      "bytes": 45088
+    }
+  ],
+  "candidate_pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "5d216f2176758800393bd0f187081f40eb6fd9f018a59f39ea7253bf4352c0b9",
+      "bytes": 45473
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "e6ffa5cfefeb12941055e4cef43bdb060c069cbeed9fee6c5d39a810b3e68db3",
+      "bytes": 45498
+    }
+  ],
+  "test_count": 8,
+  "failures": [],
+  "errors": [],
+  "cases": [
+    {
+      "label": "motion inventory added with matching saved Rest",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          }
+        }
+      },
+      "native_before_after_sha256": "e42f539ffaf0b5898e629dbfc279dea53690a650749e0516f0bb2919df4c25af",
+      "details": {}
+    },
+    {
+      "label": "motion inventory removed with matching saved Rest",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed the artist bone inventory."
+          }
+        }
+      },
+      "native_before_after_sha256": "679b8a21fa288308ee7b0210404a858701ccddc10c50caeb30a41d40e8453343",
+      "details": {}
+    },
+    {
+      "label": "legal connected translation",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "1251f971d54339da0849c845578b15b087ab92872db41e308ed73f00feed5dfd",
+      "details": {}
+    },
+    {
+      "label": "motion before native edit",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "1251f971d54339da0849c845578b15b087ab92872db41e308ed73f00feed5dfd",
+      "details": {}
+    },
+    {
+      "label": "motion native head edited after success",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          }
+        }
+      },
+      "native_before_after_sha256": "46d20fa5a8a769460fabbc3265f213e70c9872b5e4c13b94ccae37c3011bce69",
+      "details": {}
+    },
+    {
+      "label": "native head/1 axes/5e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "3c795b2ae0f4a6632f86b1b9911a30e33fa8a3035c2497117b01e72090c1db52",
+      "details": {
+        "requested_delta": 5e-07,
+        "native_vector_delta_length": 4.999999990010493e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/1 axes/9.99999883788405e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "b21e55b0aed95dfa506f793e9ed5e0550f4aaf7c668f82b08b13d93fb23bc7ab",
+      "details": {
+        "requested_delta": 9.99999883788405e-07,
+        "native_vector_delta_length": 9.999998895818753e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/1 axes/1e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "11e8379d03b5dcdce39147048dd607763fe797d6870daf6391f1fb5e768b4bda",
+      "details": {
+        "requested_delta": 1e-06,
+        "native_vector_delta_length": 9.999999980020987e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/1 axes/1.0000001111620804e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "ceeb4a8d8fe9f3c46971d89d75d8c88f195a0b455ef389ab5fc57ccf475af11e",
+      "details": {
+        "requested_delta": 1.0000001111620804e-06,
+        "native_vector_delta_length": 1.0000001064223102e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/1 axes/7e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "966d441928f249cd0afe7b7edaec1b33338418e72531c508aedd4ef0af5d881c",
+      "details": {
+        "requested_delta": 7e-07,
+        "native_vector_delta_length": 6.999999769174252e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/1 axes/8e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "05cdc256fdb7ac166ab4d0a67257682834d5fa3f445aab21b60a82aa79f59307",
+      "details": {
+        "requested_delta": 8e-07,
+        "native_vector_delta_length": 7.99999992980668e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/1 axes/2e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "2b08769829018bb3f9f1aa5d1115ca7225c912ca18e92c6bb018c784b7a0790f",
+      "details": {
+        "requested_delta": 2e-06,
+        "native_vector_delta_length": 1.9999999960041974e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/3 axes/5e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "4c59afc20b139e72561aedb0a6573b1b63a9579bf9a942fb17a2ae6d9d7db2c7",
+      "details": {
+        "requested_delta": 5e-07,
+        "native_vector_delta_length": 8.660254020542053e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/3 axes/9.99999883788405e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "b3ebd966077bbb6ea71bf9ad9c8072da5f0ed3f92080439aaaefaf78af12a28e",
+      "details": {
+        "requested_delta": 9.99999883788405e-07,
+        "native_vector_delta_length": 1.732050616319075e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/3 axes/1e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "dd0d9cfa1369120c118505156de56d2826cf16473b0a281dd148cf8cc2808d0a",
+      "details": {
+        "requested_delta": 1e-06,
+        "native_vector_delta_length": 1.7320508041084106e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/3 axes/1.0000001111620804e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "bb109b09cf94b65ffd61ea445c53e29da14b3c33394b84058d7d198d6a22565c",
+      "details": {
+        "requested_delta": 1.0000001111620804e-06,
+        "native_vector_delta_length": 1.7320509918977256e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/3 axes/7e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "0fc0e8108d3f3161767f125b1103bb92ec66230fa5d8888d787610ec2e73d705",
+      "details": {
+        "requested_delta": 7e-07,
+        "native_vector_delta_length": 1.2124355253180217e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/3 axes/8e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "8fdbda1455d294b766b1086860a391dc47b6b0e28829926334c44b91c61f53a4",
+      "details": {
+        "requested_delta": 8e-07,
+        "native_vector_delta_length": 1.3856406338972622e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native head/3 axes/2e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "9faac11a7cbfa673e747e9dba648ff69d2b10a82910307ff8f34c376ad7aca6d",
+      "details": {
+        "requested_delta": 2e-06,
+        "native_vector_delta_length": 3.4641016082168213e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/1 axes/5e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "546a47b3c64960450e16c537b3584868ad79fdb90a2f611ab55c0cf978e12dc6",
+      "details": {
+        "requested_delta": 5e-07,
+        "native_vector_delta_length": 4.999999990010493e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/1 axes/9.99999883788405e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "b8f2ad07f22dd6e90c335d39b4696130ab588b8e89fa94724d03485dfc1f8f29",
+      "details": {
+        "requested_delta": 9.99999883788405e-07,
+        "native_vector_delta_length": 9.999998895818753e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/1 axes/1e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "c8520edf5630c8c84a58229bf2c7cbbb199b4806e03740b7fc4f63748408b672",
+      "details": {
+        "requested_delta": 1e-06,
+        "native_vector_delta_length": 9.999999980020987e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/1 axes/1.0000001111620804e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "963b79d2092a7ca5ea3baf5ae3b7d9b02daac4f1b25e65a80e1fcdffe22fb4c3",
+      "details": {
+        "requested_delta": 1.0000001111620804e-06,
+        "native_vector_delta_length": 1.0000001064223102e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/1 axes/7e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "b634bc7bf40ae8d3d8304598020828ab590084bc10ca7323b5af8bd2df900337",
+      "details": {
+        "requested_delta": 7e-07,
+        "native_vector_delta_length": 6.999999769174252e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/1 axes/8e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "b2bba4d894147c33bb0675ff5c521ed808f23ca36a5350526eaa04b4411128ec",
+      "details": {
+        "requested_delta": 8e-07,
+        "native_vector_delta_length": 7.99999992980668e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/1 axes/2e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "c6fb464752e68bda1cb7f12ce73a1e2016a340f1de6222b80806b5c847e3852b",
+      "details": {
+        "requested_delta": 2e-06,
+        "native_vector_delta_length": 1.9999999960041974e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/3 axes/5e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "c556c9b08839b3f13c35077c153c3c9b8323f88fb75590b3e8cb225a4ba7fa89",
+      "details": {
+        "requested_delta": 5e-07,
+        "native_vector_delta_length": 8.528620483087113e-07,
+        "cross_copy_geometry_result": true,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/3 axes/9.99999883788405e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "e5be12e6663920670df3ee311ed6782d5edf3fd284a8e86eb35c778aed7e940c",
+      "details": {
+        "requested_delta": 9.99999883788405e-07,
+        "native_vector_delta_length": 1.7057239694922662e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/3 axes/1e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "5d995215fea063f7948733812ab021a548dd816c5b2117eb676d12f62dbc30f0",
+      "details": {
+        "requested_delta": 1e-06,
+        "native_vector_delta_length": 1.7057240966174226e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/3 axes/1.0000001111620804e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "16e28f8759503b1abcb5bc9cb4c65474946f3c6e967dd952f0580791efd68d41",
+      "details": {
+        "requested_delta": 1.0000001111620804e-06,
+        "native_vector_delta_length": 1.7057242237425696e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/3 axes/7e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "d2afc053fd593832404ebb5bfee6ddf2e98072ec2a1df24887da8121d0f278ed",
+      "details": {
+        "requested_delta": 7e-07,
+        "native_vector_delta_length": 1.2213069659655854e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/3 axes/8e-07",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "2cd9175edb18fc5d1013f53b522a3f8d4ec1e3e85115fe75c5b2d7757ae56e98",
+      "details": {
+        "requested_delta": 8e-07,
+        "native_vector_delta_length": 1.4058207064142411e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "native tail/3 axes/2e-06",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "ebedca0a69cf60aad2da73431507e804b75fd5edd32616f37b41ad0a375ed461",
+      "details": {
+        "requested_delta": 2e-06,
+        "native_vector_delta_length": 3.4795024041846783e-06,
+        "cross_copy_geometry_result": false,
+        "saved_rest_matches_proven": true
+      }
+    },
+    {
+      "label": "original before native edit",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "1251f971d54339da0849c845578b15b087ab92872db41e308ed73f00feed5dfd",
+      "details": {}
+    },
+    {
+      "label": "original native head edited after success",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The saved artist or owned motion-copy Rest changed; no validation exception was granted."
+          }
+        }
+      },
+      "native_before_after_sha256": "0826de6a19478beca8f0f8d742bd30eb9204d31f19030c455856f4a6faed01cc",
+      "details": {}
+    },
+    {
+      "label": "before owner mutation",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "1251f971d54339da0849c845578b15b087ab92872db41e308ed73f00feed5dfd",
+      "details": {}
+    },
+    {
+      "label": "owner refusal original/limb_ik/0",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "8737386b52649c5872536ff79cc40202df3968056ab051947845ee61ef61a48c",
+      "details": {}
+    },
+    {
+      "label": "owner refusal original/limb_ik/generated owner",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "5477c3947b0dfd113b65d4ec71f29987383109f807b5b7541b889b7fd304d19c",
+      "details": {}
+    },
+    {
+      "label": "owner refusal original/skirt_rig/0",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "9763e863a01714a34c0ed0f75c6dfe4dff5958883a3d8cc15168ef70138eda84",
+      "details": {}
+    },
+    {
+      "label": "owner refusal original/skirt_rig/generated owner",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "ee1b3977b2afe83f18c464e2c9340e9c7aae17db67c3818137eb06e6e122fbc1",
+      "details": {}
+    },
+    {
+      "label": "owner refusal motion/limb_ik/0",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "e3c4a7252601bb9ee734fa539b650aabf5245658717dee3db9b0af7270b3620e",
+      "details": {}
+    },
+    {
+      "label": "owner refusal motion/limb_ik/generated owner",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "3ece8965085d2b8e8dd0c81b358810a0240bbf876f3921d9e9c7220b849e1188",
+      "details": {}
+    },
+    {
+      "label": "owner refusal motion/skirt_rig/0",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "0a3916c432b06f00ad0712fe18b610a73aebde4f148960c3f420fd8ac6c735eb",
+      "details": {}
+    },
+    {
+      "label": "owner refusal motion/skirt_rig/generated owner",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "2580b48afe612f5a7a426b6db7c71993a2d48fedf13911132f53a2e96ec5ee1f",
+      "details": {}
+    },
+    {
+      "label": "after owner removal",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          },
+          "candidate": {
+            "kind": "return",
+            "value": [
+              "child"
+            ]
+          }
+        }
+      },
+      "native_before_after_sha256": "1251f971d54339da0849c845578b15b087ab92872db41e308ed73f00feed5dfd",
+      "details": {}
+    },
+    {
+      "label": "cross-copy structural flag use_deform",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "b3dd0d5e7fd86f2fa4126dfd95a4b6b898276ed5cde2a1a36d9950ec4edb48af",
+      "details": {}
+    },
+    {
+      "label": "cross-copy structural flag use_inherit_rotation",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "25c3783ec9486eda3684d2714da17180d750af823b84db86102ba991ee7fd3ae",
+      "details": {}
+    },
+    {
+      "label": "cross-copy structural flag inherit_scale",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "d0c3ec34ec9ed03e8f45edd36c46126443409c4a98a801d99abea4db4d705a87",
+      "details": {}
+    },
+    {
+      "label": "cross-copy structural flag use_local_location",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "d960a3c6ff06ddefed3fc9dfa8e4a3d2a6eb86f6e1a324184d93bc7e6f1f74ed",
+      "details": {}
+    },
+    {
+      "label": "cross-copy structural flag use_relative_parent",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "The owned motion copy changed Rest geometry, parents or inheritance: free"
+          }
+        }
+      },
+      "native_before_after_sha256": "c27cde9ce22291b82283a2424a3071eb7513f6ebb8cda73c3c854acb514a19f1",
+      "details": {}
+    },
+    {
+      "label": "unmapped connected translation",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "1251f971d54339da0849c845578b15b087ab92872db41e308ed73f00feed5dfd",
+      "details": {}
+    },
+    {
+      "label": "reverse connected transition",
+      "results": {
+        "ordinary": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        },
+        "compiled": {
+          "baseline": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          },
+          "candidate": {
+            "kind": "raise",
+            "type": "builtins.ValueError",
+            "message": "An unapproved connected-bone flag changed in the motion copy: child"
+          }
+        }
+      },
+      "native_before_after_sha256": "4e7136468e3ea4b9287eec7f68a3cc7713ba1322e14264d4170c35aeab4b7dea",
+      "details": {}
+    }
+  ],
+  "handlers_unchanged": true,
+  "fixture_inventory_cleaned": true
+}

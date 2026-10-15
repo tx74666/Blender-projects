@@ -1,0 +1,67 @@
+{
+  "schema": "x.native-keyframe-bulk-factory/1",
+  "completed": false,
+  "pid": 35268,
+  "created_utc": "2026-10-15T02:43:42.087291+00:00",
+  "no_blend_open_or_save": true,
+  "no_addon_register": true,
+  "performance_acceptance": false,
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "468bb6b297c56dd4b9c5f2dcd171ac240e31b9e87c4d6af998a1f64e76aafd29",
+    "bytes": 34840263
+  },
+  "source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "scripts": {
+    "native_keyframe_bulk_factory_008.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_keyframe_bulk_factory_008.py",
+      "sha256": "986b1ad696222cf4fb7d1ff1381dcc149691f56af543a786a68c8d706a69a606",
+      "bytes": 10165
+    },
+    "native_validation_support_v8.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v8.py",
+      "sha256": "dce66a2b5739d7c54e359e7c1d542004ecedf350682dccb2537e0adabe3dcaf6",
+      "bytes": 1939
+    },
+    "native_source_reference_witness_v8.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v8.py",
+      "sha256": "5a6a12a723c3c4ce4198cc04a4d641d0a95ff4bc092b1cc2ac36c122b6d3bcf5",
+      "bytes": 28811
+    },
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    }
+  },
+  "blender": "5.2.0 LTS",
+  "witness_sources": {
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_source_reference_witness_v8.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v8.py",
+      "sha256": "5a6a12a723c3c4ce4198cc04a4d641d0a95ff4bc092b1cc2ac36c122b6d3bcf5",
+      "bytes": 28811
+    },
+    "native_validation_support_v8.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v8.py",
+      "sha256": "dce66a2b5739d7c54e359e7c1d542004ecedf350682dccb2537e0adabe3dcaf6",
+      "bytes": 1939
+    }
+  },
+  "cleanup_errors": [],
+  "all_fixture_ids_removed": true,
+  "handlers_unchanged": true,
+  "artist_disk_unchanged": true,
+  "stage_unchanged": true,
+  "witness_sources_unchanged": true,
+  "scripts_unchanged": true,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_keyframe_bulk_factory_008.py\", line 166, in <module>\n    main(args, report)\n    ~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_keyframe_bulk_factory_008.py\", line 77, in main\n    initial = read()\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_keyframe_bulk_factory_008.py\", line 74, in read\n    return bulk.keyframe_collection_witness(points, fixed_type, bulk.Reader(bpy.types.ID))\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v8.py\", line 159, in keyframe_collection_witness\n    before = schema()\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v8.py\", line 133, in schema\n    observed_width = prop.array_length if prop.is_array else 1\n                                          ^^^^^^^^^^^^^\nAttributeError: 'EnumProperty' object has no attribute 'is_array'\n"
+}

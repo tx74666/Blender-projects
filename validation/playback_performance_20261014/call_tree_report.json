@@ -1,0 +1,654 @@
+{
+  "schema": "x.forearm-call-tree/1",
+  "completed": true,
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\input_snapshot.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+    "sha256": "113d9b1688f1ddceadccd90ffd7cc5f3450e691218d11fe3097e34bc876b879d",
+    "bytes": 98233
+  },
+  "blender": "5.2.0 LTS",
+  "original_mode_active": false,
+  "errors": {},
+  "total_profiled_seconds": 0.6616675999999995,
+  "top_cumulative": [
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py",
+      "line": 776,
+      "function": "_frame_visibility",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.00021950000000000002,
+      "cumulative_seconds": 0.3711699
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\bone_collections.py",
+      "line": 201,
+      "function": "_single_data_user",
+      "calls": 2,
+      "primitive_calls": 2,
+      "self_seconds": 0.000526,
+      "cumulative_seconds": 0.3697597
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 528,
+      "function": "single_armature_user",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.0024530000000000003,
+      "cumulative_seconds": 0.36922950000000004
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "line": 644,
+      "function": "_frame_post",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 3.5000000000000004e-06,
+      "cumulative_seconds": 0.3092763
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "line": 607,
+      "function": "update_runtime",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.0001006,
+      "cumulative_seconds": 0.3092728
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "line": 386,
+      "function": "_calculate_object",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.0002654,
+      "cumulative_seconds": 0.3091722
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 282,
+      "function": "_load",
+      "calls": 2,
+      "primitive_calls": 2,
+      "self_seconds": 0.0010134,
+      "cumulative_seconds": 0.21184860000000003
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "line": 1031,
+      "function": "_prepare_runtime_records",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 4.89e-05,
+      "cumulative_seconds": 0.19724950000000002
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_original_inventory.py",
+      "line": 50,
+      "function": "validate",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 6.730000000000001e-05,
+      "cumulative_seconds": 0.1915704
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+      "line": 3168,
+      "function": "_validate_inventory",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.0010826,
+      "cumulative_seconds": 0.19149570000000002
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 52,
+      "function": "_decode",
+      "calls": 101689,
+      "primitive_calls": 4,
+      "self_seconds": 0.11766860000000001,
+      "cumulative_seconds": 0.17451090000000002
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\limb_ik.py",
+      "line": 3155,
+      "function": "_validation_source_rest",
+      "calls": 6,
+      "primitive_calls": 6,
+      "self_seconds": 0.0007978000000000001,
+      "cumulative_seconds": 0.16580360000000002
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 404,
+      "function": "control_rest_view",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.0005397,
+      "cumulative_seconds": 0.1645059
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 356,
+      "function": "_prove_motion_data",
+      "calls": 3,
+      "primitive_calls": 3,
+      "self_seconds": 0.0055427,
+      "cumulative_seconds": 0.16282490000000002
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 350,
+      "function": "_matches_rest_state",
+      "calls": 6,
+      "primitive_calls": 6,
+      "self_seconds": 0.017863200000000003,
+      "cumulative_seconds": 0.11411080000000001
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "line": 453,
+      "function": "_calculate_records",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.008968700000000001,
+      "cumulative_seconds": 0.11126860000000001
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 464,
+      "function": "_read_action_motion_data",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.0003998,
+      "cumulative_seconds": 0.10583210000000001
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 169,
+      "function": "corrected_vertex",
+      "calls": 382,
+      "primitive_calls": 382,
+      "self_seconds": 0.0021554,
+      "cumulative_seconds": 0.0894384
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.any>",
+      "calls": 8107,
+      "primitive_calls": 8107,
+      "self_seconds": 0.0132253,
+      "cumulative_seconds": 0.07775030000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "calls": 415501,
+      "primitive_calls": 415501,
+      "self_seconds": 0.0674945,
+      "cumulative_seconds": 0.0687956
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 518,
+      "function": "_encoded_reference_keys",
+      "calls": 39316,
+      "primitive_calls": 1,
+      "self_seconds": 0.0396653,
+      "cumulative_seconds": 0.0677218
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 522,
+      "function": "<genexpr>",
+      "calls": 16325,
+      "primitive_calls": 13,
+      "self_seconds": 0.0056575,
+      "cumulative_seconds": 0.0676948
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 102,
+      "function": "blended_matrix",
+      "calls": 764,
+      "primitive_calls": 764,
+      "self_seconds": 0.0038638,
+      "cumulative_seconds": 0.06644810000000001
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 524,
+      "function": "<genexpr>",
+      "calls": 30401,
+      "primitive_calls": 8876,
+      "self_seconds": 0.009356600000000001,
+      "cumulative_seconds": 0.058088900000000006
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 380,
+      "function": "_validation_rest_view",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 5.7400000000000006e-05,
+      "cumulative_seconds": 0.056863300000000006
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 361,
+      "function": "<genexpr>",
+      "calls": 51900,
+      "primitive_calls": 51900,
+      "self_seconds": 0.034974700000000004,
+      "cumulative_seconds": 0.0542991
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\__init__.py",
+      "line": 304,
+      "function": "loads",
+      "calls": 39,
+      "primitive_calls": 39,
+      "self_seconds": 9.33e-05,
+      "cumulative_seconds": 0.050234400000000005
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\decoder.py",
+      "line": 340,
+      "function": "decode",
+      "calls": 39,
+      "primitive_calls": 39,
+      "self_seconds": 0.0001461,
+      "cumulative_seconds": 0.050114900000000004
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\decoder.py",
+      "line": 351,
+      "function": "raw_decode",
+      "calls": 39,
+      "primitive_calls": 39,
+      "self_seconds": 0.0497852,
+      "cumulative_seconds": 0.0497852
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 124,
+      "function": "desired_vertex",
+      "calls": 382,
+      "primitive_calls": 382,
+      "self_seconds": 0.002805,
+      "cumulative_seconds": 0.048777900000000006
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 327,
+      "function": "_same_rest_bone",
+      "calls": 1038,
+      "primitive_calls": 1038,
+      "self_seconds": 0.0055978,
+      "cumulative_seconds": 0.0405478
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.max>",
+      "calls": 1090,
+      "primitive_calls": 1090,
+      "self_seconds": 0.0037436,
+      "cumulative_seconds": 0.028834400000000003
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\__init__.py",
+      "line": 185,
+      "function": "dumps",
+      "calls": 2,
+      "primitive_calls": 2,
+      "self_seconds": 1.93e-05,
+      "cumulative_seconds": 0.028065800000000002
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\encoder.py",
+      "line": 185,
+      "function": "encode",
+      "calls": 2,
+      "primitive_calls": 2,
+      "self_seconds": 2.5600000000000002e-05,
+      "cumulative_seconds": 0.0280414
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\encoder.py",
+      "line": 207,
+      "function": "iterencode",
+      "calls": 2,
+      "primitive_calls": 2,
+      "self_seconds": 0.0280045,
+      "cumulative_seconds": 0.0280045
+    }
+  ],
+  "top_self": [
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 52,
+      "function": "_decode",
+      "calls": 101689,
+      "primitive_calls": 4,
+      "self_seconds": 0.11766860000000001,
+      "cumulative_seconds": 0.17451090000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "calls": 415501,
+      "primitive_calls": 415501,
+      "self_seconds": 0.0674945,
+      "cumulative_seconds": 0.0687956
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\decoder.py",
+      "line": 351,
+      "function": "raw_decode",
+      "calls": 39,
+      "primitive_calls": 39,
+      "self_seconds": 0.0497852,
+      "cumulative_seconds": 0.0497852
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 518,
+      "function": "_encoded_reference_keys",
+      "calls": 39316,
+      "primitive_calls": 1,
+      "self_seconds": 0.0396653,
+      "cumulative_seconds": 0.0677218
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 361,
+      "function": "<genexpr>",
+      "calls": 51900,
+      "primitive_calls": 51900,
+      "self_seconds": 0.034974700000000004,
+      "cumulative_seconds": 0.0542991
+    },
+    {
+      "file": "D:\\Blender5.2\\5.2\\python\\Lib\\json\\encoder.py",
+      "line": 207,
+      "function": "iterencode",
+      "calls": 2,
+      "primitive_calls": 2,
+      "self_seconds": 0.0280045,
+      "cumulative_seconds": 0.0280045
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _hashlib.openssl_sha256>",
+      "calls": 3,
+      "primitive_calls": 3,
+      "self_seconds": 0.025473100000000002,
+      "cumulative_seconds": 0.025473100000000002
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 340,
+      "function": "_rest_state",
+      "calls": 6,
+      "primitive_calls": 6,
+      "self_seconds": 0.023838400000000003,
+      "cumulative_seconds": 0.027362300000000003
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 336,
+      "function": "<genexpr>",
+      "calls": 17646,
+      "primitive_calls": 17646,
+      "self_seconds": 0.022393700000000002,
+      "cumulative_seconds": 0.0245841
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'user_map' of 'BlendData' objects>",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.021203600000000003,
+      "cumulative_seconds": 0.021203600000000003
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method math.isfinite>",
+      "calls": 126902,
+      "primitive_calls": 126902,
+      "self_seconds": 0.0179757,
+      "cumulative_seconds": 0.0179757
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 350,
+      "function": "_matches_rest_state",
+      "calls": 6,
+      "primitive_calls": 6,
+      "self_seconds": 0.017863200000000003,
+      "cumulative_seconds": 0.11411080000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.any>",
+      "calls": 8107,
+      "primitive_calls": 8107,
+      "self_seconds": 0.0132253,
+      "cumulative_seconds": 0.07775030000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.sum>",
+      "calls": 14104,
+      "primitive_calls": 14104,
+      "self_seconds": 0.0123113,
+      "cumulative_seconds": 0.0233925
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 24,
+      "function": "<genexpr>",
+      "calls": 21928,
+      "primitive_calls": 21928,
+      "self_seconds": 0.011978,
+      "cumulative_seconds": 0.0184624
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 107,
+      "function": "<genexpr>",
+      "calls": 35456,
+      "primitive_calls": 35456,
+      "self_seconds": 0.0099302,
+      "cumulative_seconds": 0.0099302
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 524,
+      "function": "<genexpr>",
+      "calls": 30401,
+      "primitive_calls": 8876,
+      "self_seconds": 0.009356600000000001,
+      "cumulative_seconds": 0.058088900000000006
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "line": 453,
+      "function": "_calculate_records",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.008968700000000001,
+      "cumulative_seconds": 0.11126860000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.abs>",
+      "calls": 64972,
+      "primitive_calls": 64972,
+      "self_seconds": 0.008623800000000001,
+      "cumulative_seconds": 0.008623800000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.getattr>",
+      "calls": 23022,
+      "primitive_calls": 23022,
+      "self_seconds": 0.0063847,
+      "cumulative_seconds": 0.0063847
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 522,
+      "function": "<genexpr>",
+      "calls": 16325,
+      "primitive_calls": 13,
+      "self_seconds": 0.0056575,
+      "cumulative_seconds": 0.0676948
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 327,
+      "function": "_same_rest_bone",
+      "calls": 1038,
+      "primitive_calls": 1038,
+      "self_seconds": 0.0055978,
+      "cumulative_seconds": 0.0405478
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "line": 356,
+      "function": "_prove_motion_data",
+      "calls": 3,
+      "primitive_calls": 3,
+      "self_seconds": 0.0055427,
+      "cumulative_seconds": 0.16282490000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'items' of 'dict' objects>",
+      "calls": 22873,
+      "primitive_calls": 22873,
+      "self_seconds": 0.0053016,
+      "cumulative_seconds": 0.0053016
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.all>",
+      "calls": 3140,
+      "primitive_calls": 3116,
+      "self_seconds": 0.0051045000000000005,
+      "cumulative_seconds": 0.024177900000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'get' of 'bpy_struct' objects>",
+      "calls": 6006,
+      "primitive_calls": 6006,
+      "self_seconds": 0.004466400000000001,
+      "cumulative_seconds": 0.004466400000000001
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 83,
+      "function": "_weights",
+      "calls": 1146,
+      "primitive_calls": 1146,
+      "self_seconds": 0.0043622,
+      "cumulative_seconds": 0.0064299000000000005
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'foreach_get' of 'bpy_prop_collection' objects>",
+      "calls": 10,
+      "primitive_calls": 10,
+      "self_seconds": 0.0041706,
+      "cumulative_seconds": 0.0041706
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 110,
+      "function": "<genexpr>",
+      "calls": 12988,
+      "primitive_calls": 12988,
+      "self_seconds": 0.0038757,
+      "cumulative_seconds": 0.0038757
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 102,
+      "function": "blended_matrix",
+      "calls": 764,
+      "primitive_calls": 764,
+      "self_seconds": 0.0038638,
+      "cumulative_seconds": 0.06644810000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.max>",
+      "calls": 1090,
+      "primitive_calls": 1090,
+      "self_seconds": 0.0037436,
+      "cumulative_seconds": 0.028834400000000003
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "line": 302,
+      "function": "_weights",
+      "calls": 1,
+      "primitive_calls": 1,
+      "self_seconds": 0.0036335,
+      "cumulative_seconds": 0.0039571
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "line": 124,
+      "function": "desired_vertex",
+      "calls": 382,
+      "primitive_calls": 382,
+      "self_seconds": 0.002805,
+      "cumulative_seconds": 0.048777900000000006
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.len>",
+      "calls": 15088,
+      "primitive_calls": 15088,
+      "self_seconds": 0.0026877000000000003,
+      "cumulative_seconds": 0.0026877000000000003
+    },
+    {
+      "file": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "line": 331,
+      "function": "<genexpr>",
+      "calls": 6228,
+      "primitive_calls": 6228,
+      "self_seconds": 0.0026077,
+      "cumulative_seconds": 0.0053515
+    }
+  ],
+  "limit": "Instrumented background frame; profiling overhead excluded from prior warm sample timings.",
+  "no_scene_save": true
+}

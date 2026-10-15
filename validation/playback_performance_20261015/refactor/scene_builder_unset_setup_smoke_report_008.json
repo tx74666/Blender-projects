@@ -1,0 +1,63 @@
+{
+  "schema": "x.unset-setup-scene-copy-smoke/1",
+  "completed": true,
+  "no_blend_open_or_save": true,
+  "no_gui": true,
+  "performance_acceptance": false,
+  "scope": "Raw source properties before/after private Scene copy and owned cleanup; no Setup getter is called by this probe. No geometry or FPS acceptance.",
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_unset_setup_smoke_008.py",
+    "sha256": "ad0b69e04aa992d5a3a151c7a7a4caa238600c96b153c4bd0b40e2dfb66945d6",
+    "bytes": 6056
+  },
+  "source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\source_manifest.json",
+    "sha256": "5c7965ef74e99ed8036bc57ad639cb4db37e6501bb580483a676d4b2fd6cc3c0",
+    "bytes": 25604
+  },
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "a2fb4026c1ce544825c940e7958a60a3b7980b6c1fda2e302035a30c13934728",
+    "bytes": 34846488
+  },
+  "witness_dependencies": {
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    },
+    "native_validation_support_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py",
+      "sha256": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+      "bytes": 1939
+    }
+  },
+  "blender": "5.2.0 LTS",
+  "version": [
+    0,
+    77,
+    41
+  ],
+  "after_build": {
+    "properties_exact": true,
+    "source_setup_remains_unset": true,
+    "changed_components": []
+  },
+  "after_close": {
+    "properties_exact": true,
+    "source_setup_remains_unset": true
+  },
+  "cleanup": {
+    "errors": [],
+    "all_owned_ids_removed": true,
+    "handlers_restored_exact": true
+  },
+  "artist_disk_unchanged": true,
+  "staged_sources_unchanged": true,
+  "witness_dependencies_unchanged": true
+}

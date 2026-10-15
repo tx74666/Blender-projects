@@ -1,0 +1,34 @@
+{
+  "schema": "x.protected-refresh-v2-source-checks/1",
+  "date_local": "2026-10-15",
+  "source_only": true,
+  "failed_source_preserved": {
+    "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/round4/protected_refresh_07741.py",
+    "sha256": "0ce167ce3448f6e48140601dda54c4704589fa574bc65ddaaa1e83a0520a460d",
+    "receipt": "refresh_07741_20261014T183306Z_baefd478ddcf/refresh_receipt.json"
+  },
+  "source_pins": {
+    "protected_refresh_07741_v2.py": "88b75d97b40140dc8addfeac9351555f7147e46f939bbf9244fc177d950b2677",
+    "install_refresh_07741_v2.py": "ab8b6ec1a0936d57811a59975182696cff592d735786f0bfc1a24b91604b7e8a",
+    "final_save_07741_v2.py": "8559bb5444601d89b8eacfb7659361016582e3488830df2374896a7a504700eb",
+    "install_final_save_07741_v2.py": "b282b7340e5565881c7b07fce8149c4bd3572167553bd169c5c8ff73c0d5da10"
+  },
+  "change_scope": "Only exact unsupported native IDProperties representation; all authored RNA remains independently captured. Separate v2 namespaces, source paths and pins; final-save whitelist adds id_properties.",
+  "pure_checks": {
+    "four_AST_compile_checks_passed": true,
+    "supported_properties_retained": true,
+    "exact_observed_unsupported_TypeError_is_typed": true,
+    "unrelated_TypeError_ValueError_RuntimeError_propagate": true,
+    "missing_items_method_AttributeError_propagates": true,
+    "all_three_source_pin_dependencies_match": true,
+    "final_save_capture_whitelist_compiles_and_contains_id_properties": true,
+    "independent_static_review_passed": true
+  },
+  "native_execution_performed": false,
+  "artist_scene_modified_by_source_checks": false,
+  "canonical_or_deployment_modified_by_this_fix": false,
+  "limits": [
+    "Future native receipt still required for full-content preservation, natural refresh and save acceptance.",
+    "No blanket error suppression, no silent empty custom-property dictionary, no solver/reacquire fallback or scene rollback."
+  ]
+}

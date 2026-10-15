@@ -1,0 +1,57 @@
+00:03.391  blend            | Read blend: "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend"
+00:15.406  bpy.rna          | WARNING current value '4' matches no enum in 'EnumProperty', 'denoiser', 'default'
+00:15.406  bpy.rna          | WARNING current value '4' matches no enum in 'EnumProperty', 'denoiser', 'default'
+00:15.406  bpy.rna          | WARNING current value '0' matches no enum in 'EnumProperty', 'preview_denoiser', 'default'
+00:15.406  bpy.rna          | WARNING current value '0' matches no enum in 'EnumProperty', 'preview_denoiser', 'default'
+00:15.406  bpy.rna          | WARNING current value '5' matches no enum in 'EnumProperty', 'sampling_pattern', 'default'
+00:15.406  bpy.rna          | WARNING current value '5' matches no enum in 'EnumProperty', 'sampling_pattern', 'default'
+00:21.781  bpy.rna          | WARNING current value '4' matches no enum in 'EnumProperty', 'denoiser', 'default'
+00:21.781  bpy.rna          | WARNING current value '4' matches no enum in 'EnumProperty', 'denoiser', 'default'
+00:21.781  bpy.rna          | WARNING current value '0' matches no enum in 'EnumProperty', 'preview_denoiser', 'default'
+00:21.781  bpy.rna          | WARNING current value '0' matches no enum in 'EnumProperty', 'preview_denoiser', 'default'
+00:21.781  bpy.rna          | WARNING current value '5' matches no enum in 'EnumProperty', 'sampling_pattern', 'default'
+00:21.781  bpy.rna          | WARNING current value '5' matches no enum in 'EnumProperty', 'sampling_pattern', 'default'
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v6.py", line 214, in rna
+    result["properties"][name] = self.value(observed, path + "." + name)
+                                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v6.py", line 151, in value
+    return self.rna(value, path)
+           ~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v6.py", line 181, in rna
+    raw_before = self.raw(value, path + ".custom")
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v6.py", line 161, in raw
+    items = owner.items()
+TypeError: 'bpy_prop_collection_idprop' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\private_playback_native_runner_v7.py", line 389, in main
+    initial_props = witness.source_property_witness(source_scene)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_validation_support_v6.py", line 34, in source_property_witness
+    extension = registered_source_witness(scene, _original)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v6.py", line 313, in registered_source_witness
+    state = reader.rna(owner, path, properties)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v6.py", line 219, in rna
+    raise SourceReferenceWitnessError("Cannot read source RNA " + path + "." + name) from error
+native_source_reference_witness_v6.SourceReferenceWitnessError: Cannot read source RNA Scene:Scene.character_designer_animation_worklist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\private_playback_native_runner_v7.py", line 530, in <module>
+    main(args, report)
+    ~~~~^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\private_playback_native_runner_v7.py", line 504, in main
+    raise RuntimeError("Owned cleanup did not complete")
+RuntimeError: Owned cleanup did not complete
+Info: Read library: 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\5f771ad1e0644d199cba30b6afd1ad0a.blend', 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\5f771ad1e0644d199cba30b6afd1ad0a.blend', parent '<direct>'
+Info: Read library: 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\8069c6d729ea43e1888db9fd07b9d6da.blend', 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\8069c6d729ea43e1888db9fd07b9d6da.blend', parent '<direct>'
+
+Error: script failed, file: 'D:/Blender/Projects/Character/X/validation/playback_performance_20261015/refactor/private_playback_native_runner_v7.py', exiting.
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+scripts disabled for "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend", skipping 'rig.001_ui.py'
+scripts disabled for "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend", skipping 'rig.001_ui.py.003'
+
+Blender quit

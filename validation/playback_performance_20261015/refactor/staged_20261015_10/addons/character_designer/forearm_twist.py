@@ -1,0 +1,2077 @@
+"""Local, artist-calibrated forearm twist through an owned inverse-skinning key.
+
+The Armature remains the only skinning modifier.  Each update starts from the
+current non-owned relative-key mix, never from last frame's corrective output.
+Version one deliberately supports an ordinary LBS Armature first in the stack.
+"""
+
+import hashlib
+import json
+import math
+import traceback
+import copy
+from array import array
+from contextlib import contextmanager
+
+import bpy
+from bpy.app.handlers import persistent
+from bpy.props import BoolProperty, EnumProperty, FloatProperty, IntProperty
+from bpy.types import Operator, Panel, PropertyGroup
+from mathutils import Matrix, Vector
+
+from . import limb_ik
+from . import forearm_original_inventory
+from .forearm_twist_math import corrected_vertex, profile_ratio, twist_angle
+from .forearm_twist_topology import (detect_rings, selected_loop, expand_rings, capture_loop,
+                                    support_topology_digest)
+from . import forearm_twist_profile as profile
+from . import forearm_twist_edit as editor
+from . import forearm_twist_cache as validation_cache
+from .forearm_twist_symmetry import mirror_ring_pairs
+from .ui_constants import SIDEBAR_CATEGORY, rig_page_active
+
+RECORD_KEY = "character_designer_forearm_twist_v1"
+PREVIEW_KEY = "character_designer_forearm_twist_preview_v1"
+LOCK_KEY = "character_designer_twist_render_lock"
+KEY_PREFIX = "CD Forearm Twist."
+MAX_ANGLE = math.radians(120.0)
+_SESSION = None
+_BUSY = False
+_UI_BUSY = False
+_CACHE = {}
+_OUTPUT_CACHE = {}
+_KEY_REFERENCES = {}
+_ERRORS = {}
+_DRAW_HANDLE = None
+_RUNTIME_REGISTERED = False
+_INITIALIZE_PENDING = False
+_SCENE_CLEANUP_PENDING = False
+_SCENE_STATE_ACTIVE = False
+
+
+class ForearmTwistError(ValueError):
+    pass
+
+
+class ForearmTwistPoseRangeError(ForearmTwistError):
+    """Valid calibration whose current pose cannot produce a correction."""
+
+
+class ForearmTwistRecaptureRequired(ForearmTwistError):
+    """A Setup preview can repair this record without removing its owned key."""
+    pass
+
+
+def _records(obj):
+    value = obj.get(RECORD_KEY, "")
+    if not value:
+        return {}
+    records = json.loads(value)
+    if not isinstance(records, dict):
+        raise ForearmTwistError("Forearm calibration data is invalid.")
+    return records
+
+
+def _write_records(obj, records):
+    if records:
+        obj[RECORD_KEY] = json.dumps(records, separators=(",", ":"), sort_keys=True)
+    elif RECORD_KEY in obj:
+        del obj[RECORD_KEY]
+    _CACHE.pop(obj.as_pointer(), None)
+    _OUTPUT_CACHE.pop(obj.as_pointer(), None)
+
+
+def _new_key_name(obj, side, records):
+    """Reserve a new output name without claiming existing, unrecorded keys."""
+    base = KEY_PREFIX + side
+    occupied = set(obj.data.shape_keys.key_blocks.keys()) if obj.data.shape_keys else set()
+    occupied.update(record['key'] for record in records.values())
+    name, index = base, 0
+    while name in occupied:
+        index += 1
+        name = f'{base}.{index:03d}'
+    return name
+
+
+def _new_output_key(obj, record):
+    """Create only our output; failed initialization also rolls back a new Basis."""
+    global _BUSY
+    key = basis = None
+    old_index = obj.active_shape_key_index
+    previous_busy = _BUSY
+    _BUSY = True
+    try:
+        if obj.data.shape_keys is None:
+            basis = obj.shape_key_add(name='Basis', from_mix=False)
+        key = obj.shape_key_add(name=record['key'], from_mix=False)
+        record['key'] = key.name
+        key.relative_key = obj.data.shape_keys.reference_key
+        key.value = 1.0
+        return key
+    except Exception:
+        if key is not None:
+            obj.shape_key_remove(key)
+        if basis is not None and obj.data.shape_keys and len(obj.data.shape_keys.key_blocks) == 1:
+            obj.shape_key_remove(basis)
+        raise
+    finally:
+        obj.active_shape_key_index = old_index
+        _BUSY = previous_busy
+
+
+def _preview_key_name(obj, marker):
+    """Legacy markers need the saved record as proof, never a guessed prefix."""
+    name = marker.get('key')
+    if not name:
+        name = _records(obj).get(marker['side'], {}).get('key')
+    if not isinstance(name, str) or not name:
+        raise ForearmTwistError('Preview key ownership is missing; existing Shape Keys were kept unchanged.')
+    return name
+
+
+def _managed_key(obj, side, record, *, required=True, repair_name=True):
+    """Resolve the owned key without mistaking a renamed key for deleted data.
+
+    RNA references survive ordinary renames while this runtime is loaded. They
+    are deliberately discarded across file load and undo, and validated against
+    the current Key datablock and its membership before being reused.
+    """
+    if not isinstance(record, dict) or not isinstance(record.get("key"), str):
+        if required:
+            raise ForearmTwistError("Forearm calibration data is invalid.")
+        return None
+    identity = (obj.as_pointer(), side)
+    keys = obj.data.shape_keys
+    cached = _KEY_REFERENCES.get(identity)
+    if cached is not None:
+        try:
+            valid = (keys is not None and cached.id_data.as_pointer() == keys.as_pointer()
+                     and any(key.as_pointer() == cached.as_pointer() for key in keys.key_blocks))
+        except (ReferenceError, AttributeError):
+            valid = False
+        if not valid:
+            _KEY_REFERENCES.pop(identity, None)
+            cached = None
+    expected = record["key"]
+    named = keys.key_blocks.get(expected) if keys is not None else None
+    if cached is not None:
+        if not repair_name:
+            return cached
+        if named is not None and named.as_pointer() != cached.as_pointer():
+            raise ForearmTwistError(f"Another Shape Key uses '{expected}'. Rename that other key, then retry.")
+        if cached.name != expected:
+            cached.name = expected
+        return cached
+    if named is not None:
+        _KEY_REFERENCES[identity] = named
+        return named
+    if required:
+        raise ForearmTwistError(
+            f"Managed Shape Key '{expected}' is missing or renamed. Undo its removal or restore that exact name before continuing or removing calibration.")
+    return None
+
+
+def _remember_named_keys():
+    # File evaluation may finish before load_post clears the old references.
+    # Remember the now-live, correctly named keys even when no new graph event
+    # occurs before the artist next edits a key name.
+    for obj in bpy.data.objects:
+        if obj.type != "MESH" or RECORD_KEY not in obj:
+            continue
+        try:
+            for side, record in _records(obj).items():
+                _managed_key(obj, side, record, required=False)
+        except (ForearmTwistError, ValueError, TypeError, AttributeError):
+            continue
+
+
+def _topology(mesh):
+    return validation_cache.topology_digest(mesh, _topology_digest)
+
+
+def _topology_digest(mesh):
+    return hashlib.sha256(repr((len(mesh.vertices), tuple(tuple(e.vertices) for e in mesh.edges),
+                               tuple(tuple(p.vertices) for p in mesh.polygons))).encode()).hexdigest()
+
+
+def _support_topology(mesh, vertices):
+    try:
+        digest = validation_cache.support_topology_digest(mesh, vertices, support_topology_digest)
+    except (ValueError, TypeError, IndexError) as exc:
+        raise ForearmTwistRecaptureRequired(str(exc)) from exc
+    return {"version": 1, "vertices": list(vertices), "digest": digest}
+
+
+def _current_topology_record(mesh, record, *, topology=None):
+    """Prepare a conservative topology migration without writing mesh or keys.
+
+    Old records gain a scoped proof only while their original full hash still
+    matches. Once stale, missing proof cannot be reconstructed from today's
+    mesh. New records can accept an unrelated edit only when the saved support
+    IDs and every incident edge/face remain exact.
+    """
+    topology = _topology(mesh) if topology is None else topology
+    saved = record.get("support_topology")
+    if saved is None and record["topology"] != topology:
+        raise ForearmTwistRecaptureRequired(
+            "Mesh topology changed before this calibration had a local proof; use Forearm Twist Setup to recapture its loops.")
+    current = _support_topology(mesh, record["vertices"])
+    if saved is not None and (not isinstance(saved, dict)
+            or type(saved.get("version")) is not int or saved.get("version") != 1
+            or not isinstance(saved.get("vertices"), list)
+            or any(type(index) is not int for index in saved["vertices"])
+            or saved != current):
+        raise ForearmTwistRecaptureRequired(
+            "Mesh topology changed in the captured forearm support; use Forearm Twist Setup to recapture its loops.")
+    fresh = dict(record)
+    fresh["support_topology"] = current
+    fresh["topology"] = topology
+    return fresh
+
+
+def _rest_signature(armature, names):
+    return [[name, list(v for row in armature.data.bones[name].matrix_local for v in row)] for name in names]
+
+
+def _check_mesh(obj):
+    if obj is None or obj.type != "MESH":
+        raise ForearmTwistError("Select the character's bound body Mesh in Object Mode.")
+    if obj.library or obj.data.library or obj.override_library or obj.data.users != 1:
+        raise ForearmTwistError("Use a local Mesh with single-user data.")
+    if not obj.modifiers or obj.modifiers[0].type != "ARMATURE":
+        raise ForearmTwistError("This prototype needs Armature first in the modifier stack (no preceding Mirror).")
+    mod = obj.modifiers[0]
+    if sum(m.type == "ARMATURE" for m in obj.modifiers) != 1 or mod.object is None:
+        raise ForearmTwistError("Use exactly one Armature modifier with a rig assigned.")
+    if (mod.use_deform_preserve_volume or mod.use_bone_envelopes or mod.use_multi_modifier
+            or not mod.use_vertex_groups or mod.vertex_group):
+        raise ForearmTwistError("Use ordinary Vertex Groups skinning: Preserve Volume, envelopes, Multi Modifier and mask off.")
+    if not mod.show_viewport or not mod.show_render:
+        raise ForearmTwistError("The Armature must be enabled in the viewport and render.")
+    if obj.data.shape_keys and not obj.data.shape_keys.use_relative:
+        raise ForearmTwistError("This prototype supports relative Shape Keys only.")
+    if obj.show_only_shape_key:
+        raise ForearmTwistError("Turn off Shape Key pinning before calibrating.")
+    return mod.object
+
+
+def _resolve_rig(obj, side, *, _inventory=None):
+    armature = _check_mesh(obj)
+    inventory = forearm_original_inventory.validate(armature) if _inventory is None else _inventory
+    rig = inventory["rigs"].get(("ARM", side))
+    if rig is None:
+        detected = limb_ik.analyze_armature(armature)["limbs"]["ARM"][side]
+        if detected["status"] not in {"READY", "WARNING"}:
+            raise ForearmTwistError("Could not identify a unique upper-arm / forearm / hand chain.")
+        chain = [detected[role] for role in ("upper", "lower", "end")]
+        hand = armature.pose.bones[chain[2]]
+        if any(not constraint.mute and constraint.influence > 0 for constraint in hand.constraints):
+            raise ForearmTwistError("The Hand is driven by another rig; use a Character Designer Hand Target or an unconstrained hand bone.")
+        return armature, {"chain": chain, "target": hand.bone, "fk_source": True}
+    if inventory["target_rotation_version"] != limb_ik.TARGET_ROTATION_VERSION:
+        raise ForearmTwistError("Rebuild Rig once to enable aligned Hand Target rotation.")
+    from . import body_original_mode, limb_ik_fk
+    original = body_original_mode.active(armature)
+    if original or limb_ik_fk.mode_for_rig(armature, rig) == 'FK':
+        # Both Original and native FK drive the hand directly. The generated
+        # target is hidden/inactive and cannot pose this hand for calibration.
+        hand = armature.pose.bones[rig['chain'][2]]
+        if any(not constraint.mute and constraint.influence > 0 for constraint in hand.constraints):
+            raise ForearmTwistError('The native hand is driven by another constraint; preserve that dependency before calibrating.')
+        return armature, {**rig, 'target': hand.bone, 'fk_source': True,
+                          'native_source': True, 'original_source': original}
+    return armature, rig
+
+
+def _preview_pose_locked(armature, target, rig):
+    if not (rig.get('native_source') or rig.get('original_source')):
+        return (limb_ik._target_transform_has_driver(armature, target.name) or
+                limb_ik._target_transform_has_keyed_animation(armature, target.name))
+    # Owned hand constraints may be suspended or have zero FK influence. Their
+    # influence drivers mention this bone but do not drive its native inputs.
+    # Actual transform animation must still make the trial read-only.
+    paths = {target.path_from_id(field) for field in
+             ('location', 'rotation_euler', 'rotation_quaternion',
+              'rotation_axis_angle', 'rotation_mode', 'scale')}
+    animation = armature.animation_data
+    return (any(curve.data_path in paths for curve in getattr(animation, 'drivers', ())) or
+            any(curve.data_path in paths for action in limb_ik._actions_for_id(armature)
+                for curve in limb_ik._fcurves_for_action(action)))
+
+
+def _weights(obj, armature, indices):
+    names = {group.index: group.name for group in obj.vertex_groups
+             if group.name in armature.data.bones and armature.data.bones[group.name].use_deform}
+    result = {}
+    for index in indices:
+        values = {names[g.group]: float(g.weight) for g in obj.data.vertices[index].groups
+                  if g.group in names and g.weight > 0.0}
+        total = sum(values.values())
+        result[index] = {name: value / total for name, value in values.items()} if total else {}
+    for name in {name for values in result.values() for name in values}:
+        if armature.data.bones[name].bbone_segments != 1:
+            raise ForearmTwistError("Bendy Bone segments are not supported by this prototype.")
+    return result
+
+
+def controller_status(armature, target_name):
+    """Report the actual mesh route without changing the hand's input channel."""
+    matching = []
+    for obj in bpy.context.scene.objects:
+        if obj.type != "MESH" or RECORD_KEY not in obj:
+            continue
+        if not any(m.type == "ARMATURE" and m.object == armature for m in obj.modifiers):
+            continue
+        try:
+            for side, record in _records(obj).items():
+                # Resolve current controllers, including a rig built after FK
+                # calibration; the deformation route depends on the chain.
+                _arm, rig = _resolve_rig(obj, side)
+                if rig["target"].name == target_name:
+                    matching.append((obj, record))
+        except (ValueError, KeyError, TypeError):
+            return False, "Forearm Twist: check body calibration"
+    if not matching:
+        return False, "Forearm Twist: not calibrated"
+    if any(record.get("enabled", True) and obj.name in _ERRORS for obj, record in matching):
+        return False, "Forearm Twist paused: check body panel"
+    active = sum(record.get("enabled", True) for _obj, record in matching)
+    if active == len(matching):
+        return True, "Forearm Twist controls sleeve rotation"
+    if active:
+        return False, "Forearm Twist: some meshes disabled"
+    return False, "Forearm Twist disabled: original skinning"
+
+
+def _input_mix(obj, indices, owned_names, depsgraph):
+    keys = obj.data.shape_keys
+    basis = keys.reference_key
+    result = {i: basis.data[i].co.copy() for i in indices}
+    evaluated_keys = keys.evaluated_get(depsgraph)
+    for key in keys.key_blocks:
+        if key == basis or key.name in owned_names or key.mute:
+            continue
+        evaluated_key = evaluated_keys.key_blocks.get(key.name)
+        value = float(evaluated_key.value if evaluated_key is not None else key.value)
+        if abs(value) < 1.0e-12:
+            continue
+        mask = obj.vertex_groups.get(key.vertex_group) if key.vertex_group else None
+        for i in indices:
+            factor = value
+            if key.vertex_group:
+                factor *= next((g.weight for g in obj.data.vertices[i].groups
+                                if mask is not None and g.group == mask.index), 0.0)
+            result[i] += (key.data[i].co - key.relative_key.data[i].co) * factor
+    return result
+
+
+def _set_render_lock(scene):
+    active = False
+    for obj in scene.objects:
+        if obj.type != "MESH" or RECORD_KEY not in obj:
+            continue
+        try:
+            active |= any(r.get("enabled", True) for r in _records(obj).values())
+        except (ValueError, TypeError, AttributeError):
+            _ERRORS[obj.name] = "Forearm calibration data is invalid."
+    if active:
+        if LOCK_KEY not in scene:
+            scene[LOCK_KEY] = bool(scene.render.use_lock_interface)
+        scene.render.use_lock_interface = True
+    elif LOCK_KEY in scene:
+        scene.render.use_lock_interface = bool(scene[LOCK_KEY])
+        del scene[LOCK_KEY]
+
+
+def _calculate_object(obj, depsgraph):
+    # Preparation and correction write only our keys/records, never topology.
+    with validation_cache.read_scope():
+        records = _prepare_runtime_records(obj)
+        if records != _records(obj):
+            _apply_runtime_records(obj, records, depsgraph)
+        else:
+            _calculate_records(obj, depsgraph)
+
+
+def _target_only_change(before, after):
+    return (set(before) == set(after)
+            and all(set(before[side]) == set(after[side])
+                    and {k: v for k, v in before[side].items() if k != "target"}
+                    == {k: v for k, v in after[side].items() if k != "target"}
+                    for side in before))
+
+
+def _apply_runtime_records(obj, records, depsgraph):
+    """Keep a validated target link when only the current pose is unsupported."""
+    old_json = obj.get(RECORD_KEY)
+    old_index = obj.active_shape_key_index
+    snapshots, added = [], []
+    old_records = _records(obj)
+    old_references = {identity: key for identity, key in _KEY_REFERENCES.items()
+                      if identity[0] == obj.as_pointer()}
+    for side, record in old_records.items():
+        key = _managed_key(obj, side, record)
+        coords = array("f", [0.0]) * (3 * len(key.data))
+        key.data.foreach_get("co", coords)
+        snapshots.append((key, coords, key.value, key.mute))
+    try:
+        for side, record in records.items():
+            if side not in old_records:
+                key = _new_output_key(obj, record)
+                added.append(key)
+                key.mute = True
+                _KEY_REFERENCES[(obj.as_pointer(), side)] = key
+        _write_records(obj, records)
+        _calculate_records(obj, depsgraph)
+    except Exception as exc:
+        for key in added:
+            obj.shape_key_remove(key)
+        for key, coords, value, mute in snapshots:
+            key.data.foreach_set("co", coords)
+            key.value, key.mute = value, mute
+        keep_target = (isinstance(exc, ForearmTwistPoseRangeError) and not added
+                       and _target_only_change(old_records, records))
+        if not keep_target:
+            if old_json is None:
+                obj.pop(RECORD_KEY, None)
+            else:
+                obj[RECORD_KEY] = old_json
+        for identity in tuple(_KEY_REFERENCES):
+            if identity[0] == obj.as_pointer():
+                _KEY_REFERENCES.pop(identity, None)
+        _KEY_REFERENCES.update(old_references)
+        _CACHE.pop(obj.as_pointer(), None)
+        _OUTPUT_CACHE.pop(obj.as_pointer(), None)
+        if obj.data.shape_keys:
+            obj.data.shape_keys.update_tag()
+        obj.data.update()
+        raise
+    finally:
+        obj.active_shape_key_index = old_index
+
+
+def _calculate_records(obj, depsgraph):
+    records = _records(obj)
+    if not records:
+        return
+    keys = obj.data.shape_keys
+    if keys is None:
+        raise ForearmTwistError("The managed corrective Shape Key was removed; remove this calibration and start again.")
+    armature = _check_mesh(obj)
+    if obj.mode == "EDIT":
+        raise ForearmTwistError("Calibration pauses in Edit Mode; return to Object Mode to resume.")
+    topology = _topology(obj.data)
+    for side, record in tuple(records.items()):
+        if record["armature"] != armature.name:
+            raise ForearmTwistRecaptureRequired(
+                "Mesh topology or rig binding changed; use Forearm Twist Setup to recapture its loops.")
+        # Validate before indexing saved support IDs or touching any output.
+        records[side] = _current_topology_record(obj.data, record, topology=topology)
+    owned_names = {r["key"] for r in records.values()}
+    # The shape output is managed data. Validate its structure even when pose
+    # inputs have not changed, and repair value/mute after manual UI changes.
+    managed_state = []
+    managed_coordinates = []
+    for side, record in records.items():
+        key = _managed_key(obj, side, record)
+        if key is None or key.relative_key != keys.reference_key or key.vertex_group:
+            raise ForearmTwistError("The managed corrective key was renamed or changed; restore it or remove calibration.")
+        managed_state.append((key.name, float(key.value), bool(key.mute)))
+        coordinates = array("f", [0.0]) * (len(key.data) * 3)
+        key.data.foreach_get("co", coordinates)
+        managed_coordinates.append(coordinates.tobytes())
+    basis_coordinates = array("f", [0.0]) * (len(keys.reference_key.data) * 3)
+    keys.reference_key.data.foreach_get("co", basis_coordinates)
+    all_indices = sorted({i for r in records.values() for i in r["vertices"]})
+    base = _input_mix(obj, all_indices, owned_names, depsgraph)
+    weights = _weights(obj, armature, all_indices)
+    eval_arm = armature.evaluated_get(depsgraph)
+    eval_obj = obj.evaluated_get(depsgraph)
+    to_arm = eval_arm.matrix_world.inverted() @ eval_obj.matrix_world
+    from_arm = to_arm.inverted()
+    bone_names = {name for values in weights.values() for name in values}
+    bone_names.update(name for r in records.values() for name in r["chain"])
+    transforms = {name: eval_arm.pose.bones[name].matrix @ armature.data.bones[name].matrix_local.inverted()
+                  for name in bone_names}
+    signature = (obj[RECORD_KEY], topology, basis_coordinates.tobytes(), tuple(v for row in to_arm for v in row),
+                 tuple((n, tuple(v for row in mat for v in row)) for n, mat in sorted(transforms.items())),
+                 tuple((i, tuple(base[i]), tuple(sorted(weights[i].items()))) for i in all_indices))
+    expected_state = [(r["key"], 1.0, not r.get("enabled", True)) for r in records.values()]
+    if (_CACHE.get(obj.as_pointer()) == signature and managed_state == expected_state
+            and _OUTPUT_CACHE.get(obj.as_pointer()) == managed_coordinates):
+        return
+    # These are immutable values from this call's native deformation matrices,
+    # not a cross-frame validation cache. Reuse their rows during scalar LBS
+    # sums rather than constructing mathutils row wrappers for every vertex.
+    matrix_rows = {name: tuple(tuple(row) for row in matrix)
+                   for name, matrix in transforms.items()}
+    # Fixed inputs only within this call. Do not move the blended Matrix cache
+    # beside the persistent pose/output caches or reuse it across evaluations.
+    blend_cache = {}
+    outputs = []
+    outside_pose_range = False
+    for side, record in records.items():
+        key = _managed_key(obj, side, record)
+        if key is None or key.relative_key != keys.reference_key or key.vertex_group:
+            raise ForearmTwistError("The managed corrective key was renamed or changed; restore it or remove calibration.")
+        if record["rest"] != _rest_signature(armature, record["chain"]):
+            raise ForearmTwistError("The rig is changing; Forearm Twist will resume when its arm chain is ready.")
+        lower, hand = record["chain"][1:]
+        if not record.get("enabled", True):
+            outputs.append((key, False, []))
+            continue
+        lower_bone = armature.data.bones[lower]
+        axis = (lower_bone.tail_local - lower_bone.head_local).normalized()
+        pivot = armature.data.bones[hand].head_local
+        angle = twist_angle(transforms[lower], transforms[hand], axis)
+        knots = list(profile.profile_knots(record["rings"]))
+        bounded = "range_start" in record
+        if bounded:
+            first, last = profile.record_range(record)
+        else:
+            # Existing saved results retain their old support until explicitly edited.
+            knots = [(0.0, 0.0)] + [(p, r) for p, r in knots if 1.0e-6 < p < 1.0 - 1.0e-6] + [(1.0, 1.0)]
+        if record.get('distribution') == 'WRIST_CONTINUOUS':
+            sampler = profile.compile_sampler(record['rings'][first:last + 1])
+        elif bounded:
+            sampler = profile.compile_sampler(record['rings'], start=first, end=last,
+                                              transition=record.get('transition', .1))
+        else:
+            sampler = profile.compile_sampler([{'position': p, 'ratio': r} for p, r in knots])
+        if abs(angle) > MAX_ANGLE + 1.0e-5:
+            outside_pose_range = True
+            continue
+        output = []
+        for i, position in zip(record["vertices"], record["positions"]):
+            ratio, influence = sampler(position)
+            if record.get('distribution') == 'WRIST_CONTINUOUS' and position < record['rings'][first]['position']:
+                influence = 0.0
+            if influence == 0.0:
+                continue
+            point = to_arm @ base[i]
+            corrected = corrected_vertex(point, transforms, weights[i], lower, hand, axis, pivot, ratio,
+                                         angle=angle, _matrix_rows=matrix_rows,
+                                         _blend_cache=blend_cache)
+            output.append((i, keys.reference_key.data[i].co + influence * (from_arm @ corrected - base[i])))
+        outputs.append((key, record.get("enabled", True), output))
+    # Finish validating every active side before classifying this as only a
+    # pose-range failure. A later invalid profile/rest/output must still roll
+    # back the entire migration, including the derived target metadata.
+    if outside_pose_range:
+        raise ForearmTwistPoseRangeError("Forearm twist is outside the prototype's -120 to +120 degree range.")
+    # Commit only after every side has passed, so a failed inverse never leaves
+    # a half-written mesh.  All unselected coordinates remain their Basis.
+    for key, enabled, output in outputs:
+        key.value = 1.0
+        key.mute = not enabled
+        # Relative keys store full coordinate snapshots: copying Basis outside
+        # the sleeve is essential when the artist edits unrelated Basis points.
+        key.data.foreach_set("co", basis_coordinates)
+        for index, coordinate in output:
+            key.data[index].co = coordinate
+    keys.update_tag()
+    obj.data.update()
+    # Recopying a Key datablock during a render can replace its evaluated
+    # animated values with the original values. Re-evaluate its animation too,
+    # preserving other (e.g. facial) keys without writing to artist channels.
+    keys.update_tag(refresh={"TIME"})
+    _CACHE[obj.as_pointer()] = signature
+    _OUTPUT_CACHE[obj.as_pointer()] = []
+    for key, _enabled, _output in outputs:
+        coordinates = array("f", [0.0]) * (len(key.data) * 3)
+        key.data.foreach_get("co", coordinates)
+        _OUTPUT_CACHE[obj.as_pointer()].append(coordinates.tobytes())
+    _ERRORS.pop(obj.name, None)
+
+
+@contextmanager
+def defer_runtime(context, *, flush_on_exit=True):
+    """Refresh corrective keys once after a synchronous pose transaction.
+
+    Intermediate dependency-graph callbacks must not validate or publish keys
+    for the temporary constraint/channel states of a pose transfer. Nesting
+    preserves the caller's guard. The yielded refresh callback lets a caller
+    with its own rollback transaction publish output inside that transaction;
+    otherwise the outermost scope refreshes its final pose on exit.
+    """
+    global _BUSY
+    previous_busy = _BUSY
+    _BUSY = True
+    def refresh():
+        global _BUSY
+        if previous_busy:
+            return
+        _BUSY = False
+        try:
+            update_runtime(context.scene)
+        finally:
+            _BUSY = True
+    try:
+        yield refresh
+    finally:
+        _BUSY = previous_busy
+        if flush_on_exit and not previous_busy:
+            update_runtime(context.scene)
+
+
+def update_runtime(scene, depsgraph=None):
+    global _BUSY
+    if _BUSY:
+        return
+    _BUSY = True
+    try:
+        depsgraph = depsgraph or bpy.context.evaluated_depsgraph_get()
+        for obj in scene.objects:
+            if obj.type != "MESH" or RECORD_KEY not in obj:
+                continue
+            try:
+                _calculate_object(obj, depsgraph)
+            except Exception as exc:
+                _ERRORS[obj.name] = str(exc)
+                _CACHE.pop(obj.as_pointer(), None)
+                # Invalid inputs fall back to the original skinning, never a
+                # stale correction from a different pose.
+                if obj.data.shape_keys:
+                    try:
+                        failed_records = _records(obj)
+                    except (ValueError, TypeError, AttributeError):
+                        failed_records = {}
+                    for side, record in failed_records.items():
+                        key = _managed_key(obj, side, record, required=False, repair_name=False)
+                        if key is not None and not key.mute:
+                            key.mute = True
+    finally:
+        _BUSY = False
+
+
+@persistent
+def _graph_post(scene, depsgraph):
+    if _INITIALIZE_PENDING or _SCENE_CLEANUP_PENDING:
+        _complete_runtime_lifecycle()
+    update_runtime(scene, depsgraph)
+
+
+@persistent
+def _frame_post(scene, depsgraph=None):
+    if _INITIALIZE_PENDING or _SCENE_CLEANUP_PENDING:
+        _complete_runtime_lifecycle()
+    update_runtime(scene, depsgraph)
+
+
+@persistent
+def _load_post(_dummy):
+    global _SESSION
+    _SESSION = None
+    if _INITIALIZE_PENDING or _SCENE_CLEANUP_PENDING:
+        _complete_runtime_lifecycle()
+    _CACHE.clear()
+    validation_cache.clear()
+    _OUTPUT_CACHE.clear()
+    _KEY_REFERENCES.clear()
+    _ERRORS.clear()
+    _recover_previews()
+    _remember_named_keys()
+    for scene in bpy.data.scenes:
+        _set_render_lock(scene)
+    update_runtime(bpy.context.scene)
+
+
+@persistent
+def _undo_post(_dummy):
+    if _INITIALIZE_PENDING or _SCENE_CLEANUP_PENDING:
+        _complete_runtime_lifecycle()
+    _CACHE.clear()
+    validation_cache.clear()
+    _OUTPUT_CACHE.clear()
+    _KEY_REFERENCES.clear()
+    _ERRORS.clear()
+    _recover_previews()
+    _remember_named_keys()
+    update_runtime(bpy.context.scene)
+
+
+@persistent
+def _restore_preview(_dummy):
+    if _SESSION is not None:
+        finish_test(bpy.context, False)
+    _recover_previews()
+
+
+def _recover_previews():
+    """Discard transient calibration snapshots restored by Undo/autosave.
+
+    The interactive session lives in Python, but an unrelated Blender Undo
+    operator can snapshot its temporary datablocks. A small serialized rollback
+    marker keeps those snapshots reversible after the Python session is gone.
+    """
+    global _SESSION
+    if _SESSION is not None:
+        return
+    for obj in tuple(bpy.data.objects):
+        if obj.type != "MESH" or PREVIEW_KEY not in obj:
+            continue
+        try:
+            marker = json.loads(obj[PREVIEW_KEY])
+            arm = bpy.data.objects.get(marker["armature_name"])
+            marker['key'] = _preview_key_name(obj, marker)
+            key = _managed_key(obj, marker["side"], {"key": marker['key']}, required=False)
+            marker.update(mesh=obj, armature=arm,
+                          old_key_coordinates=([p.co.copy() for p in key.data]
+                                               if marker.pop("had_calibration", False) and key is not None else None))
+            _SESSION = marker
+            finish_test(bpy.context, False, refresh=False)
+        except (KeyError, ValueError, TypeError, ReferenceError, RuntimeError) as exc:
+            _ERRORS[obj.name] = f"Could not restore interrupted calibration: {exc}"
+            if _SESSION is not None:
+                break
+
+
+def _rotation_vector(quaternion):
+    q = quaternion.normalized()
+    if q.w < 0:
+        q.negate()
+    vector = Vector((q.x, q.y, q.z))
+    length = vector.length
+    # mathutils' axis-angle fallback is not a unit axis at tiny rotations.
+    # Use the quaternion logarithm directly so finite-difference columns stay
+    # accurate for the one-milliradian Jacobian perturbation.
+    return vector * (2.0 if length < 1.0e-8 else 2.0 * math.atan2(length, q.w) / length)
+
+
+def _test_pose(context, angle):
+    """Solve trial poses without recomputing mesh corrections at every probe."""
+    global _BUSY
+    previous_busy = _BUSY
+    _BUSY = True
+    try:
+        target = _SESSION['armature'].pose.bones[_SESSION['target']]
+        if target.rotation_mode != 'XYZ':
+            rotation = target.matrix_basis.to_quaternion()
+            target.rotation_mode = 'XYZ'
+            target.rotation_euler = rotation.to_euler('XYZ')
+        _solve_test_pose(context, angle)
+    finally:
+        _BUSY = previous_busy
+    update_runtime(context.scene, context.evaluated_depsgraph_get())
+
+
+def _solve_test_pose(context, angle):
+    """Replace axial twist while retaining the test's original wrist swing.
+
+    Every requested angle starts from the captured pose. Quaternion increments
+    avoid the XYZ parameter singularity at +/-90 degrees; only the existing
+    Target's XYZ channels are written, with no new rig state or constraints.
+    """
+    from mathutils import Euler, Quaternion
+
+    session = _SESSION
+    arm = session["armature"]
+    target = arm.pose.bones[session["target"]]
+    lower, hand = session["chain"][1:]
+    lower_bone = arm.data.bones[lower]
+    axis = (lower_bone.tail_local - lower_bone.head_local).normalized()
+    rest_hand = arm.data.bones[hand].matrix_local
+    def evaluated_pose():
+        arm.update_tag(refresh={"OBJECT"})
+        context.view_layer.update()
+        return arm.evaluated_get(context.evaluated_depsgraph_get()).pose
+
+    original_mode = session.get("rotation_mode", "XYZ")
+    if original_mode == "QUATERNION":
+        original_rotation = Quaternion(session["quaternion"]).normalized()
+    elif original_mode == "AXIS_ANGLE":
+        original_angle, *original_axis = session["axis_angle"]
+        original_axis = Vector(original_axis)
+        original_rotation = (Quaternion(original_axis.normalized(), original_angle)
+                             if original_axis.length_squared > 1.0e-12 else Quaternion())
+    else:
+        original_rotation = Euler(session["rotation"], original_mode).to_quaternion()
+    target.rotation_euler = original_rotation.to_euler("XYZ")
+    original_pose = evaluated_pose()
+    lower_deform = original_pose.bones[lower].matrix @ arm.data.bones[lower].matrix_local.inverted()
+    hand_deform = original_pose.bones[hand].matrix @ rest_hand.inverted()
+    lower_rotation = lower_deform.to_quaternion().normalized()
+    relative = lower_rotation.conjugated() @ hand_deform.to_quaternion().normalized()
+    original_twist = twist_angle(lower_deform, hand_deform, axis)
+    swing = (relative @ Quaternion(axis, -original_twist)).normalized()
+    wanted = (lower_rotation @ swing @ Quaternion(axis, angle) @ rest_hand.to_quaternion()).normalized()
+    if target.name == hand:
+        # An unconstrained FK hand is a direct local rotation. Try the exact
+        # quaternion mapping first; the evaluated residual still verifies it.
+        actual = original_pose.bones[hand].matrix.to_quaternion().normalized()
+        target.rotation_euler = (original_rotation @ actual.inverted() @ wanted).to_euler('XYZ')
+    for _ in range(18):
+        actual = evaluated_pose().bones[hand].matrix.to_quaternion().normalized()
+        residual = _rotation_vector(actual.inverted() @ wanted)
+        if residual.length < 2.0e-5:
+            return
+        current = target.rotation_euler.copy()
+        current_rotation = current.to_quaternion()
+        columns = []
+        step = 1.0e-3
+        for axis_index in range(3):
+            increment_axis = Vector((1.0 if index == axis_index else 0.0 for index in range(3)))
+            perturbed_rotation = current_rotation @ Quaternion(increment_axis, step)
+            target.rotation_euler = perturbed_rotation.to_euler("XYZ", current)
+            perturbed = evaluated_pose().bones[hand].matrix.to_quaternion().normalized()
+            columns.append(_rotation_vector(actual.inverted() @ perturbed) / step)
+        target.rotation_euler = current
+        jacobian = Matrix(columns).transposed()
+        if abs(jacobian.determinant()) < 1.0e-7:
+            # A constrained or otherwise unresponsive Target may still have
+            # fewer than three responsive axes. Never invert that Jacobian.
+            delta = jacobian.transposed() @ residual
+        else:
+            delta = jacobian.inverted() @ residual
+        if delta.length > 0.7:
+            delta *= 0.7 / delta.length
+        if delta.length > 1.0e-10:
+            next_rotation = current_rotation @ Quaternion(delta.normalized(), delta.length)
+            target.rotation_euler = next_rotation.to_euler("XYZ", current)
+    raise ForearmTwistError("Could not match the Hand Target to the test angle; the original pose will be restored.")
+
+
+def _update_ui(context):
+    global _UI_BUSY
+    if _SESSION is None:
+        return
+    _UI_BUSY = True
+    try:
+        settings = context.window_manager.character_designer_forearm_twist
+        record = _records(_SESSION["mesh"])[_SESSION["side"]]
+        rings = record["rings"]
+        settings.ring_index = min(max(1, record.get("current_ring", 0) + 1), len(rings))
+        settings.ratio = rings[settings.ring_index - 1]["ratio"]
+        settings.range_start = record["range_start"] + 1
+        settings.range_end = record["range_end"] + 1
+        settings.curve_strength = record.get("curve_strength", .4)
+        settings.transition = record.get("transition", .1)
+        if record["range_start"] <= settings.ring_index - 1 <= record["range_end"]:
+            available = (record["range_end"] - settings.ring_index + 1) // settings.batch_stride + 1
+            settings.batch_count = min(settings.batch_count, available)
+    finally:
+        _UI_BUSY = False
+    _redraw()
+
+
+def _ring_changed(_self, context):
+    if not _UI_BUSY and _SESSION is not None:
+        editor.set_current(context, _self.ring_index - 1)
+
+
+def set_ratio(context, index, value):
+    editor.set_ratio(context, index, value)
+
+
+set_range = editor.set_range
+apply_default_profile = editor.apply_default_profile
+apply_batch = editor.apply_batch
+smooth_profile = editor.smooth_profile
+overlay_geometry = editor.overlay_geometry
+manual_add_loop = editor.manual_add_loop
+
+
+def _range_changed(self, context):
+    if _UI_BUSY or _SESSION is None:
+        return
+    try:
+        set_range(context, self.range_start - 1, self.range_end - 1)
+    except (ValueError, RuntimeError) as exc:
+        _ERRORS[_SESSION["mesh"].name] = str(exc)
+        _update_ui(context)
+
+
+def _transition_changed(self, context):
+    if not _UI_BUSY and _SESSION is not None:
+        try:
+            editor.edit(context, lambda record: record.update(transition=self.transition))
+        except (ValueError, RuntimeError) as exc:
+            _ERRORS[_SESSION["mesh"].name] = str(exc)
+            _update_ui(context)
+
+
+def _batch_changed(self, context):
+    if not _UI_BUSY and _SESSION is not None:
+        _update_ui(context)
+
+
+def _ratio_changed(self, context):
+    if _UI_BUSY or _SESSION is None:
+        return
+    try:
+        set_ratio(context, self.ring_index - 1, self.ratio)
+    except Exception as exc:
+        _ERRORS[_SESSION["mesh"].name] = str(exc)
+
+
+def _angle_changed(self, context):
+    if _UI_BUSY or _SESSION is None:
+        return
+    try:
+        if not _SESSION.get("pose_locked"):
+            _test_pose(context, self.test_angle)
+    except Exception as exc:
+        obj_name = _SESSION["mesh"].name
+        finish_test(context, False)
+        _ERRORS[obj_name] = str(exc)
+
+
+class CharacterDesignerForearmTwistState(PropertyGroup):
+    side: EnumProperty(name="Arm", items=(("L", "Left Arm", ""), ("R", "Right Arm", "")), options={"SKIP_SAVE"})
+    symmetry: BoolProperty(name="Mirror Calibration", default=True,
+                           description="On Confirm, copy loop shares to the other arm; each hand keeps its own pose")
+    ring_index: IntProperty(name="Loop", default=1, min=1, update=_ring_changed, options={"SKIP_SAVE"})
+    ratio: FloatProperty(name="Twist Share", default=0.5, min=0.0, max=1.0, subtype="FACTOR", update=_ratio_changed, options={"SKIP_SAVE"})
+    test_angle: FloatProperty(name="Test Angle", default=0, min=-MAX_ANGLE, max=MAX_ANGLE,
+                              subtype="ANGLE", update=_angle_changed, options={"SKIP_SAVE"})
+    range_start: IntProperty(name="Start Loop", default=1, min=1, update=_range_changed, options={"SKIP_SAVE"})
+    range_end: IntProperty(name="End Loop", default=3, min=2, update=_range_changed, options={"SKIP_SAVE"})
+    boundary_step: IntProperty(name="Move by Loops", default=1, min=1)
+    show_batch: BoolProperty(name="Batch / Distribution", default=False)
+    show_capture: BoolProperty(name="Capture / Repair Loops", default=False)
+    batch_count: IntProperty(name="Loop Count", default=1, min=1, update=_batch_changed)
+    batch_stride: IntProperty(name="Interval", default=1, min=1, update=_batch_changed)
+    batch_ratio: FloatProperty(name="Batch Share", default=.5, min=0, max=1, subtype="FACTOR")
+    curve_strength: FloatProperty(name="Ease Strength", default=.4, min=0, max=1, subtype="FACTOR")
+    transition: FloatProperty(name="Inside Boundary Blend", default=.1, min=0, max=.5,
+                              subtype="FACTOR", update=_transition_changed)
+
+
+def _capture_record(obj, arm, rig, side, records, *, owned_record=None, rings_override=None, continuous=False):
+    """Capture this side from its own topology and weights, without writes."""
+    rings = (copy.deepcopy(rings_override) if rings_override is not None else
+             detect_rings(obj, arm, rig["chain"][1], rig["chain"][2]))
+    if len(rings) < 3:
+        raise ForearmTwistError("Need at least three closed forearm loops; this topology could not be captured.")
+    if continuous and rings_override is None:
+        # Continue through adjacent quad strips, including the real wrist loop
+        # that the conservative automatic detector may omit near a pole.
+        rings = expand_rings(obj, arm, rig['chain'][1], rings[0]['vertices'])
+        if len(rings) < 3:
+            raise ForearmTwistError('Need at least three connected forearm loops toward the wrist.')
+    for ring in rings:
+        t = ((ring['position'] - rings[0]['position']) / (rings[-1]['position'] - rings[0]['position'])
+             if continuous else min(1.0, max(0.0, ring["position"])))
+        ring.setdefault("ratio", profile.ease_ratio(t))
+    profile.profile_knots(rings)
+    vertices = sorted({i for ring in rings for i in ring["vertices"]})
+    # Include irregular vertices in the corridor, but only when they are
+    # connected to the captured sleeve and influenced by this forearm.
+    lower = arm.data.bones[rig["chain"][1]]
+    to_arm = arm.matrix_world.inverted() @ obj.matrix_world
+    axis = (lower.tail_local - lower.head_local).normalized()
+    coords = obj.data.shape_keys.reference_key.data if obj.data.shape_keys else obj.data.vertices
+    positions = {v.index: (to_arm @ coords[v.index].co - lower.head_local).dot(axis) / lower.length for v in obj.data.vertices}
+    all_weights = _weights(obj, arm, range(len(obj.data.vertices)))
+    first_ring, last_ring = rings[0]["position"], rings[-1]["position"]
+    corridor = {i for i, p in positions.items() if first_ring <= p and (continuous or p <= last_ring) and
+                sum(all_weights[i].get(n, 0) for n in rig["chain"][1:]) > 1.e-6}
+    # Connectivity isolates this sleeve. The saved range then masks the extra
+    # correction, with a blend fully inside the chosen boundaries.
+    selected = set(vertices)
+    adjacent = [[] for _ in obj.data.vertices]
+    for edge in obj.data.edges:
+        a, b = edge.vertices
+        adjacent[a].append(b)
+        adjacent[b].append(a)
+    pending = list(selected)
+    while pending:
+        for neighbor in adjacent[pending.pop()]:
+            if neighbor in corridor and neighbor not in selected:
+                selected.add(neighbor)
+                pending.append(neighbor)
+    vertices = sorted(selected)
+    # A loop is one artist control even when its vertices are not perfectly
+    # coplanar. Every member must receive that loop's exact saved share.
+    for ring in rings:
+        for index in ring["vertices"]:
+            positions[index] = ring["position"]
+    if any(set(vertices) & set(other["vertices"]) for other in records.values()):
+        raise ForearmTwistError("The captured sleeve overlaps an existing calibration.")
+    key_name = owned_record["key"] if owned_record else _new_key_name(obj, side, records)
+    if owned_record:
+        _managed_key(obj, side, owned_record)
+    record = {"version": 1, "armature": arm.name, "chain": list(rig["chain"]), "target": rig["target"].name,
+              "topology": _topology(obj.data), "rest": _rest_signature(arm, rig["chain"]),
+              "rings": rings, "vertices": vertices, "positions": [positions[i] for i in vertices],
+              "key": key_name, "enabled": True, "created_basis": obj.data.shape_keys is None}
+    record["support_topology"] = _support_topology(obj.data, vertices)
+    if continuous:
+        record['distribution'] = 'WRIST_CONTINUOUS'
+    return editor.bounded_record(record)
+
+
+def _current_record(obj, arm, rig, side, record, records):
+    """Keep the artist's loop profile through binding and rig reconstruction."""
+    if record["armature"] != arm.name or record["chain"] != list(rig["chain"]):
+        raise ForearmTwistRecaptureRequired(
+            "Mesh topology or rig chain changed; use Forearm Twist Setup to recapture its loops.")
+    record = _current_topology_record(obj.data, record)
+    if record["rest"] == _rest_signature(arm, rig["chain"]):
+        record["target"] = rig["target"].name
+        return record
+    for ring in record["rings"]:
+        measured = capture_loop(obj, arm, rig["chain"][1], ring["vertices"])
+        if abs(measured["position"] - ring["position"]) > 1.e-5:
+            raise ForearmTwistRecaptureRequired("The forearm rest span changed; use Forearm Twist Setup to recapture its loop range.")
+    fresh = _capture_record(obj, arm, rig, side, {s: r for s, r in records.items() if s != side},
+                            owned_record=record, rings_override=record["rings"],
+                            continuous=record.get('distribution') == 'WRIST_CONTINUOUS')
+    old_rings = {frozenset(r["vertices"]): r for r in record["rings"]}
+    if (len(old_rings) != len(fresh["rings"])
+            or any(frozenset(r["vertices"]) not in old_rings for r in fresh["rings"])):
+        raise ForearmTwistRecaptureRequired("The captured loops changed; use Forearm Twist Setup to recapture its loops.")
+    for ring in fresh["rings"]:
+        ring["ratio"] = old_rings[frozenset(ring["vertices"])]["ratio"]
+    fresh["created_basis"] = record.get("created_basis", False)
+    fresh["enabled"] = record.get("enabled", True)
+    if "range_start" not in record:
+        # A roll/frame repair does not opt old profiles into bounded correction.
+        fresh["vertices"] = record["vertices"]
+        fresh["positions"] = record["positions"]
+        fresh["support_topology"] = _support_topology(obj.data, fresh["vertices"])
+    for name in ("paired", "profile_source", "range_start", "range_end", "current_ring", "curve_strength", "transition"):
+        if name in record:
+            fresh[name] = record[name]
+        else:
+            fresh.pop(name, None)
+    return fresh
+
+
+def _prepare_runtime_records(obj):
+    """Read-only migration: profiles persist, current rig frames are recaptured."""
+    records = _records(obj)
+    if not records or PREVIEW_KEY in obj or (_SESSION and _SESSION.get("mesh") == obj):
+        return records
+    arm = _check_mesh(obj)
+    if obj.mode == "EDIT":
+        raise ForearmTwistError("Forearm Twist resumes after leaving Mesh Edit Mode.")
+    if arm.mode == "EDIT":
+        raise ForearmTwistError("Forearm Twist resumes after leaving bone Edit Mode.")
+    # All calls below are read-only until the resulting records are committed.
+    # Validate the same rig once, retaining the complete safety check on every
+    # update (including direct constraint edits without a depsgraph notification).
+    inventory = forearm_original_inventory.validate(arm)
+    resolved = {}
+    for side in tuple(records):
+        _arm, rig = _resolve_rig(obj, side, _inventory=inventory)
+        resolved[side] = (_arm, rig)
+        records[side] = _current_record(obj, arm, rig, side, records[side], records)
+    # Old files did not have a paired flag. They migrate to the symmetric UI.
+    # Explicit single-side Python calls remain useful for non-paired fixtures.
+    if any(record.get("paired", True) for record in records.values()):
+        preferred = next((r.get("profile_source") for r in records.values()
+                          if r.get("profile_source") in records), None)
+        source_side = preferred or ("L" if "L" in records else "R")
+        source = records[source_side]
+        for side in ('L', 'R'):
+            if side not in resolved:
+                resolved[side] = _resolve_rig(obj, side, _inventory=inventory)
+        # Every existing side was checked above in this same read-only pass.
+        # Keep this reuse local; the next runtime call validates every side again.
+        records, _other = _prepare_mirror(obj, source_side, source, records=records,
+                                        _resolved=resolved, _records_current=True)
+    return records
+
+
+def _prepare_mirror(obj, source_side, source_record=None, *, records=None, complete_missing=False,
+                    _resolved=None, _records_current=False):
+    records = _records(obj) if records is None else records
+    source = source_record if source_record is not None else records.get(source_side)
+    if source is None:
+        raise ForearmTwistError("Calibrate this arm before syncing the other arm.")
+    arm, source_rig = _resolved[source_side] if _resolved is not None else _resolve_rig(obj, source_side)
+    # Only runtime preparation supplies current records from its preceding
+    # per-side checks. Ordinary mirror/setup callers still validate here.
+    if not _records_current:
+        source = _current_record(obj, arm, source_rig, source_side, source, records)
+    target_side = "R" if source_side == "L" else "L"
+    _arm, target_rig = _resolved[target_side] if _resolved is not None else _resolve_rig(obj, target_side)
+    target = records.get(target_side)
+    if target is not None:
+        if not _records_current:
+            target = _current_record(obj, arm, target_rig, target_side, target, records)
+        if target.get('distribution') != source.get('distribution'):
+            raise ForearmTwistError('The arms use different twist profiles; explicitly recapture both arms before syncing.')
+        _managed_key(obj, target_side, target)
+    else:
+        target = _capture_record(obj, arm, target_rig, target_side, {**records, source_side: source},
+                                 continuous=source.get('distribution') == 'WRIST_CONTINUOUS')
+        # The source calibration owns a Basis if one was needed.
+        target["created_basis"] = False
+    if complete_missing:
+        from mathutils.kdtree import KDTree
+        from .forearm_twist_topology import append_ring
+        coords = obj.data.shape_keys.reference_key.data
+        tree = KDTree(len(coords))
+        for index, point in enumerate(coords):
+            tree.insert(point.co, index)
+        tree.balance()
+        tolerance = max(1.e-7, max((p.co.length for p in coords), default=1.) * 1.e-6)
+        rings = copy.deepcopy(target["rings"])
+        for ring in source["rings"]:
+            mapped = []
+            for index in ring["vertices"]:
+                point = coords[index].co
+                found = tree.find_range(Vector((-point.x, point.y, point.z)), tolerance)
+                if len(found) != 1:
+                    raise ForearmTwistError("The manually added loop has no unique opposite loop; neither side was changed.")
+                mapped.append(found[0][1])
+            if not any(set(mapped) == set(item["vertices"]) for item in rings):
+                rings = append_ring(obj, arm, target_rig["chain"][1], rings, mapped)
+                next(item for item in rings if set(item["vertices"]) == set(mapped))["ratio"] = ring["ratio"]
+        if len(rings) != len(target["rings"]):
+            old_target = target
+            target = _capture_record(obj, arm, target_rig, target_side, {source_side: source},
+                                     owned_record=old_target, rings_override=rings,
+                                     continuous=old_target.get('distribution') == 'WRIST_CONTINUOUS')
+            target["created_basis"] = old_target.get("created_basis", False)
+    pairs = validation_cache.mirror_pairs(obj, arm, source, target, mirror_ring_pairs)
+    for source_index, target_index in pairs:
+        target["rings"][target_index]["ratio"] = source["rings"][source_index]["ratio"]
+    if "range_start" in source:
+        mapping = dict(pairs)
+        target["range_start"] = mapping[source["range_start"]]
+        target["range_end"] = mapping[source["range_end"]]
+        target["current_ring"] = mapping[source.get("current_ring", source["range_start"])]
+        target["curve_strength"] = source.get("curve_strength", .4)
+        target["transition"] = source.get("transition", .1)
+        profile.record_range(target)
+    elif "range_start" in target:
+        # Legacy paired profiles keep their legacy runtime support.
+        for name in ("range_start", "range_end", "current_ring", "curve_strength", "transition"):
+            target.pop(name, None)
+    source["target"] = source_rig["target"].name
+    target["target"] = target_rig["target"].name
+    target["enabled"] = source.get("enabled", True)
+    for record in (source, target):
+        record["paired"] = True
+        record["profile_source"] = source_side
+    records[source_side] = source
+    records[target_side] = target
+    return records, target_side
+
+
+def mirror_calibration(context, obj, source_side, *, _from_test=False):
+    """Copy shares atomically; poses, weights and side-specific support stay local."""
+    global _BUSY
+    if _SESSION is not None and not _from_test:
+        raise ForearmTwistError("Confirm or cancel the current test first.")
+    records, target_side = _prepare_mirror(obj, source_side)
+    old_json = obj.get(RECORD_KEY)
+    old_index = obj.active_shape_key_index
+    old_errors = _ERRORS.get(obj.name)
+    snapshots = []
+    for side, record in _records(obj).items():
+        key = _managed_key(obj, side, record)
+        coordinates = array("f", [0.0]) * (len(key.data) * 3)
+        key.data.foreach_get("co", coordinates)
+        snapshots.append((key, coordinates, key.value, key.mute))
+    added = None
+    previous_busy = _BUSY
+    _BUSY = True
+    try:
+        if target_side not in _records(obj):
+            added = _new_output_key(obj, records[target_side])
+            _KEY_REFERENCES[(obj.as_pointer(), target_side)] = added
+        _write_records(obj, records)
+        context.view_layer.update()
+        _calculate_object(obj, context.evaluated_depsgraph_get())
+    except Exception:
+        if added is not None:
+            obj.shape_key_remove(added)
+            _KEY_REFERENCES.pop((obj.as_pointer(), target_side), None)
+        for key, coordinates, value, mute in snapshots:
+            key.data.foreach_set("co", coordinates)
+            key.value, key.mute = value, mute
+        obj[RECORD_KEY] = old_json
+        _CACHE.pop(obj.as_pointer(), None)
+        _OUTPUT_CACHE.pop(obj.as_pointer(), None)
+        if old_errors is None:
+            _ERRORS.pop(obj.name, None)
+        else:
+            _ERRORS[obj.name] = old_errors
+        if obj.data.shape_keys:
+            obj.data.shape_keys.update_tag()
+        obj.data.update()
+        raise
+    finally:
+        obj.active_shape_key_index = old_index
+        _BUSY = previous_busy
+    _set_render_lock(context.scene)
+    context.view_layer.update()
+    _redraw()
+    return records[target_side]
+
+
+def context_mesh(context):
+    """Resolve the body while an artist is manipulating its hand controller."""
+    obj = context.object
+    if obj is None or obj.type == "MESH":
+        return obj
+    if obj.type != "ARMATURE":
+        return None
+    if _SESSION is not None:
+        try:
+            current = _SESSION['mesh']
+            if (_SESSION['armature'] == obj and current.name in context.view_layer.objects
+                    and any(mod.type == 'ARMATURE' and mod.object == obj for mod in current.modifiers)):
+                return current
+        except ReferenceError:
+            pass
+    from . import character_setup
+    setup = character_setup.settings(context)
+    body = setup.body if setup else None
+    if (body is not None and body.type == "MESH" and body.name in context.view_layer.objects
+            and any(mod.type == "ARMATURE" and mod.object == obj for mod in body.modifiers)):
+        return body
+    meshes = [candidate for candidate in context.scene.objects if candidate.type == "MESH"
+              and any(mod.type == "ARMATURE" and mod.object == obj for mod in candidate.modifiers)]
+    calibrated = [candidate for candidate in meshes if RECORD_KEY in candidate]
+    candidates = calibrated or meshes
+    if len(candidates) == 1:
+        return candidates[0]
+    if len(candidates) > 1:
+        raise ForearmTwistError("Select the body Mesh once to identify which mesh to calibrate.")
+    return None
+
+
+def _restore_selection(context, selection):
+    if not selection:
+        return
+    obj = context.view_layer.objects.get(selection["active"])
+    if obj is None:
+        return
+    if context.object and context.object.mode != "OBJECT":
+        bpy.ops.object.mode_set(mode="OBJECT")
+    for candidate in context.selected_objects:
+        candidate.select_set(False)
+    for name in selection["selected"]:
+        candidate = context.view_layer.objects.get(name)
+        if candidate is not None:
+            candidate.select_set(True)
+    context.view_layer.objects.active = obj
+    if selection["mode"] == "POSE" and obj.type == "ARMATURE":
+        obj.select_set(True)
+        bpy.ops.object.mode_set(mode="POSE")
+    elif selection["mode"] == "EDIT_MESH" and obj.type == "MESH":
+        obj.select_set(True)
+        bpy.ops.object.mode_set(mode="EDIT")
+
+
+def start_paired_test(context, *, recapture=False, seed=False, repair_stale=False):
+    obj = context_mesh(context)
+    if obj is None:
+        raise ForearmTwistError("Select the body Mesh or a Hand Target.")
+    if context.mode not in {"OBJECT", "POSE", "EDIT_MESH"}:
+        raise ForearmTwistError("Finish editing, then start the twist test.")
+    arm = _check_mesh(obj)
+    settings = context.window_manager.character_designer_forearm_twist
+    side = settings.side
+    active = context.active_pose_bone
+    if active is not None:
+        for candidate_side in ("L", "R"):
+            _arm, rig = _resolve_rig(obj, candidate_side)
+            if active.name in (rig["target"].name, *rig["chain"]):
+                side = candidate_side
+                break
+    selection = {"active": context.object.name, "mode": context.mode,
+                 "selected": [candidate.name for candidate in context.selected_objects]}
+    rings_override = None
+    start_vertices = None
+    notices = []
+    if seed:
+        _arm, rig = _resolve_rig(obj, side)
+        captured = selected_loop(obj, arm, rig["chain"][1])
+        start_vertices = captured['vertices']
+        rings_override = expand_rings(obj, arm, rig["chain"][1], captured["vertices"], diagnostics=notices)
+        recapture = True
+    try:
+        if context.mode != "OBJECT":
+            bpy.ops.object.mode_set(mode="OBJECT")
+        for candidate in context.selected_objects:
+            candidate.select_set(False)
+        obj.select_set(True)
+        context.view_layer.objects.active = obj
+        context.view_layer.update()
+        if repair_stale and not recapture:
+            # Setup is explicit authorization for a cancellable recapture
+            # preview. Keep healthy profiles on the ordinary edit path, and
+            # reuse owned output keys when a genuine local proof is stale.
+            saved = _records(obj)
+            sides = (side, 'R' if side == 'L' else 'L') if settings.symmetry else (side,)
+            for saved_side in sides:
+                if saved_side not in saved:
+                    continue
+                _arm, saved_rig = _resolve_rig(obj, saved_side)
+                try:
+                    _current_record(obj, _arm, saved_rig, saved_side, saved[saved_side], saved)
+                except ForearmTwistRecaptureRequired:
+                    recapture = True
+                    break
+        record = start_test(context, obj, side, symmetry=settings.symmetry,
+                            recapture=recapture, rings_override=rings_override,
+                            start_vertices=start_vertices, continuous=True)
+        _SESSION["selection"] = selection
+        _SESSION["notices"] = notices
+        marker = json.loads(obj[PREVIEW_KEY])
+        marker["selection"] = selection
+        obj[PREVIEW_KEY] = json.dumps(marker)
+        return record
+    except Exception:
+        _restore_selection(context, selection)
+        raise
+
+
+def toggle_paired_calibration(context, obj):
+    global _BUSY
+    if _SESSION is not None:
+        raise ForearmTwistError("Finish the current test first.")
+    records = _records(obj)
+    if not records:
+        return
+    enabled = not all(record.get("enabled", True) for record in records.values())
+    if enabled:
+        records = _prepare_runtime_records(obj)
+        for record in records.values():
+            record["enabled"] = True
+        _apply_runtime_records(obj, records, context.evaluated_depsgraph_get())
+    else:
+        # Stale topology or chain data must not prevent turning the correction
+        # off. Resolve ownership first, then mute both outputs without migrating
+        # the captured profile or recalculating any shape coordinates.
+        keys = [_managed_key(obj, side, record, repair_name=False)
+                for side, record in records.items()]
+        old_json = obj[RECORD_KEY]
+        old_mutes = [key.mute for key in keys]
+        old_busy = _BUSY
+        _BUSY = True
+        try:
+            for record in records.values():
+                record["enabled"] = False
+            _write_records(obj, records)
+            for key in keys:
+                key.mute = True
+        except Exception:
+            obj[RECORD_KEY] = old_json
+            for key, mute in zip(keys, old_mutes):
+                key.mute = mute
+            _CACHE.pop(obj.as_pointer(), None)
+            _OUTPUT_CACHE.pop(obj.as_pointer(), None)
+            raise
+        finally:
+            _BUSY = old_busy
+    _set_render_lock(context.scene)
+    _redraw()
+
+
+def remove_paired_calibration(context, obj):
+    global _BUSY
+    if _SESSION is not None:
+        raise ForearmTwistError("Finish the current test first.")
+    records = _records(obj)
+    # Validate ownership before deleting either side, so a refusal is atomic.
+    for side, record in records.items():
+        key = _managed_key(obj, side, record, repair_name=False)
+        # Removal repairs cached renamed keys. Check that repair's name is free
+        # for both sides now, without renaming either key during preflight.
+        named = obj.data.shape_keys.key_blocks.get(record["key"])
+        if named is not None and named.as_pointer() != key.as_pointer():
+            raise ForearmTwistError(f"Another Shape Key uses '{record['key']}'. Rename that other key, then retry.")
+        if any(other != key and other.relative_key == key for other in obj.data.shape_keys.key_blocks):
+            raise ForearmTwistError("Another Shape Key references the corrective key; change its reference before removal.")
+    old_busy = _BUSY
+    _BUSY = True
+    try:
+        for side in tuple(records):
+            remove_calibration(context, obj, side)
+    finally:
+        _BUSY = old_busy
+    context.view_layer.update()
+    _set_render_lock(context.scene)
+
+
+def start_test(context, obj, side="L", *, symmetry=False, recapture=False, rings_override=None,
+               initial_angle=None, start_vertices=None, continuous=False):
+    global _SESSION, _UI_BUSY, _BUSY
+    if _SESSION is not None:
+        raise ForearmTwistError("Confirm or cancel the current twist test first.")
+    if context.mode != "OBJECT":
+        raise ForearmTwistError("Use Object Mode and select the bound body Mesh.")
+    if context.screen and context.screen.is_animation_playing:
+        raise ForearmTwistError("Stop playback before calibrating.")
+    arm, rig = _resolve_rig(obj, side)
+    target = arm.pose.bones[rig["target"].name]
+    if ((target.rotation_mode != "XYZ" and not rig.get("fk_source"))
+            or any(target.lock_rotation) or target.lock_rotation_w):
+        raise ForearmTwistError("Unlock hand rotation before calibrating; generated Targets need XYZ mode.")
+    pose_locked = _preview_pose_locked(arm, target, rig)
+    # Resolve a completed bind/rebuild before taking the preview snapshot.
+    # This is normal persistent evaluation, independent of the temporary test.
+    if RECORD_KEY in obj and not recapture:
+        update_runtime(context.scene, context.evaluated_depsgraph_get())
+    old_json = obj.get(RECORD_KEY)
+    records = _records(obj)
+    old_records = copy.deepcopy(records)
+    if recapture:
+        source = _capture_record(obj, arm, rig, side, {}, owned_record=old_records.get(side),
+                                 rings_override=rings_override, continuous=continuous)
+        previous = old_records.get(side)
+        if previous:
+            saved_rings = {frozenset(ring["vertices"]): ring for ring in previous["rings"]}
+            for ring in source["rings"]:
+                old_ring = saved_rings.get(frozenset(ring["vertices"]))
+                if old_ring is not None:
+                    ring["ratio"] = old_ring["ratio"]
+            for name in ("range_start", "range_end", "current_ring"):
+                if name in previous:
+                    anchor = frozenset(previous["rings"][previous[name]]["vertices"])
+                    matched = next((i for i, ring in enumerate(source["rings"]) if frozenset(ring["vertices"]) == anchor), None)
+                    if matched is not None:
+                        source[name] = matched
+            if source["range_start"] >= source["range_end"]:
+                source.update(range_start=0, range_end=len(source["rings"]) - 1)
+            source["curve_strength"] = previous.get("curve_strength", .4)
+            source["transition"] = previous.get("transition", .1)
+        if source.get('distribution') == 'WRIST_CONTINUOUS':
+            source['rings'][source['range_start']]['ratio'] = 0.0
+            source['rings'][source['range_end']]['ratio'] = 1.0
+        source["created_basis"] = old_records.get(side, {}).get("created_basis", obj.data.shape_keys is None)
+        records[side] = source
+        # A stale opposite record needs the same explicit recapture transaction.
+        if symmetry:
+            other_side = "R" if side == "L" else "L"
+            _arm, other_rig = _resolve_rig(obj, other_side)
+            opposite_rings = editor.mirrored_capture(obj, arm, other_rig["chain"][1], source["rings"])
+            records[other_side] = _capture_record(obj, arm, other_rig, other_side, {side: source},
+                                                 owned_record=old_records.get(other_side), rings_override=opposite_rings,
+                                                 continuous=continuous)
+            records[other_side]["created_basis"] = old_records.get(other_side, {}).get("created_basis", False)
+    elif side in records:
+        records[side] = _current_record(obj, arm, rig, side, records[side], records)
+    else:
+        records[side] = _capture_record(obj, arm, rig, side, records,
+                                       rings_override=rings_override, continuous=continuous)
+    if start_vertices is not None:
+        source = records[side]
+        start = next((i for i, ring in enumerate(source['rings'])
+                      if set(ring['vertices']) == set(start_vertices)), None)
+        if start is None or len(source['rings']) - start < 3:
+            raise ForearmTwistError('Choose a start loop with at least two further loops toward the wrist.')
+        source.update(range_start=start, range_end=len(source['rings']) - 1, current_ring=start)
+        if source.get('distribution') == 'WRIST_CONTINUOUS':
+            first = source['rings'][start]['position']
+            span = source['rings'][-1]['position'] - first
+            for ring in source['rings']:
+                ring['ratio'] = profile.ease_ratio((ring['position'] - first) / span)
+    if side in records:
+        editor.bounded_record(records[side])
+    # Fail an invalid mirror before changing the pose or creating any keys.
+    if symmetry:
+        source = records.get(side) or _capture_record(obj, arm, rig, side, records)
+        # A fresh opposite record without a key is created only on Confirm.
+        preview_records = {s: r for s, r in records.items() if s in old_records or s == side}
+        prepared, other_side = _prepare_mirror(obj, side, source, records=preview_records)
+        other = records.get(other_side)
+        if other and other["rest"] != prepared[other_side]["rest"]:
+            raise ForearmTwistError("The other arm is still rebuilding; retry when its rig is ready.")
+    old_index = obj.active_shape_key_index
+    created_basis = obj.data.shape_keys is None
+    old_key_coordinates = None
+    old_outputs = []
+    for existing_side, existing in old_records.items():
+        previous_key = _managed_key(obj, existing_side, existing)
+        old_outputs.append(dict(side=existing_side, name=previous_key.name,
+                                coordinates=[list(p.co) for p in previous_key.data],
+                                value=previous_key.value, mute=previous_key.mute))
+    previous_busy = _BUSY
+    _BUSY = True
+    new_key = None
+    try:
+        if side in old_records:
+            record = records[side]
+            key = _managed_key(obj, side, record)
+            if key is None:
+                raise ForearmTwistError("The managed key is missing; remove calibration and start again.")
+            old_key_coordinates = [p.co.copy() for p in key.data]
+        else:
+            record = records.get(side) or _capture_record(obj, arm, rig, side, records, rings_override=rings_override)
+            record["paired"] = bool(symmetry)
+            key = new_key = _new_output_key(obj, record)
+            records[side] = record
+            _KEY_REFERENCES[(obj.as_pointer(), side)] = key
+        # Don't publish a record for a counterpart whose owned key does not exist yet.
+        records = {s: r for s, r in records.items() if s == side or s in old_records}
+        record["paired"] = bool(symmetry)
+        _SESSION = {"mesh": obj, "armature": arm, "side": side, "chain": list(rig["chain"]),
+                    "target": target.name, "key": record["key"], "rotation": tuple(target.rotation_euler),
+                    "rotation_mode": target.rotation_mode, "quaternion": tuple(target.rotation_quaternion),
+                    "axis_angle": tuple(target.rotation_axis_angle),
+                    "old_json": old_json, "old_index": old_index, "created_basis": created_basis,
+                    "old_key_coordinates": old_key_coordinates, "old_key_mute": key.mute, "old_key_value": key.value,
+                    "frame": context.scene.frame_current, "action": None, "symmetry": symmetry,
+                    "pose_locked": bool(pose_locked), "old_outputs": old_outputs, "history": [], "redo": []}
+        _SESSION["mesh_name"] = obj.name
+        _SESSION["armature_name"] = arm.name
+        _SESSION["modal"] = False
+        marker = {name: _SESSION[name] for name in ("side", "target", "key", "rotation", "old_json", "old_index",
+                  "created_basis", "old_key_mute", "old_key_value", "mesh_name", "armature_name",
+                  "rotation_mode", "quaternion", "axis_angle", "old_outputs", "pose_locked")}
+        marker["had_calibration"] = old_key_coordinates is not None
+        obj[PREVIEW_KEY] = json.dumps(marker)
+        record["enabled"] = True
+        _write_records(obj, records)
+        _BUSY = previous_busy
+        obj.active_shape_key_index = old_index
+        _set_render_lock(context.scene)
+        _UI_BUSY = True
+        settings = context.window_manager.character_designer_forearm_twist
+        settings.side = side
+        settings.test_angle = current_twist_angle(context) if initial_angle is None else initial_angle
+        settings.ring_index = record.get("current_ring", 0) + 1
+        _UI_BUSY = False
+        if not pose_locked and initial_angle is not None:
+            if target.rotation_mode != 'XYZ':
+                rotation = target.matrix_basis.to_quaternion()
+                target.rotation_mode = 'XYZ'
+                target.rotation_euler = rotation.to_euler('XYZ')
+            _test_pose(context, settings.test_angle)
+        else:
+            update_runtime(context.scene, context.evaluated_depsgraph_get())
+        _update_ui(context)
+        if obj.name in _ERRORS:
+            raise ForearmTwistError(_ERRORS[obj.name])
+        return record
+    except Exception:
+        _UI_BUSY = False
+        if _SESSION is not None:
+            finish_test(context, False)
+        elif new_key is not None:
+            # Publication failed before a recovery session existed.
+            obj.shape_key_remove(new_key)
+            _KEY_REFERENCES.pop((obj.as_pointer(), side), None)
+            if created_basis and obj.data.shape_keys and len(obj.data.shape_keys.key_blocks) == 1:
+                obj.shape_key_remove(obj.data.shape_keys.reference_key)
+            obj.active_shape_key_index = old_index
+        raise
+    finally:
+        _BUSY = previous_busy
+
+
+def finish_test(context, confirm=False, *, refresh=True):
+    global _BUSY
+    session = _SESSION
+    if session is None:
+        return
+    previous_busy = _BUSY
+    _BUSY = True
+    try:
+        _finish_test_restore(context, session, confirm)
+    finally:
+        _BUSY = previous_busy
+    _set_render_lock(context.scene)
+    if refresh:
+        context.view_layer.update()
+        update_runtime(context.scene, context.evaluated_depsgraph_get())
+
+
+def _preview_rollback_keys(obj, session):
+    """Validate every output before changing a pose, key, or saved record."""
+    def owned(side, name, required):
+        key = _managed_key(obj, side, {"key": name}, required=required, repair_name=False)
+        named = obj.data.shape_keys.key_blocks.get(name) if obj.data.shape_keys else None
+        if key is not None and named is not None and named.as_pointer() != key.as_pointer():
+            raise ForearmTwistError(f"Another Shape Key uses '{name}'. Rename that other key, then retry.")
+        return key
+
+    source = owned(session["side"], _preview_key_name(obj, session),
+                   session["old_key_coordinates"] is not None)
+    remove = [(side, owned(side, name, False))
+              for side, name in session.get("added_keys", {}).items()]
+    if session["old_key_coordinates"] is None:
+        remove.append((session["side"], source))
+    outputs = [(saved, owned(saved["side"], saved["name"], True))
+               for saved in session.get("old_outputs", [])]
+    for _side, key in remove:
+        if key is not None and any(other != key and other.relative_key == key
+                                   for other in obj.data.shape_keys.key_blocks):
+            raise ForearmTwistError("Another Shape Key references the corrective key; change its reference before removal.")
+    return source, remove, outputs
+
+
+def _finish_test_restore(context, session, confirm):
+    """Keep both preview guards until all data is restored successfully."""
+    global _SESSION
+    if confirm and session.get("symmetry"):
+        # Until this transaction succeeds, keep the original preview rollback
+        # available. A refusal must never silently accept only half the pair.
+        mesh = session["mesh"]
+        before_sides = set(_records(mesh))
+        try:
+            mirror_calibration(context, mesh, session["side"], _from_test=True)
+        finally:
+            # A later restoration failure must roll back both newly-created
+            # sides, including after the Python session is lost to Undo/load.
+            added = session.setdefault("added_keys", {})
+            added.update({side: record["key"] for side, record in _records(mesh).items()
+                          if side not in before_sides})
+            if added and PREVIEW_KEY in mesh:
+                marker = json.loads(mesh[PREVIEW_KEY])
+                marker["added_keys"] = added
+                mesh[PREVIEW_KEY] = json.dumps(marker)
+    # Resolve live IDs again: deleting an object while a modal preview is open
+    # must not leave dangling RNA in file-load, undo, or add-on cleanup hooks.
+    try:
+        obj = session["mesh"]
+        obj.name
+    except ReferenceError:
+        obj = None
+    try:
+        arm = session["armature"]
+        arm.name
+    except (ReferenceError, AttributeError):
+        arm = None
+    rollback = _preview_rollback_keys(obj, session) if obj is not None and not confirm else None
+    target = arm.pose.bones.get(session["target"]) if arm is not None else None
+    if target is not None and not session.get("pose_locked"):
+        target.rotation_mode = session.get("rotation_mode", "XYZ")
+        target.rotation_euler = session["rotation"]
+        if "quaternion" in session:
+            target.rotation_quaternion = session["quaternion"]
+            target.rotation_axis_angle = session["axis_angle"]
+    if obj is None:
+        _SESSION = None
+        _CACHE.clear()
+        _OUTPUT_CACHE.clear()
+        _set_render_lock(context.scene)
+        return
+    if obj.mode == "EDIT":
+        # Mesh mode changes are cancelled by the modal owner at the next event.
+        # Leave Edit Mode before removing a newly created Shape Key.
+        if context.object is obj:
+            bpy.ops.object.mode_set(mode="OBJECT")
+    if not confirm:
+        key, remove, outputs = rollback
+        for side, added_key in remove:
+            if added_key is not None:
+                obj.shape_key_remove(added_key)
+                _KEY_REFERENCES.pop((obj.as_pointer(), side), None)
+        if session["created_basis"] and obj.data.shape_keys and len(obj.data.shape_keys.key_blocks) == 1:
+            obj.shape_key_remove(obj.data.shape_keys.reference_key)
+        if session["old_key_coordinates"] is not None:
+            for point, coordinate in zip(key.data, session["old_key_coordinates"]):
+                point.co = coordinate
+            key.mute = session["old_key_mute"]
+            key.value = session["old_key_value"]
+        for saved, previous_key in outputs:
+            # Restore the managed name only after the whole preflight passed.
+            previous_key.name = saved["name"]
+            for point, coordinate in zip(previous_key.data, saved["coordinates"]):
+                point.co = coordinate
+            previous_key.mute, previous_key.value = saved["mute"], saved["value"]
+        if session["old_json"] is None:
+            if RECORD_KEY in obj:
+                del obj[RECORD_KEY]
+        else:
+            obj[RECORD_KEY] = session["old_json"]
+    obj.active_shape_key_index = session["old_index"]
+    _CACHE.clear()
+    _OUTPUT_CACHE.clear()
+    _ERRORS.pop(obj.name, None)
+    try:
+        _restore_selection(context, session.get("selection"))
+    except (RuntimeError, ReferenceError):
+        pass
+    if PREVIEW_KEY in obj:
+        del obj[PREVIEW_KEY]
+    _SESSION = None
+    _redraw()
+
+
+def remove_calibration(context, obj, side):
+    if _SESSION is not None:
+        raise ForearmTwistError("Finish the current test first.")
+    records = _records(obj)
+    record = records.get(side)
+    if record is None:
+        return
+    keys = obj.data.shape_keys
+    key = _managed_key(obj, side, record)
+    if key is not None:
+        if any(k != key and k.relative_key == key for k in keys.key_blocks):
+            raise ForearmTwistError("Another Shape Key references the corrective key; change its reference before removal.")
+        obj.shape_key_remove(key)
+        _KEY_REFERENCES.pop((obj.as_pointer(), side), None)
+    del records[side]
+    # Transfer ownership of a newly-created Basis when the other side remains.
+    if record.get("created_basis") and records:
+        next(iter(records.values()))["created_basis"] = True
+    if record.get("created_basis") and not records and obj.data.shape_keys and len(obj.data.shape_keys.key_blocks) == 1:
+        obj.shape_key_remove(obj.data.shape_keys.reference_key)
+    _write_records(obj, records)
+    _ERRORS.pop(obj.name, None)
+    _set_render_lock(context.scene)
+    _redraw()
+
+
+def _redraw():
+    for window in bpy.context.window_manager.windows:
+        for area in window.screen.areas:
+            if area.type == "VIEW_3D":
+                area.tag_redraw()
+
+
+def current_twist_angle(context):
+    session = _SESSION
+    arm = session["armature"]
+    lower, hand = session["chain"][1:]
+    evaluated = arm.evaluated_get(context.evaluated_depsgraph_get())
+    transforms = {name: evaluated.pose.bones[name].matrix @ arm.data.bones[name].matrix_local.inverted()
+                  for name in (lower, hand)}
+    bone = arm.data.bones[lower]
+    return twist_angle(transforms[lower], transforms[hand], bone.tail_local - bone.head_local)
+
+
+def _draw_loop():
+    if _SESSION is None:
+        return
+    context = bpy.context
+    if context.space_data.type != "VIEW_3D" or not context.space_data.overlay.show_overlays:
+        return
+    try:
+        import gpu
+        from gpu_extras.batch import batch_for_shader
+        obj = _SESSION["mesh"]
+        if not obj.visible_get():
+            return
+        shader = gpu.shader.from_builtin("POLYLINE_UNIFORM_COLOR")
+        gpu.state.depth_test_set("NONE")
+        gpu.state.blend_set("ALPHA")
+        shader.bind()
+        shader.uniform_float("viewportSize", gpu.state.viewport_get()[2:])
+        for layer in overlay_geometry(context, all_rings=_SESSION.get("picking", False)):
+            lines = [point for edge in zip(layer["points"], layer["points"][1:]) for point in edge]
+            batch = batch_for_shader(shader, "LINES", {"pos": lines})
+            shader.uniform_float("lineWidth", layer["width"])
+            shader.uniform_float("color", layer["color"])
+            batch.draw(shader)
+    except (ReferenceError, KeyError, RuntimeError, ValueError, AttributeError):
+        pass
+    finally:
+        try:
+            gpu.state.depth_test_set("NONE")
+            gpu.state.blend_set("NONE")
+        except (UnboundLocalError, AttributeError):
+            pass
+
+
+class CHARACTERDESIGNER_OT_forearm_twist_start(Operator):
+    bl_idname = "character_designer.forearm_twist_start"
+    bl_label = "Start Forearm Twist Test"
+    bl_description = "Preview forearm twist and adjust the shared loop profile for both arms"
+    bl_options = {"REGISTER", "UNDO"}
+    recapture: BoolProperty(default=False, options={"SKIP_SAVE"})
+    seed: BoolProperty(default=False, options={"SKIP_SAVE"})
+    repair_stale: BoolProperty(default=False, options={"SKIP_SAVE"})
+
+    def execute(self, context):
+        try:
+            start_paired_test(context, recapture=self.recapture, seed=self.seed,
+                              repair_stale=self.repair_stale)
+            return {"FINISHED"}
+        except Exception as exc:
+            self.report({"ERROR"}, str(exc))
+            return {"CANCELLED"}
+
+    def invoke(self, context, _event):
+        result = self.execute(context)
+        if result != {"FINISHED"}:
+            return result
+        self._timer = context.window_manager.event_timer_add(0.2, window=context.window)
+        context.window_manager.modal_handler_add(self)
+        _SESSION["modal"] = True
+        return {"RUNNING_MODAL"}
+
+    def modal(self, context, event):
+        if _SESSION is None:
+            context.window_manager.event_timer_remove(self._timer)
+            return {"CANCELLED"}
+        action = _SESSION.get("action")
+        if event.type == "Z" and event.ctrl and event.value == "PRESS":
+            _SESSION["picking"] = False
+            editor.undo(context, redo=event.shift)
+            return {"RUNNING_MODAL"}
+        if event.value == "PRESS" and event.type in {"G", "R", "S", "X", "DEL", "TAB", "F3"}:
+            # Complete the rollback before scene-editing shortcuts can create
+            # another Undo snapshot. View navigation and panel sliders pass.
+            finish_test(context, False)
+            context.window_manager.event_timer_remove(self._timer)
+            return {"CANCELLED"}
+        try:
+            if (context.mode not in {"OBJECT", "POSE"}
+                    or _SESSION["mesh"].mode == "EDIT"
+                    or context_mesh(context) is not _SESSION["mesh"]):
+                action = "CANCEL"
+        except (ValueError, ReferenceError):
+            action = "CANCEL"
+        if ((event.type == "ESC" and not _SESSION.get("picking"))
+                or context.scene.frame_current != _SESSION["frame"]):
+            action = "CANCEL"
+        if action is not None:
+            try:
+                finish_test(context, action == "CONFIRM")
+            except Exception as exc:
+                if _SESSION is not None:
+                    _SESSION["action"] = None
+                    _ERRORS[_SESSION["mesh_name"]] = str(exc)
+                self.report({"ERROR"}, str(exc))
+                if _SESSION is None:
+                    context.window_manager.event_timer_remove(self._timer)
+                    return {"CANCELLED"}
+                return {"RUNNING_MODAL"}
+            context.window_manager.event_timer_remove(self._timer)
+            return {"FINISHED"} if action == "CONFIRM" else {"CANCELLED"}
+        return {"PASS_THROUGH"}
+
+    def cancel(self, context):
+        finish_test(context, False)
+
+
+class CHARACTERDESIGNER_OT_forearm_twist_finish(Operator):
+    bl_idname = "character_designer.forearm_twist_finish"
+    bl_label = "Finish Twist Test"
+    action: EnumProperty(items=(("CONFIRM", "Confirm", ""), ("CANCEL", "Cancel", "")))
+
+    def execute(self, context):
+        if _SESSION is not None:
+            if _SESSION.get("modal"):
+                _SESSION["action"] = self.action
+            else:
+                try:
+                    finish_test(context, self.action == "CONFIRM")
+                except Exception as exc:
+                    self.report({"ERROR"}, str(exc))
+                    return {"CANCELLED"}
+        return {"FINISHED"}
+
+
+class CHARACTERDESIGNER_OT_forearm_twist_remove(Operator):
+    bl_idname = "character_designer.forearm_twist_remove"
+    bl_label = "Remove Calibration"
+    bl_description = "Remove the forearm calibration from both arms"
+    bl_options = {"REGISTER", "UNDO"}
+
+    def execute(self, context):
+        try:
+            remove_paired_calibration(context, context_mesh(context))
+            return {"FINISHED"}
+        except Exception as exc:
+            self.report({"ERROR"}, str(exc))
+            return {"CANCELLED"}
+
+
+class CHARACTERDESIGNER_OT_forearm_twist_toggle(Operator):
+    bl_idname = "character_designer.forearm_twist_toggle"
+    bl_label = "Toggle Forearm Correction"
+    bl_description = "Enable or disable forearm correction for both arms"
+    bl_options = {"REGISTER", "UNDO"}
+
+    def execute(self, context):
+        try:
+            toggle_paired_calibration(context, context_mesh(context))
+            return {"FINISHED"}
+        except Exception as exc:
+            self.report({"ERROR"}, str(exc))
+            return {"CANCELLED"}
+
+
+class CHARACTERDESIGNER_PT_forearm_twist(Panel):
+    bl_label = "Forearm Twist (Prototype)"
+    bl_idname = "CHARACTERDESIGNER_PT_forearm_twist"
+    bl_space_type = "VIEW_3D"
+    bl_region_type = "UI"
+    bl_category = SIDEBAR_CATEGORY
+    bl_options = {"DEFAULT_CLOSED"}
+
+    @classmethod
+    def poll(cls, context):
+        return rig_page_active(context, "BODY")
+
+    def draw(self, context):
+        layout = self.layout
+        settings = context.window_manager.character_designer_forearm_twist
+        try:
+            obj = _SESSION["mesh"] if _SESSION is not None else context_mesh(context)
+        except (ValueError, ReferenceError) as exc:
+            import textwrap
+            for line in textwrap.wrap(str(exc), 44):
+                layout.label(text=line, icon="INFO")
+            return
+        if obj is None:
+            layout.label(text="Select body Mesh or Hand Target", icon="INFO")
+            return
+        if _SESSION:
+            record = _records(obj)[_SESSION["side"]]
+            layout.label(text=obj.name)
+            editor.draw_session(layout, context, record)
+        else:
+            try:
+                records = _records(obj)
+            except Exception:
+                records = {}
+            record = records.get("L") or records.get("R")
+            op = layout.operator("character_designer.forearm_twist_start", text="Edit Calibration" if record else "Capture & Preview", icon="DRIVER_ROTATIONAL_DIFFERENCE")
+            op.repair_stale = True
+            if record:
+                enabled = all(item.get("enabled", True) for item in records.values())
+                paused = obj.name in _ERRORS and any(item.get("enabled", True) for item in records.values())
+                row = layout.row(align=True)
+                row.operator("character_designer.forearm_twist_toggle", text="Paused" if paused else "Enabled" if enabled else "Disabled", depress=enabled)
+                remove_row = row.row(align=True)
+                remove_row.alert = True
+                remove_row.operator("character_designer.forearm_twist_remove", text="Remove", icon="TRASH")
+            layout.prop(settings, "show_capture", icon="TRIA_DOWN" if settings.show_capture else "TRIA_RIGHT", emboss=False)
+            if settings.show_capture:
+                box = layout.box()
+                box.prop(settings, "side")
+                box.prop(settings, "symmetry")
+                op = box.operator("character_designer.forearm_twist_start", text="Recapture Loops (Preview)")
+                op.recapture = True
+                op = box.operator("character_designer.forearm_twist_start", text="Use Selected Loop as Seed")
+                op.seed = True
+                box.operator("character_designer.forearm_loop_add", text="Add Selected Missing Loop")
+                box.label(text="Select a closed mesh edge loop first.")
+            layout.label(text="Local correction · ±120° · add-on required")
+        if obj.name in _ERRORS:
+            box = layout.box()
+            box.alert = True
+            # Blender labels do not wrap automatically.
+            import textwrap
+            for line in textwrap.wrap(_ERRORS[obj.name], 44):
+                box.label(text=line)
+
+
+FOREARM_TWIST_CLASSES = (
+    CharacterDesignerForearmTwistState,
+    CHARACTERDESIGNER_OT_forearm_twist_start,
+    CHARACTERDESIGNER_OT_forearm_twist_finish,
+    CHARACTERDESIGNER_OT_forearm_twist_remove,
+    CHARACTERDESIGNER_OT_forearm_twist_toggle,
+    *editor.EDIT_CLASSES,
+    CHARACTERDESIGNER_PT_forearm_twist,
+)
+
+_HANDLERS = (("depsgraph_update_post", _graph_post), ("frame_change_post", _frame_post),
+             ("load_pre", _restore_preview), ("save_pre", _restore_preview),
+             ("undo_pre", _restore_preview), ("load_post", _load_post),
+             ("undo_post", _undo_post), ("redo_post", _undo_post))
+
+
+def _scene_data_available():
+    # addon_utils.enable runs register(), including its rollback, inside
+    # RestrictBlend. RNA classes, handlers and timers are available there;
+    # scene datablocks and the ordinary context deliberately are not.
+    return hasattr(bpy.data, "objects") and hasattr(bpy.data, "scenes")
+
+
+def _cleanup_runtime_scene():
+    """Finish scene-side teardown only when Blender exposes live datablocks."""
+    global _SESSION, _SCENE_STATE_ACTIVE
+    try:
+        if _SESSION is not None:
+            try:
+                finish_test(bpy.context, False, refresh=False)
+            except Exception:
+                # Never block class/property cleanup because a preview's IDs
+                # were removed. Its serialized rollback marker remains usable.
+                traceback.print_exc()
+                _SESSION = None
+        # Unloading cannot leave a stale pose correction without its code.
+        for obj in bpy.data.objects:
+            if obj.type != "MESH" or RECORD_KEY not in obj or not obj.data.shape_keys:
+                continue
+            try:
+                for side, record in _records(obj).items():
+                    key = _managed_key(obj, side, record, required=False, repair_name=False)
+                    if key is not None:
+                        key.mute = True
+            except (ForearmTwistError, ValueError, TypeError, AttributeError, ReferenceError):
+                continue
+        for scene in bpy.data.scenes:
+            if LOCK_KEY in scene:
+                scene.render.use_lock_interface = bool(scene[LOCK_KEY])
+                del scene[LOCK_KEY]
+    finally:
+        _SCENE_STATE_ACTIVE = False
+        _CACHE.clear()
+        _OUTPUT_CACHE.clear()
+        _KEY_REFERENCES.clear()
+        _ERRORS.clear()
+        validation_cache.clear()
+
+
+def _complete_runtime_lifecycle():
+    """One-shot timer, also drained before the first load/pose evaluation."""
+    global _INITIALIZE_PENDING, _SCENE_CLEANUP_PENDING, _SCENE_STATE_ACTIVE
+    if not (_INITIALIZE_PENDING or _SCENE_CLEANUP_PENDING):
+        return None
+    if not _scene_data_available():
+        return 0.05
+    if _SCENE_CLEANUP_PENDING:
+        _SCENE_CLEANUP_PENDING = False
+        _cleanup_runtime_scene()
+    if _RUNTIME_REGISTERED and _INITIALIZE_PENDING:
+        # Clear first: recovery may tag the dependency graph while initializing.
+        _INITIALIZE_PENDING = False
+        _SCENE_STATE_ACTIVE = True
+        _recover_previews()
+        _remember_named_keys()
+        for scene in bpy.data.scenes:
+            _set_render_lock(scene)
+    return None
+
+
+def _request_runtime_lifecycle():
+    if bpy.app.timers.is_registered(_complete_runtime_lifecycle):
+        bpy.app.timers.unregister(_complete_runtime_lifecycle)
+    if _scene_data_available():
+        _complete_runtime_lifecycle()
+    elif _INITIALIZE_PENDING or _SCENE_CLEANUP_PENDING:
+        bpy.app.timers.register(_complete_runtime_lifecycle, first_interval=0.0)
+
+
+def register_forearm_twist_runtime():
+    global _DRAW_HANDLE, _RUNTIME_REGISTERED, _INITIALIZE_PENDING
+    _RUNTIME_REGISTERED = True
+    _INITIALIZE_PENDING = True
+    for name, handler in _HANDLERS:
+        handlers = getattr(bpy.app.handlers, name)
+        if handler not in handlers:
+            handlers.append(handler)
+    if not bpy.app.background and _DRAW_HANDLE is None:
+        _DRAW_HANDLE = bpy.types.SpaceView3D.draw_handler_add(_draw_loop, (), "WINDOW", "POST_VIEW")
+    _CACHE.clear()
+    _OUTPUT_CACHE.clear()
+    validation_cache.clear()
+    _request_runtime_lifecycle()
+
+
+def unregister_forearm_twist_runtime():
+    global _DRAW_HANDLE, _RUNTIME_REGISTERED, _INITIALIZE_PENDING, _SCENE_CLEANUP_PENDING
+    _RUNTIME_REGISTERED = False
+    _INITIALIZE_PENDING = False
+    _SCENE_CLEANUP_PENDING |= _SCENE_STATE_ACTIVE or _SESSION is not None
+    for name, handler in _HANDLERS:
+        handlers = getattr(bpy.app.handlers, name)
+        if handler in handlers:
+            handlers.remove(handler)
+    if _DRAW_HANDLE is not None:
+        bpy.types.SpaceView3D.draw_handler_remove(_DRAW_HANDLE, "WINDOW")
+        _DRAW_HANDLE = None
+    _request_runtime_lifecycle()
+    _CACHE.clear()
+    _OUTPUT_CACHE.clear()
+    validation_cache.clear()
+    if not _SCENE_CLEANUP_PENDING:
+        _KEY_REFERENCES.clear()
+    _ERRORS.clear()

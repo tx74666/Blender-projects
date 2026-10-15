@@ -1,0 +1,2471 @@
+{
+  "schema": "x.native-mesh-delete-private-probe/2",
+  "completed": true,
+  "pid": 33820,
+  "created_utc": "2026-10-14T18:28:46.640656+00:00",
+  "model_and_reasoning_effort": "unrecorded",
+  "input_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "input_matches_artist_at_start": true,
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_native_mesh_delete_v2.py",
+    "sha256": "c4a3338ce6efc3220759f502e205a122d9d5dfc1f04a9d41afc8c853f20c9b39",
+    "bytes": 13531
+  },
+  "parent_probe": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_shoes_removal.py",
+    "sha256": "896bec93ab8df423238d115410130e4fedd6380cfbab673a820c81b9d8a2833d"
+  },
+  "blender": "5.2.0 LTS",
+  "frame_sequence": [
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30
+  ],
+  "deletion_method": "native_operator_default",
+  "source_version": [
+    0,
+    77,
+    40
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+      "sha256": "254c6b69d99db3e6d4d95251254b5fe395595f9e43d3f8f532e5925f6b9d9846",
+      "bytes": 355944
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "490a62c64a83cb61d6e6b47df350595f4cf8cc8973ba276cf10cb447875791b6",
+      "bytes": 98659
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "55b1dad8c9bfd6986a34b5e4cfc6c120dba80fedb2c76f09d613ad80b17a57fd",
+      "bytes": 45088
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_original_inventory.py",
+      "sha256": "28a86885c5cba5579cd054a41d27933787f33ec0d19cf452f4a858da4ca069ac",
+      "bytes": 4567
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\limb_ik.py",
+      "sha256": "68aabcbfcc7010d0b94f096b935c6065f0099e809ad39253abece168453dfcfc",
+      "bytes": 450542
+    }
+  ],
+  "source_metadata_changed": false,
+  "cases": [
+    {
+      "label": "complete",
+      "delete_order": [],
+      "scene": "Scene",
+      "references_before": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_before": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 148.5595
+      },
+      "inventory_before": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 61.4648
+      },
+      "route_before": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "managed_before": {
+        "Cosha": [
+          {
+            "side": "L",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.L.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "a823e69eb941da6c0ab06466f1daa5618da99705d64ddda1e817b11ab68840ce"
+          },
+          {
+            "side": "R",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.R.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "f243774b1ae35a44b4e72d0a8ec02aac2fd3ae7bed04fe104afa3a43c4af2b98"
+          }
+        ]
+      },
+      "deletions": [],
+      "references_after_mutation": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_after_mutation": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 23.9504
+      },
+      "inventory_after_mutation": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 47.7858
+      },
+      "route_after_mutation": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "frames": [
+        {
+          "frame": 2,
+          "frame_set_ms": 145.8853,
+          "view_layer_update_ms": 0.0224,
+          "total_evaluation_ms": 145.9077,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 89.374,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 1.1217,
+              "mean_call_ms": 1.1217
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 19.3089,
+              "mean_call_ms": 19.3089
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 21.5394,
+              "mean_call_ms": 21.5394
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 38.6729,
+              "mean_call_ms": 38.6729
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 44.3287,
+              "mean_call_ms": 44.3287
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 44.4483,
+              "mean_call_ms": 44.4483
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 89.2999,
+              "mean_call_ms": 89.2999
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 89.374,
+              "mean_call_ms": 89.374
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "frame_set_ms": 154.2779,
+          "view_layer_update_ms": 0.021,
+          "total_evaluation_ms": 154.2989,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 115.6648,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 1.4108,
+              "mean_call_ms": 1.4108
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 30.0827,
+              "mean_call_ms": 30.0827
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 32.9461,
+              "mean_call_ms": 32.9461
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 53.5995,
+              "mean_call_ms": 53.5995
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 60.2455,
+              "mean_call_ms": 60.2455
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 54.7332,
+              "mean_call_ms": 54.7332
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 115.5931,
+              "mean_call_ms": 115.5931
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 115.6648,
+              "mean_call_ms": 115.6648
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "frame_set_ms": 127.7339,
+          "view_layer_update_ms": 0.0306,
+          "total_evaluation_ms": 127.7645,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 91.5804,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.8353,
+              "mean_call_ms": 0.8353
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 18.1642,
+              "mean_call_ms": 18.1642
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 19.8274,
+              "mean_call_ms": 19.8274
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 36.2419,
+              "mean_call_ms": 36.2419
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 41.8705,
+              "mean_call_ms": 41.8705
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 49.0734,
+              "mean_call_ms": 49.0734
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 91.4978,
+              "mean_call_ms": 91.4978
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 91.5804,
+              "mean_call_ms": 91.5804
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "frame_set_ms": 133.058,
+          "view_layer_update_ms": 0.0321,
+          "total_evaluation_ms": 133.0901,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 94.4296,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.8985,
+              "mean_call_ms": 0.8985
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 17.534,
+              "mean_call_ms": 17.534
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 19.2937,
+              "mean_call_ms": 19.2937
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 38.8499,
+              "mean_call_ms": 38.8499
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 45.9247,
+              "mean_call_ms": 45.9247
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 47.7576,
+              "mean_call_ms": 47.7576
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 94.3449,
+              "mean_call_ms": 94.3449
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 94.4296,
+              "mean_call_ms": 94.4296
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "frame_set_ms": 129.2638,
+          "view_layer_update_ms": 0.0307,
+          "total_evaluation_ms": 129.2945,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 89.1121,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.9544,
+              "mean_call_ms": 0.9544
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 19.3449,
+              "mean_call_ms": 19.3449
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 21.2749,
+              "mean_call_ms": 21.2749
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 37.1637,
+              "mean_call_ms": 37.1637
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 42.5802,
+              "mean_call_ms": 42.5802
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 45.913,
+              "mean_call_ms": 45.913
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 89.0232,
+              "mean_call_ms": 89.0232
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 89.1121,
+              "mean_call_ms": 89.1121
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "frame_set_ms": 129.834,
+          "view_layer_update_ms": 0.0266,
+          "total_evaluation_ms": 129.8606,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 89.8799,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 1.0001,
+              "mean_call_ms": 1.0001
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 18.3299,
+              "mean_call_ms": 18.3299
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 20.3524,
+              "mean_call_ms": 20.3524
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 37.2087,
+              "mean_call_ms": 37.2087
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 42.6177,
+              "mean_call_ms": 42.6177
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 46.7129,
+              "mean_call_ms": 46.7129
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 89.8049,
+              "mean_call_ms": 89.8049
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 89.8799,
+              "mean_call_ms": 89.8799
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "frame_set_ms": 129.4853,
+          "view_layer_update_ms": 0.0257,
+          "total_evaluation_ms": 129.511,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 88.8251,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 1.1453,
+              "mean_call_ms": 1.1453
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 19.3868,
+              "mean_call_ms": 19.3868
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 21.5782,
+              "mean_call_ms": 21.5782
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 38.5859,
+              "mean_call_ms": 38.5859
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 44.4644,
+              "mean_call_ms": 44.4644
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 43.7589,
+              "mean_call_ms": 43.7589
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 88.745,
+              "mean_call_ms": 88.745
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 88.8251,
+              "mean_call_ms": 88.8251
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "frame_set_ms": 138.3015,
+          "view_layer_update_ms": 0.0401,
+          "total_evaluation_ms": 138.3416,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 99.5341,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.8652,
+              "mean_call_ms": 0.8652
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 21.8152,
+              "mean_call_ms": 21.8152
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 23.5533,
+              "mean_call_ms": 23.5533
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 41.538,
+              "mean_call_ms": 41.538
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 47.5095,
+              "mean_call_ms": 47.5095
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 51.3646,
+              "mean_call_ms": 51.3646
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 99.4129,
+              "mean_call_ms": 99.4129
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 99.5341,
+              "mean_call_ms": 99.5341
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 131.47535,
+      "median_runtime_inclusive_ms": 90.73015000000001,
+      "errors_after": {},
+      "route_after": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "managed_after": {
+        "Cosha": [
+          {
+            "side": "L",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.L.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "2f255ce56baa691a91965e07b1f387b839c0be0a36e810ac50e8f4b384242892"
+          },
+          {
+            "side": "R",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.R.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "f694982677b87981f3db37db2d8c28a44a31399194a852b2253b472fd06e8f49"
+          }
+        ]
+      },
+      "performance_acceptance": false,
+      "no_scene_save": true
+    },
+    {
+      "label": "delete_cosha",
+      "delete_order": [
+        "Cosha"
+      ],
+      "scene": "Scene",
+      "references_before": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_before": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 24.8957
+      },
+      "inventory_before": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 43.6323
+      },
+      "route_before": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "managed_before": {
+        "Cosha": [
+          {
+            "side": "L",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.L.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "a823e69eb941da6c0ab06466f1daa5618da99705d64ddda1e817b11ab68840ce"
+          },
+          {
+            "side": "R",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.R.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "f243774b1ae35a44b4e72d0a8ec02aac2fd3ae7bed04fe104afa3a43c4af2b98"
+          }
+        ]
+      },
+      "deletions": [
+        {
+          "object": "Cosha",
+          "operation": "bpy.ops.object.delete(use_global=False)",
+          "native_result": [
+            "FINISHED"
+          ],
+          "object_still_in_scene": false,
+          "object_still_in_bpy_data": true,
+          "mesh_data_still_in_bpy_data": true,
+          "key_data_still_in_bpy_data": true,
+          "no_live_scene_access": true
+        }
+      ],
+      "references_after_mutation": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_after_mutation": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 26.9673
+      },
+      "inventory_after_mutation": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 43.4998
+      },
+      "route_after_mutation": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "frames": [
+        {
+          "frame": 2,
+          "frame_set_ms": 42.7818,
+          "view_layer_update_ms": 0.0226,
+          "total_evaluation_ms": 42.8044,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0501,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0501,
+              "mean_call_ms": 0.0501
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "frame_set_ms": 42.4028,
+          "view_layer_update_ms": 0.0277,
+          "total_evaluation_ms": 42.4305,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0581,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0581,
+              "mean_call_ms": 0.0581
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "frame_set_ms": 47.8205,
+          "view_layer_update_ms": 0.0226,
+          "total_evaluation_ms": 47.8431,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0503,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0503,
+              "mean_call_ms": 0.0503
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "frame_set_ms": 45.7886,
+          "view_layer_update_ms": 0.0325,
+          "total_evaluation_ms": 45.8211,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0674,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0674,
+              "mean_call_ms": 0.0674
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "frame_set_ms": 50.0219,
+          "view_layer_update_ms": 0.0343,
+          "total_evaluation_ms": 50.0562,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0495,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0495,
+              "mean_call_ms": 0.0495
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "frame_set_ms": 45.2468,
+          "view_layer_update_ms": 0.0377,
+          "total_evaluation_ms": 45.2845,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0573,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0573,
+              "mean_call_ms": 0.0573
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "frame_set_ms": 40.4448,
+          "view_layer_update_ms": 0.0204,
+          "total_evaluation_ms": 40.4652,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0488,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0488,
+              "mean_call_ms": 0.0488
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "frame_set_ms": 41.7949,
+          "view_layer_update_ms": 0.0244,
+          "total_evaluation_ms": 41.8193,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.061,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.061,
+              "mean_call_ms": 0.061
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 44.04445,
+      "median_runtime_inclusive_ms": 0.0538,
+      "errors_after": {},
+      "route_after": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "managed_after": {},
+      "performance_acceptance": false,
+      "no_scene_save": true
+    },
+    {
+      "label": "delete_cosha_then_shoes",
+      "delete_order": [
+        "Cosha",
+        "Shoes"
+      ],
+      "scene": "Scene",
+      "references_before": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_before": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 22.9073
+      },
+      "inventory_before": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 41.3155
+      },
+      "route_before": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "managed_before": {
+        "Cosha": [
+          {
+            "side": "L",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.L.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "a823e69eb941da6c0ab06466f1daa5618da99705d64ddda1e817b11ab68840ce"
+          },
+          {
+            "side": "R",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.R.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "f243774b1ae35a44b4e72d0a8ec02aac2fd3ae7bed04fe104afa3a43c4af2b98"
+          }
+        ]
+      },
+      "deletions": [
+        {
+          "object": "Cosha",
+          "operation": "bpy.ops.object.delete(use_global=False)",
+          "native_result": [
+            "FINISHED"
+          ],
+          "object_still_in_scene": false,
+          "object_still_in_bpy_data": true,
+          "mesh_data_still_in_bpy_data": true,
+          "key_data_still_in_bpy_data": true,
+          "no_live_scene_access": true
+        },
+        {
+          "object": "Shoes",
+          "operation": "bpy.ops.object.delete(use_global=False)",
+          "native_result": [
+            "FINISHED"
+          ],
+          "object_still_in_scene": false,
+          "object_still_in_bpy_data": true,
+          "mesh_data_still_in_bpy_data": true,
+          "key_data_still_in_bpy_data": null,
+          "no_live_scene_access": true
+        }
+      ],
+      "references_after_mutation": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_after_mutation": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 22.7052
+      },
+      "inventory_after_mutation": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 39.1301
+      },
+      "route_after_mutation": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "frames": [
+        {
+          "frame": 2,
+          "frame_set_ms": 11.1837,
+          "view_layer_update_ms": 0.0215,
+          "total_evaluation_ms": 11.2052,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0464,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0464,
+              "mean_call_ms": 0.0464
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "frame_set_ms": 9.78,
+          "view_layer_update_ms": 0.0194,
+          "total_evaluation_ms": 9.7994,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0443,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0443,
+              "mean_call_ms": 0.0443
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "frame_set_ms": 9.2455,
+          "view_layer_update_ms": 0.02,
+          "total_evaluation_ms": 9.2655,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0456,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0456,
+              "mean_call_ms": 0.0456
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "frame_set_ms": 9.6458,
+          "view_layer_update_ms": 0.0209,
+          "total_evaluation_ms": 9.6667,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0463,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0463,
+              "mean_call_ms": 0.0463
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "frame_set_ms": 8.9999,
+          "view_layer_update_ms": 0.0189,
+          "total_evaluation_ms": 9.0188,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0445,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0445,
+              "mean_call_ms": 0.0445
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "frame_set_ms": 9.49,
+          "view_layer_update_ms": 0.0194,
+          "total_evaluation_ms": 9.5094,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0442,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0442,
+              "mean_call_ms": 0.0442
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "frame_set_ms": 8.6722,
+          "view_layer_update_ms": 0.0196,
+          "total_evaluation_ms": 8.6918,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0418,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0418,
+              "mean_call_ms": 0.0418
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "frame_set_ms": 9.4471,
+          "view_layer_update_ms": 0.0219,
+          "total_evaluation_ms": 9.469,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 0.0452,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0452,
+              "mean_call_ms": 0.0452
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 0,
+            "calibrated_mesh_names": [],
+            "no_calibrated_mesh_in_scene": true,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {}
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 9.4892,
+      "median_runtime_inclusive_ms": 0.04485,
+      "errors_after": {},
+      "route_after": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "managed_after": {},
+      "performance_acceptance": false,
+      "no_scene_save": true
+    },
+    {
+      "label": "delete_shoes",
+      "delete_order": [
+        "Shoes"
+      ],
+      "scene": "Scene",
+      "references_before": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_before": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 20.7141
+      },
+      "inventory_before": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 36.0637
+      },
+      "route_before": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "managed_before": {
+        "Cosha": [
+          {
+            "side": "L",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.L.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "a823e69eb941da6c0ab06466f1daa5618da99705d64ddda1e817b11ab68840ce"
+          },
+          {
+            "side": "R",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.R.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "f243774b1ae35a44b4e72d0a8ec02aac2fd3ae7bed04fe104afa3a43c4af2b98"
+          }
+        ]
+      },
+      "deletions": [
+        {
+          "object": "Shoes",
+          "operation": "bpy.ops.object.delete(use_global=False)",
+          "native_result": [
+            "FINISHED"
+          ],
+          "object_still_in_scene": false,
+          "object_still_in_bpy_data": true,
+          "mesh_data_still_in_bpy_data": true,
+          "key_data_still_in_bpy_data": null,
+          "no_live_scene_access": true
+        }
+      ],
+      "references_after_mutation": {
+        "adopted_record_present": true,
+        "encoded_reference_count": 10,
+        "native_reference_count": 10,
+        "missing": [],
+        "related_mesh_and_key_references": [],
+        "tracked_mesh_object_data_key_action_names": [
+          "Cosha",
+          "Key",
+          "Mesh.002",
+          "Plane.007",
+          "Shoes",
+          "ShoesAction"
+        ]
+      },
+      "control_rest_after_mutation": {
+        "passed": true,
+        "result_type": "_MotionRestView",
+        "elapsed_ms": 23.455
+      },
+      "inventory_after_mutation": {
+        "passed": true,
+        "result_type": "dict",
+        "elapsed_ms": 38.5595
+      },
+      "route_after_mutation": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "frames": [
+        {
+          "frame": 2,
+          "frame_set_ms": 99.8356,
+          "view_layer_update_ms": 0.0248,
+          "total_evaluation_ms": 99.8604,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 86.9363,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 1.0801,
+              "mean_call_ms": 1.0801
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 19.0231,
+              "mean_call_ms": 19.0231
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 21.2146,
+              "mean_call_ms": 21.2146
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 37.454,
+              "mean_call_ms": 37.454
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 42.952,
+              "mean_call_ms": 42.952
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 43.414,
+              "mean_call_ms": 43.414
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 86.8566,
+              "mean_call_ms": 86.8566
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 86.9363,
+              "mean_call_ms": 86.9363
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "frame_set_ms": 99.1647,
+          "view_layer_update_ms": 0.0319,
+          "total_evaluation_ms": 99.1966,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 87.3214,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.8658,
+              "mean_call_ms": 0.8658
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 18.5192,
+              "mean_call_ms": 18.5192
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 20.2708,
+              "mean_call_ms": 20.2708
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 37.0419,
+              "mean_call_ms": 37.0419
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 42.7655,
+              "mean_call_ms": 42.7655
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 43.741,
+              "mean_call_ms": 43.741
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 87.247,
+              "mean_call_ms": 87.247
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 87.3214,
+              "mean_call_ms": 87.3214
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "frame_set_ms": 103.2483,
+          "view_layer_update_ms": 0.0394,
+          "total_evaluation_ms": 103.2877,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 90.4125,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.8526,
+              "mean_call_ms": 0.8526
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 17.8543,
+              "mean_call_ms": 17.8543
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 19.5735,
+              "mean_call_ms": 19.5735
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 35.6455,
+              "mean_call_ms": 35.6455
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 41.2665,
+              "mean_call_ms": 41.2665
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 48.5436,
+              "mean_call_ms": 48.5436
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 90.3182,
+              "mean_call_ms": 90.3182
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 90.4125,
+              "mean_call_ms": 90.4125
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "frame_set_ms": 124.906,
+          "view_layer_update_ms": 0.0346,
+          "total_evaluation_ms": 124.9406,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 111.3911,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 1.0186,
+              "mean_call_ms": 1.0186
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 24.0031,
+              "mean_call_ms": 24.0031
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 26.0988,
+              "mean_call_ms": 26.0988
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 45.906,
+              "mean_call_ms": 45.906
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 51.8066,
+              "mean_call_ms": 51.8066
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 58.8589,
+              "mean_call_ms": 58.8589
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 111.2251,
+              "mean_call_ms": 111.2251
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 111.3911,
+              "mean_call_ms": 111.3911
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "frame_set_ms": 115.7421,
+          "view_layer_update_ms": 0.0304,
+          "total_evaluation_ms": 115.7725,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 101.9002,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 1.2011,
+              "mean_call_ms": 1.2011
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 20.5293,
+              "mean_call_ms": 20.5293
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 22.8953,
+              "mean_call_ms": 22.8953
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 43.8401,
+              "mean_call_ms": 43.8401
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 50.2534,
+              "mean_call_ms": 50.2534
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 50.9822,
+              "mean_call_ms": 50.9822
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 101.806,
+              "mean_call_ms": 101.806
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 101.9002,
+              "mean_call_ms": 101.9002
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "frame_set_ms": 111.5344,
+          "view_layer_update_ms": 0.0315,
+          "total_evaluation_ms": 111.5659,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 96.5056,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.9478,
+              "mean_call_ms": 0.9478
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 20.7895,
+              "mean_call_ms": 20.7895
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 22.751,
+              "mean_call_ms": 22.751
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 41.3169,
+              "mean_call_ms": 41.3169
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 49.2912,
+              "mean_call_ms": 49.2912
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 46.6094,
+              "mean_call_ms": 46.6094
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 96.416,
+              "mean_call_ms": 96.416
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 96.5056,
+              "mean_call_ms": 96.5056
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "frame_set_ms": 106.4759,
+          "view_layer_update_ms": 0.0468,
+          "total_evaluation_ms": 106.5227,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 93.2737,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.916,
+              "mean_call_ms": 0.916
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 18.93,
+              "mean_call_ms": 18.93
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 20.7296,
+              "mean_call_ms": 20.7296
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 38.3548,
+              "mean_call_ms": 38.3548
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 43.9879,
+              "mean_call_ms": 43.9879
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 48.5836,
+              "mean_call_ms": 48.5836
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 93.1647,
+              "mean_call_ms": 93.1647
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 93.2737,
+              "mean_call_ms": 93.2737
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "frame_set_ms": 103.9918,
+          "view_layer_update_ms": 0.0336,
+          "total_evaluation_ms": 104.0254,
+          "runtime_calls": 1,
+          "runtime_inclusive_ms": 91.9639,
+          "functions": {
+            "character_designer.animation_worklist_target._load_rest_record": {
+              "calls": 1,
+              "inclusive_ms": 0.9558,
+              "mean_call_ms": 0.9558
+            },
+            "character_designer.animation_worklist_target._prove_motion_data": {
+              "calls": 1,
+              "inclusive_ms": 19.6813,
+              "mean_call_ms": 19.6813
+            },
+            "character_designer.animation_worklist_target.control_rest_view": {
+              "calls": 1,
+              "inclusive_ms": 21.6733,
+              "mean_call_ms": 21.6733
+            },
+            "character_designer.forearm_original_inventory.validate": {
+              "calls": 1,
+              "inclusive_ms": 38.9715,
+              "mean_call_ms": 38.9715
+            },
+            "character_designer.forearm_twist._prepare_runtime_records": {
+              "calls": 1,
+              "inclusive_ms": 44.6868,
+              "mean_call_ms": 44.6868
+            },
+            "character_designer.forearm_twist._calculate_records": {
+              "calls": 1,
+              "inclusive_ms": 46.6798,
+              "mean_call_ms": 46.6798
+            },
+            "character_designer.forearm_twist._calculate_object": {
+              "calls": 1,
+              "inclusive_ms": 91.8831,
+              "mean_call_ms": 91.8831
+            },
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 91.9639,
+              "mean_call_ms": 91.9639
+            }
+          },
+          "route": {
+            "calibrated_mesh_count": 1,
+            "calibrated_mesh_names": [
+              "Cosha"
+            ],
+            "no_calibrated_mesh_in_scene": false,
+            "errors_for_present_calibrated_meshes": {},
+            "errors_for_other_or_removed_meshes": {},
+            "managed": {
+              "Cosha": [
+                {
+                  "side": "L",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.L.002",
+                  "mute": false,
+                  "value": 1.0
+                },
+                {
+                  "side": "R",
+                  "enabled": true,
+                  "support_vertices": 191,
+                  "key": "CD Forearm Twist.R.002",
+                  "mute": false,
+                  "value": 1.0
+                }
+              ]
+            }
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 105.27405,
+      "median_runtime_inclusive_ms": 92.6188,
+      "errors_after": {},
+      "route_after": {
+        "calibrated_mesh_count": 1,
+        "calibrated_mesh_names": [
+          "Cosha"
+        ],
+        "no_calibrated_mesh_in_scene": false,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {
+          "Cosha": [
+            {
+              "side": "L",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.L.002",
+              "mute": false,
+              "value": 1.0
+            },
+            {
+              "side": "R",
+              "enabled": true,
+              "support_vertices": 191,
+              "key": "CD Forearm Twist.R.002",
+              "mute": false,
+              "value": 1.0
+            }
+          ]
+        }
+      },
+      "managed_after": {
+        "Cosha": [
+          {
+            "side": "L",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.L.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "2f255ce56baa691a91965e07b1f387b839c0be0a36e810ac50e8f4b384242892"
+          },
+          {
+            "side": "R",
+            "enabled": true,
+            "support_vertices": 191,
+            "key": "CD Forearm Twist.R.002",
+            "mute": false,
+            "value": 1.0,
+            "coordinate_sha256": "f694982677b87981f3db37db2d8c28a44a31399194a852b2253b472fd06e8f49"
+          }
+        ]
+      },
+      "performance_acceptance": false,
+      "no_scene_save": true
+    }
+  ],
+  "input_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "artist_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "input_disk_unchanged": true,
+  "artist_disk_unchanged": true,
+  "no_save_operation": true,
+  "no_live_artist_access": true,
+  "no_deploy": true,
+  "no_refresh": true,
+  "limits": [
+    "Private saved-copy background native Delete/frame evaluation; not GUI FPS or current unsaved artist state.",
+    "Each case reopens the saved copy; live Ctrl Z behavior is not tested or represented as passed.",
+    "Removing the only calibrated mesh eliminates its workload and outputs; this is distinct from invalid provenance or paused correction.",
+    "Only Character Designer registered; external GUI handlers, drawing and shader costs are absent.",
+    "Failed/muted/removed correction is diagnostic, not a valid optimization or whole-model equivalence.",
+    "Nested function times overlap and are inside total evaluation; do not add them.",
+    "Eight hot frames after two warm frames per case under shared load; not final paired acceptance."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "x.current-shader-native-api-diagnostic/1",
+  "completed": false,
+  "acceptance": false,
+  "no_addon_registration_solver_seek_update_or_save": true,
+  "scope": "Stored Cycles scalar shape and annotation pointer metadata only; not geometry/resource/evaluated shader or full RAM acceptance.",
+  "pid": 31624,
+  "blender": "5.2.0 LTS",
+  "files_before": {
+    "input": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\blendcache_current_snapshot_001\\current.blend",
+      "sha256": "6fd14673d8acf03fd96b9856b1db09dd39a5492ae91ef3b68b49be80cd83a848",
+      "bytes": 34843358
+    },
+    "artist": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+      "sha256": "468bb6b297c56dd4b9c5f2dcd171ac240e31b9e87c4d6af998a1f64e76aafd29",
+      "bytes": 34840263
+    },
+    "receipt": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\current_model_save_copy_report_010.json",
+      "sha256": "0e630be1a411994dabb689a80ad8c94fb3663d9924cc6c74693d3d71483dd6cc",
+      "bytes": 49496
+    },
+    "script": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_current_shader_api_probe_009.py",
+      "sha256": "34da1e8b3b0b636f27a486c63e5f95b09f81bf01068c3dd2c16780686faa1c37",
+      "bytes": 11178
+    },
+    "input_helper": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_current_input_007.py",
+      "sha256": "24468bd93de3ed4b63f2a6e2ab6354f299bfe191d714cde3ff39e55a5b415a90",
+      "bytes": 5664
+    },
+    "cycles_source": {
+      "path": "D:\\Blender5.2\\5.2\\scripts\\addons_core\\cycles\\properties.py",
+      "sha256": "77f24ef03164684c5cc866fa748445043b32023cbbd121b5e6523bd6433abd9d",
+      "bytes": 76978
+    }
+  },
+  "current_snapshot_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\current_model_save_copy_report_010.json",
+    "sha256": "0e630be1a411994dabb689a80ad8c94fb3663d9924cc6c74693d3d71483dd6cc",
+    "bytes": 49496
+  },
+  "input_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\blendcache_current_snapshot_001\\current.blend",
+    "sha256": "6fd14673d8acf03fd96b9856b1db09dd39a5492ae91ef3b68b49be80cd83a848",
+    "bytes": 34843358
+  },
+  "error": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_current_shader_api_probe_009.py\", line 189, in <module>\n    run(args, report)\n    ~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_current_shader_api_probe_009.py\", line 111, in run\n    before, callbacks = context(bpy), handlers(bpy)\n                                      ~~~~~~~~^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_current_shader_api_probe_009.py\", line 88, in handlers\n    return {name: [id(item) for item in value] for name, value in vars(bpy.app.handlers).items() if isinstance(value, list)}\n                                                                  ~~~~^^^^^^^^^^^^^^^^^^\nTypeError: vars() argument must have __dict__ attribute\n"
+}

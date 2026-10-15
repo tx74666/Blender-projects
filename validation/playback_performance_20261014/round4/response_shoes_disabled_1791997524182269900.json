@@ -1,0 +1,1844 @@
+{
+  "schema": "x.playback-live-mesh-profile/3",
+  "id": "shoes_disabled_1791997524182269900",
+  "operation": "sample",
+  "created_utc": "2026-10-14T17:05:44.117038+00:00",
+  "pid": 24416,
+  "blender": "5.2.0 LTS",
+  "addons": {
+    "character_designer": {
+      "version": [
+        0,
+        77,
+        40
+      ],
+      "source_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+      "forearm_errors": {},
+      "forearm_busy": false
+    }
+  },
+  "installation_context": {
+    "window_pointer": 1522048817296,
+    "scene": "Scene",
+    "scene_pointer": 1522134704256,
+    "screen": "Geometry Nodes.001",
+    "screen_pointer": 1522024590464,
+    "area_type": "CONSOLE",
+    "area_pointer": 1522048160528,
+    "area_size": [
+      1188,
+      1018
+    ],
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "frame": 21,
+    "subframe": 0.0,
+    "sync_mode": "NONE",
+    "playing": false
+  },
+  "view_context": {
+    "window_pointer": 1522048817296,
+    "scene": "Scene",
+    "scene_pointer": 1522134704256,
+    "screen": "Geometry Nodes.001",
+    "screen_pointer": 1522024590464,
+    "area_type": "VIEW_3D",
+    "area_pointer": 1522048160528,
+    "area_size": [
+      1188,
+      1018
+    ],
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "frame": 21,
+    "subframe": 0.0,
+    "sync_mode": "NONE",
+    "playing": false,
+    "shading": "MATERIAL",
+    "show_region_ui": true
+  },
+  "no_save": true,
+  "no_refresh": true,
+  "no_addon_import": true,
+  "timing_scope": "Inclusive timings overlap; do not sum nested components. POST_PIXEL is a draw callback, not monitor presentation. Instrumentation adds wrapper, clock, counter, draw-handler and 0.5-second polling overhead; this instrumented sample does not independently measure that overhead or all GPU/native costs. Warmup is excluded from counters and events.",
+  "original_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\live_profiler.py",
+    "sha256": "6dd7a0adf34390abc74ad2cf80838981f8e2a89f7fdb72968b276b16df464551",
+    "bytes": 45403
+  },
+  "derived_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\live_profiler_mesh_v3.py",
+    "sha256": "878ea3f3af54738d116297e16ce7662e3cd6c291452198aea074004b01acce3e",
+    "bytes": 7568
+  },
+  "mesh_scope": "Reversible hide_set and allowed show_viewport only; no evaluated mesh extraction, deletion, action change or accepted-model optimization",
+  "mesh_diagnostic": {
+    "request": {
+      "hide_objects": [],
+      "disable_modifiers": {},
+      "disable_viewport_objects": [
+        "Shoes"
+      ]
+    },
+    "before_controls": [
+      {
+        "name": "Cosha",
+        "present": true,
+        "pointer": 1522043964128,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": false,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Armature",
+            "pointer": 1522021816704,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Subdivision",
+            "pointer": 1522044509328,
+            "type": "SUBSURF",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      },
+      {
+        "name": "Shoes",
+        "present": true,
+        "pointer": 1522043976368,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": false,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Mirror",
+            "pointer": 1522216952480,
+            "type": "MIRROR",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Armature",
+            "pointer": 1522216411120,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      }
+    ],
+    "before_geometry": [
+      {
+        "name": "Cosha",
+        "present": true,
+        "type": "MESH",
+        "object_pointer": 1522043964128,
+        "hide_set": false,
+        "hide_viewport": false,
+        "action": null,
+        "modifiers": [
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "viewport": true,
+            "render": true,
+            "rig": "CoshaRig",
+            "vertex_groups": true,
+            "envelopes": false,
+            "preserve_volume": false
+          },
+          {
+            "name": "Subdivision",
+            "type": "SUBSURF",
+            "viewport": true,
+            "render": true,
+            "levels": 1,
+            "render_levels": 2
+          }
+        ],
+        "mesh": "Mesh.002",
+        "base_vertices": 3658,
+        "base_edges": 7228,
+        "base_faces": 3584,
+        "vertex_group_count": 93,
+        "shape_key_count": 14,
+        "key_animation": null,
+        "material_slot_count": 7,
+        "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+      },
+      {
+        "name": "Shoes",
+        "present": true,
+        "type": "MESH",
+        "object_pointer": 1522043976368,
+        "hide_set": false,
+        "hide_viewport": false,
+        "action": {
+          "action": "ShoesAction",
+          "driver_count": 0,
+          "driver_paths": [],
+          "nla_track_count": 0,
+          "fcurve_count": 3,
+          "curve_paths": [
+            "delta_rotation_euler"
+          ],
+          "curve_paths_truncated": false,
+          "slot_handle": 929201142
+        },
+        "modifiers": [
+          {
+            "name": "Mirror",
+            "type": "MIRROR",
+            "viewport": true,
+            "render": true
+          },
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "viewport": true,
+            "render": true,
+            "rig": "CoshaRig",
+            "vertex_groups": true,
+            "envelopes": false,
+            "preserve_volume": false
+          }
+        ],
+        "mesh": "Plane.007",
+        "base_vertices": 28177,
+        "base_edges": 56045,
+        "base_faces": 27878,
+        "vertex_group_count": 76,
+        "shape_key_count": 0,
+        "key_animation": null,
+        "material_slot_count": 10,
+        "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+      }
+    ],
+    "runtime_errors_before": {
+      "character_designer": {
+        "errors": {},
+        "busy": false
+      }
+    },
+    "diagnostic_controls": [
+      {
+        "name": "Cosha",
+        "present": true,
+        "pointer": 1522043964128,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": false,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Armature",
+            "pointer": 1522021816704,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Subdivision",
+            "pointer": 1522044509328,
+            "type": "SUBSURF",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      },
+      {
+        "name": "Shoes",
+        "present": true,
+        "pointer": 1522043976368,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": true,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Mirror",
+            "pointer": 1522216952480,
+            "type": "MIRROR",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Armature",
+            "pointer": 1522216411120,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      }
+    ],
+    "diagnostic_geometry": [
+      {
+        "name": "Cosha",
+        "present": true,
+        "type": "MESH",
+        "object_pointer": 1522043964128,
+        "hide_set": false,
+        "hide_viewport": false,
+        "action": null,
+        "modifiers": [
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "viewport": true,
+            "render": true,
+            "rig": "CoshaRig",
+            "vertex_groups": true,
+            "envelopes": false,
+            "preserve_volume": false
+          },
+          {
+            "name": "Subdivision",
+            "type": "SUBSURF",
+            "viewport": true,
+            "render": true,
+            "levels": 1,
+            "render_levels": 2
+          }
+        ],
+        "mesh": "Mesh.002",
+        "base_vertices": 3658,
+        "base_edges": 7228,
+        "base_faces": 3584,
+        "vertex_group_count": 93,
+        "shape_key_count": 14,
+        "key_animation": null,
+        "material_slot_count": 7,
+        "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+      },
+      {
+        "name": "Shoes",
+        "present": true,
+        "type": "MESH",
+        "object_pointer": 1522043976368,
+        "hide_set": false,
+        "hide_viewport": true,
+        "action": {
+          "action": "ShoesAction",
+          "driver_count": 0,
+          "driver_paths": [],
+          "nla_track_count": 0,
+          "fcurve_count": 3,
+          "curve_paths": [
+            "delta_rotation_euler"
+          ],
+          "curve_paths_truncated": false,
+          "slot_handle": 929201142
+        },
+        "modifiers": [
+          {
+            "name": "Mirror",
+            "type": "MIRROR",
+            "viewport": true,
+            "render": true
+          },
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "viewport": true,
+            "render": true,
+            "rig": "CoshaRig",
+            "vertex_groups": true,
+            "envelopes": false,
+            "preserve_volume": false
+          }
+        ],
+        "mesh": "Plane.007",
+        "base_vertices": 28177,
+        "base_edges": 56045,
+        "base_faces": 27878,
+        "vertex_group_count": 76,
+        "shape_key_count": 0,
+        "key_animation": null,
+        "material_slot_count": 10,
+        "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+      }
+    ],
+    "runtime_errors_at_measurement_end": {
+      "character_designer": {
+        "errors": {},
+        "busy": false
+      }
+    },
+    "controls_at_measurement_end": [
+      {
+        "name": "Cosha",
+        "present": true,
+        "pointer": 1522043964128,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": false,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Armature",
+            "pointer": 1522021816704,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Subdivision",
+            "pointer": 1522044509328,
+            "type": "SUBSURF",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      },
+      {
+        "name": "Shoes",
+        "present": true,
+        "pointer": 1522043976368,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": true,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Mirror",
+            "pointer": 1522216952480,
+            "type": "MIRROR",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Armature",
+            "pointer": 1522216411120,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      }
+    ],
+    "after_controls": [
+      {
+        "name": "Cosha",
+        "present": true,
+        "pointer": 1522043964128,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": false,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Armature",
+            "pointer": 1522021816704,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Subdivision",
+            "pointer": 1522044509328,
+            "type": "SUBSURF",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      },
+      {
+        "name": "Shoes",
+        "present": true,
+        "pointer": 1522043976368,
+        "type": "MESH",
+        "hide_set": false,
+        "hide_viewport": false,
+        "hide_render": false,
+        "modifiers": [
+          {
+            "name": "Mirror",
+            "pointer": 1522216952480,
+            "type": "MIRROR",
+            "show_viewport": true,
+            "show_render": true
+          },
+          {
+            "name": "Armature",
+            "pointer": 1522216411120,
+            "type": "ARMATURE",
+            "show_viewport": true,
+            "show_render": true
+          }
+        ]
+      }
+    ],
+    "after_geometry": [
+      {
+        "name": "Cosha",
+        "present": true,
+        "type": "MESH",
+        "object_pointer": 1522043964128,
+        "hide_set": false,
+        "hide_viewport": false,
+        "action": null,
+        "modifiers": [
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "viewport": true,
+            "render": true,
+            "rig": "CoshaRig",
+            "vertex_groups": true,
+            "envelopes": false,
+            "preserve_volume": false
+          },
+          {
+            "name": "Subdivision",
+            "type": "SUBSURF",
+            "viewport": true,
+            "render": true,
+            "levels": 1,
+            "render_levels": 2
+          }
+        ],
+        "mesh": "Mesh.002",
+        "base_vertices": 3658,
+        "base_edges": 7228,
+        "base_faces": 3584,
+        "vertex_group_count": 93,
+        "shape_key_count": 14,
+        "key_animation": null,
+        "material_slot_count": 7,
+        "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+      },
+      {
+        "name": "Shoes",
+        "present": true,
+        "type": "MESH",
+        "object_pointer": 1522043976368,
+        "hide_set": false,
+        "hide_viewport": false,
+        "action": {
+          "action": "ShoesAction",
+          "driver_count": 0,
+          "driver_paths": [],
+          "nla_track_count": 0,
+          "fcurve_count": 3,
+          "curve_paths": [
+            "delta_rotation_euler"
+          ],
+          "curve_paths_truncated": false,
+          "slot_handle": 929201142
+        },
+        "modifiers": [
+          {
+            "name": "Mirror",
+            "type": "MIRROR",
+            "viewport": true,
+            "render": true
+          },
+          {
+            "name": "Armature",
+            "type": "ARMATURE",
+            "viewport": true,
+            "render": true,
+            "rig": "CoshaRig",
+            "vertex_groups": true,
+            "envelopes": false,
+            "preserve_volume": false
+          }
+        ],
+        "mesh": "Plane.007",
+        "base_vertices": 28177,
+        "base_edges": 56045,
+        "base_faces": 27878,
+        "vertex_group_count": 76,
+        "shape_key_count": 0,
+        "key_animation": null,
+        "material_slot_count": 10,
+        "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+      }
+    ],
+    "runtime_errors_after_restoration": {
+      "character_designer": {
+        "errors": {},
+        "busy": false
+      }
+    },
+    "controls_equal_after_frame_and_channel_restore": true,
+    "runtime_errors_restored_equal": true
+  },
+  "parent_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\live_profiler_mesh.py",
+    "sha256": "df397c6ead3fdad96bbb357298721fd303f1b324493e0c835587ec54ac1e4fbd",
+    "bytes": 18229
+  },
+  "callback_signature_scope": "Native handler/panel real positional arity retained; ordinary function wrappers retain forwarding",
+  "stop_result_scope": "PASS_THROUGH accepted only with immediate screen.is_animation_playing=false witness; all original restoration proofs remain required",
+  "callback_arities": {
+    "handler:frame_change_pre:0:character_designer.hair_wiggle_adapter._frame_guard": 1,
+    "handler:frame_change_pre:1:wiggle_2.wiggle_pre": 1,
+    "handler:frame_change_post:0:wiggle_2.wiggle_post": 2,
+    "handler:frame_change_post:1:bl_ext.user_default.auto_rig_pro.src.rig_functions.rig_layers_anim_update": 1,
+    "handler:frame_change_post:2:character_designer.bone_collections._frame_visibility": 2,
+    "handler:frame_change_post:3:character_designer.forearm_twist._frame_post": 2,
+    "handler:depsgraph_update_post:0:random_realm_builder_exporter.rr_shader_mixer._on_graph_update": 2,
+    "handler:depsgraph_update_post:1:character_designer.forearm_twist._graph_post": 2,
+    "handler:depsgraph_update_post:2:character_designer.body_calibration_display._invalidate": 0,
+    "function:character_designer.forearm_twist.update_runtime": null,
+    "function:character_designer.forearm_twist._prepare_runtime_records": null,
+    "function:character_designer.forearm_twist._calculate_object": null,
+    "function:character_designer.forearm_twist._calculate_records": null,
+    "function:character_designer.forearm_original_inventory.validate": null,
+    "function:character_designer.animation_worklist_target.control_rest_view": null,
+    "function:character_designer.animation_worklist_target._prove_motion_data": null,
+    "function:character_designer.unity_animation._rest_state": null,
+    "panel:character_designer.delta_symmetry.CHARACTERDESIGNER_PT_delta_symmetry.draw": 2,
+    "panel:character_designer.shape_key_tools.CHARACTERDESIGNER_PT_shape_key_tools.draw": 2,
+    "panel:character_designer.reference_views.CHARACTERDESIGNER_PT_reference_views.draw": 2,
+    "panel:character_designer.limb_ik.CHARACTERDESIGNER_PT_limb_ik.draw": 2,
+    "panel:character_designer.limb_ik.CHARACTERDESIGNER_PT_limb_ik_target_rotation.draw": 2,
+    "panel:character_designer.limb_ik.CHARACTERDESIGNER_PT_limb_ik_control_visual.draw": 2,
+    "panel:character_designer.limb_ik.CHARACTERDESIGNER_PT_limb_ik_direct_preroll.draw": 2,
+    "panel:character_designer.spline_ik_setup.CHARACTERDESIGNER_PT_spline_ik_setup.draw": 2,
+    "panel:character_designer.selected_bone_weights.CHARACTERDESIGNER_PT_weight_tools.draw": 2,
+    "panel:character_designer.character_setup.CHARACTERDESIGNER_PT_character_setup.draw": 2,
+    "panel:character_designer.character_setup.CHARACTERDESIGNER_PT_quick_bind.draw": 2,
+    "panel:character_designer.unity_export_ui.CHARACTERDESIGNER_PT_unity_export.draw": 2,
+    "panel:character_designer.bone_display.CHARACTERDESIGNER_PT_bone_display.draw": 2,
+    "panel:character_designer.bone_display.CHARACTERDESIGNER_PT_bone_color_palette.draw": 2,
+    "panel:character_designer.torso_ui.CHARACTERDESIGNER_PT_torso_controls.draw": 2,
+    "panel:character_designer.hair_bones.CHARACTERDESIGNER_PT_hair_bones.draw": 2,
+    "panel:character_designer.hair_motion_ui.CHARACTERDESIGNER_PT_hair_motion.draw": 2,
+    "panel:character_designer.skirt.CHARACTERDESIGNER_PT_skirt_setup.draw": 2,
+    "panel:character_designer.animation.CHARACTERDESIGNER_PT_animation.draw": 2,
+    "panel:character_designer.weight_symmetry.CHARACTERDESIGNER_PT_weight_symmetry.draw": 2,
+    "panel:character_designer.refine_symmetry_ui.CHARACTERDESIGNER_PT_refine_symmetry.draw": 2,
+    "panel:character_designer.forearm_twist.CHARACTERDESIGNER_PT_forearm_twist.draw": 2,
+    "panel:character_designer.finger_bones.CHARACTERDESIGNER_PT_fingers.draw": 2,
+    "panel:character_designer.CHARACTERDESIGNER_PT_main.draw": 2,
+    "panel:character_designer.CHARACTERDESIGNER_PT_curve_tools.draw": 2,
+    "panel:character_designer.CHARACTERDESIGNER_PT_rig_sections.draw": 2,
+    "panel:character_designer.control_weight_paint.CHARACTERDESIGNER_PT_control_weights.draw": 2
+  },
+  "callback_exceptions": {},
+  "animation_cancel": {
+    "attempted": true,
+    "native_result": [
+      "PASS_THROUGH"
+    ],
+    "playing_false_witness": true,
+    "playing_after_restoration": false
+  },
+  "accepted_parent_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\live_profiler_mesh_v2.py",
+    "sha256": "c362f4151a4bd45a5a1106631842cc875b7934d90b845e495e782b46949bd7a4",
+    "bytes": 10129
+  },
+  "object_viewport_scope": "Existing local Cosha/Shoes hide_viewport only; animated/uncertain flags refused; original flags restored before frame_set and all inherited proofs",
+  "completed": true,
+  "stop_reason": "elapsed",
+  "request": {
+    "shading": "SOLID",
+    "seconds": 16,
+    "warmup_seconds": 2,
+    "hide_sidebar": true,
+    "hide_objects": [],
+    "disable_modifiers": {},
+    "disable_viewport_objects": [
+      "Shoes"
+    ]
+  },
+  "before": {
+    "window_pointer": 1522048817296,
+    "scene": "Scene",
+    "scene_pointer": 1522134704256,
+    "screen": "Geometry Nodes.001",
+    "screen_pointer": 1522024590464,
+    "area_type": "VIEW_3D",
+    "area_pointer": 1522048160528,
+    "area_size": [
+      1188,
+      1018
+    ],
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "frame": 21,
+    "subframe": 0.0,
+    "sync_mode": "NONE",
+    "playing": false,
+    "shading": "MATERIAL",
+    "show_region_ui": true
+  },
+  "after": {
+    "window_pointer": 1522048817296,
+    "scene": "Scene",
+    "scene_pointer": 1522134704256,
+    "screen": "Geometry Nodes.001",
+    "screen_pointer": 1522024590464,
+    "area_type": "VIEW_3D",
+    "area_pointer": 1522048160528,
+    "area_size": [
+      1188,
+      1018
+    ],
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "frame": 21,
+    "subframe": 0.0,
+    "sync_mode": "NONE",
+    "playing": false,
+    "shading": "MATERIAL",
+    "show_region_ui": true
+  },
+  "restored": {
+    "frame": true,
+    "subframe": true,
+    "sync_mode": true,
+    "playing": true,
+    "shading": true,
+    "show_region_ui": true,
+    "scene_pointer": true,
+    "screen_pointer": true,
+    "area_pointer": true,
+    "mode": true,
+    "active_object": true,
+    "selected_objects": true,
+    "handlers_equal": {
+      "frame_change_pre": true,
+      "frame_change_post": true,
+      "depsgraph_update_pre": true,
+      "depsgraph_update_post": true
+    },
+    "functions_equal": true,
+    "panels_equal": true,
+    "draw_handler_removed": true,
+    "mesh_controls_restored": true,
+    "object_viewport_flags_restored": true,
+    "raw_channels_equal": true,
+    "managed_coordinates_equal": true
+  },
+  "dirty_before": true,
+  "dirty_after": true,
+  "artist_channel_check": {
+    "before": {
+      "sha256": "3ee9b398d8b51ad6cb62ad03d08a6900e622d2e45f95661dfdc742428b9dc265",
+      "pose_bones": 359,
+      "shape_key_blocks": 14
+    },
+    "after": {
+      "sha256": "3ee9b398d8b51ad6cb62ad03d08a6900e622d2e45f95661dfdc742428b9dc265",
+      "pose_bones": 359,
+      "shape_key_blocks": 14
+    },
+    "raw_channels_equal": true,
+    "managed_coordinate_checks": [
+      {
+        "object": "Cosha",
+        "key": "CD Forearm Twist.L.002",
+        "before_sha256": "a823e69eb941da6c0ab06466f1daa5618da99705d64ddda1e817b11ab68840ce",
+        "after_sha256": "a823e69eb941da6c0ab06466f1daa5618da99705d64ddda1e817b11ab68840ce",
+        "bytes": 43896,
+        "equal": true
+      },
+      {
+        "object": "Cosha",
+        "key": "CD Forearm Twist.R.002",
+        "before_sha256": "f243774b1ae35a44b4e72d0a8ec02aac2fd3ae7bed04fe104afa3a43c4af2b98",
+        "after_sha256": "f243774b1ae35a44b4e72d0a8ec02aac2fd3ae7bed04fe104afa3a43c4af2b98",
+        "bytes": 43896,
+        "equal": true
+      }
+    ],
+    "managed_coordinates_equal": true,
+    "coordinate_backups": [],
+    "raw_channel_scope": "Standard PoseBone transform channels and all scene mesh KeyBlock value/mute only; not a complete artist state proof."
+  },
+  "restored_raw_channel_count": 0,
+  "raw_channel_animation_conflicts": [],
+  "raw_channel_restoration_note": "Only existing changed channels were assigned. Existing action/driver ownership is reported conservatively; update_runtime is the already-loaded Forearm evaluator, not an add-on refresh. Any post-update mismatch fails the sample and retains private recovery evidence.",
+  "disk_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "disk_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "disk_unchanged": true,
+  "playback_elapsed_seconds": 16.5584617,
+  "total_playback_elapsed_seconds": 18.9715733,
+  "actual_warmup_seconds": 2.4129843,
+  "measurement_started": true,
+  "event_limit_reached": false,
+  "frame_evaluation_ms": {
+    "count": 84,
+    "median": 128.53755,
+    "mean": 128.16813333333334,
+    "min": 89.3742,
+    "max": 146.9336
+  },
+  "frame_pre_interval_ms": {
+    "count": 83,
+    "median": 198.3416,
+    "mean": 197.04019759036146,
+    "min": 116.7242,
+    "max": 237.8769
+  },
+  "post_pixel_interval_ms": {
+    "count": 83,
+    "median": 197.2354,
+    "mean": 197.0436156626506,
+    "min": 118.6063,
+    "max": 238.4933
+  },
+  "displayed_frame_change_interval_ms": {
+    "count": 83,
+    "median": 197.2354,
+    "mean": 197.0436156626506,
+    "min": 118.6063,
+    "max": 238.4933
+  },
+  "evaluated_frame_count": 84,
+  "post_pixel_count": 84,
+  "displayed_frame_change_count": 84,
+  "observed_post_pixel_hz": 5.075018526416275,
+  "observed_displayed_frame_change_hz": 5.075018526416275,
+  "components": {
+    "function:character_designer.animation_worklist_target._prove_motion_data": {
+      "count": 84,
+      "total_ms": 1473.5101,
+      "mean_ms": 17.541786904761903,
+      "max_ms": 27.2868,
+      "exception_count": 0
+    },
+    "function:character_designer.animation_worklist_target.control_rest_view": {
+      "count": 84,
+      "total_ms": 1616.5099,
+      "mean_ms": 19.244165476190478,
+      "max_ms": 29.8052,
+      "exception_count": 0
+    },
+    "function:character_designer.forearm_original_inventory.validate": {
+      "count": 84,
+      "total_ms": 2895.6742,
+      "mean_ms": 34.4723119047619,
+      "max_ms": 46.557,
+      "exception_count": 0
+    },
+    "function:character_designer.forearm_twist._calculate_object": {
+      "count": 84,
+      "total_ms": 6947.5051,
+      "mean_ms": 82.70839404761904,
+      "max_ms": 98.3164,
+      "exception_count": 0
+    },
+    "function:character_designer.forearm_twist._calculate_records": {
+      "count": 84,
+      "total_ms": 3455.7283,
+      "mean_ms": 41.13962261904762,
+      "max_ms": 49.4124,
+      "exception_count": 0
+    },
+    "function:character_designer.forearm_twist._prepare_runtime_records": {
+      "count": 84,
+      "total_ms": 3452.0703,
+      "mean_ms": 41.096075,
+      "max_ms": 52.7386,
+      "exception_count": 0
+    },
+    "function:character_designer.forearm_twist.update_runtime": {
+      "count": 84,
+      "total_ms": 6953.8433,
+      "mean_ms": 82.7838488095238,
+      "max_ms": 98.3958,
+      "exception_count": 0
+    },
+    "function:character_designer.unity_animation._rest_state": {
+      "count": 168,
+      "total_ms": 489.9749,
+      "mean_ms": 2.916517261904762,
+      "max_ms": 5.3239,
+      "exception_count": 0
+    },
+    "handler:frame_change_post:0:wiggle_2.wiggle_post": {
+      "count": 84,
+      "total_ms": 1.8027,
+      "mean_ms": 0.021460714285714288,
+      "max_ms": 0.0779,
+      "exception_count": 0
+    },
+    "handler:frame_change_post:1:bl_ext.user_default.auto_rig_pro.src.rig_functions.rig_layers_anim_update": {
+      "count": 84,
+      "total_ms": 1.023,
+      "mean_ms": 0.01217857142857143,
+      "max_ms": 0.0159,
+      "exception_count": 0
+    },
+    "handler:frame_change_post:2:character_designer.bone_collections._frame_visibility": {
+      "count": 84,
+      "total_ms": 137.7362,
+      "mean_ms": 1.6397166666666667,
+      "max_ms": 2.3232,
+      "exception_count": 0
+    },
+    "handler:frame_change_post:3:character_designer.forearm_twist._frame_post": {
+      "count": 84,
+      "total_ms": 6954.2862,
+      "mean_ms": 82.78912142857143,
+      "max_ms": 98.401,
+      "exception_count": 0
+    },
+    "handler:frame_change_pre:0:character_designer.hair_wiggle_adapter._frame_guard": {
+      "count": 84,
+      "total_ms": 0.118,
+      "mean_ms": 0.0014047619047619047,
+      "max_ms": 0.0025,
+      "exception_count": 0
+    },
+    "handler:frame_change_pre:1:wiggle_2.wiggle_pre": {
+      "count": 84,
+      "total_ms": 1.5492,
+      "mean_ms": 0.018442857142857143,
+      "max_ms": 0.0271,
+      "exception_count": 0
+    }
+  },
+  "frame_boundaries": [
+    {
+      "pre_ms": 17.0406,
+      "post_ms": 151.3044,
+      "frame": 4,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 254.9175,
+      "post_ms": 387.2988,
+      "frame": 5,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 453.349,
+      "post_ms": 589.0945,
+      "frame": 6,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 686.2535,
+      "post_ms": 815.5098,
+      "frame": 7,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 889.5177,
+      "post_ms": 1034.817,
+      "frame": 8,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 1124.1472,
+      "post_ms": 1249.671,
+      "frame": 9,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 1330.6498,
+      "post_ms": 1454.5384,
+      "frame": 10,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 1519.5236,
+      "post_ms": 1643.822,
+      "frame": 11,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 1698.0803,
+      "post_ms": 1832.6723,
+      "frame": 12,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 1893.3026,
+      "post_ms": 2026.954,
+      "frame": 13,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 2078.8852,
+      "post_ms": 2199.7994,
+      "frame": 14,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 2282.3242,
+      "post_ms": 2412.4064,
+      "frame": 15,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 2492.7569,
+      "post_ms": 2614.6707,
+      "frame": 16,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 2698.4044,
+      "post_ms": 2836.6933,
+      "frame": 17,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 2894.2093,
+      "post_ms": 3025.3538,
+      "frame": 18,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 3079.8165,
+      "post_ms": 3212.1452,
+      "frame": 19,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 3290.4231,
+      "post_ms": 3416.4951,
+      "frame": 20,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 3491.7094,
+      "post_ms": 3623.6842,
+      "frame": 21,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 3701.2117,
+      "post_ms": 3826.7127,
+      "frame": 22,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 3879.7271,
+      "post_ms": 4003.8775,
+      "frame": 23,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 4088.6974,
+      "post_ms": 4213.3021,
+      "frame": 24,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 4294.647,
+      "post_ms": 4426.6103,
+      "frame": 25,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 4528.217,
+      "post_ms": 4660.7105,
+      "frame": 26,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 4722.2089,
+      "post_ms": 4849.0118,
+      "frame": 27,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 4902.3522,
+      "post_ms": 5025.5266,
+      "frame": 28,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 5081.9547,
+      "post_ms": 5217.5382,
+      "frame": 29,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 5271.0091,
+      "post_ms": 5391.1251,
+      "frame": 30,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 5467.6713,
+      "post_ms": 5560.5554,
+      "frame": 1,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 5589.8588,
+      "post_ms": 5709.5575,
+      "frame": 2,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 5778.8624,
+      "post_ms": 5906.5767,
+      "frame": 3,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 5961.3644,
+      "post_ms": 6085.3568,
+      "frame": 4,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 6154.5604,
+      "post_ms": 6284.685,
+      "frame": 5,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 6338.1209,
+      "post_ms": 6469.5404,
+      "frame": 6,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 6549.4919,
+      "post_ms": 6679.2452,
+      "frame": 7,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 6758.3094,
+      "post_ms": 6892.7608,
+      "frame": 8,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 6956.7465,
+      "post_ms": 7083.5576,
+      "frame": 9,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 7136.7375,
+      "post_ms": 7277.0538,
+      "frame": 10,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 7335.9987,
+      "post_ms": 7460.7506,
+      "frame": 11,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 7518.0008,
+      "post_ms": 7647.7765,
+      "frame": 12,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 7733.2521,
+      "post_ms": 7862.3065,
+      "frame": 13,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 7953.9037,
+      "post_ms": 8091.6316,
+      "frame": 14,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 8156.1141,
+      "post_ms": 8281.1495,
+      "frame": 15,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 8341.3893,
+      "post_ms": 8475.7923,
+      "frame": 16,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 8538.0111,
+      "post_ms": 8684.9447,
+      "frame": 17,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 8759.3921,
+      "post_ms": 8897.7925,
+      "frame": 18,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 8981.9844,
+      "post_ms": 9110.2719,
+      "frame": 19,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 9170.4925,
+      "post_ms": 9300.2012,
+      "frame": 20,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 9352.0264,
+      "post_ms": 9475.765,
+      "frame": 21,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 9537.1886,
+      "post_ms": 9678.5469,
+      "frame": 22,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 9759.2436,
+      "post_ms": 9879.9801,
+      "frame": 23,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 9963.9201,
+      "post_ms": 10088.851,
+      "frame": 24,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 10200.0655,
+      "post_ms": 10329.422,
+      "frame": 25,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 10388.3369,
+      "post_ms": 10512.3589,
+      "frame": 26,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 10567.8246,
+      "post_ms": 10697.8446,
+      "frame": 27,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 10760.3928,
+      "post_ms": 10887.9504,
+      "frame": 28,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 10941.2583,
+      "post_ms": 11066.4723,
+      "frame": 29,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 11125.2441,
+      "post_ms": 11254.0317,
+      "frame": 30,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 11329.402,
+      "post_ms": 11418.7762,
+      "frame": 1,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 11446.1262,
+      "post_ms": 11583.1347,
+      "frame": 2,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 11659.0645,
+      "post_ms": 11782.4983,
+      "frame": 3,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 11835.7337,
+      "post_ms": 11973.9694,
+      "frame": 4,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 12047.8053,
+      "post_ms": 12177.6818,
+      "frame": 5,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 12264.2752,
+      "post_ms": 12400.4245,
+      "frame": 6,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 12480.258,
+      "post_ms": 12618.8618,
+      "frame": 7,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 12678.5996,
+      "post_ms": 12797.0514,
+      "frame": 8,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 12850.2213,
+      "post_ms": 12973.0097,
+      "frame": 9,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 13031.5313,
+      "post_ms": 13160.6782,
+      "frame": 10,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 13221.8279,
+      "post_ms": 13351.3209,
+      "frame": 11,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 13411.6133,
+      "post_ms": 13537.0965,
+      "frame": 12,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 13620.942,
+      "post_ms": 13745.9422,
+      "frame": 13,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 13822.7093,
+      "post_ms": 13948.34,
+      "frame": 14,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 14007.394,
+      "post_ms": 14130.0858,
+      "frame": 15,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 14185.3007,
+      "post_ms": 14310.4311,
+      "frame": 16,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 14385.5807,
+      "post_ms": 14519.5223,
+      "frame": 17,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 14595.4555,
+      "post_ms": 14717.0597,
+      "frame": 18,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 14790.4764,
+      "post_ms": 14914.056,
+      "frame": 19,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 14995.4962,
+      "post_ms": 15131.3944,
+      "frame": 20,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 15211.6184,
+      "post_ms": 15340.6981,
+      "frame": 21,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 15414.6645,
+      "post_ms": 15545.2352,
+      "frame": 22,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 15605.3619,
+      "post_ms": 15732.5662,
+      "frame": 23,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 15804.3378,
+      "post_ms": 15926.238,
+      "frame": 24,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 16009.1558,
+      "post_ms": 16134.2343,
+      "frame": 25,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 16194.7408,
+      "post_ms": 16319.7328,
+      "frame": 26,
+      "subframe": 0.0
+    },
+    {
+      "pre_ms": 16371.377,
+      "post_ms": 16494.1776,
+      "frame": 27,
+      "subframe": 0.0
+    }
+  ],
+  "display_boundaries": [
+    {
+      "at_ms": 13.3317,
+      "frame": 3,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 251.825,
+      "frame": 4,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 449.1414,
+      "frame": 5,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 681.5748,
+      "frame": 6,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 885.6821,
+      "frame": 7,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 1120.6613,
+      "frame": 8,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 1327.6712,
+      "frame": 9,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 1513.7138,
+      "frame": 10,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 1694.612,
+      "frame": 11,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 1890.0161,
+      "frame": 12,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 2075.777,
+      "frame": 13,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 2278.9485,
+      "frame": 14,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 2488.0426,
+      "frame": 15,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 2695.6232,
+      "frame": 16,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 2890.9149,
+      "frame": 17,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 3076.682,
+      "frame": 18,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 3287.54,
+      "frame": 19,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 3486.7825,
+      "frame": 20,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 3697.3534,
+      "frame": 21,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 3876.5235,
+      "frame": 22,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 4085.7962,
+      "frame": 23,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 4290.4044,
+      "frame": 24,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 4522.9355,
+      "frame": 25,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 4719.3639,
+      "frame": 26,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 4899.4522,
+      "frame": 27,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 5079.0645,
+      "frame": 28,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 5267.7967,
+      "frame": 29,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 5464.692,
+      "frame": 30,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 5587.3416,
+      "frame": 1,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 5775.3664,
+      "frame": 2,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 5957.1128,
+      "frame": 3,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 6151.1757,
+      "frame": 4,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 6334.7536,
+      "frame": 5,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 6543.2336,
+      "frame": 6,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 6755.2848,
+      "frame": 7,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 6952.6309,
+      "frame": 8,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 7133.7959,
+      "frame": 9,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 7333.1271,
+      "frame": 10,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 7513.5049,
+      "frame": 11,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 7728.5696,
+      "frame": 12,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 7950.6906,
+      "frame": 13,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 8152.9916,
+      "frame": 14,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 8337.1836,
+      "frame": 15,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 8533.201,
+      "frame": 16,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 8755.633,
+      "frame": 17,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 8978.7976,
+      "frame": 18,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 9167.3247,
+      "frame": 19,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 9349.0192,
+      "frame": 20,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 9532.4007,
+      "frame": 21,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 9756.3457,
+      "frame": 22,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 9960.9654,
+      "frame": 23,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 10197.2674,
+      "frame": 24,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 10384.4935,
+      "frame": 25,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 10562.4766,
+      "frame": 26,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 10756.6808,
+      "frame": 27,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 10938.2378,
+      "frame": 28,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 11122.022,
+      "frame": 29,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 11326.4187,
+      "frame": 30,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 11445.025,
+      "frame": 1,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 11654.43,
+      "frame": 2,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 11832.7555,
+      "frame": 3,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 12043.3742,
+      "frame": 4,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 12260.9548,
+      "frame": 5,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 12477.0128,
+      "frame": 6,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 12674.1491,
+      "frame": 7,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 12847.0135,
+      "frame": 8,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 13028.6011,
+      "frame": 9,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 13218.7912,
+      "frame": 10,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 13408.5539,
+      "frame": 11,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 13615.3891,
+      "frame": 12,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 13819.9543,
+      "frame": 13,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 14004.522,
+      "frame": 14,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 14181.3811,
+      "frame": 15,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 14382.5527,
+      "frame": 16,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 14590.0423,
+      "frame": 17,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 14787.2777,
+      "frame": 18,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 14992.3271,
+      "frame": 19,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 15208.8443,
+      "frame": 20,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 15411.6178,
+      "frame": 21,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 15600.6149,
+      "frame": 22,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 15801.4528,
+      "frame": 23,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 16004.8122,
+      "frame": 24,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 16190.9194,
+      "frame": 25,
+      "subframe": 0.0
+    },
+    {
+      "at_ms": 16367.9518,
+      "frame": 26,
+      "subframe": 0.0
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "x.external-private-worker-abort/1",
+  "completed": false,
+  "aborted_utc": "2026-10-15T01:14:24Z",
+  "pid": 39272,
+  "creation_local": "2026-10-15T09:08:50.765578+08:00",
+  "verified_command": "D:/Blender5.2/blender.exe --background --factory-startup -t 1 --python private_playback_native_runner_v8.py --input fixed40644 --admission-only",
+  "reason": "Initial source witness consumed several minutes of CPU and did not reach ADMISSION_SOURCE; end only the verified owned worker so bounded traversal diagnostics can identify the actual path.",
+  "last_observed_CPU_seconds": 222.828125,
+  "last_observed_free_KiB": 2591556,
+  "observed_peak_working_set_bytes_approx": 1825738752,
+  "not_a_memory_floor_abort": true,
+  "worker_gone": true,
+  "artist_pid_24416_preserved": true,
+  "artist_disk_sha256_after": "a2fb4026c1ce544825c940e7958a60a3b7980b6c1fda2e302035a30c13934728",
+  "fixed_input_sha256_after": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+  "native_python_cleanup_or_source_RAM_restore": "unverified; worker was stopped externally and its private memory discarded",
+  "native_report": "not produced",
+  "log": "private_playback_native_log_008_admission.txt",
+  "candidate_geometry_or_timing_reached": false,
+  "performance_or_adoption_claim": null
+}

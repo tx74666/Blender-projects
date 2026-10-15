@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_keyframe_bulk_factory_008.py", line 166, in <module>
+    main(args, report)
+    ~~~~^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_keyframe_bulk_factory_008.py", line 77, in main
+    initial = read()
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_keyframe_bulk_factory_008.py", line 74, in read
+    return bulk.keyframe_collection_witness(points, fixed_type, bulk.Reader(bpy.types.ID))
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v8.py", line 159, in keyframe_collection_witness
+    before = schema()
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v8.py", line 133, in schema
+    observed_width = prop.array_length if prop.is_array else 1
+                                          ^^^^^^^^^^^^^
+AttributeError: 'EnumProperty' object has no attribute 'is_array'
+
+Error: script failed, file: 'D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_keyframe_bulk_factory_008.py', exiting.
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+
+Blender quit

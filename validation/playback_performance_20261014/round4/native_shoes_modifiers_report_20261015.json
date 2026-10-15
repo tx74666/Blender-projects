@@ -1,0 +1,660 @@
+{
+  "schema": "x.private-shoes-modifier-diagnostic-07741/1",
+  "completed": true,
+  "pid": 30836,
+  "created_utc": "2026-10-14T18:44:28.634245+00:00",
+  "model_and_reasoning_effort": "unrecorded",
+  "input_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "source_version": [
+    0,
+    77,
+    41
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+      "sha256": "b52eb75709c3c18d819afffcaf0a45e3fb36314e453c7a05a67c2a4da196627a",
+      "bytes": 355944
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "d7a28470d61b74b1f2d4f146135bf14424e1633c0a88ded706c1e6be5adc1b10",
+      "bytes": 98909
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "e6ffa5cfefeb12941055e4cef43bdb060c069cbeed9fee6c5d39a810b3e68db3",
+      "bytes": 45498
+    },
+    {
+      "path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\forearm_original_inventory.py",
+      "sha256": "28a86885c5cba5579cd054a41d27933787f33ec0d19cf452f4a858da4ca069ac",
+      "bytes": 4567
+    }
+  ],
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_shoes_modifiers_07741.py",
+    "sha256": "784f5954843a48724cc0f49065f4ed22f6efc660a3d5be4aea6c852fadcf652b",
+    "bytes": 7287
+  },
+  "parent_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_native_mesh_delete_v2.py",
+    "sha256": "c4a3338ce6efc3220759f502e205a122d9d5dfc1f04a9d41afc8c853f20c9b39"
+  },
+  "blender": "5.2.0 LTS",
+  "native_thread_request": 1,
+  "frame_sequence": [
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30
+  ],
+  "cases": [
+    {
+      "label": "shoes_intact",
+      "private_cosha_deletion": {
+        "object": "Cosha",
+        "operation": "bpy.ops.object.delete(use_global=False)",
+        "native_result": [
+          "FINISHED"
+        ],
+        "object_still_in_scene": false,
+        "object_still_in_bpy_data": true,
+        "mesh_data_still_in_bpy_data": true,
+        "key_data_still_in_bpy_data": true,
+        "no_live_scene_access": true
+      },
+      "disabled_modifier_types": [],
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "viewport": true
+        },
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "viewport": true
+        }
+      ],
+      "frames": [
+        {
+          "frame": 2,
+          "total_evaluation_ms": 38.73,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0495,
+              "mean_call_ms": 0.0495
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "total_evaluation_ms": 40.6085,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0385,
+              "mean_call_ms": 0.0385
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "total_evaluation_ms": 32.2359,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0416,
+              "mean_call_ms": 0.0416
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "total_evaluation_ms": 31.8484,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0416,
+              "mean_call_ms": 0.0416
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "total_evaluation_ms": 32.4286,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0427,
+              "mean_call_ms": 0.0427
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "total_evaluation_ms": 32.5709,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0371,
+              "mean_call_ms": 0.0371
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "total_evaluation_ms": 30.1814,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0379,
+              "mean_call_ms": 0.0379
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "total_evaluation_ms": 30.3969,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0382,
+              "mean_call_ms": 0.0382
+            }
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 32.33225,
+      "evaluated_shoes": {
+        "vertices": 56354,
+        "edges": 112090,
+        "faces": 55756
+      },
+      "route_after": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "performance_acceptance": false
+    },
+    {
+      "label": "mirror_off",
+      "private_cosha_deletion": {
+        "object": "Cosha",
+        "operation": "bpy.ops.object.delete(use_global=False)",
+        "native_result": [
+          "FINISHED"
+        ],
+        "object_still_in_scene": false,
+        "object_still_in_bpy_data": true,
+        "mesh_data_still_in_bpy_data": true,
+        "key_data_still_in_bpy_data": true,
+        "no_live_scene_access": true
+      },
+      "disabled_modifier_types": [
+        "MIRROR"
+      ],
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "viewport": false
+        },
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "viewport": true
+        }
+      ],
+      "frames": [
+        {
+          "frame": 2,
+          "total_evaluation_ms": 10.6538,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0372,
+              "mean_call_ms": 0.0372
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "total_evaluation_ms": 9.6583,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.052,
+              "mean_call_ms": 0.052
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "total_evaluation_ms": 10.0349,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0401,
+              "mean_call_ms": 0.0401
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "total_evaluation_ms": 10.5823,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.039,
+              "mean_call_ms": 0.039
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "total_evaluation_ms": 11.1298,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0399,
+              "mean_call_ms": 0.0399
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "total_evaluation_ms": 10.7724,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0437,
+              "mean_call_ms": 0.0437
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "total_evaluation_ms": 11.1102,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0435,
+              "mean_call_ms": 0.0435
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "total_evaluation_ms": 10.5935,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0395,
+              "mean_call_ms": 0.0395
+            }
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 10.623650000000001,
+      "evaluated_shoes": {
+        "vertices": 28177,
+        "edges": 56045,
+        "faces": 27878
+      },
+      "route_after": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "performance_acceptance": false
+    },
+    {
+      "label": "armature_off",
+      "private_cosha_deletion": {
+        "object": "Cosha",
+        "operation": "bpy.ops.object.delete(use_global=False)",
+        "native_result": [
+          "FINISHED"
+        ],
+        "object_still_in_scene": false,
+        "object_still_in_bpy_data": true,
+        "mesh_data_still_in_bpy_data": true,
+        "key_data_still_in_bpy_data": true,
+        "no_live_scene_access": true
+      },
+      "disabled_modifier_types": [
+        "ARMATURE"
+      ],
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "viewport": true
+        },
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "viewport": false
+        }
+      ],
+      "frames": [
+        {
+          "frame": 2,
+          "total_evaluation_ms": 18.4371,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0344,
+              "mean_call_ms": 0.0344
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "total_evaluation_ms": 16.9387,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0348,
+              "mean_call_ms": 0.0348
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "total_evaluation_ms": 17.8154,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0345,
+              "mean_call_ms": 0.0345
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "total_evaluation_ms": 16.718,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0351,
+              "mean_call_ms": 0.0351
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "total_evaluation_ms": 16.6861,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0351,
+              "mean_call_ms": 0.0351
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "total_evaluation_ms": 17.3043,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0368,
+              "mean_call_ms": 0.0368
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "total_evaluation_ms": 17.3091,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0351,
+              "mean_call_ms": 0.0351
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "total_evaluation_ms": 16.6418,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0361,
+              "mean_call_ms": 0.0361
+            }
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 17.1215,
+      "evaluated_shoes": {
+        "vertices": 56354,
+        "edges": 112090,
+        "faces": 55756
+      },
+      "route_after": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "performance_acceptance": false
+    },
+    {
+      "label": "mirror_and_armature_off",
+      "private_cosha_deletion": {
+        "object": "Cosha",
+        "operation": "bpy.ops.object.delete(use_global=False)",
+        "native_result": [
+          "FINISHED"
+        ],
+        "object_still_in_scene": false,
+        "object_still_in_bpy_data": true,
+        "mesh_data_still_in_bpy_data": true,
+        "key_data_still_in_bpy_data": true,
+        "no_live_scene_access": true
+      },
+      "disabled_modifier_types": [
+        "MIRROR",
+        "ARMATURE"
+      ],
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "viewport": false
+        },
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "viewport": false
+        }
+      ],
+      "frames": [
+        {
+          "frame": 2,
+          "total_evaluation_ms": 7.6326,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.034,
+              "mean_call_ms": 0.034
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 6,
+          "total_evaluation_ms": 8.2443,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0351,
+              "mean_call_ms": 0.0351
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 10,
+          "total_evaluation_ms": 8.3122,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.035,
+              "mean_call_ms": 0.035
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 14,
+          "total_evaluation_ms": 7.7595,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0356,
+              "mean_call_ms": 0.0356
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 18,
+          "total_evaluation_ms": 7.7111,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.036,
+              "mean_call_ms": 0.036
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 22,
+          "total_evaluation_ms": 7.4847,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0329,
+              "mean_call_ms": 0.0329
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 26,
+          "total_evaluation_ms": 6.756,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0336,
+              "mean_call_ms": 0.0336
+            }
+          },
+          "errors": {}
+        },
+        {
+          "frame": 30,
+          "total_evaluation_ms": 7.1218,
+          "functions": {
+            "character_designer.forearm_twist.update_runtime": {
+              "calls": 1,
+              "inclusive_ms": 0.0345,
+              "mean_call_ms": 0.0345
+            }
+          },
+          "errors": {}
+        }
+      ],
+      "median_total_evaluation_ms": 7.67185,
+      "evaluated_shoes": {
+        "vertices": 28177,
+        "edges": 56045,
+        "faces": 27878
+      },
+      "route_after": {
+        "calibrated_mesh_count": 0,
+        "calibrated_mesh_names": [],
+        "no_calibrated_mesh_in_scene": true,
+        "errors_for_present_calibrated_meshes": {},
+        "errors_for_other_or_removed_meshes": {},
+        "managed": {}
+      },
+      "performance_acceptance": false
+    }
+  ],
+  "input_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "artist_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "input_disk_unchanged": true,
+  "artist_disk_unchanged": true,
+  "no_live_artist_access": true,
+  "no_scene_save": true,
+  "no_source_or_metadata_change": true,
+  "limits": [
+    "Same .41 private process and saved input; no .40-to-.41 speed comparison.",
+    "Native background evaluation only; no viewport rendering or GUI-FPS conclusion.",
+    "Cosha and its corrective output are absent in every case; modifier disabling changes the test model.",
+    "Eight hot frames after two warm frames, sequential order and shared load; not controlled final acceptance.",
+    "Nested function times overlap; compound gains are not additive."
+  ]
+}

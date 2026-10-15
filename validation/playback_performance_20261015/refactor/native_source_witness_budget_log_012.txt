@@ -1,0 +1,73 @@
+00:02.594  blend            | Read blend: "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend"
+Info: Read library: 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\5f771ad1e0644d199cba30b6afd1ad0a.blend', 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\5f771ad1e0644d199cba30b6afd1ad0a.blend', parent '<direct>'
+Info: Read library: 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\8069c6d729ea43e1888db9fd07b9d6da.blend', 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\8069c6d729ea43e1888db9fd07b9d6da.blend', parent '<direct>'
+WITNESS_SOURCE_BEGIN
+WITNESS_TRACE 1 0.089 raw Scene:Scene.custom_before
+WITNESS_TRACE 1000 0.094 value Scene:Scene.custom_before["assets used"].966bc1ab-a68d-43c9-ac0a-9dd07df01e77.files[5].fileUploadSize
+WITNESS_TRACE 2000 0.099 value Scene:Scene.custom_before["assets used"].62b66b84-e182-4f88-90bc-e1a9aec88fa1.files[1].filename
+WITNESS_TRACE 3000 0.105 value Scene:Scene.custom_before["assets used"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color
+WITNESS_TRACE 4000 0.11 value Scene:Scene.custom_before["assets used"].6d60c03a-227e-4746-84bd-9395e2b9f9af.showMarketingLabels
+WITNESS_TRACE 5000 0.115 value Scene:Scene.custom_before["assets used"].76a396a5-07d1-4784-a6c6-c23e1dc59998.files[2].downloadUrl
+WITNESS_TRACE 6000 0.121 value Scene:Scene.custom_before["assets used"].075cf83a-dafb-4e8c-a5d3-ef1efcd54b01.tooltip_data.base_price_color[3]
+WITNESS_TRACE 7000 0.134 value Scene:Scene.custom["assets used"].82046404-34bf-4ce9-9e12-beb5e4ebeda8
+WITNESS_TRACE 8000 0.139 value Scene:Scene.custom["assets used"].966bc1ab-a68d-43c9-ac0a-9dd07df01e77.lastAnimatedThumbnailUpload
+WITNESS_TRACE 9000 0.145 value Scene:Scene.custom["assets used"].62b66b84-e182-4f88-90bc-e1a9aec88fa1.files[2].fileType
+WITNESS_TRACE 10000 0.15 value Scene:Scene.custom["assets used"].a821f058-b335-465d-ac9a-c614e54ea155.resolution
+WITNESS_DIAGNOSTIC_ABORT call_budget 10000
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\private_playback_native_runner_v8.py", line 389, in main
+    initial_props = witness.source_property_witness(source_scene)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 134, in source_once
+    result = original_source(*source_args, **source_kwargs)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_validation_support_v7.py", line 34, in source_property_witness
+    extension = registered_source_witness(scene, _original)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v7.py", line 320, in registered_source_witness
+    state = reader.rna(owner, path, properties)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 115, in wrapped
+    result = _original(self, value, path, *rest, **kwargs)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v7.py", line 188, in rna
+    raw_before = self.raw(value, path + ".custom")
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 115, in wrapped
+    result = _original(self, value, path, *rest, **kwargs)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v7.py", line 173, in raw
+    return {str(key): self.value(item, path + "[" + json.dumps(str(key)) + "]", typed_rna=False) for key, item in items}
+                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 115, in wrapped
+    result = _original(self, value, path, *rest, **kwargs)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v7.py", line 153, in value
+    return {str(key): self.value(item, path + "." + str(key), typed_rna=typed_rna) for key, item in value.items()}
+                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 115, in wrapped
+    result = _original(self, value, path, *rest, **kwargs)
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\native_source_reference_witness_v7.py", line 153, in value
+    return {str(key): self.value(item, path + "." + str(key), typed_rna=typed_rna) for key, item in value.items()}
+                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 113, in wrapped
+    check_budget()
+    ~~~~~~~~~~~~^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 81, in check_budget
+    abort("call_budget")
+    ~~~~~^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 75, in abort
+    raise DiagnosticBudget("Expected source-witness diagnostic stop: " + state["abort"]["reason"])
+DiagnosticBudget: Expected source-witness diagnostic stop: call_budget
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 181, in <module>
+    main(args, report)
+    ~~~~^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py", line 143, in main
+    frozen.main(args, report)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\private_playback_native_runner_v8.py", line 504, in main
+    raise RuntimeError("Owned cleanup did not complete")
+RuntimeError: Owned cleanup did not complete
+
+Error: script failed, file: 'D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\probe_source_witness_budget_012.py', exiting.
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+scripts disabled for "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend", skipping 'rig.001_ui.py'
+scripts disabled for "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend", skipping 'rig.001_ui.py.003'
+
+Blender quit

@@ -1,0 +1,2768 @@
+{
+  "schema": "x.initial-source-witness-budget-diagnostic/1",
+  "completed": false,
+  "pid": 37108,
+  "created_utc": "2026-10-15T01:31:08.752695+00:00",
+  "diagnostic_only": true,
+  "expected_failure": true,
+  "performance_acceptance": false,
+  "no_artist_open_or_save": true,
+  "no_scene_save": true,
+  "no_deploy": true,
+  "limits": [
+    "Expected diagnostic FAIL; no playback cost, geometry acceptance or source-restoration claim is inferred.",
+    "Original FrozenV8 guards/cleanup run; diagnostic abort may also block source restoration proof.",
+    "Only metadata paths/types/counts/pointers are recorded; no source RNA getter is added for observation."
+  ],
+  "diagnostic_dependency_pins": {
+    "private_playback_native_runner_v8.py": "c67af8e103c7a6ad93dce723e5bfda3edcc70efde4e96c49cb49a35be6593f55",
+    "native_source_reference_witness_v7.py": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+    "native_validation_support_v7.py": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+    "native_validation_support.py": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a"
+  },
+  "diagnostic_script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py",
+    "sha256": "06d711d674898eda110dbaa1448c3f137fcb720a90e705b1a38faf441a6c3760"
+  },
+  "diagnostic_budget": {
+    "max_seconds": 15.0,
+    "max_calls": 10000,
+    "clock_start": "Initial source_property_witness entry; earlier load/evaluation is excluded.",
+    "cooperative_limit": "Checks at call entry/exit; one blocking native operation cannot be interrupted by this Python wrapper."
+  },
+  "diagnostic_observer_errors": [],
+  "input_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "a2fb4026c1ce544825c940e7958a60a3b7980b6c1fda2e302035a30c13934728",
+    "bytes": 34846488
+  },
+  "source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v8.py",
+    "sha256": "c67af8e103c7a6ad93dce723e5bfda3edcc70efde4e96c49cb49a35be6593f55",
+    "bytes": 32346
+  },
+  "witness_script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py",
+    "sha256": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+    "bytes": 1939
+  },
+  "oracle": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_shoes_merge_07741.py",
+    "sha256": "b7da2d785422d8d46e26b77ae0bd3899f6a64dbf2919d5a7174ee255f85191f5"
+  },
+  "blender": "5.2.0 LTS",
+  "thread_request": 1,
+  "frames": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "hot_frames": [
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30
+  ],
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "model_and_reasoning_effort": "gpt-6.1-sol / ultra",
+  "model_source": "Current root task local index verified by root; inherited task settings.",
+  "preparations": [],
+  "frame_checks": [],
+  "blocks": [],
+  "disposable_cleanups": [],
+  "admission_only": true,
+  "all_30_complete_outputs_exact": false,
+  "version": [
+    0,
+    77,
+    41
+  ],
+  "extra_witness_sources": {
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    },
+    "native_validation_support_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py",
+      "sha256": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+      "bytes": 1939
+    }
+  },
+  "initial_source_animation_layout": {
+    "schema": "x.source-animation-layout-observation/1",
+    "source_scene": "Scene",
+    "bindings": [
+      {
+        "id": {
+          "type": "Curve",
+          "name": "Strap.001_SplineIK_Curve.001",
+          "pointer": 1461207401472,
+          "session_uid": 905
+        },
+        "action": null,
+        "action_slot": null,
+        "drivers_count": 3,
+        "use_nla": true,
+        "tracks": [],
+        "action_blend_type": "REPLACE",
+        "action_extrapolation": "HOLD",
+        "action_influence": "0x1.0000000000000p+0",
+        "use_tweak_mode": false
+      },
+      {
+        "id": {
+          "type": "Object",
+          "name": "CoshaRig",
+          "pointer": 1461188047024,
+          "session_uid": 273
+        },
+        "action": {
+          "id": {
+            "type": "Action",
+            "name": "Cosha · Walk_N · Custom.001",
+            "pointer": 1461208340320,
+            "session_uid": 1376
+          },
+          "slots": [
+            {
+              "handle": 929201142,
+              "identifier": "OBCoshaRig",
+              "target_id_type": "OBJECT",
+              "name_display": "CoshaRig"
+            }
+          ],
+          "frame_range": [
+            "0x1.0000000000000p+0",
+            "0x1.e000000000000p+4"
+          ],
+          "use_fake_user": true
+        },
+        "action_slot": {
+          "handle": 929201142,
+          "identifier": "OBCoshaRig",
+          "target_id_type": "OBJECT",
+          "name_display": "CoshaRig"
+        },
+        "drivers_count": 59,
+        "use_nla": false,
+        "tracks": [],
+        "action_blend_type": "REPLACE",
+        "action_extrapolation": "HOLD",
+        "action_influence": "0x1.0000000000000p+0",
+        "use_tweak_mode": false
+      },
+      {
+        "id": {
+          "type": "Object",
+          "name": "Shoes",
+          "pointer": 1461202094912,
+          "session_uid": 290
+        },
+        "action": {
+          "id": {
+            "type": "Action",
+            "name": "ShoesAction",
+            "pointer": 1461208329984,
+            "session_uid": 1383
+          },
+          "slots": [
+            {
+              "handle": 929201142,
+              "identifier": "OBShoes",
+              "target_id_type": "OBJECT",
+              "name_display": "Shoes"
+            }
+          ],
+          "frame_range": [
+            "0x0.0p+0",
+            "0x0.0p+0"
+          ],
+          "use_fake_user": false
+        },
+        "action_slot": {
+          "handle": 929201142,
+          "identifier": "OBShoes",
+          "target_id_type": "OBJECT",
+          "name_display": "Shoes"
+        },
+        "drivers_count": 0,
+        "use_nla": true,
+        "tracks": [],
+        "action_blend_type": "REPLACE",
+        "action_extrapolation": "HOLD",
+        "action_influence": "0x1.0000000000000p+0",
+        "use_tweak_mode": false
+      },
+      {
+        "id": {
+          "type": "Object",
+          "name": "Strap2.001",
+          "pointer": 1461198042496,
+          "session_uid": 332
+        },
+        "action": null,
+        "action_slot": null,
+        "drivers_count": 13,
+        "use_nla": true,
+        "tracks": [],
+        "action_blend_type": "REPLACE",
+        "action_extrapolation": "HOLD",
+        "action_influence": "0x1.0000000000000p+0",
+        "use_tweak_mode": false
+      }
+    ],
+    "scene_frame": 21,
+    "scene_frame_start": 1,
+    "scene_frame_end": 30,
+    "scene_fps": 30,
+    "scene_fps_base": "0x1.0000000000000p+0",
+    "read_only": true,
+    "full_curves_included": false,
+    "limits": "Initial native bindings/slots/NLA layout only; not bake readiness, content equality or adoption."
+  },
+  "cleanup": {
+    "errors": [
+      "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v8.py\", line 389, in main\n    initial_props = witness.source_property_witness(source_scene)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 134, in source_once\n    result = original_source(*source_args, **source_kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py\", line 34, in source_property_witness\n    extension = registered_source_witness(scene, _original)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 320, in registered_source_witness\n    state = reader.rna(owner, path, properties)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 188, in rna\n    raw_before = self.raw(value, path + \".custom\")\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 173, in raw\n    return {str(key): self.value(item, path + \"[\" + json.dumps(str(key)) + \"]\", typed_rna=False) for key, item in items}\n                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 153, in value\n    return {str(key): self.value(item, path + \".\" + str(key), typed_rna=typed_rna) for key, item in value.items()}\n                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 153, in value\n    return {str(key): self.value(item, path + \".\" + str(key), typed_rna=typed_rna) for key, item in value.items()}\n                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 113, in wrapped\n    check_budget()\n    ~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 81, in check_budget\n    abort(\"call_budget\")\n    ~~~~~^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 75, in abort\n    raise DiagnosticBudget(\"Expected source-witness diagnostic stop: \" + state[\"abort\"][\"reason\"])\nDiagnosticBudget: Expected source-witness diagnostic stop: call_budget\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v8.py\", line 479, in main\n    report[\"source_restored_exact\"] = witness.compare_witness(initial_output, actual)[\"exact\"] and initial_props == witness.source_property_witness(source_scene)\n                                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 130, in source_once\n    abort(state[\"abort\"][\"reason\"])\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 75, in abort\n    raise DiagnosticBudget(\"Expected source-witness diagnostic stop: \" + state[\"abort\"][\"reason\"])\nDiagnosticBudget: Expected source-witness diagnostic stop: call_budget\n"
+    ],
+    "runtime_guard_released": true,
+    "handlers_restored_exact": true,
+    "known_forearm_lifecycle_timer_gone": true,
+    "issued_templates_empty": true,
+    "all_disposable_ids_removed": true
+  },
+  "input_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "artist_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "a2fb4026c1ce544825c940e7958a60a3b7980b6c1fda2e302035a30c13934728",
+    "bytes": 34846488
+  },
+  "input_disk_unchanged": true,
+  "artist_disk_unchanged": true,
+  "staged_sources_unchanged": true,
+  "extra_witness_sources_after": {
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    },
+    "native_validation_support_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py",
+      "sha256": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+      "bytes": 1939
+    }
+  },
+  "extra_witness_sources_unchanged": true,
+  "diagnostic_wrappers_still_owned": true,
+  "diagnostic_methods_restored": true,
+  "diagnostic_summary": {
+    "abort": {
+      "reason": "call_budget",
+      "elapsed_seconds": 0.1504133999987971,
+      "attempted_calls": 10000,
+      "executed_calls": 9999,
+      "stack": [
+        {
+          "call": 6989,
+          "method": "rna",
+          "top_owner": "Scene:Scene",
+          "value_type": "bpy.types.Scene",
+          "path": "Scene:Scene",
+          "path_characters": 11,
+          "path_truncated": false,
+          "RNA_pointer": 1461186400320
+        },
+        {
+          "call": 6990,
+          "method": "raw",
+          "top_owner": "Scene:Scene",
+          "value_type": "bpy.types.Scene",
+          "path": "Scene:Scene.custom",
+          "path_characters": 18,
+          "path_truncated": false,
+          "RNA_pointer": 1461186400320
+        },
+        {
+          "call": 6999,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"]",
+          "path_characters": 33,
+          "path_truncated": false
+        },
+        {
+          "call": 9764,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155",
+          "path_characters": 70,
+          "path_truncated": false
+        },
+        {
+          "call": 10000,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.resolution",
+          "path_characters": 81,
+          "path_truncated": false
+        }
+      ],
+      "recent": [
+        {
+          "call": 9873,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].downloadUrl",
+          "path_characters": 91,
+          "path_truncated": false
+        },
+        {
+          "call": 9874,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileThumbnail",
+          "path_characters": 93,
+          "path_truncated": false
+        },
+        {
+          "call": 9875,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileThumbnailLarge",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9876,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileType",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9877,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileUploadSize",
+          "path_characters": 94,
+          "path_truncated": false
+        },
+        {
+          "call": 9878,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].filename",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9879,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].modified",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9880,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].resolution",
+          "path_characters": 90,
+          "path_truncated": false
+        },
+        {
+          "call": 9881,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].thumbnailMiddleUrl",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9882,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].thumbnailSmallUrl",
+          "path_characters": 97,
+          "path_truncated": false
+        },
+        {
+          "call": 9883,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].url",
+          "path_characters": 83,
+          "path_truncated": false
+        },
+        {
+          "call": 9884,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5]",
+          "path_characters": 79,
+          "path_truncated": false
+        },
+        {
+          "call": 9885,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].created",
+          "path_characters": 87,
+          "path_truncated": false
+        },
+        {
+          "call": 9886,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].downloadUrl",
+          "path_characters": 91,
+          "path_truncated": false
+        },
+        {
+          "call": 9887,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileThumbnail",
+          "path_characters": 93,
+          "path_truncated": false
+        },
+        {
+          "call": 9888,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileThumbnailLarge",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9889,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileType",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9890,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileUploadSize",
+          "path_characters": 94,
+          "path_truncated": false
+        },
+        {
+          "call": 9891,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].filename",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9892,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].modified",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9893,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].resolution",
+          "path_characters": 90,
+          "path_truncated": false
+        },
+        {
+          "call": 9894,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].thumbnailMiddleUrl",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9895,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].thumbnailSmallUrl",
+          "path_characters": 97,
+          "path_truncated": false
+        },
+        {
+          "call": 9896,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].url",
+          "path_characters": 83,
+          "path_truncated": false
+        },
+        {
+          "call": 9897,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.id",
+          "path_characters": 73,
+          "path_truncated": false
+        },
+        {
+          "call": 9898,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.bool",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.isForSale",
+          "path_characters": 80,
+          "path_truncated": false
+        },
+        {
+          "call": 9899,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.bool",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.isFree",
+          "path_characters": 77,
+          "path_truncated": false
+        },
+        {
+          "call": 9900,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.bool",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.isPrivate",
+          "path_characters": 80,
+          "path_truncated": false
+        },
+        {
+          "call": 9901,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastAnimatedThumbnailUpload",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9902,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastBlendUpload",
+          "path_characters": 86,
+          "path_truncated": false
+        },
+        {
+          "call": 9903,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastGltfGodotUpload",
+          "path_characters": 90,
+          "path_truncated": false
+        },
+        {
+          "call": 9904,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastGltfUpload",
+          "path_characters": 85,
+          "path_truncated": false
+        },
+        {
+          "call": 9905,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastPhotoThumbnailUpload",
+          "path_characters": 95,
+          "path_truncated": false
+        },
+        {
+          "call": 9906,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastResolutionUpload",
+          "path_characters": 91,
+          "path_truncated": false
+        },
+        {
+          "call": 9907,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastThumbnailUpload",
+          "path_characters": 90,
+          "path_truncated": false
+        },
+        {
+          "call": 9908,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastUserInteraction",
+          "path_characters": 90,
+          "path_truncated": false
+        },
+        {
+          "call": 9909,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastVideoUpload",
+          "path_characters": 86,
+          "path_truncated": false
+        },
+        {
+          "call": 9910,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastZipFileUpload",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9911,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.last_upload",
+          "path_characters": 82,
+          "path_truncated": false
+        },
+        {
+          "call": 9912,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.license",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9913,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.max_resolution",
+          "path_characters": 85,
+          "path_truncated": false
+        },
+        {
+          "call": 9914,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.name",
+          "path_characters": 75,
+          "path_truncated": false
+        },
+        {
+          "call": 9915,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.pk",
+          "path_characters": 73,
+          "path_truncated": false
+        },
+        {
+          "call": 9916,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage",
+          "path_characters": 85,
+          "path_truncated": false
+        },
+        {
+          "call": 9917,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.bookmarks",
+          "path_characters": 95,
+          "path_truncated": false
+        },
+        {
+          "call": 9918,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.quality",
+          "path_characters": 93,
+          "path_truncated": false
+        },
+        {
+          "call": 9919,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.virtualPrice",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9920,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.workingHours",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9921,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount",
+          "path_characters": 83,
+          "path_truncated": false
+        },
+        {
+          "call": 9922,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.bookmarks",
+          "path_characters": 93,
+          "path_truncated": false
+        },
+        {
+          "call": 9923,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.quality",
+          "path_characters": 91,
+          "path_truncated": false
+        },
+        {
+          "call": 9924,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.virtualPrice",
+          "path_characters": 96,
+          "path_truncated": false
+        },
+        {
+          "call": 9925,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.workingHours",
+          "path_characters": 96,
+          "path_truncated": false
+        },
+        {
+          "call": 9926,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian",
+          "path_characters": 84,
+          "path_truncated": false
+        },
+        {
+          "call": 9927,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.bookmarks",
+          "path_characters": 94,
+          "path_truncated": false
+        },
+        {
+          "call": 9928,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.quality",
+          "path_characters": 92,
+          "path_truncated": false
+        },
+        {
+          "call": 9929,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.virtualPrice",
+          "path_characters": 97,
+          "path_truncated": false
+        },
+        {
+          "call": 9930,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.workingHours",
+          "path_characters": 97,
+          "path_truncated": false
+        },
+        {
+          "call": 9931,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum",
+          "path_characters": 81,
+          "path_truncated": false
+        },
+        {
+          "call": 9932,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.bookmarks",
+          "path_characters": 91,
+          "path_truncated": false
+        },
+        {
+          "call": 9933,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.quality",
+          "path_characters": 89,
+          "path_truncated": false
+        },
+        {
+          "call": 9934,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.score",
+          "path_characters": 87,
+          "path_truncated": false
+        },
+        {
+          "call": 9935,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.NoneType",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.virtualPrice",
+          "path_characters": 94,
+          "path_truncated": false
+        },
+        {
+          "call": 9936,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.workingHours",
+          "path_characters": 94,
+          "path_truncated": false
+        },
+        {
+          "call": 9937,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.score",
+          "path_characters": 76,
+          "path_truncated": false
+        },
+        {
+          "call": 9938,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.bool",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.showMarketingLabels",
+          "path_characters": 90,
+          "path_truncated": false
+        },
+        {
+          "call": 9939,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.sourceAppName",
+          "path_characters": 84,
+          "path_truncated": false
+        },
+        {
+          "call": 9940,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.sourceAppVersion",
+          "path_characters": 87,
+          "path_truncated": false
+        },
+        {
+          "call": 9941,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.list",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags",
+          "path_characters": 75,
+          "path_truncated": false
+        },
+        {
+          "call": 9942,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[0]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9943,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[1]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9944,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[2]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9945,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[3]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9946,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[4]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9947,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[5]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9948,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[6]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9949,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[7]",
+          "path_characters": 78,
+          "path_truncated": false
+        },
+        {
+          "call": 9950,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.texture_size_meters",
+          "path_characters": 90,
+          "path_truncated": false
+        },
+        {
+          "call": 9951,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnail",
+          "path_characters": 80,
+          "path_truncated": false
+        },
+        {
+          "call": 9952,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrl",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9953,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrlNonsquared",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9954,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrlNonsquaredWebp",
+          "path_characters": 102,
+          "path_truncated": false
+        },
+        {
+          "call": 9955,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrlWebp",
+          "path_characters": 92,
+          "path_truncated": false
+        },
+        {
+          "call": 9956,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrl",
+          "path_characters": 89,
+          "path_truncated": false
+        },
+        {
+          "call": 9957,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrlNonsquared",
+          "path_characters": 99,
+          "path_truncated": false
+        },
+        {
+          "call": 9958,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrlNonsquaredWebp",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9959,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrlWebp",
+          "path_characters": 93,
+          "path_truncated": false
+        },
+        {
+          "call": 9960,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrl",
+          "path_characters": 88,
+          "path_truncated": false
+        },
+        {
+          "call": 9961,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrlNonsquared",
+          "path_characters": 98,
+          "path_truncated": false
+        },
+        {
+          "call": 9962,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrlNonsquaredWebp",
+          "path_characters": 102,
+          "path_truncated": false
+        },
+        {
+          "call": 9963,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrlWebp",
+          "path_characters": 92,
+          "path_truncated": false
+        },
+        {
+          "call": 9964,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrl",
+          "path_characters": 89,
+          "path_truncated": false
+        },
+        {
+          "call": 9965,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrlNonsquared",
+          "path_characters": 99,
+          "path_truncated": false
+        },
+        {
+          "call": 9966,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrlNonsquaredWebp",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9967,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrlWebp",
+          "path_characters": 93,
+          "path_truncated": false
+        },
+        {
+          "call": 9968,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnail_small",
+          "path_characters": 86,
+          "path_truncated": false
+        },
+        {
+          "call": 9969,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyGroup",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data",
+          "path_characters": 83,
+          "path_truncated": false
+        },
+        {
+          "call": 9970,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.aname",
+          "path_characters": 89,
+          "path_truncated": false
+        },
+        {
+          "call": 9971,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.author_text",
+          "path_characters": 95,
+          "path_truncated": false
+        },
+        {
+          "call": 9972,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyArray",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9973,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[0]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9974,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[1]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9975,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[2]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9976,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[3]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9977,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyArray",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color",
+          "path_characters": 100,
+          "path_truncated": false
+        },
+        {
+          "call": 9978,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[0]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9979,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[1]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9980,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[2]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9981,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[3]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9982,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_text",
+          "path_characters": 99,
+          "path_truncated": false
+        },
+        {
+          "call": 9983,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.quality",
+          "path_characters": 91,
+          "path_truncated": false
+        },
+        {
+          "call": 9984,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyArray",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9985,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[0]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9986,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[1]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9987,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[2]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9988,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[3]",
+          "path_characters": 106,
+          "path_truncated": false
+        },
+        {
+          "call": 9989,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.IDPropertyArray",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color",
+          "path_characters": 100,
+          "path_truncated": false
+        },
+        {
+          "call": 9990,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[0]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9991,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[1]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9992,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[2]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9993,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.float",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[3]",
+          "path_characters": 103,
+          "path_truncated": false
+        },
+        {
+          "call": 9994,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_text",
+          "path_characters": 99,
+          "path_truncated": false
+        },
+        {
+          "call": 9995,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.url",
+          "path_characters": 74,
+          "path_truncated": false
+        },
+        {
+          "call": 9996,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.verificationStatus",
+          "path_characters": 89,
+          "path_truncated": false
+        },
+        {
+          "call": 9997,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.versionNumber",
+          "path_characters": 84,
+          "path_truncated": false
+        },
+        {
+          "call": 9998,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.videoLink",
+          "path_characters": 80,
+          "path_truncated": false
+        },
+        {
+          "call": 9999,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.int",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.webpGeneratedTimestamp",
+          "path_characters": 93,
+          "path_truncated": false
+        },
+        {
+          "call": 10000,
+          "method": "value",
+          "top_owner": "Scene:Scene",
+          "value_type": "builtins.str",
+          "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.resolution",
+          "path_characters": 81,
+          "path_truncated": false
+        }
+      ]
+    },
+    "attempted_calls": 10000,
+    "executed_calls": 9999,
+    "method_counts": {
+      "raw": 2,
+      "value": 9997,
+      "rna": 1
+    },
+    "max_wrapper_depth": 7,
+    "top_owners": [
+      [
+        "Scene:Scene",
+        10000
+      ]
+    ],
+    "top_value_types": [
+      [
+        "builtins.str",
+        5489
+      ],
+      [
+        "builtins.int",
+        1588
+      ],
+      [
+        "builtins.float",
+        1015
+      ],
+      [
+        "builtins.bool",
+        575
+      ],
+      [
+        "builtins.IDPropertyGroup",
+        559
+      ],
+      [
+        "builtins.NoneType",
+        309
+      ],
+      [
+        "builtins.IDPropertyArray",
+        244
+      ],
+      [
+        "builtins.list",
+        218
+      ],
+      [
+        "bpy.types.Scene",
+        3
+      ]
+    ],
+    "unique_RNA_pointer_count": 1,
+    "total_RNA_pointer_reads": 3,
+    "repeated_RNA_pointers": [
+      {
+        "type": "bpy.types.Scene",
+        "pointer": 1461186400320,
+        "reads": 3
+      }
+    ],
+    "recent": [
+      {
+        "call": 9873,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].downloadUrl",
+        "path_characters": 91,
+        "path_truncated": false
+      },
+      {
+        "call": 9874,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileThumbnail",
+        "path_characters": 93,
+        "path_truncated": false
+      },
+      {
+        "call": 9875,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileThumbnailLarge",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9876,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileType",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9877,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].fileUploadSize",
+        "path_characters": 94,
+        "path_truncated": false
+      },
+      {
+        "call": 9878,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].filename",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9879,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].modified",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9880,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].resolution",
+        "path_characters": 90,
+        "path_truncated": false
+      },
+      {
+        "call": 9881,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].thumbnailMiddleUrl",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9882,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].thumbnailSmallUrl",
+        "path_characters": 97,
+        "path_truncated": false
+      },
+      {
+        "call": 9883,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[4].url",
+        "path_characters": 83,
+        "path_truncated": false
+      },
+      {
+        "call": 9884,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyGroup",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5]",
+        "path_characters": 79,
+        "path_truncated": false
+      },
+      {
+        "call": 9885,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].created",
+        "path_characters": 87,
+        "path_truncated": false
+      },
+      {
+        "call": 9886,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].downloadUrl",
+        "path_characters": 91,
+        "path_truncated": false
+      },
+      {
+        "call": 9887,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileThumbnail",
+        "path_characters": 93,
+        "path_truncated": false
+      },
+      {
+        "call": 9888,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileThumbnailLarge",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9889,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileType",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9890,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].fileUploadSize",
+        "path_characters": 94,
+        "path_truncated": false
+      },
+      {
+        "call": 9891,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].filename",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9892,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].modified",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9893,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].resolution",
+        "path_characters": 90,
+        "path_truncated": false
+      },
+      {
+        "call": 9894,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].thumbnailMiddleUrl",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9895,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].thumbnailSmallUrl",
+        "path_characters": 97,
+        "path_truncated": false
+      },
+      {
+        "call": 9896,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.files[5].url",
+        "path_characters": 83,
+        "path_truncated": false
+      },
+      {
+        "call": 9897,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.id",
+        "path_characters": 73,
+        "path_truncated": false
+      },
+      {
+        "call": 9898,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.bool",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.isForSale",
+        "path_characters": 80,
+        "path_truncated": false
+      },
+      {
+        "call": 9899,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.bool",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.isFree",
+        "path_characters": 77,
+        "path_truncated": false
+      },
+      {
+        "call": 9900,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.bool",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.isPrivate",
+        "path_characters": 80,
+        "path_truncated": false
+      },
+      {
+        "call": 9901,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastAnimatedThumbnailUpload",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9902,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastBlendUpload",
+        "path_characters": 86,
+        "path_truncated": false
+      },
+      {
+        "call": 9903,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastGltfGodotUpload",
+        "path_characters": 90,
+        "path_truncated": false
+      },
+      {
+        "call": 9904,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastGltfUpload",
+        "path_characters": 85,
+        "path_truncated": false
+      },
+      {
+        "call": 9905,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastPhotoThumbnailUpload",
+        "path_characters": 95,
+        "path_truncated": false
+      },
+      {
+        "call": 9906,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastResolutionUpload",
+        "path_characters": 91,
+        "path_truncated": false
+      },
+      {
+        "call": 9907,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastThumbnailUpload",
+        "path_characters": 90,
+        "path_truncated": false
+      },
+      {
+        "call": 9908,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastUserInteraction",
+        "path_characters": 90,
+        "path_truncated": false
+      },
+      {
+        "call": 9909,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastVideoUpload",
+        "path_characters": 86,
+        "path_truncated": false
+      },
+      {
+        "call": 9910,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.lastZipFileUpload",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9911,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.last_upload",
+        "path_characters": 82,
+        "path_truncated": false
+      },
+      {
+        "call": 9912,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.license",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9913,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.max_resolution",
+        "path_characters": 85,
+        "path_truncated": false
+      },
+      {
+        "call": 9914,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.name",
+        "path_characters": 75,
+        "path_truncated": false
+      },
+      {
+        "call": 9915,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.pk",
+        "path_characters": 73,
+        "path_truncated": false
+      },
+      {
+        "call": 9916,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyGroup",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage",
+        "path_characters": 85,
+        "path_truncated": false
+      },
+      {
+        "call": 9917,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.bookmarks",
+        "path_characters": 95,
+        "path_truncated": false
+      },
+      {
+        "call": 9918,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.quality",
+        "path_characters": 93,
+        "path_truncated": false
+      },
+      {
+        "call": 9919,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.virtualPrice",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9920,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsAverage.workingHours",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9921,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyGroup",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount",
+        "path_characters": 83,
+        "path_truncated": false
+      },
+      {
+        "call": 9922,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.bookmarks",
+        "path_characters": 93,
+        "path_truncated": false
+      },
+      {
+        "call": 9923,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.quality",
+        "path_characters": 91,
+        "path_truncated": false
+      },
+      {
+        "call": 9924,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.virtualPrice",
+        "path_characters": 96,
+        "path_truncated": false
+      },
+      {
+        "call": 9925,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsCount.workingHours",
+        "path_characters": 96,
+        "path_truncated": false
+      },
+      {
+        "call": 9926,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyGroup",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian",
+        "path_characters": 84,
+        "path_truncated": false
+      },
+      {
+        "call": 9927,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.bookmarks",
+        "path_characters": 94,
+        "path_truncated": false
+      },
+      {
+        "call": 9928,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.quality",
+        "path_characters": 92,
+        "path_truncated": false
+      },
+      {
+        "call": 9929,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.virtualPrice",
+        "path_characters": 97,
+        "path_truncated": false
+      },
+      {
+        "call": 9930,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsMedian.workingHours",
+        "path_characters": 97,
+        "path_truncated": false
+      },
+      {
+        "call": 9931,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyGroup",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum",
+        "path_characters": 81,
+        "path_truncated": false
+      },
+      {
+        "call": 9932,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.bookmarks",
+        "path_characters": 91,
+        "path_truncated": false
+      },
+      {
+        "call": 9933,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.quality",
+        "path_characters": 89,
+        "path_truncated": false
+      },
+      {
+        "call": 9934,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.score",
+        "path_characters": 87,
+        "path_truncated": false
+      },
+      {
+        "call": 9935,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.NoneType",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.virtualPrice",
+        "path_characters": 94,
+        "path_truncated": false
+      },
+      {
+        "call": 9936,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.ratingsSum.workingHours",
+        "path_characters": 94,
+        "path_truncated": false
+      },
+      {
+        "call": 9937,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.score",
+        "path_characters": 76,
+        "path_truncated": false
+      },
+      {
+        "call": 9938,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.bool",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.showMarketingLabels",
+        "path_characters": 90,
+        "path_truncated": false
+      },
+      {
+        "call": 9939,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.sourceAppName",
+        "path_characters": 84,
+        "path_truncated": false
+      },
+      {
+        "call": 9940,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.sourceAppVersion",
+        "path_characters": 87,
+        "path_truncated": false
+      },
+      {
+        "call": 9941,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.list",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags",
+        "path_characters": 75,
+        "path_truncated": false
+      },
+      {
+        "call": 9942,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[0]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9943,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[1]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9944,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[2]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9945,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[3]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9946,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[4]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9947,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[5]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9948,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[6]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9949,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tags[7]",
+        "path_characters": 78,
+        "path_truncated": false
+      },
+      {
+        "call": 9950,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.texture_size_meters",
+        "path_characters": 90,
+        "path_truncated": false
+      },
+      {
+        "call": 9951,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnail",
+        "path_characters": 80,
+        "path_truncated": false
+      },
+      {
+        "call": 9952,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrl",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9953,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrlNonsquared",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9954,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrlNonsquaredWebp",
+        "path_characters": 102,
+        "path_truncated": false
+      },
+      {
+        "call": 9955,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailLargeUrlWebp",
+        "path_characters": 92,
+        "path_truncated": false
+      },
+      {
+        "call": 9956,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrl",
+        "path_characters": 89,
+        "path_truncated": false
+      },
+      {
+        "call": 9957,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrlNonsquared",
+        "path_characters": 99,
+        "path_truncated": false
+      },
+      {
+        "call": 9958,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrlNonsquaredWebp",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9959,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailMiddleUrlWebp",
+        "path_characters": 93,
+        "path_truncated": false
+      },
+      {
+        "call": 9960,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrl",
+        "path_characters": 88,
+        "path_truncated": false
+      },
+      {
+        "call": 9961,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrlNonsquared",
+        "path_characters": 98,
+        "path_truncated": false
+      },
+      {
+        "call": 9962,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrlNonsquaredWebp",
+        "path_characters": 102,
+        "path_truncated": false
+      },
+      {
+        "call": 9963,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailSmallUrlWebp",
+        "path_characters": 92,
+        "path_truncated": false
+      },
+      {
+        "call": 9964,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrl",
+        "path_characters": 89,
+        "path_truncated": false
+      },
+      {
+        "call": 9965,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrlNonsquared",
+        "path_characters": 99,
+        "path_truncated": false
+      },
+      {
+        "call": 9966,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrlNonsquaredWebp",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9967,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnailXlargeUrlWebp",
+        "path_characters": 93,
+        "path_truncated": false
+      },
+      {
+        "call": 9968,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.thumbnail_small",
+        "path_characters": 86,
+        "path_truncated": false
+      },
+      {
+        "call": 9969,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyGroup",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data",
+        "path_characters": 83,
+        "path_truncated": false
+      },
+      {
+        "call": 9970,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.aname",
+        "path_characters": 89,
+        "path_truncated": false
+      },
+      {
+        "call": 9971,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.author_text",
+        "path_characters": 95,
+        "path_truncated": false
+      },
+      {
+        "call": 9972,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyArray",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9973,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[0]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9974,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[1]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9975,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[2]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9976,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_bg_color[3]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9977,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyArray",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color",
+        "path_characters": 100,
+        "path_truncated": false
+      },
+      {
+        "call": 9978,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[0]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9979,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[1]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9980,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[2]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9981,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_color[3]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9982,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.base_price_text",
+        "path_characters": 99,
+        "path_truncated": false
+      },
+      {
+        "call": 9983,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.quality",
+        "path_characters": 91,
+        "path_truncated": false
+      },
+      {
+        "call": 9984,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyArray",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9985,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[0]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9986,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[1]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9987,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[2]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9988,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_bg_color[3]",
+        "path_characters": 106,
+        "path_truncated": false
+      },
+      {
+        "call": 9989,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyArray",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color",
+        "path_characters": 100,
+        "path_truncated": false
+      },
+      {
+        "call": 9990,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[0]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9991,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[1]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9992,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[2]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9993,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.float",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_color[3]",
+        "path_characters": 103,
+        "path_truncated": false
+      },
+      {
+        "call": 9994,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.tooltip_data.user_price_text",
+        "path_characters": 99,
+        "path_truncated": false
+      },
+      {
+        "call": 9995,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.url",
+        "path_characters": 74,
+        "path_truncated": false
+      },
+      {
+        "call": 9996,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.verificationStatus",
+        "path_characters": 89,
+        "path_truncated": false
+      },
+      {
+        "call": 9997,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.versionNumber",
+        "path_characters": 84,
+        "path_truncated": false
+      },
+      {
+        "call": 9998,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.videoLink",
+        "path_characters": 80,
+        "path_truncated": false
+      },
+      {
+        "call": 9999,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.int",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.webpGeneratedTimestamp",
+        "path_characters": 93,
+        "path_truncated": false
+      },
+      {
+        "call": 10000,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.str",
+        "path": "Scene:Scene.custom[\"assets used\"].a821f058-b335-465d-ac9a-c614e54ea155.resolution",
+        "path_characters": 81,
+        "path_truncated": false
+      }
+    ],
+    "slow_completed_calls_inclusive": [
+      {
+        "elapsed_seconds_inclusive": 0.03696479999780422,
+        "call": 1,
+        "method": "raw",
+        "top_owner": "Scene:Scene",
+        "value_type": "bpy.types.Scene",
+        "path": "Scene:Scene.custom_before",
+        "path_characters": 25,
+        "path_truncated": false,
+        "RNA_pointer": 1461186400320
+      },
+      {
+        "elapsed_seconds_inclusive": 0.03678179999769782,
+        "call": 10,
+        "method": "value",
+        "top_owner": "Scene:Scene",
+        "value_type": "builtins.IDPropertyGroup",
+        "path": "Scene:Scene.custom_before[\"assets used\"]",
+        "path_characters": 40,
+        "path_truncated": false
+      }
+    ]
+  },
+  "source_pin_summary": {
+    "count": 162,
+    "sha256": "fc0bf5b8cd0bf5a9557366a8dbea29b6fc67400ef73e0fc5adde4dac15c355ee"
+  },
+  "error": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v8.py\", line 389, in main\n    initial_props = witness.source_property_witness(source_scene)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 134, in source_once\n    result = original_source(*source_args, **source_kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py\", line 34, in source_property_witness\n    extension = registered_source_witness(scene, _original)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 320, in registered_source_witness\n    state = reader.rna(owner, path, properties)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 188, in rna\n    raw_before = self.raw(value, path + \".custom\")\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 173, in raw\n    return {str(key): self.value(item, path + \"[\" + json.dumps(str(key)) + \"]\", typed_rna=False) for key, item in items}\n                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 153, in value\n    return {str(key): self.value(item, path + \".\" + str(key), typed_rna=typed_rna) for key, item in value.items()}\n                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 115, in wrapped\n    result = _original(self, value, path, *rest, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py\", line 153, in value\n    return {str(key): self.value(item, path + \".\" + str(key), typed_rna=typed_rna) for key, item in value.items()}\n                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 113, in wrapped\n    check_budget()\n    ~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 81, in check_budget\n    abort(\"call_budget\")\n    ~~~~~^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 75, in abort\n    raise DiagnosticBudget(\"Expected source-witness diagnostic stop: \" + state[\"abort\"][\"reason\"])\nDiagnosticBudget: Expected source-witness diagnostic stop: call_budget\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 181, in <module>\n    main(args, report)\n    ~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_witness_budget_012.py\", line 143, in main\n    frozen.main(args, report)\n    ~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v8.py\", line 504, in main\n    raise RuntimeError(\"Owned cleanup did not complete\")\nRuntimeError: Owned cleanup did not complete\n"
+}

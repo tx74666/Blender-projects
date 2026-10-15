@@ -1,0 +1,107 @@
+{
+  "schema": "x.private-actor-runner-dependencies/7",
+  "files": {
+    "private_playback_native_runner_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v7.py",
+      "sha256": "5751f79be06884b18a1f13f897b0ea289409ee3a052b89fd10be6fd70100a88a",
+      "bytes": 32346
+    },
+    "native_bone_preview_runner_007.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_preview_runner_007.py",
+      "sha256": "0d79b09db31380d30871f38c0a119cbb7eea16ff1fe545eddcc6a62bd4aeedb2",
+      "bytes": 28148
+    },
+    "native_bone_bake_runner_007.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_bake_runner_007.py",
+      "sha256": "4ff018d5b786566f3294228901c2004e93ce96fe9f478b1f4e8b13cdef6a158c",
+      "bytes": 32020
+    },
+    "native_bone_support_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_support_v7.py",
+      "sha256": "b89fd4e797ae1f4131e5a7794d44010f419b01c86e1036a7e44cf409e627c843",
+      "bytes": 13987
+    },
+    "native_validation_support_v6.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v6.py",
+      "sha256": "0de1c12e3e25874a92f484c38b4d1e9df5bfbaa6c53f3058d43b7037e70118ef",
+      "bytes": 1939
+    },
+    "native_source_reference_witness_v6.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v6.py",
+      "sha256": "d9b36ea78c88a4c227bc8d3763d8cf3dcb5a09b078c2d18825d8eca55ee8b81d",
+      "bytes": 22679
+    },
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "BONE_ADOPTION_CRITERIA_005.md": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\BONE_ADOPTION_CRITERIA_005.md",
+      "sha256": "de3dd16156b876db23f2f0e9aaeb70c7a1019ce51a991da588937ba400af7893",
+      "bytes": 2971
+    }
+  },
+  "stage_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "reviewed_factory_dependencies": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\source_witness_v6_factory_dependencies_006.json",
+    "sha256": "74434c4140c3ee8a5f5be96229156dd8cd57f402b43fa59734ec335b13fac72e",
+    "bytes": 3318
+  },
+  "frozen_admission_dependencies": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\frozen_v7_admission_dependencies_007.json",
+    "sha256": "c59f99ebc2d323230cde19bb8563c22039e1ec92426ab709f12e647fe5c0ad48",
+    "bytes": 3293
+  },
+  "native_run_by_child": false,
+  "changes": "Only versioned source-witness/helper imports and matching dependency paths. Bone math, exact geometry/nonvector gates, policy thresholds, coverage, timing and replay sequences unchanged.",
+  "frozen_admission": "Use frozen_v7_admission_dependencies_007.json blender_arguments first.",
+  "bone_admission_arguments": [
+    "-b",
+    "--factory-startup",
+    "-t",
+    "1",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_preview_runner_007.py",
+    "--",
+    "--input",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "--artist",
+    "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "--addons",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\addons",
+    "--source-manifest",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "--admission-only",
+    "--report",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_preview_report_007_admission.json"
+  ],
+  "bone_full_difference": "Remove --admission-only and select another unused report; no GUI FPS claim.",
+  "bake_arguments_prefix": [
+    "-b",
+    "--factory-startup",
+    "-t",
+    "1",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_bake_runner_007.py",
+    "--",
+    "--input",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "--artist",
+    "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "--addons",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\addons",
+    "--source-manifest",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json"
+  ],
+  "bake_requires_explicit_geometry_policy": [
+    "exact",
+    "practical005"
+  ],
+  "bake_report_requires_unused_path": true,
+  "synthetic": "Synthetic006 has a separate agent-owned seal. Artifact and GUI chains are intentionally not updated by this preparation."
+}

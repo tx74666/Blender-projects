@@ -1,0 +1,62 @@
+{
+  "schema": "x.rest-proof-current-snapshot-pure-checks/1",
+  "completed": true,
+  "native_validation": "pending root",
+  "version_unchanged": "0.77.40",
+  "no_blender_or_gui": true,
+  "no_deploy": true,
+  "commands": [
+    {
+      "command": "python tests/test_motion_rest_current_snapshot.py",
+      "exit_code": 0,
+      "log": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\test_motion_rest_current_snapshot_pure.log"
+    },
+    {
+      "command": "python tests/test_unity_animation_saved_rest_state.py",
+      "exit_code": 0,
+      "log": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\test_unity_animation_saved_rest_state_pure.log"
+    },
+    {
+      "command": "python tests/test_unity_rest_bone_matrix_reads.py",
+      "exit_code": 0,
+      "log": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\test_unity_rest_bone_matrix_reads_pure.log"
+    },
+    {
+      "command": "python tests/test_animation_worklist_target.py",
+      "exit_code": 0,
+      "log": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\test_animation_worklist_target_pure.log"
+    },
+    {
+      "command": "python tests/test_control_source_rest_view.py",
+      "exit_code": 0,
+      "log": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\test_control_source_rest_view_pure.log"
+    },
+    {
+      "command": "python tests/test_unity_animation_controls_rest_view.py",
+      "exit_code": 0,
+      "log": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\test_unity_animation_controls_rest_view_pure.log"
+    }
+  ],
+  "pins": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "5d216f2176758800393bd0f187081f40eb6fd9f018a59f39ea7253bf4352c0b9",
+      "bytes": 45473
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "e6ffa5cfefeb12941055e4cef43bdb060c069cbeed9fee6c5d39a810b3e68db3",
+      "bytes": 45498
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_motion_rest_current_snapshot.py",
+      "sha256": "a3e307cb880b507b63fbe82e7b3cd08708da222fe2f196c63aeec4808fab8406",
+      "bytes": 16625
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\fixtures\\motion_rest_proof_07740.py",
+      "sha256": "d0762427529e4d04cfb963f284bcfb48454b99bc74a144370856493fc77c2f40",
+      "bytes": 6770
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "x.protected-refresh-source-checks/1",
+  "date_local": "2026-10-15",
+  "source_only": true,
+  "source": {
+    "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/round4/protected_refresh_07741.py",
+    "sha256": "0ce167ce3448f6e48140601dda54c4704589fa574bc65ddaaa1e83a0520a460d"
+  },
+  "installer": {
+    "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/round4/install_refresh_07741.py",
+    "sha256": "0009791458776c8885026b2448d41fedfd8a4a0b44642428973f14f9846f4afc",
+    "embedded_source_pin_matches": true
+  },
+  "pure_checks": {
+    "both_py_compile_passed": true,
+    "source_has_no_automatic_top_level_call": true,
+    "no_frame_set_file_open_artist_save_or_manual_runtime_callback_calls": true,
+    "one_SaveCopy_call_copy_true_check_existing_false": true,
+    "independent_AST_and_static_review_passed": true,
+    "deleted_baseline_preflight_guard_added_and_statically_checked": true,
+    "complete_owner_guard_checks_global_and_scene_membership": true
+  },
+  "not_performed": ["Blender execution", "UI operations", "candidate deployment", "live refresh", "artist save"],
+  "limits": [
+    "Installed and X deployment must match the entire pinned candidate ZIP before execution.",
+    "Natural refresh, lifecycle completion, exact recorded content preservation and managed output recovery require the future live receipt.",
+    "No Undo-stack preservation proof. Foreign callback object/order protection is checked; CD handler order changes are reported for subsequent playback validation.",
+    "Any failure retains the unique SaveCopy and reports its phase; no automatic scene overwrite or manual solver/reacquire fallback."
+  ]
+}

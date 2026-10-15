@@ -1,0 +1,70 @@
+{
+  "schema": "x.independent-scene-catalog-source-review/1",
+  "date": "2026-10-15",
+  "timezone": "Asia/Shanghai",
+  "reviewer": "/root/bone_native_review",
+  "verdict": "PASS_FOR_ISOLATED_NATIVE_VALIDATION",
+  "source": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist_playback_scene.py",
+    "sha256": "475bd958e6e9f9c7b987ec35a9fab8b4b5f2066b20f35b74753b9baa9c0c3268",
+    "status": "Unreleased experimental module beside Character Designer 0.77.41; not deployed by this review"
+  },
+  "trigger_evidence": {
+    "path": "native_custom_property_diagnostic_report_005.json",
+    "observed_owner": "Scene Playback.character_designer_setup.assets[3]",
+    "rna_type": "CharacterDesignerAsset",
+    "object": "Hair1",
+    "source_object_session_uid": 281,
+    "users_scene": [],
+    "observation": "The independent copied catalog row retained the same original unlinked Object pointer. Stage04 correctly refused it."
+  },
+  "accepted_policy": [
+    "Clear only an independently owned copied Scene CharacterDesignerAsset.object pointer whose corresponding source Object is outside the source Scene and unlinked from every Scene.",
+    "Preserve catalog rows, roles, ordering and active index. Do not delete, link, copy or modify the orphan Object.",
+    "Reject any external catalog Object belonging to another Scene. Keep generic external Object-reference rejection unchanged.",
+    "Gather all candidate-row admissions and animation/driver gates before the first detachment. Read back each changed clone pointer and its unchanged source pointer/role.",
+    "Reject nested Scene NLA before detachment; the current Scene Action collector deliberately does not provide nested-strip isolation.",
+    "Reject Scene Action/NLA and Scene-driver paths containing character_designer_setup. Reject graph-driver targets at that Scene with matching paths and explicit matching driver expressions.",
+    "Require every SCRIPTED driver inspected for this admission to have is_simple_expression true, preventing arbitrary Python/namespace indirection from being treated as independent catalog metadata.",
+    "Record each detached path, source Object name and source session UID in session inspection. Dispose the entire owned clone graph if later construction fails."
+  ],
+  "canonical_reader_evidence": [
+    {
+      "source": "addons/character_designer/character_setup.py",
+      "locations": ["CharacterDesignerAsset:238", "footwear_reference:70", "role_source:205", "quick_bind_target:194", "CHARACTERDESIGNER_OT_character_asset:317"],
+      "finding": "The stored Object pointer has poll only and no get/update callback. Role and footwear resolution filter current Scene membership. Binding/selection/catalog changes require explicit operators."
+    },
+    {
+      "source": "addons/character_designer/hair_bones.py; addons/character_designer/skirt.py",
+      "locations": ["hair_bones._source:30", "skirt._source:48"],
+      "finding": "Hair/Skirt source-selection fallback uses role_source, which already excludes unlinked Hair1."
+    },
+    {
+      "source": "addons/character_designer/body_detail_visuals.py; addons/character_designer/head_neck_visuals.py",
+      "locations": ["body_detail_visuals._sources:159", "head_neck_visuals._body:150"],
+      "finding": "Explicit visual fitting reads the catalog and excludes objects outside the current Scene."
+    },
+    {
+      "source": "addons/character_designer/unity_export.py",
+      "locations": ["_collection_scope:243", "_scope_references:256", "collect_character:267"],
+      "finding": "Export/UI catalog hints are filtered by Scene membership and actual enabled Armature binding; the orphan cannot add an exportable mesh."
+    }
+  ],
+  "review_checks": {
+    "no_canonical_frame_depsgraph_or_load_handler_asset_catalog_reader_found": true,
+    "all_candidate_and_dependency_checks_precede_first_detach": true,
+    "nested_nla_gap_resolved_by_explicit_rejection": true,
+    "indirect_python_driver_gap_resolved_by_simple_expression_admission": true,
+    "legacy_action_fcurves_fallback": "Blender 5.2 RNA defines channelbag.fcurves and no Action.fcurves property; getattr(action, 'fcurves', ()) therefore safely falls back after the layered traversal.",
+    "root_reported_pure_tests": "18 passed, including nested META NLA and indirect Python-driver rejection; reviewer inspected implementation and regression source without rerunning native work"
+  },
+  "primary_source": "https://raw.githubusercontent.com/blender/blender/blender-v5.2-release/source/blender/makesrna/intern/rna_action.cc",
+  "limits": [
+    "Source review of this field-specific isolation policy only, not a general Python dependency-closure or every-plugin callback proof.",
+    "Native Blender copy ownership, property setter behavior, all-frame geometry, Action preservation, cleanup and performance still require the new isolated validation stage.",
+    "A setter failure can leave partial changes only on the owned clone; builder-level failure cleanup must succeed before resource release.",
+    "This review made no runtime-source edits, native Blender run, GUI action, artist mutation, deployment or scene save. Only this new small evidence file was written."
+  ],
+  "native_accepted": false,
+  "artist_adoption_authorized_by_this_review": false
+}

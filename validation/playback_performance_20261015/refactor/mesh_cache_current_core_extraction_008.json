@@ -1,0 +1,30 @@
+{
+  "schema": "x.current-core-failure-refinement/1",
+  "native_run": false,
+  "predecessor_core": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_current_core_007.py",
+    "sha256": "1a0aa4fd329675a8af556b6658aa7b275726b5b1748b239fc584eed79b3fd76c",
+    "bytes": 31664
+  },
+  "predecessor_extraction": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_current_core_extraction_007.json",
+    "sha256": "45be09777f6a98b691e22baa92ef459900fc81093e8f9be454be30bf953a311b",
+    "bytes": 8683
+  },
+  "actual_failure_reference": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_current_full30_report_007.json",
+    "sha256": "936e3169453c3103724dcd53ee6b9be557289834d372e4f07c58969071851875",
+    "bytes": 249092
+  },
+  "unchanged_success_main_try_body_ast_sha256": {
+    "run_clip": "d31f98f69423d66befb88532a47b1a03abb4ff49b587fc5475a2c8fa42b18e06",
+    "assemble_clip": "4375c88329fd89ec1281b6724afc83c4e677eb6dc285f059a1b451f0a39e0833"
+  },
+  "changes": [
+    "Add bounded contextmanager that records secondary cleanup faults and preserves a pending primary exception.",
+    "Each main try records primary traceback then bare-raises; original successful main try bodies are exact AST matches.",
+    "Cleanup protects output/raw properties even if the complete shader baseline was not captured, records material_source_exact=null and not_proven, and never treats missing content as exact.",
+    "Success still requires all original cleanup/source/policy gates plus explicit source_protection_complete=true; failure skips success-only finalization.",
+    "Explicit008 policy/contract/runner imports select shader009 (with frozen008/007 bases) after actual inventory; current input007 and all stage/geometry/PC2 primitives remain unchanged."
+  ]
+}

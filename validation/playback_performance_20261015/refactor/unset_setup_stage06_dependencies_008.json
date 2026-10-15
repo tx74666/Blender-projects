@@ -1,0 +1,88 @@
+{
+  "schema": "x.unset-setup-scene-copy-regression-preparation/1",
+  "files": {
+    "scene_builder_unset_setup_smoke_008.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_unset_setup_smoke_008.py",
+      "sha256": "ad0b69e04aa992d5a3a151c7a7a4caa238600c96b153c4bd0b40e2dfb66945d6",
+      "bytes": 6056
+    },
+    "native_validation_support_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py",
+      "sha256": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+      "bytes": 1939
+    },
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    },
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    }
+  },
+  "canonical_scene": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_playback_scene.py",
+    "sha256": "e4f4f58378540d23ea8c3acf6f4bbc7a3b056494b7af480e2f3b9aa092ecef3d",
+    "bytes": 25969
+  },
+  "canonical_pure_tests": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_forearm_twist_playback_scene.py",
+    "sha256": "0d699754a821f794cdb34dbffd2547c3edb97a5c1d0aa17a684551c36bcd19b3",
+    "bytes": 21844
+  },
+  "stage06_source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\source_manifest.json",
+    "sha256": "5c7965ef74e99ed8036bc57ad639cb4db37e6501bb580483a676d4b2fd6cc3c0",
+    "bytes": 25604
+  },
+  "stage06_copy_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\copy_receipt.json",
+    "sha256": "e0e01733a87f58712700b2cf62e428d847ca83f8a7df0d7042e0a5906c4c7e9e",
+    "bytes": 29979
+  },
+  "protected_stage05_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "source_diagnostic_failed_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_synthetic_capture_diagnostic_report_007.json",
+    "sha256": "6a644a75631d1ed73864a8d00210c77fd1ef3e0229fdeaefaaa48276030baabe",
+    "bytes": 68764
+  },
+  "previous_failed_synthetic_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_bone_synthetic_report_006.json",
+    "sha256": "76c053abb5e8566460ab09916f2fd9d6545c793b8650db2ab669a82edfbe8dfc",
+    "bytes": 199833
+  },
+  "stage_delta": [
+    "forearm_twist_playback_scene.py"
+  ],
+  "pure_checks": "21 canonical AST/native-double tests PASS including no-declaration/unset/source-stored-clone-loss getter traps; probe syntax/AST noPGgetter/noOpenSave PASS. Whole194file package Stage05\u219206 exactly one file changes. Nine authoring AST functions remain sealed .41.",
+  "review": "Canonical patch independently ACK; Stage06/new factory probe pending independent source review. No native proof yet.",
+  "no_native_invocation": true,
+  "no_deployment": true,
+  "geometry_thresholds_unchanged": true,
+  "arguments": [
+    "D:/Blender5.2/blender.exe",
+    "--background",
+    "--factory-startup",
+    "-t",
+    "1",
+    "--python-exit-code",
+    "1",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_unset_setup_smoke_008.py",
+    "--",
+    "--artist",
+    "D:/Blender/Projects/Character/X/X.blend",
+    "--addons",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\addons",
+    "--source-manifest",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\source_manifest.json",
+    "--report",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_unset_setup_smoke_report_008.json"
+  ]
+}

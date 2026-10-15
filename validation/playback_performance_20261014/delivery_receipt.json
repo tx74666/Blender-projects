@@ -1,0 +1,148 @@
+{
+  "schema": "x.playback-performance-delivery/1",
+  "date": "2026-10-14",
+  "recorded_utc": "2026-10-14T05:23:08.745Z",
+  "completed": true,
+  "release_version": "0.77.39",
+  "baseline_release_version": "0.77.38",
+  "blender_version": "5.2.0 LTS",
+  "model_and_reasoning_effort": "unrecorded",
+  "measurements": {
+    "method": "Single process ABBA; 2 warmup frames per block, 8 measured frames per block; same saved copy/action/one Blender thread; current-record and display callback functions exchanged only.",
+    "baseline_block_median_ms": [
+      354.02754999813624,
+      354.8179499921389
+    ],
+    "candidate_block_median_ms": [
+      175.02655000134837,
+      170.29285000171512
+    ],
+    "all_candidate_pose_managed_keys_collections_display_match_baseline": true,
+    "background_time_only": true,
+    "gui_playback_fps_verified": false
+  },
+  "patches": [
+    "Existing display state no-op returns before complete Worklist single-user recovery proof; any display write still validates current ownership first.",
+    "Each existing Forearm side is prepared once per synchronous runtime pass; default mirror still validates both sides, and every later update rechecks fresh inputs."
+  ],
+  "verification": {
+    "forearm_cache_suite": "PASS (9 functions, includes 2 new cases)",
+    "forearm_recovery_suite": "PASS",
+    "bone_collection_suite": "PASS (includes 3 new cases)",
+    "same_input_full_managed_output_and_pose_comparison": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "sources": [
+    {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/__init__.py",
+      "sha256": "c729193fd495e86a5059ba2c02e0b2c095f9c6a0b1f4a869ba4d9c49d3d1c258",
+      "bytes": 355944
+    },
+    {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/bone_collections.py",
+      "sha256": "266f69aec82d849ce897f2106edb8680f469cb87506333a4e27db9963d2520c7",
+      "bytes": 47396
+    },
+    {
+      "path": "D:/MyRepository/Blender-addons-by-Randy/addons/character_designer/forearm_twist.py",
+      "sha256": "113d9b1688f1ddceadccd90ffd7cc5f3450e691218d11fe3097e34bc876b879d",
+      "bytes": 98233
+    }
+  ],
+  "evidence": [
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/input_receipt.json",
+      "sha256": "f8a449c3235f31cf199c44836cf26e630d005dbbc162a67b84af09f8b839a046",
+      "bytes": 520
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/profile_saved_forearm.py",
+      "sha256": "5db4611a6aaef88aaf37e1fb3e0d14e8cb7f52bbf8b95960e400fed551568d75",
+      "bytes": 10186
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/frame_step_report.json",
+      "sha256": "7651e3143a2dd4b5459552d39bacfa7b062dd25410899db73b4105fdff3a3c03",
+      "bytes": 19257
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/profile_forearm_call_tree.py",
+      "sha256": "058f636e4c97cab893f6793824a7db0b1c5ceda2d634592a5e0852ddf5e05b55",
+      "bytes": 2117
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/call_tree_report.json",
+      "sha256": "7728904160298c53f4113b097091bcf332c391587db34e55c584a295364711e8",
+      "bytes": 21448
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/profile_saved_forearm_display.py",
+      "sha256": "c6764ad96a79902571e0b5b6ba62ddc93f245b6d68ea68451dc9ef6c92f5144f",
+      "bytes": 11538
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/combined_frame_step_report.json",
+      "sha256": "4339b7bc09b3555ce35cf71798fd8c771456ac73b8552993a860e4ac681edcdb",
+      "bytes": 19864
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/cache_tests.log",
+      "sha256": "048c9421826b6b87d4630c43d1bea2388eace21f4aadb0aa399ceff22daa7982",
+      "bytes": 1166
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/recovery_tests.log",
+      "sha256": "1e7b0c8d177cfd3b77b90a5ee0912c8449f05efc6e84a1664e5f8ab81c1f1e54",
+      "bytes": 957
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/bone_collection_tests.log",
+      "sha256": "e8485aa128ee72e3e0a34bb4c78f75d958823b58d5402a3afc652ecd994d3271",
+      "bytes": 7775
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/build_release.log",
+      "sha256": "ea130e2afcb8aaa89fd2bf6af500c8342a40aaa04b695cefd2f4de1a9d5848e6",
+      "bytes": 52
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/deploy_release.log",
+      "sha256": "c672594622ab8774998b21e2d670f824c62765775aa639702c441b6d651af899",
+      "bytes": 696
+    },
+    {
+      "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/deploy_check.log",
+      "sha256": "603479ba66e9ce194b0e11792514946055ffc0a275a85f1a30fa323420e5aca2",
+      "bytes": 581
+    }
+  ],
+  "archive": {
+    "path": "D:/MyRepository/Blender-addons-by-Randy/dist/character_designer-0.77.39.zip",
+    "sha256": "52de5497c02a2b44f56f1f28644af5b1bbb55babe03098dcc99cb638f1b24691",
+    "bytes": 1456273
+  },
+  "artist_at_delivery": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "deployment": {
+    "blender_target": "5.2",
+    "shipped_files": 190,
+    "installed_check_differences": 0,
+    "X_copy_check_differences": 0,
+    "backup": "C:/Users/Randy/AppData/Local/CodexBackups/addon-deploy/20261014-132116-2b4ae572",
+    "live_artist_refreshed_by_this_task": false,
+    "live_artist_runtime": "not inspected; disk version is not a loaded-runtime claim",
+    "scene_saved_or_modified_by_this_task": false,
+    "commit_or_push": false
+  },
+  "limits": [
+    "Background timings exclude viewport rendering and do not establish actual 1.77 FPS root cause or delivered GUI FPS gain.",
+    "Input is latest saved X.blend; user live dirty changes were preserved and excluded.",
+    "Only Character Designer was registered in isolated processes; external GUI add-on callbacks were not measured.",
+    "Small warm samples on shared machine; no permanent memory budget or whole-world/model equality claim.",
+    "Complete Worklist/Rest ownership proof and inverse skinning remain Forearm costs; no bones/weights/quality/physics changes."
+  ],
+  "next_trigger": "After loading 0.77.39, compare actual sustained material-preview/Solid playback on the same live action. If still slow, measure the remaining Worklist Rest proof and viewport/other callback costs."
+}

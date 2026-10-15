@@ -1,0 +1,716 @@
+{
+  "schema": "x.protected-live-refresh-07741/1",
+  "created_utc": "2026-10-14T18:39:57.319637+00:00",
+  "pid": 24416,
+  "completed": false,
+  "phase": "failed_capture_before_SaveCopy",
+  "artist_saved": false,
+  "file_opened": false,
+  "manual_reacquire_called": false,
+  "frame_set_called": false,
+  "manual_forearm_update_called": false,
+  "automatic_scene_rollback": false,
+  "scope": "Exact recorded authored content/identity witnesses; no Undo-stack preservation proof.",
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py",
+    "sha256": "88b75d97b40140dc8addfeac9351555f7147e46f939bbf9244fc177d950b2677",
+    "bytes": 44758
+  },
+  "errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 732, in begin\n    controller.prepare()\n    ~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 603, in prepare\n    self.before, self.wm = capture(cd, self.oracle)\n                           ~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 486, in capture\n    components[\"objects_modifiers_constraints_transforms\"] = digest(objects)\n                                                             ~~~~~~^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 90, in digest\n    return hashlib.sha256(json.dumps(exact(value), ensure_ascii=False, sort_keys=True,\n                                     ~~~~~^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 85, in exact\n    return [exact(item) for item in value]\n            ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 79, in exact\n    return {str(key): exact(item) for key, item in value.items()}\n                      ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 79, in exact\n    return {str(key): exact(item) for key, item in value.items()}\n                      ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 85, in exact\n    return [exact(item) for item in value]\n            ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 86, in exact\n    raise RuntimeError(\"Unsupported artist value: \" + type(value).__name__)\nRuntimeError: Unsupported artist value: Vector\n"
+  ],
+  "memory": {
+    "load_percent": 87,
+    "available_bytes": 2053423104
+  },
+  "artist_disk_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "complete_artist_owner_before": {
+    "scene": {
+      "type": "Scene",
+      "name": "Scene",
+      "pointer": 1522134704256,
+      "library": null
+    },
+    "rig": {
+      "type": "Object",
+      "name": "CoshaRig",
+      "pointer": 1522043962768,
+      "library": null
+    },
+    "Cosha": {
+      "type": "Object",
+      "name": "Cosha",
+      "pointer": 1522043964128,
+      "library": null
+    },
+    "Shoes": {
+      "type": "Object",
+      "name": "Shoes",
+      "pointer": 1522043976368,
+      "library": null
+    },
+    "calibrated_owner_count": 1,
+    "sides": {
+      "L": {
+        "support_vertices": 191,
+        "key": "CD Forearm Twist.L.002",
+        "pointer": 1522785421088,
+        "enabled": true,
+        "value": 1.0,
+        "mute": false
+      },
+      "R": {
+        "support_vertices": 191,
+        "key": "CD Forearm Twist.R.002",
+        "pointer": 1522785433120,
+        "enabled": true,
+        "value": 1.0,
+        "mute": false
+      }
+    }
+  },
+  "handlers_before": {
+    "_extension_repos_files_clear": [
+      {
+        "module": "bl_pkg",
+        "name": "extension_repos_files_clear",
+        "python_id": 1521969262368
+      }
+    ],
+    "_extension_repos_sync": [
+      {
+        "module": "bl_pkg",
+        "name": "extension_repos_sync",
+        "python_id": 1521969262208
+      }
+    ],
+    "_extension_repos_update_post": [
+      {
+        "module": "bl_pkg",
+        "name": "monkeypatch_extensions_repos_update_post",
+        "python_id": 1521969263008
+      }
+    ],
+    "_extension_repos_update_pre": [
+      {
+        "module": "bl_pkg",
+        "name": "monkeypatch_extensions_repos_update_pre",
+        "python_id": 1521969262848
+      }
+    ],
+    "animation_playback_post": [],
+    "animation_playback_pre": [],
+    "annotation_post": [],
+    "annotation_pre": [],
+    "blend_import_post": [
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "remember_object_manager_imported_objects",
+        "python_id": 1522026977280
+      },
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "repair_surface_sample_display_on_load",
+        "python_id": 1522027178688
+      }
+    ],
+    "blend_import_pre": [],
+    "composite_cancel": [],
+    "composite_post": [],
+    "composite_pre": [],
+    "depsgraph_update_post": [
+      {
+        "module": "random_realm_builder_exporter.rr_shader_mixer",
+        "name": "_on_graph_update",
+        "python_id": 1522026147296
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_graph_post",
+        "python_id": 1522060758688
+      },
+      {
+        "module": "character_designer.body_calibration_display",
+        "name": "_invalidate",
+        "python_id": 1522061696896
+      }
+    ],
+    "depsgraph_update_pre": [],
+    "exit_pre": [],
+    "frame_change_post": [
+      {
+        "module": "wiggle_2",
+        "name": "wiggle_post",
+        "python_id": 1522003719040
+      },
+      {
+        "module": "bl_ext.user_default.auto_rig_pro.src.rig_functions",
+        "name": "rig_layers_anim_update",
+        "python_id": 1522028206400
+      },
+      {
+        "module": "character_designer.bone_collections",
+        "name": "_frame_visibility",
+        "python_id": 1522036420064
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_frame_post",
+        "python_id": 1522060758848
+      }
+    ],
+    "frame_change_pre": [
+      {
+        "module": "character_designer.hair_wiggle_adapter",
+        "name": "_frame_guard",
+        "python_id": 1522038964608
+      },
+      {
+        "module": "wiggle_2",
+        "name": "wiggle_pre",
+        "python_id": 1522003719200
+      }
+    ],
+    "load_factory_preferences_post": [],
+    "load_factory_startup_post": [],
+    "load_post": [
+      {
+        "module": "bl_operators.copy_global_transform",
+        "name": "_on_blendfile_load_post",
+        "python_id": 1522565073792
+      },
+      {
+        "module": "blenderkit.search",
+        "name": "scene_load",
+        "python_id": 1522003308000
+      },
+      {
+        "module": "blenderkit.search",
+        "name": "undo_post_reload_previews",
+        "python_id": 1522003307680
+      },
+      {
+        "module": "blenderkit.download",
+        "name": "scene_load",
+        "python_id": 1522002986304
+      },
+      {
+        "module": "blenderkit.download",
+        "name": "scene_load_post",
+        "python_id": 1522002986144
+      },
+      {
+        "module": "blenderkit.tasks_queue",
+        "name": "scene_load",
+        "python_id": 1522002085344
+      },
+      {
+        "module": "blenderkit",
+        "name": "scene_load",
+        "python_id": 1522003579808
+      },
+      {
+        "module": "wiggle_2",
+        "name": "wiggle_load",
+        "python_id": 1522003718400
+      },
+      {
+        "module": "pose_library.gui",
+        "name": "_on_blendfile_load_post",
+        "python_id": 1522004385504
+      },
+      {
+        "module": "bl_ext.blender_org.mio3_uv.operators.sort",
+        "name": "load_handler",
+        "python_id": 1522005823296
+      },
+      {
+        "module": "bl_ext.blender_org.mio3_uv.operators.view_padding",
+        "name": "load_handler",
+        "python_id": 1522008720224
+      },
+      {
+        "module": "bl_ext.blender_org.mio3_uv.property",
+        "name": "load_handler",
+        "python_id": 1522005531584
+      },
+      {
+        "module": "bl_ext.blender_org.screencast_keys",
+        "name": "load_post_handler",
+        "python_id": 1522006158816
+      },
+      {
+        "module": "random_realm_builder_exporter.rr_shader_mixer",
+        "name": "_on_reload",
+        "python_id": 1522026147456
+      },
+      {
+        "module": "random_realm_builder_exporter.rr_pbr_runtime",
+        "name": "reset_pbr_bake_runtime_state_on_load",
+        "python_id": 1522026957376
+      },
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "repair_rr_normal_map_nodes_on_load",
+        "python_id": 1522027033792
+      },
+      {
+        "module": "random_realm_builder_exporter.rr_reference_layout",
+        "name": "migrate_reference_layout_usage_on_load",
+        "python_id": 1522026627776
+      },
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "reset_object_manager_duplicate_guard_on_load",
+        "python_id": 1522026977440
+      },
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "repair_surface_sample_display_on_load",
+        "python_id": 1522027178688
+      },
+      {
+        "module": "bl_ext.blender_org.auto_reload.reload",
+        "name": "startup_refresh_file_moddate",
+        "python_id": 1522027437792
+      },
+      {
+        "module": "bl_ext.user_default.auto_rig_pro.src.auto_rig_smart",
+        "name": "enable_markers_fx",
+        "python_id": 1522029162592
+      },
+      {
+        "module": "rigify.utils.action_layers",
+        "name": "versioning_5_0",
+        "python_id": 1522032998688
+      },
+      {
+        "module": "character_designer.finger_definition_ui",
+        "name": "_resume",
+        "python_id": 1522061200576
+      },
+      {
+        "module": "character_designer.finger_loop_marks_ui",
+        "name": "_restore",
+        "python_id": 1522061408544
+      },
+      {
+        "module": "character_designer.unity_animation_rigging",
+        "name": "_reacquire",
+        "python_id": 1522042996512
+      },
+      {
+        "module": "character_designer.reference_views",
+        "name": "_reference_images_load_post",
+        "python_id": 1522036234560
+      },
+      {
+        "module": "character_designer.bone_collections",
+        "name": "_load_native_migration",
+        "python_id": 1522036420544
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_load_post",
+        "python_id": 1522060759008
+      },
+      {
+        "module": "character_designer.generated_names",
+        "name": "_after_load",
+        "python_id": 1522036958496
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_load_post",
+        "python_id": 1521995210464
+      },
+      {
+        "module": "character_designer.body_calibration_display",
+        "name": "_invalidate",
+        "python_id": 1522061696896
+      },
+      {
+        "module": "character_designer.body_calibration_overlay",
+        "name": "_load",
+        "python_id": 1522061806144
+      }
+    ],
+    "load_post_fail": [],
+    "load_pre": [
+      {
+        "module": "character_designer.hair_wiggle_adapter",
+        "name": "_lifecycle_guard",
+        "python_id": 1522038964768
+      },
+      {
+        "module": "pose_library.gui",
+        "name": "_on_blendfile_load_pre",
+        "python_id": 1522004385344
+      },
+      {
+        "module": "bl_ext.user_default.auto_rig_pro.src.auto_rig",
+        "name": "cleanup_line_fx",
+        "python_id": 1522028929536
+      },
+      {
+        "module": "bl_ext.user_default.auto_rig_pro.src.auto_rig_smart",
+        "name": "cleanup",
+        "python_id": 1522029162112
+      },
+      {
+        "module": "character_designer.mesh_mirror_ui",
+        "name": "_invalidate_preview",
+        "python_id": 1522043740512
+      },
+      {
+        "module": "character_designer.refine_symmetry_ui",
+        "name": "_invalidate",
+        "python_id": 1522060535552
+      },
+      {
+        "module": "character_designer.finger_definition_ui",
+        "name": "_invalidate",
+        "python_id": 1522061200416
+      },
+      {
+        "module": "character_designer.finger_bone_tools",
+        "name": "_reset",
+        "python_id": 1522061399104
+      },
+      {
+        "module": "character_designer.finger_loop_marks_ui",
+        "name": "_reset",
+        "python_id": 1522061408384
+      },
+      {
+        "module": "character_designer.animation",
+        "name": "_animation_load_pre",
+        "python_id": 1521995382848
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_restore_preview",
+        "python_id": 1522060759328
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_lifecycle_pre",
+        "python_id": 1521995210144
+      }
+    ],
+    "object_bake_cancel": [],
+    "object_bake_complete": [],
+    "object_bake_pre": [],
+    "redo_post": [
+      {
+        "module": "random_realm_builder_exporter.rr_shader_mixer",
+        "name": "_on_reload",
+        "python_id": 1522026147456
+      },
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "sync_object_manager_names_after_history",
+        "python_id": 1522026967296
+      },
+      {
+        "module": "character_designer.finger_definition_ui",
+        "name": "_resume",
+        "python_id": 1522061200576
+      },
+      {
+        "module": "character_designer.finger_loop_marks_ui",
+        "name": "_restore",
+        "python_id": 1522061408544
+      },
+      {
+        "module": "character_designer.unity_animation_rigging",
+        "name": "_reacquire",
+        "python_id": 1522042996512
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_undo_post",
+        "python_id": 1522060759168
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_undo_post",
+        "python_id": 1521995210624
+      },
+      {
+        "module": "character_designer.body_calibration_display",
+        "name": "_invalidate",
+        "python_id": 1522061696896
+      }
+    ],
+    "redo_pre": [
+      {
+        "module": "character_designer.hair_wiggle_adapter",
+        "name": "_lifecycle_guard",
+        "python_id": 1522038964768
+      },
+      {
+        "module": "character_designer.mesh_mirror_ui",
+        "name": "_invalidate_preview",
+        "python_id": 1522043740512
+      },
+      {
+        "module": "character_designer.refine_symmetry_ui",
+        "name": "_invalidate",
+        "python_id": 1522060535552
+      },
+      {
+        "module": "character_designer.finger_definition_ui",
+        "name": "_invalidate",
+        "python_id": 1522061200416
+      },
+      {
+        "module": "character_designer.finger_bone_tools",
+        "name": "_reset",
+        "python_id": 1522061399104
+      },
+      {
+        "module": "character_designer.finger_loop_marks_ui",
+        "name": "_reset",
+        "python_id": 1522061408384
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_lifecycle_pre",
+        "python_id": 1521995210144
+      }
+    ],
+    "render_cancel": [
+      {
+        "module": "wiggle_2",
+        "name": "wiggle_render_cancel",
+        "python_id": 1522003718560
+      }
+    ],
+    "render_complete": [],
+    "render_init": [],
+    "render_post": [
+      {
+        "module": "wiggle_2",
+        "name": "wiggle_render_post",
+        "python_id": 1522003718720
+      }
+    ],
+    "render_pre": [
+      {
+        "module": "character_designer.hair_wiggle_adapter",
+        "name": "_lifecycle_guard",
+        "python_id": 1522038964768
+      },
+      {
+        "module": "wiggle_2",
+        "name": "wiggle_render_pre",
+        "python_id": 1522003718880
+      },
+      {
+        "module": "random_realm_builder_exporter.rr_shader_mixer",
+        "name": "_before_save_or_render",
+        "python_id": 1522026147616
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_lifecycle_pre",
+        "python_id": 1521995210144
+      }
+    ],
+    "render_stats": [],
+    "render_write": [],
+    "save_post": [
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_save_post",
+        "python_id": 1521995209984
+      }
+    ],
+    "save_post_fail": [],
+    "save_pre": [
+      {
+        "module": "character_designer.hair_wiggle_adapter",
+        "name": "_lifecycle_guard",
+        "python_id": 1522038964768
+      },
+      {
+        "module": "blenderkit.download",
+        "name": "scene_save",
+        "python_id": 1522002985824
+      },
+      {
+        "module": "random_realm_builder_exporter.rr_shader_mixer",
+        "name": "_before_save_or_render",
+        "python_id": 1522026147616
+      },
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "clear_inherited_rr_identity_before_save",
+        "python_id": 1522026977600
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_restore_preview",
+        "python_id": 1522060759328
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_save_pre",
+        "python_id": 1521995209824
+      }
+    ],
+    "translation_update_post": [
+      {
+        "module": "bl_ui",
+        "name": "translation_update",
+        "python_id": 1521964708736
+      }
+    ],
+    "undo_post": [
+      {
+        "module": "blenderkit.search",
+        "name": "undo_post_reload_previews",
+        "python_id": 1522003307680
+      },
+      {
+        "module": "random_realm_builder_exporter.rr_shader_mixer",
+        "name": "_on_reload",
+        "python_id": 1522026147456
+      },
+      {
+        "module": "random_realm_builder_exporter",
+        "name": "sync_object_manager_names_after_history",
+        "python_id": 1522026967296
+      },
+      {
+        "module": "character_designer.finger_definition_ui",
+        "name": "_resume",
+        "python_id": 1522061200576
+      },
+      {
+        "module": "character_designer.finger_loop_marks_ui",
+        "name": "_restore",
+        "python_id": 1522061408544
+      },
+      {
+        "module": "character_designer.unity_animation_rigging",
+        "name": "_reacquire",
+        "python_id": 1522042996512
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_undo_post",
+        "python_id": 1522060759168
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_undo_post",
+        "python_id": 1521995210624
+      },
+      {
+        "module": "character_designer.body_calibration_display",
+        "name": "_invalidate",
+        "python_id": 1522061696896
+      }
+    ],
+    "undo_pre": [
+      {
+        "module": "character_designer.hair_wiggle_adapter",
+        "name": "_lifecycle_guard",
+        "python_id": 1522038964768
+      },
+      {
+        "module": "blenderkit.search",
+        "name": "undo_pre_end_assetbar",
+        "python_id": 1522003307840
+      },
+      {
+        "module": "character_designer.mesh_mirror_ui",
+        "name": "_invalidate_preview",
+        "python_id": 1522043740512
+      },
+      {
+        "module": "character_designer.refine_symmetry_ui",
+        "name": "_invalidate",
+        "python_id": 1522060535552
+      },
+      {
+        "module": "character_designer.finger_definition_ui",
+        "name": "_invalidate",
+        "python_id": 1522061200416
+      },
+      {
+        "module": "character_designer.finger_bone_tools",
+        "name": "_reset",
+        "python_id": 1522061399104
+      },
+      {
+        "module": "character_designer.finger_loop_marks_ui",
+        "name": "_reset",
+        "python_id": 1522061408384
+      },
+      {
+        "module": "character_designer.forearm_twist",
+        "name": "_restore_preview",
+        "python_id": 1522060759328
+      },
+      {
+        "module": "character_designer.skirt_wiggle",
+        "name": "_lifecycle_pre",
+        "python_id": 1521995210144
+      }
+    ],
+    "version_update": [
+      {
+        "module": "cycles.version_update",
+        "name": "do_versions",
+        "python_id": 1521989178752
+      }
+    ],
+    "xr_session_start_pre": []
+  },
+  "candidate_proof": {
+    "prepared": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\prepared_candidate_07741.json",
+      "sha256": "4d0dd17651ab78ad0f80901f271ff507d4743d25dfed442917578ffbe73b1843",
+      "bytes": 7880
+    },
+    "package": {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\dist\\character_designer-0.77.41.zip",
+      "sha256": "41ffd22d4bb60635b00dc37f96fe34b3e98aa2f6c791134a12f60ddf6cbe3054",
+      "bytes": 1459186
+    },
+    "roots": {
+      "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer": {
+        "files": 190,
+        "map_sha256": "201b75618ec02356e22cee00f05d98212dc37bcae2a2fe38a9e7e3d7b8032f96"
+      },
+      "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer": {
+        "files": 190,
+        "map_sha256": "201b75618ec02356e22cee00f05d98212dc37bcae2a2fe38a9e7e3d7b8032f96"
+      },
+      "D:\\Blender\\Projects\\Character\\X\\addons\\character_designer": {
+        "files": 190,
+        "map_sha256": "201b75618ec02356e22cee00f05d98212dc37bcae2a2fe38a9e7e3d7b8032f96"
+      }
+    }
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 732, in begin\n    controller.prepare()\n    ~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 603, in prepare\n    self.before, self.wm = capture(cd, self.oracle)\n                           ~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 486, in capture\n    components[\"objects_modifiers_constraints_transforms\"] = digest(objects)\n                                                             ~~~~~~^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 90, in digest\n    return hashlib.sha256(json.dumps(exact(value), ensure_ascii=False, sort_keys=True,\n                                     ~~~~~^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 85, in exact\n    return [exact(item) for item in value]\n            ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 79, in exact\n    return {str(key): exact(item) for key, item in value.items()}\n                      ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 79, in exact\n    return {str(key): exact(item) for key, item in value.items()}\n                      ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 85, in exact\n    return [exact(item) for item in value]\n            ~~~~~^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v2.py\", line 86, in exact\n    raise RuntimeError(\"Unsupported artist value: \" + type(value).__name__)\nRuntimeError: Unsupported artist value: Vector\n",
+  "finished_utc": "2026-10-14T18:40:36.699642+00:00",
+  "final_artist_disk": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "artist_disk_unchanged": true,
+  "final_filepath": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "final_dirty": true,
+  "savecopy_retained": false,
+  "helper_cleanup": "Owned closed helper/source/oracle removed; no live timer.",
+  "helper_released_utc": "2026-10-14T18:42:31.925212+00:00"
+}

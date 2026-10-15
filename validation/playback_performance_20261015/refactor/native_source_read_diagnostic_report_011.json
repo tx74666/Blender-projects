@@ -1,0 +1,3969 @@
+{
+  "schema": "x.source-rna-read-phase-diagnostic/1",
+  "completed": false,
+  "pid": 15768,
+  "created_utc": "2026-10-15T00:52:33.328044+00:00",
+  "no_blend_open": true,
+  "no_artist_open_or_save": true,
+  "no_scene_save": true,
+  "performance_claim": null,
+  "expected_outcome": "Original Smoke005v2 guard failure preserved, with phase metadata.",
+  "diagnostic_script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_read_phases_011.py",
+    "sha256": "ec7c1a6b0c67d360607d759194a2fffdca4358a18fda726974342cac00aff089"
+  },
+  "diagnostic_dependency_pins": {
+    "native_source_reference_witness_v5.py": "e0a56ab2c38546a36dd90eaca1dc74ca1ad57da61bab7528b602144157ef8135",
+    "native_validation_support_v5.py": "68451f7cc73d582da148b6a4efcbdf3596edaf4285310a3e40997273d70ff2ce",
+    "scene_builder_smoke_005_v2.py": "146b8ed27b600e064d55feb0252a2d7dfe67712654c399ddc5c0d51c1270f5ef"
+  },
+  "diagnostic_stage_manifest_sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+  "diagnostic_events": [
+    {
+      "sequence": 0,
+      "phase": "raw_before",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 1,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 2,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 3,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 4,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 5,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 6,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 7,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 8,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 9,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 10,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 11,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 12,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 13,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 14,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 15,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"active_asset\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 16,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"active_asset\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 17,
+      "phase": "raw_before",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": null,
+      "call_path": "Scene:Scene.character_designer_setup.custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      }
+    },
+    {
+      "sequence": 18,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "name",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 19,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "name",
+      "call_path": "RNA_descriptor.name.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 20,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "name",
+      "call_path": "RNA_descriptor.name.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 21,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "name",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 22,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "rig",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "POINTER"
+    },
+    {
+      "sequence": 23,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "rig",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "POINTER"
+    },
+    {
+      "sequence": 24,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "body",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "POINTER"
+    },
+    {
+      "sequence": 25,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "body",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "POINTER"
+    },
+    {
+      "sequence": 26,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "bone_mappings",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 27,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "bone_mappings",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": false,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 28,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "hips_bone",
+      "call_path": "Scene:Scene.character_designer_setup.hips_bone",
+      "set_bit_delta_since_previous_observation": {
+        "rig": [
+          false,
+          true
+        ]
+      },
+      "raw_keys_added": [
+        "rig"
+      ],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 29,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "hips_bone",
+      "call_path": "Scene:Scene.character_designer_setup.hips_bone",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 30,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "head_bone",
+      "call_path": "Scene:Scene.character_designer_setup.head_bone",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 31,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "head_bone",
+      "call_path": "Scene:Scene.character_designer_setup.head_bone",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 32,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION",
+      "native_collection_count": 2
+    },
+    {
+      "sequence": 33,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets.",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 34,
+      "phase": "raw_after",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 35,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 36,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 37,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 38,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 39,
+      "phase": "raw_after",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 40,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 41,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "RNA_descriptor.name.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 42,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "RNA_descriptor.name.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 43,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 44,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 45,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 46,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 47,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 48,
+      "phase": "raw_after",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 49,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 50,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 51,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 52,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 53,
+      "phase": "raw_after",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 54,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets.",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 55,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets.",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 56,
+      "phase": "raw_after",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 57,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 58,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 59,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 60,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 61,
+      "phase": "raw_after",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 62,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 63,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "RNA_descriptor.name.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 64,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "RNA_descriptor.name.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 65,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 66,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 67,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 68,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 69,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 70,
+      "phase": "raw_after",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 71,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 72,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"object\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 73,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 74,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom[\"role\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 75,
+      "phase": "raw_after",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets..custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 76,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets.",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION"
+    },
+    {
+      "sequence": 77,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "assets",
+      "call_path": "Scene:Scene.character_designer_setup.assets",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "COLLECTION",
+      "native_collection_count": 2,
+      "reader_result_type": "dict",
+      "reader_result_count": 1,
+      "reader_result_mapping_keys": [
+        ""
+      ]
+    },
+    {
+      "sequence": 78,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "active_asset",
+      "call_path": "Scene:Scene.character_designer_setup.active_asset",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "INT"
+    },
+    {
+      "sequence": 79,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "active_asset",
+      "call_path": "Scene:Scene.character_designer_setup.active_asset",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "INT"
+    },
+    {
+      "sequence": 80,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "add_role",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 81,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "add_role",
+      "call_path": "RNA_descriptor.add_role.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 82,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "add_role",
+      "call_path": "RNA_descriptor.add_role.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 83,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "add_role",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 84,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "binding_method",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 85,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "binding_method",
+      "call_path": "RNA_descriptor.binding_method.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 86,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "binding_method",
+      "call_path": "RNA_descriptor.binding_method.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 87,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "binding_method",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "ENUM"
+    },
+    {
+      "sequence": 88,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "show_binding_backup",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "BOOLEAN"
+    },
+    {
+      "sequence": 89,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "show_binding_backup",
+      "call_path": "RNA_descriptor.show_binding_backup.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "BOOLEAN"
+    },
+    {
+      "sequence": 90,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "show_binding_backup",
+      "call_path": "RNA_descriptor.show_binding_backup.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "BOOLEAN"
+    },
+    {
+      "sequence": 91,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "show_binding_backup",
+      "call_path": "RNA_descriptor.show_binding_backup.default_array",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "BOOLEAN"
+    },
+    {
+      "sequence": 92,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "show_binding_backup",
+      "call_path": "RNA_descriptor.show_binding_backup.default_array",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "BOOLEAN"
+    },
+    {
+      "sequence": 93,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "show_binding_backup",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "BOOLEAN"
+    },
+    {
+      "sequence": 94,
+      "phase": "default_descriptor",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 95,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "RNA_descriptor.last_message.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 96,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "RNA_descriptor.last_message.default",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 97,
+      "phase": "default_descriptor",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": null,
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 98,
+      "phase": "raw_after",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 99,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 100,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 101,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 102,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 103,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 104,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 105,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][0]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 106,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 107,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 108,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].object",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 109,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 110,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1].role",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 111,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"][1]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 112,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"assets\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 113,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"active_asset\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 114,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"active_asset\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 115,
+      "phase": "value",
+      "boundary": "before",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"rig\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 116,
+      "phase": "value",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom[\"rig\"]",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    },
+    {
+      "sequence": 117,
+      "phase": "raw_after",
+      "boundary": "after",
+      "rna_path": "Scene:Scene.character_designer_setup",
+      "field": "last_message",
+      "call_path": "Scene:Scene.character_designer_setup.custom",
+      "set_bit_delta_since_previous_observation": {},
+      "raw_keys_added": [],
+      "raw_keys_removed": [],
+      "snapshot": {
+        "set_bits": {
+          "active_asset": true,
+          "add_role": false,
+          "assets": true,
+          "binding_method": false,
+          "body": false,
+          "bone_mappings": false,
+          "head_bone": true,
+          "hips_bone": true,
+          "last_message": false,
+          "name": false,
+          "rig": true,
+          "show_binding_backup": false
+        },
+        "raw_keys": [
+          "active_asset",
+          "assets",
+          "rig"
+        ]
+      },
+      "field_type": "STRING"
+    }
+  ],
+  "diagnostic_observer_errors": [],
+  "diagnostic_limits": "Only existing Setup Reader phases observed. Snapshot reads is_property_set and raw key names; computed getter outputs are never independently requested. Existing Smoke guards remain authoritative.",
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "a2fb4026c1ce544825c940e7958a60a3b7980b6c1fda2e302035a30c13934728",
+    "bytes": 34846488
+  },
+  "source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_smoke_005_v2.py",
+    "sha256": "146b8ed27b600e064d55feb0252a2d7dfe67712654c399ddc5c0d51c1270f5ef",
+    "bytes": 16107
+  },
+  "witness_script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v5.py",
+    "sha256": "68451f7cc73d582da148b6a4efcbdf3596edaf4285310a3e40997273d70ff2ce",
+    "bytes": 1939
+  },
+  "blender": "5.2.0 LTS",
+  "version": [
+    0,
+    77,
+    41
+  ],
+  "extra_witness_sources": {
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_source_reference_witness_v5.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v5.py",
+      "sha256": "e0a56ab2c38546a36dd90eaca1dc74ca1ad57da61bab7528b602144157ef8135",
+      "bytes": 18220
+    },
+    "native_validation_support_v5.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v5.py",
+      "sha256": "68451f7cc73d582da148b6a4efcbdf3596edaf4285310a3e40997273d70ff2ce",
+      "bytes": 1939
+    }
+  },
+  "private_ids_removed": true,
+  "source_created_ids_removed": true,
+  "generated_fixture_image_removed": true,
+  "extra_witness_sources_after": {
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_source_reference_witness_v5.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v5.py",
+      "sha256": "e0a56ab2c38546a36dd90eaca1dc74ca1ad57da61bab7528b602144157ef8135",
+      "bytes": 18220
+    },
+    "native_validation_support_v5.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v5.py",
+      "sha256": "68451f7cc73d582da148b6a4efcbdf3596edaf4285310a3e40997273d70ff2ce",
+      "bytes": 1939
+    }
+  },
+  "extra_witness_sources_unchanged": true,
+  "runtime_guard_released": true,
+  "known_forearm_lifecycle_timer_gone": true,
+  "artist_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "a2fb4026c1ce544825c940e7958a60a3b7980b6c1fda2e302035a30c13934728",
+    "bytes": 34846488
+  },
+  "artist_disk_unchanged": true,
+  "sources_unchanged": true,
+  "handlers_unchanged": true,
+  "cleanup_errors": [],
+  "diagnostic_wrappers_still_owned": true,
+  "diagnostic_reader_methods_restored": true,
+  "source_pin_summary": {
+    "count": 162,
+    "sha256": "fc0bf5b8cd0bf5a9557366a8dbea29b6fc67400ef73e0fc5adde4dac15c355ee"
+  },
+  "error": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v5.py\", line 147, in rna\n    result[\"properties\"][name] = self.value(observed, path + \".\" + name)\n                                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_read_phases_011.py\", line 108, in wrapped\n    result = _original(self, *call_args, **kwargs)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v5.py\", line 97, in value\n    return self.rna(value, path)\n           ~~~~~~~~^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v5.py\", line 155, in rna\n    raise SourceReferenceWitnessError(\"Typed getter changed registered source set status: \" + path)\nnative_source_reference_witness_v5.SourceReferenceWitnessError: Typed getter changed registered source set status: Scene:Scene.character_designer_setup\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_read_phases_011.py\", line 142, in <module>\n    main(args, report)\n    ~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\probe_source_read_phases_011.py\", line 117, in main\n    smoke.main(args, report)\n    ~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_smoke_005_v2.py\", line 106, in main\n    properties_before = witness.source_property_witness(source)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v5.py\", line 34, in source_property_witness\n    extension = registered_source_witness(scene, _original)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v5.py\", line 246, in registered_source_witness\n    state = reader.rna(owner, path, properties)\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v5.py\", line 152, in rna\n    raise SourceReferenceWitnessError(\"Cannot read source RNA \" + path + \".\" + name) from error\nnative_source_reference_witness_v5.SourceReferenceWitnessError: Cannot read source RNA Scene:Scene.character_designer_setup\n"
+}

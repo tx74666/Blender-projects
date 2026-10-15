@@ -1,0 +1,56 @@
+{
+  "schema": "x.final-save-v4-pure-source-checks/1",
+  "completed": true,
+  "native_or_UI_executed": false,
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_v4.py",
+    "sha256": "a501ecc537777487682849b579d45d6957eb21b4f64f35c62e007d28f84aee18",
+    "bytes": 21537
+  },
+  "installer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\install_final_save_07741_v4.py",
+    "sha256": "0c1fed44a5d3fcefac1c81aad01d9c24edfe893e86321bc1b473a0e07d2d65a6",
+    "bytes": 2732
+  },
+  "preserved_inputs": {
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_v3.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_v3.py",
+      "sha256": "dbb73ca8ce7254230d7cbbfd6648b69d1b113ab9884318565d368ff9e4a05f74",
+      "bytes": 18376
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\install_final_save_07741_v3.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\install_final_save_07741_v3.py",
+      "sha256": "148aed631c5b8d40e32b2f5deaabd72f8d7ee7b40087748b4f27b83d356d7617",
+      "bytes": 2732
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v3.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\protected_refresh_07741_v3.py",
+      "sha256": "069fe18afcb46a11b6faf63dac3846281dde3c4c0fbc9da90d3c50f105a71eef",
+      "bytes": 45816
+    },
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_20261014T192834Z_15c1805b8f8c\\final_save_receipt.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_20261014T192834Z_15c1805b8f8c\\final_save_receipt.json",
+      "sha256": "1b2540b51810bd43941fc9c2ba2fd2025334753d84ef3c07b6f3bdcd3c84bdee",
+      "bytes": 2615
+    }
+  },
+  "official_console_schema_sources": [
+    "https://raw.githubusercontent.com/blender/blender/v5.2.0/source/blender/makesrna/intern/rna_space.cc",
+    "https://raw.githubusercontent.com/blender/blender/v5.2.0/source/blender/makesdna/DNA_space_types.h",
+    "https://raw.githubusercontent.com/blender/blender/v5.2.0/source/blender/editors/space_console/console_ops.cc",
+    "https://raw.githubusercontent.com/blender/blender/v5.2.0/source/blender/editors/space_console/console_draw.cc"
+  ],
+  "checks": [
+    "py_compile",
+    "blank_partial_commented_body_wait",
+    "history_style_not_scrollbacks_semantics",
+    "native_schema_and_cursor_fail_closed",
+    "tail_identity_and_scrollback_disjoint",
+    "pending_buffer_retained_across_transition",
+    "source_installer_capture_pins",
+    "whitelisted_exact_capture_dependencies",
+    "single_native_save_no_console_execution",
+    "no_top_level_worker_run",
+    "failed_v3_sources_receipt_preserved"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "x.playback-context-comparison/1",
+  "date": "2026-10-14",
+  "recorded_utc": "2026-10-14T06:07:12.714Z",
+  "completed": true,
+  "source_and_deployment_version": "0.77.39",
+  "live_addon_runtime": "unobserved, not refreshed",
+  "blender_version": "5.2.0 LTS",
+  "hardware": {
+    "model": "Dell G15 5510",
+    "cpu": "Intel Core i7-10870H",
+    "cores": 8,
+    "logical_processors": 16,
+    "ram_installed_gib_from_console_history": 16,
+    "total_physical_bytes_fresh_WMI": 16943685632,
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "vram_mib_fresh_nvidia_smi": 6144,
+    "nvidia_driver_fresh_WMI": "32.0.16.1060",
+    "observed_free_physical_kib": 1336108,
+    "limit": "Hardware and free-memory observations are separate from prior benchmark intervals."
+  },
+  "geometry_report": {
+    "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/geometry_count_report.json",
+    "sha256": "bad31b69c5c5be6bf184389a7b8af6bf681e014e3b5d7f1d2d1b129bcdf909db",
+    "bytes": 22131
+  },
+  "geometry_inspector": {
+    "path": "D:/Blender/Projects/Character/X/validation/playback_performance_20261014/inspect_character_geometry.py",
+    "sha256": "f15f85bb06c934c741087cd58347ca8fa88061cc3d4da25c1a30b76edbc58c29",
+    "bytes": 2743
+  },
+  "geometry_totals": {
+    "base_vertices": 38727,
+    "base_faces": 37872,
+    "base_triangles": 75662,
+    "evaluated_vertices": 83915,
+    "evaluated_faces": 82477,
+    "evaluated_triangles": 164902
+  },
+  "shoes_evaluated_triangles": 111528,
+  "shoes_share_of_character_triangles_percent": 67.63289711464992,
+  "external_comparisons": [
+    {
+      "title": "Blender Studio Scene Performance On Sprite Fright",
+      "url": "https://studio.blender.org/blog/sprite-fright-scene-fps/",
+      "published": "2021-04-20",
+      "character": "Rex",
+      "vertices": 41000,
+      "bones_total": 2000,
+      "bones_deforming": 298,
+      "drivers": 1300,
+      "cpus": [
+        "i9-9900K",
+        "i7-5820K"
+      ],
+      "single_character_fps": 24,
+      "limits": "Capped at24; Simplify disabled Subdivision; no baking/cache; different hardware and rig."
+    },
+    {
+      "title": "Blender5.1 Animation and Rigging Performance",
+      "url": "https://developer.blender.org/docs/release_notes/5.1/animation_rigging/",
+      "character": "Hi, my name is Amy",
+      "hardware": "Ryzen9 9900X/Linux",
+      "production_evaluation_ms_threads4_8_24": [
+        10.4,
+        8.9,
+        9.5
+      ],
+      "limits": "Average evaluation during playback; stronger CPU, different thread counts/OS/production file; no matching160k-face benchmark."
+    }
+  ],
+  "interpretation": {
+    "universal_160k_face_FPS_standard_found": false,
+    "user_160k_corresponds_to_evaluated_triangle_count": true,
+    "reasonable_optimization_target_fps": 24,
+    "target_total_frame_budget_ms": 41.666666666666664,
+    "current_background_frame_ms_range": [
+      170.29285000171512,
+      175.02655000134837
+    ],
+    "same_scene_forearm_isolated_background_ms": 37.812900001881644,
+    "continue_optimization_justified": true,
+    "priority": "Preserve mesh/weights/Rig; reduce recurring Worklist Rest proof and forearm computation, then compare live material-preview/Solid; inspect shoes cost separately.",
+    "limits": "Forearm isolation is diagnostic with stale correction output, not an acceptable fix. All existing timing is background single-thread saved snapshot, not measured GUI FPS."
+  },
+  "model_and_reasoning_effort": "unrecorded",
+  "scene_saved_or_modified": false,
+  "new_runtime_code_change": false,
+  "new_deploy_or_refresh": false,
+  "original_artist_file_now": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "heavy_tasks_finished": true
+}

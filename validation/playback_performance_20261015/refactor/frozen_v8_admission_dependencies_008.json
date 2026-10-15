@@ -1,0 +1,69 @@
+{
+  "schema": "x.frozen-v8-admission-source-dependencies/1",
+  "files": {
+    "private_playback_native_runner_v8.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v8.py",
+      "sha256": "c67af8e103c7a6ad93dce723e5bfda3edcc70efde4e96c49cb49a35be6593f55",
+      "bytes": 32346
+    },
+    "native_validation_support_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py",
+      "sha256": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+      "bytes": 1939
+    },
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    },
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    }
+  },
+  "reviewed_factory_dependencies": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\source_witness_v7_factory_dependencies_007.json",
+    "sha256": "9cd89ae81ba1ad5b6fe56faa6f7e4f6f9d941a28003808e2c0b0cf49a5de6135",
+    "bytes": 3520
+  },
+  "passed_factory_report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_scene_smoke_report_007.json",
+    "sha256": "8ed262a575eabf8b2267c8f5bec831f3f988cd9eab22fad67b84b900e5be495d",
+    "bytes": 177478
+  },
+  "stage_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "preserved_reference_runner": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v7.py",
+    "sha256": "5751f79be06884b18a1f13f897b0ea289409ee3a052b89fd10be6fd70100a88a",
+    "bytes": 32346
+  },
+  "native_run_by_child": false,
+  "algorithm_change": "Only source-witness dependency import and docstring version changed; all function/class ASTs identical to preserved V7. Other actor/Bake/Artifact chains are unchanged.",
+  "blender_arguments": [
+    "-b",
+    "--factory-startup",
+    "-t",
+    "1",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_runner_v8.py",
+    "--",
+    "--input",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\input_saved_20261015.blend",
+    "--artist",
+    "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "--addons",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\addons",
+    "--source-manifest",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "--builder-module",
+    "character_designer.forearm_twist_playback_scene",
+    "--admission-only",
+    "--report",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_report_008_admission.json"
+  ]
+}

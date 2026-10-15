@@ -1,0 +1,154 @@
+{
+  "schema": "x.current-core-extraction/1",
+  "frozen_sources": {
+    "mesh_cache_actor_full30_002.py": {
+      "sha256": "261b5508bab90426f1edb4e632fcecca6de4b893ab3e840ba101828cdbce4377",
+      "bytes": 26311
+    },
+    "mesh_cache_artifact_assembler_005.py": {
+      "sha256": "8c9a8eb7552a756e772bb47954b5de092dc2bf8014b18280bfbb94a457246f72",
+      "bytes": 18375
+    }
+  },
+  "changes": [
+    {
+      "label": "sampler explicit policy",
+      "old": "def main(args, report):",
+      "new": "def run_clip(args, report, policy):",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "V9 admission binding",
+      "old": "    witness, witness_deps = choose_witness(args, report)",
+      "new": "    witness, witness_deps = policy.choose_witness(args, report)",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "real snapshot admission",
+      "old": "    require(input_pin['sha256'] == '40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721'\n            and input_pin['bytes'] == 34691613, 'Use fixed 40644 input')",
+      "new": "    require(input_pin == policy.snapshot_pin, 'Guarded current SaveCopy pin differs')",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "explicit isolated Stage09 module",
+      "old": "    scene_module = importlib.import_module('character_designer.forearm_twist_playback_scene')",
+      "new": "    scene_module = policy.scene_module(package, report)",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "explicit receipt Scene and ViewLayer",
+      "old": "        source_scene = bpy.context.scene",
+      "new": "        source_scene = policy.loaded_source(bpy)",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "source material baseline",
+      "old": "            protected_props = witness.source_property_witness(source_scene)",
+      "new": "            protected_props = witness.source_property_witness(source_scene)\n            policy.begin_source(source_scene, report)",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "source material protection",
+      "old": "        report[label] = row\n        require(row['output']['exact']",
+      "new": "        row['material_source_exact'] = policy.protect_source(source_scene)\n        report[label] = row\n        require(row['material_source_exact'], 'Current Source material/resource state changed: '+label)\n        require(row['output']['exact']",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "Source per-frame shader witness",
+      "old": "                report['golden'].append({'frame': frame, 'authoring_update_ms': elapsed, 'meshes': rows})",
+      "new": "                report['golden'].append({'frame': frame, 'authoring_update_ms': elapsed, 'meshes': rows,\n                                        'shader': policy.source_frame(source_scene, frame)})",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "explicit Base/material ID binding",
+      "old": "            reverse = {int(target.as_pointer()): source for source, target in session.id_map.items()}",
+      "new": "            reverse = {int(target.as_pointer()): source for source, target in session.id_map.items()}\n            policy.bind_target(session, report)",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "per-visit material and Base checks",
+      "old": "                    rows = []\n                    for source in meshes:",
+      "new": "                    policy.target_frame(session.scene, frame, reverse, report)\n                    rows = []\n                    for source in meshes:",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "final current evidence gate",
+      "old": "        require(report.get('source_after_cleanup', {}).get('output', {}).get('exact') is True\n                and report['source_after_cleanup']['source_properties_exact'], 'Final source output/properties differ')",
+      "new": "        require(report.get('source_after_cleanup', {}).get('output', {}).get('exact') is True\n                and report['source_after_cleanup']['source_properties_exact'], 'Final source output/properties differ')\n        policy.finalize_clip(report)",
+      "kernel": "run_clip"
+    },
+    {
+      "label": "assembler explicit contract",
+      "old": "def main(args, report):",
+      "new": "def assemble_clip(args, report, policy):\n    contract = policy.contract",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "remove old entry/parent global patch imports",
+      "old": "    adapter = importlib.import_module('mesh_cache_actor_full30_004')\n    parent = importlib.import_module('mesh_cache_actor_parent_diagnostic_003')\n",
+      "new": "",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "assembler explicit Stage09 module",
+      "old": "    scene_module = importlib.import_module('character_designer.forearm_twist_playback_scene')",
+      "new": "    scene_module = policy.scene_module(package, report)",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "no global parent mutation",
+      "old": "    old_remap = scene_module._remap_rna\n    patched, owned_globals, seal = parent.sealed_remap(scene_module.__dict__)\n    require(seal == passed['parent_override'], 'Parent runtime seal differs from accepted run')\n    owned_globals['_remap_rna'] = patched\n    scene_module._remap_rna = patched\n    report['parent_override'] = seal",
+      "new": "    policy.bind_stage_proof(passed, report)",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "assembler receipt Scene/ViewLayer",
+      "old": "        source_scene = bpy.context.scene",
+      "new": "        source_scene = policy.loaded_source(bpy)",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "assembler source shader baseline",
+      "old": "            props = witness.source_property_witness(source_scene)",
+      "new": "            props = witness.source_property_witness(source_scene)\n            policy.begin_source(source_scene, report)",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "assembler material source protection",
+      "old": "        report[label] = row\n        require(row['output']['exact']",
+      "new": "        row['material_source_exact'] = policy.protect_source(source_scene)\n        report[label] = row\n        require(row['material_source_exact'], 'Current Source material/resource state changed: '+label)\n        require(row['output']['exact']",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "assembler current Base/material binding",
+      "old": "            helper.admission.select_scene(bpy, scene)\n            scene.frame_set(1, subframe=0.)",
+      "new": "            policy.bind_target(session, report)\n            helper.admission.select_scene(bpy, scene)\n            scene.frame_set(1, subframe=0.)",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "serialized current provenance/Base/material routes",
+      "old": "                'source_snapshot_scope': 'Earlier fixed40644 private input, not a current live-artist snapshot; artist disk pin is protection only, not current-model equivalence.',",
+      "new": "                'source_snapshot_scope': 'Guarded current SaveCopy at its receipt timestamp; later artist edits require a new capture.',\n                'current_snapshot_receipt': policy.snapshot_receipt_pin,\n                'visibility': session.view_layer_state,\n                'shader_id_mapping': policy.shader_id_mapping,",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "no restore hook needed",
+      "old": "        report['parent_hook_still_owned'] = scene_module._remap_rna is patched\n        report['parent_hook_restored'] = parent.restore_owned_hooks((('parent', scene_module, '_remap_rna', patched, old_remap),))['parent']",
+      "new": "        report['scene_module_proof_unchanged'] = policy.scene_sources_unchanged()",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "explicit staged source cleanup proof",
+      "old": "            'parent_hook_still_owned': report['parent_hook_still_owned'], 'parent_hook_restored': report['parent_hook_restored']}",
+      "new": "            'scene_module_proof_unchanged': report['scene_module_proof_unchanged']}",
+      "kernel": "assemble_clip"
+    },
+    {
+      "label": "final material/current proof before publication",
+      "old": "    publish(staged, output, report)",
+      "new": "    policy.finalize_assembly(report)\n    publish(staged, output, report)",
+      "kernel": "assemble_clip"
+    }
+  ],
+  "native_run": false
+}

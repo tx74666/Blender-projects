@@ -1,0 +1,524 @@
+{
+  "schema": "x.saved-rest-constants-focus/1",
+  "completed": true,
+  "pid": 53128,
+  "started_utc": "2026-10-14T08:46:37.741684+00:00",
+  "model_and_reasoning_effort": "unrecorded",
+  "blender": "5.2.0 LTS",
+  "metadata_version": [
+    0,
+    77,
+    39
+  ],
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\input_snapshot.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "sources": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "490a62c64a83cb61d6e6b47df350595f4cf8cc8973ba276cf10cb447875791b6",
+      "bytes": 98659
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "sha256": "ff4a46c4a12c23a6579c3f261554d654f8fb9680adc5c74b1efca55d08e6b575",
+      "bytes": 10838
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "55b1dad8c9bfd6986a34b5e4cfc6c120dba80fedb2c76f09d613ad80b17a57fd",
+      "bytes": 45088
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "c8db791e3077c439552211d5fef3770a59c9630340528ef451ecdea5b7f697b4",
+      "bytes": 43840
+    }
+  ],
+  "metadata_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\__init__.py",
+    "sha256": "c729193fd495e86a5059ba2c02e0b2c095f9c6a0b1f4a869ba4d9c49d3d1c258",
+    "bytes": 355944
+  },
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\profile_saved_constants_focus.py",
+    "sha256": "434f49d206a8692d9b94ee082fd78365b5a0e3210afaa93a8a42641ecf1fcef7",
+    "bytes": 9986
+  },
+  "witness_helper": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\profile_saved_forearm_display.py",
+    "sha256": "c6764ad96a79902571e0b5b6ba62ddc93f245b6d68ea68451dc9ef6c92f5144f",
+    "bytes": 11538
+  },
+  "materialized_selector_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\accepted_r2_sources\\animation_worklist_target.py",
+    "sha256": "f03ed8df1942c9e2e514b75205c41a635a5d2fbbb4d85125138d06e790823898",
+    "bytes": 44470
+  },
+  "fixed_callable_names": {
+    "character_designer.forearm_twist": [
+      "CHARACTERDESIGNER_OT_forearm_twist_finish",
+      "CHARACTERDESIGNER_OT_forearm_twist_remove",
+      "CHARACTERDESIGNER_OT_forearm_twist_start",
+      "CHARACTERDESIGNER_OT_forearm_twist_toggle",
+      "CHARACTERDESIGNER_PT_forearm_twist",
+      "CharacterDesignerForearmTwistState",
+      "ForearmTwistError",
+      "ForearmTwistPoseRangeError",
+      "ForearmTwistRecaptureRequired",
+      "_angle_changed",
+      "_apply_runtime_records",
+      "_batch_changed",
+      "_calculate_object",
+      "_calculate_records",
+      "_capture_record",
+      "_check_mesh",
+      "_cleanup_runtime_scene",
+      "_complete_runtime_lifecycle",
+      "_current_record",
+      "_current_topology_record",
+      "_draw_loop",
+      "_finish_test_restore",
+      "_frame_post",
+      "_graph_post",
+      "_input_mix",
+      "_load_post",
+      "_managed_key",
+      "_new_key_name",
+      "_new_output_key",
+      "_prepare_mirror",
+      "_prepare_runtime_records",
+      "_preview_key_name",
+      "_preview_pose_locked",
+      "_preview_rollback_keys",
+      "_range_changed",
+      "_ratio_changed",
+      "_records",
+      "_recover_previews",
+      "_redraw",
+      "_remember_named_keys",
+      "_request_runtime_lifecycle",
+      "_resolve_rig",
+      "_rest_signature",
+      "_restore_preview",
+      "_restore_selection",
+      "_ring_changed",
+      "_rotation_vector",
+      "_scene_data_available",
+      "_set_render_lock",
+      "_solve_test_pose",
+      "_support_topology",
+      "_target_only_change",
+      "_test_pose",
+      "_topology",
+      "_topology_digest",
+      "_transition_changed",
+      "_undo_post",
+      "_update_ui",
+      "_weights",
+      "_write_records",
+      "context_mesh",
+      "controller_status",
+      "current_twist_angle",
+      "defer_runtime",
+      "finish_test",
+      "mirror_calibration",
+      "register_forearm_twist_runtime",
+      "remove_calibration",
+      "remove_paired_calibration",
+      "set_ratio",
+      "start_paired_test",
+      "start_test",
+      "toggle_paired_calibration",
+      "unregister_forearm_twist_runtime",
+      "update_runtime"
+    ],
+    "character_designer.forearm_twist_math": [
+      "TwistMathError",
+      "_axis",
+      "_finite",
+      "_point",
+      "_rotation",
+      "_weights",
+      "blended_matrix",
+      "corrected_vertex",
+      "desired_vertex",
+      "profile_ratio",
+      "rotate_about_axis",
+      "twist_angle"
+    ],
+    "character_designer.animation_worklist_target": [
+      "_MotionRestView",
+      "_RestRecordPlan",
+      "_SavedDictionary",
+      "_SavedList",
+      "_SavedReference",
+      "_action_motion_keys",
+      "_apply_capture",
+      "_capture",
+      "_capture_action_motion_refs",
+      "_compile_rest_record",
+      "_contains_data_reference",
+      "_data_reference_keys",
+      "_decode",
+      "_encode",
+      "_encoded_reference_keys",
+      "_freeze",
+      "_freeze_rest_record",
+      "_load",
+      "_load_rest_record",
+      "_materialize_rest_record",
+      "_metadata_keys",
+      "_numeric_properties",
+      "_prove_motion_data",
+      "_read_action_motion_data",
+      "_reference_key",
+      "_restore_action_motion_refs",
+      "_retained_motion_data",
+      "_scan_rest_record",
+      "_store",
+      "_validate_capture",
+      "_validate_record",
+      "_validated_names",
+      "_validation_rest_view",
+      "adopt_main_rig",
+      "attach_action_motion_data",
+      "capture_session_metadata",
+      "ensure_active",
+      "is_adopted",
+      "managed",
+      "restore_import_preview",
+      "restore_main_rig",
+      "restore_session_metadata",
+      "single_armature_user"
+    ],
+    "character_designer.unity_animation": [
+      "Mapping",
+      "PreviewResult",
+      "UnityAnimationError",
+      "_SavedRestState",
+      "_compile_saved_rest_state",
+      "_discard_preview_data",
+      "_import_package_action",
+      "_import_sample_frames",
+      "_mapping",
+      "_matches_rest_state",
+      "_matches_saved_rest_state",
+      "_matrix",
+      "_playing",
+      "_rest_state",
+      "_restore_snapshot",
+      "_same_rest_bone",
+      "_set_frame",
+      "_set_playing",
+      "_snapshot",
+      "_swap_armature_data",
+      "_world_samples",
+      "active_preview",
+      "expected_world_matrices",
+      "import_test_action",
+      "load_package",
+      "native_action_frame_rate",
+      "preview_time_seconds",
+      "restore_preview",
+      "validate_target"
+    ]
+  },
+  "scene": "Scene",
+  "actions": {
+    "CoshaRig": "Cosha · Walk_N · Custom.001",
+    "Shoes": "ShoesAction"
+  },
+  "calibrated_meshes": {
+    "Cosha": {
+      "L": {
+        "enabled": true,
+        "support_vertices": 191
+      },
+      "R": {
+        "enabled": true,
+        "support_vertices": 191
+      }
+    }
+  },
+  "warmup_frames": [
+    1,
+    3
+  ],
+  "frames": [
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30,
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30
+  ],
+  "cases": [
+    {
+      "block": 1,
+      "label": "materialized",
+      "milliseconds": [
+        110.67750002257526,
+        112.56830001366325,
+        108.5869999951683,
+        111.74110000138171,
+        113.81769998115487,
+        115.58729998068884,
+        110.2052999776788,
+        107.25899998215027,
+        111.6553999891039,
+        116.98019999312237,
+        113.40780000318773,
+        116.60350000602193,
+        114.1934999905061,
+        111.7452000034973,
+        110.5387999850791,
+        117.17390001285821
+      ],
+      "median_ms": 112.15675000858027,
+      "warm_rest_path_counts": {
+        "native_proof_calls": 5,
+        "proof_flag_false": 3,
+        "materialized_pair": 3
+      },
+      "warm_compile_cache": {
+        "hits": 2,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "hot_compile_cache": {
+        "hits": 18,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {}
+    },
+    {
+      "block": 2,
+      "label": "saved_constants",
+      "milliseconds": [
+        105.04599998239428,
+        102.19840001082048,
+        99.7796000156086,
+        103.4057000069879,
+        105.98660001414828,
+        103.34629999124445,
+        99.78319998481311,
+        97.55599999334663,
+        104.40430001472123,
+        104.066400002921,
+        112.22959999577142,
+        98.46189999370836,
+        103.57720000320114,
+        101.61440001684241,
+        104.55220000585541,
+        106.91540001425892
+      ],
+      "median_ms": 103.49145000509452,
+      "warm_rest_path_counts": {
+        "proof_flag_true": 2,
+        "compiled_pair": 2,
+        "native_proof_calls": 2
+      },
+      "warm_compile_cache": {
+        "hits": 1,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "hot_compile_cache": {
+        "hits": 17,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {}
+    },
+    {
+      "block": 3,
+      "label": "saved_constants",
+      "milliseconds": [
+        108.72580000432208,
+        103.41559999505989,
+        97.7149999816902,
+        102.3511000094004,
+        120.49420000403188,
+        108.38980000698939,
+        109.67569999047555,
+        108.67220000363886,
+        104.22030001063831,
+        99.5882999850437,
+        107.88019999745302,
+        107.25060000550002,
+        109.62740000104532,
+        108.51399999228306,
+        102.21309997723438,
+        98.83869998157024
+      ],
+      "median_ms": 107.56540000147652,
+      "warm_rest_path_counts": {
+        "proof_flag_true": 2,
+        "compiled_pair": 2,
+        "native_proof_calls": 2
+      },
+      "warm_compile_cache": {
+        "hits": 1,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "hot_compile_cache": {
+        "hits": 17,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {}
+    },
+    {
+      "block": 4,
+      "label": "materialized",
+      "milliseconds": [
+        104.35760000837035,
+        112.06650000531226,
+        119.71090000588447,
+        119.69230000977404,
+        119.0329999953974,
+        107.48169998987578,
+        113.04870000458322,
+        119.64299998362549,
+        116.89710000064224,
+        116.77059999783523,
+        116.2668000033591,
+        109.17750000953674,
+        124.89269999787211,
+        119.68530001468025,
+        114.66149997431785,
+        109.79600000428036
+      ],
+      "median_ms": 116.51870000059716,
+      "warm_rest_path_counts": {
+        "proof_flag_false": 2,
+        "materialized_pair": 2,
+        "native_proof_calls": 2
+      },
+      "warm_compile_cache": {
+        "hits": 1,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "hot_compile_cache": {
+        "hits": 17,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {}
+    }
+  ],
+  "sources_after": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "490a62c64a83cb61d6e6b47df350595f4cf8cc8973ba276cf10cb447875791b6",
+      "bytes": 98659
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "sha256": "ff4a46c4a12c23a6579c3f261554d654f8fb9680adc5c74b1efca55d08e6b575",
+      "bytes": 10838
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "55b1dad8c9bfd6986a34b5e4cfc6c120dba80fedb2c76f09d613ad80b17a57fd",
+      "bytes": 45088
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "c8db791e3077c439552211d5fef3770a59c9630340528ef451ecdea5b7f697b4",
+      "bytes": 43840
+    }
+  ],
+  "input_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\input_snapshot.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_disk_unchanged": true,
+  "all_frame_witnesses_equal": true,
+  "no_scene_save": true,
+  "paired_delta_ms": [
+    [
+      5.631500040180981,
+      10.369900002842769,
+      8.807399979559705,
+      8.33539999439381,
+      7.831099967006594,
+      12.24099998944439,
+      10.422099992865697,
+      9.70299998880364,
+      7.251099974382669,
+      12.913799990201369,
+      1.178200007416308,
+      18.141600012313575,
+      10.616299987304956,
+      10.130799986654893,
+      5.9865999792236835,
+      10.25849999859929
+    ],
+    [
+      -4.368199995951727,
+      8.650900010252371,
+      21.99590002419427,
+      17.341200000373647,
+      -1.4612000086344779,
+      -0.9081000171136111,
+      3.3730000141076744,
+      10.970799979986623,
+      12.676799990003929,
+      17.18230001279153,
+      8.386600005906075,
+      1.9269000040367246,
+      15.265299996826798,
+      11.17130002239719,
+      12.44839999708347,
+      10.957300022710115
+    ]
+  ],
+  "limits": [
+    "One disposable saved snapshot, one thread, shared load; background time is not GUI FPS.",
+    "Only two Rest selectors switch; current runtime/math/UA/compiler and native proof are held identical.",
+    "Two warmup and sixteen hot frames per ABBA block; compilation and path counters are outside hot timings.",
+    "Saved constants are immutable saved inputs, not cached native validation results.",
+    "Exact observed witnesses, not all-world equality; unsaved live changes and external GUI callbacks excluded.",
+    "No artist refresh or scene save; output witnesses contain hashes, not full vertex arrays."
+  ]
+}

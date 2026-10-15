@@ -1,0 +1,75 @@
+{
+  "schema": "x.hair-worklist-native-acceptance/1",
+  "recorded_utc": "2026-10-15T09:17:31.855702+00:00",
+  "status": "PRIVATE_NATIVE_PASS_LIVE_VALIDATION_PENDING",
+  "version": "0.77.43",
+  "runtime": "Blender5.2.0 LTS fbe6228777e7",
+  "model": "unrecorded",
+  "reasoning_effort": "unrecorded",
+  "projection": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\release_projection_07743.json",
+    "bytes": 40832,
+    "sha256": "9baac8f7575b121c5aa95502ad02b0a6762229fd7e86e395a1fb803eeade2b4c"
+  },
+  "runtime_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\hair_strand_registry.py",
+    "bytes": 38812,
+    "sha256": "70d1bd5152c4c1002574907fe95db3ca6d7b6ec0ff982901b7559fdb47120319"
+  },
+  "native_test_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\tests\\test_hair_worklist_rest_blender.py",
+    "bytes": 19978,
+    "sha256": "504d225b6f98c1c0ce1ff193cb3fa9ceb2036a58b813fc57858bab3c6ec1cd1b"
+  },
+  "logs": {
+    "native_worklist_rest_001.log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\native_worklist_rest_001.log",
+      "bytes": 6489,
+      "sha256": "e65af15ddd52ede035c6ff83ff1ea452394457dd31b2d8a72149aeb484db135d"
+    },
+    "native_worklist_rest_002.log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\native_worklist_rest_002.log",
+      "bytes": 5623,
+      "sha256": "1ce6e0573568f548ebd13530e7311d570f198fb2e2f8cdf2892ca69a9b447e75"
+    },
+    "native_registry_001.log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\native_registry_001.log",
+      "bytes": 2192,
+      "sha256": "8d1c85abaed93914092a9caeaffe93de62ac2a79e7d5739cac88fc8d84439fe3"
+    },
+    "native_export_001.log": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\native_export_001.log",
+      "bytes": 777,
+      "sha256": "1ed622c78f3ec4a65cad774bc4fd5c0a9474118be7b7793a1143f448809b50af"
+    }
+  },
+  "passed_native_tests": 37,
+  "helper_pure_tests": 4,
+  "first_attempt": "12/13; one test used Python wrapper identity for Bone. Corrected to exact native pointer + armature pointer + name; original FAIL log retained. Runtime unchanged between attempts.",
+  "coverage": [
+    "managed connected=true->false accepted without changing stored JSON",
+    "Mesh Basis and unrelated Shoes coordinate edit accepted",
+    "snapshot libraries.write/reopen and worker recheck retain native authoritative references",
+    "unmanaged/unmapped/reversed flags/parents/Rest/ownership rejected",
+    "one-float32-step motion tip and anchor drift still rejected by exact Hair comparison",
+    "existing Hair registry and actual FBX/sidecar/ShapeKey transaction regressions passed"
+  ],
+  "package_candidates": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\dist\\character_designer-0.77.43.zip",
+      "bytes": 1459444,
+      "sha256": "ccd291eeef6526eaf3a18c134a27cac06d15920af319637e8c499788dba16f60"
+    }
+  ],
+  "deployment": false,
+  "live_refresh": false,
+  "scene_save": false,
+  "live_diagnosis": false,
+  "gui_limit": "Desktop helper reported concurrent request and returned Unity/occluded Unity UI while Blender was targeted. No hotkey/input completion inferred. Further GUI input stopped pending desktop availability. Current artist geometry/metadata not observed by native helper.",
+  "limits": [
+    "No current artist export or Unity import acceptance",
+    "No new playback/GPU/FPS measurement",
+    "Private factory tests do not prove current model equivalence"
+  ],
+  "git": "No stage/commit/push"
+}

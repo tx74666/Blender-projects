@@ -1,0 +1,75 @@
+{
+  "schema": "x.playback-runner-source-dependencies/4",
+  "files": {
+    "scene_builder_smoke_005_v2.py": {
+      "sha256": "146b8ed27b600e064d55feb0252a2d7dfe67712654c399ddc5c0d51c1270f5ef",
+      "bytes": 16107
+    },
+    "private_playback_native_runner_v6.py": {
+      "sha256": "3e8991008438b1174974b04c49be8cb14c5ded100949248c974773ae06a276d4",
+      "bytes": 32351
+    },
+    "private_playback_native_runner_v5.py": {
+      "sha256": "1151ded3d26c719332e5d6f3633d955782433204a4a30040950a4cef6cd16a69",
+      "bytes": 29356
+    },
+    "native_bone_preview_runner_006.py": {
+      "sha256": "6402af01ffde9fd14ab8a98e7eb5d242bec0bcbd83d467109e17bf97d7befe76",
+      "bytes": 28145
+    },
+    "native_bone_synthetic_runner_005.py": {
+      "sha256": "176caf2ca8892b361bf4b9dfc8f6cdb8203d4dfd265a57f00db4336f99c1d7a5",
+      "bytes": 16876
+    },
+    "native_bone_bake_runner_006.py": {
+      "sha256": "e4a776b283872ce4ea40f9d1d9c34e9ca16f6031491a70994c14290a4ca4a2c0",
+      "bytes": 32622
+    },
+    "native_source_reference_witness_v5.py": {
+      "sha256": "e0a56ab2c38546a36dd90eaca1dc74ca1ad57da61bab7528b602144157ef8135",
+      "bytes": 18220
+    },
+    "native_validation_support_v5.py": {
+      "sha256": "68451f7cc73d582da148b6a4efcbdf3596edaf4285310a3e40997273d70ff2ce",
+      "bytes": 1939
+    },
+    "native_validation_support.py": {
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_bone_support.py": {
+      "sha256": "a8a25ec0c009adc19bb6b11bbf5b20b594a1ef4f9db87c542261d503830d90c8",
+      "bytes": 13984
+    },
+    "source_reference_witness_v5_pure_checks.py": {
+      "sha256": "4612956bf1beab6eef96e21c3e1e5f172d72a827526dd21ecfb64b4cb0a9cc64",
+      "bytes": 7327
+    },
+    "BONE_ADOPTION_CRITERIA_005.md": {
+      "sha256": "de3dd16156b876db23f2f0e9aaeb70c7a1019ce51a991da588937ba400af7893",
+      "bytes": 2971
+    }
+  },
+  "native_invocation": false,
+  "historical_sources_preserved": true,
+  "supersedes_unrun_drafts": [
+    "native_runner_dependencies_005.json",
+    "native_runner_dependencies_005_reviewed.json",
+    "native_runner_dependencies_005_reviewed_v2.json"
+  ],
+  "stage05_source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "synthetic_fixture_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_02\\fixture_manifest.json",
+    "sha256": "ff45ab73077d3f848e2db2c315df7c7cefcfdf2061947ec8388e07c111ccabcc",
+    "bytes": 858
+  },
+  "review": "V5 stored/unset/bulk witness independently reviewed; V6 loaded Hair1 gate and Bone/Bake006 call sites source review PASS. No native equivalence/coverage/FPS claim.",
+  "lightweight_checks": "eleven Python files compile; retained v5 pure checks ten PASS; v6 pure gate correct+no-Key positives, five missing/wrong coverage negatives and Scene PG getter trap PASS",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "model_source": "Current root local task index verified by root; inherited settings."
+}

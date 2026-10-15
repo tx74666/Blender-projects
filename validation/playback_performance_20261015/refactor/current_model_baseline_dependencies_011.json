@@ -1,0 +1,103 @@
+{
+  "schema": "x.current-model-baseline-dependencies/1",
+  "source_only": true,
+  "native_or_gui_run": false,
+  "files": {
+    "current_model_private_gui_fps_probe_011.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\current_model_private_gui_fps_probe_011.py",
+      "sha256": "a130ac3a263165d0b9691f976d86c94daef7ea6532ad0b11e6311d39f40b39e3",
+      "bytes": 15273
+    },
+    "native_current_baseline_gui_011.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_current_baseline_gui_011.py",
+      "sha256": "6be987d7fa9f8926ce87bbd8102b2ae057e3c25f32512d0ea1399031595240f0",
+      "bytes": 9344
+    },
+    "test_current_model_baseline_011.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\test_current_model_baseline_011.py",
+      "sha256": "6508eae6f09d00222ed43d24f665573026a79aaff1ba66e315422173b01f38f2",
+      "bytes": 16037
+    },
+    "READY_CURRENT_MODEL_BASELINE011.md": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\READY_CURRENT_MODEL_BASELINE011.md",
+      "sha256": "6723dd36eb76e2a1c64cb9cc4040d6def42fbceb92b73062d55987c379e7a53a",
+      "bytes": 6848
+    },
+    "private_gui_fps_probe_009.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_gui_fps_probe_009.py",
+      "sha256": "a6ce26f86c4fa6aee5dc58fc68f59010a12c9983324133f56e01e2ab2db471ed",
+      "bytes": 33590
+    },
+    "native_fixed_baseline_gui_010.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_fixed_baseline_gui_010.py",
+      "sha256": "421efa17f7ab048ea73cecc5fb04ca662f2d034991501382a42bf251ef09f914",
+      "bytes": 9353
+    },
+    "mesh_cache_private_gui_fps_probe_005.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_private_gui_fps_probe_005.py",
+      "sha256": "f0982d415695d1e61ebc0d581933b616efde32c8529b1c6634aad382ee097264",
+      "bytes": 20715
+    },
+    "mesh_cache_current_input_007.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_current_input_007.py",
+      "sha256": "24468bd93de3ed4b63f2a6e2ab6354f299bfe191d714cde3ff39e55a5b415a90",
+      "bytes": 5664
+    },
+    "current_model_save_copy_010.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\current_model_save_copy_010.py",
+      "sha256": "0de04db4929e725446ee9ec0e9414b26894274776edda6ad28852d9b1b29c9d4",
+      "bytes": 9446
+    },
+    "native_validation_support_v9.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v9.py",
+      "sha256": "55f4b4b75a2ff5991f250d845fbbb295e7ef153874fb03dbeb7f169b5c048ed5",
+      "bytes": 1939
+    },
+    "native_source_reference_witness_v9.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v9.py",
+      "sha256": "fb87e81b29482e2668b6d29449713e4ddf4885797e6860100f118dd4bfa6b192",
+      "bytes": 28830
+    },
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_artifact_action_witness_008.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_artifact_action_witness_008.py",
+      "sha256": "c6881b78c9de8af661b6ecbf264e4e8a4f9861ce645246d9e8dccb1fc298b680",
+      "bytes": 8307
+    }
+  },
+  "stage06_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\source_manifest.json",
+    "sha256": "5c7965ef74e99ed8036bc57ad639cb4db37e6501bb580483a676d4b2fd6cc3c0",
+    "bytes": 25604
+  },
+  "entry": {
+    "startup": "native_current_baseline_gui_011.py --snapshot-report <actual010> --snapshot-report-sha256 <actualSHA> --input-sha256 <currentCopySHA> --input-bytes <actualLength> --report <unusedJSON>",
+    "fps": "current_model_private_gui_fps_probe_011.install(CONFIG)"
+  },
+  "required_actual_evidence": [
+    "Successful guarded current SaveCopy010 receipt and copied .blend SHA/bytes",
+    "Same-PID successful startup011 in NEW blank factory GUI with normal SourceLayer/frame1/load lifecycle"
+  ],
+  "measurement": {
+    "warm_seconds": 2.0,
+    "sample_seconds": 16.0,
+    "normal009_clock_callbacks_playback_cleanup_unchanged": true,
+    "root_matched_material_rounds": 2,
+    "noncamera_comparison_view_fields_recorded": true
+  },
+  "pure_tests": {
+    "entry": "test_current_model_baseline_011.py",
+    "passed": 12,
+    "independent_peer_passed": 12
+  },
+  "limits": [
+    "Current snapshot timestamp scope only; later artist edits need recapture.",
+    "Full Action proof uses existing V9 native Reader/raw/setbits/15field bulk, same before/after representation, no new bulk code.",
+    "No GPU completion/presentation, shader compilation completion, physics or automatic performance adoption claim.",
+    "No Native or FPS receipt exists from this source preparation; all original009/010/005/006 bytes retained."
+  ]
+}

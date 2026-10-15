@@ -1,0 +1,65 @@
+{
+  "schema": "x.source-witness-v7-factory-preparation/1",
+  "files": {
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    },
+    "native_validation_support_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v7.py",
+      "sha256": "6d3a1b69f41b1605af77f1f987af1f89ca5b60ea1c73f4da988427322a504dc5",
+      "bytes": 1939
+    },
+    "scene_builder_smoke_007.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_smoke_007.py",
+      "sha256": "267c266541890764366e2d27a5f4e90fc91489a4eb90ec1d10ea5798fb4300f2",
+      "bytes": 18659
+    },
+    "source_reference_witness_v7_pure_checks.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\source_reference_witness_v7_pure_checks.py",
+      "sha256": "9e7feb2c7ba37fac25cca874ec125e1a4dcb2c983351012c5519084804d4ee1f",
+      "bytes": 13406
+    },
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    }
+  },
+  "geometry_oracle": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_shoes_merge_07741.py",
+    "sha256": "b7da2d785422d8d46e26b77ae0bd3899f6a64dbf2919d5a7174ee255f85191f5",
+    "bytes": 16150
+  },
+  "stage_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "previous_failed_admission": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_playback_native_report_007_admission.json",
+    "sha256": "5d0fe4fccbe9a01d658875b43f331d1603475ab4f37ab97479f29d45785d3b49",
+    "bytes": 69856
+  },
+  "native_run_by_child": false,
+  "scope": "Witness raw() only: native bpy_struct.items(owner) bypasses instance RNA shadow; nonnative mapping route and all guards preserved. Factory Worklist has2 unnamed rows and raw sentinels; source/raw/foreign Mesh/Key/clone/cleanup checks retained.",
+  "actor_chain_updated": false,
+  "blender_arguments": [
+    "-b",
+    "--factory-startup",
+    "-t",
+    "1",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_smoke_007.py",
+    "--",
+    "--artist",
+    "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "--addons",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\addons",
+    "--source-manifest",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "--report",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_scene_smoke_report_007.json"
+  ]
+}

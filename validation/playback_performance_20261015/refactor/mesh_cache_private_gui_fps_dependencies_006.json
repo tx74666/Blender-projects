@@ -1,0 +1,97 @@
+{
+  "schema": "x.pc2-cache-private-gui-fps-dependencies/2",
+  "source_only": true,
+  "native_or_gui_run": false,
+  "files": {
+    "mesh_cache_private_gui_fps_probe_006.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_private_gui_fps_probe_006.py",
+      "bytes": 10670,
+      "sha256": "a192d0ef91e780d2f490c29ed5bfa648c14e0f54ab19599b8e10d741dcecdec6"
+    },
+    "test_mesh_cache_private_gui_fps_probe_006.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\test_mesh_cache_private_gui_fps_probe_006.py",
+      "bytes": 10751,
+      "sha256": "c033dcd945a14e38086257e7eed09eed065dbafe40d861269c458673ae5ab839"
+    },
+    "READY_CACHE_PRIVATE_GUI_FPS006.md": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\READY_CACHE_PRIVATE_GUI_FPS006.md",
+      "bytes": 4642,
+      "sha256": "78e7acad7eeb6cf5227ca535aae90edff6f822fffb93afdbeb5762fa66e3f638"
+    },
+    "mesh_cache_private_gui_fps_probe_005.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_private_gui_fps_probe_005.py",
+      "bytes": 20715,
+      "sha256": "f0982d415695d1e61ebc0d581933b616efde32c8529b1c6634aad382ee097264"
+    },
+    "private_gui_fps_probe_009.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\private_gui_fps_probe_009.py",
+      "bytes": 33590,
+      "sha256": "a6ce26f86c4fa6aee5dc58fc68f59010a12c9983324133f56e01e2ab2db471ed"
+    },
+    "mesh_cache_artifact_reopen_gui_006.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_artifact_reopen_gui_006.py",
+      "bytes": 7629,
+      "sha256": "0002e7b85769b7249f542039a9c12000fdb9fee33ea4f211422063e94e3a0703"
+    },
+    "mesh_cache_artifact_reopen_gui_005.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_artifact_reopen_gui_005.py",
+      "bytes": 17523,
+      "sha256": "d30819f81998d3a262792e4b33d0af0040988307557b07b4972e5c16909f035e"
+    },
+    "mesh_cache_artifact_contract_006.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_artifact_contract_006.py",
+      "bytes": 5427,
+      "sha256": "176877414933e79ae6776c3fefc78dca69e60011d79daab292102b12a326bfc8"
+    },
+    "mesh_cache_artifact_contract_005.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_artifact_contract_005.py",
+      "bytes": 16456,
+      "sha256": "a4e68220734435de8f8ac52bbbca73c2b7259253626c1bc301dfcfc9b55efad6"
+    },
+    "mesh_cache_view_layer_adapter_006.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_view_layer_adapter_006.py",
+      "bytes": 6423,
+      "sha256": "67c19992951108e2b91ab0f3eac60c1e552f070aafafbd6466d7f084104d02b7"
+    },
+    "mesh_cache_actor_full30_006.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_full30_006.py",
+      "bytes": 7141,
+      "sha256": "29eb8decdbaa0f2c99ce08d2994431ecea5b4fc7b804a699c627a66385a5f0c7"
+    },
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "bytes": 12214,
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a"
+    },
+    "native_artifact_action_witness_008.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_artifact_action_witness_008.py",
+      "bytes": 8307,
+      "sha256": "c6881b78c9de8af661b6ecbf264e4e8a4f9861ce645246d9e8dccb1fc298b680"
+    }
+  },
+  "stage09_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_09\\source_manifest.json",
+    "bytes": 25763,
+    "sha256": "b8faecfb0ce428bbdc3d845494fae7cb2aa5db4b4c9ad875e399194f98529ee6"
+  },
+  "entry": "mesh_cache_private_gui_fps_probe_006.install(CONFIG)",
+  "required_actual_receipts": [
+    "completed006 publication with Source-to-clone visibility",
+    "same-PID GUI006 completed full1-30 geometry/visibility and all16 lifecycle flags"
+  ],
+  "timing": {
+    "warm_seconds": 2.0,
+    "sample_seconds": 16.0,
+    "clock_core_unchanged": true
+  },
+  "pure_tests": {
+    "entry": "test_mesh_cache_private_gui_fps_probe_006.py",
+    "passed": 9
+  },
+  "limits": [
+    "Earlier fixed40644 cache only; no current live-model equivalence.",
+    "No Native/GUI/FPS receipt created by this preparation.",
+    "Hot polls are literal RNA only; full visibility/disk/geometry/Action proof is outside timing.",
+    "No GPU completion or presentation measurement, no automatic performance adoption."
+  ]
+}

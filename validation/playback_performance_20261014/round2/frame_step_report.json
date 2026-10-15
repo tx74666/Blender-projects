@@ -1,0 +1,803 @@
+{
+  "schema": "x.playback-remaining-cost-comparison/1",
+  "completed": false,
+  "pid": 43424,
+  "started_utc": "2026-10-14T08:15:54.541625+00:00",
+  "model_and_reasoning_effort": "unrecorded",
+  "script": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\profile_candidates.py",
+    "sha256": "86fab50a36caa853b989a3afd81d96fa1ce539029fd8bd2622a2086ee9e18443",
+    "bytes": 10643
+  },
+  "blender": "5.2.0 LTS",
+  "metadata_version": [
+    0,
+    77,
+    39
+  ],
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\input_snapshot.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "sources": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "490a62c64a83cb61d6e6b47df350595f4cf8cc8973ba276cf10cb447875791b6",
+      "bytes": 98659
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "sha256": "ff4a46c4a12c23a6579c3f261554d654f8fb9680adc5c74b1efca55d08e6b575",
+      "bytes": 10838
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "f03ed8df1942c9e2e514b75205c41a635a5d2fbbb4d85125138d06e790823898",
+      "bytes": 44470
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    }
+  ],
+  "baseline_sources": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\baseline_07739\\forearm_twist.py",
+      "sha256": "113d9b1688f1ddceadccd90ffd7cc5f3450e691218d11fe3097e34bc876b879d",
+      "bytes": 98233
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\baseline_07739\\forearm_twist_math.py",
+      "sha256": "bf32b47bdb11b897467b8606578baaff8acc218150ed3dab83cced03e364c421",
+      "bytes": 10357
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\baseline_07739\\animation_worklist_target.py",
+      "sha256": "ce7aa98f40ebd5bc9af02f38b2362f1f6d4f1af1ca4cb5fa53ac913f7e3d4fa1",
+      "bytes": 39004
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\baseline_07739\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    }
+  ],
+  "rest_matrix_candidate": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\rest_matrix_candidate.py",
+    "sha256": "1ebf0914892119df8c1d344d197e3e539b0062090d74eedd79ecdf2403a2ada4",
+    "bytes": 980
+  },
+  "scene": "Scene",
+  "actions": {
+    "CoshaRig": "Cosha · Walk_N · Custom.001",
+    "Shoes": "ShoesAction"
+  },
+  "calibrated_meshes": {
+    "Cosha": {
+      "L": {
+        "enabled": true,
+        "support_vertices": 191
+      },
+      "R": {
+        "enabled": true,
+        "support_vertices": 191
+      }
+    }
+  },
+  "frames": [
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30
+  ],
+  "cases": [
+    {
+      "label": "baseline_39",
+      "milliseconds": [
+        164.75999998510815,
+        166.15810000803322,
+        157.1852999913972,
+        153.70870000333525,
+        151.5679000003729,
+        148.08120002271608,
+        160.60820000711828,
+        173.7250000005588
+      ],
+      "median_ms": 158.89674999925774,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.007720099994912744,
+        "character_designer.animation_worklist_target._load": 0.38185839998186566,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.1682274999911897,
+        "character_designer.animation_worklist_target.control_rest_view": 0.560470800002804,
+        "character_designer.forearm_original_inventory.validate": 0.6675700999621768,
+        "character_designer.forearm_twist._topology": 0.015931000059936196,
+        "character_designer.forearm_twist._current_record": 0.017101700068451464,
+        "character_designer.forearm_twist._prepare_mirror": 0.013952800014521927,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.702970899961656,
+        "character_designer.forearm_twist._input_mix": 0.002848100004484877,
+        "character_designer.forearm_twist._weights": 0.02235330003895797,
+        "character_designer.forearm_twist._calculate_records": 0.3105431000003591,
+        "character_designer.forearm_twist._calculate_object": 1.0165937000128906,
+        "character_designer.forearm_twist.update_runtime": 1.017110499960836,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 1.0171358000370674
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 1,
+        "currsize": 0
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "rest_only",
+      "milliseconds": [
+        129.11380000878125,
+        124.4103999924846,
+        124.19609999051318,
+        117.50719998963177,
+        122.9206999996677,
+        137.0337999833282,
+        127.28770001558587,
+        124.62359998608008
+      ],
+      "median_ms": 124.51699998928234,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.008180700038792565,
+        "character_designer.animation_worklist_target._load_rest_record": 0.05609359999652952,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.17784780004876666,
+        "character_designer.animation_worklist_target.control_rest_view": 0.24334310003905557,
+        "character_designer.forearm_original_inventory.validate": 0.35689960001036525,
+        "character_designer.forearm_twist._topology": 0.016252300032647327,
+        "character_designer.forearm_twist._current_record": 0.017456899979151785,
+        "character_designer.forearm_twist._prepare_mirror": 0.015120900003239512,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.3942812999302987,
+        "character_designer.forearm_twist._input_mix": 0.003017100039869547,
+        "character_designer.forearm_twist._weights": 0.02349360001971945,
+        "character_designer.forearm_twist._calculate_records": 0.3317258999450132,
+        "character_designer.forearm_twist._calculate_object": 0.7294035000086296,
+        "character_designer.forearm_twist.update_runtime": 0.7300303000665735,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.7300563999451697
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "matrix_only",
+      "milliseconds": [
+        165.9687999926973,
+        164.27070001373067,
+        153.16830002120696,
+        151.3223000220023,
+        157.95170000637881,
+        148.98689999245107,
+        150.23800000199117,
+        160.91730000334792
+      ],
+      "median_ms": 155.5600000137929,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.007787000038661063,
+        "character_designer.animation_worklist_target._load": 0.3629295999999158,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.17449609993491322,
+        "character_designer.animation_worklist_target.control_rest_view": 0.5481875000114087,
+        "character_designer.forearm_original_inventory.validate": 0.6575310000334866,
+        "character_designer.forearm_twist._topology": 0.015803699934622273,
+        "character_designer.forearm_twist._current_record": 0.016958100022748113,
+        "character_designer.forearm_twist._prepare_mirror": 0.014460000005783513,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.6933338000671938,
+        "character_designer.forearm_twist._input_mix": 0.0028611999296117574,
+        "character_designer.forearm_twist._weights": 0.02271610000752844,
+        "character_designer.forearm_twist._calculate_records": 0.2955268000077922,
+        "character_designer.forearm_twist._calculate_object": 0.9920115999993868,
+        "character_designer.forearm_twist.update_runtime": 0.9925251000095159,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.9925508000305854
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 1,
+        "currsize": 0
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "combined",
+      "milliseconds": [
+        119.27110000397079,
+        118.09979999088682,
+        115.58549999608658,
+        123.82760000764392,
+        125.81590001354925,
+        117.5494999915827,
+        113.50909998873249,
+        112.65299998922274
+      ],
+      "median_ms": 117.82464999123476,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.007805900037055835,
+        "character_designer.animation_worklist_target._load_rest_record": 0.05521789999329485,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.1759444999624975,
+        "character_designer.animation_worklist_target.control_rest_view": 0.23985570002696477,
+        "character_designer.forearm_original_inventory.validate": 0.35087959995144047,
+        "character_designer.forearm_twist._topology": 0.01775829997495748,
+        "character_designer.forearm_twist._current_record": 0.019140899908961728,
+        "character_designer.forearm_twist._prepare_mirror": 0.01539229997433722,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.39023530000122264,
+        "character_designer.forearm_twist._input_mix": 0.003124300012132153,
+        "character_designer.forearm_twist._weights": 0.02299759996822104,
+        "character_designer.forearm_twist._calculate_records": 0.2955467999854591,
+        "character_designer.forearm_twist._calculate_object": 0.6890833999786992,
+        "character_designer.forearm_twist.update_runtime": 0.6896038000122644,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.6896293000027072
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "combined",
+      "milliseconds": [
+        127.58629999007098,
+        125.5646999925375,
+        124.32400000398047,
+        127.91270000161603,
+        126.66529999114573,
+        124.31970000034198,
+        116.54489999637008,
+        112.76019999058917
+      ],
+      "median_ms": 124.94434999825899,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.008436500007519498,
+        "character_designer.animation_worklist_target._load_rest_record": 0.056055499968351796,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.1829324999707751,
+        "character_designer.animation_worklist_target.control_rest_view": 0.2475284999818541,
+        "character_designer.forearm_original_inventory.validate": 0.36207639999338426,
+        "character_designer.forearm_twist._topology": 0.016658300068229437,
+        "character_designer.forearm_twist._current_record": 0.018015199981164187,
+        "character_designer.forearm_twist._prepare_mirror": 0.015137500042328611,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.4004515000269748,
+        "character_designer.forearm_twist._input_mix": 0.003065199969569221,
+        "character_designer.forearm_twist._weights": 0.023811599967302755,
+        "character_designer.forearm_twist._calculate_records": 0.310284099978162,
+        "character_designer.forearm_twist._calculate_object": 0.7142589000286534,
+        "character_designer.forearm_twist.update_runtime": 0.7148985999810975,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.7149544000276364
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "matrix_only",
+      "milliseconds": [
+        156.87969999271445,
+        154.84629999264143,
+        147.14799998910166,
+        156.56969998963177,
+        158.98439998272806,
+        149.6820000174921,
+        149.79529997799546,
+        159.88999998080544
+      ],
+      "median_ms": 155.7079999911366,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.00812820001738146,
+        "character_designer.animation_worklist_target._load": 0.36675600000307895,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.17119680004543625,
+        "character_designer.animation_worklist_target.control_rest_view": 0.5489809999708086,
+        "character_designer.forearm_original_inventory.validate": 0.6551508000120521,
+        "character_designer.forearm_twist._topology": 0.015219299995806068,
+        "character_designer.forearm_twist._current_record": 0.016382000088924542,
+        "character_designer.forearm_twist._prepare_mirror": 0.014388500043423846,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.6902824999997392,
+        "character_designer.forearm_twist._input_mix": 0.0028249999741092324,
+        "character_designer.forearm_twist._weights": 0.022172900004079565,
+        "character_designer.forearm_twist._calculate_records": 0.2889926000207197,
+        "character_designer.forearm_twist._calculate_object": 0.9824053999909665,
+        "character_designer.forearm_twist.update_runtime": 0.9829348999774083,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.9829606000275817
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 1,
+        "currsize": 0
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "rest_only",
+      "milliseconds": [
+        123.02900000941008,
+        119.07020001672208,
+        118.20699999225326,
+        115.87330000475049,
+        135.50199999008328,
+        149.703299975954,
+        131.6410999861546,
+        119.65090001467615
+      ],
+      "median_ms": 121.33995001204312,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.008924400026444346,
+        "character_designer.animation_worklist_target._load_rest_record": 0.05797640001401305,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.18194239994045347,
+        "character_designer.animation_worklist_target.control_rest_view": 0.24890920001780614,
+        "character_designer.forearm_original_inventory.validate": 0.36636410001665354,
+        "character_designer.forearm_twist._topology": 0.016596400120761245,
+        "character_designer.forearm_twist._current_record": 0.01796450003166683,
+        "character_designer.forearm_twist._prepare_mirror": 0.015493400016566738,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.4049371999280993,
+        "character_designer.forearm_twist._input_mix": 0.0031211000168696046,
+        "character_designer.forearm_twist._weights": 0.024267500004498288,
+        "character_designer.forearm_twist._calculate_records": 0.3373282000247855,
+        "character_designer.forearm_twist._calculate_object": 0.7458153000334278,
+        "character_designer.forearm_twist.update_runtime": 0.7463944999908563,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.746421099989675
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "baseline_39",
+      "milliseconds": [
+        156.19999999762513,
+        157.39659999962896,
+        155.07450001314282,
+        161.9613999791909,
+        164.40029998193495,
+        160.45160000794567,
+        157.5760999985505,
+        157.41569999954663
+      ],
+      "median_ms": 157.49589999904856,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.008993000024929643,
+        "character_designer.animation_worklist_target._load": 0.3713790999900084,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.17449299999861978,
+        "character_designer.animation_worklist_target.control_rest_view": 0.5567375999526121,
+        "character_designer.forearm_original_inventory.validate": 0.6662978999956977,
+        "character_designer.forearm_twist._topology": 0.015934300085064024,
+        "character_designer.forearm_twist._current_record": 0.01710510000702925,
+        "character_designer.forearm_twist._prepare_mirror": 0.014739699981873855,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.7025697999924887,
+        "character_designer.forearm_twist._input_mix": 0.0029284000338520855,
+        "character_designer.forearm_twist._weights": 0.02292320001288317,
+        "character_designer.forearm_twist._calculate_records": 0.3185125000018161,
+        "character_designer.forearm_twist._calculate_object": 1.0242327000014484,
+        "character_designer.forearm_twist.update_runtime": 1.0247242999903392,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 1.024748300027568
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 1,
+        "currsize": 0
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "combined_before_rest_matrix",
+      "milliseconds": [
+        119.998799986206,
+        114.54730000696145,
+        111.63070000475273,
+        112.16379998950288,
+        125.48640000750311,
+        114.4810999976471,
+        115.47379998955876,
+        116.76420000731014
+      ],
+      "median_ms": 115.0105499982601,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.007839300000341609,
+        "character_designer.animation_worklist_target._load_rest_record": 0.05373309997958131,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.1699246000207495,
+        "character_designer.animation_worklist_target.control_rest_view": 0.23211019995505922,
+        "character_designer.forearm_original_inventory.validate": 0.3407025999913458,
+        "character_designer.forearm_twist._topology": 0.015706899954238907,
+        "character_designer.forearm_twist._current_record": 0.01694950001547113,
+        "character_designer.forearm_twist._prepare_mirror": 0.014646699972217903,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.3769650999456644,
+        "character_designer.forearm_twist._input_mix": 0.0029714999545831233,
+        "character_designer.forearm_twist._weights": 0.023663600004510954,
+        "character_designer.forearm_twist._calculate_records": 0.3019375999865588,
+        "character_designer.forearm_twist._calculate_object": 0.6823177000333089,
+        "character_designer.forearm_twist.update_runtime": 0.6828372999443673,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.6828619000152685
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "full_candidate",
+      "milliseconds": [
+        111.93600000115111,
+        114.04339998262003,
+        114.33179999585263,
+        111.17530000046827,
+        104.80160001316108,
+        114.95489999651909,
+        115.48810001113452,
+        109.82819998753257
+      ],
+      "median_ms": 112.98969999188557,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.007687500008614734,
+        "character_designer.animation_worklist_target._load_rest_record": 0.052932499937014654,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.145019699994009,
+        "character_designer.animation_worklist_target.control_rest_view": 0.20584019992384128,
+        "character_designer.forearm_original_inventory.validate": 0.313436000054935,
+        "character_designer.forearm_twist._topology": 0.015937999938614666,
+        "character_designer.forearm_twist._current_record": 0.017310199968051165,
+        "character_designer.forearm_twist._prepare_mirror": 0.014686799986520782,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.349962600012077,
+        "character_designer.forearm_twist._input_mix": 0.003038599999854341,
+        "character_designer.forearm_twist._weights": 0.023070500028552487,
+        "character_designer.forearm_twist._calculate_records": 0.2968667000241112,
+        "character_designer.forearm_twist._calculate_object": 0.6501385000010487,
+        "character_designer.forearm_twist.update_runtime": 0.6506729000248015,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.6506965000589844
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "full_candidate",
+      "milliseconds": [
+        112.79210000066087,
+        116.62370001431555,
+        106.60280002048239,
+        117.0947999926284,
+        118.26810002094135,
+        119.33410001802258,
+        120.21130000357516,
+        113.84719997295178
+      ],
+      "median_ms": 116.85925000347197,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.008086699963314459,
+        "character_designer.animation_worklist_target._load_rest_record": 0.05402560002403334,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.14985750001505949,
+        "character_designer.animation_worklist_target.control_rest_view": 0.21231800003442913,
+        "character_designer.forearm_original_inventory.validate": 0.32339650005451404,
+        "character_designer.forearm_twist._topology": 0.01654209991102107,
+        "character_designer.forearm_twist._current_record": 0.017859499959740788,
+        "character_designer.forearm_twist._prepare_mirror": 0.01465910003753379,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.3608407999272458,
+        "character_designer.forearm_twist._input_mix": 0.0029304999334271997,
+        "character_designer.forearm_twist._weights": 0.02344340001582168,
+        "character_designer.forearm_twist._calculate_records": 0.3029060999979265,
+        "character_designer.forearm_twist._calculate_object": 0.6670406000048388,
+        "character_designer.forearm_twist.update_runtime": 0.667568199976813,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.6675930000201333
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    },
+    {
+      "label": "combined_after_rest_matrix",
+      "milliseconds": [
+        125.77740001142956,
+        123.93999999039806,
+        122.66159997670911,
+        125.21070000366308,
+        122.86770000355318,
+        121.63529999088496,
+        122.33889999333769,
+        119.02499999268912
+      ],
+      "median_ms": 122.76464999013115,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.animation_worklist_target._load_rest_record": 8,
+        "character_designer.animation_worklist_target._prove_motion_data": 8,
+        "character_designer.animation_worklist_target.control_rest_view": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 0.008191700035240501,
+        "character_designer.animation_worklist_target._load_rest_record": 0.05775019997963682,
+        "character_designer.animation_worklist_target._prove_motion_data": 0.1781343000184279,
+        "character_designer.animation_worklist_target.control_rest_view": 0.2453281999914907,
+        "character_designer.forearm_original_inventory.validate": 0.3580417000048328,
+        "character_designer.forearm_twist._topology": 0.016048500023316592,
+        "character_designer.forearm_twist._current_record": 0.01746519998414442,
+        "character_designer.forearm_twist._prepare_mirror": 0.014871700026560575,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.39528659998904914,
+        "character_designer.forearm_twist._input_mix": 0.00301210000179708,
+        "character_designer.forearm_twist._weights": 0.023310599965043366,
+        "character_designer.forearm_twist._calculate_records": 0.3094889999483712,
+        "character_designer.forearm_twist._calculate_object": 0.7082167000044137,
+        "character_designer.forearm_twist.update_runtime": 0.7087728000187781,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 0.7087988999846857
+      },
+      "outputs_equal_to_baseline": true,
+      "errors": {},
+      "warm_correction_calls": 764,
+      "projection_cache": {
+        "hits": 9,
+        "misses": 1,
+        "maxsize": 1,
+        "currsize": 1
+      },
+      "timing_note": "Nested component times overlap; do not add them."
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\profile_candidates.py\", line 189, in <module>\n    main(args,report)\n    ~~~~^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\profile_candidates.py\", line 164, in main\n    from weight_reuse_probe import probe\nModuleNotFoundError: No module named 'weight_reuse_probe'\n"
+}

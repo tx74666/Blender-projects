@@ -1,0 +1,61 @@
+{
+  "schema": "x.source-witness-v6-factory-preparation/1",
+  "files": {
+    "native_source_reference_witness_v6.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v6.py",
+      "sha256": "d9b36ea78c88a4c227bc8d3763d8cf3dcb5a09b078c2d18825d8eca55ee8b81d",
+      "bytes": 22679
+    },
+    "native_validation_support_v6.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v6.py",
+      "sha256": "0de1c12e3e25874a92f484c38b4d1e9df5bfbaa6c53f3058d43b7037e70118ef",
+      "bytes": 1939
+    },
+    "scene_builder_smoke_006.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_smoke_006.py",
+      "sha256": "49bf0989f048104b2bc41364fa2ef853da01e2405e86b07a38ac7ce3dae4019e",
+      "bytes": 16818
+    },
+    "source_reference_witness_v6_pure_checks.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\source_reference_witness_v6_pure_checks.py",
+      "sha256": "b7cf2fff6c274bebb930ce72a31143cf6b2d5460efdb6e81abb7ccdfceeeb63d",
+      "bytes": 11367
+    },
+    "native_validation_support.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support.py",
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    }
+  },
+  "geometry_oracle": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_shoes_merge_07741.py",
+    "sha256": "b7da2d785422d8d46e26b77ae0bd3899f6a64dbf2919d5a7174ee255f85191f5",
+    "bytes": 16150
+  },
+  "stage_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "native_run_by_child": false,
+  "source_review": "bone_native_review source-only ACK; syntax and16 pure groups PASS; actual Native remains unrun.",
+  "protected_versions": "V5 sources, old FAIL reports and Stage05 package unchanged; actor/Artifact/GUI chain has not been updated.",
+  "expected_scope": "Generated factory Scene only; normal addon register then unregister; no blend open/save, no performance claim.",
+  "blender_arguments": [
+    "-b",
+    "--factory-startup",
+    "-t",
+    "1",
+    "--python",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\scene_builder_smoke_006.py",
+    "--",
+    "--artist",
+    "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "--addons",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\addons",
+    "--source-manifest",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "--report",
+    "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_scene_smoke_report_006.json"
+  ]
+}

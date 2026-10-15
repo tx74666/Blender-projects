@@ -1,0 +1,20 @@
+00:02.609  blend            | Read blend: "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend"
+Traceback (most recent call last):
+Info: Read library: 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\5f771ad1e0644d199cba30b6afd1ad0a.blend', 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\5f771ad1e0644d199cba30b6afd1ad0a.blend', parent '<direct>'
+Info: Read library: 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\8069c6d729ea43e1888db9fd07b9d6da.blend', 'C:\Users\Randy\AppData\Roaming\Blender Foundation\Blender\5.2\datafiles\character_designer\animation_sources\d3444e049cfd4afebb343e61e518c768\2ae2067c9794fc7767f6abb35b6af33df496986a006c870fc9d0dc47eaa55db5\8069c6d729ea43e1888db9fd07b9d6da.blend', parent '<direct>'
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\mesh_cache_actor_admission_001.py", line 244, in <module>
+    main(args, report)
+    ~~~~^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\mesh_cache_actor_admission_001.py", line 193, in main
+    require(report['all_mesh_geometry_exact'], 'Saved-frame final Mesh/PC2 exact admission failed')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\mesh_cache_actor_admission_001.py", line 31, in require
+    raise RuntimeError(message)
+RuntimeError: Saved-frame final Mesh/PC2 exact admission failed
+
+Error: script failed, file: 'D:\Blender\Projects\Character\X\validation\playback_performance_20261015\refactor\mesh_cache_actor_admission_001.py', exiting.
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-14 01:35:40)
+scripts disabled for "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend", skipping 'rig.001_ui.py'
+scripts disabled for "D:\Blender\Projects\Character\X\validation\playback_performance_20261014\round4\input_saved_20261015.blend", skipping 'rig.001_ui.py.003'
+
+Blender quit

@@ -1,0 +1,105 @@
+{
+  "schema": "x.full30-v9-parent-source-seal/1",
+  "source_only": true,
+  "native_executed_by_this_agent": false,
+  "sources": {
+    "mesh_cache_actor_full30_002.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_full30_002.py",
+      "sha256": "261b5508bab90426f1edb4e632fcecca6de4b893ab3e840ba101828cdbce4377",
+      "bytes": 26311
+    },
+    "mesh_cache_actor_parent_diagnostic_003.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_parent_diagnostic_003.py",
+      "sha256": "e2015c64d1e83e2ac4dba1339dd488cce8f36d09f4adc9f900144bc661b5e73b",
+      "bytes": 14841
+    },
+    "native_parent_remap_fixture_003.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_parent_remap_fixture_003.py",
+      "sha256": "cecb4fe297942de7282c97ae1a6cba4c9c7c5d91128b6529f6b255b8948c8eea",
+      "bytes": 9298
+    },
+    "native_validation_support_v9.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_validation_support_v9.py",
+      "sha256": "55f4b4b75a2ff5991f250d845fbbb295e7ef153874fb03dbeb7f169b5c048ed5",
+      "bytes": 1939
+    },
+    "native_source_reference_witness_v9.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v9.py",
+      "sha256": "fb87e81b29482e2668b6d29449713e4ddf4885797e6860100f118dd4bfa6b192",
+      "bytes": 28830
+    },
+    "native_keyframe_bulk_factory_008.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_keyframe_bulk_factory_008.py",
+      "sha256": "986b1ad696222cf4fb7d1ff1381dcc149691f56af543a786a68c8d706a69a606",
+      "bytes": 10165
+    },
+    "native_keyframe_bulk_factory_009.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_keyframe_bulk_factory_009.py",
+      "sha256": "e6e37eeec0c1132c6132bd0b96c990de9bc7e58a13d2fe3df21e27503101c58c",
+      "bytes": 2777
+    },
+    "native_source_reference_witness_v7.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\native_source_reference_witness_v7.py",
+      "sha256": "1e0d888f6a1db20d8261cb1f56fdcb065af59a0c70a8264a0d3dff67d70de542",
+      "bytes": 23162
+    },
+    "mesh_cache_actor_full30_004.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_full30_004.py",
+      "sha256": "f447574e7120c8a93fd8db5d3746f5fb5c7370ef922942dd576731fe1a715c12",
+      "bytes": 11283
+    },
+    "test_mesh_cache_actor_full30_004.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\test_mesh_cache_actor_full30_004.py",
+      "sha256": "16b2ecb82677d0915e183f5043094bd091bba9d7c6974444134583c38eca64c7",
+      "bytes": 7905
+    }
+  },
+  "linked_stage_pins": {
+    "staged_20261015_06\\source_manifest.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\source_manifest.json",
+      "sha256": "5c7965ef74e99ed8036bc57ad639cb4db37e6501bb580483a676d4b2fd6cc3c0",
+      "bytes": 25604
+    },
+    "staged_20261015_06\\addons\\character_designer\\forearm_twist_playback_scene.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_06\\addons\\character_designer\\forearm_twist_playback_scene.py",
+      "sha256": "e4f4f58378540d23ea8c3acf6f4bbc7a3b056494b7af480e2f3b9aa092ecef3d",
+      "bytes": 25969
+    },
+    "staged_20261015_08\\source_manifest.json": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_08\\source_manifest.json",
+      "sha256": "a8bf6d459b5c058efb32c7935199b64c010d327ef6d5d9e90831d95a99c51bf8",
+      "bytes": 25604
+    },
+    "staged_20261015_08\\addons\\character_designer\\forearm_twist_playback_scene.py": {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_08\\addons\\character_designer\\forearm_twist_playback_scene.py",
+      "sha256": "33e84ebd52d01ea99c5cdf9bf459464a6d52ea054766bb6e2893b02304b30c7c",
+      "bytes": 27567
+    }
+  },
+  "pure_tests": {
+    "groups": 7,
+    "passed": true,
+    "syntax": true
+  },
+  "unchanged_runner": "mesh_cache_actor_full30_002.py",
+  "overrides": [
+    "choose_witness -> explicit V9 actual Factory009 receipt",
+    "scene._remap_rna -> sealed Stage08 function in copied Stage06 globals"
+  ],
+  "required_native_factory": "Actual completed Factory009 receipt with original field/enum/mutation/cleanup gates and owned/restored/source wrapper gates; no passed receipt exists at sealing.",
+  "legacy_fields": "v8_factory_* are explicit aliases to actual V9 provenance for unchanged 002 final receipt/source checks.",
+  "cache": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\cache",
+    "git_ignore_rule": "cache/",
+    "unused_at_seal": true
+  },
+  "report": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_full30_report_004.json",
+    "unused_at_seal": true
+  },
+  "limits": [
+    "No Blender/native/GUI launched.",
+    "No geometry/math/solver/seek/ABBA/replay/cleanup gates changed.",
+    "Only private background data; no blend save/adoption/FPS acceptance."
+  ]
+}

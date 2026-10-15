@@ -1,0 +1,282 @@
+{
+  "schema": "x.playback-live-mesh-profile/3",
+  "id": "snapshot_1792005969313177800",
+  "operation": "snapshot",
+  "created_utc": "2026-10-14T19:26:09.643064+00:00",
+  "pid": 24416,
+  "blender": "5.2.0 LTS",
+  "addons": {
+    "character_designer": {
+      "version": [
+        0,
+        77,
+        41
+      ],
+      "source_path": "C:\\Users\\Randy\\AppData\\Roaming\\Blender Foundation\\Blender\\5.2\\scripts\\addons\\character_designer\\__init__.py",
+      "forearm_errors": {},
+      "forearm_busy": false
+    }
+  },
+  "installation_context": {
+    "window_pointer": 1522048817296,
+    "scene": "Scene",
+    "scene_pointer": 1522134704256,
+    "screen": "Geometry Nodes.001",
+    "screen_pointer": 1522024590464,
+    "area_type": "CONSOLE",
+    "area_pointer": 1522048160528,
+    "area_size": [
+      1188,
+      1018
+    ],
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "frame": 21,
+    "subframe": 0.0,
+    "sync_mode": "NONE",
+    "playing": false
+  },
+  "view_context": {
+    "window_pointer": 1522048817296,
+    "scene": "Scene",
+    "scene_pointer": 1522134704256,
+    "screen": "Geometry Nodes.001",
+    "screen_pointer": 1522024590464,
+    "area_type": "VIEW_3D",
+    "area_pointer": 1522048160528,
+    "area_size": [
+      1188,
+      1018
+    ],
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "frame": 21,
+    "subframe": 0.0,
+    "sync_mode": "NONE",
+    "playing": false,
+    "shading": "MATERIAL",
+    "show_region_ui": true
+  },
+  "no_save": true,
+  "no_refresh": true,
+  "no_addon_import": true,
+  "timing_scope": "Inclusive timings overlap; do not sum nested components. POST_PIXEL is a draw callback, not monitor presentation. Instrumentation adds wrapper, clock, counter, draw-handler and 0.5-second polling overhead; this instrumented sample does not independently measure that overhead or all GPU/native costs. Warmup is excluded from counters and events.",
+  "original_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round3\\live_profiler.py",
+    "sha256": "6dd7a0adf34390abc74ad2cf80838981f8e2a89f7fdb72968b276b16df464551",
+    "bytes": 45403
+  },
+  "derived_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\live_profiler_mesh_v3.py",
+    "sha256": "878ea3f3af54738d116297e16ce7662e3cd6c291452198aea074004b01acce3e",
+    "bytes": 7568
+  },
+  "mesh_scope": "Reversible hide_set and allowed show_viewport only; no evaluated mesh extraction, deletion, action change or accepted-model optimization",
+  "parent_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\live_profiler_mesh.py",
+    "sha256": "df397c6ead3fdad96bbb357298721fd303f1b324493e0c835587ec54ac1e4fbd",
+    "bytes": 18229
+  },
+  "callback_signature_scope": "Native handler/panel real positional arity retained; ordinary function wrappers retain forwarding",
+  "stop_result_scope": "PASS_THROUGH accepted only with immediate screen.is_animation_playing=false witness; all original restoration proofs remain required",
+  "accepted_parent_profiler": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\live_profiler_mesh_v2.py",
+    "sha256": "c362f4151a4bd45a5a1106631842cc875b7934d90b845e495e782b46949bd7a4",
+    "bytes": 10129
+  },
+  "object_viewport_scope": "Existing local Cosha/Shoes hide_viewport only; animated/uncertain flags refused; original flags restored before frame_set and all inherited proofs",
+  "completed": true,
+  "context": {
+    "window_pointer": 1522048817296,
+    "scene": "Scene",
+    "scene_pointer": 1522134704256,
+    "screen": "Geometry Nodes.001",
+    "screen_pointer": 1522024590464,
+    "area_type": "VIEW_3D",
+    "area_pointer": 1522048160528,
+    "area_size": [
+      1188,
+      1018
+    ],
+    "mode": "OBJECT",
+    "active_object": "Cosha",
+    "selected_objects": [],
+    "frame": 21,
+    "subframe": 0.0,
+    "sync_mode": "NONE",
+    "playing": false,
+    "shading": "MATERIAL",
+    "show_region_ui": true
+  },
+  "dirty": true,
+  "disk": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  },
+  "mesh_controls": [
+    {
+      "name": "Cosha",
+      "present": true,
+      "pointer": 1522043964128,
+      "type": "MESH",
+      "hide_set": false,
+      "hide_viewport": false,
+      "hide_render": false,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "pointer": 1522021816704,
+          "type": "ARMATURE",
+          "show_viewport": true,
+          "show_render": true
+        },
+        {
+          "name": "Subdivision",
+          "pointer": 1522044509328,
+          "type": "SUBSURF",
+          "show_viewport": true,
+          "show_render": true
+        }
+      ]
+    },
+    {
+      "name": "Shoes",
+      "present": true,
+      "pointer": 1522043976368,
+      "type": "MESH",
+      "hide_set": false,
+      "hide_viewport": false,
+      "hide_render": false,
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "pointer": 1522216952480,
+          "type": "MIRROR",
+          "show_viewport": true,
+          "show_render": true
+        },
+        {
+          "name": "Armature",
+          "pointer": 1522216411120,
+          "type": "ARMATURE",
+          "show_viewport": true,
+          "show_render": true
+        }
+      ]
+    }
+  ],
+  "mesh_geometry": [
+    {
+      "name": "Cosha",
+      "present": true,
+      "type": "MESH",
+      "object_pointer": 1522043964128,
+      "hide_set": false,
+      "hide_viewport": false,
+      "action": null,
+      "modifiers": [
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "viewport": true,
+          "render": true,
+          "rig": "CoshaRig",
+          "vertex_groups": true,
+          "envelopes": false,
+          "preserve_volume": false
+        },
+        {
+          "name": "Subdivision",
+          "type": "SUBSURF",
+          "viewport": true,
+          "render": true,
+          "levels": 1,
+          "render_levels": 2
+        }
+      ],
+      "mesh": "Mesh.002",
+      "base_vertices": 3658,
+      "base_edges": 7228,
+      "base_faces": 3584,
+      "vertex_group_count": 93,
+      "shape_key_count": 14,
+      "key_animation": null,
+      "material_slot_count": 7,
+      "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+    },
+    {
+      "name": "Shoes",
+      "present": true,
+      "type": "MESH",
+      "object_pointer": 1522043976368,
+      "hide_set": false,
+      "hide_viewport": false,
+      "action": {
+        "action": "ShoesAction",
+        "driver_count": 0,
+        "driver_paths": [],
+        "nla_track_count": 0,
+        "fcurve_count": 3,
+        "curve_paths": [
+          "delta_rotation_euler"
+        ],
+        "curve_paths_truncated": false,
+        "slot_handle": 929201142
+      },
+      "modifiers": [
+        {
+          "name": "Mirror",
+          "type": "MIRROR",
+          "viewport": true,
+          "render": true
+        },
+        {
+          "name": "Armature",
+          "type": "ARMATURE",
+          "viewport": true,
+          "render": true,
+          "rig": "CoshaRig",
+          "vertex_groups": true,
+          "envelopes": false,
+          "preserve_volume": false
+        }
+      ],
+      "mesh": "Plane.007",
+      "base_vertices": 28177,
+      "base_edges": 56045,
+      "base_faces": 27878,
+      "vertex_group_count": 76,
+      "shape_key_count": 0,
+      "key_animation": null,
+      "material_slot_count": 10,
+      "evaluated_geometry_scope": "Not extracted; original base counts and current modifier flags only"
+    }
+  ],
+  "runtime_errors": {
+    "character_designer": {
+      "errors": {},
+      "busy": false
+    }
+  },
+  "handlers": {
+    "frame_change_pre": [
+      "character_designer.hair_wiggle_adapter._frame_guard",
+      "wiggle_2.wiggle_pre"
+    ],
+    "frame_change_post": [
+      "wiggle_2.wiggle_post",
+      "bl_ext.user_default.auto_rig_pro.src.rig_functions.rig_layers_anim_update",
+      "character_designer.bone_collections._frame_visibility",
+      "character_designer.forearm_twist._frame_post"
+    ],
+    "depsgraph_update_pre": [],
+    "depsgraph_update_post": [
+      "random_realm_builder_exporter.rr_shader_mixer._on_graph_update",
+      "character_designer.body_calibration_display._invalidate",
+      "character_designer.forearm_twist._graph_post"
+    ]
+  }
+}

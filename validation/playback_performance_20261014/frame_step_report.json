@@ -1,0 +1,549 @@
+{
+  "schema": "x.forearm-frame-step-profile/1",
+  "completed": true,
+  "pid": 50652,
+  "model_and_reasoning_effort": "unrecorded",
+  "started_utc": "2026-10-14T05:10:37.906064+00:00",
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\input_snapshot.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_before": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "blender": "5.2.0 LTS",
+  "source_version": [
+    0,
+    77,
+    38
+  ],
+  "loaded_module": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+  "candidate_source": {
+    "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+    "sha256": "113d9b1688f1ddceadccd90ffd7cc5f3450e691218d11fe3097e34bc876b879d",
+    "bytes": 98233
+  },
+  "baseline_source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\composition_20261011\\fresh_rigging_round_20261012\\package_e51290d9\\source\\character_designer\\forearm_twist.py",
+    "sha256": "54c3bcccc1e7559a77f0d53773d46bf8137781ace139a50a93d9fb8eb2cdb408",
+    "bytes": 97739
+  },
+  "scene": "Scene",
+  "frames": [
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30
+  ],
+  "actions": {
+    "CoshaRig": "Cosha · Walk_N · Custom.001",
+    "Shoes": "ShoesAction"
+  },
+  "calibrated_meshes": {
+    "Cosha": {
+      "vertices": 3658,
+      "records": {
+        "L": {
+          "enabled": true,
+          "support_vertices": 191
+        },
+        "R": {
+          "enabled": true,
+          "support_vertices": 191
+        }
+      }
+    }
+  },
+  "modifiers": {
+    "Cosha": [
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Clothes": [
+      {
+        "name": "Mirror",
+        "type": "MIRROR",
+        "viewport": true
+      },
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Stocking": [
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Dress": [
+      {
+        "name": "SK_Dress_857c5a_Skin",
+        "type": "ARMATURE",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Jacket": [
+      {
+        "name": "Mirror",
+        "type": "MIRROR",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Shoes": [
+      {
+        "name": "Mirror",
+        "type": "MIRROR",
+        "viewport": true
+      },
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "viewport": true
+      }
+    ],
+    "Hair": [
+      {
+        "name": "Hair Armature",
+        "type": "ARMATURE",
+        "viewport": true
+      },
+      {
+        "name": "Smooth by Angle",
+        "type": "NODES",
+        "viewport": true
+      }
+    ],
+    "SK_Dress_Shape_waist": [],
+    "SK_Dress_Shape_mid": [],
+    "SK_Dress_Shape_hem": [],
+    "SK_Dress_Mid_01_Shape": [],
+    "SK_Dress_Hem_01_Shape": [],
+    "SK_Dress_Mid_02_Shape": [],
+    "SK_Dress_Hem_02_Shape": [],
+    "SK_Dress_Mid_03_Shape": [],
+    "SK_Dress_Hem_03_Shape": [],
+    "SK_Dress_Mid_04_Shape": [],
+    "SK_Dress_Hem_04_Shape": [],
+    "SK_Dress_Mid_05_Shape": [],
+    "SK_Dress_Hem_05_Shape": [],
+    "SK_Dress_Mid_06_Shape": [],
+    "SK_Dress_Hem_06_Shape": [],
+    "SK_Dress_Mid_07_Shape": [],
+    "SK_Dress_Hem_07_Shape": [],
+    "SK_Dress_Mid_08_Shape": [],
+    "SK_Dress_Hem_08_Shape": [],
+    "Dress_Backup": [
+      {
+        "name": "Array",
+        "type": "NODES",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Shoes_Primitive": [
+      {
+        "name": "Mirror",
+        "type": "MIRROR",
+        "viewport": true
+      }
+    ],
+    "ShoeBase": [
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "ShoeUpperBase": [
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Strap.001": [],
+    "Diamond.001": [],
+    "Wide Strap.001": [
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "viewport": true
+      }
+    ],
+    "Embedded.001": [
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Ear.001": [
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      },
+      {
+        "name": "Solidify",
+        "type": "SOLIDIFY",
+        "viewport": true
+      }
+    ],
+    "ShoeUpper2.001": [
+      {
+        "name": "Mirror",
+        "type": "MIRROR",
+        "viewport": true
+      },
+      {
+        "name": "Shrinkwrap.004",
+        "type": "SHRINKWRAP",
+        "viewport": true
+      },
+      {
+        "name": "Solidify",
+        "type": "SOLIDIFY",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "ShoeUpper3.001": [
+      {
+        "name": "Mirror",
+        "type": "MIRROR",
+        "viewport": true
+      },
+      {
+        "name": "Shrinkwrap",
+        "type": "SHRINKWRAP",
+        "viewport": true
+      },
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "Vamp.001": [
+      {
+        "name": "Subdivision",
+        "type": "SUBSURF",
+        "viewport": true
+      }
+    ],
+    "WGT_Randy_PoleArrow": [],
+    "WGT_Randy_HandIK": [],
+    "WGT_Randy_FootIK.L": [],
+    "WGT_Randy_FootIK.R": [],
+    "WGT_Randy_Finger": [],
+    "WGT_Randy_Shoulder": [],
+    "WGT_CoshaRig_Root": [],
+    "WGT_CoshaRig_Foot_Roll.L": [],
+    "WGT_CoshaRig_Toe_Bend.L": [],
+    "WGT_CoshaRig_Foot_Roll.R": [],
+    "WGT_CoshaRig_Toe_Bend.R": [],
+    "WGT_CoshaRig_Torso_Bend": [],
+    "WGT_CoshaRig_Torso_FK_01": [],
+    "WGT_CoshaRig_Torso_FK_02": [],
+    "WGT_CoshaRig_Torso_FK_03": [],
+    "WGT_CoshaRig_Eyes_Master": [],
+    "WGT_CoshaRig_Eyes_Left": [],
+    "WGT_CoshaRig_Eyes_Right": [],
+    "WGT_CoshaRig_FK_upper_arm.L": [],
+    "WGT_CoshaRig_FK_forearm.L": [],
+    "WGT_CoshaRig_FK_upper_arm.R": [],
+    "WGT_CoshaRig_FK_forearm.R": [],
+    "WGT_CoshaRig_FK_thigh.L": [],
+    "WGT_CoshaRig_FK_shin.L": [],
+    "WGT_CoshaRig_FK_thigh.R": [],
+    "WGT_CoshaRig_FK_shin.R": [],
+    "WGT_CoshaRig_Head": [],
+    "WGT_CoshaRig_Neck": [],
+    "WGT_CoshaRig_Hips": [],
+    "WGT_CoshaRig_Breast_L": [],
+    "WGT_CoshaRig_Breast_R": []
+  },
+  "handlers": {
+    "depsgraph_update_post": [
+      "character_designer.forearm_twist._graph_post",
+      "character_designer.body_calibration_display._invalidate"
+    ],
+    "frame_change_post": [
+      "character_designer.bone_collections._frame_visibility",
+      "character_designer.forearm_twist._frame_post"
+    ]
+  },
+  "cases": [
+    {
+      "label": "baseline",
+      "milliseconds": [
+        334.51360001345165,
+        344.46870000101626,
+        386.9649000116624,
+        362.7140000171494,
+        350.2477000001818,
+        365.27730000671,
+        366.45669999415986,
+        369.1411000036169
+      ],
+      "median_ms": 363.9956500119297,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 40,
+        "character_designer.forearm_twist._current_record": 32,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 1.4397175000049174,
+        "character_designer.forearm_original_inventory.validate": 0.7359061999595724,
+        "character_designer.forearm_twist._topology": 0.0179571000917349,
+        "character_designer.forearm_twist._current_record": 0.020341399853350595,
+        "character_designer.forearm_twist._prepare_mirror": 0.017534300044644624,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.7778040000412147,
+        "character_designer.forearm_twist._input_mix": 0.0033608000085223466,
+        "character_designer.forearm_twist._weights": 0.025890499993693084,
+        "character_designer.forearm_twist._calculate_records": 0.3586127999587916,
+        "character_designer.forearm_twist._calculate_object": 1.1401516000332776,
+        "character_designer.forearm_twist.update_runtime": 1.1408646000199951,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 1.1409223999944516
+      },
+      "errors": {},
+      "nested_timing_note": "Components overlap; do not sum their durations.",
+      "outputs_equal_to_baseline": true
+    },
+    {
+      "label": "candidate",
+      "milliseconds": [
+        372.95089999679476,
+        376.46239998866804,
+        377.7215000009164,
+        502.3040999949444,
+        786.4382000116166,
+        526.9416999944951,
+        430.0937000080012,
+        371.3346000004094
+      ],
+      "median_ms": 403.9076000044588,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 1.8214287000300828,
+        "character_designer.forearm_original_inventory.validate": 1.033609100006288,
+        "character_designer.forearm_twist._topology": 0.02444040001137182,
+        "character_designer.forearm_twist._current_record": 0.026216200029011816,
+        "character_designer.forearm_twist._prepare_mirror": 0.0207438999786973,
+        "character_designer.forearm_twist._prepare_runtime_records": 1.0877260000270326,
+        "character_designer.forearm_twist._input_mix": 0.004338600061601028,
+        "character_designer.forearm_twist._weights": 0.03401489998213947,
+        "character_designer.forearm_twist._calculate_records": 0.46004160001757555,
+        "character_designer.forearm_twist._calculate_object": 1.5523325000540353,
+        "character_designer.forearm_twist.update_runtime": 1.5533015999826603,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 1.5533443999884184
+      },
+      "errors": {},
+      "nested_timing_note": "Components overlap; do not sum their durations.",
+      "outputs_equal_to_baseline": true
+    },
+    {
+      "label": "candidate",
+      "milliseconds": [
+        347.0482999982778,
+        358.0149000044912,
+        367.5947000156157,
+        438.9245000202209,
+        397.0798999944236,
+        445.0694000115618,
+        436.83819999569096,
+        374.43540000822395
+      ],
+      "median_ms": 385.7576500013238,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 24,
+        "character_designer.forearm_twist._current_record": 16,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 1.5205805999867152,
+        "character_designer.forearm_original_inventory.validate": 0.8891076999716461,
+        "character_designer.forearm_twist._topology": 0.019934299954911694,
+        "character_designer.forearm_twist._current_record": 0.02145380000001751,
+        "character_designer.forearm_twist._prepare_mirror": 0.018061599927023053,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.9346306000079494,
+        "character_designer.forearm_twist._input_mix": 0.00397510000038892,
+        "character_designer.forearm_twist._weights": 0.029257699992740527,
+        "character_designer.forearm_twist._calculate_records": 0.4008664999855682,
+        "character_designer.forearm_twist._calculate_object": 1.3396898000792135,
+        "character_designer.forearm_twist.update_runtime": 1.3403681000345387,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 1.340401900029974
+      },
+      "errors": {},
+      "nested_timing_note": "Components overlap; do not sum their durations.",
+      "outputs_equal_to_baseline": true
+    },
+    {
+      "label": "baseline",
+      "milliseconds": [
+        340.9869999741204,
+        353.1121999840252,
+        365.2814999804832,
+        382.7261000114959,
+        404.1471999953501,
+        413.48639997886494,
+        511.6161000041757,
+        524.6182999981102
+      ],
+      "median_ms": 393.436650003423,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.forearm_original_inventory.validate": 8,
+        "character_designer.forearm_twist._topology": 40,
+        "character_designer.forearm_twist._current_record": 32,
+        "character_designer.forearm_twist._prepare_mirror": 8,
+        "character_designer.forearm_twist._prepare_runtime_records": 8,
+        "character_designer.forearm_twist._input_mix": 8,
+        "character_designer.forearm_twist._weights": 8,
+        "character_designer.forearm_twist._calculate_records": 8,
+        "character_designer.forearm_twist._calculate_object": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 1.627497699984815,
+        "character_designer.forearm_original_inventory.validate": 0.9296073999721557,
+        "character_designer.forearm_twist._topology": 0.022252700000535697,
+        "character_designer.forearm_twist._current_record": 0.025211400061380118,
+        "character_designer.forearm_twist._prepare_mirror": 0.02179310002247803,
+        "character_designer.forearm_twist._prepare_runtime_records": 0.9812950999767054,
+        "character_designer.forearm_twist._input_mix": 0.0035788000095635653,
+        "character_designer.forearm_twist._weights": 0.02842920005787164,
+        "character_designer.forearm_twist._calculate_records": 0.38668759996653534,
+        "character_designer.forearm_twist._calculate_object": 1.3718778000329621,
+        "character_designer.forearm_twist.update_runtime": 1.3726732000068296,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 1.3727092000190169
+      },
+      "errors": {},
+      "nested_timing_note": "Components overlap; do not sum their durations.",
+      "outputs_equal_to_baseline": true
+    },
+    {
+      "label": "forearm_path_isolated",
+      "milliseconds": [
+        229.93990001850761,
+        236.24670002027415,
+        225.12589997495525,
+        302.3003999842331,
+        260.08180002099834,
+        241.79970001569018,
+        289.6570999873802,
+        349.5441999984905
+      ],
+      "median_ms": 250.94075001834426,
+      "calls": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 8,
+        "character_designer.forearm_twist.update_runtime": 8,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 8
+      },
+      "nested_seconds": {
+        "frame_change_post:character_designer.bone_collections._frame_visibility": 1.8030114999855869,
+        "character_designer.forearm_twist.update_runtime": 1.530002919025719e-05,
+        "frame_change_post:character_designer.forearm_twist._frame_post": 5.000003147870302e-05
+      },
+      "errors": {},
+      "nested_timing_note": "Components overlap; do not sum their durations."
+    }
+  ],
+  "input_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\input_snapshot.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_after": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist_disk_unchanged": true,
+  "no_save_operation": true,
+  "limits": [
+    "Background frame-step time is not viewport FPS.",
+    "Saved snapshot excludes unsaved live artist changes.",
+    "Only Character Designer registered; external GUI add-on callbacks are not represented.",
+    "Forearm isolation is diagnostic only, with stale corrective output; it is not a usable fix.",
+    "Small warm samples and shared machine load; no whole-model deformation equivalence claim."
+  ]
+}

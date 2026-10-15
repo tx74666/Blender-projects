@@ -1,0 +1,43 @@
+{
+  "schema": "x.frozen-playback-prepared-runner/1",
+  "date_local": "2026-10-15",
+  "state": "PREPARED_NOT_EXECUTED",
+  "runner": "private_playback_native_runner_v2.py",
+  "witness": "native_validation_support.py",
+  "plan": "VALIDATION_PLAN.md",
+  "source_stage": "staged_20261015_01/addons",
+  "source_manifest": "staged_20261015_01/source_manifest.json",
+  "source_manifest_sha256": "c944dc797fa228c03657ac1b45bbb201c82a1c7d6a8eabc61d81a3b6b11da8eb",
+  "stage_receipt": "staged_20261015_01/stage_receipt.json",
+  "stage_receipt_sha256": "f7bbc36bbb065b8c637009c1b7fe0a299ca1e9d9dbf3050c4faa850f830e6070",
+  "staged_files": 193,
+  "sealed_python_files": 161,
+  "canonical_files_exact_at_copy_and_seal": true,
+  "authoring_07741_runtime_sha256": "d7a28470d61b74b1f2d4f146135bf14424e1633c0a88ded706c1e6be5adc1b10",
+  "authoring_ast_functions_equal_to_reference": 9,
+  "core_sha256": "9a453ea0f6df62bf99a24b5ed6a6a161d5909edf73f4ad2b6aa1a11151f40ae3",
+  "scene_builder_sha256": "22a1c4a6a6736d148ef6c3937202cd3b18fc18660c5382a83e6f04e146a9cb28",
+  "fixed_input": "../../playback_performance_20261014/round4/input_saved_20261015.blend",
+  "fixed_input_sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+  "fixed_input_bytes": 34691613,
+  "checks": {
+    "python_compile": "PASS",
+    "pure_scaffold": "PASS: 30 frame coverage, eight ABBA routes, evaluation telemetry contract",
+    "independent_core_static_review": "No blocking issue found; graph remap and native exactness remain unverified",
+    "native_validation": "NOT RUN",
+    "gui_fps_validation": "NOT RUN"
+  },
+  "no_blender_or_gui_invocation": true,
+  "no_background_native_job_started": true,
+  "no_artist_open_or_save": true,
+  "no_deployment": true,
+  "performance_claim": null,
+  "bone_preview_claim": null,
+  "model_and_reasoning_effort": "unrecorded",
+  "limits": [
+    "The live artist disk differed from the earlier ad5bf8ec closeout pin; the worker never assumes that historical pin is live.",
+    "The stage's bone preview module is an earlier sealed version and is not used by this frozen playback runner.",
+    "Prepared API/source checks do not establish real Blender RNA behavior, unchanged native outputs or a speed improvement.",
+    "Wait for the root's actual shared-heavy release and current resource admission before invoking the native command."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "x.private-gui-fps-source-dependencies/1",
+  "files": {
+    "private_gui_fps_probe_009.py": {
+      "sha256": "2097eaa464aa882c0e3e8b42ad08f20847e1ec7df822b04d0e4b0b6af02f6d6b",
+      "bytes": 32816
+    },
+    "private_gui_fps_probe_009_pure_checks.py": {
+      "sha256": "08cdb409c1975cc285e6a6131ad2072a725420f7ebd3dc6afe34e635b2d38b07",
+      "bytes": 3632
+    },
+    "native_validation_support_v5.py": {
+      "sha256": "68451f7cc73d582da148b6a4efcbdf3596edaf4285310a3e40997273d70ff2ce",
+      "bytes": 1939
+    },
+    "native_source_reference_witness_v5.py": {
+      "sha256": "e0a56ab2c38546a36dd90eaca1dc74ca1ad57da61bab7528b602144157ef8135",
+      "bytes": 18220
+    },
+    "native_validation_support.py": {
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_artifact_action_witness_008.py": {
+      "sha256": "c6881b78c9de8af661b6ecbf264e4e8a4f9861ce645246d9e8dccb1fc298b680",
+      "bytes": 8307
+    },
+    "native_artifact_reopen_gui_008.py": {
+      "sha256": "4f952e6a3da1c5a8b78902b9c419bca9edc8bcb7a358117240bd4ad4f05b8c31",
+      "bytes": 22432
+    }
+  },
+  "runtime_expected_PID_required": true,
+  "runtime_expected_private_file_and_SHA_required": true,
+  "runtime_staged_manifest_SHA_required": true,
+  "baked_requires_matching_completed_GUI008": true,
+  "baseline_requires_explicit_fixed_40644": true,
+  "native_GUI_invocation_by_preparation": false,
+  "lightweight_checks": "compile probe and retained pure checks; eight pure check groups passed without bpy import",
+  "limitations": "No actual GUI/native/30FPS result. GPU completion/presentation not measured. Only appended pre-to-post marker span, frame callback rate and changed frame-token POST_PIXEL callback rate observed."
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "x.playback-runner-source-dependencies/3",
+  "files": {
+    "scene_builder_smoke_005.py": {
+      "sha256": "9ad12fb36a710e5090340cbff39915cc05f70eb872bf8e0dcc5e1d9909723364",
+      "bytes": 14357
+    },
+    "private_playback_native_runner_v5.py": {
+      "sha256": "1151ded3d26c719332e5d6f3633d955782433204a4a30040950a4cef6cd16a69",
+      "bytes": 29356
+    },
+    "native_bone_preview_runner_005.py": {
+      "sha256": "3ae9a0cd9d57ff1e4b37e56b058f446b8fbb702abded3d8d797609295361eec8",
+      "bytes": 27965
+    },
+    "native_bone_synthetic_runner_005.py": {
+      "sha256": "176caf2ca8892b361bf4b9dfc8f6cdb8203d4dfd265a57f00db4336f99c1d7a5",
+      "bytes": 16876
+    },
+    "native_source_reference_witness_v5.py": {
+      "sha256": "cf62525cc29c4d3daf36996dceec9db52fceb89572adc5c7d028091fd6937c6a",
+      "bytes": 17651
+    },
+    "native_validation_support_v5.py": {
+      "sha256": "f9ab037b74c1dd686e034e3d846328f277670987b0ee0161324326dabe962264",
+      "bytes": 1939
+    },
+    "native_validation_support.py": {
+      "sha256": "3994f58288244684679ffd48d0837ac88bcfd9768f0a3a12c3e1d7d5b6265c0a",
+      "bytes": 12214
+    },
+    "native_bone_support.py": {
+      "sha256": "a8a25ec0c009adc19bb6b11bbf5b20b594a1ef4f9db87c542261d503830d90c8",
+      "bytes": 13984
+    },
+    "source_reference_witness_v5_pure_checks.py": {
+      "sha256": "a74d19af3b03b2c1f6d23d671b0e97d20ea065270a0abda32fc1bbcd067e5d0f",
+      "bytes": 5568
+    }
+  },
+  "native_invocation": false,
+  "historical_sources_preserved": true,
+  "supersedes_unrun_draft": "native_runner_dependencies_005.json",
+  "stage05_source_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_05\\source_manifest.json",
+    "sha256": "d62c3178ca6f0615fa4517440c157bba0ab2ced87cb64aa560ac1830197bac34",
+    "bytes": 25604
+  },
+  "synthetic_fixture_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_02\\fixture_manifest.json",
+    "sha256": "ff45ab73077d3f848e2db2c315df7c7cefcfdf2061947ec8388e07c111ccabcc",
+    "bytes": 858
+  },
+  "v5_helper_review": "bone_native_review: no further current blocker after stored-fields/unset-descriptor/nonmutating getter guards. Native API/equivalence remain unverified.",
+  "lightweight_checks": "compile seven scripts plus retained pure checks eight PASS; package162 Python sources and existing two fixture pins verified read-only",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "model_source": "Current root local task index verified by root; inherited settings."
+}

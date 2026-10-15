@@ -1,0 +1,88 @@
+{
+  "schema": "x.playback-round2-pre-native/1",
+  "created_utc": "2026-10-14T07:19:00.464556+00:00",
+  "state": "NATIVE_VALIDATION_PENDING",
+  "model_and_reasoning_effort": "unrecorded",
+  "foreign_heavy_lease": "CHAR_COLLIDER_SYMMETRY_20261014",
+  "native_started": false,
+  "pure_checks": {
+    "worklist_target": 61,
+    "control_source_rest": 13,
+    "unity_controls_rest": 4,
+    "forearm_scope": 6,
+    "scratch_rest_matrix": 8
+  },
+  "sources_and_logs": [
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\animation_worklist_target.py",
+      "sha256": "f03ed8df1942c9e2e514b75205c41a635a5d2fbbb4d85125138d06e790823898",
+      "bytes": 44470
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist_math.py",
+      "sha256": "ff4a46c4a12c23a6579c3f261554d654f8fb9680adc5c74b1efca55d08e6b575",
+      "bytes": 10838
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\forearm_twist.py",
+      "sha256": "490a62c64a83cb61d6e6b47df350595f4cf8cc8973ba276cf10cb447875791b6",
+      "bytes": 98659
+    },
+    {
+      "path": "D:\\MyRepository\\Blender-addons-by-Randy\\addons\\character_designer\\unity_animation.py",
+      "sha256": "6c0806ed1e00632d5175b331b66456e662eb00c62bbffe2a182baf5d05839e7d",
+      "bytes": 41190
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\profile_candidates.py",
+      "sha256": "f4c64e4e82c49620bc47b9adc862070b87ca95a95025d1ad997fae98d974e3c8",
+      "bytes": 10243
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\rest_matrix_candidate.py",
+      "sha256": "1ebf0914892119df8c1d344d197e3e539b0062090d74eedd79ecdf2403a2ada4",
+      "bytes": 980
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\rest_projection_unit.log",
+      "sha256": "67eda62b0a6a95f399c532f2989416fa643240db9139bdbc9788e559c4110245",
+      "bytes": 165
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\control_rest_view_unit.log",
+      "sha256": "92b2a6aa135c520d68898033dbce1e405fe6279047937c40e600aedeeaa54b8f",
+      "bytes": 117
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\unity_controls_rest_view_unit.log",
+      "sha256": "18a26037c47a4a98fb2a842559a08a2f3925730af0f54210b16202523eb5f02d",
+      "bytes": 107
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\forearm_scope_unit.log",
+      "sha256": "41b83878dd0c0b4ec1f16e4c1390c0c3e73ecfd8d6cb6d359812aa3433f0bf30",
+      "bytes": 109
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round2\\rest_matrix_candidate_unit.log",
+      "sha256": "647d2ebd8a0bf459dadeeefce8da63e1f8d156b88de24e65e05e7c369cb2ba75",
+      "bytes": 1156
+    }
+  ],
+  "input": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\input_snapshot.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "artist": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "aea53ab4f324c7d99fdfe0ce40fc3d220b01d77b6c15671a5744e2bea86008f6",
+    "bytes": 34686989
+  },
+  "no_deployment_or_live_refresh_or_scene_save": true,
+  "limits": [
+    "Pure fixtures and AST checks do not certify native behavior or performance.",
+    "Scratch Rest matrix candidate is not canonical runtime.",
+    "Previous .39 deployment retained; round2 candidates not deployed."
+  ]
+}

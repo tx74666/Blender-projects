@@ -1,0 +1,45 @@
+{
+  "schema": "x.protected-native-final-save-07741/1",
+  "created_utc": "2026-10-14T19:28:34.171057+00:00",
+  "pid": 24416,
+  "completed": false,
+  "phase": "failed",
+  "artist_saved": false,
+  "source": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_v3.py",
+    "sha256": "dbb73ca8ce7254230d7cbbfd6648b69d1b113ab9884318565d368ff9e4a05f74",
+    "bytes": 18376
+  },
+  "errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_v3.py\", line 181, in poll\n    if not self.pending_input():\n           ~~~~~~~~~~~~~~~~~~^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_v3.py\", line 124, in pending_input\n    require(line_type == \"INPUT\", \"Observed Console history tail is not an INPUT line\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\final_save_07741_v3.py\", line 41, in require\n    raise RuntimeError(message)\nRuntimeError: Observed Console history tail is not an INPUT line\n"
+  ],
+  "pending_console_text_sha256": "51165f6282bef9f7bed965d7fd2a7b2b052be9d988ed640747472ff0670ad2d0",
+  "no_console_command_execution": true,
+  "no_frame_set": true,
+  "no_manual_runtime_update": true,
+  "no_channel_or_mesh_repair": true,
+  "no_refresh_or_deployment": true,
+  "automatic_scene_rollback": false,
+  "limits": [
+    "Protected in-memory content witness across native save; no independent saved-file reopen/readback in this script.",
+    "No Undo-stack preservation proof.",
+    "Healthy managed outputs must match their last published runtime cache; this does not independently recompute the complete deformation mathematics."
+  ],
+  "finished_utc": "2026-10-14T19:28:34.481615+00:00",
+  "helper_cleanup": {
+    "poll_timer_gone": true,
+    "owned_modules_removed": [
+      "_x_final_save_07741_v3_20261015",
+      "_x_final_save_07741_v3_20261015_source"
+    ],
+    "cleanup_callback_returns_none": true,
+    "finished_utc": "2026-10-14T19:28:34.940430+00:00"
+  },
+  "final_dirty_observed": true,
+  "final_filepath_observed": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+  "final_file_observed": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\X.blend",
+    "sha256": "40644b848dd2cb2c1346514fbd78f22274528a60f714597e9103541bd0fef721",
+    "bytes": 34691613
+  }
+}

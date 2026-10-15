@@ -1,0 +1,52 @@
+{
+  "schema": "x.current-cache-source-checkpoint-extraction/1",
+  "source_only": true,
+  "native_acceptance": false,
+  "producer": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_current_core_008.py",
+    "sha256": "c78a27993e51f13a3c6c3bbde98b683ec1d9162f1d5cbd50146973b9564ce0e9",
+    "bytes": 34572
+  },
+  "actual_failed_source_checkpoint": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_current_full30_report_008.json",
+    "sha256": "8b762b053b6e849b1b0251178a213964acacb6a4bc6403b9cf4c23c4334c85d1",
+    "bytes": 11810900
+  },
+  "new_kernel": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\mesh_cache_actor_current_core_009.py",
+    "sha256": "d89a922eb2b178d896ea6daab738518ed08cfa2021c47681e23d83d5da57ddaf",
+    "bytes": 33064
+  },
+  "checkpoint_scope": "Actual008 remains completed=false. Only30 completed Source golden frames/69 immutable PC2 caches are reused; all150 new target geometry/shader/Base visits must run.",
+  "changes": [
+    "Before-open fixed actualFAIL+old23 source pins, old Stage09 and current SaveCopy/Stage06/V9/shader9/resource guards.",
+    "Existing008 cache directory with read-only rb handles replaces new directory and Source30 write loop; fullSHA/HEADER/N/30/bytes checked, Source fresh13 complete witness+shader must match.",
+    "Stage10 only exact registered-PG-unset guard; remaining Scene top-level AST and old remapper after guard removal match Stage09.",
+    "Assembler adds same fresh13 output check before clone; Source/cleanup/write/publication order retained."
+  ],
+  "unchanged_native_tail_ast_sha256": {
+    "old008": "2d1ebb9a451a80f1ff3e3680a19f6da0305d4f9a061bef693849b70b9a186ff0",
+    "new009": "2d1ebb9a451a80f1ff3e3680a19f6da0305d4f9a061bef693849b70b9a186ff0"
+  },
+  "cleanup_ast_sha256": {
+    "run_clip": {
+      "old008": "cc5306bdab990b93284f59c0f05c6d4463d4e04db27b2822c2164631b0aa9f6c",
+      "new009": "cc5306bdab990b93284f59c0f05c6d4463d4e04db27b2822c2164631b0aa9f6c"
+    },
+    "assemble_clip": {
+      "old008": "12315d83ecb7466456ec40fbce40c4ceee789d00519747c9bcdbb9d2da11ef61",
+      "new009": "12315d83ecb7466456ec40fbce40c4ceee789d00519747c9bcdbb9d2da11ef61"
+    }
+  },
+  "pure_environment": "Bundled Python3.13.13, no bpy/Blender; complete actual checkpoint disk gate and9 targeted tests PASS.",
+  "stage10_manifest": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261015\\refactor\\staged_20261015_10\\source_manifest.json",
+    "sha256": "e1859b8b56ca5b63a5c91dcec0e4fed9d9da48d1bffa30263b191692ebed91c4",
+    "bytes": 25725
+  },
+  "geometry_oracle": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\playback_performance_20261014\\round4\\probe_shoes_merge_07741.py",
+    "sha256": "b7da2d785422d8d46e26b77ae0bd3899f6a64dbf2919d5a7174ee255f85191f5",
+    "bytes": 16150
+  }
+}
