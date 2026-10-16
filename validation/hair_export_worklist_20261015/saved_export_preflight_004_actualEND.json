@@ -1,0 +1,50 @@
+{
+  "schema": "x.saved-export-preflight-END/1",
+  "actualEND": "2026-10-15T20:30:51.7010434Z",
+  "released": true,
+  "in_flight": [],
+  "native_acquired": false,
+  "native_launched": false,
+  "scope": "Only fresh external preflight and lightweight004 source preparation; no GUI/SDK/Blender process or artist save",
+  "result": "STOPPED_INPUT_CHANGED_BEFORE_NATIVE_ACQUISITION",
+  "main_grant": "Main2026-10-16 background-only FBX/readback batch; explicit condition to stop at lightweight proof if saved input changed",
+  "prior_console_END": {
+    "sha256": "bac84bd1bac69ec2b190c721ccef1c1d386d6b90c9468e848d02e2f6a2e8a150",
+    "path": "D:/Codex/Artifacts/console-local116-final-20261016/git-actual-END116.json"
+  },
+  "preflight": {
+    "expected_input": {
+      "bytes": 34772859,
+      "sha256": "94902e4268f9e980d1370c93220d856237dffce7d2318c7ec8ac65ea930fa5dc"
+    },
+    "available_mib": 1871.3,
+    "other_native_build_workers_observed": [],
+    "utc": "2026-10-15T20:29:15.3357754Z",
+    "used_percent": 88.42,
+    "actual_input": {
+      "bytes": 34716620,
+      "sha256": "23b81633c8ceb3f37ec804cb51462a708a70a0f461868d5bb09e0f24e626082a"
+    },
+    "observed_blender_pid": 24416
+  },
+  "final_external_input": {
+    "bytes": 34716620,
+    "sha256": "23b81633c8ceb3f37ec804cb51462a708a70a0f461868d5bb09e0f24e626082a"
+  },
+  "source004": {
+    "ready_document_sha256": "c63ecb7a55fc6354c15fc26f84abbc5231107f1ae8eedf7fedb105ddaf11fd8c",
+    "sha256": "7056c310f59d7b3681089d151a15c84faa4fca197778d796670bceda8050b5eb",
+    "script": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\validate_saved_export_004.py",
+    "dependencies_sha256": "3c83296266dbd77b1e377e4732adf6579b29665de89cf1fafcfca778788771c9",
+    "exact_five_literal_diff": true,
+    "checked_pins": 13,
+    "dependencies": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\saved_export_validator_dependencies_004.json",
+    "ready_document": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\READY_SAVED_EXPORT004.md",
+    "source_ready_only": true
+  },
+  "artist_modified_by_task": false,
+  "gui_used": false,
+  "native_report_created": false,
+  "new_model_native_PASS": false,
+  "next": "X holds no lease; next Console117 may proceed under Main coordination. 004 needs new serial grant and fresh input/RAM guards; GUI/playback remain separately pending."
+}

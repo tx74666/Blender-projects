@@ -1,0 +1,50 @@
+{
+  "schema": "x.hair-export-native-batches-readiness/1",
+  "updated_utc": "2026-10-15T19:31:24.3611905Z",
+  "source_ready_only": true,
+  "native_executed": false,
+  "artist": {
+    "path": "D:/Blender/Projects/Character/X/X.blend",
+    "bytes": 34837592,
+    "sha256": "db10be327442c98dd5148d504440ae5ab713320a9a618de889d4faff03c4719d",
+    "scope": "External file pin only; no new native or live artist acceptance"
+  },
+  "background_batch": {
+    "ready_document_sha256": "6dd16729fe2e2b7c9b944a8e365a6772a663a86bdf0799d495c90ac02a7fccf8",
+    "scope": "One isolated single-thread background Blender; fresh native proof of db10 input, actual local FBX/sidecars and Blender readback; no GUI, nested worker, Unity, SDK, production publication or artist save",
+    "output_names_unused": true,
+    "sha256": "9d96f8c3b8243ea83a06246a30967248b154dfe3c4eefb30487a2e9ccb5f5afc",
+    "script": "validate_saved_export_002.py",
+    "estimate_is_lease": false,
+    "dependencies_sha256": "73444ba60d385f611fd7e2f297627f8890a01ffe7b1813f3b5fe5fb49bd0d575",
+    "ready_document": "READY_SAVED_EXPORT002.md",
+    "estimate_minutes": 5,
+    "dependencies": "saved_export_validator_dependencies_002.json"
+  },
+  "gui_batch": {
+    "diagnostic": "inspect_live_hair.py",
+    "estimate_is_lease": false,
+    "sha256": "8a3d33cda50db1c0f7481d4ee1b9ad105bcbef7bfd66a6e041ae49f26d1724cc",
+    "diagnostic_sha256": "8721c2748f7f5440b3bfa93cfbd4ed832db95c575314d7164ab3c5b04fb0cb86",
+    "script": "guarded_hair_leaf_refresh_001.py",
+    "estimate_minutes": 3,
+    "source_api_review": "PASS; _ACTIVE_JOB guards exist in frozen .43 export modules; diagnostic cleanup and state guards retained",
+    "scope": "Fresh artist PID/window and stopped/idle observation; guarded before/after Hair diagnosis and only existing Hair registry leaf reload if justified; no full addon refresh, save, export, evaluation, scene repair or new background process"
+  },
+  "coordination": {
+    "released": true,
+    "in_flight": [],
+    "guards": "Fresh RAM and ownership; do not launch below about 200 MiB; slow/recheck near 98%; fresh artist identity for GUI; user input has priority",
+    "current_owner": "Console116 per Main latest coordination",
+    "not_before": "Console actual explicit END plus a newly acquired serial window",
+    "minimum_gui_request": "One Blender artist-window-only 3 minute estimated batch; no Unity GUI or SDK"
+  },
+  "prior_evidence": "All 001 files and old 468bb input acceptance preserved; no old PASS transferred to db10 input",
+  "limitations": [
+    "Both new batches unexecuted",
+    "Live unsaved contents unobserved",
+    "Actual-model export unresolved",
+    "Playback/FPS acceptance unresolved",
+    "No task completion claim"
+  ]
+}

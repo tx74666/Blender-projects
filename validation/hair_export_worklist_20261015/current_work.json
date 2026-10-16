@@ -1,8 +1,8 @@
 {
   "schema": "x.hair-export-worklist-current/1",
-  "updated_utc": "2026-10-15T09:17:31.855702+00:00",
+  "updated_utc": "2026-10-15T20:34:13.0512109Z",
   "thread_id": "01a13e3a-f995-7501-b9c2-d3b68a5a27bf",
-  "state": "NATIVE_37_PASS_WAITING_DESKTOP_AVAILABILITY",
+  "state": "PREFLIGHT_RELEASED_SOURCE004_READY_NEW_NATIVE_PENDING",
   "complete": false,
   "candidate_version": "0.77.43",
   "source": {
@@ -19,7 +19,7 @@
     "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\release_projection_07743.json",
     "sha256": "9baac8f7575b121c5aa95502ad02b0a6762229fd7e86e395a1fb803eeade2b4c",
     "files": 190,
-    "deployed": false
+    "deployed": true
   },
   "artist": {
     "path": "D:/Blender/Projects/Character/X/X.blend",
@@ -28,11 +28,18 @@
     "disk_bytes": 34840263,
     "live_contents_observed": false,
     "unsaved_window_observed": true,
-    "modified_or_saved": false
+    "modified_or_saved": false,
+    "fresh_disk_observation": {
+      "bytes": 34716620,
+      "sha256": "23b81633c8ceb3f37ec804cb51462a708a70a0f461868d5bb09e0f24e626082a",
+      "utc": "2026-10-15T20:30:05.378939Z",
+      "old_sealed_validator_admissible": false,
+      "scope": "External saved-file identity only; preflight input changed before native acquisition"
+    }
   },
   "shared_heavy": {
     "released": true,
-    "queue": "Main current window; then new coordinated X/Builder/Console work",
+    "queue": "Main granted Console117 bounded local regression/package/backup/normal update/data UI batch; explicit actualEND required, no automatic expiry",
     "in_flight": []
   },
   "checks_completed": [
@@ -41,14 +48,14 @@
     "009 strict admission and 57 dependency pins passed without bpy",
     "runtime + tests AST parse and scoped diff check",
     "complete 190-file candidate projection resolved",
-    "37 native regression tests and 4 helper pure tests passed; 190-file ZIP verified"
+    "37 native regression tests and 4 helper pure tests passed; 190-file ZIP verified",
+    "Saved X Hair baseline same reported error / candidate PASS; 96 managed connected differences authenticated; state/disk exact",
+    "Blender5.2 and X deployment190files/check0"
   ],
   "pending": [
-    "desktop availability / current live Hair diagnosis",
-    "actual-model export in isolated destination",
-    "deploy/check approved projection and protected refresh",
-    "save completed accepted scene work and verify",
-    "fresh changed-model playback snapshot and viewport acceptance"
+    "New serial grant and fresh23b8 input guards for validator004 local FBX/readback",
+    "Fresh GUI artist/input proof and compatible helper",
+    "Production export and changed-model playback/FPS acceptance"
   ],
   "model": "unrecorded",
   "reasoning_effort": "unrecorded",
@@ -57,5 +64,21 @@
     "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\native_acceptance_001.json",
     "bytes": 3802,
     "sha256": "febd6f1a948946dc2c3db9d399b4299946b2abb58176faf1b0d9bcc1b19000b5"
+  },
+  "deployment_receipt": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\deployment_receipt_001.json",
+    "bytes": 2180,
+    "sha256": "925bee0622f9f3f6bfacf4b320186a9fab267fd5d664d891c41ab3bd9a9881d4"
+  },
+  "native_batches_readiness": {
+    "source_ready_only": true,
+    "native_executed": false,
+    "sha256": "8ecfe96104096d640d0941a6dbcb2e75509f94de293414957357f0b9ef7416b4",
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\native_batches_readiness_20261016_002.json"
+  },
+  "latest_preflight_END": {
+    "path": "D:\\Blender\\Projects\\Character\\X\\validation\\hair_export_worklist_20261015\\saved_export_preflight_004_actualEND.json",
+    "sha256": "802499fbb2dbe421849bd2221470da1b3966c7a1624ad3056ee7b98fe84bb9ed",
+    "native_launched": false
   }
 }
