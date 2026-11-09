@@ -4,7 +4,7 @@ A shared place to exchange `.blend` files and move Blender projects forward toge
 
 ## Current Projects
 
-- `X.blend`: Character X work-in-progress.
+- `X.blend` is the saved Character X scene and its direct assets.
 - `Build.blend`: the latest published, saved snapshot of the active `Builder6.blend` building project. It is a peer of `X.blend`; the older `Build/Build.blend` is not the source.
 
 ### Saving and uploading Build
@@ -28,7 +28,20 @@ remain available; the ignore rules do not remove previously tracked cache files.
 [`docs/BUILD_DEPENDENCIES.md`](docs/BUILD_DEPENDENCIES.md) for Build's external-file
 requirements and existing missing references.
 
-Open `X.blend` in Blender 5.1 or newer. The current file has the front and side reference images packed into the blend file so the scene opens with its modeling references intact.
+### Opening Character X
+
+Open `X.blend` in Blender 5.2. The two external textures and the linked
+`Source · Walk_N` animation library are packaged at relative paths. The scene
+also uses the geometry-node library bundled with Blender 5.2. If Blender is
+installed at a different path, verify that the bundled library resolves or
+relink it before editing.
+
+A background reopen with Blender 5.2.0 LTS, factory settings, and automatic
+script execution disabled verified the X scene, the Character collection,
+both external textures, the linked Action, and the bundled geometry nodes.
+See the [dependency manifest](project_dependencies/X-checkpoint-manifest.json)
+for the file hashes and verification scope. Character Designer editing and
+animation operations require separate validation.
 
 Third-party/downloaded assets under `assets/` are not part of the first version commit unless intentionally added later.
 

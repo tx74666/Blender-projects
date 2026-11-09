@@ -1,0 +1,96 @@
+{
+  "format": "character-x-saved-checkpoint-dependencies/1",
+  "checkedAtUtc": "2026-11-09T16:14:47.496342+00:00",
+  "blender": "5.2",
+  "originalSavedCheckpoint": {
+    "bytes": 67670009,
+    "sha256": "5582b592bb212a7210500a683eb0049f27892a7324774716df89aed2e41c62a2"
+  },
+  "files": {
+    "textures/Hair.png": {
+      "bytes": 265647,
+      "sha256": "2f71d1ccd37a67f155c8ac5f1633c0ca2e37916af96e5f595f39990e955caf2c"
+    },
+    "textures/1d63a26f-110a-4ff2-9145-a350633c3dd5.png": {
+      "bytes": 1909992,
+      "sha256": "c839da71523b7ea3aea3ff4d7ad2af00a3f9f76d24de2ccf980dd8258df99085"
+    },
+    "project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend": {
+      "bytes": 1048096,
+      "sha256": "e5238d1c8bb01cf950c998a0e3dab3f1a2aa54259bf973ae5096a43262664919"
+    },
+    "X.blend": {
+      "bytes": 67670009,
+      "sha256": "b61a5ca2a4ad632cf8cefe8cd619a05fe2082f421773b60e7ee7c784d8de3bff"
+    }
+  },
+  "pathRewrites": [
+    {
+      "block": "Image",
+      "target": "//textures/1d63a26f-110a-4ff2-9145-a350633c3dd5.png",
+      "offset": 17186254,
+      "rewrittenBytes": 82
+    },
+    {
+      "block": "Image",
+      "target": "//textures/Hair.png",
+      "offset": 23102717,
+      "rewrittenBytes": 50
+    },
+    {
+      "block": "Library",
+      "target": "//project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend",
+      "offset": 67492314,
+      "rewrittenBytes": 246
+    }
+  ],
+  "verification": {
+    "nativeBlockRecords": 82370,
+    "sameLength": true,
+    "allBytesOutsideThreeRewrittenPathRangesEqual": true,
+    "stagedRelativePathsExist": true,
+    "originalCurrentAfterCopyAndValidation": true,
+    "nativeOpenTested": true,
+    "nativeEditTested": false
+  },
+  "blenderSuppliedDependency": {
+    "pathAsSaved": "D:/Blender5.2/5.2/datafiles/assets/nodes/geometry_nodes_essentials.blend",
+    "libraryRecords": 2,
+    "packed": false,
+    "required": "Use the Blender 5.2 bundled equivalent. If Blender is installed elsewhere, verify the library resolves or relink it in Blender before editing."
+  },
+  "animationLibrary": {
+    "path": "//project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend",
+    "matchesCurrentCacheBytes": true,
+    "serializedLibraryOrImageBlocks": 0,
+    "serializedActionBlocks": 1
+  },
+  "scope": {
+    "packedImages": 9,
+    "unpackedPackagedTextures": 2,
+    "knownMetadataNotRewritten": "Historical Character Designer source and recovery paths remain in custom metadata. They were kept byte-exact and are outside the three direct-path rewrites.",
+    "portableStatus": "The packaged direct paths were verified in a native Blender 5.2 factory-profile reopen on this machine. Other installation paths and Character Designer operations remain untested."
+  },
+  "nativeReopen": {
+    "version": "5.2.0 LTS",
+    "factoryStartup": true,
+    "automaticScriptExecutionDisabled": true,
+    "receiptSha256": "ccd008520991878cd721203c1149e9265e975185667eabece0cb94273ab1e675",
+    "checks": {
+      "blenderIs52": true,
+      "candidateIsOpen": true,
+      "sceneX": true,
+      "hasCharacterCollection": true,
+      "packagedPathsResolve": true,
+      "animationLibraryHasLinkedAction": true,
+      "bundledLibraryExistsAndHasLinkedNodes": true
+    },
+    "scene": "X",
+    "frame": 67,
+    "sceneObjects": 15,
+    "linkedAction": "Source · Walk_N",
+    "saved": false,
+    "characterDesignerOperationsTested": false,
+    "otherInstallationTested": false
+  }
+}
