@@ -5,17 +5,10 @@ A shared place to exchange `.blend` files and move Blender projects forward toge
 ## Current Projects
 
 - `X.blend` is the saved Character X scene and its direct assets.
-- `Build.blend`: the latest published, saved snapshot of the active `Builder6.blend` building project. It is a peer of `X.blend`; the older `Build/Build.blend` is not the source.
 
-### Saving and uploading Build
+Builder scenes and their dependencies are maintained in the dedicated [Builder repository](https://github.com/tx74666/Builder).
 
-The working source on this computer is `D:\Blender\Projects\Build\WIP\Builder6.blend`.
-After saving that file normally in Blender, run `Sync-Build.cmd` in this repository,
-then review and commit the changes in GitHub Desktop and push. The sync reads the
-saved file only; it does not save or change the open Blender session. GitHub
-Desktop watches this repository's snapshot, not the source in the separate WIP folder.
-
-Use Git LFS when cloning or updating the two main scene files and the raw validation
+Use Git LFS when cloning or updating `X.blend`, its packaged animation library, and the raw validation
 inputs named `native_endpoints.json` and `native_input800_endpoints.json`. Replay
 scripts check the exact SHA256 of these inputs, so their contents must stay intact.
 Include `.gitattributes` in the same commit when first uploading these inputs;
@@ -24,9 +17,7 @@ GitHub Desktop uses LFS to store them without the normal Git file-size limit.
 Validation scripts, source snapshots, and reports remain in Git. Generated test
 scenes, validation runtime temporary folders, cloth bake caches, local recovery
 backups, and old add-on ZIPs are excluded from new commits. Their local copies
-remain available; the ignore rules do not remove previously tracked cache files. See
-[`docs/BUILD_DEPENDENCIES.md`](docs/BUILD_DEPENDENCIES.md) for Build's external-file
-requirements and existing missing references.
+remain available; the ignore rules do not remove previously tracked cache files.
 
 ### Opening Character X
 
