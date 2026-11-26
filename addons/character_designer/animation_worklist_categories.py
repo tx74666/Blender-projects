@@ -224,7 +224,11 @@ class CHARACTERDESIGNER_OT_motion_category_assign(_CategoryEdit, Operator):
     def _update(self, scene, view):
         state = scene.character_designer_animation_worklist
         rows = state.items if state.items else state.catalog
-        if not self.key or sum(row_key(row) == self.key for row in rows) != 1:
+        from . import animation_neutral_motion as neutral
+        matches = sum(row_key(row) == self.key for row in rows)
+        if self.key == neutral.ROW.clip_key and neutral.available(scene):
+            matches += 1
+        if not self.key or matches != 1:
             raise ValueError('The motion is no longer unique in this list.')
         if self.category_id and self.category_id not in view['names']:
             raise ValueError('The category is no longer available.')

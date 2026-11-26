@@ -131,6 +131,9 @@ def draw_source_motion(layout, context):
         layout.label(text=row.name, icon='ACTION')
         record = mapping_record(home, row)
         if record and record.state == 'READY' and record.controller_action:
+            from . import animation_playback_range as playback
+            if context.scene == home and playback.active_record(home) == record and playback.custom_range(home, record):
+                layout.operator('character_designer.reset_motion_preview_range', icon='LOOP_BACK')
             if record.alternate_action:
                 title = 'Open FK Version' if animation_controller_edit._is_fk(record.alternate_action) else 'Open Full IK Version'
                 version = layout.operator('character_designer.open_controller_version', text=title, icon='ACTION')
@@ -200,9 +203,8 @@ def draw_mapping_state(layout, context, row):
         layout.label(text='Review', icon='ERROR')
         return
     retry = record is not None and record.state == 'MAPPING_NEEDED'
-    precise = getattr(getattr(home, 'character_designer_animation_worklist', None), 'precise_imported_motions', False)
     prepare = layout.operator('character_designer.prepare_controller_motion',
-                              text='Retry' if retry else ('Prep IK' if precise else 'Prep FK'),
+                              text='Retry' if retry else 'Prepare',
                               icon='FILE_REFRESH' if retry else 'POSE_HLT')
     prepare.clip_key = row.clip_key
 
@@ -242,7 +244,7 @@ def draw_mapping_options(layout, context):
         line = layout.row()
         line.enabled = count > 0
         line.operator('character_designer.prepare_missing_controller_motions',
-                      text=('Prepare Full IK Clips (%d)' if precise else 'Prepare FK Clips (%d)') % count,
+                      text='Prepare Remaining Clips (%d)' % count,
                       icon='ACTION', depress=count > 0)
     _home, row = selected_motion(context)
     record = mapping_record(home, row)
@@ -254,10 +256,25 @@ def draw_mapping_options(layout, context):
         wrapped_label(layout, context, settings.status, icon='ERROR')
 
 
+class CHARACTERDESIGNER_OT_reset_motion_preview_range(Operator):
+    bl_idname = 'character_designer.reset_motion_preview_range'
+    bl_label = 'Reset Preview Range'
+    bl_description = 'Restore the automatic playback range for this prepared clip'
+    bl_options = {'UNDO'}
+
+    def execute(self, context):
+        from . import animation_playback_range as playback
+        record = playback.active_record(context.scene)
+        if record is None:
+            return {'CANCELLED'}
+        playback.reset(context.scene, record)
+        return {'FINISHED'}
+
+
 class CHARACTERDESIGNER_OT_prepare_controller_motion(Operator):
     bl_idname = 'character_designer.prepare_controller_motion'
     bl_label = 'Prepare Controller Animation'
-    bl_description = 'Prepare this motion for character controls without opening it; keep existing controller edits'
+    bl_description = 'Prepare this clip for editing with the character’s controls.'
 
     clip_key: StringProperty(options={'HIDDEN'})
     from_fk: BoolProperty(default=False, options={'HIDDEN', 'SKIP_SAVE'})
@@ -496,6 +513,7 @@ def draw_return(layout, context):
 
 
 CLASSES = (CharacterDesignerControllerMotion,
+           CHARACTERDESIGNER_OT_reset_motion_preview_range,
            CHARACTERDESIGNER_OT_finish_controller_motion, CHARACTERDESIGNER_OT_cancel_controller_motion,
            CHARACTERDESIGNER_OT_prepare_controller_motion, CHARACTERDESIGNER_OT_prepare_missing_controller_motions,
            CHARACTERDESIGNER_OT_edit_prepared_motion, CHARACTERDESIGNER_OT_open_controller_version,

@@ -183,6 +183,7 @@ def _activate(context, home, record):
 
 
 def _activate_provisional(context, home, record):
+    from . import animation_playback_range as playback
     from .animation_local_motion_pins import assign_character_action
     from .animation_original_inputs_ui import original_inputs_live
     from . import animation_worklist as worklist, animation_composition as composition
@@ -213,6 +214,9 @@ def _activate_provisional(context, home, record):
             raise ValueError('The controller Action has an invalid frame range.')
         ad = rig.animation_data
         prior_action = ad.action if ad else None
+        outgoing = playback.active_record(home)
+        prior_range = playback.custom_range(home, outgoing)
+        custom = prior_range if outgoing == record else playback.custom_range(home, record, active=False)
         settings = home.character_designer_animation_worklist
         window_settings = context.window_manager.character_designer_animation
         range_fields = ('frame_start', 'frame_end', 'frame_preview_start', 'frame_preview_end', 'use_preview_range')
@@ -232,10 +236,8 @@ def _activate_provisional(context, home, record):
         ad = rig.animation_data
         ad.use_nla, ad.action_blend_type, ad.action_influence = False, 'REPLACE', 1.0
         home.tool_settings.use_keyframe_insert_auto = False
-        home.frame_start = home.frame_preview_start = math.floor(start)
-        home.frame_end = home.frame_preview_end = max(math.ceil(end), home.frame_start)
-        home.use_preview_range = True
-        ua._set_frame(home, start)
+        applied = playback.set_ranges(home, start, end, playback.record_loop(record), custom)
+        ua._set_frame(home, applied[0] if custom else start)
         for selected in context.selected_objects:
             selected.select_set(False)
         rig.hide_set(False)
@@ -247,6 +249,7 @@ def _activate_provisional(context, home, record):
         if selected_index is not None:
             settings.catalog_index = selected_index
         settings.status, settings.has_error = 'Controller editing.', False
+        playback.remember(home, outgoing, prior_range, record, applied)
     except Exception as exc:
         failures = []
         def restore(label, callback):
@@ -478,7 +481,9 @@ def _enqueue(context, home, rows, *, retry=False, daily_edit=None, from_fk=False
     target = _target(home, home.character_designer_setup.rig)
     if daily_edit is None:
         daily_edit = not getattr(home.character_designer_animation_worklist, 'precise_imported_motions', False)
+    align_loop_period = getattr(home.character_designer_animation_worklist, 'align_loop_period', True)
     entries = [dict(clip_key=row.clip_key, work_item_id=getattr(row, 'work_item_id', ''), daily_edit=daily_edit, from_fk=from_fk,
+                    align_loop_period=align_loop_period,
                     catalog_only=not hasattr(row, 'custom_action'), retry=retry, name=row.name) for row in rows]
     if from_fk or pole_alignment:
         for row, entry in zip(rows, entries):
@@ -675,6 +680,8 @@ def _start_next(context, key):
     item.update(work_item_id=row.work_item_id or row.clip_key, source_rig=source_rig,
                 source_action=action, source_slot=slot, source_timing=(timing.fps, timing.fps_base))
     options = {'align_' + pole_alignment: True} if pole_alignment else {}
+    if not retained:
+        options['align_loop_period'] = entry.get('align_loop_period', True)
     with context.temp_override(scene=home, view_layer=item['layer']):
         item['job'] = worker.begin(bpy.context, source_rig, action, slot,
                                    item['target'], source_fps=timing.fps / timing.fps_base,

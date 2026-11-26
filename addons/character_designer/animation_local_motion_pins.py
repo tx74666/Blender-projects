@@ -200,5 +200,8 @@ def draw_local_actions(layout, context, *, pinned_only):
     return bool(rows)
 
 
+from .animation_neutral_motion import CHARACTERDESIGNER_OT_open_neutral_motion
+
+
 CLASSES = (CharacterDesignerLocalMotionPin, CHARACTERDESIGNER_OT_toggle_local_motion_pin,
-           CHARACTERDESIGNER_OT_open_local_motion)
+           CHARACTERDESIGNER_OT_open_local_motion, CHARACTERDESIGNER_OT_open_neutral_motion)

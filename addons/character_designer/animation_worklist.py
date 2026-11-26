@@ -6,7 +6,6 @@ read-only Actions, while custom Actions remain local and editable.
 """
 
 import json
-import math
 from pathlib import Path
 import uuid
 
@@ -1022,9 +1021,8 @@ def _activate_worklist_action(context, item_id, side='CUSTOM', *, _collection=Fa
         context.scene.tool_settings.use_keyframe_insert_auto = False
         start, end = map(float, action.frame_range)
         scene = context.scene
-        scene.frame_start = scene.frame_preview_start = math.floor(start)
-        scene.frame_end = scene.frame_preview_end = max(math.ceil(end), scene.frame_start)
-        scene.use_preview_range = True
+        from . import animation_playback_range as playback
+        playback.set_ranges(scene, start, end, playback.is_loop(action))
         ua._set_frame(scene, start)
         for selected in context.selected_objects:
             selected.select_set(False)

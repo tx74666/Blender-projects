@@ -28,7 +28,6 @@ assets/
 # Publish Character X and its packaged animation library. Backups stay local.
 *.blend
 !/X.blend
-!/project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend
 *.blend[0-9]
 *.blend[0-9][0-9]
 *.zip
@@ -47,6 +46,9 @@ assets/
 # Full historical report data is compressed locally; upload its small summary.
 /.validation-archives/
 
+# Exact persistent libraries required by the saved X.blend backup.
+!/project_dependencies/libraries/*.blend
+
 # Local Unity validation caches and per-user settings.
 # Other paths continue to follow the existing rules.
 /validation/**/UnityPreview*/[Ll]ibrary/
@@ -59,3 +61,21 @@ assets/
 /validation/**/unity_play_*/Project/[Ll]ogs/
 /validation/**/unity_play_*/Project/[Oo]bj/
 /validation/**/unity_play_*/Project/[Uu]serSettings/
+
+# Validation runs include full add-on copies. Publish selected evidence explicitly.
+/validation/*/
+# Historical local recovery bundle and retired desktop shortcuts.
+/Archive/Retired_X_20261109_01/
+/project_dependencies/manifest.json
+/project_dependencies/README.txt
+/project_dependencies/Cosha_Walk_N.cdanim.json
+# Derived textures are extracted from the saved scene during restore.
+/project_dependencies/restored_textures/
+# Authored Gun Follow example scene.
+!/Gun_Follow_Demo/Gun_Follow_Cosha_live.blend
+/project_dependencies/libraries/15e35a473061412db3034d6f5819d00c.blend
+/project_dependencies/libraries/592a720c04fb4d8fa8f87b2dcc44f33b.blend
+/project_dependencies/libraries/5f771ad1e0644d199cba30b6afd1ad0a.blend
+/project_dependencies/libraries/b662b800b1da4e528b386cc41ac40d24.blend
+/project_dependencies/libraries/df59ab66ac97456a98132b9bc414af2c.blend
+/project_dependencies/libraries/fed1939a36164dd2a163459f82344e16.blend

@@ -1,0 +1,125 @@
+{
+  "version": "0.77.251",
+  "date": "2026-11-26",
+  "passed": true,
+  "baseline": "D:\\Blender\\Projects\\Character\\X\\validation\\neutral_motion_20261126\\stage250_01\\projection.json",
+  "baseline_sha256": "2502abbc28583a53a5bab2931236c4a03cf32dca8b4063994a9b5d1b815b8261",
+  "projection": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\stage251_02\\projection.json",
+  "projection_sha256": "f4b9f28cb0b049e6781e25928c64e95b1cd7074dee4825a916bda471a1b79f16",
+  "files": 318,
+  "checked_in": "Blender 5.2.0 LTS private background sessions",
+  "source_clip": "Walk_N",
+  "loop": {
+    "source_range": [
+      1.0,
+      24.200000762939453
+    ],
+    "prepared": [
+      1.0,
+      24.0
+    ],
+    "preview": [
+      1,
+      23
+    ],
+    "fps": 24.0,
+    "source_hash": "291838b46d62cad57aa36749409b6ca4eafd149a0a64bf13a093bdb4c8afb409",
+    "exact_source_available": true,
+    "neutral_round_trip": true,
+    "reset_custom": true,
+    "same_clock_422_bone_max_delta": 0.0,
+    "max_curve_delta": 6.258487701416016e-07,
+    "keys": 40691
+  },
+  "reduction": {
+    "original": 40683,
+    "reduced": 16196,
+    "loose": 15060,
+    "worst": {
+      "location_mm": 1.7001050358286862,
+      "rotation_degrees": 0.9948234781533863,
+      "scale": 0.0
+    },
+    "seam": 0.0,
+    "unsupported": [
+      "mixed",
+      "mirror",
+      "offset",
+      "noise",
+      "partial",
+      "finite",
+      "limited"
+    ]
+  },
+  "wall_seconds": {
+    "before": 107.36550960000022,
+    "first_candidate": 133.50725009999587,
+    "final": 109.90661679999903,
+    "old_open": 0.3753359999973327,
+    "final_open": 0.6005760000043665,
+    "isolated_fit_mean": 12.804078249999293,
+    "isolated_exact_mean": 15.015522850000707,
+    "reduction_start": 1.9649389000041992
+  },
+  "regression_cases": 261,
+  "limits": [
+    "Elapsed times are observed background wall time. No GUI FPS measurement.",
+    "Secondary Dress uses scene time. The independently retimed comparison used identical scene time.",
+    "A synthetic three-sample loop covers the optional full IK path.",
+    "Export dialog exercised without submitting an export. Formal X RAM left to the artist."
+  ],
+  "evidence": [
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\baseline01.json",
+      "sha256": "27a1907dc81071571060c76a6813aa266cc459c0130ff7850c24c5d58948bd00"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\candidate01.json",
+      "sha256": "5a97dc380508713d5812b85b8ebae3cab649dcdeaccab03974d1e63fdecd7a70"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\candidate02.json",
+      "sha256": "fd1de1010e24169c375116a73e6bc868ff7f47c5de9d2991fa6a937012fab334"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\compare03.json",
+      "sha256": "f61bef35e00a722d08a5c814c3626d94dbf6d05fd0f9e2797dc16704a6dab185"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\range03.json",
+      "sha256": "d5542bbc0911fc0a4be068361ea9ee787503135023243c73750e466839ff2d6f"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\timing_edges02.json",
+      "sha256": "e0ea495c4f3e938cbbf63f72e74c88a88f935dd4ce31f1dadc80bbe5af9884a1"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\bench01.json",
+      "sha256": "3a1867d494c616423b4fb4a5b4502614d85464cc9b2bb88a9f33c990ce16519b"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\precise01.json",
+      "sha256": "25c5292174939d9359108e036fced6e924c632a95b92e92ec7170bfdaed418b1"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\import_export01.json",
+      "sha256": "d9d3a6152aa477eefac6b552428f28c40452adcdb5a1edb7e6e60570d5c3e65c"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\regressions251_final.json",
+      "sha256": "5c88a696280e84d053acc768eee9284e5d447234276c7f7a327dd5a5d58a2842"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\walk_key_reduction_20261126\\cyc04.json",
+      "sha256": "1e25652820d0b3bca8d0b44b255f3193e1a0ac75479c97e25fdfb61e37e52af5"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_delivery_20261126\\refresh02.json",
+      "sha256": "7827aa7955aaec5c5aaea74cf1c988007e1670d77a2c887ffe2da7771d61079c"
+    },
+    {
+      "path": "D:\\Blender\\Projects\\Character\\X\\validation\\loop_workflow_20261126\\stage251_02\\prepare_receipt.json",
+      "sha256": "4743ad864b58163e7c66fbc35337dc83bf431f7ef08adc85e069ad8fb28b2501"
+    }
+  ]
+}

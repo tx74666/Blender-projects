@@ -690,8 +690,10 @@ class CharacterDesignerAnimationWorklistState(PropertyGroup):
                              get=_worklist_cursor, set=_ignore_worklist_cursor)
     catalog_index: IntProperty(default=-1, min=-1)
     selected_motion_clip: StringProperty(options={'HIDDEN', 'SKIP_SAVE'})
-    precise_imported_motions: BoolProperty(name='Prepare Full IK', default=False,
+    precise_imported_motions: BoolProperty(name='Generate Full IK Tracks', default=False,
         description='Prepare complete IK trajectories for explicit Prepare commands. Opening a new motion uses FK')
+    align_loop_period: BoolProperty(name='Fit Loops to Whole Frames', default=True,
+        description='Scale a prepared loop to the nearest whole-frame duration. Turn off to keep exact source timing')
     search: StringProperty(name='Search Clips', options={'TEXTEDIT_UPDATE'})
     workspace_path: StringProperty(name='Workspace', subtype='FILE_PATH')
     workspace_id: StringProperty(options={'HIDDEN'})
@@ -1570,9 +1572,12 @@ def draw_motion_picker(layout, context):
         return
     edit_scene.draw_return(layout, context)
     categories.draw_toolbar(layout, context)
+    from . import animation_neutral_motion
+    local_visible = animation_neutral_motion.draw(layout, context)
     rows = settings.items if settings.items else settings.catalog
     if rows and not categories.has_members(context, rows):
-        layout.label(text='No animations in this category', icon='INFO')
+        if not local_visible:
+            layout.label(text='No animations in this category', icon='INFO')
     elif settings.items:
         _draw_worklist_actions(layout, context, settings)
     elif rows:
@@ -1613,30 +1618,24 @@ def _draw_rigging(layout, context, item):
     save.operator('character_designer.worklist_save_controls', icon='KEY_HLT').item_id = item.item_id
 
 
-def _draw_worklist_pose(box, context, *, recovery_only):
+def _draw_pose_recovery(box, context):
     from . import animation_rest_pose, animation_pose_test
     try:
         display_rig = animation_rest_pose.get_rig(context)
     except (ValueError, AttributeError, ReferenceError):
         display_rig = None
     if display_rig is not None:
-        recovery_needed = animation_pose_test.active(display_rig) or display_rig.data.pose_position == 'REST'
-        if recovery_needed != recovery_only:
+        testing = animation_pose_test.active(display_rig)
+        if not testing and display_rig.data.pose_position != 'REST':
             return
         pose_row = box.row(align=True)
         pose_row.enabled = _idle(context) and getattr(context, 'mode', '') in {'OBJECT', 'POSE'}
-        testing = animation_pose_test.active(display_rig)
-        natural = animation_pose_test.natural_active(display_rig)
-        rest = pose_row.operator('character_designer.worklist_pose_position', text='Rest Pose',
-                                 depress=natural or display_rig.data.pose_position == 'REST')
-        rest.position = 'REST'
-        if testing and not natural:
+        if testing and not animation_pose_test.natural_active(display_rig):
             pose_row.operator('character_designer.worklist_base_pose', text='Return to Animation',
                               icon='ACTION').finish = True
         else:
-            show = pose_row.operator('character_designer.worklist_pose_position', text='Pose',
-                                     depress=not natural and display_rig.data.pose_position == 'POSE')
-            show.position = 'POSE'
+            pose_row.operator('character_designer.worklist_pose_position', text='Return to Animation',
+                              icon='ACTION').position = 'POSE'
         if testing:
             recovery = box.row()
             recovery.enabled = _idle(context)
@@ -1698,7 +1697,7 @@ def draw_worklist(layout, context, *, include_original_inputs=True, include_tool
     box.enabled = not original_inputs_live(context)
     _draw_worklist_connection(box, context, settings, advanced=False)
     busy = scan_pending() or _collection().running()
-    _draw_worklist_pose(box, context, recovery_only=True)
+    _draw_pose_recovery(box, context)
     if settings.workspace_path:
         setup = getattr(context.scene, 'character_designer_setup', None)
         main = getattr(setup, 'rig', None)
@@ -1781,12 +1780,12 @@ def draw_worklist_tools(layout, context):
     box = layout.column()
     box.enabled = not original_inputs_live(context)
     _draw_worklist_connection(box, context, settings, advanced=True)
-    _draw_worklist_pose(box, context, recovery_only=False)
     if not settings.workspace_path:
         return
     home = edit_scene.mapping_home(context.scene)
     if home is not None:
         box.prop(home.character_designer_animation_worklist, 'precise_imported_motions')
+        box.prop(home.character_designer_animation_worklist, 'align_loop_period')
     edit_scene.draw_source_motion(box, context)
     rig = getattr(settings, 'rig', None)
     local_current = any(getattr(item, 'current_rig_revision', '') for item in settings.items)

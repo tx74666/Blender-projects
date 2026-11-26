@@ -74,9 +74,14 @@ class CHARACTERDESIGNER_OT_key_reduction_preview(bpy.types.Operator):
             return context.window_manager.invoke_props_dialog(self, width=285, title='Adjust Reduction')
         return self.execute(context)
 
-    def draw(self, _context):
+    def draw(self, context):
         self.layout.prop(self, 'position_mm')
         self.layout.prop(self, 'rotation_degrees')
+        state = session.status(context)
+        if state and state['skipped']:
+            self.layout.label(text='Unchanged curves in current preview')
+            for reason, count in sorted(state['skipped'].items()):
+                self.layout.label(text=f'{count:,}  {reason}')
 
     def execute(self, context):
         try:
@@ -122,6 +127,8 @@ def draw(layout, context, state):
     counts.label(text=f"Original {state['before']:,}")
     counts.label(text=f"Reduced {state['after']:,}")
     _button(title, 'UPDATE', '', icon='PREFERENCES')
+    if state['before'] == state['after'] and state.get('skipped'):
+        box.label(text='No keys removed. See Adjust Reduction.', icon='INFO')
     row = box.row(align=True)
     for view, label in (('ORIGINAL', 'Original'), ('REDUCED', 'Reduced')):
         _button(row, view, label, depress=state['view'] == view)

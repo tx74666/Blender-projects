@@ -4,45 +4,33 @@ A shared place to exchange `.blend` files and move Blender projects forward toge
 
 ## Current Projects
 
-- `X.blend` is the saved Character X scene and its direct assets.
-
-Builder scenes and their dependencies are maintained in the dedicated [Builder repository](https://github.com/tx74666/Builder).
-
-Use Git LFS when cloning or updating `X.blend`, its packaged animation library, and the raw validation
-inputs named `native_endpoints.json` and `native_input800_endpoints.json`. Replay
-scripts check the exact SHA256 of these inputs, so their contents must stay intact.
-Include `.gitattributes` in the same commit when first uploading these inputs;
-GitHub Desktop uses LFS to store them without the normal Git file-size limit.
-
-Validation scripts, source snapshots, and reports remain in Git. Generated test
-scenes, validation runtime temporary folders, cloth bake caches, local recovery
-backups, and old add-on ZIPs are excluded from new commits. Their local copies
-remain available; the ignore rules do not remove previously tracked cache files.
+The 1.0.2 checkpoint contains the saved Character X scene and Character Designer 0.77.251. Builder scenes live in the dedicated [Builder repository](https://github.com/tx74666/Builder).
 
 ### Opening Character X
 
-Open `X.blend` in Blender 5.2. The two external textures and the linked
-`Source · Walk_N` animation library are packaged at relative paths. The scene
-also uses the geometry-node library bundled with Blender 5.2. If Blender is
-installed at a different path, verify that the bundled library resolves or
-relink it before editing.
+On the original workstation, open `X.blend` as usual. Git LFS stores the exact saved file. To open this checkpoint on a new computer, run these commands from the repository root after cloning with Git LFS installed. Use Python 3.10 or later.
 
-A background reopen with Blender 5.2.0 LTS, factory settings, and automatic
-script execution disabled verified the X scene, the Character collection,
-both external textures, the linked Action, and the bundled geometry nodes.
-See the [dependency manifest](project_dependencies/X-checkpoint-manifest.json)
-for the file hashes and verification scope. Character Designer editing and
-animation operations require separate validation.
+```sh
+git lfs pull
+python tools/restore_x_checkpoint.py
+```
 
-Third-party/downloaded assets under `assets/` are not part of the first version commit unless intentionally added later.
+Open the resulting `X-portable.blend` in Blender 5.2. The restore tool verifies the checkpoint and dependencies, extracts four original textures from the saved scene, and writes a separate scene with repository-relative library and texture paths. Keep it beside the original scene. If a previous portable copy contains edits, move it to a safe location before restoring a newer checkpoint.
+
+The [dependency manifest](project_dependencies/X-checkpoint-manifest.json) pins the exact scene and files. A Blender 5.2 background reopen of the portable copy resolved all 29 library references and nine external image references. The scene contained 104 objects and 66 actions. Character Designer metadata and appended assets can retain historical workstation paths. Editing workflows that reuse those source locations may require the original workspace.
+
+### Upload scope
+
+Daily changes include the working scene, formal add-on, and project files. New validation run directories stay local by default because they contain repeated plugin installations and test outputs. Previously tracked evidence remains in Git. To publish selected new validation scripts or reports, explicitly add those individual paths with `git add -f -- <path>`. Local recovery copies and retired desktop shortcuts remain on the workstation. For a new scene release, refresh the dependency manifest from the saved scene and verify the portable copy before publishing it as a restorable checkpoint.
 
 ## Character Designer add-on
 
-The current add-on is **0.41.3**. **Weight Flow** has been removed; the **Weight**
-page retains **Weight Tools** and **Weight Symmetry**. Use Blender's native tools
-for local weight smoothing. The current workflow is documented in the
-[add-on guide](addons/character_designer/README.md); the entries below describe
-earlier releases.
+The current add-on is **0.77.251**. **Weight Flow** has been removed; the **Weight**
+page retains **Weight Tools** and **Weight Symmetry**. **Weight Tools** includes
+**Paint Weights / Finish Painting** for native painting with existing Deform-bone
+groups. Use Blender's native tools for local weight smoothing. The current
+workflow is documented in the [add-on guide](addons/character_designer/README.md);
+the entries below describe earlier releases.
 
 Version 0.40.2 completes hair controls for Mirror sources: new versions include
 both side chains and one chain for a strand joined along the center seam. The

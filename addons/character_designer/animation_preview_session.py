@@ -8,6 +8,7 @@ import bpy
 from . import animation_preview_curves as curves
 from . import natural_bind_mode
 from .animation_cleanup import DEFAULTS
+from .animation_loop_timing import LOOP, is_loop
 from .animation_export_inputs import _curves
 from .animation_local_motion_pins import assign_character_action
 
@@ -46,7 +47,7 @@ def status(context):
     if record is None:
         return None
     data = json.loads(record['settings'])
-    return dict(view=_view(rig, record), **{k: data[k] for k in (
+    return dict(view=_view(rig, record), skipped=data.get('skipped', {}), **{k: data[k] for k in (
         'bone_names', 'position_mm', 'rotation_degrees', 'before', 'after')})
 
 
@@ -207,6 +208,18 @@ def _release(action, rig):
         bpy.data.actions.remove(action, do_unlink=False)
 
 
+def _loop(context, rig, action, handle):
+    if action.use_cyclic or is_loop(action):
+        return True
+    if LOOP in action:
+        return False
+    # Older prepared and alternate takes only recorded loop intent on the imported clip.
+    return any(record.target == rig and (action, handle) in (
+                   (record.controller_action, record.controller_slot), (record.alternate_action, record.alternate_slot))
+               and is_loop(record.source_action)
+               for record in getattr(context.scene, 'character_designer_controller_motions', ()))
+
+
 def _make(context, rig, source, handle, names, position_mm, rotation_degrees):
     if (not math.isfinite(position_mm) or not math.isfinite(rotation_degrees)
             or min(position_mm, rotation_degrees) < 0):
@@ -226,13 +239,15 @@ def _make(context, rig, source, handle, names, position_mm, rotation_degrees):
             if key.startswith('character_designer_') and key != DEFAULTS:
                 del action[key]
         action[TEMP] = rig
+        loop = _loop(context, rig, source, handle)
         result = curves.simplify(action, handle, names, position_mm * .001 / units,
-                                 math.radians(rotation_degrees))
+                                 math.radians(rotation_degrees), loop=loop)
         scope = curves.selected_paths(source, handle, names)
         if not scope:
             raise ValueError('The selected controls have no animated transforms in this Action slot.')
         settings = dict(bone_names=list(names), position_mm=position_mm, rotation_degrees=rotation_degrees,
                         paths=list(result['paths']), before=result['before'], after=result['after'],
+                        skipped=result['skipped'], loop=loop,
                         scope=scope, source_hash=curves.signature(source, handle, scope),
                         original_view_hash=_signature(source), preview_hash=_signature(action))
         return action, json.dumps(settings, ensure_ascii=False)
@@ -283,6 +298,8 @@ def _checked(context):
         raise ValueError('The active Action or slot changed. Discard this preview to start again.')
     source, preview, slot = record['source'], record['preview'], record['slot']
     data = json.loads(record['settings'])
+    if 'loop' in data and data['loop'] != _loop(context, rig, source, slot):
+        raise ValueError('The loop setting changed. Discard this preview and start again.')
     scope = curves.selected_paths(source, slot, data['bone_names'])
     if list(scope) != data['scope'] or curves.signature(source, slot, scope) != data['source_hash']:
         raise ValueError('The original controls were edited. Discard the preview and start from those edits.')

@@ -1,96 +1,263 @@
 {
-  "format": "character-x-saved-checkpoint-dependencies/1",
-  "checkedAtUtc": "2026-11-09T16:14:47.496342+00:00",
-  "blender": "5.2",
-  "originalSavedCheckpoint": {
-    "bytes": 67670009,
-    "sha256": "5582b592bb212a7210500a683eb0049f27892a7324774716df89aed2e41c62a2"
+  "version": "1.0.2",
+  "source_sha256": "ff7e147fbf676a86d18e17b381f8891431474493a483fde1dccb103c3c994ab3",
+  "source_bytes": 442679942,
+  "scene": "X",
+  "objects": 104,
+  "actions": 66,
+  "dependencies": {
+    "project_dependencies/libraries/0eb530ac300e48dbb470f8572d2f8423.blend": "4cc6ea68d244ba1c9ad05ffd15189bf1430cdae1915d11999120eb96b656f50f",
+    "project_dependencies/libraries/1ef5421ac634489e9f2dd93e3dd138b7.blend": "ba01ec6f90c3c2698c1ca501b234462d708cc5884df523187be9b094498068ed",
+    "project_dependencies/libraries/3545b75e21c9481bb90130e7021d5012.blend": "02c731c5e0414481b930d5cb8766a3f29611085f8f7ec04273ed2186e8e65e9d",
+    "project_dependencies/libraries/3cd080296d1345eb8fb183a10df9ee11.blend": "3235cb6370f0da54dd39d52dbdc1b53ccfec58de8935e144a0b55492025c9854",
+    "project_dependencies/libraries/452e6484ab9346b5ba92f2584eac4bb8.blend": "59e530d3dabe0b244fb708de384b387de38a2d1c98894dbe130affa72aa3d648",
+    "project_dependencies/libraries/4a82d23581e247c5bf921c7aad3ec72e.blend": "1c2982a32dea455803d88f9d25c6f0272a282a18603cb392c7efeb7c425dad79",
+    "project_dependencies/libraries/55d3f8c074e24a6da75cfebefc5eded2.blend": "4805e499f7c58ce9c8b8a90f2d0a109624a9b7fef35f7900eeca70a36a8c7cbd",
+    "project_dependencies/libraries/618ba61a19244f828a9b3aecc94b9b76.blend": "366106b37f7408ea42783ef29322376180f6dd65b3bf83f8280f66d4d1e40937",
+    "project_dependencies/libraries/627660a7679a443b8befac170352e016.blend": "3e4f68e272719d84373bde99bfe0dd44fe93609a06f5e692856f832a77d5da9d",
+    "project_dependencies/libraries/685fccdc2a304a9d8c791f71b1d5d9a0.blend": "694f4c0d20272d1d4868522c6c069428eb4470a70593447f9a00ae5896604450",
+    "project_dependencies/libraries/6a85302861a2422a909418fea1662a22.blend": "42b84b19bc7c353eb6cb7c940a385547b40ed0b5f75b1e3a26d97ff5dac30692",
+    "project_dependencies/libraries/70076f886c4a4aa58b9f1ca2fbc00ccc.blend": "c6338304d9fb62d3c931083bf32e9b01cc81533e342e7c1170349aed475e3879",
+    "project_dependencies/libraries/707f8e373a9a475597af3900236e2511.blend": "f8fed0eb5ea9a585f0b815de5478464b9a10dafc7ddb31be7f4548238cced135",
+    "project_dependencies/libraries/73a48dddce0a44d48cff39b3b191cded.blend": "0ed69c4cad787932b79f246f3fe97bfd6975122c8b28cbede953f7c0fa703eac",
+    "project_dependencies/libraries/742e179c07684dcd973e034bd2cfa6ea.blend": "c945bf9ce9bd2d3c4158562c3312bb5fac78799fd318ed7443f98eb3ce5a8abf",
+    "project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend": "e5238d1c8bb01cf950c998a0e3dab3f1a2aa54259bf973ae5096a43262664919",
+    "project_dependencies/libraries/9968010392be4d09a8d06c574386712b.blend": "69c34a4a14a5386a68ce23af8fa00b256bd810a2a41d856fd55e5d5026a92410",
+    "project_dependencies/libraries/9f1855263c674f1fb5ac4cc9998e15f2.blend": "bb2075c2ea48fd5abeb96881e1a2c5c58f0140c42a844725118888ce88fb4b1c",
+    "project_dependencies/libraries/a01675f5ff554ef2b7999a9b95ae0b6a.blend": "a4a47333b0f22f69956e5e191be4256ce4c1aba2bd8ec9e6e344bd6bf2ef13e3",
+    "project_dependencies/libraries/d046fe8146bc4be4b735a5e53032bff9.blend": "7be2a42e695bda74b8a872e7b019265b068662069dca3d96466f103a59f4baa7",
+    "project_dependencies/libraries/d58585d343344c679dc8428134a02719.blend": "d4dce4e9d97b088205c86fa8fee5630bfdc9123e11366def8224585087778adf",
+    "project_dependencies/libraries/d66ec4eb34ee4e1db2a881d9ab0b9416.blend": "855fd756f1d11c1d2744d213389b96de208959303d16fc6a24b47092556bbdea",
+    "project_dependencies/libraries/dfa1b6b7b11547788793b3bd26137123.blend": "1bf9364a2cffd07382760590e48083f02076b95d14fcab6298caf6a80c0cc694",
+    "project_dependencies/libraries/e752c7c5de514722a8018cab1738f802.blend": "f8de854cea0072697dbd9b9a09e5676630940f268a92848962a0ae676e6fd5ae",
+    "project_dependencies/libraries/f0547e561ce8486fb65fd7396fcf45c8.blend": "35803d7413b3f671cf760b1653a3ab5dbf56841478c5ccb2f118806a01e9b78a",
+    "project_dependencies/libraries/fde61f84c8f94ed3883e15458fffbc45.blend": "44f06408f62a9f7d6c7b036a5b01ae517796d71bdec7784d2b9414a4eac3d6f4",
+    "project_dependencies/libraries/geometry_nodes_essentials.blend": "4592ec2a51b1adbd87467812979ddebb09f6606a49aa75549fdd2b40b7ffac86",
+    "project_dependencies/libraries/a2c8acb3974f4e0e90f6a99860b021d8.blend": "9fe857dce63d4fe1e2bc7f21f1cef546facd7865340e53d7327b8100a141ff8c",
+    "textures/1d63a26f-110a-4ff2-9145-a350633c3dd5.png": "c839da71523b7ea3aea3ff4d7ad2af00a3f9f76d24de2ccf980dd8258df99085",
+    "textures/Hair.png": "2f71d1ccd37a67f155c8ac5f1633c0ca2e37916af96e5f595f39990e955caf2c"
   },
-  "files": {
-    "textures/Hair.png": {
-      "bytes": 265647,
-      "sha256": "2f71d1ccd37a67f155c8ac5f1633c0ca2e37916af96e5f595f39990e955caf2c"
+  "embedded_textures": {
+    "project_dependencies/restored_textures/Crystal 1 Whole_DefaultMaterial_Emissive_25b5fda9.jpg": {
+      "offset": 46739486,
+      "size": 312745,
+      "sha256": "4af09a3bcf690ef497962418623f468613442632b747c003e2985fb54a1fb344"
     },
-    "textures/1d63a26f-110a-4ff2-9145-a350633c3dd5.png": {
-      "bytes": 1909992,
-      "sha256": "c839da71523b7ea3aea3ff4d7ad2af00a3f9f76d24de2ccf980dd8258df99085"
+    "project_dependencies/restored_textures/Crystal 1 Whole_DefaultMaterial_Roughness_51caa85a.jpg": {
+      "offset": 47841741,
+      "size": 909757,
+      "sha256": "4a88571a3238bc94dc385fb75ec8c1560ac943145e5d527e682eb86fa62d7bf9"
     },
-    "project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend": {
-      "bytes": 1048096,
-      "sha256": "e5238d1c8bb01cf950c998a0e3dab3f1a2aa54259bf973ae5096a43262664919"
+    "project_dependencies/restored_textures/leather_14_color_17c739de.jpg": {
+      "offset": 48780178,
+      "size": 640533,
+      "sha256": "ec0e3143232d67737c36281dfd455df0e0b5f721908ed903bdb7c6a30900b191"
     },
-    "X.blend": {
-      "bytes": 67670009,
-      "sha256": "b61a5ca2a4ad632cf8cefe8cd619a05fe2082f421773b60e7ee7c784d8de3bff"
+    "project_dependencies/restored_textures/leather_14_roughness_da91bedd.jpg": {
+      "offset": 50602842,
+      "size": 1693904,
+      "sha256": "9dd099b06aeaa81f3cefe66607623a4f8c0281db1f8f2cf47834df66de58258f"
     }
   },
-  "pathRewrites": [
+  "path_fields": [
     {
-      "block": "Image",
-      "target": "//textures/1d63a26f-110a-4ff2-9145-a350633c3dd5.png",
-      "offset": 17186254,
-      "rewrittenBytes": 82
+      "offset": 42832614,
+      "width": 82,
+      "file": "textures/1d63a26f-110a-4ff2-9145-a350633c3dd5.png"
     },
     {
-      "block": "Image",
-      "target": "//textures/Hair.png",
-      "offset": 23102717,
-      "rewrittenBytes": 50
+      "offset": 42840493,
+      "width": 128,
+      "file": "textures/1d63a26f-110a-4ff2-9145-a350633c3dd5.png"
     },
     {
-      "block": "Library",
-      "target": "//project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend",
-      "offset": 67492314,
-      "rewrittenBytes": 246
+      "offset": 47057151,
+      "width": 132,
+      "file": "project_dependencies/restored_textures/Crystal 1 Whole_DefaultMaterial_Emissive_25b5fda9.jpg"
+    },
+    {
+      "offset": 48756418,
+      "width": 133,
+      "file": "project_dependencies/restored_textures/Crystal 1 Whole_DefaultMaterial_Roughness_51caa85a.jpg"
+    },
+    {
+      "offset": 48760089,
+      "width": 50,
+      "file": "textures/Hair.png"
+    },
+    {
+      "offset": 48767968,
+      "width": 96,
+      "file": "textures/Hair.png"
+    },
+    {
+      "offset": 48771639,
+      "width": 96,
+      "file": "textures/Hair.png"
+    },
+    {
+      "offset": 49425631,
+      "width": 108,
+      "file": "project_dependencies/restored_textures/leather_14_color_17c739de.jpg"
+    },
+    {
+      "offset": 52301666,
+      "width": 112,
+      "file": "project_dependencies/restored_textures/leather_14_roughness_da91bedd.jpg"
+    },
+    {
+      "offset": 442451703,
+      "width": 216,
+      "file": "project_dependencies/libraries/0eb530ac300e48dbb470f8572d2f8423.blend"
+    },
+    {
+      "offset": 442453647,
+      "width": 216,
+      "file": "project_dependencies/libraries/1ef5421ac634489e9f2dd93e3dd138b7.blend"
+    },
+    {
+      "offset": 442455591,
+      "width": 216,
+      "file": "project_dependencies/libraries/3545b75e21c9481bb90130e7021d5012.blend"
+    },
+    {
+      "offset": 442457535,
+      "width": 216,
+      "file": "project_dependencies/libraries/3cd080296d1345eb8fb183a10df9ee11.blend"
+    },
+    {
+      "offset": 442459479,
+      "width": 216,
+      "file": "project_dependencies/libraries/452e6484ab9346b5ba92f2584eac4bb8.blend"
+    },
+    {
+      "offset": 442461423,
+      "width": 216,
+      "file": "project_dependencies/libraries/4a82d23581e247c5bf921c7aad3ec72e.blend"
+    },
+    {
+      "offset": 442463367,
+      "width": 216,
+      "file": "project_dependencies/libraries/55d3f8c074e24a6da75cfebefc5eded2.blend"
+    },
+    {
+      "offset": 442465311,
+      "width": 216,
+      "file": "project_dependencies/libraries/618ba61a19244f828a9b3aecc94b9b76.blend"
+    },
+    {
+      "offset": 442467255,
+      "width": 216,
+      "file": "project_dependencies/libraries/627660a7679a443b8befac170352e016.blend"
+    },
+    {
+      "offset": 442469199,
+      "width": 216,
+      "file": "project_dependencies/libraries/685fccdc2a304a9d8c791f71b1d5d9a0.blend"
+    },
+    {
+      "offset": 442471143,
+      "width": 216,
+      "file": "project_dependencies/libraries/6a85302861a2422a909418fea1662a22.blend"
+    },
+    {
+      "offset": 442473087,
+      "width": 216,
+      "file": "project_dependencies/libraries/70076f886c4a4aa58b9f1ca2fbc00ccc.blend"
+    },
+    {
+      "offset": 442475031,
+      "width": 216,
+      "file": "project_dependencies/libraries/707f8e373a9a475597af3900236e2511.blend"
+    },
+    {
+      "offset": 442476975,
+      "width": 216,
+      "file": "project_dependencies/libraries/73a48dddce0a44d48cff39b3b191cded.blend"
+    },
+    {
+      "offset": 442478919,
+      "width": 216,
+      "file": "project_dependencies/libraries/742e179c07684dcd973e034bd2cfa6ea.blend"
+    },
+    {
+      "offset": 442480863,
+      "width": 246,
+      "file": "project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend"
+    },
+    {
+      "offset": 442482807,
+      "width": 216,
+      "file": "project_dependencies/libraries/9968010392be4d09a8d06c574386712b.blend"
+    },
+    {
+      "offset": 442484751,
+      "width": 216,
+      "file": "project_dependencies/libraries/9f1855263c674f1fb5ac4cc9998e15f2.blend"
+    },
+    {
+      "offset": 442486695,
+      "width": 216,
+      "file": "project_dependencies/libraries/a01675f5ff554ef2b7999a9b95ae0b6a.blend"
+    },
+    {
+      "offset": 442488639,
+      "width": 246,
+      "file": "project_dependencies/libraries/a2c8acb3974f4e0e90f6a99860b021d8.blend"
+    },
+    {
+      "offset": 442490583,
+      "width": 216,
+      "file": "project_dependencies/libraries/d046fe8146bc4be4b735a5e53032bff9.blend"
+    },
+    {
+      "offset": 442492527,
+      "width": 216,
+      "file": "project_dependencies/libraries/d58585d343344c679dc8428134a02719.blend"
+    },
+    {
+      "offset": 442494471,
+      "width": 216,
+      "file": "project_dependencies/libraries/d66ec4eb34ee4e1db2a881d9ab0b9416.blend"
+    },
+    {
+      "offset": 442496415,
+      "width": 216,
+      "file": "project_dependencies/libraries/dfa1b6b7b11547788793b3bd26137123.blend"
+    },
+    {
+      "offset": 442498359,
+      "width": 216,
+      "file": "project_dependencies/libraries/e752c7c5de514722a8018cab1738f802.blend"
+    },
+    {
+      "offset": 442500303,
+      "width": 216,
+      "file": "project_dependencies/libraries/f0547e561ce8486fb65fd7396fcf45c8.blend"
+    },
+    {
+      "offset": 442502247,
+      "width": 216,
+      "file": "project_dependencies/libraries/fde61f84c8f94ed3883e15458fffbc45.blend"
+    },
+    {
+      "offset": 442504191,
+      "width": 73,
+      "file": "project_dependencies/libraries/geometry_nodes_essentials.blend"
+    },
+    {
+      "offset": 442505695,
+      "width": 73,
+      "file": "project_dependencies/libraries/geometry_nodes_essentials.blend"
     }
   ],
-  "verification": {
-    "nativeBlockRecords": 82370,
-    "sameLength": true,
-    "allBytesOutsideThreeRewrittenPathRangesEqual": true,
-    "stagedRelativePathsExist": true,
-    "originalCurrentAfterCopyAndValidation": true,
-    "nativeOpenTested": true,
-    "nativeEditTested": false
-  },
-  "blenderSuppliedDependency": {
-    "pathAsSaved": "D:/Blender5.2/5.2/datafiles/assets/nodes/geometry_nodes_essentials.blend",
-    "libraryRecords": 2,
-    "packed": false,
-    "required": "Use the Blender 5.2 bundled equivalent. If Blender is installed elsewhere, verify the library resolves or relink it in Blender before editing."
-  },
-  "animationLibrary": {
-    "path": "//project_dependencies/libraries/8069c6d729ea43e1888db9fd07b9d6da.blend",
-    "matchesCurrentCacheBytes": true,
-    "serializedLibraryOrImageBlocks": 0,
-    "serializedActionBlocks": 1
-  },
-  "scope": {
-    "packedImages": 9,
-    "unpackedPackagedTextures": 2,
-    "knownMetadataNotRewritten": "Historical Character Designer source and recovery paths remain in custom metadata. They were kept byte-exact and are outside the three direct-path rewrites.",
-    "portableStatus": "The packaged direct paths were verified in a native Blender 5.2 factory-profile reopen on this machine. Other installation paths and Character Designer operations remain untested."
-  },
-  "nativeReopen": {
-    "version": "5.2.0 LTS",
-    "factoryStartup": true,
-    "automaticScriptExecutionDisabled": true,
-    "receiptSha256": "ccd008520991878cd721203c1149e9265e975185667eabece0cb94273ab1e675",
-    "checks": {
-      "blenderIs52": true,
-      "candidateIsOpen": true,
-      "sceneX": true,
-      "hasCharacterCollection": true,
-      "packagedPathsResolve": true,
-      "animationLibraryHasLinkedAction": true,
-      "bundledLibraryExistsAndHasLinkedNodes": true
-    },
+  "portable_sha256": "9d027d390a0d3c7c8327dce11a2a96a136094d01e34ac210f8e4e9a4453b7f0f",
+  "native_reopen": {
+    "blender": "5.2",
     "scene": "X",
-    "frame": 67,
-    "sceneObjects": 15,
-    "linkedAction": "Source · Walk_N",
-    "saved": false,
-    "characterDesignerOperationsTested": false,
-    "otherInstallationTested": false
+    "missing_ids": [],
+    "relative_library_records": 29,
+    "relative_image_records": 9,
+    "scope": "Direct scene dependencies. Historical appended asset paths and add-on metadata retain workstation references."
   }
 }
