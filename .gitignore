@@ -46,3 +46,16 @@ assets/
 
 # Full historical report data is compressed locally; upload its small summary.
 /.validation-archives/
+
+# Local Unity validation caches and per-user settings.
+# Other paths continue to follow the existing rules.
+/validation/**/UnityPreview*/[Ll]ibrary/
+/validation/**/UnityPreview*/[Tt]emp/
+/validation/**/UnityPreview*/[Ll]ogs/
+/validation/**/UnityPreview*/[Oo]bj/
+/validation/**/UnityPreview*/[Uu]serSettings/
+/validation/**/unity_play_*/Project/[Ll]ibrary/
+/validation/**/unity_play_*/Project/[Tt]emp/
+/validation/**/unity_play_*/Project/[Ll]ogs/
+/validation/**/unity_play_*/Project/[Oo]bj/
+/validation/**/unity_play_*/Project/[Uu]serSettings/

@@ -3,10 +3,11 @@
 import importlib
 
 import bpy
-from bpy.props import BoolProperty, IntProperty, PointerProperty, StringProperty
+from bpy.props import BoolProperty, CollectionProperty, EnumProperty, IntProperty, PointerProperty, StringProperty
 from bpy.types import Operator, Panel, PropertyGroup
 
 from . import hair_bones_rig as rig
+from . import hair_strand_list_ui as strand_list_ui
 from .hair_bones_topology import select_strands
 from .ui_constants import SIDEBAR_CATEGORY, rig_page_active
 
@@ -28,6 +29,10 @@ def _setup():
 
 
 def _source(context):
+    from . import hair_resegment_ui
+    current = hair_resegment_ui.current_source(context)
+    if current is not None:
+        return current
     obj = context.active_object
     if obj:
         if obj.type == "ARMATURE":
@@ -47,7 +52,15 @@ def _source(context):
         except ValueError:
             pass
     settings = _settings(context)
-    return (settings.source if settings else None) or _setup().role_source(context, "HAIR")
+    source = (settings.source if settings else None) or _setup().role_source(context, "HAIR")
+    if source is not None or obj is None or obj.type != "ARMATURE":
+        return source
+    # A reopened character can have a Body control active and no saved HAIR
+    # role. Resolve only a unique visible Hair mesh owned by this rig.
+    candidates = [candidate for candidate in context.view_layer.objects
+                  if candidate.type == "MESH" and candidate.get(rig.RIG_KEY) == obj
+                  and rig.RECORD_KEY in candidate and candidate.visible_get()]
+    return candidates[0] if len(candidates) == 1 else None
 
 
 def _settings(context):
@@ -109,6 +122,16 @@ class CharacterDesignerHairBonesState(PropertyGroup):
         max=12,
     )
     last_message: StringProperty(options={"SKIP_SAVE"})
+    list_items: CollectionProperty(type=strand_list_ui.CharacterDesignerHairStrandListItem, options={"SKIP_SAVE"})
+    list_filter: EnumProperty(name="Category", items=strand_list_ui.FILTER_ITEMS, default="ALL", options={"SKIP_SAVE"})
+    list_active_index: IntProperty(default=0, min=0, options={"SKIP_SAVE"})
+    list_anchor_key: StringProperty(options={"HIDDEN", "SKIP_SAVE"})
+    list_anchor_filter: StringProperty(options={"HIDDEN", "SKIP_SAVE"})
+    show_tools: BoolProperty(name='Advanced', default=False, options={'SKIP_SAVE'})
+    list_assign_group: EnumProperty(name="Assign Category", items=strand_list_ui.GROUP_ITEMS, default="UNASSIGNED", options={"SKIP_SAVE"})
+    list_pin: StringProperty(options={"HIDDEN", "SKIP_SAVE"})
+    list_pose_position: StringProperty(options={"SKIP_SAVE"})
+
 
 
 class CHARACTERDESIGNER_OT_select_hair_strands(Operator):
@@ -206,6 +229,8 @@ class CHARACTERDESIGNER_OT_hair_cleanup_generated_copies(Operator):
     def execute(self, context):
         try:
             source = _source(context)
+            from . import hair_resegment_ui
+            source = hair_resegment_ui.source_before_switch(context, source)
             result = _binding().remove_generated_copies(context, source)
             _settings(context).source = source
         except (ValueError, RuntimeError) as exc:
@@ -228,7 +253,12 @@ class CHARACTERDESIGNER_OT_hair_show_source(Operator):
     def execute(self, context):
         try:
             source = _source(context)
-            _variants().show_source(context, source)
+            from . import hair_resegment_ui
+            source = hair_resegment_ui.source_before_switch(context, source)
+            if any(c.get(_variants().MODE_KEY) == 'RESEGMENTED' for c in _variants().variants_for(source)):
+                hair_resegment_ui.service().show_original(context, source, edit=True)
+            else:
+                _variants().show_source(context, source)
             _settings(context).source = source
         except (ValueError, RuntimeError) as exc:
             _report(self, context, str(exc), error=True)
@@ -272,11 +302,13 @@ class CHARACTERDESIGNER_OT_generate_hair_bones(Operator):
 
 
 class CHARACTERDESIGNER_PT_hair_bones(Panel):
-    bl_label = "Hair Bones"
+    bl_label = 'Hair Strands & Binding'
     bl_idname = "CHARACTERDESIGNER_PT_hair_bones"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
     bl_category = SIDEBAR_CATEGORY
+    bl_parent_id = 'CHARACTERDESIGNER_PT_rig_sections'
+    bl_order = 10
 
     @classmethod
     def poll(cls, context):
@@ -284,27 +316,57 @@ class CHARACTERDESIGNER_PT_hair_bones(Panel):
 
     def draw(self, context):
         layout = self.layout
+        from . import hair_resegment_ui
         settings = _settings(context)
         if settings is None:
             return
         source = _source(context)
+        try:
+            already_bound = bool(source and (_binding().is_bound(source) or hair_resegment_ui.is_version(source)))
+        except (ValueError, RuntimeError) as error:
+            layout.label(text=str(error), icon='ERROR')
+            already_bound = False
+        if already_bound:
+            strand_list_ui.draw_browser(layout, context, source, True)
+            layout.prop(settings, 'show_tools', text='Advanced',
+                        icon='TRIA_DOWN' if settings.show_tools else 'TRIA_RIGHT', emboss=False)
+            if settings.show_tools:
+                tools = layout.column(align=True)
+                tools.label(text=source.name, icon='OUTLINER_OB_MESH')
+                hair_resegment_ui.draw_versions(tools, context, source, True)
+                if not _source_edit(context):
+                    tools.operator('character_designer.hair_show_source', text='Edit Source', icon='EDITMODE_HLT')
+                if not hair_resegment_ui.is_version(source):
+                    row = tools.row()
+                    row.alert = True
+                    row.operator('character_designer.hair_remove_binding', icon='UNLINKED')
+                if _variants().variants_for(source):
+                    row = tools.row()
+                    row.alert = True
+                    row.operator('character_designer.hair_cleanup_generated_copies', icon='TRASH')
+            return
         if source:
             layout.label(text=f"Source: {source.name}", icon="OUTLINER_OB_MESH")
         capture_error = None
+        version = hair_resegment_ui.is_version(source)
         try:
-            strands = _groups().captured_strand_count(source) if source else 0
+            if version:
+                strands = len(rig._read_records(source)['chains'])
+            else:
+                strands = _groups().captured_strand_count(source) if source else 0
         except (ValueError, RuntimeError) as exc:
             capture_error = str(exc)
             strands = 0
-        capture = layout.operator("character_designer.select_hair_strands",
-                                  text="Refresh Hair Strands" if capture_error else "Select Hair Strands",
-                                  icon="FILE_REFRESH" if capture_error else "RESTRICT_SELECT_OFF")
-        capture.use_selected = False
-        capture.replace_capture = bool(capture_error)
+        if not version:
+            capture = layout.operator("character_designer.select_hair_strands",
+                                      text="Refresh Hair Strands" if capture_error else "Select Hair Strands",
+                                      icon="FILE_REFRESH" if capture_error else "RESTRICT_SELECT_OFF")
+            capture.use_selected = False
+            capture.replace_capture = bool(capture_error)
         if capture_error:
             layout.label(text="Refresh strands before binding.", icon="ERROR")
         try:
-            bound = _binding().is_bound(source) if source else False
+            bound = (_binding().is_bound(source) or hair_resegment_ui.is_version(source)) if source else False
         except (ValueError, RuntimeError) as exc:
             layout.label(text=str(exc), icon="ERROR")
             bound = False
@@ -312,8 +374,12 @@ class CHARACTERDESIGNER_PT_hair_bones(Panel):
             target = None
             try:
                 preferred = _setup().preferred_rig(context)
-                target, head = _binding().resolve_target(context, source, armature=preferred)
-                if bound and preferred is not None:
+                if version:
+                    target = source.get(rig.RIG_KEY)
+                    head = rig._read_records(source)['parent']
+                else:
+                    target, head = _binding().resolve_target(context, source, armature=preferred)
+                if bound and not version and preferred is not None:
                     desired = _setup().bone_mapping_status(context, 'HEAD', armature=preferred)
                     if preferred != target or desired['name'] != head:
                         layout.label(text='Character Setup differs; existing hair is unchanged.', icon='INFO')
@@ -323,12 +389,13 @@ class CHARACTERDESIGNER_PT_hair_bones(Panel):
             if strands:
                 layout.label(text=f"{strands} strands")
             settings_row = layout.row()
-            settings_row.enabled = not bound
             settings_row.prop(settings, "bone_count")
             row = layout.row()
             row.enabled = bool(strands) and target is not None and not bound
             row.operator("character_designer.hair_bind_to_character", icon="BONE_DATA")
-            if bound:
+            hair_resegment_ui.draw_versions(layout, context, source, bound)
+            strand_list_ui.draw_browser(layout, context, source, bound)
+            if bound and not hair_resegment_ui.is_version(source):
                 remove_row = layout.row()
                 remove_row.alert = True
                 remove_row.operator("character_designer.hair_remove_binding", icon="UNLINKED")
@@ -340,7 +407,7 @@ class CHARACTERDESIGNER_PT_hair_bones(Panel):
                 layout.operator("character_designer.hair_show_source", text="Edit Source", icon="EDITMODE_HLT")
 
 
-HAIR_BONES_CLASSES = (
+HAIR_BONES_CLASSES = strand_list_ui.ITEM_CLASSES + (
     CharacterDesignerHairBonesState,
     CHARACTERDESIGNER_OT_select_hair_strands,
     CHARACTERDESIGNER_OT_generate_hair_bones,
@@ -351,3 +418,6 @@ HAIR_BONES_CLASSES = (
     CHARACTERDESIGNER_OT_hair_clear_groups,
     CHARACTERDESIGNER_PT_hair_bones,
 )
+
+from .hair_resegment_ui import CLASSES as _RESEGMENT_CLASSES
+HAIR_BONES_CLASSES += _RESEGMENT_CLASSES + strand_list_ui.CLASSES

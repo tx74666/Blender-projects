@@ -3,19 +3,24 @@
 import json
 import bpy
 from bpy.types import Operator
+from . import finger_collections as fingers
 
 PROFILE_KEY = "character_designer_simple_bone_collections"
 GROUP_KEY = "character_designer_simple_bone_group"
 BODY_NAMES = ("Body", "Original")
 INTERNAL_NAME = "_Internal"
 OTHER_NAME = "_Other"
-MANAGED_GROUPS = {"Body", "Original", "Controls", "Animation", INTERNAL_NAME, OTHER_NAME, "Hair"}
+MANAGED_GROUPS = {"Body", "Original", "Controls", "Animation", INTERNAL_NAME, OTHER_NAME, "Hair", fingers.NAME}
 VIEW_KEY = "character_designer_bone_display_view_v1"
 BACKUP_KEY = "character_designer_bone_collections_backup_v1"
 BACKUP_REFS_KEY = "character_designer_bone_collections_backup_refs"
 AUTO_KEY = "character_designer_auto_bone_collections"
 NATIVE_ONLY_KEY = "character_designer_native_after_body_removal"
 _FRAME_CACHE = {}
+_FRAME_OWNER_REJECTIONS = {}
+_FRAME_OWNER_RETRY_SECONDS = 1.0
+_FRAME_PLAYBACK_SCENES = set()
+_FRAME_PLAYBACK_DEFERRED = set()
 _MIGRATION_TIMER = globals().get("_MIGRATION_TIMER")
 _MIGRATION_REGISTERED = False
 
@@ -45,11 +50,85 @@ def _dress_collections(armature):
     return tuple(c for c in armature.data.collections_all if c.get(skirt_rig.OWNER_KEY))
 
 
+def sort_managed_collections(armature):
+    """Order owned root groups once, without changing their contents or display.
+
+    Artist roots retain their relative order and managed groups use the existing
+    managed slots. Original alone moves to the end. Nested collections stay in
+    their existing parent, including artist children of a managed group.
+    """
+    from . import hair_bones_rig as hair, skirt_rig as skirt
+
+    if armature is None or armature.type != 'ARMATURE':
+        raise ValueError('Choose a character armature before ordering Bone Collections.')
+    data = armature.data
+    if armature.mode == 'EDIT' or armature.library or data.library or not armature.is_editable:
+        raise ValueError('Choose a local editable armature outside Edit Mode.')
+    roots = tuple(data.collections)
+    active = data.collections.active
+    dress_owners = set()
+    sources = list(armature.get(skirt.SHARED_SOURCES_KEY, {}).items())
+    if armature.get(skirt.OWNER_KEY):
+        sources.append((armature.get(skirt.OWNER_KEY), armature.get(skirt.SOURCE_KEY)))
+    for owner, source in sources:
+        if (owner and getattr(source, 'type', None) == 'MESH'
+                and source.get(skirt.OWNER_KEY) == owner and source.get(skirt.RIG_KEY) == armature):
+            dress_owners.add(owner)
+    managed = []
+    for index, collection in enumerate(roots):
+        role = collection.get(GROUP_KEY)
+        ranks = ([0] if role in {'Body', 'Animation'} else [])
+        if role == 'Hair' or collection.get(hair.OWNER_KEY) == hair.OWNER_VALUE:
+            ranks.append(1)
+        if collection.get(skirt.OWNER_KEY) in dress_owners:
+            ranks.append(2)
+        if role == 'Original':
+            ranks.append(3)
+        if len(ranks) > 1:
+            raise ValueError('A Bone Collection has conflicting display ownership.')
+        if ranks:
+            managed.append((index, ranks[0], collection))
+    if any(sum(rank == wanted for _index, rank, _group in managed) > 1 for wanted in (0, 1, 3)):
+        raise ValueError('The managed Bone Collections have ambiguous display ownership.')
+    desired = list(roots)
+    for (index, _rank, _group), (_old_index, _new_rank, group) in zip(
+            managed, sorted(managed, key=lambda entry: entry[1])):
+        desired[index] = group
+    original = next((group for _index, rank, group in managed if rank == 3), None)
+    if original is not None:
+        desired.remove(original)
+        desired.append(original)
+    if tuple(desired) == roots:
+        return 0
+
+    def apply(order):
+        moved = 0
+        for index, collection in enumerate(order):
+            previous = list(data.collections).index(collection)
+            if previous != index:
+                data.collections.move(previous, index)
+                moved += 1
+        if tuple(data.collections) != tuple(order):
+            raise RuntimeError('Bone Collections did not retain their requested root order.')
+        if data.collections.active != active:
+            data.collections.active = active
+        return moved
+
+    try:
+        return apply(desired)
+    except Exception:
+        try:
+            apply(roots)
+        except Exception as rollback_error:
+            raise RuntimeError('Bone Collection ordering failed and its original order could not be restored.') from rollback_error
+        raise
+
+
 def _structural_edit_guard(armature):
     if 'character_designer_body_original_mode_v1' in armature:
         raise ValueError('Choose Controls in Bone Display before changing Bone Collections or rebuilding controls.')
     if bpy.context.scene.get('character_designer_weight_workspace_v1', {}).get('rig') == armature:
-        raise ValueError('Use Back to Controls before changing Bone Collections or rebuilding controls.')
+        raise ValueError('Legacy weight workspace recovery is pending; reopen the file in its original view layer before continuing.')
     if VIEW_KEY in armature.data:
         raise ValueError("Restore the temporary bone display view before changing Bone Collections or rebuilding controls.")
 
@@ -85,6 +164,7 @@ def snapshot_layout(armature):
     data = armature.data
     return {
         "collections": [_collection_record(c) for c in data.collections_all],
+        "finger_selection": fingers.selection_snapshot(armature),
         "active": data.collections.active.name if data.collections.active else None,
         "profile": data.get(PROFILE_KEY),
         "hidden": {b.name: (b.hide, b.hide_select) for b in data.bones},
@@ -98,6 +178,8 @@ def snapshot_layout(armature):
 
 def restore_layout(armature, snapshot):
     data = armature.data
+    if "finger_selection" in snapshot:
+        fingers.restore_selection(armature, snapshot["finger_selection"])
     for collection in reversed(tuple(data.collections_all)):
         data.collections.remove(collection)
     for saved in snapshot["collections"]:
@@ -199,10 +281,8 @@ def _write_backup(armature, backup):
 
 
 def _single_data_user(armature):
-    if armature.data.users == 1:
-        return True
-    from . import animation_worklist_target
-    return animation_worklist_target.single_armature_user(armature)
+    from . import limb_ik
+    return limb_ik._single_armature_user(armature)
 
 
 def restore_bone_collections(armature):
@@ -408,7 +488,89 @@ def _managed_body_membership(armature, inventory, layout):
             hair_names.update(group.bones.keys())
             stack.extend(group.children)
     native = _native_body_names(armature, generated, hair_names)
-    return collection, backup, saved, _animation_names(armature, inventory, native, foot, torso, eyes, spine)
+    names = _animation_names(armature, inventory, native, foot, torso, eyes, spine)
+    group, _record = _verified_fingers(collection, backup)
+    if group is not None:
+        names.difference_update(group.bones.keys())
+    return collection, backup, saved, names
+
+
+def _verified_fingers(body, backup):
+    group = fingers.owned(body)
+    records = [r for r in backup["managed"] if r["properties"].get(GROUP_KEY) == fingers.NAME]
+    if not records and group is None:
+        return None, None
+    if len(records) == 1 and group is not None:
+        current = _collection_record(group)
+        if all(current[key] == records[0][key] for key in ("name", "parent", "properties", "bones")):
+            return group, records[0]
+    raise ValueError("The managed Fingers collection was edited; preserve its layout first.")
+
+
+def ensure_finger_collections(armature):
+    """Upgrade only an existing managed Body. Do not reorganize the rig."""
+    from . import bone_display, limb_ik
+    if (armature.type != "ARMATURE" or armature.mode == "EDIT" or armature.library
+            or armature.override_library or armature.data.library or armature.data.override_library
+            or not armature.is_editable or not armature.data.is_editable):
+        raise ValueError("Choose a local, single-user Armature outside Edit Mode.")
+    _structural_edit_guard(armature)
+    if not _single_data_user(armature):
+        # The scoped upgrade writes only display membership, its checkpoint and
+        # Object selection sets. One actual Object may display this data while
+        # retained Actions hold passive references to its original skeleton.
+        bone_display._passive_armature_action_users(armature)
+    layout = _managed_body_layout(armature)
+    if layout is None:
+        raise ValueError("Organize Body Bone Collections first.")
+    body, backup, saved = layout
+    data = armature.data
+    inventory = limb_ik._validate_inventory(armature, limb_pose_only=True)
+    group, prior = _verified_fingers(body, backup)
+    direct = set(body.bones.keys())
+    original = data.collections_all.get("Original")
+    if original is None or original.get(GROUP_KEY) != "Original":
+        raise ValueError("The managed Original collection is missing.")
+    names = fingers.members(armature, inventory, set(original.bones.keys()))
+    existing = set(group.bones.keys()) if group is not None else set()
+    if not names or not names.keys() <= (direct | existing):
+        raise ValueError("The native fingers are missing from Body or Original.")
+    prior_sets = fingers.selection_snapshot(armature)
+    prior_backup = data[BACKUP_KEY]
+    prior_refs = _copy_property(data.get(BACKUP_REFS_KEY, {}))
+    active = data.collections.active
+    initial = group
+    try:
+        group = fingers.write(armature, body, group, names)
+        for name in direct & names.keys():
+            body.unassign(data.bones[name])
+        if existing != set(names) or direct & names.keys() or initial is None:
+            saved.update(_collection_record(body))
+            if initial is None:
+                backup["managed"].append(_collection_record(group))
+            else:
+                prior.update(_collection_record(group))
+            _write_backup(armature, backup)
+            _FRAME_CACHE.pop(armature.as_pointer(), None)
+        return group
+    except Exception:
+        group = fingers.owned(body)
+        if group is not None:
+            if initial is None:
+                data.collections.remove(group)
+            else:
+                _assign_exact(group, data, existing)
+        _assign_exact(body, data, direct)
+        fingers.restore_selection(armature, prior_sets)
+        data[BACKUP_KEY] = prior_backup
+        if prior_refs:
+            data[BACKUP_REFS_KEY] = prior_refs
+        else:
+            data.pop(BACKUP_REFS_KEY, None)
+        raise
+    finally:
+        if data.collections.active != active:
+            data.collections.active = active
 
 
 def sync_limb_display(armature, inventory=None, *, keys=None, force_flags=False):
@@ -449,6 +611,7 @@ def sync_limb_display(armature, inventory=None, *, keys=None, force_flags=False)
             # stable so primitive display checkpoints can restore its JSON.
             if _copy_property(armature.data.get(BACKUP_REFS_KEY, {})) != backup_refs:
                 raise ValueError('Updating Body display unexpectedly changed saved ID references; no display changes were kept.')
+        _FRAME_OWNER_REJECTIONS.pop(armature.as_pointer(), None)
         if set(selected) == set(inventory['rigs']) and managed:
             _FRAME_CACHE[armature.as_pointer()] = _display_frame_state(armature, managed[0])
         else:
@@ -473,6 +636,7 @@ def sync_limb_display(armature, inventory=None, *, keys=None, force_flags=False)
         else:
             armature.data.pop(BACKUP_REFS_KEY, None)
         _FRAME_CACHE.pop(armature.as_pointer(), None)
+        _FRAME_OWNER_REJECTIONS.pop(armature.as_pointer(), None)
         raise
 
 
@@ -504,7 +668,7 @@ def show_original_after_removal(armature):
             hair_names.update(current.bones.keys())
             stack.extend(current.children)
     native = _native_body_names(armature, set(), hair_names)
-    roles = {"Body", "Animation", "Controls", INTERNAL_NAME}
+    roles = {"Body", "Animation", "Controls", INTERNAL_NAME, fingers.NAME}
     redundant = {collection for collection in data.collections_all
                  if ((collection.get(GROUP_KEY) in roles)
                      or (collection.get(limb_ik.OWNER_KEY) == limb_ik.OWNER_VALUE
@@ -550,6 +714,7 @@ def show_original_after_removal(armature):
         data[NATIVE_ONLY_KEY] = 1
         _save_backup(armature, before)
         _FRAME_CACHE.pop(armature.as_pointer(), None)
+        _FRAME_OWNER_REJECTIONS.pop(armature.as_pointer(), None)
         return {"changed": snapshot_layout(armature) != before,
                 "removed_collections": removed, "original_bones": len(native)}
     except Exception:
@@ -644,22 +809,27 @@ def simplify_body_collections(armature, *, compact=True, visibility=None, origin
             raise ValueError("Bone Collection 'Hair' belongs to another group.")
     native = _native_body_names(armature, generated, hair_names)
     dress_groups = _dress_collections(armature)
-    dress_names = {b.name for c in dress_groups for b in c.bones}
     dress_tree = set(dress_groups)
     stack = list(dress_groups)
     while stack:
         current = stack.pop()
         dress_tree.update(current.children)
         stack.extend(current.children)
+    dress_names = {b.name for group in dress_tree for b in group.bones}
     remaining = {b.name for b in data.bones} - generated - hair_names - native - dress_names
     desired = {"Body": _animation_names(armature, inventory, native, foot, torso, eyes, spine),
                INTERNAL_NAME: generated, OTHER_NAME: remaining, "Original": native}
+    finger_names = fingers.members(armature, inventory, native & desired["Body"])
+    finger_group = fingers.owned(body)
+    desired["Body"].difference_update(finger_names)
     before = snapshot_layout(armature)
     try:
         # Explicit organization folds old subdivisions. Routine rig lifecycle
         # updates retain later artist groups and the generated ownership object.
         keep = {c.as_pointer() for c in (controls, hair_group, body, original, other) if c is not None}
         for c in reversed(tuple(data.collections_all)):
+            if c == finger_group:
+                continue
             if c in dress_tree:
                 # Preserve the dress-owned hierarchy and artist children through
                 # Body rebuilds; only detach from a subdivision being removed.
@@ -672,6 +842,12 @@ def simplify_body_collections(armature, *, compact=True, visibility=None, origin
         if body is None:
             body = data.collections.new("Body")
         body.name, body.parent = "Body", None
+        finger_group = fingers.write(armature, body, finger_group, finger_names)
+        if finger_group is not None:
+            desired[fingers.NAME] = set(finger_names)
+            flags = (visibility or {}).get(finger_group.name)
+            if flags is not None:
+                finger_group.is_visible, finger_group.is_solo = flags
         if original is None:
             original = data.collections.new("Original")
         original.name, original.parent = "Original", None
@@ -711,17 +887,14 @@ def simplify_body_collections(armature, *, compact=True, visibility=None, origin
             _assign_exact(hair_group, data, hair_names)
             if compact:
                 hair_group.is_visible, hair_group.is_solo = True, False
-        front = [body] + ([hair_group] if hair_group is not None else []) + [c for c in dress_groups if c.parent is None]
-        for index, collection in enumerate(front):
-            data.collections.move(list(data.collections).index(collection), index)
-        # Original stays last, including when later artist groups are retained.
-        data.collections.move(list(data.collections).index(original), len(data.collections)-1)
+        sort_managed_collections(armature)
         if compact:
             data.collections.active = body
         data[PROFILE_KEY] = 2
         data[AUTO_KEY] = 1
         _save_backup(armature, original_layout or before)
         _FRAME_CACHE.pop(armature.as_pointer(), None)
+        _FRAME_OWNER_REJECTIONS.pop(armature.as_pointer(), None)
         return {name: len(names) for name, names in desired.items()}
     except Exception:
         restore_layout(armature, before)
@@ -774,10 +947,27 @@ def _display_frame_state(armature, collection):
 
 
 @bpy.app.handlers.persistent
-def _frame_visibility(scene, _depsgraph=None, *, objects=None, verified_inventory=None):
+def _frame_visibility(scene, _depsgraph=None, *, objects=None, verified_inventory=None,
+                      _after_playback=False, _original_pose=None):
     """Follow keyed modes without changing the artist's visible/solo switches."""
+    pose_rig = None
+    if _original_pose is not None:
+        from . import body_original_owner
+        if (not isinstance(objects, (tuple, list)) or len(objects) != 1
+                or not body_original_owner._display_pose_capability(_original_pose, objects[0])):
+            raise ValueError('Original display permission requires its single explicit character rig.')
+        pose_rig = objects[0]
+    if objects is None and not _after_playback:
+        key = _playback_scene_key(scene)
+        if key in _FRAME_PLAYBACK_SCENES:
+            _FRAME_PLAYBACK_DEFERRED.add(key)
+            return
+    from time import monotonic
     from . import limb_fk_visuals, limb_ik, spine_ik_fk
+    from . import weight_paint_entry
     for armature in scene.objects if objects is None else objects:
+        if weight_paint_entry.active(scene=scene, rig=armature):
+            continue
         if 'character_designer_body_original_mode_v1' in armature:
             continue
         if scene.get('character_designer_weight_workspace_v1', {}).get('rig') == armature:
@@ -795,12 +985,32 @@ def _frame_visibility(scene, _depsgraph=None, *, objects=None, verified_inventor
         state = _display_frame_state(armature, collection)
         modes = state[0]
         previous = _FRAME_CACHE.get(key)
-        if previous == state:
+        if armature is pose_rig:
+            # Original owns this synchronous display handoff and its rollback.
+            # Never turn its pose-only permission into a playback owner proof:
+            # both ordinary success and refusal caches remain untouched.
+            inventory = (verified_inventory if verified_inventory is not None else
+                         limb_ik._validate_inventory(armature))
+            if not body_original_owner._display_pose_capability(_original_pose, armature):
+                raise ValueError('Original display permission changed before synchronization.')
+            sync_limb_display(armature, inventory, force_flags=bool(previous and previous[0] != modes))
+            if not body_original_owner._display_pose_capability(_original_pose, armature):
+                raise ValueError('Original display permission changed during synchronization.')
             continue
-        # An unchanged display performs no writes. Authenticate data ownership
-        # only when a display update is needed, before publishing cache state or
-        # changing any collection/bone flags. Recovery references stay live.
+        if previous == state and not _after_playback:
+            continue
+        # Ownership refusal never publishes a successful display state. Briefly
+        # throttle only the same refused request/data/users; owner-reference
+        # removal retries immediately, other repairs retry within one second.
+        data = armature.data
+        token = (getattr(data, 'session_uid', None), data.as_pointer(), data.users)
+        rejected = _FRAME_OWNER_REJECTIONS.get(key)
+        if (not _after_playback and rejected is not None and rejected[:2] == (state, token)
+                and monotonic() < rejected[2]):
+            continue
+        _FRAME_OWNER_REJECTIONS.pop(key, None)
         if not _single_data_user(armature):
+            _FRAME_OWNER_REJECTIONS[key] = (state, token, monotonic() + _FRAME_OWNER_RETRY_SECONDS)
             continue
         # Cache unsuccessful cases too: no repeated errors or retries per frame.
         _FRAME_CACHE[key] = state
@@ -818,6 +1028,32 @@ def _frame_visibility(scene, _depsgraph=None, *, objects=None, verified_inventor
             continue
 
 
+def _playback_scene_key(scene):
+    """Keep no RNA references across playback or file/undo transitions."""
+    return getattr(scene, 'session_uid', None), scene.as_pointer()
+
+
+@bpy.app.handlers.persistent
+def _playback_visibility_pre(scene, _depsgraph=None):
+    _FRAME_PLAYBACK_SCENES.add(_playback_scene_key(scene))
+
+
+@bpy.app.handlers.persistent
+def _playback_visibility_post(scene, _depsgraph=None):
+    key = _playback_scene_key(scene)
+    _FRAME_PLAYBACK_SCENES.discard(key)
+    if key in _FRAME_PLAYBACK_DEFERRED:
+        # Consume before syncing: re-entrant frame callbacks must not repeat it.
+        _FRAME_PLAYBACK_DEFERRED.discard(key)
+        _frame_visibility(scene, _depsgraph, _after_playback=True)
+
+
+@bpy.app.handlers.persistent
+def _clear_playback_visibility(*_unused):
+    _FRAME_PLAYBACK_SCENES.clear()
+    _FRAME_PLAYBACK_DEFERRED.clear()
+
+
 def _native_migration_once():
     global _MIGRATION_TIMER
     _MIGRATION_TIMER = None
@@ -831,6 +1067,8 @@ def _native_migration_once():
             # Automatic refresh is scoped to the current character. Backup rigs
             # elsewhere in this scene or file are not migration targets.
             result = migrate_removed_body_layouts(scene, objects=(rig,) if rig else ())
+            from . import skirt_bone_display
+            skirt_bone_display.current_character(bpy.context, rig)
             for entry in result["skipped"]:
                 print(f'Character Designer: native display repair skipped {entry["rig"]}: {entry["reason"]}')
         except (AttributeError, ReferenceError, RuntimeError, TypeError, ValueError) as error:
@@ -850,6 +1088,7 @@ def _schedule_native_migration():
 
 @bpy.app.handlers.persistent
 def _load_native_migration(_unused):
+    _clear_playback_visibility()
     _schedule_native_migration()
 
 
@@ -859,6 +1098,10 @@ def register_handlers():
     _MIGRATION_REGISTERED = True
     bpy.app.handlers.frame_change_post.append(_frame_visibility)
     bpy.app.handlers.load_post.append(_load_native_migration)
+    bpy.app.handlers.animation_playback_pre.append(_playback_visibility_pre)
+    bpy.app.handlers.animation_playback_post.append(_playback_visibility_post)
+    for event in ('load_pre', 'undo_pre', 'redo_pre'):
+        getattr(bpy.app.handlers, event).append(_clear_playback_visibility)
     # Blender restricts data access while an add-on is being registered. Run
     # once after registration, never in playback or undo/redo callbacks.
     _schedule_native_migration()
@@ -870,15 +1113,43 @@ def unregister_handlers():
     if _MIGRATION_TIMER is not None and bpy.app.timers.is_registered(_MIGRATION_TIMER):
         bpy.app.timers.unregister(_MIGRATION_TIMER)
     _MIGRATION_TIMER = None
-    for handler in tuple(bpy.app.handlers.frame_change_post):
-        if (getattr(handler, "__module__", "") == __name__
-                and getattr(handler, "__name__", "") == "_frame_visibility"):
-            bpy.app.handlers.frame_change_post.remove(handler)
-    for handler in tuple(bpy.app.handlers.load_post):
-        if (getattr(handler, "__module__", "") == __name__
-                and getattr(handler, "__name__", "") == "_load_native_migration"):
-            bpy.app.handlers.load_post.remove(handler)
+    for event, name in (
+            ('frame_change_post', '_frame_visibility'),
+            ('load_post', '_load_native_migration'),
+            ('animation_playback_pre', '_playback_visibility_pre'),
+            ('animation_playback_post', '_playback_visibility_post'),
+            ('load_pre', '_clear_playback_visibility'),
+            ('undo_pre', '_clear_playback_visibility'),
+            ('redo_pre', '_clear_playback_visibility')):
+        handlers = getattr(bpy.app.handlers, event, ())
+        for handler in tuple(handlers):
+            if (getattr(handler, "__module__", "") == __name__
+                    and getattr(handler, "__name__", "") == name):
+                handlers.remove(handler)
     _FRAME_CACHE.clear()
+    _FRAME_OWNER_REJECTIONS.clear()
+    _clear_playback_visibility()
+
+
+class CHARACTERDESIGNER_OT_organize_fingers(Operator):
+    bl_idname = "character_designer.organize_fingers"
+    bl_label = "Organize Finger Bones"
+    bl_description = "Group the native finger bones under Body and create left and right finger selection sets"
+    bl_options = {"REGISTER", "UNDO"}
+
+    @classmethod
+    def poll(cls, context):
+        rig = context.object
+        return rig is not None and rig.mode in {"POSE", "OBJECT"} and body_collection(rig) is not None
+
+    def execute(self, context):
+        try:
+            group = ensure_finger_collections(context.object)
+        except (RuntimeError, ValueError) as error:
+            self.report({"ERROR"}, str(error))
+            return {"CANCELLED"}
+        self.report({"INFO"}, f"{len(group.bones)} finger bones in Body / {group.name}")
+        return {"FINISHED"}
 
 
 class CHARACTERDESIGNER_OT_simplify_bone_collections(Operator):
@@ -908,6 +1179,8 @@ class CHARACTERDESIGNER_OT_simplify_bone_collections(Operator):
             for obj in affected:
                 if obj.get(skirt_rig.OWNER_KEY):
                     skirt_rig.migrate_skirt_bone_collections(obj)
+                    from . import skirt_bone_display
+                    skirt_bone_display.sync(context, obj[skirt_rig.SOURCE_KEY])
                 else:
                     simplify_body_collections(obj)
         except Exception as exc:
@@ -940,5 +1213,6 @@ class CHARACTERDESIGNER_OT_restore_bone_collections(Operator):
         return {"FINISHED"}
 
 
-BONE_COLLECTION_CLASSES = (CHARACTERDESIGNER_OT_simplify_bone_collections,
+BONE_COLLECTION_CLASSES = (CHARACTERDESIGNER_OT_organize_fingers,
+                           CHARACTERDESIGNER_OT_simplify_bone_collections,
                            CHARACTERDESIGNER_OT_restore_bone_collections)

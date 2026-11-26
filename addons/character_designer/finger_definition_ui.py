@@ -91,7 +91,7 @@ def _bend_changed(self, context):
 
 
 class CharacterDesignerFingerDefinition(PropertyGroup):
-    overlays_enabled: BoolProperty(name='Show Finger Overlays', default=True, update=_overlays_changed,
+    overlays_enabled: BoolProperty(name='Show Finger Overlays', default=False, update=_overlays_changed,
         description='Show or hide finger references, loop marks and bend overlays; retain the cached guides')
     source: PointerProperty(type=bpy.types.Object)
     record: StringProperty(options={'HIDDEN'})
@@ -478,7 +478,8 @@ CLASSES = (CharacterDesignerFingerDefinition, CHARACTERDESIGNER_OT_finger_defini
 
 
 def register_runtime():
-    bpy.types.Scene.character_designer_finger_definition = PointerProperty(type=CharacterDesignerFingerDefinition)
+    if not hasattr(bpy.types.Scene, 'character_designer_finger_definition'):
+        bpy.types.Scene.character_designer_finger_definition = PointerProperty(type=CharacterDesignerFingerDefinition)
     for handlers in (bpy.app.handlers.load_pre, bpy.app.handlers.undo_pre, bpy.app.handlers.redo_pre):
         if _invalidate not in handlers: handlers.append(_invalidate)
     for handlers in (bpy.app.handlers.load_post, bpy.app.handlers.undo_post, bpy.app.handlers.redo_post):

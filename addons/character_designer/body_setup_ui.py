@@ -95,8 +95,6 @@ def draw_actions(layout, context, *, ready=None):
                         text='Update' if exists else 'Generate',
                         icon='ARMATURE_DATA').action = 'GENERATE'
         if not exists: return
-        from . import control_weight_paint
-        control_weight_paint.draw(layout, context)
         row = layout.row()
         row.alert = True
         row.enabled = exists
@@ -104,6 +102,11 @@ def draw_actions(layout, context, *, ready=None):
                      icon='TRASH').action = 'REMOVE'
     except (ValueError, RuntimeError, KeyError, TypeError, ReferenceError) as exc:
         layout.label(text=str(exc), icon='ERROR')
+    finally:
+        from . import body_region_ui
+        body_region_ui.draw(layout, context)
+        from . import rig_fix_ui
+        rig_fix_ui.draw_body_adjustments(layout, context)
 
 
 def draw_plan(layout, context):

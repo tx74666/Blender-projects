@@ -87,6 +87,7 @@ def _restore_pose(armature, saved):
 
 def _checkpoint(context, armature, saved_original):
     from . import body_original_mode as original, body_rest_resync, bone_display, skirt_original_mode
+    from . import limb_ik_fk_action_owner
     rigs = [armature]
     if saved_original is not None:
         rigs.extend(target for target, _view in original._extra_views(armature, saved_original))
@@ -104,6 +105,7 @@ def _checkpoint(context, armature, saved_original):
     animation = armature.animation_data
     action = animation.action if animation else None
     return {'rigs': states, 'had_animation': animation is not None,
+            'display_attempt': limb_ik_fk_action_owner.capture_display(armature),
             'action': action, 'slot': animation.action_slot if animation else None,
             'fake_user': action.use_fake_user if action else None,
             'action_name': action.name if action else None, 'staged_actions': [],
@@ -174,9 +176,24 @@ def _rollback(context, armature, saved, installed):
     skirt_original_mode.rollback(context, saved['dress'])
     bone_collections._FRAME_CACHE.pop(armature.as_pointer(), None)
     match._update(context, armature)
+    # Rebinding the retained Action schedules its curves for this last update.
+    # Reassert this call's raw inputs after that evaluation, just as the owner
+    # restore does, so rollback also retains unrelated unkeyed adjustments.
+    for state in saved['rigs']:
+        _restore_pose(state['rig'], state['channels'])
+        for con, muted, influence, pole_angle in state['constraints']:
+            if con.mute != muted:
+                con.mute = muted
+            if con.influence != influence:
+                con.influence = influence
+            if pole_angle is not None and con.pole_angle != pole_angle:
+                con.pole_angle = pole_angle
+    context.view_layer.update()
     # Runtime is paused in the caller. Restore owned outputs after the final
     # graph update so failure cannot leak generated-key metadata or positions.
     body_rest_resync.restore_correctives(saved)
+    from . import limb_ik_fk_action_owner
+    limb_ik_fk_action_owner.restore_display(saved['display_attempt'])
 
 
 def _commit_action(armature, saved):
@@ -227,7 +244,8 @@ def switch_all(context, armature, mode, *, keys=None, keyframe=None):
     Auto Key follows the per-limb service's constant mode cuts and bookends.
     """
     from . import (body_original_mode as original, bone_collections,
-                   forearm_original_inventory, forearm_twist, skirt_original_mode)
+                   forearm_original_inventory, forearm_twist, skirt_original_mode,
+                   limb_ik_fk_action_owner)
     if mode not in {'IK', 'FK'}:
         raise limb_ik.LimbIKError('Choose IK or FK.')
     saved_original = _require(context, armature)
@@ -248,7 +266,14 @@ def switch_all(context, armature, mode, *, keys=None, keyframe=None):
         inventory = limb_ik._validate_inventory(armature)
     selected = _keys(inventory, keys)
     old_modes = {key: match.mode_for_rig(armature, inventory['rigs'][key]) for key in selected}
-    if saved_original is None and all(value == mode for value in old_modes.values()):
+    stale_leg = False
+    if saved_original is None and any(match._leg_front_policy(inventory, inventory['rigs'][key]) for key in selected):
+        match._update(context, armature)
+        stale_leg = any(match._leg_front_policy(inventory, inventory['rigs'][key])
+                        and match._leg_front_layout(armature, inventory['rigs'][key],
+                            match._matrices(armature, inventory['rigs'][key]['chain']))[1]
+                        for key in selected)
+    if saved_original is None and not stale_leg and all(value == mode for value in old_modes.values()):
         # A repeated mode click also repairs the managed display, without pose
         # matching or inserting animation keys. Keep display writes reversible.
         from . import bone_display
@@ -282,15 +307,24 @@ def switch_all(context, armature, mode, *, keys=None, keyframe=None):
         match._update(context, armature)
         native_before = original._pose(armature)
         before = _checkpoint(context, armature, saved_original)
+        angles_before = {con.as_pointer(): float(angle) for state in before['rigs']
+                         for con, _mute, _influence, angle in state['constraints'] if angle is not None}
         pose_before = {name: (entry['mode'], entry['basis']) for name, entry in before['rigs'][0]['channels'].items()}
         installed = set()
         changed, errors, affected = [], {}, {}
+        action_owner = None
+        switching_before = {}
         try:
             if saved_original is not None:
                 original.leave(context, armature)
                 inventory = limb_ik._validate_inventory(armature)
+            if keyed:
+                action_owner = limb_ik_fk_action_owner.prepare(context, armature)
             value_before = {key: armature.pose.bones[inventory['rigs'][key]['target'].name].get(match.PROPERTY, 1.)
                             for key in selected}
+            switching_before = {key: (match.PROPERTY in target, target.get(match.PROPERTY),
+                match.VERSION_KEY in target.bone, target.bone.get(match.VERSION_KEY))
+                for key in selected for target in (armature.pose.bones[inventory['rigs'][key]['target'].name],)}
             for key in selected:
                 rig = inventory['rigs'][key]
                 if match.VERSION_KEY not in armature.data.bones[rig['target'].name]:
@@ -302,11 +336,21 @@ def switch_all(context, armature, mode, *, keys=None, keyframe=None):
             for key in selected:
                 rig = inventory['rigs'][key]
                 desired = {name: native_before[name] for name in match.pose_names(rig)}
-                if match.mode_for_rig(armature, rig) == mode:
+                direct_leg = match._leg_front_policy(inventory, rig)
+                leg_angles = [(con, angles_before.get(con.as_pointer(), float(con.pole_angle)))
+                              for _pb, con, record in rig['entries'] if direct_leg and record['role'] == 'IK']
+                front_stale = direct_leg and match._leg_front_layout(armature, rig, desired)[1]
+                angle_changed = any(abs(float(con.pole_angle) - old) > 1e-8 for con, old in leg_angles)
+                if match.mode_for_rig(armature, rig) == mode and not front_stale and not angle_changed:
                     errors[key] = match._verify(armature, desired)
                     continue
-                affected[key] = (match._match_fk(context, armature, rig, desired) if mode == 'FK' else
-                                 match._match_ik(context, armature, inventory, rig, desired))
+                if direct_leg:
+                    match.switch_limb(context, armature, key, mode, keyframe=False,
+                                      desired_pose=desired, sync_display=False)
+                    affected[key] = {rig['target'].name, rig['pole'].name, *rig['chain']}
+                else:
+                    affected[key] = (match._match_fk(context, armature, rig, desired) if mode == 'FK' else
+                                     match._match_ik(context, armature, inventory, rig, desired))
                 affected[key].update(match._match_toe(context, armature, rig, desired))
                 errors[key] = match._verify(armature, desired)
                 changed.append(key)
@@ -315,12 +359,22 @@ def switch_all(context, armature, mode, *, keys=None, keyframe=None):
             if saved_original is not None:
                 skirt_original_mode.verify(context, armature, saved_original['dress_edit'],
                                            desired=before['dress_desired'])
-            if keyed:
+            if keyed and changed:
+                owned_action = limb_ik_fk_action_owner.stage(action_owner) if action_owner is not None else None
+                keyed_inputs = []
                 for key in changed:
                     target = armature.pose.bones[inventory['rigs'][key]['target'].name]
+                    data = inventory['rigs'][key]
+                    leg_angles = [(con, angles_before.get(con.as_pointer(), float(con.pole_angle)))
+                                  for _pb, con, record in data['entries']
+                                  if match._leg_front_policy(inventory, data) and record['role'] == 'IK']
                     match._key_switch(context, armature, target, affected[key], value_before[key], pose_before,
-                                      keep_previous=True)
-                    before['staged_actions'].append(armature.animation_data.action)
+                                      keep_previous=True, pole_angles=leg_angles, owned_action=owned_action)
+                    keyed_inputs.append((target, affected[key], leg_angles))
+                    if action_owner is None:
+                        before['staged_actions'].append(armature.animation_data.action)
+                if action_owner is not None:
+                    limb_ik_fk_action_owner.preserve_staged(action_owner, keyed_inputs)
             refresh()
             for state in before['correctives']:
                 error = forearm_twist._ERRORS.get(state['object'].name)
@@ -336,9 +390,38 @@ def switch_all(context, armature, mode, *, keys=None, keyframe=None):
                 armature, final_inventory, keys=selected, force_flags=True)
             bone_collections._frame_visibility(context.scene, objects=(armature,),
                                                verified_inventory=final_inventory)
-            disposable_previous = _commit_action(armature, before)
+            if action_owner is not None and keyed and changed:
+                limb_ik_fk_action_owner.publish(action_owner)
+                disposable_previous = None
+            else:
+                disposable_previous = _commit_action(armature, before)
         except Exception:
+            owner_rollback_error = None
+            # New switching tags must leave before the owner's raw-property
+            # validator runs. The outer checkpoint still restores Original.
+            for path in installed:
+                curve = match._find_driver(armature, path)
+                if curve is not None and curve.as_pointer() not in before['drivers']:
+                    armature.animation_data.drivers.remove(curve)
+            for key, (had_value, value, had_version, version) in switching_before.items():
+                target = armature.pose.bones[inventory['rigs'][key]['target'].name]
+                if had_value:
+                    target[match.PROPERTY] = value
+                else:
+                    target.pop(match.PROPERTY, None)
+                if had_version:
+                    target.bone[match.VERSION_KEY] = version
+                else:
+                    target.bone.pop(match.VERSION_KEY, None)
+            if action_owner is not None:
+                try:
+                    limb_ik_fk_action_owner.rollback(action_owner)
+                except Exception as error:
+                    owner_rollback_error = error
             _rollback(context, armature, before, installed)
+            if owner_rollback_error is not None:
+                raise limb_ik.LimbIKError('Body IK/FK could not complete Custom recovery; retained recovery data: '
+                                         + str(owner_rollback_error)) from owner_rollback_error
             raise
         # Terminal disposal: no fallible metadata or matching work follows it.
         if disposable_previous is not None:

@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Character Designer",
     "author": "Randy & Codex",
-    "version": (0, 77, 44),
+    "version": (0, 77, 248),
     "blender": (4, 0, 0),
     "location": "View3D > Sidebar > Character Designer",
     "description": "Personal modeling, rig-setup, and generic reference-view tools.",
@@ -39,6 +39,7 @@ from .delta_symmetry import (
     stop_delta_symmetry_runtime,
 )
 from .shape_key_tools import SHAPE_KEY_CLASSES
+from . import custom_vertex_groups, custom_vertex_parts
 from .reference_views import (
     REFERENCE_VIEW_CLASSES,
     CharacterDesignerReferenceState,
@@ -62,12 +63,15 @@ from .spline_ik_setup import (
     CharacterDesignerSplineIKState,
 )
 from .selected_bone_weights import SELECTED_BONE_WEIGHT_CLASSES
+from .weight_cleanup import CLASSES as WEIGHT_CLEANUP_CLASSES
 from .bone_collections import (
     BONE_COLLECTION_CLASSES,
     register_handlers as register_bone_collection_handlers,
     unregister_handlers as unregister_bone_collection_handlers,
 )
 from .character_setup import CHARACTER_SETUP_CLASSES, CharacterDesignerSetup
+# Unity update-selection lifecycle integration.
+from . import unity_update_selection_ui
 from .unity_export_ui import UNITY_EXPORT_CLASSES, CharacterDesignerUnityExport, stop_export_ui
 from .bone_display import BONE_DISPLAY_CLASSES
 from .widget_collections import WIDGET_COLLECTION_CLASSES
@@ -75,8 +79,13 @@ from .bone_display_sync import register as register_bone_display_sync, unregiste
 from .torso_ui import TORSO_UI_CLASSES
 from .eye_ui import EYE_UI_CLASSES
 from .body_controls_ui import BODY_CONTROL_UI_CLASSES
+from .body_region_ui import BODY_REGION_UI_CLASSES, CharacterDesignerBodyRegionState
+from .character_ground import CHARACTER_GROUND_CLASSES, CharacterDesignerGroundState
+from .rig_fix_ui import RIG_FIX_UI_CLASSES
 from .control_colors import CONTROL_COLOR_CLASSES
 from .bone_color_palette import BONE_COLOR_PALETTE_CLASSES
+from . import color_center
+from .color_center import COLOR_CENTER_CLASSES
 from .hair_bones import HAIR_BONES_CLASSES, CharacterDesignerHairBonesState
 from .hair_motion_ui import HAIR_MOTION_CLASSES, CharacterDesignerHairMotionState
 from .hair_wiggle_adapter import register_guards as register_hair_motion_guards, unregister_guards as unregister_hair_motion_guards
@@ -88,6 +97,9 @@ from .animation import (
     register_animation_runtime,
     unregister_animation_runtime,
 )
+from .animation_physics_ui import PHYSICS_CLASSES
+from .animation_local_motion_pins import CLASSES as LOCAL_MOTION_PIN_CLASSES
+from .animation_worklist_header import CD_PT_motion_picker
 from .animation_worklist_ui import (
     WORKLIST_CLASSES,
     CharacterDesignerAnimationWorklistState,
@@ -115,6 +127,7 @@ from .ui_constants import (
     UI_PAGE_WEIGHT,
     UI_PAGES,
     UI_RIG_SECTION_ITEMS,
+    UI_RIG_SECTION_RNA_ITEMS,
     active_rig_section,
     active_ui_page,
 )
@@ -204,6 +217,7 @@ ADDON_MODULE_NAME = (__package__ or os.path.basename(ADDON_SOURCE_ROOT)).split("
 ADDON_REFRESH_PENDING = False
 ADDON_REFRESH_LAST_STATE = False
 ADDON_REFRESH_LAST_ERROR = ""
+SOURCE_WATCH_INTERVAL = 10.0
 
 WORKSPACE_FILTER_GUARD_INTERVAL = 1.0
 WORKSPACE_FILTER_GUARD_FIRST_INTERVAL = 0.1
@@ -394,10 +408,25 @@ def _tag_view3d_redraw():
                 area.tag_redraw()
 
 
+def _source_watch_busy():
+    """Keep development-only filesystem checks away from animation playback."""
+    window_manager = getattr(bpy.context, "window_manager", None)
+    if window_manager is None:
+        return False
+    if getattr(window_manager, "is_interface_locked", False):
+        return True
+    return any(
+        getattr(getattr(window, "screen", None), "is_animation_playing", False)
+        for window in getattr(window_manager, "windows", ())
+    )
+
+
 def _source_watch_deferred():
     global ADDON_REFRESH_LAST_STATE, ADDON_REFRESH_LAST_ERROR
 
     try:
+        if ADDON_REFRESH_PENDING or _source_watch_busy():
+            return SOURCE_WATCH_INTERVAL
         changed = _source_changed()
         if changed != ADDON_REFRESH_LAST_STATE:
             ADDON_REFRESH_LAST_STATE = changed
@@ -405,7 +434,7 @@ def _source_watch_deferred():
     except Exception as exc:
         ADDON_REFRESH_LAST_ERROR = f"Source watcher failed: {exc}"
         _tag_view3d_redraw()
-    return 1.0
+    return SOURCE_WATCH_INTERVAL
 
 
 def _register_source_watch():
@@ -416,7 +445,7 @@ def _register_source_watch():
         if not bpy.app.timers.is_registered(_source_watch_deferred):
             bpy.app.timers.register(
                 _source_watch_deferred,
-                first_interval=1.0,
+                first_interval=SOURCE_WATCH_INTERVAL,
                 persistent=True,
             )
     except Exception as exc:
@@ -459,9 +488,15 @@ def _reload_addon_deferred():
             old_modules[module_name] = old_main
     persistent = bool(getattr(old_main, "__addon_persistent__", False)) if old_main else False
 
+    bind = old_modules.get(module_name + ".natural_bind_mode")
+    if bind is not None and not bind.refresh_ready():
+        return 0.1
+    current_pose = None
     try:
         _stop_live_preview(settings=_settings(bpy.context), clear_capture=True)
         stop_delta_symmetry_runtime(clear_capture=True)
+        if bind is not None:
+            current_pose = bind.detach_for_refresh()
         # disable() silently skips unregister when __addon_enabled__ is stale.
         # Call the registered runtime's teardown and let failures propagate.
         if registered_panel is not None and old_main is not None:
@@ -494,6 +529,8 @@ def _reload_addon_deferred():
         from . import finger_loop_marks_ui, finger_definition_ui
         finger_definition_ui._resume()
         finger_loop_marks_ui.refresh(bpy.context)
+        if current_pose is not None:
+            importlib.import_module(module_name + ".natural_bind_mode").resume_after_refresh(current_pose)
         print("[Character Designer] Add-on refreshed successfully.")
     except Exception as exc:
         traceback.print_exc()
@@ -518,6 +555,8 @@ def _reload_addon_deferred():
                 # successful disable it restores the old, known-good classes.
                 old_main.register()
                 old_main.__addon_enabled__ = True
+                if current_pose is not None:
+                    bind.resume_after_refresh(current_pose)
             except Exception:
                 traceback.print_exc()
         ADDON_REFRESH_PENDING = False
@@ -761,7 +800,7 @@ def _centerline_blend_factor_updated(settings, context):
 
 class CharacterDesignerState(PropertyGroup):
     rig_section: EnumProperty(
-        name="Rig Section", items=UI_RIG_SECTION_ITEMS, default="BODY",
+        name="Rig Section", items=UI_RIG_SECTION_RNA_ITEMS, default="BODY",
         options={"SKIP_SAVE"},
     )
     ui_page: EnumProperty(
@@ -8440,9 +8479,9 @@ class CHARACTERDESIGNER_OT_set_ui_page(Operator):
 class CHARACTERDESIGNER_OT_set_rig_section(Operator):
     bl_idname = "character_designer.set_rig_section"
     bl_label = "Show Rig Section"
-    bl_description = "Show body, hair, or skirt rig tools"
+    bl_description = "Show body, hair or skirt rig tools"
     bl_options = {"INTERNAL"}
-    section: EnumProperty(items=UI_RIG_SECTION_ITEMS, default='BODY')
+    section: EnumProperty(items=UI_RIG_SECTION_RNA_ITEMS, default='BODY')
 
     def execute(self, context):
         settings = _settings(context)
@@ -8631,6 +8670,23 @@ def _draw_curve_tools(layout, context):
 
 
 
+class CHARACTERDESIGNER_PT_custom_vertex_groups(Panel):
+    bl_label = "Mesh Selections"
+    bl_idname = "CHARACTERDESIGNER_PT_custom_vertex_groups"
+    bl_parent_id = "CHARACTERDESIGNER_PT_main"
+    bl_space_type = "VIEW_3D"
+    bl_region_type = "UI"
+    bl_category = SIDEBAR_CATEGORY
+    bl_order = 0
+
+    @classmethod
+    def poll(cls, context):
+        return active_ui_page(context) == UI_PAGE_MODELING
+
+    def draw(self, context):
+        custom_vertex_groups.draw(self.layout, context)
+
+
 class CHARACTERDESIGNER_PT_curve_tools(Panel):
     bl_label = "Curve Tools"
     bl_idname = "CHARACTERDESIGNER_PT_curve_tools"
@@ -8650,13 +8706,12 @@ class CHARACTERDESIGNER_PT_curve_tools(Panel):
 
 class CHARACTERDESIGNER_PT_rig_sections(Panel):
     """Subcategory navigation follows the shared character context, not vice versa."""
-    bl_label = 'Rig Sections'
+    bl_label = 'Rig Setup'
     bl_idname = 'CHARACTERDESIGNER_PT_rig_sections'
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
     bl_category = SIDEBAR_CATEGORY
     bl_parent_id = 'CHARACTERDESIGNER_PT_main'
-    bl_options = {'HIDE_HEADER'}
     bl_order = 2
 
     @classmethod
@@ -8664,6 +8719,7 @@ class CHARACTERDESIGNER_PT_rig_sections(Panel):
         return active_ui_page(context) == UI_PAGE_RIG
 
     def draw(self, context):
+        self.layout.label(text='Create and adjust character controls.', icon='ARMATURE_DATA')
         row = self.layout.row(align=True)
         section = active_rig_section(context)
         for value, label, _description in UI_RIG_SECTION_ITEMS:
@@ -8689,22 +8745,30 @@ CLASSES = (
     CHARACTERDESIGNER_OT_set_ui_page,
     CHARACTERDESIGNER_OT_set_rig_section,
     CHARACTERDESIGNER_PT_main,
+    CHARACTERDESIGNER_PT_rig_sections,
+    *custom_vertex_groups.CLASSES,
+    *custom_vertex_parts.CLASSES,
+    CHARACTERDESIGNER_PT_custom_vertex_groups,
     CHARACTERDESIGNER_PT_curve_tools,
     *curve_tools.CLASSES,
     *FINGER_ROOT_CLASSES,
     *FINGER_BONES_CLASSES,
     *CHARACTER_SETUP_CLASSES,
+    *unity_update_selection_ui.CLASSES,
     *UNITY_EXPORT_CLASSES,
     *HAIR_BONES_CLASSES,
     *HAIR_MOTION_CLASSES,
     *SKIRT_CLASSES,
     *WORKLIST_CLASSES,
+    *LOCAL_MOTION_PIN_CLASSES,
+    CD_PT_motion_picker,
     *COMPOSITION_CLASSES,
+    *PHYSICS_CLASSES,
     *ANIMATION_CLASSES,
     *SELECTED_BONE_WEIGHT_CLASSES,
+    *WEIGHT_CLEANUP_CLASSES,
     *BONE_COLLECTION_CLASSES,
     *BONE_DISPLAY_CLASSES,
-    CHARACTERDESIGNER_PT_rig_sections,
     *WIDGET_COLLECTION_CLASSES,
     *WEIGHT_SYMMETRY_CLASSES,
     *TOPOLOGY_SYMMETRY_CLASSES,
@@ -8716,8 +8780,12 @@ CLASSES = (
     *TORSO_UI_CLASSES,
     *EYE_UI_CLASSES,
     *BODY_CONTROL_UI_CLASSES,
+    *BODY_REGION_UI_CLASSES,
+    *CHARACTER_GROUND_CLASSES,
+    *RIG_FIX_UI_CLASSES,
     *CONTROL_COLOR_CLASSES,
     *BONE_COLOR_PALETTE_CLASSES,
+    *COLOR_CENTER_CLASSES,
     *FOREARM_TWIST_CLASSES,
     *SPLINE_IK_SETUP_CLASSES,
     *REFERENCE_VIEW_CLASSES,
@@ -8751,7 +8819,9 @@ def _expected_rna_identifier(cls):
         return cls.bl_idname or cls.__name__
     if issubclass(cls, bpy.types.UIList):
         return cls.__name__
-    if issubclass(cls, bpy.types.PropertyGroup):
+    if issubclass(cls, bpy.types.Menu):
+        return getattr(cls, "bl_idname", "") or cls.__name__
+    if issubclass(cls, (bpy.types.PropertyGroup, bpy.types.AddonPreferences)):
         return cls.__name__
     raise RuntimeError(f"Unsupported Character Designer RNA class: {cls.__name__}.")
 
@@ -8760,7 +8830,7 @@ def _registered_rna_class(cls):
     """Resolve the live Python class behind an expected Blender RNA identifier."""
 
     identifier = _expected_rna_identifier(cls)
-    for base in (bpy.types.Operator, bpy.types.Panel, bpy.types.PropertyGroup, bpy.types.UIList):
+    for base in (bpy.types.Operator, bpy.types.Panel, bpy.types.PropertyGroup, bpy.types.UIList, bpy.types.Menu, bpy.types.AddonPreferences):
         if issubclass(cls, base):
             return base.bl_rna_get_subclass_py(identifier)
     return None
@@ -8796,6 +8866,16 @@ def _validate_registration_integrity():
             or setup_property.fixed_type != CharacterDesignerSetup.bl_rna):
         errors.append("missing or stale Scene character setup")
 
+    region_property = bpy.types.Scene.bl_rna.properties.get("character_designer_body_region")
+    if (region_property is None or region_property.type != "POINTER"
+            or region_property.fixed_type != CharacterDesignerBodyRegionState.bl_rna):
+        errors.append("missing or stale Scene regional controls settings")
+
+    ground_property = bpy.types.Scene.bl_rna.properties.get("character_designer_ground")
+    if (ground_property is None or ground_property.type != "POINTER"
+            or ground_property.fixed_type != CharacterDesignerGroundState.bl_rna):
+        errors.append("missing or stale Scene character placement settings")
+
     worklist_property = bpy.types.Scene.bl_rna.properties.get("character_designer_animation_worklist")
     if (worklist_property is None or worklist_property.type != "POINTER"
             or worklist_property.fixed_type != CharacterDesignerAnimationWorklistState.bl_rna):
@@ -8806,13 +8886,63 @@ def _validate_registration_integrity():
             or export_property.fixed_type != CharacterDesignerUnityExport.bl_rna):
         errors.append("missing or stale Object Unity export settings")
 
+    update_selection_property = bpy.types.Object.bl_rna.properties.get(
+        unity_update_selection_ui.SETTINGS_PROPERTY)
+    if (update_selection_property is None or update_selection_property.type != "POINTER"
+            or update_selection_property.fixed_type != unity_update_selection_ui.CharacterDesignerUnityUpdateSelection.bl_rna):
+        errors.append("missing or stale Object Unity update selection")
+
+    update_views_property = bpy.types.WindowManager.bl_rna.properties.get(
+        unity_update_selection_ui.VIEW_PROPERTY)
+    if (update_views_property is None or update_views_property.type != "COLLECTION"
+            or update_views_property.fixed_type != unity_update_selection_ui.CharacterDesignerUnityUpdateView.bl_rna):
+        errors.append("missing or stale WindowManager Unity update selection view")
+
+    colors_property = bpy.types.Object.bl_rna.properties.get(color_center.COLORS_PROPERTY)
+    if (colors_property is None or colors_property.type != 'POINTER'
+            or colors_property.fixed_type != color_center.CharacterDesignerColors.bl_rna):
+        errors.append('missing or stale Object color editor')
+    for name, kind in ((color_center.ADVANCED_PROPERTY, 'BOOLEAN'), (color_center.ERROR_PROPERTY, 'STRING')):
+        prop = window_manager_properties.get(name)
+        if prop is None or prop.type != kind:
+            errors.append('missing WindowManager color editor property ' + name)
+
     if errors:
         details = "; ".join(errors)
         raise RuntimeError(f"Character Designer registration is inconsistent: {details}.")
 
 
+def _register_runtime_hooks():
+    """Start the same idempotent runtime hooks on first and repeated registration."""
+    from . import body_calibration_ui, control_pose_assets, control_pose_capture, control_weight_paint as legacy_weights, generated_names, playback_normal_bridge, limb_ik_wrist_rotation_ui
+    register_mesh_mirror_runtime()
+    register_refine_symmetry_runtime()
+    register_finger_bones_runtime()
+    register_finger_root_runtime()
+    register_animation_runtime()
+    register_composition_runtime()
+    register_rigging_runtime()
+    register_reference_view_handlers()
+    body_calibration_ui.register()
+    control_pose_assets.register()
+    control_pose_capture.register()
+    legacy_weights.register()
+    register_limb_ik_viewport_handler()
+    register_bone_collection_handlers()
+    register_bone_display_sync()
+    register_forearm_twist_runtime()
+    playback_normal_bridge.register()
+    _register_workspace_filter_guard()
+    _register_source_watch()
+    generated_names.register_handlers()
+    register_hair_motion_guards()
+    skirt_wiggle_ui.register()
+    skirt_wiggle.register()
+    limb_ik_wrist_rotation_ui.register()
+
+
 def register():
-    from . import body_calibration_ui, control_pose_assets, control_pose_capture, control_weight_paint, generated_names
+    from . import body_calibration_ui, control_pose_assets, control_pose_capture, control_weight_paint as legacy_weights, generated_names, playback_normal_bridge, limb_ik_wrist_rotation_ui
     centerline_registered = hasattr(bpy.types.WindowManager, "character_designer")
     delta_registered = hasattr(
         bpy.types.WindowManager,
@@ -8837,8 +8967,15 @@ def register():
     skirt_registered = hasattr(bpy.types.WindowManager, "character_designer_skirt")
     animation_registered = hasattr(bpy.types.WindowManager, "character_designer_animation")
     setup_registered = hasattr(bpy.types.Scene, "character_designer_setup")
+    region_registered = hasattr(bpy.types.Scene, "character_designer_body_region")
+    ground_registered = hasattr(bpy.types.Scene, "character_designer_ground")
     worklist_registered = hasattr(bpy.types.Scene, "character_designer_animation_worklist")
     unity_export_registered = hasattr(bpy.types.Object, "character_designer_unity_export")
+    unity_update_selection_registered = hasattr(bpy.types.Object, unity_update_selection_ui.SETTINGS_PROPERTY)
+    unity_update_views_registered = hasattr(bpy.types.WindowManager, unity_update_selection_ui.VIEW_PROPERTY)
+    colors_registered = hasattr(bpy.types.Object, color_center.COLORS_PROPERTY)
+    colors_advanced_registered = hasattr(bpy.types.WindowManager, color_center.ADVANCED_PROPERTY)
+    colors_error_registered = hasattr(bpy.types.WindowManager, color_center.ERROR_PROPERTY)
     registration_state = (
         centerline_registered,
         delta_registered,
@@ -8852,33 +8989,22 @@ def register():
         skirt_registered,
         animation_registered,
         setup_registered,
+        region_registered,
+        ground_registered,
         worklist_registered,
         unity_export_registered,
+        unity_update_selection_registered,
+        unity_update_views_registered,
+        colors_registered,
+        colors_advanced_registered,
+        colors_error_registered,
     )
     if all(registration_state):
         _validate_registration_integrity()
-        register_mesh_mirror_runtime()
-        register_refine_symmetry_runtime()
-        register_finger_bones_runtime()
-        register_finger_root_runtime()
-        register_animation_runtime()
-        register_composition_runtime()
-        register_rigging_runtime()
-        register_reference_view_handlers()
-        body_calibration_ui.register()
-        control_pose_assets.register()
-        control_pose_capture.register()
-        control_weight_paint.register()
-        register_limb_ik_viewport_handler()
-        register_bone_collection_handlers()
-        register_bone_display_sync()
-        register_forearm_twist_runtime()
-        _register_workspace_filter_guard()
-        _register_source_watch()
-        generated_names.register_handlers()
-        register_hair_motion_guards()
-        skirt_wiggle_ui.register()
-        skirt_wiggle.register()
+        custom_vertex_groups.register_properties()
+        custom_vertex_parts.register_properties()
+        unity_update_selection_ui.register_properties()
+        _register_runtime_hooks()
         return
     if any(registration_state):
         raise RuntimeError("Character Designer is only partially registered.")
@@ -8886,14 +9012,32 @@ def register():
     registered = []
     added_properties = []
     added_setup = False
+    added_region = False
+    added_ground = False
     added_worklist = False
     added_export = False
+    added_custom_groups = False
+    added_vertex_parts = False
+    added_unity_update_selection = False
+    added_colors = False
     try:
         for cls in CLASSES:
             bpy.utils.register_class(cls)
             registered.append(cls)
+        added_colors = True
+        color_center.register_properties()
+        custom_vertex_groups.register_properties()
+        added_custom_groups = True
+        custom_vertex_parts.register_properties()
+        added_vertex_parts = True
+        added_unity_update_selection = True
+        unity_update_selection_ui.register_properties()
         bpy.types.Scene.character_designer_setup = PointerProperty(type=CharacterDesignerSetup)
         added_setup = True
+        bpy.types.Scene.character_designer_body_region = PointerProperty(type=CharacterDesignerBodyRegionState)
+        added_region = True
+        bpy.types.Scene.character_designer_ground = PointerProperty(type=CharacterDesignerGroundState)
+        added_ground = True
         bpy.types.Scene.character_designer_animation_worklist = PointerProperty(type=CharacterDesignerAnimationWorklistState)
         added_worklist = True
         bpy.types.Object.character_designer_unity_export = PointerProperty(type=CharacterDesignerUnityExport)
@@ -8953,29 +9097,14 @@ def register():
             options={"SKIP_SAVE"},
         )
         added_properties.append("character_designer_references")
-        register_mesh_mirror_runtime()
-        register_refine_symmetry_runtime()
-        register_finger_bones_runtime()
-        register_finger_root_runtime()
-        register_animation_runtime()
-        register_composition_runtime()
-        register_rigging_runtime()
-        register_reference_view_handlers()
-        body_calibration_ui.register()
-        control_pose_assets.register()
-        control_pose_capture.register()
-        control_weight_paint.register()
-        register_limb_ik_viewport_handler()
-        register_bone_collection_handlers()
-        register_bone_display_sync()
-        register_forearm_twist_runtime()
-        _register_workspace_filter_guard()
-        _register_source_watch()
-        generated_names.register_handlers()
-        register_hair_motion_guards()
-        skirt_wiggle_ui.register()
-        skirt_wiggle.register()
+        _register_runtime_hooks()
     except Exception:
+        if added_colors:
+            color_center.unregister_properties()
+        limb_ik_wrist_rotation_ui.unregister()
+        playback_normal_bridge.unregister(recover_pending=False)
+        if added_unity_update_selection:
+            unity_update_selection_ui.unregister_properties()
         skirt_wiggle.unregister()
         skirt_wiggle_ui.unregister()
         unregister_hair_motion_guards()
@@ -8992,7 +9121,7 @@ def register():
         unregister_forearm_twist_runtime()
         control_pose_capture.unregister()
         control_pose_assets.unregister()
-        control_weight_paint.unregister()
+        legacy_weights.unregister()
         body_calibration_ui.unregister()
         unregister_limb_ik_viewport_handler()
         unregister_bone_collection_handlers()
@@ -9002,6 +9131,10 @@ def register():
         _unregister_source_watch()
         if added_setup and hasattr(bpy.types.Scene, "character_designer_setup"):
             del bpy.types.Scene.character_designer_setup
+        if added_region and hasattr(bpy.types.Scene, "character_designer_body_region"):
+            del bpy.types.Scene.character_designer_body_region
+        if added_ground and hasattr(bpy.types.Scene, "character_designer_ground"):
+            del bpy.types.Scene.character_designer_ground
         if added_worklist and hasattr(bpy.types.Scene, "character_designer_animation_worklist"):
             del bpy.types.Scene.character_designer_animation_worklist
         if added_export and hasattr(bpy.types.Object, "character_designer_unity_export"):
@@ -9009,6 +9142,10 @@ def register():
         for property_name in reversed(added_properties):
             if hasattr(bpy.types.WindowManager, property_name):
                 delattr(bpy.types.WindowManager, property_name)
+        if added_vertex_parts:
+            custom_vertex_parts.unregister_properties()
+        if added_custom_groups:
+            custom_vertex_groups.unregister_properties()
         for cls in reversed(registered):
             try:
                 bpy.utils.unregister_class(cls)
@@ -9018,14 +9155,20 @@ def register():
 
 
 def unregister():
-    from . import body_calibration_ui, control_pose_assets, control_pose_capture, control_weight_paint, generated_names
+    from . import body_calibration_ui, control_pose_assets, control_pose_capture, control_weight_paint as legacy_weights, generated_names, playback_normal_bridge, limb_ik_wrist_rotation_ui
+    color_center.unregister_properties()
+    limb_ik_wrist_rotation_ui.unregister()
+    playback_normal_bridge.unregister()
+    unity_update_selection_ui.unregister_properties()
+    custom_vertex_parts.unregister_properties()
+    custom_vertex_groups.unregister_properties()
     skirt_wiggle.unregister()
     skirt_wiggle_ui.unregister()
     unregister_hair_motion_guards()
     generated_names.unregister_handlers()
     control_pose_capture.unregister()
     control_pose_assets.unregister()
-    control_weight_paint.unregister()
+    legacy_weights.unregister()
     body_calibration_ui.unregister()
     stop_export_ui()
     stop_worklist_ui()
@@ -9048,6 +9191,10 @@ def unregister():
     _unregister_source_watch()
     if hasattr(bpy.types.Scene, "character_designer_setup"):
         del bpy.types.Scene.character_designer_setup
+    if hasattr(bpy.types.Scene, "character_designer_body_region"):
+        del bpy.types.Scene.character_designer_body_region
+    if hasattr(bpy.types.Scene, "character_designer_ground"):
+        del bpy.types.Scene.character_designer_ground
     if hasattr(bpy.types.Scene, "character_designer_animation_worklist"):
         del bpy.types.Scene.character_designer_animation_worklist
     if hasattr(bpy.types.Object, "character_designer_unity_export"):

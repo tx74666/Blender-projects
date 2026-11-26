@@ -72,6 +72,10 @@ def _validate_route(saved, clip, link, item=None):
     if item is not None and _item_workspace(item):
         record = _fresh_workspace(saved, item)
         actual = next((row for row in record['clips'] if _clip_key(row) == item.clip_key), None)
+        if clip is None:
+            # Attached rows can resolve their clip at this final fresh read.
+            # The caller need not load the same workspace before reading Link.
+            clip = actual
         if (actual is None or actual.get('needsRebuild') or not actual.get('linkManifest')
                 or Path(actual['linkManifest']).resolve() != Path(item.manifest_path).resolve()
                 or workspace.route_identity(actual) != workspace.route_identity(clip)
@@ -79,6 +83,8 @@ def _validate_route(saved, clip, link, item=None):
                 or record['modelSha256'].lower() != item.model_sha256):
             raise ValueError('The attached work item lost its own prepared workspace, route or model.')
         target_guid = record['targetGuid'].lower()
+    if clip is None:
+        raise ValueError('The prepared work item is missing from its workspace.')
     if (link['targetGuid'].lower() != target_guid or
             workspace.route_identity(clip) != workspace.route_identity(link)):
         raise ValueError('The prepared Link belongs to another work item, source, character or destination slot.')
@@ -97,6 +103,7 @@ def _fill_catalog(saved, record):
         entry = saved.catalog.add()
         entry.clip_key, entry.name = _clip_key(clip), clip['clipName']
         entry.work_item_id = workspace.work_item_id(clip)
+        entry.target_slot_id = workspace.target_slot_id(clip)
         entry.source_name = clip.get('sourceName') or clip.get('sourceAsset') or ''
         entry.link_path = clip.get('linkManifest') or ''
         entry.ready = bool(not clip.get('needsRebuild') and entry.link_path and Path(entry.link_path).is_file())
@@ -119,6 +126,8 @@ def connect(context, filepath):
     saved.target_name = record['targetName']
     saved.model_file, saved.model_sha256 = record['modelFile'], record['modelSha256'].lower()
     _fill_catalog(saved, record)
+    if hasattr(saved, 'connection_check_failed'):
+        saved.connection_check_failed = False
     saved.status, saved.has_error = 'Library connected. Prepare a clip in Unity, then add it to the worklist.', False
     return saved
 
@@ -332,7 +341,35 @@ def _slot(action, handle=None):
     return slots[0]
 
 
-def _linked_baseline(saved, action, item_id, clip_name):
+def _populate_controller_custom(context, rig, source_action, custom, *, prepare_controls=True):
+    """Populate only this import's unbound copy, never its retained input.
+
+    The caller's add transaction owns disposal if native writing fails. Source
+    and adopted edits remain independent IDs throughout conversion.
+    """
+    if custom is source_action or custom.library is not None:
+        raise ValueError('Controller import needs its own local Custom copy.')
+    if not prepare_controls:
+        return 'NATIVE_SOURCE'
+    from . import controller_animation
+    built = controller_animation.build_controller_channels(
+        context, rig, source_action, _slot(source_action).handle)
+    state = built.get('conversion_state')
+    if state not in {'CONTROLLER', 'NATIVE_FK'}:
+        raise ValueError('The imported animation did not establish its controller representation.')
+    result = controller_animation.apply_to_action(custom, _slot(custom).handle, built)
+    if result.get('conversion_state') != state:
+        raise ValueError('The imported controller result lost its conversion state.')
+    if state == 'CONTROLLER' and not isinstance(result.get('metadata'), dict):
+        raise ValueError('The imported controller motion lost its complete-clip metadata.')
+    if state == 'NATIVE_FK' and result.get('metadata') is not None:
+        raise ValueError('Native FK input cannot claim a generated IK conversion.')
+    return state
+
+
+def _linked_baseline(saved, action, item_id, clip_name, *, _ownership=None):
+    if _ownership is not None and (not isinstance(_ownership, dict) or _ownership):
+        raise ValueError('A new Source ownership receipt must be an empty dictionary.')
     action.name = 'Source · ' + clip_name
     cache = Path(bpy.utils.user_resource('DATAFILES', path='character_designer/animation_sources', create=True))
     folder = cache / uuid.UUID(saved.workspace_id).hex / saved.model_sha256
@@ -340,21 +377,35 @@ def _linked_baseline(saved, action, item_id, clip_name):
     path = folder / (item_id + '.blend')
     if path.exists():
         raise ValueError('The new Source cache already exists; no existing baseline was overwritten.')
+    if _ownership is not None:
+        _ownership.update(path=str(path), input_action=action)
     try:
         bpy.data.libraries.write(str(path), {action}, fake_user=True, compress=True)
         digest = links._sha256(path)
         with bpy.data.libraries.load(str(path), link=True) as (_available, selected):
+            if _ownership is not None:
+                # The loader's own result remains available if __exit__ fails
+                # after a partial load. Callers need never delete a global ID
+                # difference to recover this one UUID-owned Source operation.
+                _ownership['load_result'] = selected
             selected.actions = [action.name]
         linked = selected.actions[0]
+        if _ownership is not None:
+            _ownership.update(action=linked, library=linked.library if linked is not None else None)
         if linked is None or linked.library is None:
             raise ValueError('Blender did not create a read-only Source Action.')
     except Exception:
         # The UUID path did not exist before this operation. Never remove a
         # baseline belonging to an existing worklist row.
-        try:
-            path.unlink(missing_ok=True)
-        except OSError:
-            pass
+        if _ownership is None:
+            try:
+                path.unlink(missing_ok=True)
+            except OSError:
+                pass
+        else:
+            # A receipt owner must first dispose/protect its actual loader IDs;
+            # deleting their backing cache early can break a foreign reference.
+            _ownership['failed'] = True
         raise
     return linked, str(path), digest
 
@@ -376,11 +427,14 @@ def _editing_data(context, rig, *, packet=None):
     if ua.active_preview(rig):
         ua.restore_preview(context, rig)
     translated = None
-    if packet is not None and 'rigging' in packet:
+    if packet is not None:
         mapping = ua._mapping(rig, packet, context.scene.unit_settings.scale_length)
-        if mapping.controls is None:
+        if mapping.controls is not None:
+            translated = mapping.controls.mapped_names - mapping.controls.delegated_names
+        elif 'rigging' in packet:
             raise ValueError('Rigging motion editing needs its validated native control plan.')
-        translated = mapping.controls.mapped_names - mapping.controls.delegated_names
+        else:
+            translated = frozenset(mapping.indices)
     data = rig.data.copy()
     data.name = rig.data.name + ' · Motion Worklist'
     if translated is None:
@@ -537,7 +591,8 @@ def _composition_add_route(context, saved, clip_key, existing, *, activate_new, 
         activate_new=activate_new, _collection=_collection)
 
 
-def add(context, clip_key, *, activate_new=True, _collection=False, _prepared_context=None):
+def add(context, clip_key, *, activate_new=True, _collection=False, _prepared_context=None,
+        prepare_controls=True):
     from . import animation_composition as composition
     if composition.active(state(context).rig):
         raise ValueError('Close Composition before switching or removing worklist Actions; both drafts are retained.')
@@ -575,6 +630,9 @@ def add(context, clip_key, *, activate_new=True, _collection=False, _prepared_co
         cache_owner = SimpleNamespace(workspace_id=_prepared_context['workspace_id'],
             model_sha256=_prepared_context['model_sha256'])
     rigging = _rigging_module(saved.rig, packet=packet)
+    if rigging is None:
+        from . import controller_animation
+        controller_animation._require_private_evaluation_idle()
     old_context = source._context_state(context)
     previous_target = context.window_manager.character_designer_animation.target
     created_before = set(bpy.data.user_map())
@@ -634,10 +692,7 @@ def add(context, clip_key, *, activate_new=True, _collection=False, _prepared_co
             if target.managed(rig):
                 target.ensure_active(context, rig)
             else:
-                if 'rigging' in packet:
-                    _editing_data(context, rig, packet=packet)
-                else:
-                    _editing_data(context, rig)
+                _editing_data(context, rig, packet=packet)
         if rig.name not in context.scene.objects or rig.type != 'ARMATURE' or rig.library:
             raise ValueError('Return to this worklist\'s independent editing scene.')
         if baseline is None:
@@ -648,12 +703,20 @@ def add(context, clip_key, *, activate_new=True, _collection=False, _prepared_co
             baseline = imported.action
             target.restore_import_preview(context, rig, baseline)
         _clean_action(baseline)
-        custom = existing_edit or baseline.copy()
+        # Ordinary controller conversion only writes a newly owned copy. The
+        # separate captured-Rigging route keeps its established base/input
+        # ownership and publication path; it is not a generic IK conversion.
+        custom = (existing_edit if existing_edit is not None and 'rigging' in packet
+                  else (existing_edit or baseline).copy())
         _clean_action(custom)
-        if existing_edit is None:
+        if existing_edit is None or 'rigging' not in packet:
             custom.name = saved.target_name + ' · ' + clip['clipName'] + ' · Custom'
         item_id = uuid.uuid4().hex
         linked, cache_file, cache_hash = _linked_baseline(cache_owner, baseline, item_id, clip['clipName'])
+        controller_state = None
+        if 'rigging' not in packet:
+            controller_state = _populate_controller_custom(
+                context, rig, existing_edit or linked, custom, prepare_controls=prepare_controls)
         # Re-check inputs before publishing a row; preparation may have changed
         # while the synchronous native bake was running.
         latest = links.load_link(link['_manifest_path'])
@@ -692,7 +755,17 @@ def add(context, clip_key, *, activate_new=True, _collection=False, _prepared_co
         else:
             saved.active_index = -1
         bpy.data.actions.remove(baseline)
-        saved.status, saved.has_error = 'Added ' + item.name + '. Select Source to compare or Custom to edit.', False
+        if existing_edit is not None and custom is not existing_edit:
+            existing_edit.use_fake_user = True
+        if controller_state == 'CONTROLLER':
+            message = 'Added ' + item.name + '. Controller animation is ready.'
+        elif controller_state == 'NATIVE_FK':
+            message = 'Added ' + item.name + '. Native FK controls are retained; this rig has no generated IK limbs.'
+        elif controller_state == 'NATIVE_SOURCE':
+            message = 'Added ' + item.name + '. Original bone animation is ready to open.'
+        else:
+            message = 'Added ' + item.name + '. Rigging input editing is retained.'
+        saved.status, saved.has_error = message, False
         if captured:
             captured['data'].use_fake_user = captured['fake_user']
         rig.show_in_front = True
@@ -758,11 +831,22 @@ def _check_baseline(item):
         return
     if item.source_action is None or item.source_action.library is None:
         raise ValueError('The Source Action is missing or was made editable; its baseline is not trusted.')
-    path = Path(item.source_file)
+    from .animation_worklist_dependencies import source_path
+    path = Path(source_path(item))
     if Path(bpy.path.abspath(item.source_action.library.filepath)).resolve() != path.resolve():
         raise ValueError('The Source Action no longer refers to its recorded baseline library.')
     if not path.is_file() or links._sha256(path) != item.source_hash:
         raise ValueError('The read-only Source cache changed or is missing. Existing Custom edits are kept.')
+
+
+def package_dependencies(context, directory):
+    from .animation_worklist_dependencies import package_dependencies as package
+    return package(context, directory)
+
+
+def rebind_dependencies(context, manifest_path):
+    from .animation_worklist_dependencies import rebind_dependencies as rebind
+    return rebind(context, manifest_path)
 
 
 def _association_record(item):
@@ -790,6 +874,100 @@ def activate(context, item_id, side='CUSTOM', *, _collection=False):
         return _activate_worklist_action(context, item_id, side, _collection=_collection)
 
 
+def use_current_rig_version(context):
+    """Keep old recovery rights separate from a fresh local editing version."""
+    from . import animation_pose_test as pose_test, animation_worklist_revision as revision
+    from . import animation_composition as composition
+    _idle(context)
+    saved = state(context)
+    selected = current(context)
+    if selected is None:
+        raise ValueError('Select the animation to continue editing on the current rig.')
+    rig = _item(saved, selected.item_id).rig
+    if pose_test.natural_active(rig):
+        raise ValueError('Choose Pose to finish the static Rest test before changing Rig Version.')
+    if composition.active(rig):
+        raise ValueError('Close Composition before creating current-rig animation versions.')
+    if getattr(selected, 'current_rig_revision', ''):
+        activate(context, selected.item_id, 'CUSTOM')
+        return selected
+    if pose_test._rig(context).as_pointer() != rig.as_pointer():
+        raise ValueError('The animation list and current Main Rig differ; their drafts were kept.')
+    old_ad = rig.animation_data
+    old_action = old_ad.action if old_ad else None
+    old_slot = old_ad.action_slot if old_ad else None
+    old_token = rig.get(pose_test.TOKEN_KEY)
+    preserved = None
+    if pose_test.active(rig):
+        # This authenticates the stale, still-bound scratch and preserves the
+        # actual current pose. It never applies the old record.before values.
+        preserved = pose_test.keep_stale_draft(context)
+    try:
+        return revision.create(context, selected.item_id, activate_new=True)
+    except Exception as exc:
+        if preserved is None:
+            raise
+        errors = []
+        try:
+            ad = rig.animation_data
+            if ad is None or ad.action is not None or pose_test.active(rig):
+                raise RuntimeError('The fresh transaction did not return its original unbound checkpoint.')
+            ad.action, ad.action_slot = old_action, old_slot
+            rig[pose_test.TOKEN_KEY] = old_token
+        except Exception as recovery:
+            errors.append(str(recovery))
+        if errors:
+            raise RuntimeError('Current-rig preparation stopped; the new recovery archive was kept: '
+                               + '; '.join(errors)) from exc
+        archive = preserved['archive']
+        pointer = archive.as_pointer()
+        try:
+            if archive.users - int(archive.use_fake_user):
+                raise RuntimeError('Another owner now references the newly preserved checkpoint.')
+            archive.use_fake_user = False
+            try:
+                bpy.data.actions.remove(archive, do_unlink=False)
+            except Exception:
+                existing = next((value for value in bpy.data.actions if value.as_pointer() == pointer), None)
+                if existing is not None:
+                    existing.use_fake_user = True
+                    raise
+        except Exception as recovery:
+            errors.append(str(recovery))
+        if errors:
+            raise RuntimeError('Current-rig preparation stopped; preserved recovery needs attention: '
+                               + '; '.join(errors)) from exc
+        raise
+
+
+def resume_and_activate(context, item_id, side='CUSTOM'):
+    """One explicit animation click resumes the retained artist work session."""
+    from . import animation_worklist_target as target
+    from . import animation_composition as composition
+    _idle(context)
+    saved = state(context)
+    item = _item(saved, item_id)
+    if side not in {'SOURCE', 'CUSTOM'}:
+        raise ValueError('Choose Source or Custom.')
+    if side == 'SOURCE' and getattr(item, 'new_animation', False):
+        raise ValueError('This new Action has no Original or Source version.')
+    if composition.active(item.rig):
+        raise ValueError('Close Composition before switching worklist Actions; both drafts are retained.')
+    _check_baseline(item)
+    if not target.managed(item.rig) or target.is_adopted(item.rig):
+        return activate(context, item_id, side)
+    adopt_main_rig(context)
+    try:
+        return activate(context, item_id, side)
+    except Exception as exc:
+        try:
+            restore_main_rig(context)
+        except Exception as recovery:
+            raise RuntimeError('Animation activation failed and the saved artist recovery snapshot '
+                               'could not be restored: ' + str(recovery)) from exc
+        raise
+
+
 def _activate_worklist_action(context, item_id, side='CUSTOM', *, _collection=False):
     from . import animation_composition as composition
     if composition.active(state(context).rig):
@@ -802,6 +980,9 @@ def _activate_worklist_action(context, item_id, side='CUSTOM', *, _collection=Fa
     item = _item(saved, item_id)
     if side == 'SOURCE' and getattr(item, 'new_animation', False):
         raise ValueError('This new Action has no Original or Source version.')
+    if getattr(item, 'current_rig_revision', ''):
+        from . import animation_worklist_revision
+        return animation_worklist_revision.activate(context, item.item_id, side)
     if _item_workspace(item) and not getattr(item, 'new_animation', False):
         # File/route/capture admission precedes closing a preview or assigning
         # any Action. Missing captured Rigging never becomes ordinary editing.
@@ -911,14 +1092,20 @@ def remove(context, item_id):
     if rigging:
         rigging.restore_owned(context, item.rig)
     ad = item.rig.animation_data
-    if ad and ad.action in {item.source_action, item.custom_action}:
+    selected = current(context)
+    shared_active = False
+    if ad and selected and selected.item_id != item_id and selected.rig == item.rig:
+        selected_action = selected.source_action if selected.side == 'SOURCE' else selected.custom_action
+        selected_slot = selected.source_slot if selected.side == 'SOURCE' else selected.custom_slot
+        bound_slot = ad.action_slot.handle if ad.action_slot else None
+        shared_active = ad.action is selected_action and bound_slot == selected_slot
+    if ad and ad.action in {item.source_action, item.custom_action} and not shared_active:
         ua._set_playing(context, False)
         ad.action = None
     if item.rig.get(links.ACTION_KEY) is item.custom_action:
         for key in (links.LINK_KEY, links.ACTION_KEY):
             if key in item.rig:
                 del item.rig[key]
-    selected = current(context)
     selected_id = selected.item_id if selected and selected.item_id != item_id else ''
     saved.items.remove(index)
     saved.active_index = next((i for i, entry in enumerate(saved.items) if entry.item_id == selected_id), -1)
@@ -932,6 +1119,8 @@ def sync(context, *, _collection=False, _collection_proof=None):
     item = current(context)
     if item is None or item.side != 'CUSTOM':
         raise ValueError('Select a Custom worklist Action before syncing. Source is read-only.')
+    if getattr(item, 'current_rig_revision', ''):
+        raise ValueError('This local motion uses the current rig. Prepare matching Unity sources before exporting it.')
     from . import animation_composition as composition
     if composition.item_spec(item) is not None:
         return composition.begin_sync(context, item, collection=_collection, collection_proof=_collection_proof)
@@ -970,7 +1159,6 @@ def sync(context, *, _collection=False, _collection_proof=None):
         job['_worklist_fingerprint'] = proof
         job['_worklist_export_implementation'] = implementation
         from . import animation
-        animation._export_window_manager = context.window_manager
-        bpy.app.timers.register(animation._poll_action_export, first_interval=0.25)
+        animation._track_action_export(context, job)
         saved.status, saved.has_error = 'Syncing ' + item.name + '. Preview and Apply the candidate in Unity.', False
         return job

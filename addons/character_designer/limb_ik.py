@@ -29,6 +29,7 @@ from . import root_control
 from . import limb_fk_visuals
 from . import eye_controls
 from . import control_colors
+from . import validation_json, validation_native
 
 
 OWNER_KEY = "character_designer_owner"
@@ -220,6 +221,7 @@ class LimbPlan:
     line_head: Vector | None = None
     line_tail: Vector | None = None
     configured_pole_direction: Vector | None = None
+    ik_constraint_name: str = ""
     persist_pole_direction: bool = True
     preserve_pole_angle: bool = False
     auto_align: bool = DEFAULT_AUTO_ALIGN
@@ -642,11 +644,14 @@ class CHARACTERDESIGNER_OT_limb_ik_analyze(Operator):
 
 
 def _single_armature_user(armature):
-    """Accept only proven Worklist references beyond the native Object user."""
+    """Accept only proven recovery references beyond the native Object user."""
     if armature.data.users == 1:
         return True
     from . import animation_worklist_target
-    return animation_worklist_target.single_armature_user(armature)
+    if animation_worklist_target.single_armature_user(armature):
+        return True
+    from . import body_region
+    return body_region.verified_single_armature_user(armature)
 
 
 def _require_active_armature(context, settings, *, analyzed=True):
@@ -1144,7 +1149,7 @@ def _load_direct_rest_registry(armature, *, strict=True):
     if not raw:
         return {"version": DIRECT_PREROLL_RESULT_VERSION, "limbs": {}}
     try:
-        payload = json.loads(raw)
+        payload = validation_json.decode(raw)
     except (TypeError, ValueError, json.JSONDecodeError) as exc:
         if strict:
             raise LimbIKError("Direct Pre-Roll Rest registry is corrupt.") from exc
@@ -1518,7 +1523,7 @@ def _constraint_registry(pose_bone, *, strict=False):
     if not raw:
         return {}
     try:
-        payload = json.loads(raw)
+        payload = validation_json.decode(raw)
     except (TypeError, ValueError, json.JSONDecodeError) as exc:
         if strict:
             raise LimbIKError(f"Limb IK registry on bone '{pose_bone.name}' is corrupt.") from exc
@@ -1539,6 +1544,47 @@ def _write_constraint_registry(pose_bone, registry):
 
 def _constraint_name(rig_id, role):
     return f"CDLimbIK_{role}_{rig_id}"
+
+
+def _ik_label(kind, side):
+    limb = {"ARM": "Arm", "LEG": "Leg"}.get(kind)
+    direction = {"L": "Left", "R": "Right"}.get(side)
+    return f"{direction} {limb} IK" if direction and limb else "Limb IK"
+
+
+def _constraint_name_matches(name, record):
+    role = record.get("role")
+    if name == _constraint_name(record.get("rig_id"), role):
+        return True
+    if role != "IK" or record.get("kind") not in LIMB_SPEC or record.get("side") not in {"L", "R"}:
+        return False
+    label = _ik_label(record["kind"], record["side"])
+    if name == label:
+        return True
+    prefix = label + "."
+    suffix = name[len(prefix):]
+    return name.startswith(prefix) and suffix.isascii() and suffix.isdigit() and len(suffix) >= 3
+
+
+def _reserve_ik_name(plan, owner):
+    if plan.ik_constraint_name:
+        if owner.constraints.get(plan.ik_constraint_name) is not None:
+            raise LimbIKError(f"Cannot restore the saved IK constraint on '{owner.name}': its name is in use.")
+        return plan.ik_constraint_name
+    label = _ik_label(plan.chain.kind, plan.chain.side)
+    name = label
+    index = 0
+    while owner.constraints.get(name) is not None:
+        index += 1
+        name = f"{label}.{index:03d}"
+    plan.ik_constraint_name = name
+    return name
+
+
+def _constraint_label(record):
+    if record["role"] == "IK":
+        return _ik_label(record.get("kind"), record.get("side"))
+    return record["role"].replace("_", " ").title()
 
 
 def _tag(target, armature_id, *, role, rig_id="", kind="", side="", chain=()):
@@ -1655,6 +1701,7 @@ def _retarget_custom_shape_frame(
     transform,
     *,
     previous_reference_matrix=None,
+    current_reference_matrix=None,
 ):
     """Change a display-only transform reference with an explicit handoff.
 
@@ -1676,7 +1723,8 @@ def _retarget_custom_shape_frame(
             f"Control '{pose_bone.name}' cannot use a singular Auto Align display frame."
         )
     old_visual = _control_visual_state(pose_bone)
-    current_frame = current_transform.matrix @ _custom_shape_state_matrix(old_visual)
+    current_matrix = current_reference_matrix if current_reference_matrix is not None else current_transform.matrix
+    current_frame = current_matrix @ _custom_shape_state_matrix(old_visual)
     reference_matrix = (
         previous_reference_matrix.copy()
         if previous_reference_matrix is not None
@@ -1706,7 +1754,7 @@ def _retarget_custom_shape_frame(
             f"Control '{pose_bone.name}'",
         )
         default_frame = (
-            current_transform.matrix
+            current_matrix
             @ _custom_shape_state_matrix(current_default)
         )
         next_default = _custom_shape_state_from_matrix(
@@ -1817,7 +1865,9 @@ def _pole_display_visible(context, armature, pole_data, pole_pose):
     This bounded query uses the declared limb target, never a strict inventory
     or scene audit from a viewport draw callback.
     """
-    if (pole_data.hide or bool(getattr(pole_pose, 'hide', False))
+    # Blender 5 separates Edit Bone.hide from Object/Pose PoseBone.hide.
+    # Keep the legacy Bone flag only for versions without the Pose property.
+    if (bool(getattr(pole_pose, 'hide', pole_data.hide))
             or not armature.data.show_bone_custom_shapes or pole_pose.custom_shape is None
             or _control_shape_style(pole_data, strict=False) == 'SPHERE'
             or 'character_designer_body_original_mode_v1' in armature
@@ -2083,6 +2133,8 @@ def _draw_direct_pole_guides():
 
 def register_limb_ik_viewport_handler():
     """Install exactly one hot-reload-safe Direct Pole guide handler."""
+    from . import footwear_display
+    footwear_display.register()
 
     global _POLE_GUIDE_DRAW_HANDLE
     _clear_pole_guide_cache()
@@ -2111,6 +2163,8 @@ def register_limb_ik_viewport_handler():
 
 def unregister_limb_ik_viewport_handler():
     """Remove the Direct Pole guide handler without touching any rig data."""
+    from . import footwear_display
+    footwear_display.unregister()
 
     global _POLE_GUIDE_DRAW_HANDLE
     _clear_pole_guide_cache()
@@ -2386,7 +2440,7 @@ def _restore_pose_shape_state(armature, pose_bone, state, *, runtime=False):
 def _parse_source_widget_registry(armature, raw):
     if not isinstance(raw, str) or not raw:
         raise LimbIKError("The source-control Custom Shape registry is not valid JSON text.")
-    payload = json.loads(raw)
+    payload = validation_json.decode(raw)
     if not isinstance(payload, dict) or payload.get("version") not in {
         LEGACY_SOURCE_WIDGETS_VERSION,
         SOURCE_WIDGETS_VERSION,
@@ -3029,6 +3083,12 @@ def _ensure_control_collection(armature, armature_id, transaction):
 
 
 def _owned_constraint_records(armature, *, strict=True):
+    if strict is True:
+        return validation_native.strict_constraint_records(armature, _scan_owned_constraint_records)
+    return _scan_owned_constraint_records(armature, strict=strict)
+
+
+def _scan_owned_constraint_records(armature, *, strict=True):
     records = []
     pose = armature.pose
     if pose is None:
@@ -3061,12 +3121,12 @@ def _owned_constraint_records(armature, *, strict=True):
                 or not isinstance(rig_id, str)
                 or not rig_id
                 or role not in role_types
-                or constraint_name != _constraint_name(rig_id, role)
+                or not _constraint_name_matches(constraint_name, record)
             ):
                 raise LimbIKError(f"Limb IK registry on bone '{pose_bone.name}' has an unknown ownership fingerprint.")
             matches = [constraint for constraint in pose_bone.constraints if constraint.name == constraint_name]
             if len(matches) != 1:
-                raise LimbIKError(f"Owned constraint '{constraint_name}' is missing or duplicated.")
+                raise LimbIKError(f"{_constraint_label(record)} on '{pose_bone.name}' is missing or duplicated.")
             constraint = matches[0]
             expected_type = role_types[role]
             if role == "AUTO_OFFSET_ROTATION" and record.get("rotation_space") == "PARENT_DELTA":
@@ -3074,14 +3134,14 @@ def _owned_constraint_records(armature, *, strict=True):
                     raise LimbIKError("Parent-relative rotation is only supported on Arm targets.")
                 expected_type = "COPY_ROTATION"
             if constraint.type != expected_type:
-                raise LimbIKError(f"Owned constraint '{constraint_name}' changed type.")
+                raise LimbIKError(f"{_constraint_label(record)} on '{pose_bone.name}' changed type.")
             records.append((pose_bone, constraint, record))
     return records
 
 
 def _record_constraint(pose_bone, constraint, plan, armature_id, role, *, schema=CURRENT_SCHEMA):
     registry = _constraint_registry(pose_bone, strict=True)
-    constraint.name = _constraint_name(plan.rig_id, role)
+    constraint.name = plan.ik_constraint_name if role == "IK" else _constraint_name(plan.rig_id, role)
     if constraint.name in registry:
         raise LimbIKError(f"Constraint registry collision on '{pose_bone.name}'.")
     record = {
@@ -3156,25 +3216,44 @@ def _validation_source_rest(armature, source_rest=None):
     """Resolve only an authenticated adopted motion-data copy, without mutation."""
     if source_rest is not None:
         return source_rest
+    if validation_native.source_rest_is_none(armature):
+        return None
     from . import animation_worklist_target
     if not animation_worklist_target.is_adopted(armature):
+        validation_native.remember_source_rest_none(armature)
         return None
     try:
-        return animation_worklist_target.control_rest_view(armature)
+        result = animation_worklist_target.control_rest_view(armature)
     except ValueError as exc:
         raise LimbIKError('Main Rig motion Rest proof failed: ' + str(exc)) from exc
+    if result is None:
+        validation_native.remember_source_rest_none(armature)
+    return result
 
 
-def _validate_inventory(armature, *, original_mutes=None, original_rest=None, source_rest=None):
+def _validate_inventory(armature, *, original_mutes=None, original_rest=None, source_rest=None, limb_pose_only=False):
+    # A current-pose operation compares evaluated limb inputs to this data's
+    # actual bind bones. It cannot use its result to restore or rebuild a rig.
+    if limb_pose_only and any(view is not None for view in (original_mutes, original_rest, source_rest)):
+        raise LimbIKError("Current limb posing cannot use a historical Rest or mute view.")
+    bind_ik = {}
+    if limb_pose_only:
+        from . import natural_bind_graph
+        if natural_bind_graph.KEY in armature:
+            graph = natural_bind_graph.validate(armature)
+            bind_ik = {(name, constraint): prior for name, constraint, prior in validation_json.decode(graph['ik'])}
+    if not limb_pose_only and original_mutes is None and original_rest is None and source_rest is None:
+        from . import body_rest_adoption
+        original_rest = body_rest_adoption.checkpoint_rest_view(armature)
     # Explicit Original-mode views keep their own comparison/mute semantics.
     # Ordinary control/corrective callers need the same proven Worklist view as
     # the importer while a managed native translation data copy is attached.
-    if original_rest is None and source_rest is None and original_mutes is None:
+    if not limb_pose_only and original_rest is None and source_rest is None and original_mutes is None:
         source_rest = _validation_source_rest(armature)
         if source_rest is not None:
             original_rest = source_rest
     armature_id = armature.data.get(ARMATURE_ID_KEY, "")
-    generated = [bone for bone in armature.data.bones if bone.get(OWNER_KEY) == OWNER_VALUE]
+    generated = list(validation_native.iter_owned_bones(armature, OWNER_KEY, OWNER_VALUE))
     records = _owned_constraint_records(armature, strict=True)
     if not armature_id:
         if (
@@ -3246,16 +3325,16 @@ def _validate_inventory(armature, *, original_mutes=None, original_rest=None, so
         direct_registry = {"version": DIRECT_PREROLL_RESULT_VERSION, "limbs": {}}
     for pose_bone, constraint, record in records:
         influence = float(constraint.influence)
-        muted = _validation_mute(pose_bone, constraint, original_mutes)
+        muted = bind_ik.get((pose_bone.name, constraint.name), _validation_mute(pose_bone, constraint, original_mutes))
         switched = limb_ik_fk.validate_constraint_influence(armature, pose_bone, constraint, record)
         if not switched and (not math.isfinite(influence) or abs(influence - 1.0) > 1.0e-6):
-            raise LimbIKError(f"Owned constraint '{constraint.name}' on '{pose_bone.name}' was disabled or had its influence edited.")
+            raise LimbIKError(f"{_constraint_label(record)} on '{pose_bone.name}' needs influence 1.0 (currently {influence:.3g}).")
         if record["role"] in {"END_ROTATION", "AUTO_OFFSET_ROTATION"}:
             target_bone = armature.data.bones.get(record.get("target", ""))
             auto_value = target_bone.get(AUTO_ALIGN_KEY, False) if target_bone is not None else False
             if type(auto_value) is not bool:
                 raise LimbIKError(
-                    f"Owned Target for '{constraint.name}' has invalid Auto Align state."
+                    f"{_constraint_label(record)} on '{pose_bone.name}' has an invalid Auto Align setting."
                 )
             expected_mute = (
                 auto_value
@@ -3264,10 +3343,10 @@ def _validate_inventory(armature, *, original_mutes=None, original_rest=None, so
             )
             if muted != expected_mute:
                 raise LimbIKError(
-                    f"Owned Target rotation '{constraint.name}' does not match its Auto Align state."
+                    f"{_constraint_label(record)} on '{pose_bone.name}' does not match its Auto Align setting."
                 )
         elif muted:
-            raise LimbIKError(f"Owned constraint '{constraint.name}' on '{pose_bone.name}' was disabled or had its influence edited.")
+            raise LimbIKError(f"{_constraint_label(record)} on '{pose_bone.name}' is disabled.")
     rigs = {}
     by_rig = {}
     master_records = []
@@ -3386,7 +3465,11 @@ def _validate_inventory(armature, *, original_mutes=None, original_rest=None, so
             raise LimbIKError(f"Limb IK rig '{rig_id}' Target pose bone is missing.")
         target_display = target_pose.custom_shape_transform
         expected_end = armature.pose.bones.get(chain[2])
-        if auto_align:
+        from . import foot_sole_display
+        if key[0] == "LEG" and foot_sole_display.current(target):
+            if not foot_sole_display.valid_frame(target_pose):
+                raise LimbIKError(f"The sole outline on '{target.name}' was assigned another display frame.")
+        elif auto_align:
             # Schema 5 always authors the dynamic display pointer.  Older
             # schema-3/4 Auto rigs predate it, so tolerate None until their
             # next Rebuild or explicit global Auto operation upgrades it.
@@ -3764,6 +3847,9 @@ def _validate_inventory(armature, *, original_mutes=None, original_rest=None, so
         "master_records": master_records,
         "source_widgets": source_widgets,
     }
+    if limb_pose_only:
+        foot_controls.validate(armature, inventory, limb_pose_only=True)
+        return inventory
     mute_view = {'original_mutes': original_mutes} if original_mutes is not None else {}
     if source_rest is not None:
         mute_view['source_rest'] = source_rest
@@ -4335,8 +4421,9 @@ def _foot_widget_fits(context, armature, plans, shapes):
         medial_sign = _foot_medial_sign(armature, plan, lateral)
         target_rotation = target.matrix.to_3x3().normalized()
         display_rotation = Matrix((lateral, forward, down)).transposed()
-        sole_gap = max(foot_length * FOOT_WIDGET_SOLE_GAP_RATIO, chain_length * 0.003)
-        desired_top = min(point.z for point in candidates) - sole_gap
+        # The fitted sole display shares the shoe bottom; Ground places both
+        # at world Z=0 without a separate display clearance or manual offset.
+        desired_top = min(point.z for point in candidates)
 
         if shape.get(KIND_KEY) in {"FOOT_L", "FOOT_R"}:
             hull = _convex_hull_2d(zip(u_values, v_values))
@@ -4523,22 +4610,12 @@ def _create_control_bones(context, armature, armature_id, plans, transaction, *,
                     source_lower = armature.data.edit_bones[plan.chain.lower]
                     anchor = source_upper.parent if source_upper.parent is not None else master
                     rest = plan.mechanism_rest or {}
+                    from . import natural_stable_solver
 
                     def create_mechanism(name, source, role, parent, *, connected=False):
-                        bone = armature.data.edit_bones.new(name)
-                        if bone.name != name:
-                            raise LimbIKError(f"Blender renamed generated bone '{name}'; build was rolled back.")
+                        bone = natural_stable_solver.edit_mechanism(
+                            armature, name, source, parent, rest.get(role), connected=connected)
                         transaction["bone_names"].append(bone.name)
-                        saved = rest.get(role, {})
-                        bone.head = Vector(saved.get("head", source.head))
-                        bone.tail = Vector(saved.get("tail", source.tail))
-                        if "z" in saved:
-                            bone.align_roll(Vector(saved["z"]))
-                        else:
-                            bone.roll = source.roll
-                        bone.parent = parent
-                        bone.use_connect = bool(connected)
-                        bone.use_deform = False
                         return bone
 
                     mch_upper = create_mechanism(
@@ -4730,7 +4807,10 @@ def _create_control_bones(context, armature, armature_id, plans, transaction, *,
     armature.update_tag(refresh={"OBJECT"})
     context.view_layer.update()
     context.evaluated_depsgraph_get().update()
-    context.scene.frame_set(context.scene.frame_current)
+    # Refresh topology without sampling the timeline: even a same-frame
+    # frame_set discards unkeyed Object transforms on animated bound meshes.
+    # Controller generation must retain the artist's current shoe placement.
+    context.scene.update_tag()
     context.view_layer.update()
     _mode_set(context, armature, "POSE")
     context.view_layer.update()
@@ -4752,8 +4832,9 @@ def _create_constraint_shells(armature, armature_id, plans, transaction, *, sche
             continue
         lower = armature.pose.bones[plan.chain.lower]
         _remember_registry(transaction, lower)
+        name = _reserve_ik_name(plan, lower)
         ik = lower.constraints.new(type="IK")
-        ik.name = _constraint_name(plan.rig_id, "IK")
+        ik.name = name
         ik.target = armature
         ik.subtarget = plan.solver_target_name if _is_enhanced_schema(schema) else plan.target_name
         ik.pole_target = armature
@@ -4878,9 +4959,9 @@ def _create_constraints_and_shapes(
                     pose_bone.rotation_mode = saved["rotation_mode"]
                     pose_bone.matrix_basis = saved["matrix_basis"].copy()
             context.view_layer.update()
-        ik_name = _constraint_name(plan.rig_id, "IK")
         if _is_roll_decoupled_schema(schema):
             ik_owner = armature.pose.bones[plan.mch_lower_name]
+            ik_name = _reserve_ik_name(plan, ik_owner)
             _remember_registry(transaction, ik_owner)
             ik = ik_owner.constraints.new(type="IK")
             ik.name = ik_name
@@ -4901,7 +4982,7 @@ def _create_constraints_and_shapes(
             transaction["constraints"].append((ik_owner, ik))
         else:
             ik_owner = lower
-            ik = lower.constraints.get(ik_name)
+            ik = lower.constraints.get(plan.ik_constraint_name)
             if ik is None or ik.type != "IK":
                 raise LimbIKError(f"{plan.chain.side} {plan.chain.kind.title()} IK shell disappeared while creating controls.")
         _remember_registry(transaction, end)
@@ -4965,48 +5046,17 @@ def _create_constraints_and_shapes(
             transaction["constraints"].append((end, auto_offset_rotation))
         roll_constraints = []
         if _is_roll_decoupled_schema(schema):
+            from . import natural_stable_solver
             for segment, source, mechanism_name, orientation_name in (
                 ("UPPER", upper, plan.mch_upper_name, plan.ori_upper_name),
                 ("LOWER", lower, plan.mch_lower_name, plan.ori_lower_name),
             ):
                 orientation = armature.pose.bones[orientation_name]
                 _remember_registry(transaction, orientation)
-                location = orientation.constraints.new(type="COPY_LOCATION")
-                location.name = _constraint_name(plan.rig_id, f"ORI_{segment}_LOCATION")
-                location.target = armature
-                location.subtarget = mechanism_name
-                location.head_tail = 0.0
-                location.target_space = "WORLD"
-                location.owner_space = "WORLD"
-                transaction["constraints"].append((orientation, location))
-
-                track = orientation.constraints.new(type="DAMPED_TRACK")
-                track.name = _constraint_name(plan.rig_id, f"ORI_{segment}_TRACK")
-                track.target = armature
-                track.subtarget = mechanism_name
-                track.head_tail = 1.0
-                track.track_axis = "TRACK_Y"
-                track.target_space = "WORLD"
-                track.owner_space = "WORLD"
-                transaction["constraints"].append((orientation, track))
-
                 _remember_registry(transaction, source)
-                source_rotation = source.constraints.new(type="COPY_ROTATION")
-                source_rotation.name = _constraint_name(plan.rig_id, f"SOURCE_{segment}_ROTATION")
-                source_rotation.target = armature
-                source_rotation.subtarget = orientation_name
-                source_rotation.target_space = "WORLD"
-                source_rotation.owner_space = "WORLD"
-                if hasattr(source_rotation, "mix_mode"):
-                    source_rotation.mix_mode = "REPLACE"
-                transaction["constraints"].append((source, source_rotation))
-                roll_constraints.extend(
-                    (
-                        (orientation, location, f"ORI_{segment}_LOCATION"),
-                        (orientation, track, f"ORI_{segment}_TRACK"),
-                        (source, source_rotation, f"SOURCE_{segment}_ROTATION"),
-                    )
-                )
+                roll_constraints.extend(natural_stable_solver.orientation_constraints(
+                    armature, plan.rig_id, segment, source, mechanism_name, orientation_name,
+                    transaction["constraints"]))
         runtime_roll_constraints[plan.rig_id] = roll_constraints
         extras = []
         if _is_enhanced_schema(schema):
@@ -5213,7 +5263,10 @@ def _create_constraints_and_shapes(
         # Use the evaluated end solely as the Custom Shape display frame so the
         # visible control follows its wrist/ankle normal without introducing a
         # Target -> solver -> end -> Target evaluation cycle.
-        if plan.auto_align:
+        if plan.chain.kind == "LEG":
+            from . import foot_sole_display
+            foot_sole_display.anchor(target, end)
+        elif plan.auto_align:
             _retarget_custom_shape_frame(target, end)
 
         (
@@ -5228,9 +5281,9 @@ def _create_constraints_and_shapes(
         if live_ik is None or live_ik.type != "IK":
             raise LimbIKError(f"{plan.chain.side} {plan.chain.kind.title()} IK disappeared while evaluating controls.")
         ik_owner, ik = live_ik_owner, live_ik
-        ik_name = _constraint_name(plan.rig_id, "IK")
+        ik_name = plan.ik_constraint_name
         for index, (owner, constraint) in enumerate(transaction["constraints"]):
-            if constraint.name == ik_name:
+            if owner.name == ik_owner.name and constraint.name == ik_name:
                 transaction["constraints"][index] = (ik_owner, ik)
                 break
         if plan.preserve_pole_angle:
@@ -5434,7 +5487,10 @@ def _calibrate_pole_angle(context, armature, plan, constraint):
     total = (plan.joint - plan.start).length + (plan.end - plan.joint).length
     target_reach = (Vector(target.head) - plan.start).length
     effectively_extended = total - target_reach <= max(EPSILON, total * 1.0e-6)
-    if not effectively_extended and analytic_alignment is not None and analytic_alignment >= 0.999:
+    # A slight modeled knee bend can align at rest yet turn inward under load.
+    # Calibrate legs at a meaningful flexion as the animator will use them.
+    probe_knee = plan.chain.kind == 'LEG'
+    if not (probe_knee or effectively_extended) and analytic_alignment is not None and analytic_alignment >= 0.999:
         return analytic_angle
 
     samples = 64
@@ -5457,12 +5513,13 @@ def _calibrate_pole_angle(context, armature, plan, constraint):
         # tiny amount only for calibration, then restore its exact Pose basis.
         set_angle(plan.pole_angle)
         context.view_layer.update()
-        if effectively_extended or _pole_alignment_measure(armature, plan) is None:
+        if probe_knee or effectively_extended or _pole_alignment_measure(armature, plan) is None:
             target_matrix = target.matrix.copy()
             toward_root = plan.start - Vector(target.head)
             if toward_root.length <= EPSILON or total <= EPSILON:
                 raise LimbIKError(f"{plan.chain.side} {plan.chain.kind.title()} has no usable Pole calibration probe.")
-            target_matrix.translation += toward_root.normalized() * total * 0.02
+            probe_distance = min(target_reach, total) * 0.25 if probe_knee else total * 0.02
+            target_matrix.translation += toward_root.normalized() * probe_distance
             target.matrix = target_matrix
             context.view_layer.update()
             used_probe = True
@@ -5554,12 +5611,24 @@ def _build_plans(
     decorate_source_widgets=True,
     foot_widget_kinds=None,
     target_rotation_version=None,
+    region_rebind=False,
 ):
     from . import body_calibration
+    if region_rebind:
+        # Only the explicit saved regional-release workflow may accept edited
+        # native Rest without re-running whole-body calibration or pre-roll.
+        from . import body_region
+        body_region.authorize_build(armature, plans)
+    elif armature.data.get('character_designer_body_region_release_v1') is not None:
+        from . import body_region
+        released = body_region._load(armature)
+        if any(f'{p.chain.kind}:{p.chain.side}' in released for p in plans):
+            raise LimbIKError('This part is released for editing. Use Edit One Part > Rebuild Controls to accept its current original bones.')
     if body_calibration.calibrated(armature):
         if schema != DIRECT_PREROLL_SCHEMA:
             raise LimbIKError("This character uses confirmed Direct calibration; do not replace it with a different solver implicitly.")
-        body_calibration.require_confirmed(context, armature)
+        if not region_rebind:
+            body_calibration.require_confirmed(context, armature)
     inventory = _validate_inventory(armature)
     if target_rotation_version is None:
         requested_target_rotation_version = _default_target_rotation_version(schema)
@@ -5629,10 +5698,12 @@ def _build_plans(
             del armature.data[TARGET_ROTATION_VERSION_KEY]
         if _is_direct_preroll_schema(schema):
             from . import body_calibration
-            if body_calibration.calibrated(armature):
+            if body_calibration.calibrated(armature) or region_rebind:
                 missing = body_calibration.register_direct_rest(context, armature, missing, transaction)
             else:
                 missing = _apply_direct_preroll(context, armature, missing, transaction)
+        fixed_poles = (body_region.layout_poles(armature, missing, source_pose_before)
+                       if region_rebind else set())
         _create_constraint_shells(armature, armature_id, missing, transaction, schema=schema, create_master=create_master)
         _create_control_bones(context, armature, armature_id, missing, transaction, schema=schema, create_master=create_master,
                               target_rotation_version=requested_target_rotation_version)
@@ -5649,6 +5720,8 @@ def _build_plans(
             foot_widget_kinds=foot_widget_kinds,
             target_rotation_version=requested_target_rotation_version,
         )
+        if region_rebind:
+            body_region.attach_new_root_inputs(context, armature, missing)
         verified = _validate_inventory(armature)
         if (
             verified["schema"] != schema
@@ -5660,25 +5733,28 @@ def _build_plans(
             if (plan.chain.kind, plan.chain.side) not in verified["rigs"]:
                 raise LimbIKError(f"Generated {plan.chain.side} {plan.chain.kind.title()} rig did not pass ownership verification.")
         context.view_layer.update()
-        if body_calibration.calibrated(armature):
+        if body_calibration.calibrated(armature) or region_rebind:
             # Rest is already confirmed. Match only generated controls to the
             # exact saved pose before validation; no skin/rest matrix round trip.
             limb_ik_fk.ensure_switching(armature, verified,
                 keys={(plan.chain.kind,plan.chain.side) for plan in missing})
+            if region_rebind:
+                body_region.position_poles(context, armature, missing, fixed_poles)
             for plan in missing:
                 limb_ik_fk.switch_limb(context,armature,(plan.chain.kind,plan.chain.side),'IK',
                     keyframe=False,desired_pose={n:source_pose_before[n] for n in plan.chain.names},
-                    calibrated_rest=True,sync_display=False)
+                    calibrated_rest=True,sync_display=False,
+                    fixed_pole=(plan.chain.kind, plan.chain.side) in fixed_poles)
         replanned_bones = {
             name
             for plan in missing
-            if not plan.preserve_pole_angle
+            if not plan.preserve_pole_angle and not region_rebind
             for name in (plan.chain.upper, plan.chain.lower)
         }
         auto_replanned_ends = {
             plan.chain.end
             for plan in missing
-            if plan.auto_align and not plan.preserve_pole_angle
+            if plan.auto_align and not plan.preserve_pole_angle and not region_rebind
         }
         for name, desired in source_pose_before.items():
             # An explicit Pole direction intentionally re-planes the two-bone
@@ -5699,7 +5775,7 @@ def _build_plans(
                     f"Master/IK setup could not preserve source pose on '{name}' "
                     f"(position {position_error:.4g}, rotation {rotation_error:.4g})."
                 )
-        if _is_direct_preroll_schema(schema):
+        if _is_direct_preroll_schema(schema) and not region_rebind:
             for plan in missing:
                 if plan.preserve_pole_angle:
                     continue
@@ -5899,7 +5975,7 @@ def _constraint_references_controls(constraint, armature, names):
     return False
 
 
-def _direct_source_dependency_problems(armature, chains, *, owned_constraints=()):
+def _direct_source_dependency_problems(armature, chains, *, owned_constraints=(), rebuilding_curves=()):
     """Find data that would be reinterpreted by changing Direct source Rest axes."""
     chains = tuple(tuple(chain) for chain in chains)
     rest_names = {name for chain in chains for name in chain[:2]}
@@ -5984,7 +6060,8 @@ def _direct_source_dependency_problems(armature, chains, *, owned_constraints=()
                 problems.append(f"Action '{action.name}' animates a Direct Pre-Roll source chain")
         animation = getattr(id_block, "animation_data", None)
         for fcurve in getattr(animation, "drivers", ()) if animation else ():
-            if id_block is armature and fcurve.data_path in switch_paths:
+            if id_block is armature and (fcurve.data_path in switch_paths
+                    or (fcurve.data_path, fcurve.array_index) in rebuilding_curves):
                 continue
             if _path_mentions_bone(fcurve.data_path, animated_names):
                 problems.append("a driver writes to a Direct Pre-Roll source chain")
@@ -6000,6 +6077,8 @@ def _direct_source_dependency_problems(armature, chains, *, owned_constraints=()
     for obj in bpy.data.objects:
         animation = obj.animation_data
         for fcurve in getattr(animation, "drivers", ()) if animation else ():
+            if obj is armature and (fcurve.data_path, fcurve.array_index) in rebuilding_curves:
+                continue
             for variable in fcurve.driver.variables:
                 for target in variable.targets:
                     target_path = getattr(target, "data_path", "")
@@ -6250,7 +6329,11 @@ def _removal_resources(context, armature, inventory):
         pole_pose = armature.pose.bones[rig["pole"].name]
         target_transform = target_pose.custom_shape_transform
         expected_end = armature.pose.bones[rig["chain"][2]]
-        if rig["auto_align"]:
+        from . import foot_sole_display
+        if kind == "LEG" and foot_sole_display.current(target_pose.bone):
+            if not foot_sole_display.valid_frame(target_pose):
+                raise LimbIKError("The sole outline no longer follows its registered foot frame.")
+        elif rig["auto_align"]:
             if (
                 target_transform is None
                 or target_transform.name != expected_end.name
@@ -6296,6 +6379,7 @@ def _snapshot_owned_rig(armature, inventory):
         plans.append(
             LimbPlan(
                 chain=LimbChain(kind, side, *rig["chain"]),
+                ik_constraint_name=ik.name,
                 rig_id=rig["rig_id"],
                 target_name=target.name,
                 pole_name=pole.name,
@@ -6886,6 +6970,8 @@ def _finish_control_colors(operator, armature, *, removed=False):
 
 
 def _require_ik_for_rig_edit(armature, inventory):
+    if 'character_designer_body_region_release_v1' in armature.data:
+        raise LimbIKError('Rebuild released parts in Edit One Part before rebuilding or removing the complete rig.')
     if limb_fk_visuals.get_record(armature):
         raise LimbIKError("Remove FK Rings before rebuilding or removing Limb IK.")
     if limb_fk_visuals.has_ik_size_backup(armature):
@@ -6917,25 +7003,105 @@ class CHARACTERDESIGNER_OT_limb_ik_fk_switch(Operator):
     keyframe: BoolProperty(name="Insert Switch Keys", default=False)
 
     def execute(self, context):
+        from . import limb_control_selection, limb_ik_fk_pose_key, natural_limb_inventory
         settings = _settings(context)
         try:
-            armature = _require_active_armature(context, settings, analyzed=False)
+            if settings is None:
+                raise LimbIKError("Limb IK state is unavailable; reload Character Designer.")
+            armature = context.object
+            selection = limb_control_selection.capture(context, armature)
             key = SELECTED_LIMBS.get(settings.selected_limb, ("ARM", "L"))
-            before = bone_groups.capture_managed_layout(armature)
-            result = limb_ik_fk.switch_limb(
-                context, armature, key, self.mode,
-                keyframe=True if self.keyframe else None,
-            )
-            _finish_collection_edit(self, armature, before, None)
+            result = None
+            if limb_ik_fk_pose_key.active_record(context, armature):
+                keyed = self.keyframe or context.scene.tool_settings.use_keyframe_insert_auto
+                if context.mode != 'POSE':
+                    raise LimbIKError('Enter Pose Mode to switch a limb on its controller Action.')
+                mode = limb_ik_fk_pose_key.edit(context, armature, key, self.mode, record_key=keyed)
+                result = {'mode': mode, 'keyed': keyed}
+            else:
+                result = natural_limb_inventory.switch_neutral(context, armature, self.mode, key=key, keyframe=self.keyframe)
+            if result is None:
+                armature = _require_active_armature(context, settings, analyzed=False)
+                before = bone_groups.capture_managed_layout(armature)
+                result = limb_ik_fk.switch_limb(
+                    context, armature, key, self.mode, keyframe=True if self.keyframe else None)
+                _finish_collection_edit(self, armature, before, None)
         except (LimbIKError, ReferenceError, RuntimeError, TypeError, ValueError) as exc:
             self.report({"WARNING"}, str(exc))
             return {"CANCELLED"}
+        limb_control_selection.handoff(context, armature, selection, self.mode, keys=(key,))
         message = f"{key[0].title()} {key[1]}: {result['mode']}; current pose matched."
         if result["keyed"]:
             message += " Switch keys inserted."
         _set_status(settings, "SUCCESS", message)
         self.report({"INFO"}, message)
         return {"FINISHED"}
+
+
+class CHARACTERDESIGNER_OT_controller_limb_pose(Operator):
+    bl_idname = "character_designer.controller_limb_pose"
+    bl_label = "Character Controller Pose"
+    bl_options = {"REGISTER", "UNDO"}
+
+    limb_id: StringProperty(options={'HIDDEN', 'SKIP_SAVE'})
+    operation: EnumProperty(items=(
+        ('FK', 'FK', 'Match and switch this limb to FK'),
+        ('IK', 'IK', 'Match and switch this limb to IK'),
+        ('POSE_IK', 'Pose with IK', 'Temporarily pose this FK limb with its IK target, then choose Key as FK'),
+        ('KEY', 'Key Pose', 'Key the current pose and mode of the selected limb'),
+        ('KEY_FK', 'Key as FK', 'Match the displayed limb pose to FK and record it in the current Action'),
+    ))
+
+    @classmethod
+    def unregister(cls):
+        from . import limb_ik_fk_pose_key
+        limb_ik_fk_pose_key.clear_pending()
+
+    @classmethod
+    def description(cls, context, properties):
+        return {
+            'KEY': 'Record this limb’s adjusted pose and IK/FK mode on this frame, including its pole',
+            'KEY_FK': 'Record the visible pose as FK rotations and continue in FK',
+            'POSE_IK': 'Move the IK target to pose this limb, then choose Key as FK. The FK mode track stays active in the Action',
+        }.get(properties.operation, 'Match this limb on the current frame. With Auto Key off, use Key Pose to record it')
+
+    def execute(self, context):
+        from . import controller_animation_ui, limb_ik_fk_pose_key, limb_ik_ui_state
+        rig = context.object
+        try:
+            if context.mode != 'POSE' or not limb_ik_fk_pose_key.active_record(context, rig):
+                raise LimbIKError('Open a controller Action on the character in Pose Mode.')
+            inventory = limb_ik_ui_state.inventory(rig)
+            selected = controller_animation_ui._selected_limb_keys(context, rig, inventory)
+            if self.limb_id:
+                explicit = SELECTED_LIMBS.get(self.limb_id)
+                if explicit not in inventory['rigs'] or (selected and selected != (explicit,)):
+                    raise LimbIKError('The limb selection changed. Choose the current arm or leg again.')
+                selected = (explicit,)
+            if len(selected) != 1:
+                raise LimbIKError('Select the controls or bones of one arm or leg.')
+            limb = inventory['rigs'][selected[0]]
+            old_mode = limb_ik_fk.mode_for_rig(rig, limb)
+            previous_controls = [rig.pose.bones[n] for n in (*limb['chain'], limb['target'].name, limb['pole'].name)
+                                 if rig.pose.bones[n].select]
+            mode = {'KEY': 'CURRENT', 'KEY_FK': 'FK', 'POSE_IK': 'IK'}.get(self.operation, self.operation)
+            keyed = (self.operation in {'KEY', 'KEY_FK'} or
+                     (self.operation != 'POSE_IK' and context.scene.tool_settings.use_keyframe_insert_auto))
+            mode = limb_ik_fk_pose_key.edit(context, rig, selected[0], mode, record_key=keyed,
+                                            temporary_ik=self.operation == 'POSE_IK',
+                                            store_as_fk=self.operation == 'KEY_FK')
+            if old_mode != mode:
+                destination = rig.pose.bones[limb['target'].name if mode == 'IK' else limb['chain'][-1]]
+                for bone in previous_controls:
+                    bone.select = False
+                rig.data.bones.active = destination.bone
+                destination.select = True
+        except (LimbIKError, ReferenceError, RuntimeError, TypeError, ValueError) as exc:
+            self.report({'WARNING'}, str(exc))
+            return {'CANCELLED'}
+        message = f'{mode} pose keyed.' if keyed else f'{mode} pose matched. Use Key Pose to record it.'
+        self.report({'INFO'}, 'Move the IK target, then use Key as FK.' if self.operation == 'POSE_IK' else message)
+        return {'FINISHED'}
 
 
 class CHARACTERDESIGNER_OT_body_ik_fk_switch(Operator):
@@ -6948,15 +7114,23 @@ class CHARACTERDESIGNER_OT_body_ik_fk_switch(Operator):
     keyframe: BoolProperty(name="Insert Switch Keys", default=False)
 
     def execute(self, context):
-        from . import limb_ik_fk_batch
+        from . import limb_ik_fk_batch, limb_control_selection, limb_ik_fk_pose_key, natural_limb_inventory
         settings = _settings(context)
         try:
-            armature = _require_active_armature(context, settings, analyzed=False)
-            result = limb_ik_fk_batch.switch_all(context, armature, self.mode,
-                                                keyframe=True if self.keyframe else None)
+            armature = context.object
+            if ((self.keyframe or context.scene.tool_settings.use_keyframe_insert_auto)
+                    and limb_ik_fk_pose_key.active_record(context, armature)):
+                raise LimbIKError('Select an arm or leg and key its mode on this controller Action.')
+            selection = limb_control_selection.capture(context, armature)
+            result = natural_limb_inventory.switch_neutral(context, armature, self.mode, keyframe=self.keyframe)
+            if result is None:
+                armature = _require_active_armature(context, settings, analyzed=False)
+                result = limb_ik_fk_batch.switch_all(context, armature, self.mode,
+                                                     keyframe=True if self.keyframe else None)
         except (LimbIKError, ReferenceError, RuntimeError, TypeError, ValueError) as exc:
             self.report({"WARNING"}, str(exc))
             return {"CANCELLED"}
+        limb_control_selection.handoff(context, armature, selection, self.mode)
         message = f"Arms and legs: {result['mode']}; current pose matched."
         if result["keyed"]:
             message += " Switch keys inserted."
@@ -6971,7 +7145,16 @@ class CHARACTERDESIGNER_OT_foot_controls(Operator):
     bl_description = "Add or remove foot-roll and toe-bend controls while preserving the current pose and weights"
     bl_options = {"REGISTER", "UNDO"}
 
-    action: EnumProperty(items=(("BUILD", "Add Foot Controls", "Add reversible roll and toe controls"), ("REMOVE", "Remove Foot Controls", "Restore the original foot and toe controls"), ("SELECT_ROLL", "Foot Roll", "Select the foot-roll control"), ("SELECT_TOE", "Toe Bend", "Select the toe-bend control"), ("FIX_DIRECTION", "Fix Roll Direction", "Make the foot rotate in the control's direction while preserving the current pose"), ("FIT_VISUAL", "Fit Arrow", "Fit the arrow behind the saved footwear, following the posed foot"), ("RESTORE_VISUAL", "Restore Arrow", "Restore the arrow appearance saved before its first fit")))
+    action: EnumProperty(items=(
+        ("BUILD", "Add Foot Controls", "Add reversible roll and toe controls"),
+        ("REMOVE", "Remove Foot Controls", "Restore the original foot and toe controls"),
+        ("SELECT_ROLL", "Foot Roll", "Select the foot-roll control"),
+        ("SELECT_TOE", "Toe Bend", "Select the toe-bend control"),
+        ("FIX_DIRECTION", "Fix Roll Direction", "Make the foot rotate in the control's direction while preserving the current pose"),
+        ("FIT_VISUAL", "Fit Arrow", "Fit the arrow behind the saved footwear, following the posed foot"),
+        ("RESTORE_VISUAL", "Restore Arrow", "Restore the arrow appearance saved before its first fit"),
+        ("HEEL_LIFT", "Set Up Heel Lift", "Turn the selected leg's Foot Roll into a one-axis heel lift around the ball of the foot"),
+    ))
 
     def execute(self, context):
         settings = _settings(context)
@@ -6979,10 +7162,19 @@ class CHARACTERDESIGNER_OT_foot_controls(Operator):
         before = None
         error = None
         try:
-            armature = _require_active_armature(context, settings, analyzed=False)
+            if settings is None:
+                raise LimbIKError("Limb IK state is unavailable.")
             key = SELECTED_LIMBS.get(settings.selected_limb, ("ARM", "L"))
             if key[0] != "LEG":
                 raise LimbIKError("Choose Left Leg or Right Leg first.")
+            if self.action == "HEEL_LIFT":
+                from . import foot_roll_hinge
+                foot_roll_hinge.upgrade(context, context.object, key)
+                message = f"{key[1]} Foot Roll is ready for heel lift."
+                _set_status(settings, "SUCCESS", message)
+                self.report({"INFO"}, message)
+                return {"FINISHED"}
+            armature = _require_active_armature(context, settings, analyzed=False)
             if self.action.startswith("SELECT_"):
                 record = foot_controls.get_record(armature, key)
                 if record is None:
@@ -7365,6 +7557,7 @@ class CHARACTERDESIGNER_OT_limb_ik_rebuild(Operator):
                             replace(
                                 old,
                                 rig_id=uuid.uuid4().hex,
+                                ik_constraint_name="",
                                 mechanism_pose=mch_pose,
                             )
                         )
@@ -7416,6 +7609,7 @@ class CHARACTERDESIGNER_OT_limb_ik_rebuild(Operator):
                             replace(
                                 old,
                                 rig_id=uuid.uuid4().hex,
+                                ik_constraint_name="",
                                 # Schema 4 had no display helper, so its exact
                                 # snapshot carries an empty name.  Rebuild is
                                 # the explicit migration path to schema 5.
@@ -8106,6 +8300,12 @@ def _set_auto_align_selected_target(context, armature, settings, enabled=None):
     current_enabled = bool(rig["auto_align"])
     desired_enabled = (not current_enabled) if enabled is None else bool(enabled)
     if desired_enabled == current_enabled:
+        if kind == "LEG":
+            from . import foot_sole_display
+            changed = not foot_sole_display.current(target.bone)
+            if changed:
+                foot_sole_display.anchor_existing(context, target, end)
+            return target.name, current_enabled, changed
         if desired_enabled and target.custom_shape_transform is None:
             # Upgrade a pre-0.32 Auto rig's display contract without touching
             # any animator transform channel or solver input.
@@ -8133,12 +8333,11 @@ def _set_auto_align_selected_target(context, armature, settings, enabled=None):
     if rig.get("foot_controls"):
         if rig['foot_controls'].get('auto_follow') == 1:
             return foot_controls.set_auto_align(context, armature, rig, desired_enabled)
-        # Reverse-foot pivots define the ground frame in either display mode.
-        # Auto Align still follows the current foot for its visual/input frame.
+        from . import foot_sole_display
+        foot_sole_display.anchor(target, end)
         end_rotation.mute = desired_enabled
         auto_offset_rotation.mute = not desired_enabled
         target.bone[AUTO_ALIGN_KEY] = desired_enabled
-        _retarget_custom_shape_frame(target, end if desired_enabled else None)
         armature.update_tag(refresh={"OBJECT"})
         context.view_layer.update()
         return target.name, desired_enabled, True
@@ -8167,6 +8366,8 @@ def _set_auto_align_selected_target(context, armature, settings, enabled=None):
     target_basis_before = target.matrix_basis.copy()
     target_display_before = target.custom_shape_transform
     target_visual_before = _control_visual_state(target)
+    from . import foot_sole_display
+    sole_before = foot_sole_display.capture(target) if kind == "LEG" else None
     auto_key_present = AUTO_ALIGN_KEY in target.bone
     auto_key_before = target.bone.get(AUTO_ALIGN_KEY, None)
     constraint_mute_before = bool(end_rotation.mute)
@@ -8188,11 +8389,8 @@ def _set_auto_align_selected_target(context, armature, settings, enabled=None):
             context.view_layer.update()
             if not end_rotation.mute:
                 raise LimbIKError("Auto Align could not disable manual end rotation.")
-            _retarget_custom_shape_frame(
-                target,
-                end,
-                previous_reference_matrix=end_matrix_before,
-            )
+            if not sole_before:
+                _retarget_custom_shape_frame(target, end, previous_reference_matrix=end_matrix_before)
             armature.update_tag(refresh={"OBJECT"})
             context.view_layer.update()
         else:
@@ -8226,7 +8424,8 @@ def _set_auto_align_selected_target(context, armature, settings, enabled=None):
             target.bone[AUTO_ALIGN_KEY] = False
             armature.update_tag(refresh={"OBJECT"})
             context.view_layer.update()
-            _retarget_custom_shape_frame(target, None)
+            if not sole_before:
+                _retarget_custom_shape_frame(target, None)
             armature.update_tag(refresh={"OBJECT"})
             context.view_layer.update()
 
@@ -8256,6 +8455,8 @@ def _set_auto_align_selected_target(context, armature, settings, enabled=None):
                     armature.update_tag(refresh={"OBJECT"})
                     context.view_layer.update()
 
+        if sole_before:
+            foot_sole_display.anchor(target, end)
         solver_world_after = armature.matrix_world @ solver.matrix
         end_world_after = armature.matrix_world @ end.matrix
         position_error = (
@@ -8287,6 +8488,8 @@ def _set_auto_align_selected_target(context, armature, settings, enabled=None):
         try:
             target.custom_shape_transform = target_display_before
             _apply_control_visual_state(target, target_visual_before)
+            if sole_before:
+                foot_sole_display.restore(target, sole_before)
         except Exception as exc:
             recovery_errors.append(f"Target display restore failed: {exc}")
         # Keep this independent from the Target setter: even a malformed or
@@ -8339,6 +8542,7 @@ def _set_auto_align_all_targets(context, armature, settings, enabled=None):
     enum_by_key = {value: name for name, value in SELECTED_LIMBS.items()}
     snapshots = []
     for key, rig in sorted(inventory["rigs"].items()):
+        from . import foot_sole_display
         target = armature.pose.bones[rig["target"].name]
         end_entries = [
             (owner, constraint)
@@ -8365,6 +8569,7 @@ def _set_auto_align_all_targets(context, armature, settings, enabled=None):
                 "target_basis": target.matrix_basis.copy(),
                 "target_display": target.custom_shape_transform,
                 "target_visual": _control_visual_state(target),
+                "sole": foot_sole_display.capture(target) if key[0] == "LEG" else None,
                 "auto_present": AUTO_ALIGN_KEY in target.bone,
                 "auto_value": target.bone.get(AUTO_ALIGN_KEY, None),
                 "owner": owner,
@@ -8411,6 +8616,8 @@ def _set_auto_align_all_targets(context, armature, settings, enabled=None):
                 target.matrix_basis = state["target_basis"]
                 target.custom_shape_transform = state["target_display"]
                 _apply_control_visual_state(target, state["target_visual"])
+                if state["sole"]:
+                    foot_sole_display.restore(target, state["sole"])
             except Exception as exc:
                 recovery_errors.append(f"{target.name} Target restore failed: {exc}")
             try:
@@ -8715,7 +8922,7 @@ def _has_active_limb_target(context):
 
 
 def _active_limb_target(context, *, strict=False):
-    """Resolve the selected visible Hand/Foot Target and its owned rig."""
+    """Read display targets cheaply; modifying callers request strict admission."""
 
     resolved = _active_control_visual(context, strict=strict)
     if resolved is None:
@@ -8728,7 +8935,11 @@ def _active_limb_target(context, *, strict=False):
             )
         return None
     try:
-        inventory = _validate_inventory(armature)
+        if strict:
+            inventory = _validate_inventory(armature)
+        else:
+            from . import limb_ik_ui_state
+            inventory = limb_ik_ui_state.inventory(armature)
         matching = [
             rig
             for rig in inventory["rigs"].values()
@@ -8764,7 +8975,7 @@ def _target_rotation_has_driver(armature, target_name):
 class CHARACTERDESIGNER_OT_limb_ik_reset_target_rotation(Operator):
     bl_idname = "character_designer.limb_ik_reset_target_rotation"
     bl_label = "Reset Target Rotation"
-    bl_description = "Zero only the active Hand/Foot Target's local rotation"
+    bl_description = "Reset an IK wrist to neutral, or zero a Foot Target's local rotation"
     bl_options = {"REGISTER", "UNDO"}
 
     @classmethod
@@ -8781,6 +8992,13 @@ class CHARACTERDESIGNER_OT_limb_ik_reset_target_rotation(Operator):
                 context,
                 strict=True,
             )
+            if target.bone.get(ROLE_KEY) == "HAND_IK":
+                from . import limb_ik_wrist_rotation
+                limb_ik_wrist_rotation.reset_wrist_neutral(context, target=target)
+                message = f"Reset wrist rotation to neutral on '{target.name}'."
+                _set_status(settings, "SUCCESS", message)
+                self.report({"INFO"}, message)
+                return {"FINISHED"}
             if inventory["target_rotation_version"] != TARGET_ROTATION_VERSION:
                 raise LimbIKError(
                     "Rebuild Rig once before using aligned Target rotation."
@@ -9021,32 +9239,30 @@ class CHARACTERDESIGNER_OT_limb_ik_reset_control_visual(Operator):
 
 
 def _draw_body_limb_modes(layout, context, armature):
-    from . import limb_ik_fk_batch, body_original_mode
+    from . import controller_animation_ui, body_original_mode, limb_ik_ui_state
     if armature is None or armature.type != "ARMATURE":
         layout.label(text="Select the main armature.", icon="INFO")
         return None
-    row = layout.row(align=True)
-    row.enabled = context.active_object == armature and context.mode in {"OBJECT", "POSE"}
     inventory = None
     try:
-        if not body_original_mode.active(armature):
-            inventory = _validate_inventory(armature)
-        mode = limb_ik_fk_batch.mode_for_keys(armature, inventory=inventory)
+        original = body_original_mode.active(armature)
+        if not original:
+            inventory = limb_ik_ui_state.inventory(armature)
+        controller_animation_ui.draw_current_frame_modes(layout, context, armature, inventory,
+            original=original, enabled=context.active_object == armature and context.mode in {"OBJECT", "POSE"})
+        if not original:
+            from . import limb_ik_fk_pose_key
+            limb_ik_fk_pose_key.draw(layout, context)
     except (LimbIKError, ReferenceError, RuntimeError, ValueError) as exc:
-        row.enabled = False
-        mode = None
         layout.label(text=str(exc), icon="ERROR")
-    for choice in ("IK", "FK"):
-        row.operator("character_designer.body_ik_fk_switch", text=choice,
-                     depress=mode == choice).mode = choice
-    if mode == "MIXED":
-        layout.label(text="Arms and legs use different modes", icon="INFO")
     return inventory
 
 
 class CHARACTERDESIGNER_PT_limb_ik(Panel):
-    bl_label = "Bone Setup"
+    bl_label = "Body Controls"
     bl_idname = "CHARACTERDESIGNER_PT_limb_ik"
+    bl_parent_id = "CHARACTERDESIGNER_PT_rig_sections"
+    bl_order = 10
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
     bl_category = SIDEBAR_CATEGORY
@@ -9061,7 +9277,7 @@ class CHARACTERDESIGNER_PT_limb_ik(Panel):
         if settings is None:
             layout.label(text="Limb IK state is unavailable.", icon="ERROR")
             return
-        from . import body_setup_ui, body_calibration_ui, body_original_mode
+        from . import body_setup_ui, body_calibration_ui, body_original_mode, limb_ik_ui_state
         armature = body_original_mode.display.character_rig(context)
         from .control_pose_capture import draw as draw_pose_capture
         draw_pose_capture(layout, context)
@@ -9071,7 +9287,7 @@ class CHARACTERDESIGNER_PT_limb_ik(Panel):
         if body_calibration_ui.draw(layout, context):
             # Native mapping remains reachable before Generate. The stored old
             # Setup/Controls choice no longer gates this workflow.
-            layout.prop(settings, "show_body_setup_advanced", text="Advanced",
+            layout.prop(settings, "show_body_setup_advanced", text="Body Setup & Recovery",
                         icon="TRIA_DOWN" if settings.show_body_setup_advanced else "TRIA_RIGHT", emboss=False)
             if settings.show_body_setup_advanced:
                 mapping = layout.box()
@@ -9087,20 +9303,29 @@ class CHARACTERDESIGNER_PT_limb_ik(Panel):
                 kind, side = SELECTED_LIMBS.get(settings.selected_limb, ("ARM", "L"))
                 _draw_limb_fields(fields, settings, armature, kind, side)
             return
-        daily_inventory = _draw_body_limb_modes(layout, context, armature)
-        layout.prop(settings, "show_body_setup_advanced", text="Advanced",
+        _draw_body_limb_modes(layout, context, armature)
+        layout.prop(settings, "show_body_setup_advanced", text="Body Setup & Recovery",
                     icon="TRIA_DOWN" if settings.show_body_setup_advanced else "TRIA_RIGHT", emboss=False)
         if not settings.show_body_setup_advanced:
             return
         layout = layout.box()
+        from . import body_region_ui
+        body_region_ui.draw_advanced(layout, context)
         layout.prop(settings, "selected_limb", text="")
         active = context.object
         if active is not None and active.type == "ARMATURE":
             try:
-                inventory = daily_inventory if active == armature and daily_inventory is not None else _validate_inventory(active)
+                # Presentation data never substitutes for an operator's fresh
+                # ownership/Rest/constraint validation. Re-read the small fields
+                # here instead of reusing the daily display as an authority.
+                display = limb_ik_ui_state.inventory(active, include_foot=True)
                 selected_key = SELECTED_LIMBS.get(settings.selected_limb, ("ARM", "L"))
-                rig = inventory["rigs"].get(selected_key)
+                rig = display["rigs"].get(selected_key)
                 if rig is not None:
+                    raw_weight = active.pose.bones[rig["target"].name].get(limb_ik_fk.PROPERTY, 1.0)
+                    if (type(raw_weight) not in (int, float) or not math.isfinite(raw_weight)
+                            or not 0.0 <= raw_weight <= 1.0):
+                        raise LimbIKError("The selected limb IK/FK weight is outside its supported range.")
                     mode = limb_ik_fk.mode_for_rig(active, rig)
                     row = layout.row(align=True)
                     for choice in ("IK", "FK"):
@@ -9119,12 +9344,20 @@ class CHARACTERDESIGNER_PT_limb_ik(Panel):
                             roll_select.enabled = mode == "IK"
                             roll_select.operator("character_designer.foot_controls", text="Foot Roll", icon="CON_ROTLIKE").action = "SELECT_ROLL"
                             row.operator("character_designer.foot_controls", text="Toe Bend", icon="BONE_DATA").action = "SELECT_TOE"
-                            foot_box.label(text="Local X: Roll · Local Y: Bank", icon="INFO")
-                            if settings.show_body_setup_advanced and foot.get("rotation_direction") != "NATURAL":
+                            hinge = foot.get("roll_hinge") == 1
+                            if hinge and settings.show_body_setup_advanced:
+                                from . import character_setup
+                                mapping = character_setup._mapping(character_setup.settings(context), active)
+                                if mapping is not None:
+                                    foot_box.prop(mapping, "footwear", text="Footwear")
+                            if not hinge or not foot.get('footwear_display') or settings.show_body_setup_advanced:
+                                foot_box.operator("character_designer.foot_controls", text="Fit Foot Controls" if hinge else "Set Up Heel Lift",
+                                                  icon="FILE_REFRESH").action = "HEEL_LIFT"
+                            if not hinge and settings.show_body_setup_advanced and foot.get("rotation_direction") != "NATURAL":
                                 foot_box.operator("character_designer.foot_controls", text="Fix Roll Direction", icon="FILE_REFRESH").action = "FIX_DIRECTION"
-                            if settings.show_body_setup_advanced:
+                            if not hinge and settings.show_body_setup_advanced:
                                 foot_box.prop(settings, "show_foot_visual_options", icon="TRIA_DOWN" if settings.show_foot_visual_options else "TRIA_RIGHT", emboss=False)
-                            if settings.show_body_setup_advanced and settings.show_foot_visual_options:
+                            if not hinge and settings.show_body_setup_advanced and settings.show_foot_visual_options:
                                 from . import character_setup
                                 mapping = character_setup._mapping(character_setup.settings(context), active)
                                 if mapping is not None:
@@ -9155,8 +9388,8 @@ class CHARACTERDESIGNER_PT_limb_ik(Panel):
                             foot_box.operator("character_designer.foot_controls", text="Add Foot Controls", icon="CON_KINEMATIC").action = "BUILD"
                         else:
                             foot_box.label(text="Included in Body Setup", icon="INFO")
-            except (LimbIKError, ReferenceError, RuntimeError, ValueError):
-                pass
+            except (LimbIKError, ReferenceError, RuntimeError, ValueError) as exc:
+                layout.label(text=str(exc), icon="ERROR")
         auto_available, auto_enabled = _global_auto_align_ui_state(context, settings)
         if auto_available:
             auto_row = layout.row()
@@ -9195,7 +9428,6 @@ class CHARACTERDESIGNER_PT_limb_ik(Panel):
         remove = row.row(align=True)
         remove.alert = _active_has_owned_side_rig(context)
         remove.operator("character_designer.limb_ik_remove", text="Remove Generated Rig", icon="TRASH")
-        layout.operator("character_designer.simplify_bone_collections", icon="GROUP_BONE")
         if active is not None and active.type == "ARMATURE" and bone_groups.has_layout_backup(active):
             layout.operator("character_designer.restore_bone_collections", icon="LOOP_BACK")
         colors = layout.row(align=True)
@@ -9376,6 +9608,7 @@ LIMB_IK_CLASSES = (
     CHARACTERDESIGNER_OT_limb_ik_remove,
     CHARACTERDESIGNER_OT_limb_ik_rebuild,
     CHARACTERDESIGNER_OT_limb_ik_fk_switch,
+    CHARACTERDESIGNER_OT_controller_limb_pose,
     CHARACTERDESIGNER_OT_body_ik_fk_switch,
     CHARACTERDESIGNER_OT_foot_controls,
     CHARACTERDESIGNER_OT_limb_ik_default_pole_direction,

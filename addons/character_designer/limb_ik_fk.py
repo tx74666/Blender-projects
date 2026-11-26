@@ -355,6 +355,221 @@ def _match_pole_plane(context, armature, rig, desired, *, precise=False):
         _set_matrix(context, armature, pole, matrix)
 
 
+def _fixed_pole_constraint(rig):
+    constraints = [con for _pb, con, record in rig['entries'] if record['role'] == 'IK']
+    if len(constraints) != 1 or constraints[0].type != 'IK':
+        raise _error('Fixed Pole matching needs one verified native IK constraint.')
+    return constraints[0]
+
+
+def _leg_front_policy(inventory, rig):
+    """Direct legs share one anatomical layout, independent of saved roll."""
+    return (rig['pole'].get(_limb().KIND_KEY) == 'LEG'
+            and inventory['schema'] in {_limb().LEGACY_DIRECT_PREROLL_SCHEMA,
+                                        _limb().DIRECT_PREROLL_SCHEMA})
+
+
+def _leg_front_direction(axis):
+    front = _limb()._project_perpendicular(Vector((0.0, -1.0, 0.0)), axis)
+    if front.length <= _limb().POLE_DIRECTION_PARALLEL_RATIO:
+        raise _error('Anatomical front is parallel to this leg; keep its current controls unchanged.')
+    return front.normalized()
+
+
+def _leg_front_layout(armature, rig, desired):
+    """Keep a healthy front layout; replace stale back/side compensation."""
+    start, joint, end = (desired[name].translation for name in rig['chain'])
+    axis = end - start
+    total = (joint - start).length + (end - joint).length
+    if axis.length <= _limb().EPSILON or total <= _limb().EPSILON:
+        raise _error('Leg Pole matching needs distinct hip and ankle positions.')
+    axis.normalize()
+    front = _leg_front_direction(axis)
+    point = armature.pose.bones[rig['pole'].name].matrix.translation.copy()
+    offset = point - start
+    radial = _limb()._project_perpendicular(offset, axis)
+    if radial.length > _limb().EPSILON and radial.normalized().dot(front) >= 0.8:
+        return point, False
+    distance = radial.length if radial.length > _limb().EPSILON else total * 0.75
+    point = start + axis * offset.dot(axis) + front * distance
+    if any(not math.isfinite(value) for value in point):
+        raise _error('The front Leg Pole layout is outside the supported coordinate range.')
+    return point, True
+
+
+def _position_leg_front_pole(context, armature, rig, desired):
+    point, changed = _leg_front_layout(armature, rig, desired)
+    if changed:
+        pole = armature.pose.bones[rig['pole'].name]
+        matrix = pole.matrix.copy()
+        matrix.translation = point
+        _set_matrix(context, armature, pole, matrix)
+    return point
+
+
+def _leg_pole_metadata(armature):
+    limb = _limb()
+    return {bone.name: {tag: list(bone[tag]) for tag in
+                       (limb.POLE_DIRECTION_KEY, limb.POLE_CONFIGURED_DIRECTION_KEY) if tag in bone}
+            for bone in armature.data.bones
+            if bone.get(limb.OWNER_KEY) == limb.OWNER_VALUE
+            and bone.get(limb.KIND_KEY) == 'LEG' and bone.get(limb.ROLE_KEY) == 'POLE'}
+
+
+def _restore_leg_pole_metadata(armature, saved):
+    limb = _limb()
+    for name, values in saved.items():
+        bone = armature.data.bones[name]
+        for tag in (limb.POLE_DIRECTION_KEY, limb.POLE_CONFIGURED_DIRECTION_KEY):
+            if tag in values:
+                bone[tag] = values[tag]
+            elif tag in bone:
+                del bone[tag]
+
+
+def _match_fixed_pole_angle(context, armature, rig, desired, *, precise=False, local_search=False,
+                            accept_pose=None):
+    """Match the native pose by changing its IK angle, never the Pole layout.
+
+    Direct legs and explicit regional matches use this instead of moving the
+    animator's Pole around the limb to compensate its source-bone roll.
+    """
+    constraint = _fixed_pole_constraint(rig)
+    pole = armature.pose.bones[rig['pole'].name]
+    pole_before = pole.matrix.translation.copy()
+    angle_before = float(constraint.pole_angle)
+    wanted = {name: desired[name] for name in rig['chain'][:2]}
+    inverse_rest = ({name: armature.data.bones[name].matrix_local.inverted() for name in wanted}
+                    if precise else {})
+    wanted_skin = {name: matrix @ inverse_rest[name] for name, matrix in wanted.items()} if precise else {}
+    start, joint, end = (desired[name].translation for name in rig['chain'])
+    length = (joint - start).length + (end - joint).length
+    axis = end - start
+    if length < 1e-8 or axis.length < 1e-8:
+        raise _error('Fixed Pole matching needs distinct limb endpoints.')
+    axis.normalize()
+    minimum, maximum = _limb()._pole_angle_domain(constraint)
+    best_angle, best_score, best_errors = angle_before, math.inf, (math.inf,) * 3
+    best_skin_error = math.inf
+    seen = []
+    accepted_angle = None
+
+    def evaluate(requested):
+        nonlocal best_angle, best_score, best_errors, best_skin_error, accepted_angle
+        if accepted_angle is not None:
+            return accepted_angle, best_score
+        angle = math.remainder(float(requested), math.tau)
+        angle = min(maximum, max(minimum, angle))
+        constraint.pole_angle = angle
+        actual = float(constraint.pole_angle)
+        _update(context, armature)
+        if (pole.matrix.translation - pole_before).length > max(length, 1.0) * 1e-6:
+            raise _error('The fixed Pole moved during angle matching; preserve its input dependencies.')
+        errors = _pose_errors(armature, wanted)
+        if precise:
+            # Short author bones amplify a small pose residual through their
+            # inverse Rest. Fit the actual native deformation matrices rather
+            # than accepting a rotation-only early exit that can lose skin.
+            residuals = [float(actual - expected)
+                         for name, expected_skin in wanted_skin.items()
+                         for row, expected_row in zip(armature.pose.bones[name].matrix @ inverse_rest[name], expected_skin)
+                         for actual, expected in zip(row, expected_row)]
+            skin_error = max((abs(value) for value in residuals), default=0.0)
+            score = (sum(value * value for value in residuals)
+                     + (errors[0] / length) ** 2 + errors[1] ** 2 + errors[2] ** 2)
+        else:
+            skin_error = 0.0
+            score = errors[0] / length + errors[1] + errors[2]
+        # A private editable-motion caller may accept this actual upper/lower
+        # pose now. It still verifies the completed limb and whole Action.
+        if accept_pose is not None and accept_pose(wanted):
+            accepted_angle = actual
+        if accepted_angle is not None or score < best_score:
+            best_angle, best_score, best_errors, best_skin_error = actual, score, errors, skin_error
+        seen.append(actual)
+        return actual, score
+
+    def matched():
+        position_limit = length * 5e-7 if precise else POSITION_TOLERANCE
+        rotation_limit = 1e-6 if precise else ROTATION_TOLERANCE
+        scale_limit = 1e-6 if precise else SCALE_TOLERANCE
+        return accepted_angle is not None or (best_errors[0] <= position_limit and best_errors[1] <= rotation_limit
+                and best_errors[2] <= scale_limit and (not precise or best_skin_error <= 3e-6))
+
+    try:
+        evaluate(angle_before)
+        if not matched():
+            # A rotated bend plane normally supplies an exact correction in
+            # two probes. Test both signs because the native solver's angle
+            # convention depends on its source frame, including a 180° roll.
+            reference = _limb()._project_perpendicular(joint - start, axis)
+            current = armature.pose.bones[rig['chain'][1]].matrix.translation
+            actual = _limb()._project_perpendicular(current - start, axis)
+            if min(actual.length, reference.length) > length * 0.01:
+                correction = _limb()._signed_angle(actual, reference, axis)
+            else:
+                actual_frame = armature.pose.bones[rig['chain'][0]].matrix.to_3x3()
+                reference_frame = wanted[rig['chain'][0]].to_3x3()
+                pairs = [(_limb()._project_perpendicular(actual_frame.col[index], axis),
+                          _limb()._project_perpendicular(reference_frame.col[index], axis))
+                         for index in (0, 2)]
+                actual, reference = max(pairs, key=lambda pair: min(pair[0].length, pair[1].length))
+                correction = (_limb()._signed_angle(actual, reference, axis)
+                              if min(actual.length, reference.length) > 1e-8 else 0.0)
+            for sign in (1.0, -1.0):
+                evaluate(angle_before + sign * correction)
+                if matched():
+                    break
+
+        if not matched():
+            # Bounded fallback for unusual native roll/near-straight cases.
+            # Search only the RNA angle domain; pose and surface verification
+            # retains the caller's existing acceptance limits.
+            step = (maximum - minimum) / 64
+            if not local_search:
+                for index in range(65):
+                    requested = minimum + index * step
+                    if any(abs(requested - angle) <= 1e-12 for angle in seen):
+                        continue
+                    evaluate(requested)
+            # The two RNA endpoints encode the same rotation. A minimum just
+            # below +pi can otherwise get trapped in a refinement starting at
+            # -pi. evaluate() wraps every candidate before the legal RNA write.
+            periodic = maximum - minimum >= math.tau - 1e-6
+            left = best_angle - step if periodic else max(minimum, best_angle - step)
+            right = best_angle + step if periodic else min(maximum, best_angle + step)
+            golden = (math.sqrt(5.0) - 1.0) * 0.5
+            x1, x2 = right - golden * (right - left), left + golden * (right - left)
+            a1, f1 = evaluate(x1)
+            a2, f2 = evaluate(x2)
+            iterations = 12 if local_search else (32 if precise else 24)
+            for _iteration in range(iterations):
+                if f1 <= f2:
+                    right, x2, a2, f2 = x2, x1, a1, f1
+                    x1 = right - golden * (right - left)
+                    a1, f1 = evaluate(x1)
+                else:
+                    left, x1, a1, f1 = x1, x2, a2, f2
+                    x2 = left + golden * (right - left)
+                    a2, f2 = evaluate(x2)
+            if precise:
+                # The RNA input and native solver are float32. Refinement can
+                # settle on a numerical step; retain the best actually solved
+                # nearby angle rather than an unevaluated analytic minimum.
+                center = best_angle
+                quantum = max(abs(center), 1.0) * 2.0 ** -23
+                for offset in (-4, -3, -2, -1, 1, 2, 3, 4):
+                    evaluate(center + offset * quantum)
+        if not math.isfinite(best_score):
+            raise _error('Fixed Pole matching could not evaluate a finite native pose.')
+        constraint.pole_angle = best_angle
+        _update(context, armature)
+    except Exception:
+        constraint.pole_angle = angle_before
+        _update(context, armature)
+        raise
+
+
 def _fk_parent_dependencies(armature, parent, chain):
     """Prove that the external parent frame cannot read the matched chain.
 
@@ -535,7 +750,17 @@ def _seed_ik(context, armature, inventory, rig, desired, solver_position, *, cal
 
 
 def _match_ik(context, armature, inventory, rig, desired, *, calibrated_rest=False, reach_offset=None,
-              precise=False):
+              precise=False, fixed_pole=False, local_pole_search=False, accept_pole_pose=None, pole_reference=None,
+              pole_position=None):
+    if pole_position is not None:
+        pole = armature.pose.bones[rig['pole'].name]
+        matrix = pole.matrix.copy()
+        matrix.translation = pole_position
+        _set_matrix(context, armature, pole, matrix)
+        fixed_pole = True
+    elif _leg_front_policy(inventory, rig):
+        _position_leg_front_pole(context, armature, rig, desired)
+        fixed_pole = True
     target = armature.pose.bones[rig["target"].name]
     pole = armature.pose.bones[rig["pole"].name]
     end = armature.pose.bones[rig["chain"][2]]
@@ -543,10 +768,10 @@ def _match_ik(context, armature, inventory, rig, desired, *, calibrated_rest=Fal
     desired_end = desired[end.name]
     solver_position = desired_end.translation + (reach_offset if reach_offset is not None else Vector())
     seeded = _seed_ik(context, armature, inventory, rig, desired, solver_position,
-                      calibrated_rest=calibrated_rest)
+                      calibrated_rest=calibrated_rest or fixed_pole)
     if not seeded:
         _set_solver_position(context, armature, rig, solver_position)
-        if not calibrated_rest:
+        if not calibrated_rest and not fixed_pole:
             pole_matrix = pole.matrix.copy()
             pole_matrix.translation = _pole_position(armature, rig, desired)
             _set_matrix(context, armature, pole, pole_matrix)
@@ -564,7 +789,19 @@ def _match_ik(context, armature, inventory, rig, desired, *, calibrated_rest=Fal
     if not seeded and (not calibrated_rest or target.get(PROPERTY) != 1.0):
         target[PROPERTY] = 1.0
         _update(context, armature)
-    _match_pole_plane(context, armature, rig, desired, precise=calibrated_rest or precise)
+    if fixed_pole and pole_reference is not None:
+        constraint = _fixed_pole_constraint(rig)
+        if float(constraint.pole_angle) != pole_reference:
+            constraint.pole_angle = pole_reference
+            _update(context, armature)
+        _match_pole_plane(context, armature, rig, desired, precise=True)
+    elif fixed_pole:
+        if local_pole_search:
+            _match_fixed_pole_angle(context, armature, rig, desired, local_search=True, accept_pose=accept_pole_pose)
+        else:
+            _match_fixed_pole_angle(context, armature, rig, desired, precise=calibrated_rest or precise)
+    else:
+        _match_pole_plane(context, armature, rig, desired, precise=calibrated_rest or precise)
     end_constraint = next(con for _pb, con, record in rig["entries"] if record["role"] == "END_ROTATION")
     offset = rig.get("auto_offset_rotation")
     if rig.get("foot_controls") and rig['foot_controls'].get('auto_follow') == 1 and rig['auto_align']:
@@ -629,7 +866,7 @@ def _match_ik(context, armature, inventory, rig, desired, *, calibrated_rest=Fal
     return changed
 
 
-def _refine_calibrated_reach(context, armature, inventory, rig, desired):
+def _refine_calibrated_reach(context, armature, inventory, rig, desired, *, fixed_pole=False, pole_position=None):
     """Fit float32 shallow-limb reach using generated controls only.
 
     A sub-micron target distance residual can amplify into a visible elbow
@@ -637,6 +874,7 @@ def _refine_calibrated_reach(context, armature, inventory, rig, desired):
     million of limb length; keep the best evaluated full pose, never relax the
     builder's native Rest, skin or surface checks.
     """
+    fixed_pole = fixed_pole or _leg_front_policy(inventory, rig)
     start,joint,end=[desired[n].translation for n in rig['chain']]
     axis=end-start
     length=(joint-start).length+(end-joint).length
@@ -648,6 +886,9 @@ def _refine_calibrated_reach(context, armature, inventory, rig, desired):
     controls=[armature.pose.bones[rig[k].name] for k in ('target','pole')]
     baseline=[p.matrix_basis.copy() for p in controls]
     best=[m.copy() for m in baseline]
+    angle_constraint = _fixed_pole_constraint(rig) if fixed_pole else None
+    baseline_angle = float(angle_constraint.pole_angle) if angle_constraint else None
+    best_angle = baseline_angle
     def score():
         position,rotation,scale=_pose_errors(armature,desired)
         return position/length+rotation+scale
@@ -664,19 +905,26 @@ def _refine_calibrated_reach(context, armature, inventory, rig, desired):
             if position in evaluated_positions:continue
             evaluated_positions.add(position)
             for pb,matrix in zip(controls,baseline):pb.matrix_basis=matrix
+            if angle_constraint is not None:
+                angle_constraint.pole_angle = baseline_angle
             _update(context,armature)
-            _match_ik(context,armature,inventory,rig,desired,calibrated_rest=True,reach_offset=axis*offset)
+            _match_ik(context,armature,inventory,rig,desired,calibrated_rest=True,reach_offset=axis*offset,
+                      fixed_pole=fixed_pole, pole_position=pole_position)
             error=score()
             if error<best_score:
                 best_score,best_offset=error,offset
                 best=[p.matrix_basis.copy() for p in controls]
+                if angle_constraint is not None:
+                    best_angle = float(angle_constraint.pole_angle)
         step*=.25
     for pb,matrix in zip(controls,best):pb.matrix_basis=matrix
+    if angle_constraint is not None:
+        angle_constraint.pole_angle = best_angle
     _update(context,armature)
 
 
 def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=None,
-                calibrated_rest=False, precise=False, sync_display=True):
+                calibrated_rest=False, precise=False, sync_display=True, fixed_pole=False, limb_pose_only=False):
     """Switch one limb and match its evaluated pose; restore everything on error."""
     if mode not in {"IK", "FK"}:
         raise _error("Choose IK or FK.")
@@ -684,11 +932,18 @@ def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=Non
         raise _error("IK/FK needs a local editable Armature.")
     if context.mode not in {"POSE", "OBJECT"}:
         raise _error("Switch IK/FK in Pose Mode or Object Mode.")
-    inventory = _limb()._validate_inventory(armature)
+    inventory = (_limb()._validate_inventory(armature, limb_pose_only=True) if limb_pose_only
+                 else _limb()._validate_inventory(armature))
     if key not in inventory["rigs"]:
         raise _error("Build this limb's controls before switching IK/FK.")
     rig = inventory["rigs"][key]
-    from . import bone_collections, bone_display
+    # A retained FK pose needs only the native chain. Match its inactive IK
+    # target and pole on the next explicit switch to IK.
+    leg_front = _leg_front_policy(inventory, rig) and not (limb_pose_only and mode == 'FK')
+    if type(fixed_pole) is not bool or (fixed_pole and (mode != 'IK' or inventory['schema'] not in {
+            _limb().LEGACY_DIRECT_PREROLL_SCHEMA, _limb().DIRECT_PREROLL_SCHEMA})):
+        raise _error('Fixed Pole matching requires an explicit Direct IK match.')
+    from . import bone_collections, bone_display, elbow_pole_layout, knee_pole_layout
     # Original.leave uses this matcher while its saved workspace is still
     # active. Its outer transaction owns the final display handoff.
     # Construction also defers display until its outer rig-layout transaction
@@ -696,7 +951,16 @@ def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=Non
     sync_display = sync_display and 'character_designer_body_original_mode_v1' not in armature
     target = armature.pose.bones[rig["target"].name]
     old_mode = mode_for_rig(armature, rig)
-    if old_mode == mode and desired_pose is None:
+    if leg_front:
+        _update(context, armature)
+    layout_desired = (_matrices(armature, rig['chain']) if desired_pose is None else desired_pose)
+    # Construction and Original Bones use their calibrated rig layout. On a
+    # retained motion the handle follows the captured pose of this frame.
+    bend_layout = leg_front and limb_pose_only and mode == 'IK'
+    elbow_bend = (limb_pose_only and mode == 'IK' and not fixed_pole
+                  and elbow_pole_layout.supports(inventory, rig))
+    needs_front = leg_front and not bend_layout and _leg_front_layout(armature, rig, layout_desired)[1]
+    if old_mode == mode and desired_pose is None and not needs_front:
         display_before = bone_display._snapshot(armature)
         try:
             if sync_display:
@@ -706,6 +970,11 @@ def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=Non
             bone_collections._FRAME_CACHE.pop(armature.as_pointer(), None)
             raise
         return {"mode": mode, "changed": False, "keyed": False, "errors": (0.0, 0.0, 0.0)}
+    keyed = bool(keyframe if keyframe is not None else context.scene.tool_settings.use_keyframe_insert_auto)
+    action_owner = None
+    if keyed:
+        from . import limb_ik_fk_action_owner
+        action_owner = limb_ik_fk_action_owner.prepare(context, armature)
     _update(context, armature)
     desired = _matrices(armature, pose_names(rig)) if desired_pose is None else {
         name: matrix.copy() for name, matrix in desired_pose.items()
@@ -714,6 +983,20 @@ def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=Non
         raise _error("The saved match pose is missing a native limb or Toe bone.")
     pose_before = {pb.name: (pb.rotation_mode, pb.matrix_basis.copy()) for pb in armature.pose.bones}
     mute_before = [(con, con.mute) for _pb, con, _record in rig["entries"]]
+    match_fixed = fixed_pole or leg_front or elbow_bend
+    angle_before = [(con, float(con.pole_angle)) for _pb, con, record in rig['entries']
+                    if match_fixed and record['role'] == 'IK']
+    bend_position = None
+    if bend_layout or elbow_bend:
+        layout = knee_pole_layout if bend_layout else elbow_pole_layout
+        previous_pole = armature.pose.bones[rig['pole'].name].matrix.translation
+        bend_position = layout.position(armature, rig, desired, previous=previous_pole)
+    if bend_position is not None:
+        pole_before = bend_position
+    elif leg_front:
+        pole_before = _leg_front_layout(armature, rig, desired)[0]
+    else:
+        pole_before = armature.pose.bones[rig['pole'].name].matrix.translation.copy() if fixed_pole else None
     value_before = target.get(PROPERTY, 1.0)
     had_switching = VERSION_KEY in target.bone
     display_before = bone_display._snapshot(armature)
@@ -721,13 +1004,43 @@ def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=Non
         installed_count = ensure_switching(armature, inventory, keys=(key,))
         if installed_count:
             _update(context, armature)
-        affected = (_match_fk(context, armature, rig, desired) if mode == "FK" else
-                    _match_ik(context, armature, inventory, rig, desired,
-                              calibrated_rest=calibrated_rest, precise=precise))
+        if mode == 'FK':
+            affected = _match_fk(context, armature, rig, desired)
+            if leg_front:
+                affected.update(_match_ik(context, armature, inventory, rig, desired,
+                                         calibrated_rest=calibrated_rest, precise=precise,
+                                         fixed_pole=True))
+                affected.update(_match_fk(context, armature, rig, desired))
+        else:
+            if bend_layout and old_mode == 'FK':
+                # The native solver loses a degree of freedom when its input
+                # thigh is perpendicular to its hip/ankle axis. Keep the FK
+                # pose as the match target while conditioning the dormant shin.
+                conditioned, changed = knee_pole_layout.condition_shin(*(desired[n] for n in rig['chain']))
+                if changed:
+                    _set_matrix(context, armature, armature.pose.bones[rig['chain'][1]], conditioned)
+            if limb_pose_only and (leg_front or elbow_bend) and not (calibrated_rest or precise):
+                # Start with the anatomical angle and its small neighborhood.
+                # Keep the native acceptance and full search for unusual rolls.
+                def matched(bones):
+                    errors = _pose_errors(armature, bones)
+                    return all(v <= limit for v, limit in zip(errors, (POSITION_TOLERANCE, ROTATION_TOLERANCE, SCALE_TOLERANCE)))
+
+                affected = _match_ik(context, armature, inventory, rig, desired,
+                                     fixed_pole=True, local_pole_search=True, accept_pole_pose=matched,
+                                     pole_position=bend_position)
+                if not matched({name: desired[name] for name in rig['chain']}):
+                    affected.update(_match_ik(context, armature, inventory, rig, desired,
+                                              fixed_pole=True, pole_position=bend_position))
+            else:
+                affected = _match_ik(context, armature, inventory, rig, desired,
+                                     calibrated_rest=calibrated_rest, precise=precise, fixed_pole=match_fixed,
+                                     pole_position=bend_position)
         # Intentional Rest resync needs the same bounded precision as a
         # confirmed calibration, while still seeding its new desired Pole.
         if mode == 'IK' and (calibrated_rest or precise):
-            _refine_calibrated_reach(context,armature,inventory,rig,desired)
+            _refine_calibrated_reach(context,armature,inventory,rig,desired,fixed_pole=match_fixed,
+                                     pole_position=bend_position)
         affected.update(_match_toe(context, armature, rig, desired))
         # Removal of an optional extension restores its native Toe constraint
         # baseline first. The caller can include that Toe matrix here so it is
@@ -738,17 +1051,27 @@ def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=Non
                 _set_matrix(context, armature, armature.pose.bones[name], desired[name])
                 affected.add(name)
         errors = _verify(armature, desired)
-        final_inventory = _limb()._validate_inventory(armature)
+        if match_fixed and (armature.pose.bones[rig['pole'].name].matrix.translation - pole_before).length > 1e-6:
+            raise _error('IK matching changed the saved Pole layout; the switch was cancelled.')
+        final_inventory = (_limb()._validate_inventory(armature, limb_pose_only=True) if limb_pose_only
+                           else _limb()._validate_inventory(armature))
         if sync_display:
             bone_collections.sync_limb_display(armature, final_inventory, keys=(key,), force_flags=True)
-        keyed = bool(keyframe if keyframe is not None else context.scene.tool_settings.use_keyframe_insert_auto)
         if keyed:
-            _key_switch(context, armature, target, affected, value_before, pose_before)
+            owned_action = limb_ik_fk_action_owner.stage(action_owner) if action_owner is not None else None
+            _key_switch(context, armature, target, affected, value_before, pose_before,
+                        pole_angles=angle_before, owned_action=owned_action)
+            if action_owner is not None:
+                limb_ik_fk_action_owner.preserve_staged(action_owner, ((target, affected, angle_before),))
+                limb_ik_fk_action_owner.publish(action_owner)
     except Exception:
+        owner_rollback_error = None
         bone_display._restore(armature, display_before)
         bone_collections._FRAME_CACHE.pop(armature.as_pointer(), None)
         for con, mute in mute_before:
             con.mute = mute
+        for con, angle in angle_before:
+            con.pole_angle = angle
         target[PROPERTY] = value_before
         if not had_switching:
             for entry in rig["entries"]:
@@ -759,12 +1082,27 @@ def switch_limb(context, armature, key, mode, *, keyframe=None, desired_pose=Non
                 del target[PROPERTY]
             if VERSION_KEY in target.bone:
                 del target.bone[VERSION_KEY]
-        for name, (rotation_mode, basis) in pose_before.items():
-            pb = armature.pose.bones.get(name)
-            if pb is not None:
-                pb.rotation_mode = rotation_mode
-                pb.matrix_basis = basis
+        # Remove only this match's newly installed switching fields before
+        # validating the owner's original raw-channel recovery snapshot.
+        if action_owner is not None:
+            try:
+                limb_ik_fk_action_owner.rollback(action_owner)
+            except Exception as error:
+                owner_rollback_error = error
+        # The owner rollback already restored every raw input component. A
+        # second matrix decomposition would round those authored channels.
+        if action_owner is None or owner_rollback_error is not None:
+            for name, (rotation_mode, basis) in pose_before.items():
+                pb = armature.pose.bones.get(name)
+                if pb is not None:
+                    pb.rotation_mode = rotation_mode
+                    pb.matrix_basis = basis
         _update(context, armature)
+        if action_owner is not None and owner_rollback_error is None:
+            limb_ik_fk_action_owner.restore_display(action_owner['display_attempt'])
+        if owner_rollback_error is not None:
+            raise _error('IK/FK could not complete Custom recovery; retained recovery data: '
+                         + str(owner_rollback_error)) from owner_rollback_error
         raise
     return {"mode": mode, "changed": True, "keyed": keyed, "errors": errors}
 
@@ -783,6 +1121,146 @@ def match_existing_pose(context, armature, key, desired_pose, *, keyframe=False)
     if mode == "BLEND":
         raise _error("Choose IK or FK before restoring the Foot Controls attachment.")
     return switch_limb(context, armature, key, mode, keyframe=keyframe, desired_pose=desired_pose)
+
+
+def repair_leg_poles(context, armature, *, desired_pose=None):
+    """Repair existing Direct leg layouts atomically, without rebuilding bones.
+
+    The default preserves the current native pose. A caller recovering a
+    previously twisted pose must supply its explicitly selected native matrices;
+    controller placement cannot infer a lost artist pose from source Rest.
+    """
+    from . import body_setup
+    return _repair_leg_poles_with_transaction(context, armature, desired_pose,
+                                              body_setup._atomic)
+
+
+def _require_existing_switches(armature, inventory=None):
+    """Read-only proof that pose matching cannot install missing IK/FK drivers."""
+    inventory = inventory if inventory is not None else _limb()._validate_inventory(armature)
+    for rig in inventory['rigs'].values():
+        target = armature.pose.bones[rig['target'].name]
+        installed = target.bone.get(VERSION_KEY)
+        if type(installed) is not int or installed != VERSION:
+            raise _error('Original pose return requires existing, validated IK/FK switching.')
+        entries = [entry for entry in rig['entries'] if is_switch_constraint(armature, *entry)]
+        if not entries or any(not validate_constraint_influence(armature, *entry) for entry in entries):
+            raise _error('Original pose return cannot install or replace an IK/FK driver.')
+    return inventory
+
+
+def _repair_original_leg_poles(context, armature, *, desired_pose, _original_pose):
+    """Join only Original's active, verified pose-return checkpoint.
+
+    The ordinary repair still owns a complete Body transaction. This private
+    route does the same repair under Original's already captured channels,
+    Pole angles/metadata and Body/Dress/display rollback, without admitting
+    retained Actions to any structural or Rest recovery operation.
+    """
+    from . import body_original_owner
+    body_original_owner._check_pose_capability(_original_pose, armature, repair=True)
+    _require_existing_switches(armature)
+
+    def transaction(_context, candidate, operation):
+        body_original_owner._check_pose_capability(_original_pose, candidate, repair=True)
+        _require_existing_switches(candidate)
+        result = operation()
+        body_original_owner._check_pose_capability(_original_pose, candidate, repair=True)
+        _require_existing_switches(candidate)
+        return result
+
+    result = _repair_leg_poles_with_transaction(context, armature, desired_pose, transaction)
+    body_original_owner._check_pose_capability(_original_pose, armature, repair=True)
+    _require_existing_switches(armature)
+    return result
+
+
+def _repair_leg_poles_with_transaction(context, armature, desired_pose, transaction):
+    """Run the existing repair with the caller's explicit rollback boundary."""
+    from . import body_setup, body_region, body_setup_removal, control_pose_assets
+    inventory = _limb()._validate_inventory(armature)
+    keys = sorted(key for key, data in inventory['rigs'].items()
+                  if _leg_front_policy(inventory, data))
+    if not keys:
+        return {'repaired': [], 'changed': False}
+    _update(context, armature)
+    native = control_pose_assets.native_rest(armature)
+    wanted = _matrices(armature, native)
+    if desired_pose is not None:
+        if any(name not in wanted or not _limb()._matrix_is_finite(matrix)
+               for name, matrix in desired_pose.items()):
+            raise _error('Leg Pole repair needs finite matrices for existing native bones only.')
+        wanted.update({name: matrix.copy() for name, matrix in desired_pose.items()})
+    modes = {key: mode_for_rig(armature, inventory['rigs'][key]) for key in keys}
+    if any(mode not in {'IK', 'FK'} for mode in modes.values()):
+        raise _error('Choose IK or FK before repairing existing leg Poles.')
+    repair_keys = []
+    for key in keys:
+        data = inventory['rigs'][key]
+        point, stale = _leg_front_layout(armature, data, wanted)
+        start, _joint, end = (wanted[name].translation for name in data['chain'])
+        front = _leg_front_direction(end - start)
+        metadata_stale = False
+        for tag in (_limb().POLE_DIRECTION_KEY, _limb().POLE_CONFIGURED_DIRECTION_KEY):
+            stored = data['pole'].get(tag)
+            existing = (_limb()._project_perpendicular(Vector(stored), end - start)
+                        if stored is not None else Vector())
+            metadata_stale |= existing.length <= _limb().EPSILON or existing.normalized().dot(front) < 0.8
+        # Healthy Original -> Controls returns contain float32 bake noise.
+        # Rewriting accepted controls to chase sub-tolerance differences loses
+        # exact artist channels and needlessly enters the Body checkpoint.
+        matrix_mismatch = max((abs(actual - expected)
+                               for name in pose_names(data)
+                               for actual_row, expected_row in zip(armature.pose.bones[name].matrix, wanted[name])
+                               for actual, expected in zip(actual_row, expected_row)), default=0.0)
+        if stale or metadata_stale or matrix_mismatch > 2e-4:
+            repair_keys.append(key)
+    if not repair_keys:
+        return {'repaired': [], 'changed': False}
+
+    def commit():
+        excluded = set()
+        for key in repair_keys:
+            data = inventory['rigs'][key]
+            excluded.update(body_region._native_scope(armature, data['chain']))
+            excluded.update(b.name for b in inventory['bones']
+                            if (b.get(_limb().KIND_KEY), b.get(_limb().SIDE_KEY)) == key)
+            if data.get('foot_controls'):
+                excluded.update(data['foot_controls']['bones'].values())
+        protected = body_region._guard(armature, excluded)
+        skin = {name: wanted[name] @ armature.data.bones[name].matrix_local.inverted()
+                for name in body_setup._native_skin(armature)}
+        result = {}
+        for key in repair_keys:
+            data = _limb()._validate_inventory(armature)['rigs'][key]
+            result[key] = switch_limb(context, armature, key, modes[key], keyframe=False,
+                                     desired_pose={name: wanted[name] for name in pose_names(data)},
+                                     calibrated_rest=True, precise=True, sync_display=False)
+        current = _limb()._validate_inventory(armature)
+        for key in keys:
+            data = current['rigs'][key]
+            point, stale = _leg_front_layout(armature, data, wanted)
+            if stale:
+                raise _error('Leg Pole repair did not retain its anatomical front layout.')
+            if key not in repair_keys:
+                continue
+            start, _joint, end = (wanted[name].translation for name in data['chain'])
+            direction = _limb()._project_perpendicular(point - start, end - start).normalized()
+            for tag in (_limb().POLE_DIRECTION_KEY, _limb().POLE_CONFIGURED_DIRECTION_KEY):
+                stored = data['pole'].get(tag)
+                existing = (_limb()._project_perpendicular(Vector(stored), end - start)
+                            if stored is not None else Vector())
+                if existing.length <= _limb().EPSILON or existing.normalized().dot(_leg_front_direction(end - start)) < 0.8:
+                    data['pole'][tag] = list(direction)
+        if control_pose_assets.native_rest(armature) != native:
+            raise _error('Leg Pole repair changed native Rest; the repair was cancelled.')
+        _verify(armature, wanted)
+        body_setup._verify_skin(armature, skin, tolerance=body_setup_removal.SKIN_MATRIX_TOLERANCE)
+        body_region._verify_guard(armature, protected, excluded)
+        return {'repaired': [':'.join(key) for key in repair_keys], 'changed': True,
+                'errors': {':'.join(key): value['errors'] for key, value in result.items()}}
+
+    return transaction(context, armature, commit)
 
 
 def _curve_bookend(curve, frame):
@@ -849,7 +1327,10 @@ def _restore_bookend(curve, frame, plan):
         raise _error("IK/FK could not preserve the animation before this switch.")
     previous.co.y = plan["value"]
     if "left" in plan:
-        previous.handle_left_type = "FREE"
+        # Blender's AUTO_CLAMPED right handle can realign the left even after
+        # that left handle is FREE. This outgoing segment becomes CONSTANT;
+        # freeze both handles before restoring its protected incoming curve.
+        previous.handle_left_type = previous.handle_right_type = "FREE"
         previous.handle_left = plan["left"]
     if "previous_frame" in plan:
         original = next(point for point in curve.keyframe_points if abs(point.co.x - plan["previous_frame"]) < 1.0e-5)
@@ -860,16 +1341,21 @@ def _restore_bookend(curve, frame, plan):
     curve.update()
 
 
-def _key_switch(context, armature, target, affected, old_value, pose_before, *, keep_previous=False):
+def _key_switch(context, armature, target, affected, old_value, pose_before, *, keep_previous=False,
+                pole_angles=(), owned_action=None):
     # Stage the key changes in a copy so an insertion failure cannot leave a
     # half-keyed switch. Preserve shared Actions by keeping the previous one.
+    angle_inputs = [(constraint, float(previous), float(constraint.pole_angle))
+                    for constraint, previous in pole_angles]
     animation = armature.animation_data_create()
     previous_action = animation.action
     previous_slot = animation.action_slot
+    if owned_action is not None and previous_action is not owned_action:
+        raise _error('The prepared IK/FK Custom Action is no longer active.')
     if previous_action and previous_action.library:
         raise _error("Make the current Action local before keying an IK/FK switch.")
-    staged = previous_action.copy() if previous_action else None
-    if staged:
+    staged = owned_action if owned_action is not None else previous_action.copy() if previous_action else None
+    if staged and owned_action is None:
         animation.action = staged
         if previous_slot:
             for slot in staged.slots:
@@ -937,12 +1423,35 @@ def _key_switch(context, armature, target, affected, old_value, pose_before, *, 
                     if abs(point.co.x - frame) < 1.0e-5 or abs(point.co.x - (frame - 1.0)) < 1.0e-5:
                         point.interpolation = "CONSTANT"
                 curve.update()
+        # A Direct leg's bend plane is compensated by the native IK angle.
+        # It needs the same cut as the matched controls; otherwise a later FK
+        # roll would replace the angle used by every earlier keyed IK frame.
+        for constraint, previous_angle, new_angle in angle_inputs:
+            angle_path = constraint.path_from_id('pole_angle')
+            curves = _limb()._fcurves_for_action(animation.action)
+            curve = next((curve for curve in curves if curve.data_path == angle_path), None)
+            plan = _curve_bookend(curve, frame - 1.0) if curve else None
+            if not plan or not plan.get('existing'):
+                constraint.pole_angle = plan['value'] if plan else previous_angle
+                if not constraint.keyframe_insert(data_path='pole_angle', frame=frame - 1.0, group='IK / FK'):
+                    raise _error('Could not key the previous native IK Pole angle.')
+            constraint.pole_angle = new_angle
+            if not constraint.keyframe_insert(data_path='pole_angle', frame=frame, group='IK / FK'):
+                raise _error('Could not key the matched native IK Pole angle.')
+            curve = next(curve for curve in _limb()._fcurves_for_action(animation.action)
+                         if curve.data_path == angle_path)
+            if plan:
+                _restore_bookend(curve, frame - 1.0, plan)
+            for point in curve.keyframe_points:
+                if abs(point.co.x - frame) < 1e-5 or abs(point.co.x - (frame - 1.0)) < 1e-5:
+                    point.interpolation = 'CONSTANT'
+            curve.update()
     except Exception:
         failed = animation.action
         animation.action = previous_action
         if previous_action and previous_slot:
             animation.action_slot = previous_slot
-        if failed and failed is not previous_action:
+        if owned_action is None and failed and failed is not previous_action:
             # A surrounding batch retains its previous Action until every limb
             # commits. The failed copy is transaction-owned, including an
             # inherited fake user; no real user may be discarded here.
@@ -950,8 +1459,11 @@ def _key_switch(context, armature, target, affected, old_value, pose_before, *, 
                 failed.use_fake_user = False
             if failed.users == 0:
                 bpy.data.actions.remove(failed)
+        for constraint, _previous, current in angle_inputs:
+            constraint.pole_angle = current
         raise
-    if not keep_previous and previous_action and previous_action.users == 0 and not previous_action.use_fake_user:
+    if (owned_action is None and not keep_previous and previous_action
+            and previous_action.users == 0 and not previous_action.use_fake_user):
         old_name = previous_action.name
         bpy.data.actions.remove(previous_action)
         animation.action.name = old_name

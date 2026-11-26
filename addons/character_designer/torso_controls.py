@@ -8,7 +8,7 @@ import uuid
 import bpy
 from mathutils import Matrix, Vector
 
-from . import generated_names
+from . import generated_names, validation_json, validation_native
 
 OWNER_KEY = "character_designer_owner"
 OWNER_VALUE = "torso_controls"
@@ -32,7 +32,7 @@ def get_record(armature):
     if raw is None:
         return None
     try:
-        record = json.loads(raw)
+        record = validation_json.decode(raw)
         if record["version"] != VERSION or not isinstance(record["sources"], list):
             raise ValueError("unsupported version")
         return record
@@ -49,19 +49,21 @@ def collection_members(armature):
             "always": visible, "visible": visible}
 
 
-def validate(armature, inventory=None, *, original_mutes=None, source_rest=None):
+def validate(armature, inventory=None, *, original_mutes=None, source_rest=None, pose_only=False):
     """Validate only this optional module, without entering limb inventory again."""
     from . import spine_ik_fk
-    if original_mutes is None:
+    if type(pose_only) is not bool or pose_only and (original_mutes is not None or source_rest is not None):
+        raise _error('Current torso posing requires the live Rest and constraint state.')
+    if original_mutes is None and not pose_only:
         source_rest = _limb()._validation_source_rest(armature, source_rest)
     record = get_record(armature)
     if record is None:
-        if any(b.get(OWNER_KEY) == OWNER_VALUE for b in armature.data.bones):
+        if any(True for _bone in validation_native.iter_owned_bones(armature, OWNER_KEY, OWNER_VALUE)):
             raise _error('Torso Controls bones have lost their recovery data.')
         return None
     try:
         names = set(record['bones'].values())
-        actual = {b.name for b in armature.data.bones if b.get(OWNER_KEY) == OWNER_VALUE}
+        actual = {b.name for b in validation_native.iter_owned_bones(armature, OWNER_KEY, OWNER_VALUE)}
         if actual != names or len(record['sources']) not in {3, 4}:
             raise _error('Torso Controls bones were added, removed, or renamed.')
         for role, name in record['bones'].items():
@@ -91,9 +93,12 @@ def validate(armature, inventory=None, *, original_mutes=None, source_rest=None)
                     or obj.data.name != entry['mesh'] or not _owned(obj.data, record, 'WIDGET_MESH')
                     or armature.pose.bones[record['bones'][role]].custom_shape != obj):
                 raise _error('A Torso Controls widget was replaced or removed.')
-        collection = bpy.data.collections.get(record['widget_collection'])
-        if collection is None or not _owned(collection, record, 'WIDGET_COLLECTION'):
-            raise _error('The Torso Controls widget collection is missing.')
+        # Pose matching retains each authenticated shape. Asset-container
+        # ownership is additionally needed when removing or rebuilding controls.
+        if not pose_only:
+            collection = bpy.data.collections.get(record['widget_collection'])
+            if collection is None or not _owned(collection, record, 'WIDGET_COLLECTION'):
+                raise _error('The Torso Controls widget collection is missing.')
     except (KeyError, TypeError, AttributeError) as exc:
         raise _error('Torso Controls recovery data no longer matches this rig.') from exc
     return record
